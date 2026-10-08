@@ -17,13 +17,13 @@ public final class GeneratorMenu extends AbstractContainerMenu {
     private final ContainerData data;
 
     public GeneratorMenu(int id, Inventory inventory) {
-        this(id, inventory, new SimpleContainer(FUEL_SLOTS), new SimpleContainerData(7));
+        this(id, inventory, new SimpleContainer(FUEL_SLOTS), new SimpleContainerData(9));
     }
 
     public GeneratorMenu(int id, Inventory inventory, Container fuel, ContainerData data) {
         super(GeneratorMenus.TYPE, id);
         checkContainerSize(fuel, FUEL_SLOTS);
-        checkContainerDataCount(data, 7);
+        checkContainerDataCount(data, 9);
         this.fuel = fuel;
         this.data = data;
         fuel.startOpen(inventory.player);
@@ -70,7 +70,8 @@ public final class GeneratorMenu extends AbstractContainerMenu {
 
     private int fullInt(int index) { return (data.get(index) & 65535) | ((data.get(index + 1) & 65535) << 16); }
     public int burn() { return Math.max(0, fullInt(0)); }
-    public int energy() { return Math.max(0, Math.min(64000, fullInt(2))); }
+    public int capacity() { return Math.max(64000, fullInt(7)); }
+    public int energy() { return Math.max(0, Math.min(capacity(), fullInt(2))); }
     public int fuelTotal() { return Math.max(1, fullInt(4)); }
     public long remainingTicks() {
         long furnaceTicks = 0;

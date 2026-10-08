@@ -62,6 +62,8 @@ sources['net.minecraft.network.chat.MutableComponent']='public class MutableComp
 sources['net.minecraft.core.NonNullList']=sources['net.minecraft.core.NonNullList'].replace('extends ArrayList<E> {','extends ArrayList<E> {private static final long serialVersionUID=1L;')
 from food_api_doubles import extend
 extend(sources)
+from water_api_doubles import extend as water_extend
+water_extend(sources)
 for name,body in sources.items():
  p=root.joinpath(*name.split('.')).with_suffix('.java');p.parent.mkdir(parents=True,exist_ok=True);p.write_text('package '+name.rsplit('.',1)[0]+';\n'+body+'\n')
 print('Created',len(sources),'API test doubles; none are bundled in the mod.')

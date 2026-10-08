@@ -63,13 +63,13 @@ public final class GeneratorChecks {
         check(remaining==36000-12345,"Fuel timing and fractional carry must survive save/reload");
 
         MachineEntity paused=machine(new Level(),"trailergenerator",0,0,0);
-        paused.setItem(0,new ItemStack(64,1600));for(int i=0;i<800;i++)paused.tick();
-        check(paused.zsGetEnergy()==64000,"Buffer must fill without losing generated energy");
+        paused.setItem(0,new ItemStack(64,1600));for(int i=0;i<PowerPolicy.capacity(paused)/80;i++)paused.tick();
+        check(paused.zsGetEnergy()==PowerPolicy.capacity(paused),"Buffer must fill without losing generated energy");
         int burn=paused.zsGetBurn(), count=fuelCount(paused);
         for(int i=0;i<5000;i++)paused.tick();
         check(paused.zsGetBurn()==burn && fuelCount(paused)==count,"Full energy buffer must pause fuel consumption");
         paused.energy.extractEnergy(80,false);paused.tick();
-        check(paused.zsGetBurn()==burn-1 && paused.zsGetEnergy()==64000,"Production must resume after demand");
+        check(paused.zsGetBurn()==burn-1 && paused.zsGetEnergy()==PowerPolicy.capacity(paused),"Production must resume after demand");
 
         Level rangeLevel=new Level();MachineEntity rangeGenerator=machine(rangeLevel,"generator",0,0,0);
         rangeGenerator.setItem(0,new ItemStack(64,1600));rangeGenerator.tick();
@@ -102,12 +102,12 @@ public final class GeneratorChecks {
         check(ui.remainingTicks()==36000,"Autonomy must count all reserve slots");
         check(!ui.quickMoveStack(inventory.player,53).isEmpty(),"Existing last-slot items must remain retrievable");
 
-        GeneratorData serverData=new GeneratorData(paused);SimpleContainerData wire=new SimpleContainerData(7);
-        for(int i=0;i<7;i++)wire.set(i,(short)serverData.get(i));
+        GeneratorData serverData=new GeneratorData(paused);SimpleContainerData wire=new SimpleContainerData(9);
+        for(int i=0;i<9;i++)wire.set(i,(short)serverData.get(i));
         GeneratorMenu client=new GeneratorMenu(1,inventory,new SimpleContainer(54),wire);
-        check(client.energy()==64000,"Signed-short synchronization must preserve 64000 FE");
+        check(client.energy()==PowerPolicy.capacity(paused),"Signed-short synchronization must preserve generator capacity");
         paused.zsSetBurn(70312);paused.zsFuelTotal=70312;
-        for(int i=0;i<7;i++)wire.set(i,(short)serverData.get(i));
+        for(int i=0;i<9;i++)wire.set(i,(short)serverData.get(i));
         check(client.burn()==70312 && client.fuelTotal()==70312,"Long-burning fuels must synchronize beyond 16 bits");
         GuiGraphics graphics=new GuiGraphics();new GeneratorScreen(client,inventory,Component.literal("Generador")).render(graphics,0,0,0);
         check(graphics.fills>100 && graphics.labels.contains("GENERADOR"),"Generator panel must render its machinery and slots");

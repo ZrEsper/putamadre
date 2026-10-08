@@ -19,7 +19,7 @@ public final class GeneratorScreen extends AbstractContainerScreen<GeneratorMenu
     }
     @Override protected void renderBg(GuiGraphics g, float partialTick, int mouseX, int mouseY) {
         int x = leftPos, y = topPos;
-        boolean running = menu.burn() > 0 && menu.energy() <= 63920;
+        boolean running = menu.burn() > 0 && menu.energy() <= menu.capacity() - 80;
         g.fill(x, y, x + imageWidth, y + imageHeight, 0xff101719);
         g.fill(x + 2, y + 2, x + imageWidth - 2, y + imageHeight - 2, 0xff2d373b);
         g.fill(x + 5, y + 5, x + 167, y + 126, 0xff182225);
@@ -37,11 +37,12 @@ public final class GeneratorScreen extends AbstractContainerScreen<GeneratorMenu
             g.fill(x + slot.x - 1, y + slot.y - 1, x + slot.x + 17, y + slot.y + 17, 0xff071013);
             g.fill(x + slot.x, y + slot.y, x + slot.x + 16, y + slot.y + 16, 0xff35454c);
         }
-        gauge(g, x + 12, y + 104, 143, menu.energy(), 64000, 0xff53d2cf);
+        gauge(g, x + 12, y + 104, 143, menu.energy(), menu.capacity(), 0xff53d2cf);
         gauge(g, x + 12, y + 118, 143, menu.burn(), menu.fuelTotal(), 0xffe3b35a);
         // Hazard stripes distinguish the machinery panel from an inventory chest.
         for (int i = 0; i < 20; i++) g.fill(x + 176 + i * 8, y + 131, x + 180 + i * 8, y + 134, 0xffb89a43);
     }
+    private String energyText(int value) { return value >= 1000 ? value / 1000 + "k" : Integer.toString(value); }
     private void gauge(GuiGraphics g, int x, int y, int width, int value, int max, int color) {
         g.fill(x, y, x + width, y + 4, 0xff070e10);
         int fill = (int) Math.min(width, (long) width * Math.max(0, value) / Math.max(1, max));
@@ -51,10 +52,10 @@ public final class GeneratorScreen extends AbstractContainerScreen<GeneratorMenu
         g.drawString(font, "GENERADOR", 12, 10, 0xfff0d68b, false);
         g.drawString(font, "RESERVA DE COMBUSTIBLE", 175, 15, 0xffc2d0d4, false);
         g.drawString(font, "Combustible", 74, 52, 0xfff2e4c6, false);
-        g.drawString(font, "Energia: " + menu.energy() + " / 64000 FE", 12, 94, 0xff84d9d5, false);
+        g.drawString(font, "Energia: " + energyText(menu.energy()) + " / " + energyText(menu.capacity()) + " FE", 12, 94, 0xff84d9d5, false);
         g.drawString(font, "Carga en combustion", 12, 110, 0xffdfc18c, false);
         g.drawString(font, playerInventoryTitle, 8, 129, 0xffc2d0d4, false);
-        String status = menu.energy() > 63920 ? "EN ESPERA: deposito lleno" : menu.burn() > 0 ? "EN MARCHA" : "SIN COMBUSTIBLE";
+        String status = menu.energy() > menu.capacity() - 80 ? "EN ESPERA: deposito lleno" : menu.burn() > 0 ? "EN MARCHA" : "SIN COMBUSTIBLE";
         g.drawString(font, status, 179, 142, menu.burn() > 0 ? 0xff78e4a2 : 0xffe5b572, false);
         g.drawString(font, "Salida: 80 FE/t", 179, 156, 0xffb7ccd0, false);
         g.drawString(font, "Alcance: 25 bloques", 179, 170, 0xffb7ccd0, false);

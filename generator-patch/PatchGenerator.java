@@ -161,15 +161,21 @@ public final class PatchGenerator implements Opcodes {
             Enumeration<? extends ZipEntry> entries=original.entries();
             while(entries.hasMoreElements()) {
                 ZipEntry entry=entries.nextElement();byte[] data=original.getInputStream(entry).readAllBytes();
-                if(entry.getName().equals(MACHINE+".class")) data=patchMachine(data);
+                if(entry.getName().equals(MACHINE+".class")) data=PatchWaterPower.machine(patchMachine(data));
                 if(entry.getName().equals(PREFIX+"Client.class")) data=patchClient(data);
+                if(entry.getName().equals(PREFIX+"MachineEntity$1.class")) data=PatchWaterPower.energy(data);
+                if(entry.getName().equals(PREFIX+"MachineBlock.class")) data=PatchWaterPower.block(data);
+                if(entry.getName().equals(PREFIX+"Survival.class")) data=PatchWaterPower.survival(data);
+                if(entry.getName().equals(PREFIX+"Events.class")) data=PatchWaterPower.events(data);
+                if(entry.getName().equals(PREFIX+"DrinkItem.class")) data=PatchWaterPower.drink(data);
+                if(entry.getName().equals(PREFIX+"mixin/FactoryMixin.class")) data=PatchWaterPower.factory(data);
                 if(entry.getName().equals("META-INF/neoforge.mods.toml")) {
-                    data=new String(data,java.nio.charset.StandardCharsets.UTF_8).replace("version=\"1.0.0\"","version=\"1.0.2\"").getBytes(java.nio.charset.StandardCharsets.UTF_8);
+                    data=new String(data,java.nio.charset.StandardCharsets.UTF_8).replace("version=\"1.0.0\"","version=\"1.0.3\"").getBytes(java.nio.charset.StandardCharsets.UTF_8);
                 }
                 ZipEntry copy=new ZipEntry(entry.getName());copy.setTime(entry.getTime());output.putNextEntry(copy);output.write(data);output.closeEntry();
             }
             try(var files=Files.walk(classes.resolve(PREFIX))) {
-                for(Path file:files.filter(p->(p.getFileName().toString().startsWith("Generator") || p.getFileName().toString().startsWith("FoodStacking") || p.getFileName().toString().startsWith("FoodMenuMergeMixin") || p.getFileName().toString().startsWith("FoodSlotMergeMixin") || p.getFileName().toString().startsWith("FoodInventoryMergeMixin") || p.getFileName().toString().startsWith("FoodDroppedMergeMixin")) && p.toString().endsWith(".class")).sorted().toList()) {
+                for(Path file:files.filter(p->(p.getFileName().toString().startsWith("PowerPolicy") || p.getFileName().toString().startsWith("MachineIds") || p.getFileName().toString().startsWith("WaterGameplay") || p.getFileName().toString().startsWith("WaterItems") || p.getFileName().toString().startsWith("Generator") || p.getFileName().toString().startsWith("FoodStacking") || p.getFileName().toString().startsWith("FoodMenuMergeMixin") || p.getFileName().toString().startsWith("FoodSlotMergeMixin") || p.getFileName().toString().startsWith("FoodInventoryMergeMixin") || p.getFileName().toString().startsWith("FoodDroppedMergeMixin")) && p.toString().endsWith(".class")).sorted().toList()) {
                     ZipEntry entry=new ZipEntry(classes.relativize(file).toString().replace('\\','/'));entry.setTime(0);output.putNextEntry(entry);output.write(Files.readAllBytes(file));output.closeEntry();
                 }
             }

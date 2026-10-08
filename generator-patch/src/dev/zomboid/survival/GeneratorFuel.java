@@ -15,6 +15,7 @@ public final class GeneratorFuel {
         tag.putInt("GeneratorFuelVersion", 1);
         tag.putInt("GeneratorFuelCarry", machine.zsFuelCarry);
         tag.putInt("GeneratorFuelTotal", machine.zsFuelTotal);
+        WaterGameplay.save(machine,tag);
     }
 
     public static void load(MachineEntity machine, CompoundTag tag) {
@@ -24,5 +25,6 @@ public final class GeneratorFuel {
             machine.zsSetBurn((int) Math.max(0, (long) machine.zsGetBurn() * 45 / 128));
         }
         machine.zsFuelTotal = Math.max(machine.zsGetBurn(), tag.getInt("GeneratorFuelTotal"));
+        WaterGameplay.load(machine,tag);
     }
 }
