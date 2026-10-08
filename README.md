@@ -1,5 +1,21 @@
 # Mods de Zomboid
 
+## Zomboid Hordes 1.8.1
+
+[Descargar Zomboid Hordes actualizado](https://github.com/ZrEsper/putamadre/raw/refs/heads/main/mods/zomboid-hordes-1.8.1-neoforge-1.21.1-chunk-population.jar)
+
+Para **Minecraft 1.21.1**, **NeoForge 21.1.255 o posterior** y **SoundAttract 6.3.8d**. Reemplaza el addon Zomboid Hordes anterior en **cliente y servidor**; no cargues ambas versiones simultáneamente.
+
+- Sustituye las oleadas grandes por reposición hasta un **mínimo de dos zombis por par de chunks cargados** en el Overworld, contando los zombis vivos existentes.
+- Reparto inicial: **1+1 (50 %), 2+0 (25 %) o 0+2 (25 %)**. Los pares son vecinos fijos hacia este/oeste.
+- Cada par comparte un **cooldown aleatorio de 5–10 minutos**, conservado al guardar/reabrir. Si ya hay dos o más zombis, no añade nuevos.
+- El ruido y el helicóptero atraen zombis existentes; el helicóptero conserva su sonido sin crear nuevas oleadas.
+- Solo aparece en terreno apto, sin forzar chunks nuevos, agua, colisiones o apariciones a menos de 24 bloques de jugadores de supervivencia. El mínimo puede quedar pendiente cuando no haya una posición segura.
+
+Las comprobaciones de lógica, guardado y bytecode pasaron con dobles de las API. **Falta probar el arranque y la integración dentro de Minecraft con el modpack completo.**
+
+[Detalles, código del parche y comprobaciones](hordes-patch/README.md). La versión 1.8.0 se conserva como base de reconstrucción y no debe instalarse junto con la nueva.
+
 ## First Aid Zomboid 3.4.6
 
 [Descargar First Aid actualizado](https://github.com/ZrEsper/putamadre/raw/refs/heads/main/mods/firstaid-1.21.1-ZOMBOID-v3.4.6-wetness-no-panic.jar)

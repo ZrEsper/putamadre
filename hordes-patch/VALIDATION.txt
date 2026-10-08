@@ -1,0 +1,8 @@
+Zomboid Hordes 1.8.1: chunk population
+SHA256: 2d7e1c663bc09793c6b9fdc597d3294f4130bec5fb7ea90cd45999e8bfca1e3e
+Two independent builds produced identical JAR bytes.
+PASS: 11014 density/distribution/cooldown/persistence assertions
+PASS: 134 actual patch/SavedData/config integration assertions with Minecraft API doubles
+PASS: 144 methods analyzed; 25 event/wave/save/config/mixin wiring checks
+Only four existing classes and mod metadata modified. Original audio/assets and all mixins preserved.
+Minecraft/NeoForge modpack startup and in-game integration remain unverified.
