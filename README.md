@@ -1,8 +1,10 @@
 # Mods de Zomboid
 
-## Zomboid Survival 1.0.1
+## Zomboid Survival 1.0.2
 
-[Descargar el JAR actualizado](https://github.com/ZrEsper/putamadre/raw/refs/heads/main/mods/zomboid-survival-1.21.1-1.0.1-generator-ui.jar)
+[Descargar el JAR actualizado](https://github.com/ZrEsper/putamadre/raw/refs/heads/main/mods/zomboid-survival-1.21.1-1.0.2-generator-ui.jar)
+
+La versión 1.0.2 corrige el fallo de arranque `FoodMenuMergeMixin is missing an @Mixin annotation` de la 1.0.1, que fue retirada.
 
 Para Minecraft 1.21.1 con NeoForge y las dependencias del mod original.
 

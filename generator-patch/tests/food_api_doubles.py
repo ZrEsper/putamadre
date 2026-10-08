@@ -16,7 +16,7 @@ def extend(sources):
 'net.minecraft.server.level.ServerLevel': '''public class ServerLevel extends net.minecraft.world.level.Level {public int particles;public <T extends net.minecraft.core.particles.ParticleOptions> int sendParticles(T type,double x,double y,double z,int count,double dx,double dy,double dz,double speed){particles+=count;return 1;}}''',
 'net.minecraft.sounds.SoundEvent': 'public class SoundEvent {public static SoundEvent createVariableRangeEvent(net.minecraft.resources.ResourceLocation id){return new SoundEvent();}}',
 'net.minecraft.world.entity.item.ItemEntity': 'public class ItemEntity extends net.minecraft.world.entity.Entity {}',
-'org.spongepowered.asm.mixin.Mixin': 'import java.lang.annotation.*;@Retention(RetentionPolicy.RUNTIME) @Target(ElementType.TYPE) public @interface Mixin {Class<?>[] value() default {};}',
+'org.spongepowered.asm.mixin.Mixin': 'import java.lang.annotation.*;@Retention(RetentionPolicy.CLASS) @Target(ElementType.TYPE) public @interface Mixin {Class<?>[] value() default {};}',
 'org.spongepowered.asm.mixin.injection.At': 'import java.lang.annotation.*;@Retention(RetentionPolicy.RUNTIME) public @interface At {String value();String target() default "";}',
 'org.spongepowered.asm.mixin.injection.Redirect': 'import java.lang.annotation.*;@Retention(RetentionPolicy.RUNTIME) @Target(ElementType.METHOD) public @interface Redirect {String[] method();At at();}',
 'org.spongepowered.asm.mixin.injection.Inject': 'import java.lang.annotation.*;@Retention(RetentionPolicy.RUNTIME) @Target(ElementType.METHOD) public @interface Inject {String[] method();At[] at();boolean cancellable() default false;}',

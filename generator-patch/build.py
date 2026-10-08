@@ -13,7 +13,7 @@ import zipfile
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
 BASE = REPO / 'mods/zomboid-survival-1.21.1-1.0.0-firstaid-ui-restored.jar'
-OUTPUT = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else REPO / 'mods/zomboid-survival-1.21.1-1.0.1-generator-ui.jar'
+OUTPUT = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else REPO / 'mods/zomboid-survival-1.21.1-1.0.2-generator-ui.jar'
 CACHE = Path(os.environ.get('GENERATOR_BUILD_CACHE', '/tmp/zomboid-generator-build-tools'))
 ARTIFACTS = {
     'ecj.jar': ('org/eclipse/jdt/ecj/3.39.0/ecj-3.39.0.jar', '01f5a92ac19bb2b3bf85e295a68f2c73c264369109158b566ce9b490af982948'),
@@ -44,7 +44,7 @@ with tempfile.TemporaryDirectory(prefix='zomboid-generator-') as directory:
     sources = sorted(stubs.rglob('*.java')) + sorted((HERE / 'src').rglob('*.java'))
     run(*compiler, '-d', classes, *sources)
     asm_path = os.pathsep.join(str(CACHE / name) for name in ('asm.jar', 'asm-tree.jar'))
-    run(*compiler, '-cp', asm_path, '-d', tools, HERE / 'PatchGenerator.java')
+    run(*compiler, '-cp', asm_path, '-d', tools, HERE / 'PatchGenerator.java', HERE / 'tests/MixinAnnotationChecks.java')
     temporary_jar = build / 'output.jar'
     run('java', '-cp', str(tools) + os.pathsep + asm_path, 'PatchGenerator', BASE, classes, temporary_jar)
     # Add production sound assets, subtitles and food merge mixins without touching other entries.
@@ -83,6 +83,7 @@ with tempfile.TemporaryDirectory(prefix='zomboid-generator-') as directory:
                 file = runtime / name
                 file.parent.mkdir(parents=True, exist_ok=True)
                 file.write_bytes(patched.read(name))
+    run('java', '-cp', str(tools) + os.pathsep + asm_path, 'MixinAnnotationChecks', temporary_jar)
     test_classpath = str(runtime) + os.pathsep + str(classes)
     run(*compiler, '-cp', test_classpath, '-d', tests, HERE / 'tests/GeneratorChecks.java', HERE / 'tests/EffectsAndFoodChecks.java')
     run('java', '-Xverify:all', '-cp', str(tests) + os.pathsep + test_classpath, 'GeneratorChecks')

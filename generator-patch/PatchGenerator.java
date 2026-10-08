@@ -164,7 +164,7 @@ public final class PatchGenerator implements Opcodes {
                 if(entry.getName().equals(MACHINE+".class")) data=patchMachine(data);
                 if(entry.getName().equals(PREFIX+"Client.class")) data=patchClient(data);
                 if(entry.getName().equals("META-INF/neoforge.mods.toml")) {
-                    data=new String(data,java.nio.charset.StandardCharsets.UTF_8).replace("version=\"1.0.0\"","version=\"1.0.1\"").getBytes(java.nio.charset.StandardCharsets.UTF_8);
+                    data=new String(data,java.nio.charset.StandardCharsets.UTF_8).replace("version=\"1.0.0\"","version=\"1.0.2\"").getBytes(java.nio.charset.StandardCharsets.UTF_8);
                 }
                 ZipEntry copy=new ZipEntry(entry.getName());copy.setTime(entry.getTime());output.putNextEntry(copy);output.write(data);output.closeEntry();
             }

@@ -1,6 +1,6 @@
 # Generador: interfaz, alcance y combustible
 
-JAR para Minecraft 1.21.1 / NeoForge: `../mods/zomboid-survival-1.21.1-1.0.1-generator-ui.jar`.
+JAR para Minecraft 1.21.1 / NeoForge: `../mods/zomboid-survival-1.21.1-1.0.2-generator-ui.jar`.
 Reemplazar el JAR anterior de Zomboid Survival, sin cargar dos versiones simultáneamente.
 First Aid conserva su interfaz: la interceptación retirada anteriormente sigue desactivada.
 
@@ -13,6 +13,12 @@ First Aid conserva su interfaz: la interceptación retirada anteriormente sigue 
 - Sonido original de motor diésel, con muestra mono Ogg de un segundo y subtítulos; humo de escape cada medio segundo. Ambos se emiten únicamente en ticks de generación, nunca en espera o sin combustible. Las máquinas de frío conservan su sonido anterior.
 - Los alimentos perecederos con hasta 200 ticks (10 segundos) de diferencia de frescura vuelven a apilarse mediante clic, shift-click, arrastre, recogida y unión en el suelo. Se normalizan al estado más viejo, sin renovar su vida útil. Se mantienen separados tipos de alimento, estados congelados/fríos diferentes y metadatos de otros mods. La igualdad general de objetos y la sincronización de inventario siguen siendo estrictas.
 - Datos del panel sincronizados como pares de mitades de 16 bits, evitando valores negativos de energía o truncamiento de combustibles largos.
+
+## Corrección de arranque en 1.0.2
+
+El log de 1.0.1 identifica `FoodMenuMergeMixin is missing an @Mixin annotation`. La definición de prueba de `@Mixin` usaba retención RUNTIME, pero la API oficial utiliza CLASS y Mixin 0.8.7 busca la anotación entre las anotaciones invisibles del bytecode. Se corrigió la retención y se reconstruyeron los cuatro mixins de apilado. Las anotaciones de inyección conservan su retención RUNTIME.
+
+La comprobación `MixinAnnotationChecks` reproduce el fallo con el JAR 1.0.1 y comprueba en el JAR final los ocho mixins registrados y sus seis métodos de inyección alimentaria. Esta comprobación se ejecuta antes de aceptar el JAR en cada compilación; no sustituye la prueba completa de arranque de Minecraft.
 
 ## Reproducir y comprobar
 
