@@ -1,5 +1,22 @@
 # Mods de Zomboid
 
+## First Aid Zomboid 3.4.6
+
+[Descargar First Aid actualizado](https://github.com/ZrEsper/putamadre/raw/refs/heads/main/mods/firstaid-1.21.1-ZOMBOID-v3.4.6-wetness-no-panic.jar)
+
+Para **Minecraft 1.21.1** y **NeoForge 21.1.219 o posterior**, con las mismas dependencias de la versión anterior: **lrtactical 0.4.3** y **hordes 1.6.3f**. Reemplaza el First Aid anterior en **cliente y servidor**; no cargues dos versiones de First Aid simultáneamente.
+
+- Desactiva el heartbeat, el pánico automático de encuentros/disparos cercanos y el contorno claro de pantalla.
+- El contacto con agua moja las partes alcanzadas del cuerpo. Se secan gradualmente en unos **dos minutos** fuera del agua.
+- La humedad prolongada puede provocar **gripe de dos minutos**, con estornudos cada 10–20 segundos.
+- Los estornudos emiten sonido y partículas verdes desde la cara, y atraen zombis a **32 bloques**.
+- La **toalla reutilizable** se fabrica con **tres telas de First Aid**, en cualquier distribución. Clic derecho seca el cuerpo; una gripe ya iniciada sigue su curso.
+- El menú muestra humedad por extremidad y tiempo de gripe. Se conservan el menú de habilidades y los tratamientos existentes.
+
+Las comprobaciones de lógica y bytecode pasaron con dobles de las API. **Falta probar el arranque y la integración dentro de Minecraft con el modpack completo.**
+
+[Detalles, código del parche y comprobaciones](firstaid-patch/README.md). La versión 3.4.5 se conserva como base de reconstrucción; no debe instalarse junto con la nueva.
+
 ## Zomboid Survival 1.0.3
 
 [Descargar el JAR actualizado](https://github.com/ZrEsper/putamadre/raw/refs/heads/main/mods/zomboid-survival-1.21.1-1.0.3-water-power.jar)

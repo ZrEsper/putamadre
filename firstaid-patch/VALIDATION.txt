@@ -1,0 +1,8 @@
+First Aid Zomboid v3.4.6
+SHA256: b5ef667130a909c3c41f55b09c22fbe45792945ae4b62ddba28a58919efe80ce
+Two independent builds produced identical JAR bytes.
+PASS: 14828 wetness/flu/geometry assertions
+PASS: 42 integration assertions using actual new JAR classes with API doubles
+PASS: 511 methods analyzed, 34 bytecode wiring/suppression/mixin checks
+PASS: original unrelated mod entries preserved; input unchanged
+Full Minecraft/NeoForge modpack startup and in-game integration not executed.
