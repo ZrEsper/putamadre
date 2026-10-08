@@ -1,0 +1,6 @@
+{
+  "generator_running": {
+    "subtitle": "subtitles.zomboid_survival.generator_running",
+    "sounds": [{"name": "zomboid_survival:generator_running", "attenuation_distance": 16}]
+  }
+}
