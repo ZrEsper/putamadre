@@ -1,5 +1,19 @@
 # Mods de Zomboid
 
+## Actualización: Hordes 1.8.2 y melee 2.3.1
+
+- [Descargar Hordes 1.8.2](mods/zomboid-hordes-1.8.2-neoforge-1.21.1-chance-population.jar): objetivo aleatorio de **0–5 zombis vivos por par de chunks**, con probabilidades **40/30/18/8/3/1 %**, respectivamente. Cinco es el resultado más raro (1 %). Cooldown compartido y persistente de **5–10 minutos**. Basta con un chunk del par cargado; las búsquedas se reparten para evitar que el terreno bloqueado acapare el presupuesto. Cuenta los zombis existentes y no elimina los que ya haya.
+- [Descargar melee 2.3.1](mods/zomboid-global-melee-animations-2.3.1-range-plus-one.jar): **V pasa de 1,5 a 2,5 bloques** y el melee de LesRaisins, incluidas las espadas/sartén del puente, gana **1 bloque** en búsqueda y validación del golpe.
+
+Reemplaza las versiones anteriores en **cliente y servidor**; no cargues dos versiones del mismo mod. Conserva sus dependencias. Las versiones de Hordes anteriores que aparecen más abajo son bases de reconstrucción, no deben instalarse junto con 1.8.2.
+
+La población se activa en supervivencia, en el Overworld, fuera de Pacífico y con `doMobSpawning=true`. `/zhorda estado` muestra las condiciones de activación, pausa, población viva, objetivo y cooldown. El log aportado confirmó una prueba con seis zombis añadidos en supervivencia y pruebas bloqueadas en creativo.
+
+Los checks de lógica, persistencia, bytecode, alcance y anotaciones pasaron con dobles de API. **Falta probar los nuevos JAR dentro del modpack completo.**
+
+[Detalles y reproducción](chance-range-patch/README.md) · [Fuentes y herramientas](chance-range-patch/chance-range-patch-source.zip) · [Resultados de validación](chance-range-patch/VALIDATION.txt).
+
+
 ## Zomboid Hordes 1.8.1
 
 [Descargar Zomboid Hordes actualizado](https://github.com/ZrEsper/putamadre/raw/refs/heads/main/mods/zomboid-hordes-1.8.1-neoforge-1.21.1-chunk-population.jar)

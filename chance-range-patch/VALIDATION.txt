@@ -1,0 +1,13 @@
+PASS: 14013 chance/cap/cooldown/persistence assertions
+PASS: 111 actual spawn/SavedData/config regression checks with API doubles
+PASS: 148 methods analyzed; 25 event/wave/save/config/mixin wiring checks
+PASS: V reach and search area both increased 1.5 -> 2.5; bytecode verified
+PASS: 36017 real range-hook and V-rule assertions with API doubles
+PASS: 145 methods analyzed and 70 production/annotation/range-wiring checks
+PASS: all undeclared original JAR entries preserved
+PASS: all undeclared original JAR entries preserved
+Output: /workspace/melee-update/output/zomboid-hordes-1.8.2-neoforge-1.21.1-chance-population.jar
+SHA256: a6128c419a65154ea82ee11cdf3758ef35381048a3f71540d43fb65bb711bb42
+Output: /workspace/melee-update/output/zomboid-global-melee-animations-2.3.1-range-plus-one.jar
+SHA256: 42be9caeb49262018f0400c0841ad469c34aaac0e1ae43b9967f299edee4f330
+Minecraft/modpack startup is not verified by API doubles or bytecode checks.
