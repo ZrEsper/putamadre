@@ -1,0 +1,10 @@
+Tactical.10
+- Silencia en cliente zombieawareness:target/alert/investigate (incluidos prefijos internos) y zomboid_hordes:horde desde SoundEngine. El filtro opera aunque un resource pack cambie los audios. Conserva sonidos vanilla de combate y helicoptero, sin modificar la IA Zombie Awareness.
+- Punteria contra jugadores: 80% de intentos con desvio lateral; 98% apunta bajo, hacia piernas. Solo 2% conserva punteria central. Son porcentajes de intencion, no una garantia de localizacion del impacto; movimiento, arma y otros mods pueden cambiarlo.
+- Vision nocturna: 8 bloques en oscuridad, 12 con luz moderada, 18 con buena luz del objetivo. Lluvia reduce alcance 25%; mantiene linea de vision.
+- Cada 2 segundos evalua zombies locales (24 bloques), tormenta, salud, vendas y municion. Noches peligrosas: busca lugar transitable con techo, suelo, dos paredes y sin zombies a menos de 8 bloques. Se agacha al llegar y abandona refugio al amanecer.
+- Noches tranquilas: si carece de vendas/municion, permite busqueda de recursos. Evita investigaciones y limpieza de hordas mientras busca refugio. Enemigo a menos de 6 bloques interrumpe para defenderse; huida critica conserva prioridad.
+- Conserva mejoras y fixes tactical.9.
+Instalacion: sustituir NPC anterior por tactical.10 en cliente y servidor; mantener Hordes no-distant-sound anterior. No duplicar versiones.
+Validacion: 50 pruebas funcionales con API simulada; ASM 52 clases/484 metodos; metadata de ambas mixins, registro exclusivamente cliente, retencion CLASS, sin stubs empaquetados. No probado dentro de Minecraft.
+SHA256 209b32237b554724c0c8f21067a918db5201318c707a0a1803958d9d54e12061
