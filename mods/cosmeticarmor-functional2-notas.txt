@@ -1,0 +1,17 @@
+Cosmetic Armor Reworked Forked — functional.2
+Instalación: reemplazar cosmeticarmorreworkedforked-neoforge-1.21.1-0.0.4.jar por cosmeticarmorreworkedforked-neoforge-1.21.1-0.0.4-functional.2.jar en cliente y servidor. No instalar ambas versiones. Mantiene la dependencia de Architectury 13.0.8 o superior.
+
+- Las cuatro ranuras cosméticas también aplican los atributos reales de sus piezas para la ranura correspondiente: armadura, dureza, resistencia al empuje, salud, movimiento y otros atributos registrados en el jugador por mods. Conserva cantidades, operaciones y penalizaciones. Los IDs nuevos evitan colisiones con la armadura normal; los atributos son transitorios y se retiran al quitar/romper piezas, morir o desconectarse.
+- No acumula bonos al reequipar, actualizar componentes o pasar ticks. No cura gratis al equipar salud extra; al quitarla ajusta la salud al máximo válido. Los límites nativos de atributos de Minecraft siguen aplicándose.
+- Desgaste de las piezas cosméticas ante daño normal, con la API nativa hurtAndBreak (incluye procesamiento de durabilidad de Minecraft/NeoForge), excepción de creativo/espectador, daños que atraviesan armadura y resistencia al fuego. Sincroniza las modificaciones al inventario cosmético.
+- Compatibilidad opcional con el FirstAid aportado: usa su daño por ranura para el desgaste y evita repartir toda la protección cosmética globalmente entre todas las partes del cuerpo. Conserva las escalas de armadura/dureza de FirstAid y los bonos globales ajenos.
+- Botón «Superponer: Sí/No» debajo del inventario cosmético. Cada jugador guarda su elección usando las banderas e infraestructura de sincronización del propio mod; los demás clientes reciben esa elección. «No» mantiene el reemplazo visual original; «Sí» renderiza el conjunto normal y el cosmético encima.
+- Separación leve de la segunda capa para reducir parpadeo entre superficies. Mantiene ocultación por ranura y el control original para desactivar cosméticos en el cliente. Restaura inventario y pose aunque falle un renderizador.
+
+Al superponer dos modelos que ocupan exactamente la misma superficie, la capa exterior tapa la interior en esa zona. Las piezas con recortes y modelos distintos muestran la mezcla de forma más clara.
+Los comportamientos específicos que un mod programa fuera del sistema de atributos (bonos de conjunto, habilidades al llevar una pieza en la ranura vanilla, etc.) no se activan automáticamente por copiar atributos.
+
+Validación: 35 comprobaciones de atributos/desgaste/compatibilidad y 12 de renderizado con API simulada; ASM 62 clases y 438 métodos. Se inspeccionaron las firmas nativas del JAR aportado, FirstAid y la API de atributos de NeoForge 1.21.1. No probado dentro de Minecraft.
+SHA256 e73836c659c46d8dada678e9afce955df54a16cfd5fbf87ca9a826ad0327c35e
+
+Corrección functional.2: el log confirma un IllegalClassLoadError al cargar OverlayUI, porque functional.1 registraba lain.mods.cos.functional entero como paquete de mixins. Se trasladan únicamente los tres mixins a lain.mods.cos.functional.mixin; la interfaz, suscriptores y lógica común permanecen fuera del paquete reservado. Se validan todos los paquetes de mixins del JAR para detectar clases normales colocadas allí. Architectury ya está instalado en el log (13.0.11); su error aparece tras el fallo de construcción del mod. Sustituir functional.1 por functional.2, sin conservar ambas versiones.
