@@ -1,6 +1,20 @@
 # Mods de Zomboid
 
-## TacZ NPCs tactical.5: civiles con profesiones y combate vanilla adaptado a TACZ
+## TacZ NPCs tactical.13: saqueo prioritario, equipo y exploración
+
+[Descargar tactical.13](mods/tacznpcs-2.1.0-1.21.1-tactical.13.jar). Sustituye tactical.12 y otras versiones de TacZ NPCs en cliente y servidor. Mantén las dependencias y Remains compatible que ya usabas.
+
+- Revisan cuerpos y objetos a 24 bloques; priorizan mejoras de equipo y recogen stacks completos.
+- Equipan mejores armas, herramientas y prendas; mochila persistente de 27 stacks con conservación del botín.
+- Linterna en mano secundaria solo de noche y un segundo mínimo entre golpes.
+- Buscan otras rutas cuando no queda botín cercano y eliminan cuerpos únicamente al comprobar que estén vacíos.
+- Se construye sobre el JAR .12 suministrado, manteniendo sus recursos y funciones fuera de estos cambios.
+
+Pruebas de regresión e integridad aprobadas. **Pendiente comprobar movimiento, luz y animaciones dentro del modpack completo.**
+
+[Instalación, comportamiento y límites](tacznpcs-patch/README.md) · [Fuentes reproducibles](tacznpcs-patch/tacznpcs-tactical.13-fuentes.zip).
+
+## Historial: TacZ NPCs tactical.5 (sustituido por .13): civiles con profesiones y combate vanilla adaptado a TACZ
 
 [Descargar tactical.5](mods/tacznpcs-2.1.0-1.21.1-tactical.5.jar). Reemplazar **todas las versiones anteriores de TacZ NPCs** en cliente y servidor. Mantener [Zombie Remains Loot 1.6.1 npc-compat](mods/zombie-remains-loot-1.6.1-neoforge-1.21.1-npc-compat.jar), Self Expression 2.22a y las dependencias existentes.
 

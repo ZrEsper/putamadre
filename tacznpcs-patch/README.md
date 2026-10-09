@@ -1,64 +1,40 @@
-# TacZ NPCs tactical.5: civiles, profesiones y goals vanilla
+# TacZ NPCs tactical.13: saqueo, equipo, linterna y rutas
 
-Minecraft 1.21.1 / NeoForge, TACZ y **Self Expression 2.22a**. Sustituir todas las versiones anteriores de TacZ NPCs por `tacznpcs-2.1.0-1.21.1-tactical.5.jar`, en cliente y servidor. Mantener Zombie Remains Loot 1.6.1 npc-compat, Doomsday Decoration y las demás dependencias existentes. Fracture Point continúa siendo opcional para el conjunto militar raro. No borrar el mundo ni la configuración. **Los NPCs existentes también migran al nuevo vestuario al cargar.**
+Actualización construida **sobre el JAR tactical.12 suministrado**, conservando sus recursos y las clases que no necesitan cambios. Minecraft 1.21.1 / NeoForge, TACZ y las mismas dependencias que .12.
 
-## Ropa y profesión
+## Instalación
 
-Las plantillas originales equipaban cuero/hierro y el parche anterior solo vestía civiles si estaban sin armadura. Esta entrega sustituye la armadura de plantilla por Self Expression, aunque el NPC tenga la marca de vestuario de .3/.4. El uniforme y la profesión se guardan; no cambian en cada carga. Las piezas ausentes del uniforme dejan el espacio libre, sin completar con armadura vanilla. Las prendas y herramientas reemplazadas se conservan en la bolsa; si está llena, se dejan como objetos en el mundo.
+Reemplazar tactical.12 y cualquier otra versión de TacZ NPCs por `tacznpcs-2.1.0-1.21.1-tactical.13.jar` en cliente y servidor. Mantener Self Expression, Flashlight, Fracture Point si se usa y la compatibilidad de Zombie Remains que ya estaba instalada. No es necesario borrar mundo, NPCs ni configuraciones. Una sola versión de TacZ NPCs en cada lado.
 
-| Uniforme de Self Expression | Profesión | Herramienta |
-| --- | --- | --- |
-| builder | Constructor | Pico de piedra |
-| miner | Minero | Pico de hierro |
-| doctor | Médico | Tijeras |
-| woodworker | Carpintero | Hacha de hierro |
-| fire | Bombero | Hacha de hierro |
-| courier | Mensajero | Espada de madera |
-| police | Policía | Espada de hierro |
-| official | Oficinista | Espada de madera |
-| medieval_farmer | Agricultor | Azada de piedra |
-| gray_jacket | Civil | Espada de piedra |
-| casual_autum | Civil | Espada de madera |
-| apocalypsise_survivor | Superviviente | Hacha de piedra |
+## Cambios
 
-Se verificaron los doce conjuntos contra el JAR exacto suministrado: SHA256 `8d8772bb9a5b1d33916295a3f98c082a6e488196458d1924a21a1591581cad46`. Algunas profesiones no tienen casco, por diseño del mod. El arma de fuego existente se conserva; su herramienta se lleva en la mano secundaria si está libre, o en la bolsa si hay espacio. Quienes no llevan arma de fuego usan la herramienta de su profesión para defenderse. La profesión representa uniforme y herramienta; no se añaden rutinas de minería, medicina o construcción automática.
+- **Golpes: mínimo 20 ticks entre intentos de daño por NPC**, un segundo a 20 TPS. Se aplica también al ataque cercano con armas de fuego, que .12 intentaba cada dos ticks. Cambiar de víctima no reinicia el cooldown. Se mantienen los valores nativos de daño y salud.
+- **Linterna en mano secundaria únicamente de noche.** De día se guarda y se restaura el objeto desplazado. Se conserva el contenido/componentes al activar una linterna apagada. Durante la asistencia médica se respeta el objeto de cura en la mano secundaria. El objeto guardado y la herramienta desplazada se conservan al morir como drops, sin añadirlos repetidamente a la mochila.
+- **Revisión de cuerpos y objetos sueltos dentro de 24 bloques**, incluyendo distintas alturas cercanas y coordenadas negativas. Se priorizan cuerpos que ofrecen mejoras de equipo, después suministros/materiales. Un zombi distante y distraído no cancela la búsqueda; un atacante reciente o un zombi que persigue al NPC sí interrumpe el saqueo.
+- **Mejoras de arma, herramientas y armadura.** Se distinguen materiales de herramientas. Un civil puede ponerse equipo de Fracture Point encontrado como botín; se conservan las prendas civiles de Self Expression y la exclusión de armadura vanilla al vestir. La rareza del equipamiento militar inicial no se cambia. Al mejorar equipo, el objeto reemplazado se intercambia con el cuerpo, conservando el número total de objetos incluso si la mochila está llena.
+- **Mochila de 27 stacks persistentes**, sin truncar las entradas previamente guardadas por .12 hasta 127 entradas de recuperación. Se recogen stacks completos o el espacio disponible para apilarlos, manteniendo componentes y límites nativos. El saqueo muestra pose y movimiento de mano, con una transferencia por segundo. Ya no se abandona un saqueo que está progresando por el temporizador fijo anterior de cinco segundos.
+- **Los cuerpos dejan de usarse como almacenes de objetos.** Se retiran las rutinas que guardaban basura en cuerpos y reservaban ese botín durante un minuto. La investigación de ruido, la búsqueda de refugio y el paseo no desplazan una búsqueda activa de botín seguro. Se conservan prioridades de defensa, huida por heridas y asistencia médica.
+- **Otra ruta cuando la zona esté limpia:** recorridos de 10–18 bloques con rutas alcanzables, dentro de chunks cargados, y memoria de ubicaciones recientes para reducir regresos. El trayecto vuelve a revisar botín y se interrumpe ante oportunidades o peligro. De noche, un NPC sano puede seguir explorando con linterna en una zona sin peligro inmediato.
+- **Eliminación únicamente de cuerpos vacíos.** Para Zombie Remains se comprueban identidad del inventario, bloque y registro antes de retirarlo sin drops adicionales. Para Corpse se revisan inventarios principal, armadura, mano secundaria y objetos adicionales; también se sincroniza el equipo visual al intercambiar prendas. Si queda botín o falta espacio, el cuerpo permanece. Si otro jugador retira el cuerpo, el NPC deja de transferir desde ese inventario.
 
-Se mantiene la probabilidad 1% de un conjunto militar completo de Fracture Point y se preservan los conjuntos militares completos existentes. Sin Self Expression instalado no se inventan objetos; se conserva el equipo hasta que la integración esté disponible.
+La compatibilidad previa de Remains 1.6.1 solo lee nueve entradas de bolsa al construir un cadáver. Antes de la muerte se conservan las entradas adicionales como drops normales, y las nueve primeras siguen entrando al cadáver por esa compatibilidad. No hace falta sustituir Remains para este parche. Objetos guardados de la linterna/mano secundaria también se dejan como drops al morir.
 
-## Movimiento y combate
-
-Se reemplaza el Goal que monopolizaba MOVE y LOOK por decisiones que solo reservan TARGET. Goals independientes se encargan de disparar, golpear, recuperarse de una ruta fallida en agua, saquear, pasear y observar. El selector vanilla resuelve qué tarea puede usar movimiento/mirada.
-
-Los pillagers usan un goal de ballesta. Para conservar las armas TACZ, esta entrega añade la interfaz vanilla `RangedAttackMob` al NPC y adapta **`RangedAttackGoal` de Minecraft** para navegación, mirada y cadencia, con el disparo TACZ como callback. **`MeleeAttackGoal`** controla persecución, alcance y golpes con swing al llevar herramientas o ir desarmado. El paseo utiliza **`WaterAvoidingRandomStrollGoal`**, con **`LookAtPlayerGoal`** y **`RandomLookAroundGoal`** para observación ociosa. Los goals que se ejecutan son los de la versión de Minecraft instalada.
-
-- Base de movimiento 0.30. Paseo con factor 0.85 y persecución con factor 1.1. Se permite sprint hacia amenazas distantes: más de 18 bloques con arma de fuego, más de cuatro en combate cuerpo a cuerpo. No se impone permanentemente `setSprinting(false)`.
-- Se retiran del atributo de estos NPCs los identificadores de penalización de peso/movimiento de arma declarados por TACZ (`WEIGHT_SPEED_MODIFIER*`, `EXTRA_SPEED_MODIFIER*`). Se conservan otros modificadores de armadura, pociones y sprint. Esto evita que apuntado/peso vuelva a reducir la velocidad tras ajustar la base. No se afirma una diferencia física exacta del 5% frente al jugador.
-- Navegación flotante y FloatGoal conservados. Una ruta fallida en agua puede solicitar movimiento directo al control; en combate cuerpo a cuerpo existe un Goal específico para ese caso. No se agachan dentro del agua. Estas medidas requieren comprobación física en el escenario inundado del modpack.
-- El atacante reciente tiene prioridad sobre zombis y el foco anterior. Los zombis lejanos/distraídos no impiden recoger botín. Los civiles sin armas de fuego no cazan jugadores; se defienden con la herramienta o a puños cuando son atacados o un zombi se acerca.
-- El rango de posicionamiento del ataque a distancia es 18 bloques. Se gira cabeza/cuerpo antes de disparar; los tiros se limitan a 24 bloques y requieren visión y orientación. Sigue habiendo dispersión, recarga TACZ y protección entre aliados. Solo hay una retirada corta cuando un zombi entra a menos de 4.5 bloques, sin movimiento lateral periódico.
-- La reacción mejora con equipo y experiencia limitada de saqueo. No se aumenta salud ni daño base. Los atributos nativos de herramientas y prendas siguen aplicándose.
-
-## Saqueo y cadáveres
-
-Se mantienen cuerpos de Zombie Remains y Corpse, objetos sueltos y materiales en doce bloques, bolsa persistente de nueve stacks, mejoras de equipo y experiencia de saqueo. Se tarda dos segundos por objeto de un cuerpo y uno por objeto suelto, con pose/movimiento de mano. Las tareas de combate interrumpen el saqueo y liberan la reserva.
-
-Se desactiva la recogida automática antigua de estos NPCs para evitar que vuelva a equipar armadura vanilla o compita con las transferencias. El saqueo propio recoge y conserva esos objetos, pero equipa prendas de Self Expression/Fracture Point. Las armas y herramientas se siguen pudiendo mejorar.
-
-Remains **1.6.1 npc-compat no cambia**: los cadáveres contienen equipo y bolsa reales, antes del botín generado. Se mantienen spawn natural, registro regional, reglas de supervivencia y huevo de camuflaje en creativo/búsqueda:
+Se mantienen huevo y textura, spawn, profesiones, armas TACZ, ropa, puertas, animaciones y otras funciones de .12 fuera de los cambios descritos. Comando del huevo:
 
     /give @s tacznpcs:bandit_spawn_egg
 
-## Fuentes y verificación
+## Reconstrucción
 
-Java 21, Python 3, ECJ y ASM incluidos con checksums. Extraer las fuentes y ejecutar:
+Extraer las fuentes; Java 21 y Python 3:
 
-    python3 -B build.py /ruta/tacznpcs-2.1.0-1.21.1-tactical.1.jar /ruta/zombie-remains-loot-1.6.0-neoforge-1.21.1.jar
-    python3 verify_integrations.py /ruta/selfexpression-2.22a-neoforge-1.21.1.jar
+    python3 -B build.py /ruta/tacznpcs-2.1.0-1.21.1-tactical.12.jar
 
-Las bases del repositorio son para reconstrucción, no para instalar junto a las actualizaciones. `src/` contiene la IA, vestuario y saqueo; `Patch.java` aplica transformaciones; `remains-src/` conserva la compatibilidad existente. Las herramientas verifican que solo cambien las entradas previstas. Los dobles y fuentes de referencia de tests no se incluyen en los mods.
+La base está en `base/` solo para reconstrucción. ECJ y ASM se incluyen con sus checksums. `src/` implementa el ajuste de supervivencia y el Goal de exploración; `Patch.java` hace las transformaciones localizadas; los dobles de `test-src/` y stubs no se empaquetan en el mod.
 
-Pasaron **1247 aserciones con dobles de API** y análisis ASM de **139 métodos**. Para los tests de combate se compilan fuentes de referencia de los goals vanilla (proveniencia indicada en cada archivo); el mundo, navegación, selector y API continúan siendo dobles. Se comprueban prioridades de flags, orientación, cambio de atacante, melee/swing, sprint, retirada limitada, integración de vestuario viejo, herramientas para cada uniforme, conservación de armaduras reemplazadas, filtro contra equipamiento vanilla, penalizaciones TACZ, recuperación en agua, saqueo, persistencia, cadáveres y huevo. Los helpers se ejecutan con `-Xverify:all`. También se reconstruyen las fuentes en un directorio limpio y se comparan todas las entradas del JAR.
+## Verificación y límites
 
-**No se ejecutó Minecraft ni el modpack completo.** Los tests no validan locomoción física, render de prendas o animaciones en esa instalación. No se presentan las aserciones como evidencia de que el comportamiento ya quedó bien en juego. La descarga del runtime NeoForge/Minecraft para una prueba real no estuvo disponible en este entorno.
+Pasaron **169 aserciones de regresión** ejecutando los helpers reales parcheados de .12 contra dobles de API. Se cubren cooldown compartido, transición día/noche, componentes, inventario y drops conservados, prioridad de cuerpos equipados, herramientas superiores, armadura militar encontrada, bolsa llena sin pérdida, saqueo prolongado, retiro de cuerpos vacíos, inventarios separados de Corpse, cuerpo eliminado por un jugador, rollback, peligro inmediato, animación de saqueo y rutas nuevas. ASM analiza **209 métodos** de las seis clases existentes modificadas; los helpers se ejecutan con `-Xverify:all`. Se comprueba que todas las entradas no modificadas de .12 conserven exactamente sus bytes, y se reconstruye desde el archivo de fuentes en un directorio limpio.
 
-El log nuevo confirma tactical.4 y Self Expression 2.22; no muestra errores del controlador. Los errores de biomas de fabulous-furnished y demás errores ajenos que aparecen no se corrigen mediante este JAR. Este parche se aplica a `tacznpcs:npc`, no a las entidades de Faction Friction ni a los zombis de Hordes.
+**No se ejecutó Minecraft ni el modpack completo.** No están verificadas la locomoción física, la luz visual del mod Flashlight ni las animaciones dentro de esa instalación. Las pruebas no equivalen a una sesión real en el escenario de la captura.
+
+Comprobación en juego: poner un cuerpo con arma, ropa y materiales junto a un NPC sano en zona segura; observar mejoras y recogida; esperar al vaciado y retiro; llenar su mochila y confirmar que un cuerpo con objetos permanece; comprobar otra ruta en zona despejada; pasar de día a noche y vuelta; contar intervalos de melee; guardar/reabrir y matar un NPC cargado para revisar conservación de objetos.
