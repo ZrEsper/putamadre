@@ -1,0 +1,18 @@
+Tactical.11
+Equipo de aparicion:
+- Militares 5% cuando existe el conjunto Fracturepoint; civiles en el resto.
+- Civiles con ropa Self Expression por profesion: melee 18%, comida 20%, utilidad profesional 12%; arma de plantilla 2% (policia 8%). No todos los civiles empiezan con cosas.
+- Militares con ropa Fracturepoint, arma, municion compatible, vendas/plaster, comida y melee.
+- Restriccion de armadura en spawn, loot y revision periodica: civiles Self Expression, militares Fracturepoint. Ninguna armadura vanilla se adquiere por el loot. NPCs existentes conservan recursos/profesion; se retira ropa incompatible y se guarda sin tirarla.
+Cadaveres y suelo:
+- Cadaver vacio se elimina tras vaciar todo su inventario. CorpseEntity se comprueba en todas sus listas para no destruir objetos restantes.
+- Restos esqueleticos: recoge primero contenido restante y rompe bloque usando drops nativos de huesos; no genera huesos extra.
+- Recoleccion de suelo dentro de 12 bloques. Transporta objetos a cuerpos con espacio, combina stacks con limites reales, reserva temporalmente depositos para evitar ciclos de loot.
+- Compatible con cuerpos de Zombie Remains Loot y Corpse; capacidad y acceso reales. Si no hay cuerpo disponible, guarda carga en mochila y conserva lista pendiente en NBT para depositarla despues.
+- Si ambos inventarios estan llenos, no borra objetos ni tira lo que lleva. Acceso inaccesible tiene limite de tiempo y reintento.
+Movimiento:
+- Base 0.24, elimina bonificaciones positivas de velocidad conservando penalizaciones; navegacion limitada a 1.0 normal y 1.25 en huida.
+Mantiene mejoras tactical.10: precision contra jugadores, vision nocturna/refugio, avisos de sonido silenciados, animaciones corregidas.
+Instalacion: reemplazar tactical.10 por tactical.11 en cliente y servidor. Mantener Hordes no-distant-sound anterior.
+Validacion: 50 comprobaciones generales y 77 de equipo/almacenamiento con API simulada; 54 clases/521 metodos verificados ASM; contratos mixin y empaquetado comprobados. No probado dentro de Minecraft.
+SHA256 c41bb1a4c7b598da345be7361e7d49826163d2ffffaa5b3df96e5402692d09aa
