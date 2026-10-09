@@ -1,0 +1,13 @@
+Survivor Creator v15 — sordera, música de creación y progreso de XP
+Instalación: sustituye el JAR v14 por survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v15-hearing-xp.jar. No dejes ambas versiones en mods. Usa el mismo JAR en cliente y servidor.
+
+- Nuevo efecto survivorcreator:deafness (Sordera), con niveles I/II/III. I: volumen al 75%; II: al 50%; III: silencio del juego.
+- El perk negativo hard_of_hearing conserva su ID y coste -2 para compatibilidad con personajes existentes; ahora se llama Sordera y aplica Sordera II permanentemente.
+- Sordera III no tiene perk, objeto ni receta para obtenerla jugando. Se aplica en muerte/creación y se mantiene localmente en todas las pantallas de CreatorScreen/EndingScreen hasta regresar al juego. Solo la música de creación permanece audible en esas pantallas. No cambia los ajustes personales de volumen.
+- La pista OGG aportada se incluye íntegra, en streaming; suena durante creación/finalización y se repite si la creación tarda más que la pista. Se detiene al entrar al juego o desconectarse. Evita acumular copias de la música.
+- Aviso verde pequeño (escala 0.8), centrado por encima de la hotbar: flecha arriba, skill, XP ganada y XP restante hasta el siguiente nivel. Agrupa las ganancias recibidas en las sincronizaciones de 1 segundo, máximo 3 avisos y desaparición suave tras 2.5 segundos sin nuevas ganancias. Conserva fracciones de XP, no inventa ganancias al entrar/cambiar de jugador/crear personaje.
+- Corregido fallo real: LevelUpQueue.scale dividía por max(1, SKILL_XP_MULTIPLIER) y Skills.addXp multiplicaba después por el mismo valor. Los multiplicadores mayores que 1 se cancelaban. Ahora se aplica una sola vez el multiplicador global; se mantiene la curva de progreso original.
+- La protección de aparición de 10 segundos sigue bloqueando XP durante ese intervalo, como en la versión original. No se cambian las acciones que conceden XP ni sus condiciones (por ejemplo, fitness corriendo/saltando; no por estar quieto).
+
+Validación: 18 comprobaciones de progreso/volumen, 18 de ciclo de audio (API simulada), 8 de XP usando el bytecode original de ProgressRules; ASM 86 clases y 678 métodos; JSON, configuración de mixins solo cliente, ausencia de stubs de compilación y coincidencia exacta del OGG comprobados. No probado dentro de Minecraft.
+SHA256: 0812b58c350f3ce54c08454a5b0c8c7172a11afaa322639d9095262d07ea1489
