@@ -1,0 +1,15 @@
+TacZ NPCs tactical.8 — corrección de inicio
+
+Reemplazar tactical.7 por tactical.8 en cliente y servidor.
+No mantener varias versiones de tacznpcs en mods. Mantener First Aid.
+
+El latest.log identifica InvalidMixinException: BanditPlayerModelMixin is missing
+an @Mixin annotation. La anotación de tactical.7 tenía retención RUNTIME; la API
+oficial requiere CLASS y el cargador la busca en RuntimeInvisibleAnnotations.
+Tactical.8 corrige esa retención. Mantiene las animaciones, sonidos y la corrección
+del evento Sniffer de tactical.7.
+
+Comprobado: anotación Mixin en el atributo correcto, anotación Inject visible,
+firma del callback, registro del mixin de cliente, ausencia de los eventos reservados,
+29 pruebas simuladas, análisis de bytecode e integridad ZIP.
+No se ha ejecutado Minecraft en este entorno; la prueba de inicio real queda pendiente.
