@@ -1,106 +1,74 @@
-# Zomboid Hordes 1.8.1: población por chunks
+# Zomboid Hordes 1.8.3: población por chunk y atención individual
 
-Parche de `zomboid-hordes-1.8.0-neoforge-1.21.1.jar` para Minecraft 1.21.1.
-Conserva los requisitos de la base: **NeoForge 21.1.255 o posterior** y
-**SoundAttract 6.3.8d**. Weaker Day Zombie 1.0.0 y Horde Hoard 1.1.0 siguen
-siendo integraciones opcionales. El mod mantiene el ID `zomboid_hordes`.
+[Descargar JAR 1.8.3](../mods/zomboid-hordes-1.8.3-neoforge-1.21.1-living-population.jar) · [Fuentes y herramientas](zomboid-hordes-1.8.3-patch-source.zip) · [Validación](VALIDATION-1.8.3.txt).
 
-[Descargar JAR actualizado](../mods/zomboid-hordes-1.8.1-neoforge-1.21.1-chunk-population.jar) ·
-[Descargar código y herramientas](zomboid-hordes-1.8.1-patch-source.zip) ·
-[Resultados de validación](VALIDATION.txt).
+Las fuentes y resultados de 1.8.1 permanecen en este directorio como material histórico de reconstrucción.
 
 ## Instalar
 
-Reemplaza el addon Zomboid Hordes anterior por
-`zomboid-hordes-1.8.1-neoforge-1.21.1-chunk-population.jar`.
-Usa la misma versión en cliente y servidor y conserva SoundAttract.
-No instales las dos versiones del addon simultáneamente.
+Reemplaza Hordes 1.8.2 por 1.8.3 en cliente y servidor. No cargues dos versiones del addon. Conserva Minecraft 1.21.1, NeoForge 21.1.255 o posterior y SoundAttract 6.3.8d. Las dependencias e integraciones opcionales de la base no cambian.
 
-## Población y cooldown
+## Población de día y de noche
 
-- Se reemplazan las oleadas automáticas diurnas, nocturnas y por ruido por
-  **reposición hasta un mínimo de dos zombis por par de chunks**.
-- Los pares son fijos y no se superponen: chunks X pares e impares vecinos
-  hacia este/oeste en la misma fila Z. Las coordenadas negativas se emparejan
-  correctamente. Cada chunk pertenece a un solo par.
-- Para un par vacío se elige al azar el chunk de cada uno de sus dos zombis:
-  **1+1 tiene 50 % de probabilidad, 2+0 tiene 25 % y 0+2 tiene 25 %**.
-  Por tanto, un chunk individual recibe exactamente uno con probabilidad del
-  50 %. Si una posición no es apta, se intenta el otro chunk del par.
-- Los zombis vivos que ya estén en esos chunks cuentan. Si hay uno, se agrega
-  uno; si ya hay dos o más, no se agrega ninguno. No se eliminan zombis existentes
-  ni se impone un máximo de dos a los guardados anteriores o a spawns manuales.
-- Cada par comparte un **cooldown aleatorio de 6000–12000 ticks**: cinco a diez
-  minutos a 20 TPS. Se guarda con el mundo y no se reinicia por cambiar de jugador,
-  descargar/cargar el chunk o reiniciar el servidor. Matar un zombi no permite
-  una reposición inmediata. Las revisiones se ejecutan una vez por segundo.
-- La primera visita rellena los pares aptos sin esperar el primer cooldown.
-  La colocación inicial se reparte con un límite de 16 entidades y 256 intentos
-  de posición por revisión para evitar una gran aparición de golpe.
-- Solo se procesan pares con ambos chunks cargados alrededor de jugadores vivos
-  de supervivencia en el **Overworld**. El radio por defecto es de cuatro chunks;
-  se incluye el vecino necesario para completar los pares del borde.
-- `config/zomboid-hordes.json` recibe el campo `populationRadiusChunks` (1–8,
-  valor inicial 4) y `balanceVersion=9`. Se conservan las configuraciones ajenas
-  a esta regla. Los antiguos tamaños de oleada siguen en el JSON por
-  compatibilidad, pero ya no gobiernan el spawn automático.
-- Los spawns naturales y de generación de chunks de zombis en el Overworld se
-  bloquean para que no eludan el nuevo ritmo. Los huevos, comandos, spawners y
-  eventos de otros mods permanecen disponibles. Los zombis que ya estaban
-  guardados se conservan.
-- Se respetan Pacífico y `doMobSpawning=false`. Creativo y espectador no activan
-  áreas de población. Los zombis de población no desaparecen por distancia.
+Cada chunk cargado cerca de jugadores vivos en supervivencia tiene su propio objetivo y cooldown. El mínimo pasa de cero por par a **uno por chunk**; los extras conservan una distribución decreciente:
 
-El mínimo depende de **terreno apto**. No se fuerza una colocación dentro de
-agua, bloques, fuera del borde del mundo o a menos de 24 bloques horizontales
-de otro jugador de supervivencia. Se usan posiciones de superficie a una altura
-compatible con el jugador más cercano. Los pares sin una posición segura pueden
-seguir bajo el mínimo. Una búsqueda completamente fallida vuelve a intentarse
-tras diez segundos; si aparece algún zombi, empieza el cooldown completo.
-No se generan ni fuerzan chunks nuevos para cumplir la cuota.
+| Objetivo de zombis vivos por chunk | Probabilidad |
+| --- | --- |
+| 1 | 70 % |
+| 2 | 18 % |
+| 3 | 8 % |
+| 4 | 3 % |
+| 5 | 1 % |
 
-## Comportamientos conservados
+Cada 6000–12000 ticks, de cinco a diez minutos a 20 TPS, se sortea el objetivo y se repone únicamente el déficit. No se añade otro zombi indefinidamente a un chunk ya poblado. El objetivo y los timers se guardan con el mundo; matar un zombi o guardar/reabrir no evita el cooldown.
 
-Se mantienen la investigación de ruidos, integración de TaCZ, personalidad,
-velocidad y combate de zombis, rotura de barreras, loot/restock e integraciones
-del addon. El helicóptero conserva su evento diario y su sonido, pero **atrae
-zombis existentes en lugar de generar una oleada nueva**. Se descartan las
-oleadas pendientes heredadas al comenzar el nuevo sistema.
+Se cuentan todos los zombis compatibles vivos. El límite de cinco controla lo que añade este sistema: no elimina los zombis existentes, los que llegan caminando ni los creados por otros mods/comandos. Al migrar desde 1.8.2 se retiran los timers por pares y se inicializan los objetivos por chunk; la pausa explícita de /zhorda parar se conserva.
 
-`/zhorda estado` informa pares activos, déficit y próximo cooldown.
-`/zhorda parar` pausa la reposición en todo el Overworld durante 5–10 minutos.
-Los comandos de prueba `dia`, `noche` y `ruido` revisan la densidad respetando
-los cooldowns; `helicoptero` prueba además el sonido y la atracción. Las pruebas
-no cambian la hora ni permiten acumular zombis por encima de la cuota.
+Se mantiene la aparición automática en supervivencia, Overworld, dificultad distinta de Pacífico y doMobSpawning=true, tanto de día como de noche. Solo se usan chunks ya cargados, suelo válido, espacio sin colisiones ni agua y posiciones dentro del borde del mundo. Para permitir la población del propio chunk del jugador, la distancia mínima horizontal baja de 24 a **8 bloques**. Se mantiene el margen de altura de 28 bloques respecto del jugador más cercano.
 
-## Reproducir y comprobar
+El mínimo queda pendiente si no hay terreno seguro. Las búsquedas fallidas reintentan tras diez segundos sin volver a sortear. No se fuerza terreno ni se coloca un zombi encima del jugador. Cada revisión tiene un límite de 16 entidades y 256 intentos, con orden repartido aleatoriamente.
 
-Descarga y extrae [el paquete de código](zomboid-hordes-1.8.1-patch-source.zip).
-El directorio extraído `hordes-patch/` contiene los scripts, fuentes, pruebas y
-herramientas. La base está en [mods/](../mods/zomboid-hordes-1.8.0-neoforge-1.21.1.jar).
+## Comandos
 
-Necesitas Python 3 y Java 21. Desde el directorio extraído:
+Requieren permiso de operador nivel 2 o trucos habilitados.
 
-```sh
-python3 -B build.py /ruta/zomboid-hordes-1.8.0-neoforge-1.21.1.jar
-```
+- **/zhorda poblar**: ejecuta la reposición para todos los jugadores vivos en supervivencia del Overworld, omitiendo la espera de los cooldowns. Completa los objetivos existentes; no duplica la población de los chunks ya llenos. Cancela una pausa de reposición explícita. El primer lote se ejecuta inmediatamente y los demás durante los siguientes ticks de revisión, sin esperar cinco minutos. Usa lotes limitados para evitar una oleada masiva en un solo tick. También funciona desde la consola del servidor. Los chunks sin posiciones seguras siguen pendientes de la búsqueda normal.
+- **/zhorda horda**: activa la atracción de una horda hacia la zona del jugador, usando zombis existentes y su atención individual.
+- **/zhorda helicoptero**: conserva el anuncio y sonido originales y activa la atracción del helicóptero.
+- **/zhorda dia**, **/zhorda noche** y **/zhorda ruido** siguen disponibles. Día comprueba población; noche y ruido también activan la atracción correspondiente. Estos comandos respetan el cooldown; poblar es el comando explícito para omitir la espera.
+- **/zhorda estado**: muestra condiciones de activación, chunks activos, zombis vivos, objetivo total, próxima revisión y chunks en cola.
+- **/zhorda zombis**: conserva el informe de torpes, normales, atentos, persecución y velocidades de la base.
 
-El hash de la base y de ECJ, ASM y Gson se verifica antes de usar las herramientas
-incluidas. El resultado se escribe en `output/`. `src/` contiene la lógica nueva;
-`tools/PatchHordes.java` define los cambios a las cuatro clases originales.
-Las API dobles se usan únicamente durante las pruebas y no se incluyen en el mod.
+Los comandos de eventos informan por separado cuántos zombis aparecieron y cuántos escucharon el evento. Un evento puede atraer zombis sin generar ninguno nuevo.
 
-Las comprobaciones verifican la distribución, mínimos, límites de cooldown,
-coordenadas negativas, pares compartidos, posiciones de spawn, población sin
-acumulación, guardado real de HordeData, migración real de HordeConfig con Gson,
-comandos y límites de trabajo. También analizan el bytecode y las anotaciones de
-eventos/Mixin y comprueban que todos los demás archivos de la base se conserven.
+## Inteligencia durante helicóptero y hordas
 
-**No se ha arrancado Minecraft/NeoForge con el modpack completo en este entorno.**
-La integración final pendiente es entrar en un mundo de supervivencia, observar
-la distribución y los cooldowns con `/zhorda estado`, matar zombis y comprobar
-la reposición tras 5–10 minutos, guardar/reabrir y verificar ruido, helicóptero y
-compatibilidad de las IA de los demás mods.
+Se conservan las personalidades persistentes de la base: 75 % torpes, 15 % normales y 10 % atentos, junto con sus diferencias de visión, oído, reacción, velocidad y combate.
 
-Los cambios del addon se distribuyen bajo GPL-3.0-only, como la base. El audio
-original se conserva sin cambios. ECJ, ASM y Gson mantienen sus propias licencias.
+Un helicóptero se puede oír hasta 192 bloques y una horda hasta 96, limitados por el oído de cada individuo. No todos responden: la probabilidad inicial depende de personalidad, distancia y capacidad auditiva. Las pistas de un torpe tienen más error que las de un atento.
+
+- Los torpes se distraen con mayor frecuencia y retienen una pista hasta unos 30 segundos.
+- Los normales investigan con más precisión y retienen una pista hasta un minuto.
+- Los atentos suelen insistir, replanifican más a menudo y recuerdan la pista hasta un minuto y medio.
+
+Mientras el evento siga siendo audible, pueden actualizar la pista de sonido: hasta 90 segundos para el helicóptero y 30 para la horda, dentro del tiempo de memoria individual. Después solo conocen la última posición oída. La distracción puede hacer que pierdan antes el interés; ver directamente al jugador mantiene la prioridad del combate.
+
+Un sonido no concede un objetivo de ataque a través de paredes. Solo la percepción visual y las reglas de represalia existentes de ZombieIndividual pueden autorizar la persecución directa. Se respetan los aturdimientos y las rutas reales del juego.
+
+La investigación se acerca hasta 1,5 bloques de la pista, en vez de detenerse a tres. Las rutas lejanas se solicitan en tramos de hasta 16 bloques; la navegación de Minecraft sigue resolviendo obstáculos. No se teletransportan entidades ni se aumenta artificialmente su velocidad. Un camino imposible puede impedir la aproximación. Un jugador muerto, desconectado, en otra dimensión, creativo o espectador deja de ser seguido por la pista del evento.
+
+El procesamiento del evento se limita a 320 zombis cercanos. La atracción por ruido natural también usa estos mecanismos; no se restauran las antiguas oleadas grandes.
+
+## Reproducir y validar
+
+Extrae el paquete de fuentes. Python 3 y Java 21:
+
+    python3 -B build_183.py /ruta/zomboid-hordes-1.8.2-neoforge-1.21.1-chance-population.jar
+
+La base debe tener SHA-256 a6128c419a65154ea82ee11cdf3758ef35381048a3f71540d43fb65bb711bb42. Las herramientas ECJ, ASM, Gson y Brigadier se verifican con SHA-256 antes de usarlas. El resultado se escribe en output/. Las clases de prueba y las herramientas no se incluyen en el mod.
+
+Brigadier se compiló desde el repositorio oficial Mojang/brigadier, commit 9ba4f13c0fe82b07c08c2dc2d8043f075ffd0d98, para probar la ejecución real de los comandos. Su licencia MIT se incluye dentro del JAR de la herramienta. El código del addon conserva GPL-3.0-only y ECJ, ASM y Gson sus licencias respectivas.
+
+Los checks ejecutan las clases reales de población, HordeData, HordeConfig, EventAttraction, InvestigateNoiseGoal y el registro parcheado original de HordeCommands, con dobles de las API de Minecraft/NeoForge y el parser real de Brigadier. Verifican probabilidades, independencia por chunk, cooldowns, persistencia, multijugador, permisos, consola, cola inmediata, percepción, distracción, memoria, navegación, aturdimientos y preservación de entradas del JAR. También se analiza el bytecode de las clases originales modificadas y los hooks de tick/eventos.
+
+**No se ha arrancado el modpack completo con 1.8.3 en este entorno.** La prueba final es instalarlo en cliente/servidor, entrar en supervivencia, ejecutar /zhorda poblar y /zhorda estado, esperar y guardar/reabrir; después probar /zhorda horda y /zhorda helicoptero en terreno con rutas transitables, observar /zhorda zombis y comprobar que algunos investigan, otros se distraen y los que ven al jugador atacan.

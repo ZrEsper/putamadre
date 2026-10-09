@@ -1,6 +1,21 @@
 # Mods de Zomboid
 
-## Actualización: Hordes 1.8.2 y melee 2.3.1
+## Hordes 1.8.3: mínimo por chunk y zombis con atención individual
+
+[Descargar Hordes 1.8.3](mods/zomboid-hordes-1.8.3-neoforge-1.21.1-living-population.jar).
+
+- **Mínimo un zombi por chunk** cargado cerca de jugadores en supervivencia, tanto de día como de noche. Objetivos de **1/2/3/4/5**, con chances **70/18/8/3/1 %** y cooldown propio de **5–10 minutos**. Se repone el déficit, sin acumular zombis indefinidamente.
+- **`/zhorda poblar`** ejecuta la reposición de todos los jugadores en supervivencia sin esperar el cooldown, en lotes durante los siguientes segundos. Requiere trucos o permiso de operador; también funciona desde la consola del servidor.
+- **`/zhorda horda`** y **`/zhorda helicoptero`** atraen a los zombis existentes. Conservan personalidad y sentidos: algunos ignoran el ruido, otros se distraen y los atentos persisten. Usan pistas audibles, visión real y rutas por tramos para acercarse más; no se teletransportan ni conocen al jugador a través de paredes.
+
+Reemplaza Hordes 1.8.2 y versiones anteriores en **cliente y servidor**. Instala solo una versión del addon. Mantén las mismas dependencias; el melee 2.3.1 de abajo sigue vigente. El mínimo depende de terreno seguro y chunks cargados; la distancia mínima al jugador ahora es de ocho bloques para permitir la población de su propio chunk.
+
+Las pruebas de población, guardado, IA, navegación, bytecode y comandos con Brigadier real pasaron. **Falta validar 1.8.3 dentro del modpack completo.**
+
+[Detalles y comandos](hordes-patch/README.md) · [Fuentes](hordes-patch/zomboid-hordes-1.8.3-patch-source.zip) · [Validación](hordes-patch/VALIDATION-1.8.3.txt).
+
+
+## Historial: Hordes 1.8.2 y melee 2.3.1 (melee vigente)
 
 - [Descargar Hordes 1.8.2](mods/zomboid-hordes-1.8.2-neoforge-1.21.1-chance-population.jar): objetivo aleatorio de **0–5 zombis vivos por par de chunks**, con probabilidades **40/30/18/8/3/1 %**, respectivamente. Cinco es el resultado más raro (1 %). Cooldown compartido y persistente de **5–10 minutos**. Basta con un chunk del par cargado; las búsquedas se reparten para evitar que el terreno bloqueado acapare el presupuesto. Cuenta los zombis existentes y no elimina los que ya haya.
 - [Descargar melee 2.3.1](mods/zomboid-global-melee-animations-2.3.1-range-plus-one.jar): **V pasa de 1,5 a 2,5 bloques** y el melee de LesRaisins, incluidas las espadas/sartén del puente, gana **1 bloque** en búsqueda y validación del golpe.

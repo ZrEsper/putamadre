@@ -1,0 +1,9 @@
+PASS: only declared population/event/command/goal classes and metadata changed; unrelated code, assets and dependency requirements preserved
+PASS: 13012 chance/cap/cooldown/persistence assertions
+PASS: 105 actual spawn/SavedData/config regression checks with API doubles
+PASS: 28 actual attraction/goal personality, sight, distraction and path regression checks with API doubles
+PASS: 107 real Brigadier/production command, multiplayer refill and save migration checks
+PASS: 197 methods analyzed; 1669 event/wave/save/config/mixin wiring checks
+Output: /workspace/hordes-1.8.3/output/zomboid-hordes-1.8.3-neoforge-1.21.1-living-population.jar
+SHA256: 6a1b866c519d1daa9f3d10c10addee228a5c83715134b1195bd4c7a77f4bb0a5
+Full Minecraft modpack startup/integration is not verified by API doubles.
