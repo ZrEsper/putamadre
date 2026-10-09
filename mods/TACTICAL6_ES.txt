@@ -1,0 +1,36 @@
+TacZ NPCs tactical.6 — Minecraft 1.21.1 / NeoForge
+
+INSTALACIÓN
+Reemplazar tacznpcs-2.1.0-1.21.1-tactical.5.jar por tactical.6.
+No mantener ambas versiones juntas. Mantener el First Aid adjunto.
+En multijugador, instalar tactical.6 tanto en servidor como en clientes.
+
+CAMBIOS
+- Apertura de puertas de madera y paneles de trampilla que obstruyan el cuerpo.
+- Reintentos de navegación si no avanzan; paseos durante periodos de inactividad.
+- Saqueo: transferencia más rápida, máximo 5 s cerca / 8 s de aproximación.
+- Fuentes agotadas o bloqueadas: pausa de 30 s antes de volver a intentar.
+- Mochila llena: descartar el objeto de menor prioridad si es de baja utilidad.
+  Conservar vendas, munición, mejoras de equipo y armas de reserva útiles.
+  Los objetos descartados permanecen en el mundo con demora de recogida.
+- Golpes cercanos con retroceso durante combate o recarga, sin cancelar recarga.
+- Intentos limitados de recarga / acción del cerrojo y recurso a melee.
+- Reposicionamiento ante falta de visibilidad o compañeros en la línea de tiro.
+- Intentos de disparo cada tick; TaCZ conserva el límite real de cada arma.
+- Vendas/yesos de First Aid del inventario curan 6 puntos tras 3 s de tratamiento.
+  Priorizar compañero con menor proporción de salud. Requiere cubierta cercana,
+  sin objetivos activos, sin daño reciente y sin amenazas visibles o muy próximas.
+  El peligro interrumpe el tratamiento sin consumir la venda.
+- Poses de saqueo, golpe y curación sincronizadas; venda visible durante curación.
+- Investigación de ruido acumulado: disparos, explosiones, ruido de zombis y
+  sonidos fuertes compatibles con eventos NeoForge. Hasta 48 bloques / 8 s.
+  Integración opcional con el evento GunShootEvent de TaCZ si está disponible.
+- Limpieza proactiva de grupos de al menos 3 zombis a hasta 32 bloques si el equipo
+  tiene suficiente salud, combatientes y munición. No inicia limpieza sin recursos.
+
+VALIDACIÓN
+Compilación con Java 21, integridad ZIP y análisis de pila/locales de 50 clases.
+19 comprobaciones de comportamiento con API simulada. NO probado en Minecraft.
+Puertas, trampillas, renderizado y eventos de otros mods requieren prueba en juego.
+Los golpes usan los atributos de combate del NPC; no se añaden cuchillos nuevos.
+La curación opera sobre salud del NPC, sin añadir el sistema corporal de jugadores.
