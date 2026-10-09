@@ -1,5 +1,21 @@
 # Mods de Zomboid
 
+## TacZ NPCs tactical.2: bandidos y huevo de aparición
+
+[Descargar TacZ NPCs tactical.2](mods/tacznpcs-2.1.0-1.21.1-tactical.2.jar).
+
+Para **Minecraft 1.21.1 / NeoForge**, con **TACZ** y las mismas dependencias del mod original. Reemplaza el original o tactical.1 en **cliente y servidor**; instala solo una versión de TacZ NPCs.
+
+- Huevo propio con textura de camuflaje, disponible en la pestaña de huevos y búsqueda de creativo: `/give @s tacznpcs:bandit_spawn_egg`.
+- Reacción de 0,3–0,7 segundos, precisión variable y disparos hasta 24 bloques, con movimiento lateral intermitente.
+- Al perder visión, buscan la última posición vista durante un máximo de ocho segundos, sin actualizarla a través de paredes. Se conserva la retirada existente ante zombis.
+- Conserva los reemplazos en estructuras y el registro regional persistente. Corrige una llamada de coordenadas del spawn regional y respeta `doMobSpawning`, Pacífico y jugadores de supervivencia para esos encuentros.
+
+Pasaron **1038 aserciones con dobles de API** y el análisis de **105 métodos de bytecode**. **Falta validar el arranque y las interacciones dentro del modpack completo.**
+
+[Detalles e instalación](tacznpcs-patch/README.md) · [Fuentes y herramientas](tacznpcs-patch/tacznpcs-tactical.2-fuentes.zip).
+
+
 ## Hordes 1.8.3: mínimo por chunk y zombis con atención individual
 
 [Descargar Hordes 1.8.3](mods/zomboid-hordes-1.8.3-neoforge-1.21.1-living-population.jar).
