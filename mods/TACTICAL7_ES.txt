@@ -1,0 +1,30 @@
+TacZ NPCs tactical.7 — Minecraft 1.21.1 / NeoForge
+
+INSTALACIÓN
+Reemplazar tactical.6 por tactical.7, tanto en servidor como en todos los clientes.
+Mantener First Aid. No mantener dos versiones de tacznpcs juntas.
+
+CORRECCIONES
+- Eliminados todos los eventos de entidad personalizados 61–64 de tactical.6.
+  El evento 63 se interpretaba como un evento del Sniffer antes de alcanzar el NPC,
+  lo que provocaba ClassCastException y desconexión.
+- Estado de animación mediante un EntityDataAccessor INT propio del NPC, registrado
+  y sincronizado por SynchedEntityData. No reutiliza eventos de entidades vanilla.
+- Golpes: movimiento de brazo breve de siete ticks, ligado al momento real del golpe.
+  No se repite el ciclo durante 24 ticks ni reinicia la animación al renderizar.
+- Cobertura tanto de golpes defensivos con arma como del melee normal sin pistola.
+- Mano secundaria para cuchillo/espada disponible mientras llevan arma de fuego.
+- Poses aplicadas al final de PlayerModel.setupAnim solo para FakePlayer de TacZ NPCs.
+  Mangas siguen los brazos; se mantienen poses de saqueo y vendaje.
+- Sonido de ataque vanilla emitido por el servidor: impacto, barrido de arma secundaria
+  o fallo, según resultado. No se emite impacto si el ataque no hizo daño.
+- Retroceso del objetivo únicamente si el golpe tuvo éxito.
+- Conserva cadencia de disparo, saqueo, descarte, curación en equipo e investigación
+  del ruido de tactical.6.
+
+VALIDACIÓN
+Java 21, análisis de pila/locales e integridad ZIP.
+29 comprobaciones de comportamiento con API simulada, incluyendo ausencia de envío
+  de los eventos reservados, expiración de golpes, mangas y sonidos de acierto/fallo.
+No ejecutado en Minecraft: renderizado y compatibilidad con otros mods requieren
+  prueba dentro del juego. No se garantiza ausencia de fallos ajenos a este cambio.
