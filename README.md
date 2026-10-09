@@ -1,6 +1,19 @@
 # Mods de Zomboid
 
-## TacZ NPCs tactical.4: defensa prioritaria, movimiento y saqueo oportunista
+## TacZ NPCs tactical.5: civiles con profesiones y combate vanilla adaptado a TACZ
+
+[Descargar tactical.5](mods/tacznpcs-2.1.0-1.21.1-tactical.5.jar). Reemplazar **todas las versiones anteriores de TacZ NPCs** en cliente y servidor. Mantener [Zombie Remains Loot 1.6.1 npc-compat](mods/zombie-remains-loot-1.6.1-neoforge-1.21.1-npc-compat.jar), Self Expression 2.22a y las dependencias existentes.
+
+- Cambia la armadura vanilla por uniformes civiles de Self Expression, también en NPCs existentes. Doce profesiones/uniformes con herramientas correspondientes; se conserva el armamento real.
+- Goals vanilla independientes para ataque a distancia, melee, paseo y observación. Las decisiones no bloquean movimiento y mirada al estar ociosos.
+- Permite correr al perseguir amenazas y retira las penalizaciones TACZ de movimiento de estos NPCs. Recuperación de rutas fallidas en agua.
+- Conserva defensa prioritaria, saqueo de cadáveres/materiales, experiencia limitada, ropa militar rara, spawn natural y huevo de camuflaje.
+
+Pruebas de decisiones, integridad de objetos y reconstrucción aprobadas. **Pendiente probar locomoción y animaciones en el modpack completo.**
+
+[Profesiones, instalación y límites](tacznpcs-patch/README.md) · [Fuentes reproducibles](tacznpcs-patch/tacznpcs-tactical.5-y-remains-fuentes.zip).
+
+## Historial: TacZ NPCs tactical.4 (sustituido por .5): defensa prioritaria, movimiento y saqueo oportunista
 
 [Descargar tactical.4](mods/tacznpcs-2.1.0-1.21.1-tactical.4.jar). Reemplazar tactical.3 y otras versiones de NPCs en **cliente y servidor**. Mantener [Zombie Remains Loot 1.6.1 npc-compat](mods/zombie-remains-loot-1.6.1-neoforge-1.21.1-npc-compat.jar) y sus dependencias.
 
