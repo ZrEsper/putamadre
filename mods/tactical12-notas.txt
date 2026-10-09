@@ -1,0 +1,12 @@
+Tactical.12
+- Corrige error real del log: getGunAmmoId no existe en ModernKineticGunItem. Usa TimelessAPI.getCommonGunIndex(getGunId).getGunData().getAmmoId/getAmmoAmount. Carga inicial y reserva compatibles; migra una sola vez armas antiguas vacias, sin rellenar cada tick.
+- Policias aparecen con arma cargada. Policias existentes sin arma la reciben una vez. Conserva el resto de distribucion civilian/military y armadura restringida.
+- Vision por getMaxLocalRawBrightness del objetivo, incluyendo luz natural/bloques/linterna: oscuridad 8, luz tenue 14, moderada 24, intensa 32 bloques, manteniendo linea de vision. Iluminacion vuelve util la punteria nocturna.
+- Defensa cercana inmediata interrumpe refugio y limpieza; con arma cargada responde a zombies iluminados a distancia de hasta 24 bloques. Sigue priorizando huida con salud critica.
+- Bandidos equipan flashlight:flashlight encendida en OFFHAND. Ejecuta la funcion nativa LightEventProcedure.execute(LevelAccessor,Entity) cada 5 ticks para emitir su haz real; conserva el item anterior en almacenamiento. Requiere Flashlight instalado para esa iluminacion.
+- Interes en posiciones iluminadas transitables por la noche, evitando zonas con zombies cercanos; refugio en noches peligrosas.
+- MeleeAttackGoal para AutoGunOperator usa el mismo cooldown cero que el mixin ZombieAttackCooldownMixin del Hordes aportado. Defensa con arma en mano intenta golpes cercanos cada 2 ticks. No elimina la invulnerabilidad del objetivo.
+- Base de movimiento del bandido 0.30 frente a 0.24 anterior: +25%. Se mantienen limites de navegacion y eliminacion de boosts externos.
+Instalacion: sustituir tactical.11 por tactical.12 en cliente y servidor. Usar Flashlight 5.1 aportado. Zombie Awareness y Hordes existentes compatibles.
+Validacion: 50 pruebas generales, 77 equipo/almacenamiento, 11 combate/luz (API simulada); ASM 56 clases/532 metodos; registro de mixin melee y contratos de mixins/packaging comprobados. Firma nativa de Flashlight y cooldown Hordes inspeccionados en JARs aportados. No probado dentro de Minecraft.
+SHA256 084abbb7f402b959c67c88e31dcb8cb86ddd7887713493efe9467cd2d267f3e8
