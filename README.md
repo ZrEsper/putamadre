@@ -1,6 +1,27 @@
 # Mods de Zomboid
 
-## TacZ NPCs tactical.2: bandidos y huevo de aparición
+## TacZ NPCs tactical.3: IA tranquila, looteo y cadáveres compatibles
+
+Instala **ambas actualizaciones**, con una sola versión de cada mod en **cliente y servidor**:
+
+- [TacZ NPCs tactical.3](mods/tacznpcs-2.1.0-1.21.1-tactical.3.jar): reemplaza el original y tactical.1/2.
+- [Zombie Remains Loot 1.6.1 compatible](mods/zombie-remains-loot-1.6.1-neoforge-1.21.1-npc-compat.jar): reemplaza Remains 1.6.0.
+
+Para Minecraft 1.21.1 / NeoForge 21.1.255 o posterior, con TACZ y las dependencias existentes de Remains. Mantén Doomsday Decoration y, para sus prendas, Selfexpression y Fracture Point.
+
+- Un solo controlador de movimiento, sin giros periódicos ni sprint. Velocidad base al 95% de la caminata normal del jugador.
+- Combate contra zombis, pasos cortos hacia una distancia de 8–11 bloques mientras disparan, y protección de fuego amigo entre bandidos.
+- Los desarmados se defienden sin cazar jugadores y tienen swing de ataque sincronizado. Saquean cuerpos agachados con movimiento de mano y guardan los objetos en una bolsa persistente.
+- Prendas civiles de Selfexpression y conjuntos completos de Fracture Point muy raros (1%). El equipo mejora las decisiones, sin aumentar salud ni daño.
+- Remains reconoce `tacznpcs:npc`: sus cadáveres conservan equipo y objetos saqueados. Se mantienen los restos y reglas de los demás mobs.
+- El huevo de camuflaje sigue en creativo: `/give @s tacznpcs:bandit_spawn_egg`.
+
+Pasaron **1176 aserciones con dobles de API** y el análisis de **138 métodos de bytecode**. **Falta validar movimiento, animaciones e integración dentro del modpack completo.**
+
+[Instalación, detalles y límites](tacznpcs-patch/README.md) · [Fuentes y herramientas](tacznpcs-patch/tacznpcs-tactical.3-y-remains-fuentes.zip).
+
+
+## Historial: TacZ NPCs tactical.2 (sustituido por tactical.3)
 
 [Descargar TacZ NPCs tactical.2](mods/tacznpcs-2.1.0-1.21.1-tactical.2.jar).
 
