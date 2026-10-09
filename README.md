@@ -1,5 +1,20 @@
 # Mods de Zomboid
 
+## Survivor Creator v17: perfiles, rasgos y OK Additions
+
+[Descargar Survivor Creator v17](mods/survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v17-profiles.jar) · [OK Additions con requisito 1.21.1 ajustado](mods/okadditions-1.1.0-neoforge-1.21.1-compat.jar). Sustituye sus versiones anteriores en cliente y servidor; conserva GeckoLib 4 para NeoForge 1.21.1.
+
+- Cinco puntos extra y selección sin límite de cantidad de rasgos, manteniendo presupuesto y conflictos.
+- Selección/objetos iniciales y mejoras/niveles en paneles separados.
+- Perfiles con nombre para guardar, cargar y reutilizar tras morir.
+- 38 rasgos y 35 profesiones: 14 rasgos y 10 profesiones nuevos.
+- Equipo inicial con 16 objetos verificados de OK Additions; niveles iniciales reales y aprendizaje rápido/lento.
+
+**Pendiente probar dentro del modpack.** La copia de OK Additions cambia solo su requisito de versión: no demuestra compatibilidad binaria con 1.21.1.
+
+[Instalación, contenido y límites](survivorcreator-patch/README.md) · [Fuentes reproducibles](survivorcreator-patch/survivorcreator-v17-fuentes.zip).
+
+
 ## TacZ NPCs tactical.13: saqueo prioritario, equipo y exploración
 
 [Descargar tactical.13](mods/tacznpcs-2.1.0-1.21.1-tactical.13.jar). Sustituye tactical.12 y otras versiones de TacZ NPCs en cliente y servidor. Mantén las dependencias y Remains compatible que ya usabas.
