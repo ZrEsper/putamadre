@@ -1,0 +1,15 @@
+Survivor Creator v16 — audio de muerte y menús, informe de supervivencia
+Instalación: sustituir v15 por survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v16-death-audio.jar. No dejar ambas versiones en mods. Actualizar cliente y servidor a este mismo JAR (añade un mensaje de red para iniciar el contador al terminar la creación).
+
+- Corregida la sordera del menú: los sonidos de interfaz (MASTER) y música quedan audibles. Conserva el silencio de sonidos del mundo durante creación/muerte. Respeta los ajustes de volumen del usuario.
+- Los clics nativos al seleccionar profesiones/perks y el sonido de muerte original del mod ya no quedan silenciados por Sordera III.
+- Death.ogg se incluye íntegro, en streaming. Suena junto al sonido de muerte original desde la pantalla de muerte de Minecraft; se mantiene al pasar a la pantalla de muerte del mod y no acumula copias ni repite el sonido original en esa transición. Death.ogg no se repite cuando termina.
+- La música Project Zomboid de creación sigue incluida íntegra. Empieza al abrir el creador y sustituye la pista de muerte; se detiene al volver al juego o desconectarse. Conserva la restauración del nivel de sordera previo / perk.
+- La pantalla de muerte del mod ya no continúa automáticamente a los 11,5 segundos. Solo un clic izquierdo permite continuar, después de una breve protección de 850 ms contra clics accidentales. Las teclas no la saltan. El jugador puede continuar mientras suena Death.ogg, sin esperar sus dos minutos de duración, conforme a su elección.
+- El informe de muerte muestra la causa registrada por Minecraft, las zonas lesionadas y el tiempo sobrevivido (días reales, horas, minutos y segundos de juego). La causa se traduce usando el idioma del cliente cuando corresponde.
+- Se captura el informe antes del respawn. Con FirstAid: cuenta una lesión por zona con herida clínica activa o salud por debajo de su máximo, sin duplicarla si tiene ambas. Incluye heridas vendadas que sigan activas. Sin el módulo clínico usa las zonas con daño; si FirstAid no está disponible muestra «No disponible», sin inventar una cifra.
+- El contador se guarda en el jugador y excluye muerte, creación e introducción final. Empieza al terminar todas las pantallas de creación. Mantiene el contador al cambiar de dimensión, se reinicia por vida y rechaza mensajes prematuros/repetidos que intenten reiniciarlo. Los personajes anteriores usan la estadística vanilla como punto de partida al instalar v16.
+- Conserva el efecto de sordera I/II/III, el perk de 50%, los avisos verdes de XP y la corrección del multiplicador de XP de v15.
+
+Validación: 24 comprobaciones de ciclo de audio y 16 de contador/informe con API simulada; bytecode ASM 90 clases / 722 métodos; verificación JVM de clases nativas parcheadas; integridad ZIP, JSON y ausencia de stubs de compilación. FFmpeg decodificó ambos OGG completos sin errores; no se modificaron las pistas aportadas. No probado dentro de Minecraft.
+SHA256: 02f22e898773bb4630b3aecdda7231d04bcd9b38fccfb2dfa0200a4ede467971
