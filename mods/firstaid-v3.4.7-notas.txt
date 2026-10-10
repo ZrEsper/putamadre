@@ -1,0 +1,7 @@
+FirstAid ZOMBOID v3.4.7 — vendajes en ambos HUD
+
+Reemplazar firstaid-1.21.1-ZOMBOID-v3.4.6-wetness-no-panic.jar por el nuevo JAR. Conserva humedad, lesiones y los ajustes sin pánico de la versión recibida.
+
+Las vendas cubren todo el ancho de la parte tratada en el HUD y siguen el contorno de la silueta en el menú de salud. Varias vueltas de tela y bordes sombreados; las vendas sucias conservan una tonalidad diferente. Los indicadores de otras lesiones se mantienen.
+
+Validación: vista previa ejecutando los nuevos métodos con las ocho partes del HUD y tres escalas del menú; verificación de tipos de pila/variables en 219 clases y 2052 métodos. No probado dentro del modpack.
