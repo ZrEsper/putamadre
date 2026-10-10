@@ -1,0 +1,13 @@
+{
+  "catalog_containers": 61793,
+  "catalog_keys_unique": true,
+  "bootstrap_nbt_parsed": true,
+  "function_references_checked": 4089,
+  "maximum_bootstrap_command_length": 55210,
+  "actual_nbt_data_edits_cases": 4,
+  "negative_chunk_coordinate_cases": 11,
+  "custom_assignment_override_case": true,
+  "unload_keeps_remaining_queue": true,
+  "no_immediate_loot_insertion": true,
+  "minecraft_runtime_tested": false
+}
