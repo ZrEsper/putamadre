@@ -1,0 +1,17 @@
+{
+  "artifacts": [
+    {
+      "file": "Jade-1.21.1-NeoForge-15.10.6-pending-loot.jar",
+      "sha256": "bbd25871544518419259b7019a06ffb7023c5c9bafccfcd894377d5a52636860",
+      "only_changed_entry": "snownee/jade/addon/universal/ItemStorageProvider.class"
+    },
+    {
+      "file": "quietly-1_0_0-cooldown-v7-pending-loot.jar",
+      "sha256": "3425057d4170b98dd4aff70e91a851650efb5fc7303dba668c74eb7d94f951bf",
+      "only_changed_entry": "cn/kafei/interact/Interaction.class"
+    }
+  ],
+  "bytecode_behavior_cases": 7,
+  "unrelated_entries_preserved": true,
+  "minecraft_runtime_tested": false
+}
