@@ -1,0 +1,9 @@
+FirstAid ZOMBOID v3.4.8 — vendajes, gripe y golpes de cabeza
+
+Reemplazar el JAR anterior de FirstAid por este JAR, en cliente y servidor. No instalar varias versiones a la vez. Incluye todos los cambios del archivo recibido v3.4.6 y de las vendas v3.4.7.
+
+Vendas: cubren el ancho de la parte tratada en ambos HUD, con vueltas de tela y sombreado; en el menú siguen la silueta. Colores diferentes para vendas sucias.
+Gripe: no aparece antes de 1200 ticks de exposición húmeda (1 minuto a 20 TPS), frente a los 15 segundos anteriores. Después comprueba el riesgo cada 10 segundos, con probabilidad máxima del 5 % por comprobación, proporcional a humedad. Secarte reinicia exposición; una enfermedad ya activa conserva su duración.
+Golpes fuertes en la cabeza: daño efectivo de al menos 2 puntos o el 25 % de la salud máxima de esa parte, el valor mayor, causa mareo de 4–6 segundos y lentitud de 1.5 segundos. Golpes leves, golpes solo al cuerpo y daño sin impacto no lo activan. No duplica la reacción durante el mismo segundo.
+
+Validación: vista previa nativa de ocho zonas del HUD y tres escalas de menú; pruebas de exposición mínima, probabilidad y secado; pruebas de golpes leves, cuerpo, daño no físico, golpe fuerte y duplicados usando objetos de prueba; verificación de tipos en 220 clases y 2055 métodos. No se ejecutó Minecraft/modpack.
