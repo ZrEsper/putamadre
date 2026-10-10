@@ -1,0 +1,38 @@
+{
+  "tables": 115,
+  "profiles": {
+    "office": 28,
+    "medical": 15,
+    "electronics": 10,
+    "maintenance": 10,
+    "civilian_clothes": 8,
+    "breakroom": 8,
+    "research": 6,
+    "camping": 5,
+    "library": 4,
+    "gardening": 3,
+    "emergency": 3
+  },
+  "states": {
+    "ransacked": [
+      50,
+      0.2,
+      1
+    ],
+    "normal": [
+      40,
+      0.65,
+      2
+    ],
+    "stocked": [
+      10,
+      1,
+      3
+    ]
+  },
+  "checks": 2341,
+  "base_variants_unchanged": true,
+  "guaranteed_provisions_contexts": 18,
+  "minecraft_runtime_tested": false,
+  "sha256": "4f800f992a12a296eee6cdacca2b4aa271b8cb1b88a4188f65ec857cfe97a983"
+}
