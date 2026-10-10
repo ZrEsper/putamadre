@@ -1,0 +1,1 @@
+package net.minecraft; public enum ChatFormatting {BOLD,ITALIC}

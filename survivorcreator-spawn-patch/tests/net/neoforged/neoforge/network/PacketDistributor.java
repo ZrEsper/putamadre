@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.network;import dev.survivorcreator.net.Net;public class PacketDistributor{public static Net.Result rejected;public static void sendToPlayer(Object player,Net.Result result,net.minecraft.network.protocol.common.custom.CustomPacketPayload[] other){rejected=result;}}

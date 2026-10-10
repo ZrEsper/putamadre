@@ -1,0 +1,1 @@
+package net.minecraft.world.level;public class Level{public static final Object OVERWORLD=new Object();}

@@ -1,0 +1,1 @@
+package net.minecraft.core;public interface Registry<T> {T get(net.minecraft.resources.ResourceLocation id);net.minecraft.resources.ResourceLocation getKey(T v);}

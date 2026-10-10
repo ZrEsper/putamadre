@@ -1,0 +1,23 @@
+{
+  "sha256": "d8325d7510abd6818eddac1b2f5aca9658004eb92ab7d714382e6897f608e45d",
+  "helper_cases": 13,
+  "asm_methods_checked": 125,
+  "zones": 4,
+  "interiors": 22,
+  "modified_or_added": [
+    "assets/survivorcreator/sounds/music/ending_theme.ogg",
+    "assets/survivorcreator/textures/gui/mosslorn_spawn_map.png",
+    "dev/survivorcreator/Events.class",
+    "dev/survivorcreator/client/ClientHooks.class",
+    "dev/survivorcreator/client/CreatorScreen.class",
+    "dev/survivorcreator/hearing/CreationAudio.class",
+    "dev/survivorcreator/spawn/EndingAudio.class",
+    "dev/survivorcreator/spawn/R.class",
+    "dev/survivorcreator/spawn/SpawnScreen.class",
+    "dev/survivorcreator/spawn/Spawns.class",
+    "survivor-spawn-homes.csv"
+  ],
+  "unrelated_entries_preserved": true,
+  "minecraft_runtime_tested": false,
+  "intro_audio_duration_seconds": 36.617868
+}

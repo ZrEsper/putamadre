@@ -1,0 +1,1 @@
+package net.minecraft.world.phys;public record AABB(double a,double b,double c,double d,double e,double f){}

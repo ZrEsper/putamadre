@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.common;public class ModConfigSpec {public static class ConfigValue<T> {public T get(){return null;}}public static class IntValue extends ConfigValue<Integer>{}public static class BooleanValue extends ConfigValue<Boolean>{}}

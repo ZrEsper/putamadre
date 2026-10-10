@@ -1,0 +1,1 @@
+package dev.survivorcreator;public class SurvivorCreator{public static final Object CHARACTER=new Object();}

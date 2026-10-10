@@ -1,0 +1,1 @@
+package net.minecraft.util; public class Mth {public static int clamp(int n,int a,int b){return Math.max(a,Math.min(n,b));}}

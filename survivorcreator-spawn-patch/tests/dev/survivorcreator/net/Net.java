@@ -1,0 +1,1 @@
+package dev.survivorcreator.net;import java.util.*;import net.minecraft.resources.ResourceLocation;public class Net{public record Confirm(Optional<ResourceLocation> profession,List<ResourceLocation> perks){}public record Result(boolean ok,String key,String arg){}}

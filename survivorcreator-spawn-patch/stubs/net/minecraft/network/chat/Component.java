@@ -1,0 +1,1 @@
+package net.minecraft.network.chat;public interface Component extends FormattedText {static MutableComponent translatable(String s,Object... args){return new MutableComponent(s);}static MutableComponent literal(String s){return new MutableComponent(s);}static MutableComponent empty(){return new MutableComponent("");}String getString();MutableComponent copy();}

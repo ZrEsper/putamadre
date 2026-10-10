@@ -1,0 +1,1 @@
+package com.mojang.blaze3d.vertex;public class PoseStack {public void pushPose(){}public void popPose(){}public void scale(float a,float b,float c){}}

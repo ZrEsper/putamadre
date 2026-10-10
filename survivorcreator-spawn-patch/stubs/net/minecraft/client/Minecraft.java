@@ -1,0 +1,1 @@
+package net.minecraft.client;public class Minecraft {public java.io.File gameDirectory;public net.minecraft.client.gui.screens.Screen screen;public void setScreen(net.minecraft.client.gui.screens.Screen s){screen=s;}}

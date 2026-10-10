@@ -1,0 +1,1 @@
+package net.minecraft; public class Util {public static long getMillis(){return 0;}}
