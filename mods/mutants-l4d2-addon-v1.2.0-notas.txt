@@ -1,0 +1,19 @@
+Mutants L4D2 Addon 1.2.0 + Rotten Gore v6
+
+INSTALACIÓN
+Reemplazar únicamente el complemento anterior por mutants-l4d2-addon-1.2.0-neoforge-1.21.1.jar en cliente y servidor. Conservar MutantsZombies-1.3.1-NeoForge-mc1.21.jar y tactical.13. Reemplazar el resource pack v5 por MutantsZombies-Rotten-Gore-v6.zip, activarlo por encima de otros packs de mutantes y recargar con F3+T. El pack conserva sus requisitos EMF/ETF y modelos de mods activados. El resource pack va en resourcepacks, no en mods.
+
+CAUSA Y CORRECCIONES
+El Spitter podía conservar el control de movimiento mientras esperaba una ráfaga, quedándose detenido a menos de doce bloques incluso si una pared tapaba al objetivo. Ese control también impedía usar el melee nativo. Ahora sigue al objetivo durante la espera y la ráfaga, intenta golpear de cerca cada 16 ticks y libera su control al entrar en agua.
+Los otros mutantes tienen una persecución explícita entre habilidades, navegación cada cinco ticks y un intento de ruta lateral cuando pasan un segundo sin avanzar. Usan su melee nativo cada 16 ticks si están a alcance y tienen contacto visual.
+Adquieren jugadores visibles hasta 48 bloques con revisiones cada cinco ticks; siguen hasta 64 bloques y conservan al objetivo durante doce segundos sin verlo. Su rango de navegación se amplía a 64 bloques. La prioridad contra bandidos y la Bilis se conservan. No detectan nuevos jugadores a través de paredes.
+La Witch mantiene su calma, llanto y furia exclusiva al ser provocada. Los avisos de habilidades, recuperación y aturdimiento del tanque continúan siendo pausas breves intencionadas.
+
+ANIMACIONES
+El complemento añade postura encorvada contenida, respiración y asimetría de cabeza a Spitter, Crawler, Blister y Rotten, más preparación de escupitajo y brazos extendidos al saltar. Tanque y Zombie Brute tienen postura de reposo más inclinada. Las partes afectadas se restablecen antes de calcular cada fotograma para evitar acumulación.
+El pack v6 reduce convulsiones, cabezazos, tropiezos, sacudidas y balanceo exagerados en las 21 variantes de modelos. Mantiene todas las texturas, reglas de variantes, ojos emisivos, geometría, heridas y desmembramiento de v5. No se han retocado las imágenes de textura: se conserva el estilo recibido. EMF puede reemplazar parte de las poses nativas; se necesita verificar dentro de Minecraft la combinación de las poses especiales y los modelos personalizados.
+
+VALIDACIÓN
+419 comprobaciones nuevas de agresividad y poses nativas con APIs simuladas, además de 47 de comportamiento, 117 de poses/trayectorias, 10 de zonas y 34 de integración con bandidos. 95 contratos de clases y modelos comprobados contra los dos JAR reales. Bytecode, estructura y aislamiento del cliente comprobados; se mantiene la corrección del crash de BlockPos. Las expresiones del pack se simularon durante movimiento, ataque, heridas y muerte: 1.524.665 comprobaciones de valores finitos y conservación de recursos. Estas comprobaciones no ejecutan EMF ni Minecraft. No se ha validado el conjunto en partida; las rutas dependen de la geometría del mapa.
+SHA256 complemento: db1bb436e273be0918438fb88ee67264eafaf4bfe4c40170e5fc2bed9b11d750
+SHA256 pack: 580cf2c0f82039bb99e2ca9a505f17ba174509569384662053824b978157d00f
