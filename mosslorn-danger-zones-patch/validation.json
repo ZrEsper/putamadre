@@ -1,0 +1,12 @@
+{
+  "reference_checks": 8918,
+  "helper_cases": 11,
+  "unrelated_jar_entries_preserved": true,
+  "district_boundary_z": 192,
+  "zones": 482,
+  "minecraft_runtime_tested": false,
+  "sha256": {
+    "zomboid-hordes-1.8.3-neoforge-1.21.1-mosslorn-danger-zones.3.jar": "c99e60b7d9f0cc9b1a56b147637f83f1560b3383c0b45c44383b14420234a537",
+    "mosslorn-expanded.5-danger-zones.zip": "cd74fd01f04c4ce87c69e3cee369d9b863c9adff412cd3f77866d9e0234ead63"
+  }
+}
