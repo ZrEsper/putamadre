@@ -1,0 +1,14 @@
+{
+  "static_checks": 291,
+  "bounded_transform_values": 532,
+  "native_species": 7,
+  "native_emf_models": 21,
+  "new_blue_variants": 6,
+  "minecraft_visual_tested": false,
+  "uv_alpha_preserved": true,
+  "sha256": {
+    "Blues-Better-Zombies-PZ-L4D2-Gore.1.zip": "fe09a242a19477960196166063eeba91ed43ba8d260516dd9a59121c491dadbc",
+    "MutantsZombies-Blues-EMF-Gore.1.zip": "013a724d3c0ba2221402a62b06b96a74b8bac048a02f236ef46b589515e45f2f"
+  },
+  "clean_reproduction": "all pack entries equal"
+}
