@@ -1,0 +1,20 @@
+Mosslorn v7 — cofres y barriles automáticos (Minecraft 1.21.1)
+Reemplaza el datapack v6 por este ZIP en world/datapacks y ejecuta /reload.
+
+Escanea automáticamente el chunk de cada jugador y sus ocho vecinos cargados, desde Y=-64 hasta 319, en las tres dimensiones vanilla. Incluye cofres normales, trampa, barriles y bloques de mods etiquetados c:chests/c:barrels. Los bloques de mods sin estas etiquetas requieren registrar su posición manualmente; no es posible enumerar chunks descargados mediante un datapack.
+Cada chunk requiere aproximadamente 10 segundos a 20 TPS; volverá a revisarse después de cinco minutos. Si se descarga durante el escaneo, se reintentará al cargar. Recorre el mapa para registrar otras zonas. El registro persiste entre reinicios.
+
+Los contenedores nuevos vacíos o con loot pendiente reciben objetos inmediatamente, antes de abrirse. Los objetos existentes se conservan. Se guarda la tabla original cuando existe; los contenedores sin tabla original usan mosslorn:chests/world_mix. También afecta a cofres y barriles colocados por jugadores, incluso almacenes vacíos.
+Los cofres dobles se registran por bloque; aparecen sus dos mitades.
+
+/function mosslorn:loot/escanear — reinicia la búsqueda y activa el escaneo continuo.
+/function mosslorn:loot/estado — total registrado y generaciones.
+/function mosslorn:loot/listar {pagina:1} — lista diez posiciones por página; cambia el número.
+/function mosslorn:loot/reiniciar — repone registrados vacíos, también en cuanto carguen; conserva ocupados.
+/function mosslorn:loot/cantidad {nivel:0} — escaso; 1 normal; 2 abundante.
+/function mosslorn:ayuda — comandos adicionales, registro manual, zonas y reposición periódica.
+/scoreboard players set #auto_scan ml_config 0 — desactiva nuevos escaneos automáticos.
+
+Una generación que resulte vacía por azar no se repite hasta solicitar reposición. Cambiar cantidad afecta las siguientes generaciones, no modifica objetos ya presentes.
+Conserva las tablas, zonas y consultas de población de v6. REFERENCIA-SPAWN-v6.json documenta los JAR de hordas examinados, no configuración dinámica del servidor.
+Validación: JSON, referencias internas, cobertura completa de las 98.304 posiciones por chunk, empaquetado y límites del escaneo. Pendiente prueba dentro de Minecraft con los mods del mundo.
