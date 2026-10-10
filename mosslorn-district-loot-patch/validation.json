@@ -1,0 +1,63 @@
+{
+  "split_z": 240,
+  "boundary_is_provisional": true,
+  "world_weights": {
+    "north": {
+      "crate_house": 30,
+      "crate_kitchen": 16,
+      "crate_fridge": 10,
+      "crate_pharmacy": 9,
+      "crate_workshop": 8,
+      "crate_farm": 7,
+      "crate_camping": 6,
+      "crate_books": 5,
+      "crate_bathroom": 5,
+      "crate_safehouse": 4
+    },
+    "south": {
+      "crate_office": 30,
+      "crate_electronics": 16,
+      "crate_pharmacy": 14,
+      "crate_workshop": 10,
+      "crate_kitchen": 8,
+      "crate_books": 7,
+      "crate_safehouse": 6,
+      "crate_mechanic": 5,
+      "crate_police": 3,
+      "crate_military": 1
+    }
+  },
+  "office_weights": {
+    "north": {
+      "office": 15,
+      "medical": 15,
+      "electronics": 5,
+      "maintenance": 12,
+      "civilian_clothes": 12,
+      "breakroom": 18,
+      "research": 3,
+      "camping": 8,
+      "library": 5,
+      "gardening": 5,
+      "emergency": 2
+    },
+    "south": {
+      "office": 28,
+      "medical": 17,
+      "electronics": 16,
+      "maintenance": 10,
+      "civilian_clothes": 6,
+      "breakroom": 9,
+      "research": 7,
+      "camping": 2,
+      "library": 3,
+      "gardening": 1,
+      "emergency": 1
+    }
+  },
+  "tables": 127,
+  "reference_checks": 228,
+  "guaranteed_categories": 18,
+  "minecraft_runtime_tested": false,
+  "sha256": "d49eb871ccc773b49f32cd87477d60d9120143634519cce1fc06d252b638f54d"
+}
