@@ -1,3 +1,5 @@
+**Herramienta revisión 2:** [descargar](mosslorn-expanded.2-herramientas.zip). Los archivos de región de menos de 8192 bytes se conservan y se reportan como omitidos, sin interrumpir las otras regiones. No se reconstruye ni repara su contenido. El informe incluye `skipped_regions`; si no es cero, la conversión es parcial.
+
 # Mosslorn ampliado — NeoForge / Minecraft 1.21.1
 
 ## Qué incluye

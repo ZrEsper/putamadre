@@ -1,0 +1,17 @@
+{
+  "tested_compressions": [
+    "gzip",
+    "zlib",
+    "raw"
+  ],
+  "short_region_sizes_tested": [
+    0,
+    1092
+  ],
+  "short_regions_preserved": true,
+  "continues_valid_regions": true,
+  "cli_copy_tested": true,
+  "original_unchanged": true,
+  "second_conversion_refused": true,
+  "user_world_tested": false
+}
