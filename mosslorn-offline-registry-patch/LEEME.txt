@@ -1,0 +1,16 @@
+Mosslorn v7: registro completo sin cargar chunks
+
+1. Cierra Minecraft y el servidor. Usa la misma copia del mundo que enviaste; si ya jugaste después, el verificador rechazará archivos diferentes.
+2. Extrae este ZIP en una carpeta normal. No lo ejecutes dentro del ZIP.
+3. Haz doble clic en APLICAR-WINDOWS.bat y selecciona la carpeta del mundo que contiene level.dat.
+4. Se crea al lado una carpeta nueva con el sufijo -v7-registrado. Abre ESA copia en Minecraft con los mismos mods.
+
+No requiere instalar librerías de Python. Usa tu Python 3.14 instalado; como alternativa: python aplicar.py "C:/ruta/al/mundo".
+El original no se modifica. Se comprueban SHA256 antes y después de aplicar. Se reemplazan únicamente los datapacks anteriores de Mosslorn por v7.
+
+61.793 contenedores registrados, incluyendo 24.351 renombrados y 18.707 Office Cabinet. Se conservan los nombres, 28.987 inventarios ocupados y 283.584 pilas de objetos.
+Los 32.806 vacíos o con loot pendiente usan tablas de Mosslorn; sus objetos se generan al abrirlos o al procesar el v7 el chunk cargado. Registrar todo no mantiene chunks cargados ni rellena inventarios descargados cada tick.
+Los contenedores con nombre reconocible tienen su categoría; se recuperaron categorías perdidas del catálogo anterior del mismo mapa. Contenedores genéricos usan world_mix.
+El registro cubre cofres, cofres trampa y barriles vanilla, incluidos colocados por jugadores. Contenedores especiales de otros mods siguen dependiendo de las etiquetas/adaptadores del v7.
+
+No se probó Minecraft: verifica /function mosslorn:loot/estado y algunos contenedores al abrir la copia. Conserva tu original hasta comprobarla.

@@ -1,0 +1,71 @@
+{
+  "counts": {
+    "regions": 368,
+    "chunks": 37583,
+    "empty_region_files_preserved": 318,
+    "containers": 61793,
+    "minecraft:barrel": 60219,
+    "category_recovered_from_previous_map_catalog": 17053,
+    "occupied_preserved": 28987,
+    "preserved_item_stacks": 283584,
+    "named_containers": 24351,
+    "category_from_name": 21968,
+    "minecraft:chest": 1558,
+    "empty_or_pending": 32806,
+    "pending_table_preserved": 32226,
+    "minecraft:trapped_chest": 16,
+    "table_assigned_or_updated": 580,
+    "changed_chunks": 205
+  },
+  "categories": {
+    "mosslorn:chests/world_mix": 26250,
+    "mosslorn:chests/crate_fish": 711,
+    "mosslorn:chests/crate_office": 18805,
+    "mosslorn:chests/crate_electronics": 86,
+    "mosslorn:chests/crate_car": 367,
+    "mosslorn:chests/crate_bathroom": 1175,
+    "mosslorn:chests/crate_house": 11210,
+    "mosslorn:chests/crate_kitchen": 2256,
+    "mosslorn:chests/crate_fridge": 664,
+    "mosslorn:chests/moss_megastructure": 155,
+    "mosslorn:chests/crate_books": 114
+  },
+  "custom_names": {
+    "Fish Crate": 711,
+    "\"Civilian Grade\" Office Supplies": 98,
+    "\"Civilian Grade\" Research Equipment": 86,
+    "Car Trunk": 367,
+    "Barrel": 2383,
+    "Fridge": 600,
+    "Mossy Mass": 155,
+    "Big 7 Drink Shelf": 155,
+    "Big 7 Freezer": 64,
+    "Big 7 Snack Shelf": 19,
+    "Kitchen Cabinet": 803,
+    "Office Cabinet": 18707,
+    "The Bronze Jame Bar Crate": 34,
+    "Library Shelf": 114,
+    "Bathroom Crate": 55
+  },
+  "registered": 61793,
+  "changes": [
+    "region/r.-1.-1.mca",
+    "region/r.-1.0.mca",
+    "region/r.-1.1.mca",
+    "region/r.-2.1.mca",
+    "region/r.0.-1.mca",
+    "region/r.0.0.mca",
+    "region/r.0.1.mca",
+    "region/r.1.0.mca",
+    "data/command_storage_mosslorn.dat",
+    "datapacks/mosslorn-expanded.7-auto-chests-barrels.zip",
+    "level.dat"
+  ],
+  "old_packs_replaced": [
+    "file/mosslorn_loot",
+    "file/mosslorn-expanded.6-loot-control-zone-info.zip"
+  ],
+  "source_archive_bytes": 459114478,
+  "minecraft_runtime_tested": false,
+  "items_preserved": true
+}

@@ -1,0 +1,11 @@
+{
+  "unchanged_files_sha256_verified": 510,
+  "chunks_in_changed_regions_verified": 8192,
+  "containers_in_changed_chunks_verified": 6430,
+  "registry_entries": 61793,
+  "registry_keys_unique": true,
+  "registry_loot_tables_valid": true,
+  "items_and_custom_names_preserved": true,
+  "level_data_unchanged_except_pack_selection": true,
+  "minecraft_runtime_tested": false
+}
