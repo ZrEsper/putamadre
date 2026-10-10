@@ -1,0 +1,49 @@
+{
+  "checks": 676,
+  "blood_wound_mask_symmetric_differences_pixels": {
+    "crawler": {
+      "1-2": 165,
+      "1-3": 468,
+      "2-3": 447
+    },
+    "blisterzombie": {
+      "1-2": 561,
+      "1-3": 1347,
+      "2-3": 1190
+    },
+    "rottenmutant": {
+      "1-2": 721,
+      "1-3": 1500,
+      "2-3": 1435
+    },
+    "zombiebrute": {
+      "1-2": 2115,
+      "1-3": 4122,
+      "2-3": 4025
+    },
+    "mutantbrute": {
+      "1-2": 4254,
+      "1-3": 8240,
+      "2-3": 7348
+    },
+    "splitheadzombie": {
+      "1-2": 626,
+      "1-3": 1187,
+      "2-3": 971
+    },
+    "spitter": {
+      "1-2": 1771,
+      "1-3": 1889,
+      "2-3": 1914
+    }
+  },
+  "forced_name_rules_checked": true,
+  "emf_etf_source_contract_inspected": true,
+  "species": 7,
+  "native_texture_variants": 21,
+  "geometry_replacement": false,
+  "native_children_preserved": true,
+  "vanilla_zombie_atlases": false,
+  "minecraft_visual_tested": false,
+  "sha256": "634c8776879939c50f3033f1318055ceecd610643332af41a7b65832d3edae99"
+}

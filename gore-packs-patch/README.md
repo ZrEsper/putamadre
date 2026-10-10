@@ -1,3 +1,5 @@
+**Mutantes: usar la [revisión 3 con 21 diseños distintos](../mutant-native-gore-patch/README.md). Desactivar los packs de mutantes Gore.1 y Gore.2.**
+
 # Blue's + MutantsZombies — Gore revisión 1
 
 **Corrección posterior:** el pack de mutantes de revisión 1 produjo proporciones incorrectas y piezas flotantes en la prueba del usuario. Sustituir `MutantsZombies-Blues-EMF-Gore.1.zip` por [la revisión 2 de anatomía nativa](../mutant-native-gore-patch/MutantsZombies-Native-Blues-Inspired-Gore.2.zip). El pack de Blue's para zombis normales se conserva. Las validaciones de revisión 1 no demostraban corrección visual en Minecraft.
