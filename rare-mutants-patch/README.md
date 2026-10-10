@@ -1,3 +1,5 @@
+**Actualización:** [solo zombis normales y mutantes al 1 %, para ambos generadores](../zombies-only-patch/README.md). Reemplaza los JAR anteriores si usas esta revisión.
+
 # Mutantes muy raros en la población de hordas — revisión 1
 
 Minecraft 1.21.1, NeoForge 21.1.255+. Usa exactamente los dos JAR aportados por el usuario, incluido `living-population-no-distant-sound`; mantiene desactivados los sonidos distantes. Mantiene los recursos, autores y licencias originales.

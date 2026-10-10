@@ -1,0 +1,21 @@
+{
+  "artifacts": {
+    "zomboid-hordes-1.8.3-neoforge-1.21.1-zombies-mutants-only.2.jar": {
+      "sha256": "4fa7cd3caee3374dae682a9d2bc0e8d6cbb7de6843425d18cc774eb317846484",
+      "changed_classes": [
+        "dev/zomboid/hordes/HordeEvents.class",
+        "dev/zomboid/rarehorde/Mutants.class"
+      ]
+    },
+    "The-Hordes-1.21.1-1.6.3f-zombies-mutants-only.1.jar": {
+      "sha256": "0d51729b8fbee6244ae63d4b140eb7c3eff3b54108c5135abbdfb401446ae574",
+      "changed_classes": [
+        "dev/zomboid/onlyzombies/R.class",
+        "dev/zomboid/onlyzombies/Tables.class",
+        "net/smileycorp/hordes/hordeevent/HordeSpawnTable.class"
+      ]
+    }
+  },
+  "runtime_tested": false,
+  "mutant_chance": 0.01
+}
