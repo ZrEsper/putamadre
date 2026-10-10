@@ -1,0 +1,7 @@
+{
+  "sha256": "e9237d448e28f60fa8718d231afdebc9b45b82a5361811436a7d071ba5d02524",
+  "predicate_cases": 13,
+  "asm_methods": 45,
+  "minecraft_runtime_tested": false,
+  "clean_reproduction": "all entries equal"
+}
