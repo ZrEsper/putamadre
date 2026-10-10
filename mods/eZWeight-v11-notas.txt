@@ -1,0 +1,7 @@
+eZWeight stamina v11 — Minecraft 1.21.1 NeoForge
+
+Reemplazar el JAR v10 por este JAR, tanto en cliente como en servidor. No instalar ambos.
+
+Al agotar la stamina se permite seguir gastando energía: se mantiene en cero, sin valores negativos. Los golpes cuerpo a cuerpo tardan el doble en recuperar su fuerza; siguen siendo posibles los golpes anticipados, con el daño reducido normal de Minecraft. Los saltos se permiten, con un mínimo de 20 ticks (1 segundo) entre saltos durante el agotamiento. Correr queda bloqueado hasta recuperar el 10 %; entonces se recupera el ritmo normal. Las acciones siguen reiniciando el descanso necesario para regenerar stamina. Se conservan el peso, fitness, lesiones y HUD de v10.
+
+Validación: 13 comprobaciones del comportamiento de las reglas de stamina; verificación de tipos de pila y variables en 88 clases/665 métodos; integridad ZIP y configuración de mixins. Pendiente probar dentro del modpack real. Este ajuste no cambia la cadencia interna de las armas de fuego de otros mods.
