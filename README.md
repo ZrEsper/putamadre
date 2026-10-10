@@ -1,17 +1,16 @@
 # Mods de Zomboid
 
-## Ragdoll y cadáveres: death-compat.2 — posición y agua
+## Ragdoll y cadáveres: death-compat.3
 
-[Descargar los tres JAR .2](death-compat-patch/death-compat.2-mods.zip). **Sustituir .1 y originales, sin duplicados.** Cliente: los tres. Servidor dedicado: Saros y Zombie Remains Loot `.2`; Dismemberment sigue siendo visual de cliente.
+[Descargar los tres JAR .3](death-compat-patch/death-compat.3-mods.zip). Sustituir los tres anteriores sin duplicados y reiniciar completamente Minecraft. Cliente: los tres. Servidor dedicado: Saros y Zombie Remains Loot `.3`.
 
-- Usa la posición real del torso; prioriza su columna y conserva el punto validado, evitando superficies elevadas cercanas y regresos al origen tras caídas largas.
-- Cadáveres sobre la superficie del agua, sin vaciarla; añade flotación al ragdoll.
-- Actualiza posiciones durante la caída y espera la confirmación de colocación antes de retirar el efecto.
-- Conserva la elección entre ragdoll y desmembramiento, loot persistente, equipo de zombis/bandidos y dependencias.
+- Corrige el fallo JNI confirmado en el log que desactivaba Bullet y devolvía el cadáver al punto de muerte.
+- Ajusta colisiones de huesos; cuatro segundos en reposo y dos de desvanecimiento antes del loot, sin hundimiento artificial durante el fade.
+- Conserva posición real del torso, cadáveres sobre agua e inventario persistente.
 
-71 comprobaciones con dobles de API/física y análisis de 69 métodos aprobados. **Pendiente probar dentro del modpack.** El cadáver es un bloque y conserva el ajuste a la cuadrícula del mundo.
+79 comprobaciones con dobles, análisis de 123 métodos y pruebas con Bullet nativo real en Linux aprobados. **Pendiente probar dentro del modpack y en Windows.** El cadáver sigue siendo un bloque ajustado a la cuadrícula.
 
-[Instalación, reglas y límites](death-compat-patch/README.md) · [Fuentes .2](death-compat-patch/death-compat.2-fuentes.zip).
+[Instalación y límites](death-compat-patch/README.md) · [Fuentes .3](death-compat-patch/death-compat.3-fuentes.zip).
 
 ## Estamina v10, HUD v2 y Survivor Creator v18
 
