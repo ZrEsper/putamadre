@@ -1,0 +1,66 @@
+MOSSLORN EXPANDED V6 — Minecraft 1.21.1, formato de datapack 48
+
+INSTALAR
+Reemplaza mosslorn-expanded.5-danger-zones.zip por este ZIP en la carpeta datapacks del mundo. Ejecuta /reload. Solo el servidor/mundo instala este datapack. Conserva el mismo mundo para conservar el registro de cofres y los ajustes guardados en storage y scoreboard.
+
+COMANDOS PARA JUGADORES
+/trigger moss_info
+Muestra zona, bonus de loot, coordenadas del chunk, zombies presentes y distribución de población de las versiones de hordas recibidas. Incluye zombies vanilla y los siete mutantes de MutantsZombies si está instalado. El conteo considera entidades cargadas que intersectan el chunk en altura -64 a 319; no cuenta criaturas todavía sin generar ni deduce probabilidades a partir de ese número.
+
+COMANDOS DE ADMINISTRACIÓN (OP o trucos)
+/function mosslorn:ayuda
+/function mosslorn:loot/escanear
+Busca en 17×17×17 bloques centrados en tu posición. Registra cofres SIN ABRIR que todavía tengan una de las 19 tablas mosslorn:chests/* del pack. Comprueba hasta 64 posiciones por tick. Solo un escaneo a la vez, en Overworld, Nether o End. /reload cancela el escaneo; no borra el registro.
+/function mosslorn:loot/scan/cancelar
+
+Para registrar un cofre ya abierto, cuya tabla original Minecraft ya ha borrado:
+/function mosslorn:loot/registrar {x:100,y:64,z:-50,tabla:"mosslorn:chests/crate_house"}
+Usa coordenadas enteras y una tabla del pack. Usa la dimensión del jugador; desde consola usa Overworld. El chunk debe estar cargado. Nunca registra automáticamente cofres de jugadores ni inventa la tabla de un cofre ya abierto.
+/function mosslorn:loot/desregistrar {x:100,y:64,z:-50}
+
+/function mosslorn:loot/reiniciar
+Solicita una nueva generación del loot de TODOS los cofres del registro. Procesa hasta 8 entradas por segundo y NO fuerza la carga de chunks. Los chunks descargados se revisan en vueltas posteriores. Los cofres con objetos se respetan y se saltan durante ese reinicio. Los vacíos reciben su LootTable de nuevo; los objetos se generan al abrirlos. Los no abiertos también se renuevan. No elimina Items ni cambia bloques.
+/function mosslorn:loot/estado
+Muestra el número total registrado y los resultados de la vuelta en curso. Los contadores se reinician al comenzar cada vuelta; no son históricos acumulados.
+
+/function mosslorn:loot/cantidad/escaso
+/function mosslorn:loot/cantidad/normal
+/function mosslorn:loot/cantidad/abundante
+Normal: una generación original. Abundante: dos generaciones completas, hasta la capacidad física del cofre. Escaso: 50 % de posibilidad de generar una vez; puede quedar vacío. Conserva las distribuciones y objetos originales. Afecta cofres que todavía no hayan generado contenido y próximas reposiciones; no cambia objetos ya existentes. No modifica el registro al elegir cantidad.
+
+/function mosslorn:loot/automatico {minutos:30}
+/function mosslorn:loot/automatico {minutos:0}
+Intervalo de 1 a 1440 minutos de ticks de juego. 0 desactiva; viene desactivado. No cuenta tiempo con el servidor cerrado. La reposición automática conserva las mismas restricciones y protección de contenido que la manual.
+
+INFORMACIÓN REAL DE ZONAS
+Se conservan los límites exactos de las tablas originales: central nuclear, pirámide y los 480 rectángulos de edificios altos. Bonus ORIGINAL de loot de peligro: nuclear 65 %, pirámide 40 %, edificios altos 35 %. Son probabilidades del pool adicional en una generación normal, NO probabilidades de zombies. En abundante se tira dos veces, por lo que la probabilidad de obtener al menos un bonus cambia. Esto no aumenta el spawn de zombies.
+
+REGLAS DE LOS DOS JAR RECIBIDOS
+Se inspeccionaron y verificaron las reglas compiladas en:
+- zomboid-hordes-1.8.3-neoforge-1.21.1-mosslorn-danger-zones.3.jar
+- The-Hordes-1.21.1-1.6.3f-zombies-mutants-only.1.jar
+No tienes que reemplazar esos mods: el datapack muestra sus reglas; no modifica su spawn.
+
+Zomboid Hordes sortea el objetivo base con estas probabilidades:
+1 zombie: 70 %; 2: 18 %; 3: 8 %; 4: 3 %; 5: 1 %.
+Normal ×1: objetivo 1–5.
+Pirámide y edificios altos ×2: objetivo 2, 4, 6, 8 o 10, con las mismas probabilidades.
+Central nuclear ×3: objetivo 3, 6, 9, 12 o 15, con las mismas probabilidades.
+Las etiquetas dificultad normal/alta/extrema describen el multiplicador de población, NO cambian la dificultad vanilla.
+El multiplicador se evalúa en el centro del chunk (chunk*16+8), como hace el JAR, y puede diferir de la zona de loot del bloque exacto donde estás.
+
+El nuevo sorteo ocurre cada 6000–12000 ticks: 5–10 minutos a 20 TPS. Solo repone los que faltan respecto al objetivo; si no encuentra suelo, espacio o una posición válida, puede aparecer menos población. Se limita a chunks cargados cercanos a jugadores elegibles del Overworld, con doMobSpawning activado y dificultad distinta de pacífico. El radio por defecto del JAR es 4 chunks, pero puede cambiarse en config/zomboid-hordes.json. No es un límite total: oleadas de The Hordes, helicópteros y otros sistemas pueden superarlo.
+
+En la selección de población de Zomboid Hordes, los mutantes tienen un 1 % inicial de probabilidad y solo pueden ser elegidos si hay menos de 2 mutantes vivos en 128 bloques horizontales. Si el tipo no está instalado o se alcanza ese límite, se usa el zombie normal. Esto no garantiza que la posición final permita generar la entidad.
+
+En The Hordes, el selector de tablas enviado tiene peso 9900 para zombie y peso total 100 para mutantes: 99 % / 1 % por elección cuando están instalados los siete tipos. Pesos ausentes se reasignan al zombie.
+/trigger moss_info set 2
+Añade los porcentajes individuales de ese selector:
+Crawler 0.18 %, Blister 0.25 %, Split Head 0.23 %, Rotten Mutant 0.18 %, Spitter 0.10 %, Zombie Brute 0.05 %, Mutant Brute 0.01 %.
+Estos porcentajes no son probabilidades de horda por chunk ni los valores de infección de The Hordes. La frecuencia y tamaño de oleadas dependen de la configuración propia de ese mod. El datapack muestra reglas de los JAR recibidos, no lee archivos externos de configuración ni el objetivo aleatorio elegido internamente para cada chunk. Si cambias los JAR por otras versiones, hay que actualizar estos datos.
+
+LÍMITES DEL REGISTRO
+El ZIP original solo traía loot tables: no existe una lista con la posición de los cofres del mundo. Un datapack no puede enumerar todos los cofres de chunks descargados. Primero hay que registrar los cofres mediante escaneos locales o coordenadas. El registro persiste entre reinicios. No se borran cofres ocupados, tampoco cofres personalizados fuera del registro.
+
+VALIDACIÓN
+JSON y referencias de todas las tablas y funciones, redirecciones internas para aplicar cantidad una sola vez, 4001 casos de cálculo de chunk con coordenadas positivas/negativas, 4913 celdas de escaneo sin duplicados y máximo 64 por lote, integridad ZIP y comprobación de ausencia de operaciones destructivas sobre inventarios. No se ejecutó Minecraft; debe comprobarse /reload y el funcionamiento de comandos dentro del mundo/modpack. Se ejecutaron las reglas puras del JAR original para comprobar la distribución, los multiplicadores, los objetivos nucleares y el intervalo de revisión.
