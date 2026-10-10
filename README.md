@@ -1,5 +1,18 @@
 # Mods de Zomboid
 
+## Ragdoll, desmembramiento y cadáveres: death-compat.1
+
+[Descargar los tres JAR](death-compat-patch/death-compat.1-mods.zip). **Sustituir los originales**, sin duplicados. Cliente: los tres. Servidor dedicado: Saros y Zombie Remains Loot parcheados; Dismemberment sigue siendo solo visual del cliente.
+
+- Muertes normales: ragdoll. Explosiones o golpes de daño alto: desmembramiento.
+- Tras asentarse y retirarse el efecto, aparece el cadáver de loot en un lugar válido del suelo.
+- Inventarios pendientes persistentes, recuperación si falla la física o se desconecta un observador y protección contra duplicar/sobrescribir cadáveres.
+- Conserva el loot y equipo de zombis/bandidos y las dependencias originales. No modifica la IA.
+
+47 comprobaciones con dobles de API/física y análisis de 69 métodos aprobados. **Pendiente probar dentro de Minecraft con el modpack completo.**
+
+[Instalación, reglas y límites](death-compat-patch/README.md) · [Fuentes reproducibles](death-compat-patch/death-compat.1-fuentes.zip).
+
 ## Estamina v10, HUD v2 y Survivor Creator v18
 
 Sustituir las tres versiones anteriores en cliente y servidor. Mantener First Aid y las otras dependencias.
