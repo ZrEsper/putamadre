@@ -1,0 +1,1 @@
+package net.minecraft.world.level.block.entity;public class BaseContainerBlockEntity{public Object lockKey=net.minecraft.world.LockCode.NO_LOCK;}

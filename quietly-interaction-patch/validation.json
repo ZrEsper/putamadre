@@ -1,0 +1,21 @@
+{
+  "sha256": "55cad49315002b6cc2511c9a96a4af4544c9f45c22fef470c23f8434388dcbd7",
+  "helper_cases": 30,
+  "unrelated_entries_preserved": true,
+  "jade_jar_modified": false,
+  "minecraft_runtime_tested": false,
+  "modified_or_added": [
+    "cn/kafei/interact/Interaction.class",
+    "cn/kafei/interact/JadePlugin$Provider.class",
+    "cn/kafei/interact/JadePlugin.class",
+    "cn/kafei/interact/R.class",
+    "cn/kafei/interact/TransferGuard.class",
+    "cn/kafei/mixin/InteractionColorMixin.class",
+    "cn/kafei/mixin/InteractionGlowMixin.class",
+    "cn/kafei/mixin/InteractionOutlineMixin.class",
+    "cn/kafei/mixin/TransferHandMixin.class",
+    "cn/kafei/mixin/TransferMenuMixin.class",
+    "cn/kafei/mixin/TransferSwapMixin.class",
+    "quietly.mixins.json"
+  ]
+}

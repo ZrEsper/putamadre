@@ -1,0 +1,1 @@
+package org.spongepowered.asm.mixin.injection.invoke.arg;public abstract class Args{public abstract <T> void set(int i,T value);}

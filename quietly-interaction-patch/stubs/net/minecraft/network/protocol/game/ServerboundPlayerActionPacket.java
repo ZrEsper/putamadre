@@ -1,0 +1,1 @@
+package net.minecraft.network.protocol.game;public class ServerboundPlayerActionPacket{}

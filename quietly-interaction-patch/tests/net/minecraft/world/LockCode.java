@@ -1,0 +1,1 @@
+package net.minecraft.world;public class LockCode{public static final Object NO_LOCK=new Object();}
