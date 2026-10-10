@@ -1,0 +1,27 @@
+Mutants L4D2 Addon 1.3.0 + Rotten Gore v7
+
+INSTALACIÓN
+Reemplazar el complemento anterior por mutants-l4d2-addon-1.3.0-neoforge-1.21.1.jar en cliente y servidor. Conservar MutantsZombies-1.3.1-NeoForge-mc1.21.jar y tactical.13. Reemplazar el resource pack anterior por MutantsZombies-Rotten-Gore-v7.zip, activarlo por encima de otros packs de mutantes y recargar con F3+T. El pack conserva sus requisitos EMF/ETF y modelos de mods activados.
+
+ROCA DEL TANQUE
+Piedra visible de 1,4 bloques de tamaño, lanzada en arco. Rebota contra suelo y paredes, pierde energía y emite sonido de piedra al impactar. Daña y empuja a seres vivos que toca, excluyendo al lanzador, creativos y espectadores. Desaparece a los 100 ticks (cinco segundos). Los impactos repetidos a la misma víctima tienen una pausa de diez ticks. Usa displays nativos de Minecraft y una simulación de colisión en el servidor.
+
+BLISTER CON LENGUA
+Prepara el ataque y lanza una lengua larga roja que une su boca con el torso del jugador o bandido. Tira físicamente de la víctima hacia el infectado. Se puede cortar golpeando cualquier segmento o la zona de unión a una víctima: requiere cuatro o cinco golpes, elegido por captura. También permite interacción con clic derecho; dos eventos del mismo clic no cuentan doble. El Blister debe esperar diez segundos después de terminar la captura. La lengua se rompe al morir fuente o víctima, separarse excesivamente o interponerse un obstáculo. Tiene una liberación de seguridad a los diez segundos de captura. Se usan displays e hitboxes de interacción nativos, sincronizados por Minecraft. Las entidades temporales sobrantes se descartan al volver a cargar.
+
+EXPLOSIÓN Y ZONA DE BILIS
+Al morir Blister salpica Bilis y produce un estallido con sonido. Deja una zona de 3×3 bloques con manchas verdes visibles durante veinte segundos. Entrar aplica Bilis. Los zombies y mutantes a 48 bloques investigan esa posición; al llegar vuelven a su combate normal. La Witch tranquila conserva su comportamiento exclusivo.
+
+BRUTOS, VIDA Y SONIDOS
+Mutant Brute, Zombie Brute y Rotten Mutant reciben un 25 % más de velocidad base. El aumento se aplica una sola vez por entidad para no acumularlo al recargar.
+Zombie Brute conserva el golpe al suelo y, entre 4,5 y 10 bloques, hace una embestida más corta y lenta que la del tanque: aviso, avance recto y golpe final. Una pared interrumpe la embestida. Los ataques tienen rugidos, golpes, sonido húmedo de lengua y sonidos de impacto.
+Split Head tiene como mínimo 96 puntos de vida máxima, o el doble de su máximo previo si era mayor. Se conserva la proporción de heridas; el aumento no se repite al recargar.
+
+ANIMACIONES
+Posturas distintas de caminar y correr, torso más inclinado al correr, preparación y golpe rápido en melee, movimiento de cabeza y brazos al escupir, pose de lengua sostenida y pose de embestida corta. El pack v7 mantiene la caminata contenida de v6, acelera la transición a carrera y vuelve más brusca la preparación y ejecución de ataques. Conserva texturas, geometría, variantes, ojos emisivos y gore. EMF puede reemplazar parte de las poses nativas; se necesita comprobar visualmente en Minecraft el conjunto.
+
+VALIDACIÓN Y LÍMITES
+55 comprobaciones nuevas de roca, lengua, explosión y atributos; 47 de comportamiento, 117 de poses/trayectorias, 10 de zonas, 34 de integración con bandidos y 419 de agresividad/poses. Estas pruebas usan APIs simuladas. 95 contratos de modelos y clases revisados contra los JAR originales. Bytecode, estructura y aislamiento del cliente verificados. Las firmas de creación de entidades, carga NBT y TagParser fueron contrastadas con mappings.dev para Minecraft 1.21.1. Las expresiones del pack tienen 1.524.665 comprobaciones de valores finitos y conservación de recursos. No se ejecutaron Minecraft ni EMF.
+Máximos por servidor/dimensión según habilidad: 16 lenguas simultáneas, 32 rocas por dimensión y 16 zonas de explosión por dimensión para limitar entidades y trabajo. Las manchas se colocan donde hay suelo en chunks cargados. El tirón y la retirada dependen del terreno y de otros mods que alteren movimiento o interacción.
+SHA256 complemento: 3ea61009e0caf2094ebc1beeaa6587cc486cdf0eacda8f53173a6854e00ddfce
+SHA256 pack: 3a6d568144b6a16610f48ef3ed4664d6b602c7ffe874c97a58a75e7563eab7e9
