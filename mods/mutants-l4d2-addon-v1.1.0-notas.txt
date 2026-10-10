@@ -1,0 +1,13 @@
+Mutants L4D2 Addon 1.1.0 — combate con bandidos
+
+INSTALACIÓN: reemplazar el complemento 1.0.0/1.0.1 por mutants-l4d2-addon-1.1.0-neoforge-1.21.1.jar. Conservar MutantsZombies-1.3.1-NeoForge-mc1.21.jar y tacznpcs-2.1.0-1.21.1-tactical.13.jar. Instalar el nuevo complemento en cliente y servidor. No instalar varias versiones del complemento simultáneamente.
+
+Los mutantes detectan bandidos visibles a 32 bloques y los priorizan. Mantienen persecución hasta 40 bloques; abandonan tras cinco segundos sin contacto visual. Bilis tiene prioridad sobre esta selección.
+Los bandidos priorizan mutantes visibles sobre sus actividades normales y objetivos comunes. Valoran la habilidad, distancia y si el mutante los está atacando. Interrumpen looteo o curación insegura para combatir. La retirada de emergencia por salud baja sigue teniendo prioridad.
+Mantienen distancia según amenaza: tanque 16 bloques, Spitter 14, Blister 12, Rotten 9, Zombie Brute 8, Crawler 10 y Witch furiosa 12. Intentan escapar lateralmente frente a la preparación o carga del tanque. Conservan el objetivo para poder usar el combate existente mientras retroceden; no se modifica la cadencia ni se inventa munición.
+No provocan deliberadamente a una Witch tranquila y tratan de apartarse a siete bloques. Si un bandido se acerca demasiado o la daña, ella reacciona y persigue exclusivamente al provocador. La muerte del bandido la calma.
+Blister puede escupir Bilis y salpicar bandidos al morir. Bilis atrae zombies y mutantes y puede generar refuerzos cerca del NPC. Tanque, golpe al suelo, ácido, nubes tóxicas y salto también funcionan contra estos NPC.
+El reconocimiento utiliza la clasificación de bandido de tactical.13: los civiles no se incluyen como bandidos. El complemento no cambia el archivo táctico 13 y puede funcionar sin TacZNPCs; la integración se activa si están sus clases.
+
+VALIDACIÓN: 34 pruebas nuevas de integración con APIs simuladas; 47 comprobaciones de comportamiento, 117 de poses/trayectorias y 10 de zonas. 57 contratos comprobados contra los JAR reales originales (incluidos campos y métodos del cerebro táctico y puntos de inyección). Bytecode y estructura verificados. Mantiene la corrección de BlockPos de 1.0.1. No probado en una partida real de Minecraft; la retirada depende de las rutas disponibles.
+SHA256: 72b6366b09e8b7671ddb9ede0afebd71585ea040e9a7e0836b81df4f6ff7ae55
