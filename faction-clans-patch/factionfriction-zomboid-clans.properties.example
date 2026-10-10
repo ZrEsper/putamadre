@@ -1,0 +1,12 @@
+# Copiar a config/factionfriction-zomboid-clans.properties solo si deseas fijar estas opciones.
+# Editar con el servidor detenido. Reiniciar para aplicar.
+preparationMinutes=5
+warMinutes=60
+pairCooldownMinutes=30
+sameVictimCooldownSeconds=120
+maxScoredKillsPerVictim=3
+killPoints=5
+capturePoints=20
+defensePoints=10
+maxRewardBundles=8
+rewardItems=minecraft:cooked_beef=4,minecraft:honey_bottle=1,minecraft:iron_ingot=3,minecraft:arrow=8,minecraft:leather=2,minecraft:torch=8,minecraft:iron_axe=1,minecraft:leather_chestplate=1

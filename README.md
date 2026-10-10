@@ -1,5 +1,18 @@
 # Mods de Zomboid
 
+## Faction Friction: clanes del apocalipsis .1
+
+[Descargar Zomboid Clans .1](faction-clans-patch/faction-clans.1-mod.zip). Sustituir FactionFriction en **cliente y servidor**, sin duplicados. Tecla **K**: cuaderno de clanes con páginas de identidad, conflicto, compañeros y depósito.
+
+- Estética oscura de expediente, emblemas, lema e identidades de supervivientes; mantiene administración, nombre, colores y rangos originales.
+- Escaramuzas por puntos con territorios protegidos; asedios con **cinco minutos de preparación** y un defensor conectado de cualquier rango. Desconexión del último defensor restaura protección y pausa captura.
+- Posiciones de compañeros, dimensión y radar en ventanas anchas; nunca envía posiciones rivales.
+- Puntos por bajas, captura y defensa; ganador por marcador, recompensas mezcladas de suministros/equipo en depósito persistente, controles contra bajas repetidas y tregua entre guerras.
+
+68 comprobaciones con APIs simuladas y métodos nativos transformados, más análisis ASM de 427 métodos. **Pendiente probar dentro del modpack y con varios jugadores.** Conserva las reglas originales de capitales, fuerzas y enfriamientos de operaciones.
+
+[Instalación, puntuación y límites](faction-clans-patch/README.md) · [Fuentes reproducibles](faction-clans-patch/faction-clans.1-fuentes.zip) · [Configuración de ejemplo](faction-clans-patch/factionfriction-zomboid-clans.properties.example).
+
 ## Ragdoll y cadáveres: death-compat.4
 
 [Descargar los tres JAR .4](death-compat-patch/death-compat.4-mods.zip). Sustituir los tres anteriores sin duplicados y reiniciar completamente Minecraft. Cliente: los tres. Servidor dedicado: Saros y Zombie Remains Loot `.4`.
