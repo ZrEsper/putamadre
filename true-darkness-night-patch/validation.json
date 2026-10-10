@@ -1,0 +1,9 @@
+{
+  "input_sha256": "fcf9641c9e25b83753908da1e0022f1b5572a7c7154d0cde7855380d211dda88",
+  "output_sha256": "4315017acbfb1dc91ff649f70457cdba274858e3f0805f331d44bb59b717d662",
+  "modified_entries": [
+    "com/hyrrx/hardcoretruedarkness/client/ClientDarknessState$RenderState.class"
+  ],
+  "actual_bytecode_behavior_cases": 16,
+  "minecraft_runtime_tested": false
+}
