@@ -1,0 +1,11 @@
+{
+  "checks": 627,
+  "species": 7,
+  "native_texture_variants": 21,
+  "geometry_replacement": false,
+  "native_children_preserved": true,
+  "vanilla_zombie_atlases": false,
+  "minecraft_visual_tested": false,
+  "sha256": "2f0d71c34161fd0d3f57016dc44741af641c669537e3b39d909afe63741b564d",
+  "clean_reproduction": "all pack entries equal"
+}

@@ -1,5 +1,7 @@
 # Blue's + MutantsZombies — Gore revisión 1
 
+**Corrección posterior:** el pack de mutantes de revisión 1 produjo proporciones incorrectas y piezas flotantes en la prueba del usuario. Sustituir `MutantsZombies-Blues-EMF-Gore.1.zip` por [la revisión 2 de anatomía nativa](../mutant-native-gore-patch/MutantsZombies-Native-Blues-Inspired-Gore.2.zip). El pack de Blue's para zombis normales se conserva. Las validaciones de revisión 1 no demostraban corrección visual en Minecraft.
+
 Dos packs para Minecraft NeoForge 1.21.1. Usan Entity Model Features **3.3.11** y Entity Texture Features **7.2.5** aportados por el usuario. No se modifican sus JAR. Se conserva el trabajo original de Blue's, el estilo PZ/L4D2 y las animaciones base.
 
 ## Instalar
