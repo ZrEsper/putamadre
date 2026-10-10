@@ -1,0 +1,7 @@
+Quietly cooldown v6 — NeoForge Minecraft 1.21.1
+
+Reemplazar quietly-1_0_0-cooldown-v5-interaction-jade.jar por el nuevo JAR en cliente y servidor. No mantener ambas versiones.
+
+Corrige el fallo de preparación de TransferSwapMixin: @Mixin estaba en RuntimeVisibleAnnotations, mientras que el cargador la busca en RuntimeInvisibleAnnotations, conforme a su retención CLASS. El mismo error afectaba InteractionColorMixin, InteractionGlowMixin e InteractionOutlineMixin; también se corrigen. Se mantienen los métodos y el comportamiento de cooldown/interacción/Jade existentes.
+
+Validación: anotaciones de los 18 mixins configurados, integridad ZIP y tipos de pila/variables de 36 clases y 215 métodos. No se ejecutó Minecraft; esta corrección resuelve el defecto del log recibido, aunque otros errores posteriores requieren un nuevo log.
