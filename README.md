@@ -1,16 +1,17 @@
 # Mods de Zomboid
 
-## Ragdoll y cadáveres: death-compat.3
+## Ragdoll y cadáveres: death-compat.4
 
-[Descargar los tres JAR .3](death-compat-patch/death-compat.3-mods.zip). Sustituir los tres anteriores sin duplicados y reiniciar completamente Minecraft. Cliente: los tres. Servidor dedicado: Saros y Zombie Remains Loot `.3`.
+[Descargar los tres JAR .4](death-compat-patch/death-compat.4-mods.zip). Sustituir los tres anteriores sin duplicados y reiniciar completamente Minecraft. Cliente: los tres. Servidor dedicado: Saros y Zombie Remains Loot `.4`.
 
-- Corrige el fallo JNI confirmado en el log que desactivaba Bullet y devolvía el cadáver al punto de muerte.
-- Ajusta colisiones de huesos; cuatro segundos en reposo y dos de desvanecimiento antes del loot, sin hundimiento artificial durante el fade.
-- Conserva posición real del torso, cadáveres sobre agua e inventario persistente.
+- Elimina la pausa de cuatro segundos y reduce el fade de dos segundos a 0.4 segundos tras reposar el torso.
+- Extremidades o cabeza aún en movimiento no retrasan el loot si el torso está apoyado y tranquilo.
+- Reduce el frenado angular y vuelve al coste de simulación original: 60 pasos y cuatro subpasos.
+- Conserva la reparación de carga nativa, posición del torso, cadáveres sobre agua e inventario persistente.
 
-79 comprobaciones con dobles, análisis de 123 métodos y pruebas con Bullet nativo real en Linux aprobados. **Pendiente probar dentro del modpack y en Windows.** El cadáver sigue siendo un bloque ajustado a la cuadrícula.
+81 comprobaciones con dobles, análisis de 123 métodos y pruebas con Bullet nativo real en Linux aprobados. **Pendiente probar dentro del modpack y en Windows.** El cadáver de loot conserva su modelo de bloque y sus poses fijas.
 
-[Instalación y límites](death-compat-patch/README.md) · [Fuentes .3](death-compat-patch/death-compat.3-fuentes.zip).
+[Instalación y límites](death-compat-patch/README.md) · [Fuentes .4](death-compat-patch/death-compat.4-fuentes.zip).
 
 ## Estamina v10, HUD v2 y Survivor Creator v18
 

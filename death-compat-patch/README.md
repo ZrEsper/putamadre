@@ -1,6 +1,6 @@
-# Posición de cadáveres y agua: death-compat.3
+# Posición de cadáveres y agua: death-compat.4
 
-Sustituye death-compat.1 y death-compat.2. Se reconstruye sobre los mismos tres JAR originales del usuario, conservando los autores, licencias, recursos, loot, identificación de NPCs y dependencias. Minecraft 1.21.1 / NeoForge **21.1.255 o superior**, con Doomsday Decoration 1.1.4.2 o superior.
+Sustituye death-compat.1, death-compat.2 y death-compat.3. Se reconstruye sobre los mismos tres JAR originales del usuario, conservando los autores, licencias, recursos, loot, identificación de NPCs y dependencias. Minecraft 1.21.1 / NeoForge **21.1.255 o superior**, con Doomsday Decoration 1.1.4.2 o superior.
 
 ## Instalación
 
@@ -8,21 +8,21 @@ Eliminar las versiones anteriores de los tres mods; no instalar dos JAR con el m
 
 Cliente, incluido mundo de un jugador:
 
-- `Saros-Mob-Ragdoll-NeoForge-1.21.1-1.0.1-death-compat.3.jar`
-- `mobdismembermentneoforge-1.21.1-1.4.0-death-compat.3.jar`
-- `zombie-remains-loot-1.6.2-neoforge-1.21.1-death-compat.3.jar`
+- `Saros-Mob-Ragdoll-NeoForge-1.21.1-1.0.1-death-compat.4.jar`
+- `mobdismembermentneoforge-1.21.1-1.4.0-death-compat.4.jar`
+- `zombie-remains-loot-1.6.2-neoforge-1.21.1-death-compat.4.jar`
 
-Servidor dedicado: instalar las copias `.3` de **Saros y Zombie Remains Loot**. Mob Dismemberment sigue siendo solo visual de cliente. Los jugadores necesitan los tres parches `.3`. Se fijan las dependencias y la versión del canal de red para evitar mezclar versiones anteriores y originales.
+Servidor dedicado: instalar las copias `.4` de **Saros y Zombie Remains Loot**. Mob Dismemberment sigue siendo solo visual de cliente. Los jugadores necesitan los tres parches `.4`. Se fijan las dependencias y la versión del canal de red para evitar mezclar versiones anteriores y originales.
 
 Mantener Doomsday Decoration, TACZ, TacZ NPCs tactical.13, Self Expression y las otras dependencias existentes. No modifica la IA ni el equipo de los bandidos.
 
-## Fallo confirmado en latest.log y transición visual
+## Transición rápida y carga de física
 
 El log de la prueba con `.2` muestra `UnsatisfiedLinkError` en `BoxCollisionShape.createShape`: la DLL se cargaba desde TRANSFORMER y sus clases Java estaban en PLUGIN. Saros desactivaba la física, por lo que no había una posición física de aterrizaje y se recuperaba el loot desde el origen.
 
 La revisión carga la biblioteca nativa mediante el cargador propio de Bullet, comprueba su SHA-256 contra el binario incluido en el JAR original y verifica que puede crear una forma nativa. No reutiliza a ciegas la DLL extraída anteriormente. Es necesario cerrar completamente Minecraft y volver a iniciarlo.
 
-Se ajusta la detección continua de colisión al grosor de cada hueso y la simulación a 120 pasos por segundo con hasta ocho subpasos. Los fragmentos conservan su vida mientras dura la transición. Un error al consultar terreno conserva la última posición física obtenida y registra la excepción completa.
+Se conserva la detección continua de colisión ajustada al grosor de cada hueso. Se vuelve a 60 pasos por segundo y cuatro subpasos, los valores originales de Saros, para reducir trabajo respecto a los 120 pasos de `.3`. El frenado angular de los cuerpos baja de 0.25 a 0.10 en modo stiff; no se altera la unión entre huesos ni el modo floppy. Los fragmentos conservan su vida mientras dura la transición. Un error al consultar terreno conserva la última posición física obtenida y registra la excepción completa.
 
 ## Corrección de posición
 
@@ -33,11 +33,11 @@ La versión anterior convertía la posición del ragdoll en el centro de un bloq
 - La columna X/Z del torso tiene prioridad. La búsqueda local admite dos bloques verticales y solo un bloque lateral cuando esa columna está ocupada o no permite colocar el cadáver. Un escalón o techo lateral ya no gana por recorrer antes las capas altas.
 - Se conserva el bloque validado hasta colocarlo; no se repite una búsqueda amplia que pueda cambiarlo. Si se ocupa entretanto, se busca únicamente alrededor del último torso.
 - Hay actualizaciones de posición cada diez ticks durante la caída. La recuperación por tiempo utiliza el último punto recibido, en vez del punto de muerte inicial.
-- El efecto espera la confirmación del servidor y reintenta el aviso de reposo cada diez ticks. La confirmación se emite después de colocar el bloque y registrar el loot. El cuerpo permanece cuatro segundos en reposo y se desvanece durante dos segundos antes de enviar la posición final. El desvanecimiento solo cambia opacidad: no desplaza el cuerpo hacia abajo.
+- El efecto espera la confirmación del servidor y reintenta el aviso de reposo cada diez ticks. La confirmación se emite después de colocar el bloque y registrar el loot. Se elimina la espera añadida de cuatro segundos. Cuando el torso está apoyado y tranquilo durante seis ticks, con un mínimo de veinte ticks desde la muerte, empieza un desvanecimiento de ocho ticks (0.4 segundos a 20 TPS). Después se envía la posición final; la colocación depende del siguiente tick del servidor y de la red. Las extremidades o fragmentos separados en movimiento ya no bloquean la finalización del torso. El desvanecimiento solo cambia opacidad: no desplaza el cuerpo hacia abajo.
 - El observador más cercano a la muerte aporta la posición compartida. Si se desconecta, cambia de dimensión o se aleja, puede finalizar otro observador registrado.
 - Se validan coordenadas finitas, identidad de muerte, observador, dimensión, chunks cargados y desplazamiento máximo de 128 bloques horizontales y 512 verticales. Se admiten caídas altas que `.1` rechazaba.
 
-Los cadáveres de Doomsday Decoration son **bloques**: el cuerpo visual admite coordenadas continuas, pero el cadáver y su modelo quedan ajustados a la cuadrícula del mundo y a sus poses. No se promete coincidencia exacta al centímetro ni igualdad entre simulaciones físicas de clientes distintos. Esta revisión elimina las búsquedas y recuperaciones que podían trasladarlo varios bloques o devolverlo al origen.
+Los cadáveres de Doomsday Decoration son **bloques**: el cuerpo visual admite coordenadas continuas, pero el cadáver y su modelo quedan ajustados a la cuadrícula del mundo y a sus poses. No se promete coincidencia exacta al centímetro ni igualdad entre simulaciones físicas de clientes distintos. El modelo de loot conserva sus poses fijas: esta revisión no crea un renderer de cadáver articulado. Un modelo que Saros solo pueda representar mediante su fallback rígido también conservará esa limitación.
 
 ## Agua
 
@@ -57,9 +57,9 @@ Sin confirmación de reposo, la recuperación empieza a los 1200 ticks (60 segun
 
 ## Validación y reconstrucción
 
-**79 aserciones** ejecutan los helpers publicados y el codec con dobles de Minecraft/NeoForge/física. Cubren la posición del torso sin redondeo, cabeza lejana, conservación de la última posición de un fragmento, bordes elevados, losas, agua profunda, flotación, no eliminación del agua, lava, caídas largas, cambio de observador, reintentos, ausencia de confirmación al fallar la colocación, loot, calidad, guardado, reinicio y las regresiones de `.1`. Análisis ASM de **123 métodos** originales/modificados. Se conservan byte por byte los recursos y clases originales fuera de las modificaciones seleccionadas. No se empaquetan las clases simuladas.
+**81 aserciones** ejecutan los helpers publicados y el codec con dobles de Minecraft/NeoForge/física. Cubren además la transición sin pausa larga y el torso en reposo con extremidades o cabeza todavía en movimiento. Cubren la posición del torso sin redondeo, cabeza lejana, conservación de la última posición de un fragmento, bordes elevados, losas, agua profunda, flotación, no eliminación del agua, lava, caídas largas, cambio de observador, reintentos, ausencia de confirmación al fallar la colocación, loot, calidad, guardado, reinicio y las regresiones de `.1`. Análisis ASM de **123 métodos** originales/modificados. Se conservan byte por byte los recursos y clases originales fuera de las modificaciones seleccionadas. No se empaquetan las clases simuladas.
 
-Se reprodujo el fallo JNI con la biblioteca Bullet real y dos cargadores de clases separados; la nueva carga lo corrigió. Tres pruebas nativas de caída con huesos de distinto grosor aterrizaron lejos del origen sin atravesar un suelo plano. Estas pruebas se ejecutaron en Linux.
+Se reprodujo el fallo JNI con la biblioteca Bullet real y dos cargadores de clases separados; la nueva carga lo corrigió. También se verifica el nuevo frenado con Bullet real. Tres pruebas nativas de caída con huesos de distinto grosor aterrizaron lejos del origen sin atravesar un suelo plano. Estas pruebas se ejecutaron en Linux.
 
 **No se ejecutó Minecraft, Windows ni el modpack completo en este entorno.** Falta validar visualmente el renderizado, la geometría del modpack y la pose del cadáver sobre agua.
 
@@ -69,4 +69,4 @@ Requiere Java 21 y Python 3. El ZIP de fuentes incluye herramientas con hashes f
 python3 -B build.py /ruta/Saros-Mob-Ragdoll-NeoForge-1.21.1-1.0.1.jar /ruta/mobdismembermentneoforge-1.21.1-1.4.0.jar /ruta/zombie-remains-loot-1.6.1-neoforge-1.21.1-npc-compat.jar
 ```
 
-Los tres JAR `.3` se generan en `output/`. También se comprobó reconstrucción desde una extracción limpia del ZIP de fuentes.
+Los tres JAR `.4` se generan en `output/`. También se comprobó reconstrucción desde una extracción limpia del ZIP de fuentes.
