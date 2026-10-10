@@ -1,0 +1,8 @@
+{
+  "sha256": "abf07e07578291709dada0d67979fb0c6cdd28e3dae873cc944fad1ca8995ec3",
+  "minecraft_runtime_tested": false,
+  "resource_preservation": true,
+  "production_helper_assertions": 45,
+  "asm_methods": 59,
+  "clean_reproduction": "all entries equal"
+}
