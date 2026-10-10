@@ -1,0 +1,13 @@
+{
+  "checks": "production runtime helper tests + ASM original/transformed methods + byte preservation",
+  "minecraft_runtime_tested": false,
+  "files": {
+    "zomboid-hordes-1.8.3-neoforge-1.21.1-rare-mutants.1.jar": "9a82d0a196752554ee16b3bb36bde4edefa7ad0079abe4e5041b29d98d1e8e66",
+    "MutantsZombies-1.3.1-NeoForge-mc1.21-horde-loot.1.jar": "3829c1bfb7909b42ec0ac8c8323e1d1ec640305b257f1950932f6df8fd6c1b79",
+    "zombie-remains-loot-1.6.2-neoforge-1.21.1-death-compat.4-mutant-loot.1.jar": "691d4404c77ef6292e785981d05143b74fd07d8221283ed166bcaa6ac1187022"
+  },
+  "runtime_helper_assertions": 28,
+  "asm_methods": 69,
+  "loot_profiles": 7,
+  "clean_source_reproduction": "all entries equal"
+}
