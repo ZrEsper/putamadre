@@ -1,0 +1,19 @@
+Mutants L4D2 Addon v1 — NeoForge 1.21.1
+
+INSTALACIÓN
+Añadir mutants-l4d2-addon-1.0.0-neoforge-1.21.1.jar junto al MutantsZombies-1.3.1-NeoForge-mc1.21.jar original. Instalar ambos en cliente y servidor. El complemento depende de esa versión exacta del mod original.
+
+COMPORTAMIENTO
+Blister: escupe Bilis, con efecto registrado, icono y traducción. Dura 20 segundos y atrae zombies y mutantes a 48 bloques. Puede producir hasta tres intentos de refuerzos pequeños en lugares cercanos fuera de la vista del jugador. Salpica bilis al morir.
+Split Head: permanece encogida llorando. Acercarse de pie a 4 bloques, agachado a 1,25 bloques o dañarla provoca furia. Persigue exclusivamente a quien la provocó. Vuelve a calmarse al morir esa persona, alejarse más de 48 bloques o perder contacto visual durante 10 segundos. El daño ambiental sin atacante provoca una reacción breve.
+Mutant Brute: avisa con rugido y carga recta con daño y empuje. Chocar con una pared lo aturde dos segundos. Alterna con lanzamiento de roca en arco a media distancia. Tiene poses de preparación, carga, lanzamiento y aturdimiento sincronizadas.
+Zombie Brute: prepara un golpe al suelo y después daña y empuja en un radio de 4,5 bloques, con animación de brazos.
+Rotten Mutant: nube de veneno y hambre al recibir daño, con pausa de cuatro segundos entre nubes, y otra nube al morir.
+Spitter: ráfaga de tres proyectiles; los impactos dejan ácido durante seis segundos. Los charcos cercanos se fusionan. Hay un máximo de 64 zonas activas por dimensión.
+Crawler: salto ofensivo, daño, empuje y ralentización breve; pausa entre saltos.
+
+Las zonas comprueban obstáculos. Los ataques del complemento excluyen zombies aliados y jugadores creativos/espectadores. La Split Head conserva su persecución exclusiva y no cambia de objetivo por Bilis.
+
+VALIDACIÓN
+47 comprobaciones de comportamiento, 117 de poses/trayectorias, 10 de zonas y 34 de enlaces con clases y modelos del JAR original. Verificación de bytecode y estructura del paquete. Las pruebas de comportamiento usan APIs simuladas; no se ha ejecutado Minecraft para validar visuales, sonidos o equilibrio en partida.
+SHA256 del JAR: 1e1f9e132921efb37889b08d6db6834a755f4eaa208f6fd8546fb2fa64ca43a9
