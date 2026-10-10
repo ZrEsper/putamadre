@@ -1,6 +1,21 @@
 # Mods de Zomboid
 
-## Survivor Creator v17: perfiles, rasgos y OK Additions
+## Estamina v10, HUD v2 y Survivor Creator v18
+
+Sustituir las tres versiones anteriores en cliente y servidor. Mantener First Aid y las otras dependencias.
+
+- [eZWeight v10](mods/eZWeight-neoforge-1.21.1-1.8.4-stamina-v10-fitness-limbs.jar): Fitness +5% de capacidad por nivel, Sprinting +3% y Corredor +15% adicional.
+- [HUD v2](mods/zomboid-project-progression-1.21.1-1.0.2-stamina-hud-v2.jar): barras horizontales con nueva textura, porcentajes y estado, junto a la hotbar.
+- [Survivor Creator v18](mods/survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v18-stamina.jar): muestra los bonus y actualiza el rasgo Corredor; conserva perfiles y contenido de v17.
+
+Sobrecarga: daño solo al superar capacidad, cada cinco segundos a 20 TPS, dirigido a piernas y pies mediante First Aid.
+
+58 comprobaciones automatizadas aprobadas. **Pendiente probar dentro del modpack.**
+
+[Instalación, reglas y límites](stamina-patch/README.md) · [Fuentes reproducibles](stamina-patch/stamina-v10-hud-v2-survivor-v18-fuentes.zip).
+
+
+## Historial: Survivor Creator v17 (sustituido por v18)
 
 [Descargar Survivor Creator v17](mods/survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v17-profiles.jar) · [OK Additions con requisito 1.21.1 ajustado](mods/okadditions-1.1.0-neoforge-1.21.1-compat.jar). Sustituye sus versiones anteriores en cliente y servidor; conserva GeckoLib 4 para NeoForge 1.21.1.
 
