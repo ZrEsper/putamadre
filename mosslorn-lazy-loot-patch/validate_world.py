@@ -35,7 +35,7 @@ for rel in allowed:
   aa=io.BytesIO();bb=io.BytesIO();left.write(aa);right.write(bb);assert aa.getvalue()==bb.getvalue(),(rel,i,'Unexpected chunk content change')
 st=n.load(DST/'data/command_storage_mosslorn.dat');entries=st['data']['contents']['registro']['cofres'];assert len(entries)==r['registered']
 keys={(str(e['dim']),int(e['x']),int(e['y']),int(e['z'])) for e in entries};assert len(keys)==len(entries)
-with zipfile.ZipFile(next((DST/'datapacks').glob('mosslorn-expanded.8-*.zip'))) as z:
+with zipfile.ZipFile(next((DST/'datapacks').glob('mosslorn-expanded.8*.zip'))) as z:
  tables={'mosslorn:'+p.removeprefix('data/mosslorn/loot_table/').removesuffix('.json') for p in z.namelist() if p.startswith('data/mosslorn/loot_table/') and p.endswith('.json')}
  assert all(str(e['tabla']) in tables for e in entries)
 level_a=n.load(SRC/'level.dat');level_b=n.load(DST/'level.dat')

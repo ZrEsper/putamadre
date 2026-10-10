@@ -27,3 +27,7 @@ Siete casos ejecutan el bytecode del guard añadido (pendiente, generado, objeto
 ## Reconstruir los JAR
 
 `python build.py QUIETLY_V6.jar JADE_15.10.6.jar CARPETA_TOOLS`. Requiere Java 21, ECJ y ASM; los hashes de entradas/herramientas se comprueban. Las clases API de prueba no se incluyen en los JAR.
+
+## Corrección 8.1 del log
+
+Corrige los predicados NBT de `loot/scan/registrar` y `loot/validar`: `work {generado:1b}` debe ser `work{generado:1b}`, y `entrada {tabla:...}` debe ser `entrada{tabla:...}`. Si ya convertiste el mundo a loot pendiente, reemplaza el datapack anterior por `mosslorn-expanded.8.1-loot-al-abrir-fix.zip`; no vuelvas a convertir los inventarios. Los JAR siguen siendo los de la revisión pendiente. La corrección se comprobó contra los errores y líneas del log, sin ejecutar Minecraft.

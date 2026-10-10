@@ -13,7 +13,7 @@ else:
 if not (SRC/'level.dat').is_file():raise ValueError('Selecciona la carpeta que contiene level.dat')
 if (SRC/'mosslorn-v8-conversion-report.json').exists():raise ValueError('Este mundo ya fue convertido a v8. No se sustituirá su loot otra vez; selecciona la copia anterior.')
 DST=SRC.with_name(SRC.name+'-v8-loot-pendiente')
-PACK=BASE/'mosslorn-expanded.8-loot-al-abrir.zip'
+PACK=BASE/'mosslorn-expanded.8.1-loot-al-abrir-fix.zip'
 TARGETS={'minecraft:chest','minecraft:trapped_chest','minecraft:barrel'}
 import zipfile
 with zipfile.ZipFile(PACK) as z:
