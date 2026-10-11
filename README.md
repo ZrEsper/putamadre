@@ -17,9 +17,13 @@ Versión .10: sin filtro de modelos de entidades. El apuntado invierte la matriz
 
 Versión .11: el clic derecho con un melee de LR Tactical llega al ataque pesado nativo en lugar de consumirse como colocación de bloques. Los cofres y cadáveres interactuables conservan prioridad; el JAR de melee del usuario no necesita reemplazarse.
 
-## TACZ: tercera persona normal y niebla .1
+## TACZ: tercera persona normal, niebla y disparos más fuertes .2
 
-[Descargar TACZ modificado](mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.1.jar). Sustituir el TACZ del cliente, sin duplicarlo. Mira de círculo y línea al apuntar en tercera persona normal, sin Dungeons Iso. Niebla periódica y comandos `/zomboidfog prueba`, `/zomboidfog auto` y `/zomboidfog off`. [Instalación, validación y límites](tacz-third-person-patch/README.md).
+[Descargar TACZ modificado](mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.2.jar). Sustituir el TACZ del cliente, sin duplicarlo. Mira de círculo y línea al apuntar en tercera persona normal, sin Dungeons Iso. Niebla periódica y comandos `/zomboidfog prueba`, `/zomboidfog auto` y `/zomboidfog off`. [Instalación, validación y límites](tacz-third-person-patch/README.md).
+
+## Gun Durability: destrabado al disparar .1
+
+[Descargar Gun Durability modificado](mods/gundb-2.2.2-1.21.1-left-click-unjam.1.jar). Reemplaza el original en el cliente. Intentar disparar un arma trabada inicia su animación y tiempo de destrabado originales, sin reiniciarla al mantener el clic. [Instalación y validación](gundb-left-click-patch/README.md).
 
 ## Faction Friction: clanes del apocalipsis .1
 

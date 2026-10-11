@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,subprocess,tempfile,zipfile,json,hashlib,os
-r=Path(__file__).resolve().parent;base=Path(sys.argv[1]);tools=Path(sys.argv[2]);out=r.parent/'mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.1.jar';asm=os.pathsep.join(str(tools/n) for n in ['asm.jar','asm-tree.jar','asm-analysis.jar'])
+r=Path(__file__).resolve().parent;base=Path(sys.argv[1]);tools=Path(sys.argv[2]);out=r.parent/'mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.2.jar';asm=os.pathsep.join(str(tools/n) for n in ['asm.jar','asm-tree.jar','asm-analysis.jar'])
 with tempfile.TemporaryDirectory() as t:
  t=Path(t);c=t/'classes';p=t/'patch';ecj=['java','-jar',str(tools/'ecj.jar'),'-21','-proc:none','-nowarn']
  subprocess.run(ecj+['-d',str(c)]+[str(x) for x in (r/'src').rglob('*.java')],check=True)
@@ -15,7 +15,7 @@ with tempfile.TemporaryDirectory() as t:
  with zipfile.ZipFile(base) as a,zipfile.ZipFile(out) as b:
   assert b.testzip() is None
   changed=[n for n in a.namelist() if a.read(n)!=b.read(n)]
-  assert set(changed)=={'tacz.mixins.json','com/tacz/guns/client/event/RenderCrosshairEvent.class','com/tacz/guns/client/event/CameraSetupEvent.class'}
+  assert set(changed)=={'tacz.mixins.json','com/tacz/guns/client/event/RenderCrosshairEvent.class','com/tacz/guns/client/event/CameraSetupEvent.class','com/tacz/guns/client/sound/SoundPlayManager.class'}
   assert not any('dungeons_iso' in n for n in b.namelist())
  (r/'validation.json').write_text(json.dumps({'input_sha256':hashlib.sha256(base.read_bytes()).hexdigest(),'output_sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'changed_original_entries':changed,'minecraft_runtime_tested':False,'simulated_checks_passed':17},indent=2)+'\n')
  print('Verified ZIP integrity, no Dungeons Iso dependency, original content preserved')

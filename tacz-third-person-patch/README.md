@@ -1,6 +1,6 @@
 # TACZ: apuntado en tercera persona y niebla ambiental
 
-[Descargar TACZ modificado](../mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.1.jar).
+[Descargar TACZ modificado](../mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.2.jar).
 
 Sustituye el JAR TACZ hotfix-r7 del cliente; no instales dos TACZ. Conserva sus paquetes de armas y dependencias. No requiere Dungeons Iso. El identificador y versión internos siguen siendo los originales; el servidor puede conservar su hotfix-r7.
 
@@ -18,10 +18,12 @@ En automático aparece cada tres días de tiempo del mundo durante 6000 ticks (c
 
 ## Validación
 
-17 comprobaciones con APIs simuladas del HUD y calendario; verificación ASM de métodos modificados y añadidos, integridad ZIP y preservación de todas las entradas originales salvo dos clases y el listado de mixins. Prueba de renderizado, conexión al servidor, eventos de niebla y comandos pendiente en Minecraft.
+17 comprobaciones con APIs simuladas del HUD y calendario; verificación ASM de métodos modificados y añadidos, integridad ZIP y preservación de todas las entradas originales salvo tres clases y el listado de mixins. Prueba de renderizado, conexión al servidor, eventos de niebla y comandos pendiente en Minecraft.
 
 ```sh
 python -B tacz-third-person-patch/build.py /ruta/tacz-neoforge-1.21.1-1.1.8-hotfix-r7.jar /ruta/herramientas
 ```
 
 Necesita Java 21, ECJ y ASM. Los dobles de prueba no se incluyen en el JAR.
+
+Versión .2: disparos locales sin silenciador con volumen ×1.30 y distancia ×1.50; con silenciador, ×1.15 y ×1.25. Los disparos de otros jugadores recibidos por TACZ usan ×1.30 y ×1.50, conservando su sonido silenciado de origen. No amplifica recarga, inspección o golpes. El servidor puede limitar qué sonidos envía: este parche no altera esa distribución ni los radios de atracción de zombis de otros mods. El volumen final también depende de la mezcla del paquete de armas y las opciones de sonido.

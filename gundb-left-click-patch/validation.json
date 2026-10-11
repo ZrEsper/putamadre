@@ -1,0 +1,9 @@
+{
+  "input_sha256": "6b1bfce08b40448d1344e1af3247446a5ffc5177026448593f29baf7ada0d37b",
+  "output_sha256": "22351a87c2aa18269e6a44e3fdd4369790ed642a9e85e8627f25e036c835ac23",
+  "changed_original_entries": [
+    "mod/cdv/gdb/ClientEvents.class"
+  ],
+  "simulated_checks_passed": 8,
+  "minecraft_runtime_tested": false
+}
