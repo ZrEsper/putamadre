@@ -2,7 +2,7 @@
   "hordes": {
     "path": "/workspace/attachments/8295a5b0-de79-4b9b-ae89-ce930d3cf626/zomboid-hordes-1.8.3-neoforge-1.21.1-mosslorn-danger-zones.3.jar",
     "sha256": "c99e60b7d9f0cc9b1a56b147637f83f1560b3383c0b45c44383b14420234a537",
-    "output": "zomboid-hordes-1.8.3-neoforge-1.21.1-reactive-noise-dodge.4.jar"
+    "output": "zomboid-hordes-1.8.3-neoforge-1.21.1-reactive-noise-dodge.5.jar"
   },
   "weaker": {
     "path": "/workspace/attachments/ed592561-0480-4ecf-b58c-6f2d8b681ad2/weaker_day_zombie_neoforge-1.0.0-neoforge-1.21.1.jar",

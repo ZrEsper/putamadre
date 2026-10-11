@@ -47,7 +47,8 @@ public class Patch implements Opcodes {
     if(a[0].equals("hordes")&&e.getName().equals("META-INF/neoforge.mods.toml"))b=(new String(b,java.nio.charset.StandardCharsets.UTF_8)+"\n[[mixins]]\nconfig=\"zomboid-reactive.mixins.json\"\n").getBytes(java.nio.charset.StandardCharsets.UTF_8);
     out.putNextEntry(new ZipEntry(e.getName()));out.write(b);out.closeEntry();
    }
-   try(var files=Files.walk(Path.of(a[3]))){for(Path p:files.filter(Files::isRegularFile).toList()){String relative=Path.of(a[3]).relativize(p).toString();if(relative.endsWith(".class")&&!relative.startsWith("dev/"))continue;out.putNextEntry(new ZipEntry(relative));out.write(Files.readAllBytes(p));out.closeEntry();}}
+   try(var files=Files.walk(Path.of(a[3]))){for(Path p:files.filter(Files::isRegularFile).toList()){String relative=Path.of(a[3]).relativize(p).toString();if(relative.endsWith(".class")&&!relative.startsWith("dev/"))continue;
+    if(relative.endsWith("/MutantBiteMixin.class")){ClassNode mixin=new ClassNode();new ClassReader(Files.readAllBytes(p)).accept(mixin,0);if(mixin.invisibleAnnotations==null||mixin.invisibleAnnotations.stream().noneMatch(x->x.desc.equals("Lorg/spongepowered/asm/mixin/Mixin;")))throw new IllegalStateException("Mixin requires a CLASS-retained invisible @Mixin annotation");System.out.println("Mixin CLASS annotation verified");}out.putNextEntry(new ZipEntry(relative));out.write(Files.readAllBytes(p));out.closeEntry();}}
   }
  }
 }

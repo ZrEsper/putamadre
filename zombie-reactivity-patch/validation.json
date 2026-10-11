@@ -1,8 +1,8 @@
 {
   "artifacts": [
     {
-      "file": "zomboid-hordes-1.8.3-neoforge-1.21.1-reactive-noise-dodge.4.jar",
-      "sha256": "629e8ec454c9fb6628239c87c55dc0a187185df420b216ff60f24b94714162bf",
+      "file": "zomboid-hordes-1.8.3-neoforge-1.21.1-reactive-noise-dodge.5.jar",
+      "sha256": "8dca93512a1613b6dec5646e98054d680d0c5fe25e6757a644a96f63f2b5b7ec",
       "changed": [
         "dev/zomboid/hordes/IndividualIdleGoal.class",
         "dev/zomboid/hordes/ZombieCombat.class",
@@ -26,7 +26,7 @@
     },
     {
       "file": "weaker_day_zombie_neoforge-1.0.0-neoforge-1.21.1-gentle-day.jar",
-      "sha256": "5ec06648fe2aabe79b50974898140163d6aaf82e7dc5f547980fe94eac04c7de",
+      "sha256": "744132e341338a0390891320787cffdf7d80e90eb461a3ff9cdedc180ecb5c69",
       "changed": [
         "net/mcreator/weakerdayzombieneoforge/procedures/WdztoggleprocedureProcedure.class",
         "net/mcreator/weakerdayzombieneoforge/procedures/WeakerdayzombieprocedureProcedure.class"
@@ -38,7 +38,7 @@
     },
     {
       "file": "zombieawareness-neoforge-1.21.0-1.13.2-reactive-noise.jar",
-      "sha256": "2581c2190247d29d3b9c6ab4bc20fab171d0665add216a52dd9de7bd948a6e20",
+      "sha256": "1fedc405c71a76fd21f33b34a07fcc8cd6e3b16d9aceb5d895a0a6e11dfa4b29",
       "changed": [
         "com/corosus/zombieawareness/ZAUtil.class"
       ],
@@ -48,7 +48,7 @@
     },
     {
       "file": "survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v20-elusive.jar",
-      "sha256": "ea3104017d5c5d447c80bba921ca02b8cfa73fc0ff187ed875ba9e984d653197",
+      "sha256": "e72d0a07ca1b27147e453a052ca56ca74bd6c647df0a13fa3711e1a4ee8261c6",
       "changed": [],
       "added": [
         "data/survivorcreator/survivor/perks/elusive.json"

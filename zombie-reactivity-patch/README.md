@@ -8,7 +8,7 @@ Cerrar Minecraft y el servidor. **Sustituir estos cuatro mods, sin duplicar sus 
 
 | Original | Sustituto |
 |---|---|
-| Zomboid Hordes `mosslorn-danger-zones.3` | `zomboid-hordes-1.8.3-neoforge-1.21.1-reactive-noise-dodge.4.jar` |
+| Zomboid Hordes `mosslorn-danger-zones.3` | `zomboid-hordes-1.8.3-neoforge-1.21.1-reactive-noise-dodge.5.jar` |
 | Zombie Awareness 1.13.2 | `zombieawareness-neoforge-1.21.0-1.13.2-reactive-noise.jar` |
 | Survivor Creator v19 | `survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v20-elusive.jar` |
 | Weaker Day Zombie 1.0.0 | `weaker_day_zombie_neoforge-1.0.0-neoforge-1.21.1-gentle-day.jar` |
@@ -75,3 +75,7 @@ python build.py /ruta/tools
 ```
 
 `tools` debe contener `ecj.jar`, `asm.jar`, `asm-tree.jar` y `asm-analysis.jar`.
+
+## Corrección de arranque .5
+
+El latest.log enviado muestra `InvalidMixinException: MutantBiteMixin is missing an @Mixin annotation`. El stub anterior declaraba retención RUNTIME, pero Mixin busca esta anotación en RuntimeInvisibleAnnotations (retención CLASS). Se corrigió la retención y el empaquetado ahora exige la anotación invisible correcta. Se repitieron 34 casos simulados y verificación de bytecode; no se ejecutó Minecraft. Sustituir .4 por .5 en cliente y servidor. Los otros tres JAR del paquete anterior no cambian.
