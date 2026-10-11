@@ -1,0 +1,6 @@
+Zomboid Hordes v10 — construcciones de carne podrida.
+Reemplaza la v9 por zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.10-rotten-build.jar en cliente y servidor. Conserva The-Hordes admin.2 y ZombieAwareness.
+Los zombis construyen con los bloques nuevos zomboid_hordes:rotten_flesh_block y rotten_flesh_stairs, con textura propia y sonido viscoso. Ambos desaparecen sin soltar objetos a los 2400 ticks (dos minutos de juego a 20 TPS). Si el servidor va lento tarda más tiempo real; el tiempo no avanza con el mundo cerrado o pausado. Minecraft guarda los ticks programados; al descargar un chunk no se reinicia el temporizador y se procesa el vencimiento cuando vuelve a estar activo. Cambiar la forma de la escalera no reinicia su duración. No se borra un bloque distinto colocado en su lugar.
+Las construcciones de piedra de versiones anteriores permanecen. Los nuevos bloques no tienen receta ni objeto de inventario; los colocan los zombis. Se pueden poner por /setblock.
+Se mantiene la protección del objetivo de la v9. El panel sigue abriéndose con /zhorda panel.
+Validación: 8 comprobaciones de duración/desaparición/reemplazo y 29 de IA, con dobles de prueba. Bytecode: 68 clases, 598 métodos. JSON, textura e integridad del JAR revisados. No se ejecutó Minecraft: falta comprobar registro, aspecto y comportamiento con todos los mods.
