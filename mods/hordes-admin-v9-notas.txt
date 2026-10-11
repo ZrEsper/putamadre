@@ -1,0 +1,3 @@
+Zomboid Hordes v9: corrige el crash al construir o romper bloques si el objetivo desaparece. Se comprueba de nuevo el objetivo tras modificar el mundo; si es nulo, ha muerto, fue eliminado, cambió de dimensión o es jugador creativo/espectador, se detiene la navegación. Si sigue válido, se reanuda la persecución.
+Reemplaza admin-panel.8-network-fix por admin-panel.9-target-fix en cliente y servidor; no conserves ambos JAR. Conserva The-Hordes zombies-mutants-admin.2 y ZombieAwareness. El panel sigue disponible con /zhorda panel.
+Validación: 29 comprobaciones de IA, incluidas seis regresiones de pérdida de objetivo y navegación válida; verificación de bytecode e integridad del JAR. Solo cambió SiegeZombie.class respecto al JAR adjunto. No se ejecutó Minecraft.
