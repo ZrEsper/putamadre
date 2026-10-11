@@ -1,0 +1,1 @@
+package net.minecraft.world.level;public class ClipContext {public Object a,b;public ClipContext(Object start,Object end,Object block,Object fluid,Object entity){a=start;b=end;}public enum Block {COLLIDER}public enum Fluid {NONE}}

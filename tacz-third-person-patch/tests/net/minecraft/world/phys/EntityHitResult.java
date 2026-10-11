@@ -1,0 +1,1 @@
+package net.minecraft.world.phys;public class EntityHitResult {public Object entity;public Vec3 point;public EntityHitResult(Object entity,Vec3 p){this.entity=entity;point=p;}public String getType(){return "ENTITY";}public Object getEntity(){return entity;}public Vec3 getLocation(){return point;}}
