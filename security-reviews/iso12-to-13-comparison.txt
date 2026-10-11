@@ -1,0 +1,3 @@
+{'sha256_12': 'dcdca3f55d9cbe5d861cdac9d4b92fccbd6f5002ccfa9378668cbecfb5ab4ee9', 'sha256_13': 'e21ed57fe0afa3f62467bf89adf3be2838a721c9c737124f2a620c97f569f75c', 'changed_entries': ['dev/zomboid/isotacz/Bridge.class', 'dev/zomboid/isotacz/Rules$Ray.class', 'dev/zomboid/isotacz/Rules.class'], 'added_entries': [], 'removed_entries': []}
+
+Solo cambian Bridge.class y Rules.class. No se añadieron archivos ni dependencias. El parche adjunto es texto fuente para revisión, no un reemplazo ejecutable. La detección de Defender del .13 sigue sin resolverse.
