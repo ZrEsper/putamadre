@@ -1,6 +1,6 @@
-# Dungeons Iso + TACZ: cámara de supervivencia .7
+# Dungeons Iso + TACZ: cámara de supervivencia .8
 
-[Descargar el JAR](../mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.7.jar).
+[Descargar el JAR](../mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.8.jar).
 
 Con Minecraft cerrado, sustituye **solo Dungeons Iso** en `mods` del cliente. No dejes su versión anterior junto a esta. Conserva TACZ hotfix-r7, Zombie Remains Loot, Quietly y sus dependencias. El parche mantiene el identificador y versión internos originales de Dungeons Iso. No requiere cambios en el mundo ni en el servidor.
 
@@ -20,7 +20,7 @@ Con Minecraft cerrado, sustituye **solo Dungeons Iso** en `mods` del cliente. No
 
 ## Validación y límites
 
-122 comprobaciones con APIs simuladas: inicio desactivado y activación manual, geometría de la mira, ángulos, retroceso, interpolación, ocho direcciones de sprint, rotación manual, bordes extremos, protección de perspectiva, alcance, línea de visión y despacho de clics a cofres/cadáveres. Verificación ASM de todos los métodos añadidos y modificados; integridad ZIP y comparación de todas las entradas originales. Solo cambian tres clases originales y el listado de mixins. El JAR de TACZ y el de cadáveres se inspeccionaron sin modificarlos.
+128 comprobaciones con APIs simuladas: inicio desactivado y activación manual, geometría de la mira, ángulos, retroceso, interpolación, ocho direcciones de sprint, rotación manual, bordes extremos, protección de perspectiva, alcance, línea de visión y despacho de clics a cofres/cadáveres. Verificación ASM de todos los métodos añadidos y modificados; integridad ZIP y comparación de todas las entradas originales. Solo cambian tres clases originales y el listado de mixins. El JAR de TACZ y el de cadáveres se inspeccionaron sin modificarlos.
 
 **No se ha ejecutado Minecraft en este entorno.** La aplicación real de los nuevos mixins, el renderizado, los eventos con todos los mods y la experiencia en interiores necesitan una prueba en el modpack. No se ha validado la trayectoria balística completa ni la alineación bajo otros mods que alteren posteriormente la cámara/proyección.
 
@@ -39,3 +39,5 @@ Los dobles están exclusivamente en `tests/` y nunca se incluyen en el mod. `tes
 En .6, mover bruscamente el cursor acelera el giro de 90°/s hasta 360°/s y la aceleración decae suavemente. La selección omite bloques ocultos por los filtros de Dungeons Iso, conserva la cara real del bloque y permite colocar bloques con clic derecho sobre superficies no interactuables. Los obstáculos físicos desde el jugador, alcance y permisos del servidor siguen vigentes.
 
 En .7, una máscara de oscuridad anterior al HUD cubre el terreno fuera del cono de visión y detrás de obstáculos desde los ojos del jugador. Se conserva el filtro de modelos y los sonidos. La máscara usa una rejilla de 48×27 rayos, interpolación visual y actualización cada 100 ms; sus bordes son aproximados. No modifica bloques ni iluminación del mundo. Aspecto y rendimiento necesitan validación dentro del modpack.
+
+En .8, el campo de visión incluye un círculo de un bloque alrededor del jugador, además del cono frontal; los obstáculos físicos siguen bloqueando la visión. El filtro de modelos prueba cabeza, centro y pies y solo oculta el modelo si los tres están tapados, para evitar ocultar un zombi visible sobre obstáculos bajos.
