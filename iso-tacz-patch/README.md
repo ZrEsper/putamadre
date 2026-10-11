@@ -1,6 +1,6 @@
-# Dungeons Iso + TACZ: cámara de supervivencia .5
+# Dungeons Iso + TACZ: cámara de supervivencia .6
 
-[Descargar el JAR](../mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.5.jar).
+[Descargar el JAR](../mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.6.jar).
 
 Con Minecraft cerrado, sustituye **solo Dungeons Iso** en `mods` del cliente. No dejes su versión anterior junto a esta. Conserva TACZ hotfix-r7, Zombie Remains Loot, Quietly y sus dependencias. El parche mantiene el identificador y versión internos originales de Dungeons Iso. No requiere cambios en el mundo ni en el servidor.
 
@@ -20,7 +20,7 @@ Con Minecraft cerrado, sustituye **solo Dungeons Iso** en `mods` del cliente. No
 
 ## Validación y límites
 
-108 comprobaciones con APIs simuladas: inicio desactivado y activación manual, geometría de la mira, ángulos, retroceso, interpolación, ocho direcciones de sprint, rotación manual, bordes extremos, protección de perspectiva, alcance, línea de visión y despacho de clics a cofres/cadáveres. Verificación ASM de todos los métodos añadidos y modificados; integridad ZIP y comparación de todas las entradas originales. Solo cambian tres clases originales y el listado de mixins. El JAR de TACZ y el de cadáveres se inspeccionaron sin modificarlos.
+115 comprobaciones con APIs simuladas: inicio desactivado y activación manual, geometría de la mira, ángulos, retroceso, interpolación, ocho direcciones de sprint, rotación manual, bordes extremos, protección de perspectiva, alcance, línea de visión y despacho de clics a cofres/cadáveres. Verificación ASM de todos los métodos añadidos y modificados; integridad ZIP y comparación de todas las entradas originales. Solo cambian tres clases originales y el listado de mixins. El JAR de TACZ y el de cadáveres se inspeccionaron sin modificarlos.
 
 **No se ha ejecutado Minecraft en este entorno.** La aplicación real de los nuevos mixins, el renderizado, los eventos con todos los mods y la experiencia en interiores necesitan una prueba en el modpack. No se ha validado la trayectoria balística completa ni la alineación bajo otros mods que alteren posteriormente la cámara/proyección.
 
@@ -35,3 +35,5 @@ python -B iso-tacz-patch/build.py /ruta/dungeons_iso-neoforge-3.6.2+1.21.1.jar /
 ```
 
 Los dobles están exclusivamente en `tests/` y nunca se incluyen en el mod. `tests/make_doubles.py` regenera los archivos auxiliares de prueba. `validation.json` registra los SHA-256 de entrada y salida.
+
+En .6, mover bruscamente el cursor acelera el giro de 90°/s hasta 360°/s y la aceleración decae suavemente. La selección omite bloques ocultos por los filtros de Dungeons Iso, conserva la cara real del bloque y permite colocar bloques con clic derecho sobre superficies no interactuables. Los obstáculos físicos desde el jugador, alcance y permisos del servidor siguen vigentes.

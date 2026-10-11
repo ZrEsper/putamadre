@@ -1,6 +1,9 @@
 from pathlib import Path
 r=Path(__file__).parent
 sources={
+'com.cleannrooster.dungeons_iso.api.cullers.room.TerrainCulling':'public class TerrainCulling {public static java.util.Set<Object> hidden=new java.util.HashSet<>();public static boolean shouldRemove(Object state,int x,int y,int z){return hidden.contains(new net.minecraft.core.BlockPos(x,y,z));}}',
+'com.cleannrooster.dungeons_iso.compat.SodiumCompat':'public class SodiumCompat {public static java.util.List<Object> blockCullersShapes=new java.util.ArrayList<>();}',
+
 'com.mojang.blaze3d.platform.InputConstants':'public class InputConstants {public static boolean control;public static boolean isKeyDown(long window,int key){return control&&(key==341||key==345);}}',
 'com.tacz.guns.api.client.gameplay.IClientPlayerGunOperator':'public class IClientPlayerGunOperator {public static Object fromLocalPlayer(Object player){return player;}}',
 'net.minecraft.core.BlockPos':'public class BlockPos extends dev.zomboid.isotacz.Checks.Pos {public BlockPos(int x,int y,int z){super(x,y,z);}}',
