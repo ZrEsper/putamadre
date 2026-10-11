@@ -1,6 +1,7 @@
 from pathlib import Path
 r=Path(__file__).parent
 sources={
+'me.xjqsh.lrtactical.api.item.IMeleeWeapon':'public class IMeleeWeapon {public static Object of(Object stack){return "melee".equals(stack)?stack:null;}}',
 'com.cleannrooster.dungeons_iso.api.CustomShapeTypes':'public enum CustomShapeTypes {CULLED}',
 'com.cleannrooster.dungeons_iso.api.RaycastContextCull':'public class RaycastContextCull extends net.minecraft.world.level.ClipContext {public RaycastContextCull(Object a,Object b,CustomShapeTypes cull,Block block,Fluid fluid,Object entity){super(a,b,block,fluid,entity);}}',
 
