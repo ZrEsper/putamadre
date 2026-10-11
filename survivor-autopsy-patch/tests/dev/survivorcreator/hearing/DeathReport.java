@@ -1,0 +1,1 @@
+package dev.survivorcreator.hearing;public class DeathReport {public long ticks(){return 1000;}public String causeKey(){return "death.attack.generic";}public static String duration(long ticks){return "0d 00:00:50";}}
