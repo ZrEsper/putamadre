@@ -8,6 +8,7 @@ public final class Bridge {
  static boolean isoActive(){try{return R.yes(R.get(R.type("com.cleannrooster.dungeons_iso.mod.Mod"),"enabled"));}catch(IllegalStateException e){if(e.getCause() instanceof ClassNotFoundException)return false;throw e;}}
  static boolean aiming(Object p){return p!=null&&R.yes(R.call(R.call(R.type("com.tacz.guns.api.client.gameplay.IClientPlayerGunOperator"),"fromLocalPlayer",p),"isAim"));}
  static void warn(String n,Throwable e){if(warned.add(n))R.warn(n,e);}
+ public static void finalColor(Object camera){Weather.finalColor(camera);}
  public static void bareHand(Object callback){BareHand.prepare();}
  public static void captureProjection(Object callback){try{projection=R.make("org.joml.Matrix4f",R.call(callback,"getReturnValue"));}catch(Throwable e){warn("projection",e);}}
  public static boolean drawEvent(Object event){try{if(isoActive())return false;if(!thirdPerson()||!R.call(event,"getName").equals(R.get(R.type("net.neoforged.neoforge.client.gui.VanillaGuiLayers"),"CROSSHAIR")))return false;Object mc=mc(),player=R.get(mc,"player");if(!aiming(player))return false;R.call(event,"setCanceled",true);Object graphics=R.call(event,"getGuiGraphics");R.call(R.type("com.tacz.guns.client.event.RenderCrosshairEvent"),"renderHitMarker",graphics,R.call(mc,"getWindow"));render(graphics);return true;}catch(Throwable e){warn("third person aim",e);return false;}}

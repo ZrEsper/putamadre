@@ -17,9 +17,9 @@ Versión .10: sin filtro de modelos de entidades. El apuntado invierte la matriz
 
 Versión .11: el clic derecho con un melee de LR Tactical llega al ataque pesado nativo en lugar de consumirse como colocación de bloques. Los cofres y cadáveres interactuables conservan prioridad; el JAR de melee del usuario no necesita reemplazarse.
 
-## TACZ: tercera persona normal, niebla densa, puñetazos y disparos más fuertes .5
+## TACZ: tercera persona normal, niebla densa, puñetazos y disparos más fuertes .6
 
-[Descargar TACZ modificado](mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.5.jar). Sustituir el TACZ del cliente, sin duplicarlo. Mira de círculo y línea al apuntar en tercera persona normal, sin Dungeons Iso. Niebla periódica y comandos `/zomboidfog prueba`, `/zomboidfog auto` y `/zomboidfog off`. [Instalación, validación y límites](tacz-third-person-patch/README.md).
+[Descargar TACZ modificado](mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.6.jar). Sustituir el TACZ del cliente, sin duplicarlo. Mira de círculo y línea al apuntar en tercera persona normal, sin Dungeons Iso. Niebla periódica y comandos `/zomboidfog prueba`, `/zomboidfog auto` y `/zomboidfog off`. [Instalación, validación y límites](tacz-third-person-patch/README.md).
 
 ## Gun Durability: destrabado al disparar .1
 
@@ -29,7 +29,7 @@ Versión .13: desplazamiento acumulado del recoil limitado a ±4° verticales y 
 
 ## Niebla densa y control local de acumulación
 
-TACZ .3: niebla con entrada de 60 segundos, fase fuerte aleatoria de 2–10 minutos y salida de 60 segundos. Visibilidad aproximada de 12 bloques, compensando distancia de cámara. `/zomboidfog prueba` reproduce el episodio completo. 36 comprobaciones simuladas aprobadas.
+TACZ .3: niebla con entrada de 60 segundos, fase fuerte aleatoria de 2–10 minutos y salida de 60 segundos. Visibilidad aproximada de 12 bloques, compensando distancia de cámara. `/zomboidfog prueba` reproduce el episodio completo. 40 comprobaciones simuladas aprobadas.
 
 [Hordes .6 con límite local](mods/zomboid-hordes-1.8.3-neoforge-1.21.1-reactive-density.6.jar): frena nuevos zombis cuando ya hay 24 cerca; no elimina los existentes ni evita que migren. Sustituir el addon en cliente y servidor. [Detalles y límites](zombie-density-patch/README.md). 13 comprobaciones aprobadas con APIs simuladas. Pendiente probar en Minecraft.
 
@@ -40,6 +40,8 @@ Versión .4: la cámara isométrica sobrescribía la distancia de niebla en su h
 [Descargar LesRaisins modificado](mods/LesRaisins-Tactical-Equipements-1.21.1-0.4.3-zomboid-isometric-melee.2.jar). Reemplazar el LesRaisins del cliente; conservar el addon de melee, eZWeight y TACZ. Añade lectura del clic físico para el golpe normal en isométrica y dirección del cursor para ataques normales/pesados. Doce comprobaciones simuladas aprobadas; incluye corrección de dirección al calcular los objetivos del golpe retrasado. Pendiente verificar animaciones y daño en Minecraft. [Detalles y límites](lr-isometric-melee-patch/README.md).
 
 Versión .5: con mano principal vacía y cámara isométrica, antes de `Minecraft.startAttack` restaura el objetivo de entidad bajo el cursor si está vivo, dentro del alcance vanilla y visible desde los ojos del jugador. Esto evita que la selección posterior de bloques del parche isométrico deje `hitResult` apuntando al suelo en lugar del zombi. No envía ataques extra ni cancela el ataque; conserva estamina, cooldown y validación del servidor. Ocho pruebas de restauración, paredes, alcance, objeto equipado, GUI, cámara normal y objetivo muerto/no entidad aprobadas con APIs simuladas. El rechazo por agotamiento de estamina sigue siendo posible y no se ha eliminado. Pendiente verificar el reporte en Minecraft.
+
+Versión .6: además de las distancias, restaura el color de la niebla después de `CullingBackdrop` de Dungeons Iso, que podía llevar los colores a negro al ocultar techos. Actualiza los campos de FogRenderer, el color del shader y el fondo recortado al mismo tono atmosférico. Un segundo hook de color se ejecuta al final de setupColor; el hook de distancia reaplica también el color. Conserva agua/lava, modo apagado y cámara normal. Añade `/zomboidfog estado` para mostrar intensidad, cámara isométrica detectada y modo. Cuatro regresiones con APIs simuladas reproducen el color negro y comprueban su restauración en las tres salidas; el aspecto y el orden real con BetterFog/Sodium requieren validación en Minecraft.
 
 ## Faction Friction: clanes del apocalipsis .1
 

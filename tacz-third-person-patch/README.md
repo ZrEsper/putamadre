@@ -1,6 +1,6 @@
 # TACZ: apuntado en tercera persona y niebla ambiental
 
-[Descargar TACZ modificado](../mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.5.jar).
+[Descargar TACZ modificado](../mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.6.jar).
 
 Sustituye el JAR TACZ hotfix-r7 del cliente; no instales dos TACZ. Conserva sus paquetes de armas y dependencias. No requiere Dungeons Iso. El identificador y versión internos siguen siendo los originales; el servidor puede conservar su hotfix-r7.
 
@@ -20,7 +20,7 @@ En la fase fuerte, el final de la niebla queda a unos 12 bloques, añadiendo la 
 
 ## Validación
 
-36 comprobaciones con APIs simuladas del HUD y calendario; verificación ASM de métodos modificados y añadidos, integridad ZIP y preservación de todas las entradas originales salvo tres clases y el listado de mixins. Prueba de renderizado, conexión al servidor, eventos de niebla y comandos pendiente en Minecraft.
+40 comprobaciones con APIs simuladas del HUD y calendario; verificación ASM de métodos modificados y añadidos, integridad ZIP y preservación de todas las entradas originales salvo tres clases y el listado de mixins. Prueba de renderizado, conexión al servidor, eventos de niebla y comandos pendiente en Minecraft.
 
 ```sh
 python -B tacz-third-person-patch/build.py /ruta/tacz-neoforge-1.21.1-1.1.8-hotfix-r7.jar /ruta/herramientas
@@ -33,3 +33,5 @@ Versión .2: disparos locales sin silenciador con volumen ×1.30 y distancia ×1
 Versión .4: la cámara isométrica sobrescribía la distancia de niebla en su hook final de FogRenderer. Un hook de compatibilidad posterior, con prioridad 500, vuelve a aplicar el episodio atmosférico después del ajuste isométrico. Conserva la distancia compensada, transiciones y duración. Se probaron la escritura final de distancia y las exclusiones de agua/vista normal con APIs simuladas; la aplicación y orden de mixins del modpack siguen pendientes de validar en Minecraft.
 
 Versión .5: con mano principal vacía y cámara isométrica, antes de `Minecraft.startAttack` restaura el objetivo de entidad bajo el cursor si está vivo, dentro del alcance vanilla y visible desde los ojos del jugador. Esto evita que la selección posterior de bloques del parche isométrico deje `hitResult` apuntando al suelo en lugar del zombi. No envía ataques extra ni cancela el ataque; conserva estamina, cooldown y validación del servidor. Ocho pruebas de restauración, paredes, alcance, objeto equipado, GUI, cámara normal y objetivo muerto/no entidad aprobadas con APIs simuladas. El rechazo por agotamiento de estamina sigue siendo posible y no se ha eliminado. Pendiente verificar el reporte en Minecraft.
+
+Versión .6: además de las distancias, restaura el color de la niebla después de `CullingBackdrop` de Dungeons Iso, que podía llevar los colores a negro al ocultar techos. Actualiza los campos de FogRenderer, el color del shader y el fondo recortado al mismo tono atmosférico. Un segundo hook de color se ejecuta al final de setupColor; el hook de distancia reaplica también el color. Conserva agua/lava, modo apagado y cámara normal. Añade `/zomboidfog estado` para mostrar intensidad, cámara isométrica detectada y modo. Cuatro regresiones con APIs simuladas reproducen el color negro y comprueban su restauración en las tres salidas; el aspecto y el orden real con BetterFog/Sodium requieren validación en Minecraft.
