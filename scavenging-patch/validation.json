@@ -1,8 +1,8 @@
 {
   "artifacts": [
     {
-      "file": "quietly-1_0_0-cooldown-v8-scavenging-rarity.jar",
-      "sha256": "b92f377e4f20140830e4956a252f69c3e0c71dce79522e29af9cef7179fe4f5f",
+      "file": "quietly-1_0_0-cooldown-v9-search-bar-expanded.jar",
+      "sha256": "71d227c3ca17c09a112fce9ab818d375a6af6cf2fe25938b14b2154be9bc30fd",
       "changed": [
         "cn/kafei/QuietlyCommon.class",
         "cn/kafei/SilentOpenManager.class",
@@ -18,12 +18,13 @@
         "dev/zomboid/scavenging/Rules.class",
         "dev/zomboid/scavenging/Search$Job.class",
         "dev/zomboid/scavenging/Search$Target.class",
-        "dev/zomboid/scavenging/Search.class"
+        "dev/zomboid/scavenging/Search.class",
+        "dev/zomboid/scavenging/SearchHud.class"
       ]
     },
     {
-      "file": "survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v21-scavenging.jar",
-      "sha256": "913b61892e4e8eb15fbb979dd3a5257ff672dfa6eae3b62f296d99b753d9b4c3",
+      "file": "survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v22-scavenging-boosts.jar",
+      "sha256": "b137fe1c26e4a81eae17120c6ff1694fff41b9b2d3c41d39f3758c660dee83e2",
       "changed": [
         "dev/survivorcreator/skills/Skills.class",
         "dev/survivorcreator/skills/ActiveSkills.class",
@@ -71,8 +72,8 @@
     }
   ],
   "minecraft_runtime_tested": false,
-  "rule_cases": 21,
-  "simulated_behavior_cases": 32,
+  "rule_cases": 36,
+  "simulated_behavior_cases": 39,
   "all_new_classes_asm_verified": true,
   "original_mixins_unchanged": true
 }

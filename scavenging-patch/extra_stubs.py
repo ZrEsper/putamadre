@@ -2,6 +2,7 @@ from pathlib import Path
 import sys
 r=Path(sys.argv[1])
 sources={
+ 'net.neoforged.neoforge.client.event.RenderGuiEvent':'public class RenderGuiEvent {public static class Post {}}',
  'net.neoforged.neoforge.event.entity.player.PlayerEvent':'public class PlayerEvent {public static class PlayerLoggedOutEvent {}}',
  'net.minecraft.world.level.block.ChestBlock':'public class ChestBlock extends Block {public static Object getContainer(Object block,Object state,Object level,Object pos,boolean force){return null;}}',
  'dev.survivorcreator.skills.Skills':'public class Skills {public static double awarded;public static final Object SKILL=new Object();public static Object get(String id){return SKILL;}public static int level(Object p,Object skill){return 0;}public static void addXp(Object p,Object skill,double amount){awarded+=amount;}}',

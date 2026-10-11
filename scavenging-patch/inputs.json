@@ -2,12 +2,12 @@
   "quietly": {
     "path": "/workspace/attachments/e16da456-1681-4346-ab6f-7a7f2e6c393d/quietly-1_0_0-cooldown-v7-pending-loot.jar",
     "sha256": "3425057d4170b98dd4aff70e91a851650efb5fc7303dba668c74eb7d94f951bf",
-    "output": "quietly-1_0_0-cooldown-v8-scavenging-rarity.jar"
+    "output": "quietly-1_0_0-cooldown-v9-search-bar-expanded.jar"
   },
   "survivor": {
     "path": "/workspace/attachments/56ed2a8b-84bb-458d-a7aa-b5fd286ad166/survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v20-elusive.jar",
     "sha256": "ea3104017d5c5d447c80bba921ca02b8cfa73fc0ff187ed875ba9e984d653197",
-    "output": "survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v21-scavenging.jar"
+    "output": "survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v22-scavenging-boosts.jar"
   },
   "survival": {
     "path": "/workspace/attachments/0d3e26bf-48a2-4b0f-a1e1-2e293a8ed423/zomboid-survival-1.21.1-1.0.3-water-power.jar",

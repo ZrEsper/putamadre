@@ -44,4 +44,4 @@ with tempfile.TemporaryDirectory(prefix='scavenging-') as root:
  run('java','-jar',tools/'ecj.jar','-21','-proc:none','-nowarn','-cp',classes,'-d',classes,*sorted((r/'tests').rglob('*.java')))
  run('java','-Xverify:all','-cp',classes,'dev.zomboid.scavenging.Checks')
  run('java','-Xverify:all','-cp',classes,'dev.zomboid.scavenging.BehaviorChecks')
- (r/'validation.json').write_text(json.dumps({'artifacts':results,'minecraft_runtime_tested':False,'rule_cases':21,'simulated_behavior_cases':32,'all_new_classes_asm_verified':True,'original_mixins_unchanged':True},indent=2)+'\n')
+ (r/'validation.json').write_text(json.dumps({'artifacts':results,'minecraft_runtime_tested':False,'rule_cases':36,'simulated_behavior_cases':39,'all_new_classes_asm_verified':True,'original_mixins_unchanged':True},indent=2)+'\n')
