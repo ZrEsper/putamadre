@@ -1,0 +1,1 @@
+package org.spongepowered.asm.mixin.injection;@java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy.RUNTIME)public @interface Inject {String[] method();At[] at();boolean cancellable() default false;}

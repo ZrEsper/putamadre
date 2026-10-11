@@ -1,0 +1,1 @@
+package dev.zomboid.hordes;import dev.zomboid.reactive.*;public class ZombieIndividual {public static Fakes.Tag profile(Object e){Fakes.Actor mob=(Fakes.Actor)e;Reactive.profile(mob,mob.tag);return mob.tag;}public static boolean supported(Object e){return e instanceof Fakes.Zmob;}}

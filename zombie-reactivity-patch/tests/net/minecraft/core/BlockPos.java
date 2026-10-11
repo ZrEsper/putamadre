@@ -1,0 +1,1 @@
+package net.minecraft.core;public class BlockPos {public static dev.zomboid.reactive.Fakes.Pos containing(double x,double y,double z){return new dev.zomboid.reactive.Fakes.Pos(x,y,z);}public static dev.zomboid.reactive.Fakes.Pos of(long value){return new dev.zomboid.reactive.Fakes.Pos((int)(value>>32),0,(int)value);}}

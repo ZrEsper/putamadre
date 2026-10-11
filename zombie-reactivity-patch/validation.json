@@ -1,0 +1,62 @@
+{
+  "artifacts": [
+    {
+      "file": "zomboid-hordes-1.8.3-neoforge-1.21.1-reactive-noise-dodge.4.jar",
+      "sha256": "629e8ec454c9fb6628239c87c55dc0a187185df420b216ff60f24b94714162bf",
+      "changed": [
+        "dev/zomboid/hordes/IndividualIdleGoal.class",
+        "dev/zomboid/hordes/ZombieCombat.class",
+        "dev/zomboid/hordes/ZombieIndividual.class",
+        "dev/zomboid/hordes/mixin/ZombiePaceMixin.class",
+        "META-INF/neoforge.mods.toml",
+        "dev/zomboid/hordes/EventAttraction.class",
+        "dev/zomboid/awareness/Awareness.class"
+      ],
+      "added": [
+        "zomboid-reactive.mixins.json",
+        "dev/zomboid/reactive/JumpEvents.class",
+        "dev/zomboid/reactive/R.class",
+        "dev/zomboid/reactive/Reactive$Traits.class",
+        "dev/zomboid/reactive/Reactive.class",
+        "dev/zomboid/reactive/Reactive$Step.class",
+        "dev/zomboid/reactive/Reactive$Gate.class",
+        "dev/zomboid/reactive/Rules.class",
+        "dev/zomboid/reactive/mixin/MutantBiteMixin.class"
+      ]
+    },
+    {
+      "file": "weaker_day_zombie_neoforge-1.0.0-neoforge-1.21.1-gentle-day.jar",
+      "sha256": "5ec06648fe2aabe79b50974898140163d6aaf82e7dc5f547980fe94eac04c7de",
+      "changed": [
+        "net/mcreator/weakerdayzombieneoforge/procedures/WdztoggleprocedureProcedure.class",
+        "net/mcreator/weakerdayzombieneoforge/procedures/WeakerdayzombieprocedureProcedure.class"
+      ],
+      "added": [
+        "dev/zomboid/daylight/R.class",
+        "dev/zomboid/daylight/Daylight.class"
+      ]
+    },
+    {
+      "file": "zombieawareness-neoforge-1.21.0-1.13.2-reactive-noise.jar",
+      "sha256": "2581c2190247d29d3b9c6ab4bc20fab171d0665add216a52dd9de7bd948a6e20",
+      "changed": [
+        "com/corosus/zombieawareness/ZAUtil.class"
+      ],
+      "added": [
+        "dev/zomboid/zabridge/Bridge.class"
+      ]
+    },
+    {
+      "file": "survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v20-elusive.jar",
+      "sha256": "ea3104017d5c5d447c80bba921ca02b8cfa73fc0ff187ed875ba9e984d653197",
+      "changed": [],
+      "added": [
+        "data/survivorcreator/survivor/perks/elusive.json"
+      ]
+    }
+  ],
+  "rule_cases": 11,
+  "simulated_entity_behavior_cases": 23,
+  "unrelated_entries_preserved": true,
+  "minecraft_runtime_tested": false
+}

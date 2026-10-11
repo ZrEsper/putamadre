@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.event.entity.living; public class LivingEvent {public net.minecraft.world.entity.LivingEntity getEntity(){return null;}public static class LivingJumpEvent extends LivingEvent {}}

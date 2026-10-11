@@ -1,0 +1,22 @@
+{
+  "hordes": {
+    "path": "/workspace/attachments/8295a5b0-de79-4b9b-ae89-ce930d3cf626/zomboid-hordes-1.8.3-neoforge-1.21.1-mosslorn-danger-zones.3.jar",
+    "sha256": "c99e60b7d9f0cc9b1a56b147637f83f1560b3383c0b45c44383b14420234a537",
+    "output": "zomboid-hordes-1.8.3-neoforge-1.21.1-reactive-noise-dodge.4.jar"
+  },
+  "weaker": {
+    "path": "/workspace/attachments/ed592561-0480-4ecf-b58c-6f2d8b681ad2/weaker_day_zombie_neoforge-1.0.0-neoforge-1.21.1.jar",
+    "sha256": "fd0893fa6268c0a6231cd781b29bc6292e1f77dd9adf7b42ee94c453481a41cf",
+    "output": "weaker_day_zombie_neoforge-1.0.0-neoforge-1.21.1-gentle-day.jar"
+  },
+  "awareness": {
+    "path": "/workspace/attachments/096aaa74-4ffa-4166-86ea-008cf9772319/zombieawareness-neoforge-1.21.0-1.13.2.jar",
+    "sha256": "8152f9fa4c0c3cdb6541ac46d852902617e80ccd121cfa43412c0b56045b40ae",
+    "output": "zombieawareness-neoforge-1.21.0-1.13.2-reactive-noise.jar"
+  },
+  "survivor": {
+    "path": "/workspace/attachments/8d06fe2d-8f5b-44b6-837d-bcfe1526faf5/survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v19-spawn-map-intro.jar",
+    "sha256": "d8325d7510abd6818eddac1b2f5aca9658004eb92ab7d714382e6897f608e45d",
+    "output": "survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v20-elusive.jar"
+  }
+}
