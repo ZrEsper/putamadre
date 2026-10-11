@@ -1,0 +1,1 @@
+package dev.survivorcreator.skills;public class Skills {public static final Object FITNESS=new Object();public static int level(Object p,Object skill){try{return p.getClass().getField("fitness").getInt(p);}catch(Exception e){return 0;}}}

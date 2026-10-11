@@ -1,0 +1,17 @@
+{
+  "base_sha256": "bcf0948c7f1d532255cda163d63ef36f8b26c4204db9c2f2ac1923f2efa207dd",
+  "output_sha256": "3176281031fa84034384d478397a0b91e479a146c7c22418701afa7eb7a3ce70",
+  "changed": [
+    "ichttt/mods/firstaid/client/StatusEffectLayer.class",
+    "ichttt/mods/firstaid/common/damagesystem/PlayerDamageModel.class",
+    "ichttt/mods/firstaid/common/util/CommonUtils.class",
+    "ichttt/mods/firstaid/survival/ClinicalHooks.class",
+    "ichttt/mods/firstaid/compat/lrtactical/TreatmentV33.class",
+    "assets/firstaid/lang/en_us.json",
+    "assets/firstaid/lang/es_es.json"
+  ],
+  "minecraft_runtime_tested": false,
+  "simulated_health_and_penalty_cases": 47,
+  "simulated_revival_cases": 14,
+  "original_mixins_unchanged": true
+}
