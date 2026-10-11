@@ -1,0 +1,27 @@
+{
+  "base_sha256": "b137fe1c26e4a81eae17120c6ff1694fff41b9b2d3c41d39f3758c660dee83e2",
+  "output_sha256": "466be12325f0803c30106cbf602f24e580340ba15c03653fdebd5f47d9a6d4b3",
+  "zones": 9,
+  "interiors_per_zone": [
+    192,
+    192,
+    192,
+    192,
+    19,
+    11,
+    192,
+    192,
+    192
+  ],
+  "modified_or_added": [
+    "dev/survivorcreator/spawn/Flashlight.class",
+    "dev/survivorcreator/spawn/SpawnScreen.class",
+    "dev/survivorcreator/spawn/Spawns.class",
+    "dev/survivorcreator/spawn/Zones.class",
+    "survivor-spawn-homes.csv"
+  ],
+  "unrelated_entries_preserved": true,
+  "minecraft_runtime_tested": false,
+  "simulated_cases": 38,
+  "bytecode_methods_checked": 35
+}

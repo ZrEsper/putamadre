@@ -1,0 +1,1 @@
+package net.flashlight.network;public class FlashlightModVariables {public static final java.util.function.Supplier<Object> PLAYER_VARIABLES=()->"flashlight-test";public static class Data {public double BatteryFlashlight;public boolean synced;public void markSyncDirty(){synced=true;}}}

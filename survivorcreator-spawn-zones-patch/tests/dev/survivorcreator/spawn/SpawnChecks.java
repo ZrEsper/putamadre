@@ -1,0 +1,29 @@
+package dev.survivorcreator.spawn;
+import java.util.*;import net.minecraft.core.BlockPos;import net.minecraft.resources.ResourceLocation;import dev.survivorcreator.net.Net;import net.minecraft.world.level.Level;
+public class SpawnChecks{
+ public static class Character{public boolean completed(){return false;}}
+ public static class Fluid{public boolean isEmpty(){return true;}}
+ public static class Shape{boolean empty;Shape(boolean e){empty=e;}public boolean isEmpty(){return empty;}}
+ public static class State{boolean air;State(boolean a){air=a;}public boolean isAir(){return air;}public Fluid getFluidState(){return new Fluid();}public Shape getCollisionShape(Object l,BlockPos p){return new Shape(air);}}
+ public static class World{boolean unsafe;int y=66;public Object dimension(){return Level.OVERWORLD;}public void getChunk(int x,int z){}public State getBlockState(BlockPos p){return new State(p.y()>=y);}public List<?> getEntitiesOfClass(Class<?> c,Object box){return unsafe?List.of(new Object()):List.of();}}
+ public static class Player{public World level=new World();public Character getData(Object key){return new Character();}public World serverLevel(){return level;}}
+ public static class Inventory {final net.minecraft.world.item.ItemStack[] slots=new net.minecraft.world.item.ItemStack[3];Inventory(){Arrays.fill(slots,new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.AIR,0));}public int getContainerSize(){return slots.length;}public net.minecraft.world.item.ItemStack getItem(int slot){return slots[slot];}public boolean add(net.minecraft.world.item.ItemStack stack){for(int i=0;i<slots.length;i++)if(slots[i].getCount()==0){slots[i]=stack.copy();stack.shrink(stack.getCount());return true;}return false;}}
+ public static class Equipped {final Inventory inventory=new Inventory();net.minecraft.world.item.ItemStack off=new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.AIR,0),dropped;final net.flashlight.network.FlashlightModVariables.Data data=new net.flashlight.network.FlashlightModVariables.Data();public Inventory getInventory(){return inventory;}public net.minecraft.world.item.ItemStack getOffhandItem(){return off;}public void setItemSlot(net.minecraft.world.entity.EquipmentSlot slot,net.minecraft.world.item.ItemStack value){off=value;}public void drop(net.minecraft.world.item.ItemStack stack,boolean random){dropped=stack.copy();}public Object getData(Object key){return data;}}
+ static int cases;static void check(boolean b){cases++;if(!b)throw new AssertionError("case "+cases);}
+ public static void main(String[] args){
+  Player p=new Player();int[] h={-342,66,-284,-342,66,-282};check(Spawns.safe(p.level,h));p.level.unsafe=true;check(!Spawns.safe(p.level,h));p.level.unsafe=false;p.level.y=67;check(!Spawns.safe(p.level,h));
+  for(int zone=0;zone<9;zone++)check(!Spawns.homes(zone).isEmpty());
+  ResourceLocation medical=new ResourceLocation("survivorcreator:runner"),marker=new ResourceLocation("survivorcreator:spawn_0");
+  p.level.y=66;Net.Confirm c=new Net.Confirm(Optional.empty(),List.of(medical,marker));Net.Confirm filtered=Spawns.filter(p,c);check(filtered!=null&&filtered.perks().equals(List.of(medical)));check(Spawns.pending.containsKey(p));
+  check(Spawns.filter(p,new Net.Confirm(Optional.empty(),List.of(new ResourceLocation("survivorcreator:spawn_99"))))==null);
+  check(Spawns.filter(p,new Net.Confirm(Optional.empty(),List.of(marker,marker)))==null);
+  p.level.unsafe=true;check(Spawns.filter(p,c)==null);p.level.unsafe=false;
+  Net.Confirm plain=new Net.Confirm(Optional.empty(),List.of(medical));check(Spawns.filter(p,plain)==plain);
+  check(Spawns.filter(p,new Net.Confirm(Optional.empty(),List.of(new ResourceLocation("survivorcreator:spawn_9"))))==null);
+  SpawnScreen screen=new SpawnScreen(null,c);screen.height=240;screen.width=427;screen.keyPressed(57,0,0);check(screen.selected==8&&screen.first==6);screen.mouseScrolled(0,0,0,1);check(screen.selected==7);screen.choose(0);check(screen.first==0);screen.mouseClicked(250,48,0);check(screen.selected==0);
+  for(int zone=4;zone<9;zone++){java.util.Set<Integer> heights=new java.util.HashSet<>();for(int[] home:Spawns.homes(zone))heights.add(home[1]);check(heights.size()>1);}
+  for(int zone=4;zone<9;zone++){p.level.y=Spawns.homes(zone).get(0)[1];Net.Confirm selectedZone=Spawns.filter(p,new Net.Confirm(Optional.empty(),List.of(medical,new ResourceLocation(Spawns.PREFIX+zone))));check(selectedZone!=null&&selectedZone.perks().equals(List.of(medical))&&Spawns.pending.containsKey(p));}
+  var registry=net.minecraft.core.registries.BuiltInRegistries.items;var on=new net.minecraft.world.item.Item();var off=new net.minecraft.world.item.Item();var other=new net.minecraft.world.item.Item();registry.put(ResourceLocation.parse("flashlight:flashlight_on"),on);registry.put(ResourceLocation.parse("flashlight:flashlight_off"),off);registry.put(ResourceLocation.parse("minecraft:shield"),other);Equipped equipped=new Equipped();equipped.inventory.slots[0]=new net.minecraft.world.item.ItemStack(off,1);equipped.off=new net.minecraft.world.item.ItemStack(other,1);Flashlight.equip(equipped);check(equipped.off.getItem()==on&&equipped.off.getCount()==1);check(equipped.inventory.slots[0].getCount()==0);check(equipped.inventory.slots[1].getItem()==other);check(equipped.data.BatteryFlashlight==100&&equipped.data.synced);registry.remove(ResourceLocation.parse("flashlight:flashlight_on"));Equipped missing=new Equipped();missing.inventory.slots[0]=new net.minecraft.world.item.ItemStack(off,1);Flashlight.equip(missing);check(missing.off.getCount()==0&&missing.inventory.slots[0].getCount()==1);
+  System.out.println("PASS "+cases+" actual helper checks: unsafe hostiles, blocked feet, home catalogs, marker stripping, invalid/duplicate zones and empty safe selection");
+ }
+}
