@@ -1,0 +1,26 @@
+Optimización v11 — Minecraft NeoForge 1.21.1
+
+INSTALACIÓN
+1. mods/: sustituye Zomboid Hordes admin-panel.9 o .10 por admin-panel.11-horde-optimization. Instala el mismo JAR en cliente y servidor. Conserva The-Hordes admin.2 y ZombieAwareness. Incluye las construcciones de carne podrida de v10 y la protección de objetivo de v9.
+2. resourcepacks/: reemplaza MutantsZombies-Rotten-Gore-v7.zip por v8-emf-fix.zip y actívalo donde estaba el anterior. Corrige 21 expresiones age*.08 a age*0.08. No cambia modelos ni texturas.
+3. datapacks/ del mundo: reemplaza Mosslorn v7 por v8-scan-performance; /reload. No instales ambos a la vez. Conserva el registro persistente y los ajustes de cantidad. Si usas otro datapack de loot personalizado, no lo reemplaces sin comparar.
+
+OPTIMIZACIONES
+IA adicional de percepción: zombis sin objetivo comprueban cada 16 ticks, con objetivo lejano cada 8 y con objetivo a 24 bloques o menos cada 4. Esto permite hasta 0.8 segundos para adquirir un objetivo visual sin objetivo previo. No desactiva la IA nativa, los ataques ni los mutantes; las reacciones directas a ruido/daño mantienen sus rutas originales.
+Las comprobaciones de construcción se reparten por ID entre cuatro ticks. Los modificadores de visión/velocidad/daño se revisan cada segundo o inmediatamente cuando cambia la revisión del panel. No se repite setTarget si el objetivo sigue siendo el mismo.
+Las rutas de construcción/rotura evitan recalcularse antes de 8 ticks para el mismo objetivo; una ruta activa puede reutilizarse hasta 20 ticks si el objetivo no se ha movido dos bloques. Un objetivo nuevo se procesa inmediatamente. Se conserva la validación de objetivo nulo/muerto/eliminado/otra dimensión. No limita la navegación nativa de otros mods.
+LootTable.fill: antes de repartir, el excedente de stacks se recorta aleatoriamente a las ranuras libres, para evitar el intento de sobrellenado. El exceso ya se descartaba al no caber. No se borran objetos existentes ni se cambia el loot que cabe. La integración es opcional (require=0) para no impedir el inicio si otro mod sustituye ese punto; necesita comprobarse en el modpack. No se ha atribuido el aviso a un mod concreto.
+Escáner del datapack: 128 posiciones/tick por defecto; cuatro veces menos verificaciones por tick y cuatro veces más tiempo para completar un chunk que a 512. No fuerza chunks ni abandona los cofres/barriles del registro.
+/function mosslorn:loot/scan/rendimiento/ligero — 64 posiciones/tick
+/function mosslorn:loot/scan/rendimiento/equilibrado — 128
+/function mosslorn:loot/scan/rendimiento/rapido — 512
+
+VALIDACIÓN Y LÍMITES
+84 comprobaciones: 18 rendimiento/capacidad, 35 IA/construcción/pérdida de objetivo, 13 ajustes, 10 panel y 8 descomposición. Simulación: en 500 zombis sin objetivo durante 160 ticks, 20000 comprobaciones adicionales pasan a 5000. Esto no significa 75% más FPS/TPS ni demuestra el cuello de botella del juego. Bytecode, JSON e integridad revisados. No se ejecutó Minecraft ni se midió rendimiento real.
+El log solo acredita dos avisos de retraso (3160ms y 2465ms), anteriores al aviso de horda. No permite afirmar cuánto lag causa la horda.
+
+PENDIENTE PARA ARREGLAR EL RESTO
+Handbook invoca VanillaRegistries.createLookup y falla con referencias a fabulous-furnished:spicewood_forest y maple_forest. Se necesitan los JAR de Handbook y Fabulous Furnished para revisar la integración; no se agregaron biomas ficticios.
+EMF detecta creación repetida de modelos selfexpression:modelcustom_model y luckyswardrobe:body_model/pants_model/shoes_model. Se necesitan Self Expression y el mod que aporta LuckysWardrobe.
+ETF rechaza minecraft:optifine/random/entity/zombie/zombie.properties por suffix 0. El archivo pertenece a otro paquete activo, no al Mutants Rotten Gore disponible. Se necesitan Blues-Better-Zombies-PZ-L4D2-Gore.2-emf-fix.zip y Ashen_16x_Zombies (1).zip para identificarlo y conservar sus reglas.
+Spark ya está instalado: durante una horda ejecuta /spark profiler start --timeout 60. Envíame el enlace del informe al terminar. Servirá para distinguir búsquedas de rutas, colisiones, ZombieAwareness, NPC, loot y otras tareas del servidor. Si el TPS es bueno pero caen los FPS, hace falta analizar también el cliente.
