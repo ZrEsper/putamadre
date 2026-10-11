@@ -1,0 +1,2 @@
+package net.minecraft.world.phys;
+public class Vec3 {public final double x,y,z;public Vec3(double x,double y,double z){this.x=x;this.y=y;this.z=z;}public double distanceTo(Vec3 p){return Math.sqrt((x-p.x)*(x-p.x)+(y-p.y)*(y-p.y)+(z-p.z)*(z-p.z));}public Vec3 add(Vec3 p){return new Vec3(x+p.x,y+p.y,z+p.z);}public Vec3 subtract(Vec3 p){return new Vec3(x-p.x,y-p.y,z-p.z);}public Vec3 scale(double a){return new Vec3(x*a,y*a,z*a);}public Vec3 normalize(){return scale(1/distanceTo(new Vec3(0,0,0)));}}

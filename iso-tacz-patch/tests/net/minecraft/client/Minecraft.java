@@ -1,0 +1,2 @@
+package net.minecraft.client;
+public class Minecraft {public static final Minecraft INSTANCE=new Minecraft();public Object player,level,screen,gameMode,hitResult,crosshairPickEntity,input;public final Options options=new Options();public static Minecraft getInstance(){return INSTANCE;}public Window getWindow(){return new Window();}public static class Options {public boolean hideGui;}public static class Window {public long getWindow(){return 1;}}}

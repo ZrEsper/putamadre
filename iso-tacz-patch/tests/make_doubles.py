@@ -1,0 +1,16 @@
+from pathlib import Path
+r=Path(__file__).parent
+sources={
+'net.minecraft.world.phys.Vec3':'''public class Vec3 {public final double x,y,z;public Vec3(double x,double y,double z){this.x=x;this.y=y;this.z=z;}public double distanceTo(Vec3 p){return Math.sqrt((x-p.x)*(x-p.x)+(y-p.y)*(y-p.y)+(z-p.z)*(z-p.z));}public Vec3 add(Vec3 p){return new Vec3(x+p.x,y+p.y,z+p.z);}public Vec3 subtract(Vec3 p){return new Vec3(x-p.x,y-p.y,z-p.z);}public Vec3 scale(double a){return new Vec3(x*a,y*a,z*a);}public Vec3 normalize(){return scale(1/distanceTo(new Vec3(0,0,0)));}}''',
+'net.minecraft.world.level.ClipContext':'''public class ClipContext {public final Object a,b;public ClipContext(Object a,Object b,Block block,Fluid fluid,Object entity){this.a=a;this.b=b;}public enum Block {COLLIDER}public enum Fluid {NONE}}''',
+'net.minecraft.world.InteractionHand':'public enum InteractionHand {MAIN_HAND,OFF_HAND}',
+'net.minecraft.client.Minecraft':'''public class Minecraft {public static final Minecraft INSTANCE=new Minecraft();public Object player,level,screen,gameMode,hitResult,crosshairPickEntity,input;public final Options options=new Options();public static Minecraft getInstance(){return INSTANCE;}public Window getWindow(){return new Window();}public static class Options {public boolean hideGui;}public static class Window {public long getWindow(){return 1;}}}''',
+'com.cleannrooster.dungeons_iso.mod.Mod':'''public class Mod {public static boolean enabled=true;public static float yaw=45,pitch=45,livingPitch,livingYaw,livingHeadYaw,livingBodyYaw;public static Object crosshairTarget;public static float getZoom(){return 3;}}''',
+'com.cleannrooster.dungeons_iso.ClientInit':'''public class ClientInit {public static Key rotateClockwise=new Key(),rotateCounterClockwise=new Key(),isoBinding=new Key(),moveCameraBinding=new Key();public static class Key {public boolean down;public boolean isDown(){return down;}}}''',
+'com.tacz.guns.api.item.IGun':'public class IGun {public static Object getIGunOrNull(Object item){return Boolean.TRUE.equals(item)?item:null;}}',
+'net.minecraft.core.registries.BuiltInRegistries':'''public class BuiltInRegistries {public static final Registry BLOCK=new Registry();public static class Registry {public Object getKey(Object block){return block;}}}''',
+'com.cleannrooster.dungeons_iso.util.InteractionTargeting':'''public class InteractionTargeting {public static boolean isInteractable(Object level,Object pos){return ((dev.zomboid.isotacz.Checks.World)level).container;}}''',
+'de.maxhenkel.corpse.entities.CorpseEntity':'public class CorpseEntity extends dev.zomboid.isotacz.Checks.Entity {}',
+}
+for name,body in sources.items():
+ p=r.joinpath(*name.split('.')).with_suffix('.java');p.parent.mkdir(parents=True,exist_ok=True);p.write_text('package '+name.rsplit('.',1)[0]+';\n'+body+'\n')

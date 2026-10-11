@@ -1,5 +1,13 @@
 # Mods de Zomboid
 
+## Dungeons Iso + TACZ: cámara isométrica .1
+
+[Descargar Dungeons Iso modificado](mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.1.jar). Sustituir solo Dungeons Iso en el cliente; mantener TACZ hotfix-r7 y los mods de cadáveres/búsqueda.
+
+Mira sobre la línea de tiro, cámara que busca espacio libre y sprint en ocho direcciones sin cambiar la mirada. Clic derecho abre cofres y cadáveres al alcance; si no hay un interactuable, permite apuntar con TACZ. No necesita O.
+
+58 comprobaciones con APIs simuladas y verificación de bytecode aprobadas. **Pendiente probar dentro de Minecraft.** [Instalación, comportamiento y límites](iso-tacz-patch/README.md).
+
 ## Faction Friction: clanes del apocalipsis .1
 
 [Descargar Zomboid Clans .1](faction-clans-patch/faction-clans.1-mod.zip). Sustituir FactionFriction en **cliente y servidor**, sin duplicados. Tecla **K**: cuaderno de clanes con páginas de identidad, conflicto, compañeros y depósito.
