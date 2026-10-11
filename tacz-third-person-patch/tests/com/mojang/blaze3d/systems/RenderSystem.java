@@ -1,0 +1,1 @@
+package com.mojang.blaze3d.systems;public class RenderSystem {public static float start=100,end=200;public static float getShaderFogStart(){return start;}public static float getShaderFogEnd(){return end;}public static void setShaderFogStart(float v){start=v;}public static void setShaderFogEnd(float v){end=v;}}

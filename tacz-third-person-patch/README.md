@@ -1,6 +1,6 @@
 # TACZ: apuntado en tercera persona y niebla ambiental
 
-[Descargar TACZ modificado](../mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.3.jar).
+[Descargar TACZ modificado](../mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.4.jar).
 
 Sustituye el JAR TACZ hotfix-r7 del cliente; no instales dos TACZ. Conserva sus paquetes de armas y dependencias. No requiere Dungeons Iso. El identificador y versión internos siguen siendo los originales; el servidor puede conservar su hotfix-r7.
 
@@ -20,7 +20,7 @@ En la fase fuerte, el final de la niebla queda a unos 12 bloques, añadiendo la 
 
 ## Validación
 
-25 comprobaciones con APIs simuladas del HUD y calendario; verificación ASM de métodos modificados y añadidos, integridad ZIP y preservación de todas las entradas originales salvo tres clases y el listado de mixins. Prueba de renderizado, conexión al servidor, eventos de niebla y comandos pendiente en Minecraft.
+28 comprobaciones con APIs simuladas del HUD y calendario; verificación ASM de métodos modificados y añadidos, integridad ZIP y preservación de todas las entradas originales salvo tres clases y el listado de mixins. Prueba de renderizado, conexión al servidor, eventos de niebla y comandos pendiente en Minecraft.
 
 ```sh
 python -B tacz-third-person-patch/build.py /ruta/tacz-neoforge-1.21.1-1.1.8-hotfix-r7.jar /ruta/herramientas
@@ -29,3 +29,5 @@ python -B tacz-third-person-patch/build.py /ruta/tacz-neoforge-1.21.1-1.1.8-hotf
 Necesita Java 21, ECJ y ASM. Los dobles de prueba no se incluyen en el JAR.
 
 Versión .2: disparos locales sin silenciador con volumen ×1.30 y distancia ×1.50; con silenciador, ×1.15 y ×1.25. Los disparos de otros jugadores recibidos por TACZ usan ×1.30 y ×1.50, conservando su sonido silenciado de origen. No amplifica recarga, inspección o golpes. El servidor puede limitar qué sonidos envía: este parche no altera esa distribución ni los radios de atracción de zombis de otros mods. El volumen final también depende de la mezcla del paquete de armas y las opciones de sonido.
+
+Versión .4: la cámara isométrica sobrescribía la distancia de niebla en su hook final de FogRenderer. Un hook de compatibilidad posterior, con prioridad 500, vuelve a aplicar el episodio atmosférico después del ajuste isométrico. Conserva la distancia compensada, transiciones y duración. Se probaron la escritura final de distancia y las exclusiones de agua/vista normal con APIs simuladas; la aplicación y orden de mixins del modpack siguen pendientes de validar en Minecraft.

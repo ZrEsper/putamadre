@@ -17,9 +17,9 @@ Versión .10: sin filtro de modelos de entidades. El apuntado invierte la matriz
 
 Versión .11: el clic derecho con un melee de LR Tactical llega al ataque pesado nativo en lugar de consumirse como colocación de bloques. Los cofres y cadáveres interactuables conservan prioridad; el JAR de melee del usuario no necesita reemplazarse.
 
-## TACZ: tercera persona normal, niebla densa y disparos más fuertes .3
+## TACZ: tercera persona normal, niebla densa y disparos más fuertes .4
 
-[Descargar TACZ modificado](mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.3.jar). Sustituir el TACZ del cliente, sin duplicarlo. Mira de círculo y línea al apuntar en tercera persona normal, sin Dungeons Iso. Niebla periódica y comandos `/zomboidfog prueba`, `/zomboidfog auto` y `/zomboidfog off`. [Instalación, validación y límites](tacz-third-person-patch/README.md).
+[Descargar TACZ modificado](mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.4.jar). Sustituir el TACZ del cliente, sin duplicarlo. Mira de círculo y línea al apuntar en tercera persona normal, sin Dungeons Iso. Niebla periódica y comandos `/zomboidfog prueba`, `/zomboidfog auto` y `/zomboidfog off`. [Instalación, validación y límites](tacz-third-person-patch/README.md).
 
 ## Gun Durability: destrabado al disparar .1
 
@@ -29,9 +29,11 @@ Versión .13: desplazamiento acumulado del recoil limitado a ±4° verticales y 
 
 ## Niebla densa y control local de acumulación
 
-TACZ .3: niebla con entrada de 60 segundos, fase fuerte aleatoria de 2–10 minutos y salida de 60 segundos. Visibilidad aproximada de 12 bloques, compensando distancia de cámara. `/zomboidfog prueba` reproduce el episodio completo. 25 comprobaciones simuladas aprobadas.
+TACZ .3: niebla con entrada de 60 segundos, fase fuerte aleatoria de 2–10 minutos y salida de 60 segundos. Visibilidad aproximada de 12 bloques, compensando distancia de cámara. `/zomboidfog prueba` reproduce el episodio completo. 28 comprobaciones simuladas aprobadas.
 
 [Hordes .6 con límite local](mods/zomboid-hordes-1.8.3-neoforge-1.21.1-reactive-density.6.jar): frena nuevos zombis cuando ya hay 24 cerca; no elimina los existentes ni evita que migren. Sustituir el addon en cliente y servidor. [Detalles y límites](zombie-density-patch/README.md). 13 comprobaciones aprobadas con APIs simuladas. Pendiente probar en Minecraft.
+
+Versión .4: la cámara isométrica sobrescribía la distancia de niebla en su hook final de FogRenderer. Un hook de compatibilidad posterior, con prioridad 500, vuelve a aplicar el episodio atmosférico después del ajuste isométrico. Conserva la distancia compensada, transiciones y duración. Se probaron la escritura final de distancia y las exclusiones de agua/vista normal con APIs simuladas; la aplicación y orden de mixins del modpack siguen pendientes de validar en Minecraft.
 
 ## Faction Friction: clanes del apocalipsis .1
 
