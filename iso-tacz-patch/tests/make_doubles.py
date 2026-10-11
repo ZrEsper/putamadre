@@ -1,6 +1,7 @@
 from pathlib import Path
 r=Path(__file__).parent
 sources={
+'com.mojang.blaze3d.platform.InputConstants':'public class InputConstants {public static boolean control;public static boolean isKeyDown(long window,int key){return control&&(key==341||key==345);}}',
 'com.tacz.guns.api.client.gameplay.IClientPlayerGunOperator':'public class IClientPlayerGunOperator {public static Object fromLocalPlayer(Object player){return player;}}',
 'net.minecraft.core.BlockPos':'public class BlockPos extends dev.zomboid.isotacz.Checks.Pos {public BlockPos(int x,int y,int z){super(x,y,z);}}',
 'net.minecraft.core.Direction':'public enum Direction {UP}',
