@@ -1,0 +1,1 @@
+package me.xjqsh.lrtactical.client.input;public class AttackKeys {public static final Key NORMAL_ATTACK=new Key();public static class Key {public String modifier="NONE";public Key getKey(){return this;}public String getKeyModifier(){return modifier;}public String getType(){return "MOUSE";}public int getValue(){return 0;}}}

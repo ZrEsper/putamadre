@@ -1,0 +1,9 @@
+{
+  "input_sha256": "a6f9c1ca4c2d3845c313a3d19a763f2019de69c18b751ebd623d6f6b13d5a42e",
+  "output_sha256": "2b2d17a930c2783964d2c0013a710b4ece6f64070ce037fd658c7e10d4caa370",
+  "changed_original_entries": [
+    "me/xjqsh/lrtactical/client/input/AttackKeys.class"
+  ],
+  "simulated_checks_passed": 8,
+  "minecraft_runtime_tested": false
+}
