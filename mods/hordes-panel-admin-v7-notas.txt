@@ -1,0 +1,44 @@
+Panel de administrador — Minecraft 1.21.1 NeoForge
+
+INSTALACIÓN
+Cliente y servidor deben reemplazar estos DOS JAR:
+- zomboid-hordes-1.8.3-neoforge-1.21.1-reactive-noise-siege.6.jar → zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.7.jar
+- The-Hordes-1.21.1-1.6.3f-zombies-mutants-only.1.jar → The-Hordes-1.21.1-1.6.3f-zombies-mutants-admin.2.jar
+Conserva zombieawareness-neoforge-1.21.0-1.13.2-reactive-noise.jar. No dejes las versiones anteriores duplicadas. Reinicia Minecraft/servidor después de instalar.
+
+PANEL
+/zhorda panel — abre la tabla. Requiere operador con nivel 2, o trucos habilitados en un mundo individual.
+Editar es solo un borrador. Aplicar valida y guarda todos los valores juntos en el servidor, después devuelve el estado guardado. Cerrar o Escape descarta cambios pendientes. Los campos tienen explicaciones al pasar el ratón.
+No borra ni reemplaza entidades existentes. Se mantienen los controles por comando y los comandos previos de /zhorda.
+
+OPCIONES
+agresivos: -1 original; 0..100 porcentaje con perfil agresivo adicional. Los seleccionados tienen mayor velocidad y daño, adquisición adicional de objetivos y memoria de persecución. Elegir 0 quita este perfil extra, no vuelve pacíficos a los zombis ni elimina las personalidades anteriores. La selección usa un valor individual guardado; cambiar el porcentaje también recalcula las entidades cargadas. Conserva las estadísticas propias de los mutantes.
+frecuencia: 0.1..10 multiplicador. 2 significa reposiciones y oleadas más rápidas; 0.5 más lentas. Ajusta el nuevo cooldown de reposición por chunk, intervalos de aparición/ruido/oleadas de Zomboid Hordes y el intervalo de spawn de las oleadas nativas de The Hordes. No modifica los días del calendario que disparan una horda. Los cooldowns ya programados finalizan a su hora; los siguientes usan el nuevo factor.
+densidad: 0.1..10 multiplicador de población objetivo por chunk de Zomboid Hordes. Conserva los multiplicadores por zona y resta los zombis ya presentes. No modifica las cantidades configuradas por las oleadas nativas de The Hordes. Para forzar una evaluación de reposición utiliza el comando existente /zhorda poblar.
+mutantes: 0..100 porcentaje de selección en Zomboid Hordes y en las tablas solo-zombis de The Hordes. La distribución entre los siete mutantes se conserva; tipos ausentes devuelven su peso a zombis normales. La selección aún depende de los límites y condiciones de aparición. Una tabla de oleada que ya fue construida puede conservar los pesos anteriores hasta la siguiente tabla/oleada; no convierte zombis existentes en mutantes.
+limite_mutantes: 1..128 límite de mutantes cercanos en el selector de población de Zomboid Hordes (radio horizontal 128 bloques). No es un límite universal: las oleadas nativas de The Hordes mantienen sus propios límites. Si subes el porcentaje de mutantes pero dejas este límite en 2, su aumento puede verse restringido.
+vision: -1 conserva la visión individual original; 0 desactiva la detección visual nueva; 1..128 alcance uniforme antes de las reducciones por oscuridad (55%) y sigilo (60%). Aumenta también el rango de búsqueda del objetivo. Oír ruidos, recordar un objetivo o reaccionar a un ataque no equivale a verlo y puede conservar una persecución aunque haya poca visión.
+asediadores: -1 utiliza config/zomboid-hordes-siege.properties; 0..1 porcentaje para nuevas asignaciones. Predeterminado heredado 0.005% (1/20.000). No elimina Asediadores existentes ni vuelve a sortear zombis ya examinados.
+romper_todos: true/false permite a todos los zombis y mutantes compatibles romper obstáculos mientras persiguen un objetivo. false restaura este comportamiento exclusivo de Asediadores, según su configuración anterior. Se protegen inventarios/entidades de bloque, líquidos, bedrock y bloques de dureza superior a 30.
+construir_todos: true/false permite a zombis y mutantes compatibles construir escaleras, soportes y puentes. false conserva la construcción anterior de los Asediadores. Máximo de construcción por individuo según config/zomboid-hordes-siege.properties (128 por defecto).
+Rotura y construcción respetan mobGriefing. Si /gamerule mobGriefing false, el panel no puede habilitarlas. Las modificaciones de bloques son reales y permanecen en el mundo. No hay integración específica con reclamaciones de terreno.
+
+COMANDOS
+/zhorda ajustar — consulta todos los valores.
+/zhorda ajustar mutantes 15
+/zhorda ajustar limite_mutantes 12
+/zhorda ajustar agresivos 30
+/zhorda ajustar frecuencia 2
+/zhorda ajustar densidad 2
+/zhorda ajustar vision 64
+/zhorda ajustar asediadores 0.02
+/zhorda ajustar romper_todos true
+/zhorda ajustar construir_todos false
+/zhorda ajustar restablecer — restaura los controles originales; no elimina entidades ni construcciones.
+
+GUARDADO Y PERMISOS
+Los ajustes se guardan en <mundo>/serverconfig/zomboid-hordes-controls.properties y se cargan al iniciar ese mundo. Mundos distintos mantienen ajustes separados. Aplicar usa una escritura atómica; un valor inválido no aplica parcialmente el resto. El servidor verifica los permisos también al recibir el paquete de aplicación. Si otro administrador cambió los valores, la solicitud anterior se rechaza y el panel se actualiza.
+
+VALIDACIÓN
+76 comprobaciones con dobles de prueba: borrador sin efectos, aplicación única, permisos del servidor, validación atómica, confirmación, conflictos de revisión, persistencia, separación por mundo, proporciones de mutantes, frecuencia/densidad, visión/rango de búsqueda, modificadores reversibles, rotura de zombis normales y mutantes, y regresiones del Asediador. Verificación de bytecode e integridad de ambos JAR. Los recursos, sonidos, configuraciones, habilidades especiales y tablas originales permanecen, salvo los puntos de integración descritos.
+No se ejecutó Minecraft; falta comprobar visualmente el panel, la conexión cliente/servidor y su compatibilidad con el conjunto completo de mods. Los dobles comprueban lógica y contratos usados, no sustituyen esa prueba en juego.
