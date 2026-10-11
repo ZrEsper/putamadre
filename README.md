@@ -1,12 +1,12 @@
 # Mods de Zomboid
 
-## Dungeons Iso + TACZ: cámara isométrica .1
+## Dungeons Iso + TACZ: cámara isométrica .2
 
-[Descargar Dungeons Iso modificado](mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.1.jar). Sustituir solo Dungeons Iso en el cliente; mantener TACZ hotfix-r7 y los mods de cadáveres/búsqueda.
+[Descargar Dungeons Iso modificado](mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.2.jar). Sustituir solo Dungeons Iso en el cliente; mantener TACZ hotfix-r7 y los mods de cadáveres/búsqueda.
 
-Mira sobre la línea de tiro, cámara que busca espacio libre y sprint en ocho direcciones sin cambiar la mirada. Clic derecho abre cofres y cadáveres al alcance; si no hay un interactuable, permite apuntar con TACZ. No necesita O.
+El modo empieza desactivado al entrar/cambiar de mundo y se activa con su tecla asignada (F4 por defecto). Mira sobre la línea de tiro, cámara que busca espacio libre y sprint en ocho direcciones sin cambiar la mirada. Clic derecho abre cofres y cadáveres al alcance; si no hay un interactuable, permite apuntar con TACZ. No necesita O.
 
-58 comprobaciones con APIs simuladas y verificación de bytecode aprobadas. **Pendiente probar dentro de Minecraft.** [Instalación, comportamiento y límites](iso-tacz-patch/README.md).
+69 comprobaciones con APIs simuladas y verificación de bytecode aprobadas. **Pendiente probar dentro de Minecraft.** [Instalación, comportamiento y límites](iso-tacz-patch/README.md).
 
 ## Faction Friction: clanes del apocalipsis .1
 
@@ -44,7 +44,7 @@ Sustituir las tres versiones anteriores en cliente y servidor. Mantener First Ai
 
 Sobrecarga: daño solo al superar capacidad, cada cinco segundos a 20 TPS, dirigido a piernas y pies mediante First Aid.
 
-58 comprobaciones automatizadas aprobadas. **Pendiente probar dentro del modpack.**
+69 comprobaciones automatizadas aprobadas. **Pendiente probar dentro del modpack.**
 
 [Instalación, reglas y límites](stamina-patch/README.md) · [Fuentes reproducibles](stamina-patch/stamina-v10-hud-v2-survivor-v18-fuentes.zip).
 
