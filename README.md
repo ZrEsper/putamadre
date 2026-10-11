@@ -35,9 +35,9 @@ TACZ .3: niebla con entrada de 60 segundos, fase fuerte aleatoria de 2–10 minu
 
 Versión .4: la cámara isométrica sobrescribía la distancia de niebla en su hook final de FogRenderer. Un hook de compatibilidad posterior, con prioridad 500, vuelve a aplicar el episodio atmosférico después del ajuste isométrico. Conserva la distancia compensada, transiciones y duración. Se probaron la escritura final de distancia y las exclusiones de agua/vista normal con APIs simuladas; la aplicación y orden de mixins del modpack siguen pendientes de validar en Minecraft.
 
-## LesRaisins Tactical: melee isométrico .1
+## LesRaisins Tactical: melee isométrico .2
 
-[Descargar LesRaisins modificado](mods/LesRaisins-Tactical-Equipements-1.21.1-0.4.3-zomboid-isometric-melee.1.jar). Reemplazar el LesRaisins del cliente; conservar el addon de melee, eZWeight y TACZ. Añade lectura del clic físico para el golpe normal en isométrica y dirección del cursor para ataques normales/pesados. Ocho comprobaciones simuladas aprobadas; pendiente verificar animaciones y daño en Minecraft. [Detalles y límites](lr-isometric-melee-patch/README.md).
+[Descargar LesRaisins modificado](mods/LesRaisins-Tactical-Equipements-1.21.1-0.4.3-zomboid-isometric-melee.2.jar). Reemplazar el LesRaisins del cliente; conservar el addon de melee, eZWeight y TACZ. Añade lectura del clic físico para el golpe normal en isométrica y dirección del cursor para ataques normales/pesados. Doce comprobaciones simuladas aprobadas; incluye corrección de dirección al calcular los objetivos del golpe retrasado. Pendiente verificar animaciones y daño en Minecraft. [Detalles y límites](lr-isometric-melee-patch/README.md).
 
 ## Faction Friction: clanes del apocalipsis .1
 

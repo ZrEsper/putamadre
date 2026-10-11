@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,subprocess,tempfile,zipfile,json,hashlib,os
-r=Path(__file__).resolve().parent;base=Path(sys.argv[1]);tools=Path(sys.argv[2]);asm=os.pathsep.join(str(tools/n) for n in ['asm.jar','asm-tree.jar','asm-analysis.jar']);out=r.parent/'mods/LesRaisins-Tactical-Equipements-1.21.1-0.4.3-zomboid-isometric-melee.1.jar'
+r=Path(__file__).resolve().parent;base=Path(sys.argv[1]);tools=Path(sys.argv[2]);asm=os.pathsep.join(str(tools/n) for n in ['asm.jar','asm-tree.jar','asm-analysis.jar']);out=r.parent/'mods/LesRaisins-Tactical-Equipements-1.21.1-0.4.3-zomboid-isometric-melee.2.jar'
 with tempfile.TemporaryDirectory() as t:
  t=Path(t);c=t/'classes';p=t/'patch';ecj=['java','-jar',str(tools/'ecj.jar'),'-21','-proc:none','-nowarn']
  subprocess.run(ecj+['-d',str(c)]+[str(x) for x in (r/'src').rglob('*.java')],check=True)
@@ -11,5 +11,5 @@ with tempfile.TemporaryDirectory() as t:
  with zipfile.ZipFile(base) as a,zipfile.ZipFile(out) as b:
   assert b.testzip() is None
   changed=[n for n in a.namelist() if a.read(n)!=b.read(n)]
-  assert changed==['me/xjqsh/lrtactical/client/input/AttackKeys.class'],changed
- (r/'validation.json').write_text(json.dumps({'input_sha256':hashlib.sha256(base.read_bytes()).hexdigest(),'output_sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'changed_original_entries':changed,'simulated_checks_passed':8,'minecraft_runtime_tested':False},indent=2)+'\n')
+  assert set(changed)=={'me/xjqsh/lrtactical/client/input/AttackKeys.class','me/xjqsh/lrtactical/capability/CombatProperties$DelayAttack.class'},changed
+ (r/'validation.json').write_text(json.dumps({'input_sha256':hashlib.sha256(base.read_bytes()).hexdigest(),'output_sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'changed_original_entries':changed,'simulated_checks_passed':12,'minecraft_runtime_tested':False},indent=2)+'\n')
