@@ -1,6 +1,6 @@
-# Dungeons Iso + TACZ: cámara de supervivencia .8
+# Dungeons Iso + TACZ: cámara de supervivencia .9
 
-[Descargar el JAR](../mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.8.jar).
+[Descargar el JAR](../mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.9.jar).
 
 Con Minecraft cerrado, sustituye **solo Dungeons Iso** en `mods` del cliente. No dejes su versión anterior junto a esta. Conserva TACZ hotfix-r7, Zombie Remains Loot, Quietly y sus dependencias. El parche mantiene el identificador y versión internos originales de Dungeons Iso. No requiere cambios en el mundo ni en el servidor.
 
@@ -16,11 +16,11 @@ Con Minecraft cerrado, sustituye **solo Dungeons Iso** en `mods` del cliente. No
 - Desactiva la ampliación de la mira telescópica sobre el mundo mientras está activa la cámara isométrica, para que apuntar no produzca un zoom brusco. La primera persona conserva la ampliación normal.
 
 - La selección para romper bloques incluye vegetación colgante y cadáveres de bloque, sin exigir que puedan abrirse. Mantiene las herramientas, tiempos de rotura y permisos normales; con un arma TACZ equipada se conserva el disparo.
-- Oculta los modelos de entidades fuera de un cono horizontal de 140° orientado con la cámara o detrás de paredes desde los ojos del jugador. El jugador local permanece visible. Girar la cámara revela las entidades en esa dirección; su IA y sus sonidos no cambian. Esto no oscurece el terreno ni modifica los marcadores de otros mods.
+- Oculta los modelos de entidades fuera de un cono horizontal de 140° orientado con la cámara o detrás de paredes desde los ojos del jugador. El jugador local permanece visible. Girar la cámara revela las entidades en esa dirección; su IA y sus sonidos no cambian. El terreno se muestra sin máscara negra; no modifica los marcadores de otros mods.
 
 ## Validación y límites
 
-128 comprobaciones con APIs simuladas: inicio desactivado y activación manual, geometría de la mira, ángulos, retroceso, interpolación, ocho direcciones de sprint, rotación manual, bordes extremos, protección de perspectiva, alcance, línea de visión y despacho de clics a cofres/cadáveres. Verificación ASM de todos los métodos añadidos y modificados; integridad ZIP y comparación de todas las entradas originales. Solo cambian tres clases originales y el listado de mixins. El JAR de TACZ y el de cadáveres se inspeccionaron sin modificarlos.
+121 comprobaciones con APIs simuladas: inicio desactivado y activación manual, geometría de la mira, ángulos, retroceso, interpolación, ocho direcciones de sprint, rotación manual, bordes extremos, protección de perspectiva, alcance, línea de visión y despacho de clics a cofres/cadáveres. Verificación ASM de todos los métodos añadidos y modificados; integridad ZIP y comparación de todas las entradas originales. Solo cambian tres clases originales y el listado de mixins. El JAR de TACZ y el de cadáveres se inspeccionaron sin modificarlos.
 
 **No se ha ejecutado Minecraft en este entorno.** La aplicación real de los nuevos mixins, el renderizado, los eventos con todos los mods y la experiencia en interiores necesitan una prueba en el modpack. No se ha validado la trayectoria balística completa ni la alineación bajo otros mods que alteren posteriormente la cámara/proyección.
 
@@ -38,6 +38,6 @@ Los dobles están exclusivamente en `tests/` y nunca se incluyen en el mod. `tes
 
 En .6, mover bruscamente el cursor acelera el giro de 90°/s hasta 360°/s y la aceleración decae suavemente. La selección omite bloques ocultos por los filtros de Dungeons Iso, conserva la cara real del bloque y permite colocar bloques con clic derecho sobre superficies no interactuables. Los obstáculos físicos desde el jugador, alcance y permisos del servidor siguen vigentes.
 
-En .7, una máscara de oscuridad anterior al HUD cubre el terreno fuera del cono de visión y detrás de obstáculos desde los ojos del jugador. Se conserva el filtro de modelos y los sonidos. La máscara usa una rejilla de 48×27 rayos, interpolación visual y actualización cada 100 ms; sus bordes son aproximados. No modifica bloques ni iluminación del mundo. Aspecto y rendimiento necesitan validación dentro del modpack.
 
-En .8, el campo de visión incluye un círculo de un bloque alrededor del jugador, además del cono frontal; los obstáculos físicos siguen bloqueando la visión. El filtro de modelos prueba cabeza, centro y pies y solo oculta el modelo si los tres están tapados, para evitar ocultar un zombi visible sobre obstáculos bajos.
+
+Versión .9: retirada por completo la máscara negra del terreno y su cálculo de rayos. Se mantienen giro acelerado en bordes, CTRL para desplazar/recentrar, selección de construcción e interacción y filtro de modelos de entidades.

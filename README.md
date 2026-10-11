@@ -1,18 +1,18 @@
 # Mods de Zomboid
 
-## Dungeons Iso + TACZ: cámara isométrica .8
+## Dungeons Iso + TACZ: cámara isométrica .9
 
-[Descargar Dungeons Iso modificado](mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.8.jar). Sustituir solo Dungeons Iso en el cliente; mantener TACZ hotfix-r7 y los mods de cadáveres/búsqueda.
+[Descargar Dungeons Iso modificado](mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.9.jar). Sustituir solo Dungeons Iso en el cliente; mantener TACZ hotfix-r7 y los mods de cadáveres/búsqueda.
 
 Empieza desactivado y se activa con F4 o su tecla asignada. El cursor en los últimos cinco píxeles laterales gira la cámara; mantener CTRL cambia a desplazamiento de la vista por los bordes. Soltar CTRL devuelve la vista al centro. Selección de bloques no interactuables para romper bayas colgantes y restos, respetando alcance y paredes. Los modelos de entidades fuera de un cono de 140° orientado con la cámara, o tapados por paredes desde los ojos del jugador, quedan ocultos en modo isométrico; no se altera su sonido ni su IA. Mantener clic derecho apunta sin pasar a primera persona; clic izquierdo dispara conservando la mira. Selección independiente de cadáveres y cofres para interactuar con clic derecho. Sprint en ocho direcciones.
 
-128 comprobaciones con APIs simuladas y verificación de bytecode aprobadas. **Pendiente probar dentro de Minecraft.** [Instalación, comportamiento y límites](iso-tacz-patch/README.md).
+121 comprobaciones con APIs simuladas y verificación de bytecode aprobadas. **Pendiente probar dentro de Minecraft.** [Instalación, comportamiento y límites](iso-tacz-patch/README.md).
 
 En .6, mover bruscamente el cursor acelera el giro de 90°/s hasta 360°/s y la aceleración decae suavemente. La selección omite bloques ocultos por los filtros de Dungeons Iso, conserva la cara real del bloque y permite colocar bloques con clic derecho sobre superficies no interactuables. Los obstáculos físicos desde el jugador, alcance y permisos del servidor siguen vigentes.
 
-En .7, una máscara de oscuridad anterior al HUD cubre el terreno fuera del cono de visión y detrás de obstáculos desde los ojos del jugador. Se conserva el filtro de modelos y los sonidos. La máscara usa una rejilla de 48×27 rayos, interpolación visual y actualización cada 100 ms; sus bordes son aproximados. No modifica bloques ni iluminación del mundo. Aspecto y rendimiento necesitan validación dentro del modpack.
 
-En .8, el campo de visión incluye un círculo de un bloque alrededor del jugador, además del cono frontal; los obstáculos físicos siguen bloqueando la visión. El filtro de modelos prueba cabeza, centro y pies y solo oculta el modelo si los tres están tapados, para evitar ocultar un zombi visible sobre obstáculos bajos.
+
+Versión .9: retirada por completo la máscara negra del terreno y su cálculo de rayos. Se mantienen giro acelerado en bordes, CTRL para desplazar/recentrar, selección de construcción e interacción y filtro de modelos de entidades.
 
 ## Faction Friction: clanes del apocalipsis .1
 
