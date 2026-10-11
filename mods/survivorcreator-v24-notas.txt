@@ -1,0 +1,16 @@
+SurvivorCreator v24 — pantalla de muerte con estado corporal y estadísticas
+NeoForge Minecraft 1.21.1
+
+Reemplaza survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v23-nine-spawn-zones.jar por survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v24-death-body-report.jar, tanto en servidor como en clientes. Conserva firstaid-1.21.1-ZOMBOID-v3.4.9-global-health-revival.jar; no requiere modificaciones. No mantengas ambas versiones de SurvivorCreator.
+
+La pantalla muestra causa de muerte (mensaje localizado de Minecraft), tipo de daño mortal, tiempo de supervivencia y zombis eliminados por personaje. Muestra supervivientes eliminados solo si el contador es mayor que cero. Mantiene la música, el sonido de muerte y el clic para continuar; conserva las nueve zonas de aparición de v23.
+
+A la izquierda aparece una silueta de ocho zonas, coloreadas según la salud al morir, con marcas de fracturas, sangrado, heridas, balas alojadas, vendas que rodean la zona y férulas. A la derecha se enumeran todas las lesiones registradas por zona: heridas de bala, balas alojadas (cantidad), cortes, mordeduras, infección, suciedad de heridas, fracturas y sangrado. El daño sin diagnóstico clínico específico se muestra como daño en la zona, no se inventa un tipo de lesión. Sustituye el anterior Active injuries (body areas): 8. Si la lista es larga, usa la rueda del ratón para verla completa.
+
+Se toma la captura del modelo FirstAid en el servidor durante LivingDeathEvent, antes de crear el nuevo cuerpo. Se envía con el informe existente y se conserva al crear otro personaje. Las lesiones no se consultan del cuerpo recién regenerado. Si FirstAid no proporciona datos, se muestra No disponible.
+
+La fuente de daño original se muestra sin inferir una causa clínica falsa. Si FirstAid u otro mod mata usando la fuente generic, se indica daño sin fuente específica; no es posible distinguir con certeza hemorragia, lesión fatal u otra causa basándose únicamente en esa fuente.
+
+Los contadores cuentan muertes atribuidas al jugador por Minecraft, incluidos proyectiles con propietario. Incluyen zombis vanilla, husks, drowned, variantes de The Hordes y mutantes del mod MutantsZombies; los supervivientes son entidades vivas de TacZNPCs. No cuentan animales ni muertes canceladas, y se reinician al morir el personaje. Persisten al desconectar y al cambiar de dimensión. Empiezan a registrar al instalar v24: no pueden reconstruir las muertes anteriores de la vida actual.
+
+Validación: 21 comprobaciones de clasificación, contadores, cancelación, límites, captura clínica, fracturas y férulas independientes de la salud, zonas sanas, anchura de vendas y dibujo de sangrado/fracturas. Verificación de pila/variables de 103 clases y 843 métodos; integridad ZIP, recursos y traducciones. No se ejecutó Minecraft; falta comprobar visualmente la pantalla y el flujo de muerte/reaparición con el conjunto completo de mods.
