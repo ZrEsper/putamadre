@@ -1,0 +1,7 @@
+package dev.zomboid.density;
+import java.util.*;
+public final class Crowd {
+ static boolean warned;
+ public static boolean limited(boolean client,boolean saved,String reason,int nearby){return !client&&!saved&&!reason.equals("SPAWN_EGG")&&!reason.equals("COMMAND")&&nearby>=24;}
+ public static void join(Object event){try{Object level=R.call(event,"getLevel");if(R.yes(R.call(level,"isClientSide"))||R.yes(R.call(event,"loadedFromDisk")))return;Object entity=R.call(event,"getEntity");if(!R.yes(R.call(R.type("dev.zomboid.hordes.ZombieIndividual"),"supported",entity)))return;String reason=R.call(R.call(entity,"getPersistentData"),"getString","zh_spawn_reason").toString();if(reason.equals("COMMAND")||reason.equals("SPAWN_EGG"))return;double x=R.num(R.call(entity,"getX")),y=R.num(R.call(entity,"getY")),z=R.num(R.call(entity,"getZ"));Object box=R.make("net.minecraft.world.phys.AABB",x-24,y-20,z-24,x+24,y+20,z+24);java.util.function.Predicate<Object> filter=e->{if(e==entity||!R.yes(R.call(e,"isAlive"))||!R.yes(R.call(R.type("dev.zomboid.hordes.ZombieIndividual"),"supported",e)))return false;double dx=R.num(R.call(e,"getX"))-x,dz=R.num(R.call(e,"getZ"))-z;return dx*dx+dz*dz<=576;};int count=((List<?>)R.call(level,"getEntitiesOfClass",R.type("net.minecraft.world.entity.Mob"),box,filter)).size();if(limited(false,false,reason,count))R.call(event,"setCanceled",true);}catch(Throwable e){if(!warned){warned=true;R.warn("local zombie density limit",e);}}}
+}

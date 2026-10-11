@@ -1,0 +1,1 @@
+package net.minecraft.world.entity;public class Mob {public double x,y,z;public boolean alive=true,zombie=true;public String reason="";public double getX(){return x;}public double getY(){return y;}public double getZ(){return z;}public boolean isAlive(){return alive;}public Mob getPersistentData(){return this;}public String getString(String key){return reason;}}

@@ -1,0 +1,9 @@
+{
+  "input_sha256": "8dca93512a1613b6dec5646e98054d680d0c5fe25e6757a644a96f63f2b5b7ec",
+  "output_sha256": "0f669199a7972b1f19f33a63437e70f371911fd3c88a55deee78abe3ab8ded75",
+  "changed_original_entries": [
+    "dev/zomboid/hordes/ChunkPopulation.class"
+  ],
+  "simulated_checks_passed": 13,
+  "minecraft_runtime_tested": false
+}

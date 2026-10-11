@@ -1,6 +1,6 @@
 # TACZ: apuntado en tercera persona y niebla ambiental
 
-[Descargar TACZ modificado](../mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.2.jar).
+[Descargar TACZ modificado](../mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.3.jar).
 
 Sustituye el JAR TACZ hotfix-r7 del cliente; no instales dos TACZ. Conserva sus paquetes de armas y dependencias. No requiere Dungeons Iso. El identificador y versión internos siguen siendo los originales; el servidor puede conservar su hotfix-r7.
 
@@ -10,15 +10,17 @@ La mira indica una línea de tiro: no predice dispersión, gravedad ni penetraci
 
 ## Niebla de prueba y automática
 
-- `/zomboidfog prueba`: niebla durante 90 segundos reales, luego vuelve al automático.
+- `/zomboidfog prueba`: un episodio de prueba: entrada gradual de 60 segundos, fase fuerte aleatoria de 2–10 minutos y salida gradual de 60 segundos; luego vuelve al automático.
 - `/zomboidfog auto`: modo automático.
 - `/zomboidfog off`: desactivarla hasta cambiar de modo o reiniciar el cliente.
 
-En automático aparece cada tres días de tiempo del mundo durante 6000 ticks (cinco minutos a 20 TPS), con transiciones de 600 ticks (30 segundos). El primer intervalo comienza en el tick 24000 del mundo. Usa el contador total de ticks, no la hora modificada con `/time set`. Limita la vista a unos 64 bloques en su fase fuerte; no aumenta una distancia menor. No cambia la IA, el clima del servidor ni la iluminación de bloques. Los comandos son locales al cliente. Se preserva la niebla nativa en agua/lava.
+En automático aparece cada tres días de tiempo del mundo. Cada episodio entra en 60 segundos, mantiene la fase fuerte entre 2 y 10 minutos y sale en 60 segundos, usando transiciones suaves. En el ciclo automático la duración se sortea de forma determinista por intervalo; 20 ticks equivalen a un segundo nominal. La prueba usa el reloj real del cliente. El primer intervalo comienza en el tick 24000 del mundo. Usa el contador total de ticks, no la hora modificada con `/time set`.
+
+En la fase fuerte, el final de la niebla queda a unos 12 bloques, añadiendo la distancia entre la cámara y los ojos del jugador para no ocultarlo al alejar la cámara. Es una aproximación mediante la niebla nativa centrada en la cámara, no un círculo exacto de 12 bloques centrado en el jugador. No aumenta una distancia menor. No cambia la IA ni el clima del servidor. Los comandos son locales al cliente. Se preserva la distancia de niebla nativa en agua/lava.
 
 ## Validación
 
-17 comprobaciones con APIs simuladas del HUD y calendario; verificación ASM de métodos modificados y añadidos, integridad ZIP y preservación de todas las entradas originales salvo tres clases y el listado de mixins. Prueba de renderizado, conexión al servidor, eventos de niebla y comandos pendiente en Minecraft.
+25 comprobaciones con APIs simuladas del HUD y calendario; verificación ASM de métodos modificados y añadidos, integridad ZIP y preservación de todas las entradas originales salvo tres clases y el listado de mixins. Prueba de renderizado, conexión al servidor, eventos de niebla y comandos pendiente en Minecraft.
 
 ```sh
 python -B tacz-third-person-patch/build.py /ruta/tacz-neoforge-1.21.1-1.1.8-hotfix-r7.jar /ruta/herramientas

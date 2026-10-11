@@ -17,15 +17,21 @@ Versión .10: sin filtro de modelos de entidades. El apuntado invierte la matriz
 
 Versión .11: el clic derecho con un melee de LR Tactical llega al ataque pesado nativo en lugar de consumirse como colocación de bloques. Los cofres y cadáveres interactuables conservan prioridad; el JAR de melee del usuario no necesita reemplazarse.
 
-## TACZ: tercera persona normal, niebla y disparos más fuertes .2
+## TACZ: tercera persona normal, niebla densa y disparos más fuertes .3
 
-[Descargar TACZ modificado](mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.2.jar). Sustituir el TACZ del cliente, sin duplicarlo. Mira de círculo y línea al apuntar en tercera persona normal, sin Dungeons Iso. Niebla periódica y comandos `/zomboidfog prueba`, `/zomboidfog auto` y `/zomboidfog off`. [Instalación, validación y límites](tacz-third-person-patch/README.md).
+[Descargar TACZ modificado](mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.3.jar). Sustituir el TACZ del cliente, sin duplicarlo. Mira de círculo y línea al apuntar en tercera persona normal, sin Dungeons Iso. Niebla periódica y comandos `/zomboidfog prueba`, `/zomboidfog auto` y `/zomboidfog off`. [Instalación, validación y límites](tacz-third-person-patch/README.md).
 
 ## Gun Durability: destrabado al disparar .1
 
 [Descargar Gun Durability modificado](mods/gundb-2.2.2-1.21.1-left-click-unjam.1.jar). Reemplaza el original en el cliente. Intentar disparar un arma trabada inicia su animación y tiempo de destrabado originales, sin reiniciarla al mantener el clic. [Instalación y validación](gundb-left-click-patch/README.md).
 
 Versión .13: desplazamiento acumulado del recoil limitado a ±4° verticales y ±3° horizontales respecto al objetivo del cursor. Al soltar la tecla de disparo de TACZ, el desplazamiento se limpia en la siguiente actualización de apuntado; cambiar ampliamente de objetivo también descarta el desplazamiento anterior. Prueba con 600 actualizaciones de ráfaga intensa y retorno del jugador al objetivo aprobada con APIs simuladas. No modifica la cadencia, dispersión ni daño del servidor. Pendiente comprobar ráfagas y ritmo visual en Minecraft.
+
+## Niebla densa y control local de acumulación
+
+TACZ .3: niebla con entrada de 60 segundos, fase fuerte aleatoria de 2–10 minutos y salida de 60 segundos. Visibilidad aproximada de 12 bloques, compensando distancia de cámara. `/zomboidfog prueba` reproduce el episodio completo. 25 comprobaciones simuladas aprobadas.
+
+[Hordes .6 con límite local](mods/zomboid-hordes-1.8.3-neoforge-1.21.1-reactive-density.6.jar): frena nuevos zombis cuando ya hay 24 cerca; no elimina los existentes ni evita que migren. Sustituir el addon en cliente y servidor. [Detalles y límites](zombie-density-patch/README.md). 13 comprobaciones aprobadas con APIs simuladas. Pendiente probar en Minecraft.
 
 ## Faction Friction: clanes del apocalipsis .1
 
