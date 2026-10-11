@@ -7,4 +7,3 @@ public class Bridge {
  public static void block(Object p,Object level,Object pos){try{Class<?> h=helper();if(h!=null)h.getMethod("block",Object.class,Object.class,Object.class).invoke(null,p,level,pos);}catch(Exception e){System.err.println("[Zombie Awareness block bridge] "+e);}}
  public static void levelEvent(int type,Object level,double x,double y,double z){try{Class<?> h=helper();if(h!=null)h.getMethod("levelEvent",int.class,Object.class,double.class,double.class,double.class).invoke(null,type,level,x,y,z);}catch(Exception e){System.err.println("[Zombie Awareness event bridge] "+e);}}
 }
-
