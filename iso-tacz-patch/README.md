@@ -1,6 +1,6 @@
-# Dungeons Iso + TACZ: cámara de supervivencia .9
+# Dungeons Iso + TACZ: cámara de supervivencia .10
 
-[Descargar el JAR](../mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.9.jar).
+[Descargar el JAR](../mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.10.jar).
 
 Con Minecraft cerrado, sustituye **solo Dungeons Iso** en `mods` del cliente. No dejes su versión anterior junto a esta. Conserva TACZ hotfix-r7, Zombie Remains Loot, Quietly y sus dependencias. El parche mantiene el identificador y versión internos originales de Dungeons Iso. No requiere cambios en el mundo ni en el servidor.
 
@@ -16,11 +16,10 @@ Con Minecraft cerrado, sustituye **solo Dungeons Iso** en `mods` del cliente. No
 - Desactiva la ampliación de la mira telescópica sobre el mundo mientras está activa la cámara isométrica, para que apuntar no produzca un zoom brusco. La primera persona conserva la ampliación normal.
 
 - La selección para romper bloques incluye vegetación colgante y cadáveres de bloque, sin exigir que puedan abrirse. Mantiene las herramientas, tiempos de rotura y permisos normales; con un arma TACZ equipada se conserva el disparo.
-- Oculta los modelos de entidades fuera de un cono horizontal de 140° orientado con la cámara o detrás de paredes desde los ojos del jugador. El jugador local permanece visible. Girar la cámara revela las entidades en esa dirección; su IA y sus sonidos no cambian. El terreno se muestra sin máscara negra; no modifica los marcadores de otros mods.
 
 ## Validación y límites
 
-121 comprobaciones con APIs simuladas: inicio desactivado y activación manual, geometría de la mira, ángulos, retroceso, interpolación, ocho direcciones de sprint, rotación manual, bordes extremos, protección de perspectiva, alcance, línea de visión y despacho de clics a cofres/cadáveres. Verificación ASM de todos los métodos añadidos y modificados; integridad ZIP y comparación de todas las entradas originales. Solo cambian tres clases originales y el listado de mixins. El JAR de TACZ y el de cadáveres se inspeccionaron sin modificarlos.
+121 comprobaciones con APIs simuladas: inicio desactivado y activación manual, geometría de la mira, ángulos, retroceso, interpolación, ocho direcciones de sprint, rotación manual, bordes extremos, protección de perspectiva, alcance, línea de visión y despacho de clics a cofres/cadáveres. Verificación ASM de todos los métodos añadidos y modificados; integridad ZIP y comparación de todas las entradas originales. Solo cambian cuatro clases originales y el listado de mixins. El JAR de TACZ y el de cadáveres se inspeccionaron sin modificarlos.
 
 **No se ha ejecutado Minecraft en este entorno.** La aplicación real de los nuevos mixins, el renderizado, los eventos con todos los mods y la experiencia en interiores necesitan una prueba en el modpack. No se ha validado la trayectoria balística completa ni la alineación bajo otros mods que alteren posteriormente la cámara/proyección.
 
@@ -40,4 +39,5 @@ En .6, mover bruscamente el cursor acelera el giro de 90°/s hasta 360°/s y la 
 
 
 
-Versión .9: retirada por completo la máscara negra del terreno y su cálculo de rayos. Se mantienen giro acelerado en bordes, CTRL para desplazar/recentrar, selección de construcción e interacción y filtro de modelos de entidades.
+
+Versión .10: sin filtro de modelos de entidades. El apuntado invierte la matriz real de proyección y sigue el rayo del cursor sin selección asistida; si no hay superficie ni entidad, usa un plano a media altura del jugador. La mira clara muestra la línea de tiro; las cruces naranjas breves marcan impactos en bloques recibidos mediante las partículas de TACZ (incluidos disparos cercanos de otros jugadores). No confirma impactos en entidades ni garantiza la trayectoria de cada bala antes de disparar. Con Sodium, el radio de renderizado isométrico baja al 70% del límite anterior, con mínimo de 48 bloques y sin superar el ajuste del usuario. La selección descarta bloques fuera del rayo antes de consultar formas. Rendimiento, aplicación de mixins y precisión visual pendientes de prueba en Minecraft.

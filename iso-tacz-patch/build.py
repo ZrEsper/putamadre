@@ -5,15 +5,16 @@ def run(*args):subprocess.run(list(map(str,args)),check=True)
 with tempfile.TemporaryDirectory(prefix='iso-tacz-') as temp:
  t=Path(temp);classes=t/'classes';patch=t/'patch';tests=t/'tests';ecj=['java','-jar',tools/'ecj.jar','-21','-proc:none','-nowarn']
  run(*ecj,'-d',classes,*sorted((r/'src').rglob('*.java')));run(*ecj,'-cp',asm,'-d',patch,r/'Patch.java');run(*ecj,'-cp',classes,'-d',tests,*sorted((r/'tests').rglob('*.java')));run('java','-Xverify:all','-cp',str(tests)+os.pathsep+str(classes),'dev.zomboid.isotacz.Checks')
- out=repo/'mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.9.jar';run('java','-cp',str(patch)+os.pathsep+asm,'Patch',base,out,classes)
+ out=repo/'mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.10.jar';run('java','-cp',str(patch)+os.pathsep+asm,'Patch',base,out,classes)
  with zipfile.ZipFile(out) as z:data={n:z.read(n) for n in z.namelist()}
- name='dungeons_iso.mixins.json';mix=json.loads(data[name]);mix['client']+=['ZomboidInputMixin','ZomboidSprintMixin','ZomboidHudMixin','compat.tacz.ZomboidScopeMixin','ZomboidMouseMixin','ZomboidPerspectiveMixin','compat.tacz.ZomboidAimInputMixin','ZomboidVisibilityMixin'];data[name]=(json.dumps(mix,indent=2)+'\n').encode()
+ name='dungeons_iso.mixins.json';mix=json.loads(data[name]);mix['client']+=['ZomboidInputMixin','ZomboidSprintMixin','ZomboidHudMixin','compat.tacz.ZomboidScopeMixin','ZomboidMouseMixin','ZomboidPerspectiveMixin','compat.tacz.ZomboidAimInputMixin','compat.tacz.ZomboidImpactMixin'];data[name]=(json.dumps(mix,indent=2)+'\n').encode()
  with zipfile.ZipFile(out,'w',zipfile.ZIP_DEFLATED) as z:
   for n,b in data.items():z.writestr(n,b)
  with zipfile.ZipFile(base) as a,zipfile.ZipFile(out) as b:
   assert b.testzip() is None
   assert "dev/zomboid/isotacz/Fog.class" not in b.namelist() and not any(n.endswith("/ZomboidFogMixin.class") for n in b.namelist()), "Terrain darkness must not be packaged"
-  changed=[n for n in a.namelist() if a.read(n)!=b.read(n)];assert set(changed)=={name,'com/cleannrooster/dungeons_iso/mixin/CameraMixin.class','com/cleannrooster/dungeons_iso/mixin/MinecraftClientMixin.class','com/cleannrooster/dungeons_iso/mixin/GameRendererMixin.class'},changed
+  assert not any(n.endswith("/ZomboidVisibilityMixin.class") for n in b.namelist()), "Entity visibility filter must not be packaged"
+  changed=[n for n in a.namelist() if a.read(n)!=b.read(n)];assert set(changed)=={name,'com/cleannrooster/dungeons_iso/mixin/CameraMixin.class','com/cleannrooster/dungeons_iso/mixin/MinecraftClientMixin.class','com/cleannrooster/dungeons_iso/mixin/GameRendererMixin.class','com/cleannrooster/dungeons_iso/mixin/compat/sodium/RenderSectionManagerMixin.class'},changed
  with zipfile.ZipFile(tacz) as z:
   for n in ['com/tacz/guns/api/item/IGun.class','com/tacz/guns/client/event/CameraSetupEvent.class','com/tacz/guns/client/gameplay/LocalPlayerSprint.class','com/tacz/guns/network/message/ClientMessagePlayerShoot.class']:assert n in z.namelist()
   assert b'getIGunOrNull' in z.read('com/tacz/guns/api/item/IGun.class')

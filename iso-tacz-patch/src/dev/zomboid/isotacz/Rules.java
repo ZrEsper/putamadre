@@ -1,5 +1,6 @@
 package dev.zomboid.isotacz;
 public final class Rules {
+ public static boolean rayBox(double ax,double ay,double az,double bx,double by,double bz,int x,int y,int z){double near=0,far=1;double[] a={ax,ay,az},d={bx-ax,by-ay,bz-az},lo={x-.1,y,z-.1},hi={x+1.1,y+1,z+1.1};for(int i=0;i<3;i++){if(Math.abs(d[i])<1e-9){if(a[i]<lo[i]||a[i]>hi[i])return false;}else{double p=(lo[i]-a[i])/d[i],q=(hi[i]-a[i])/d[i];near=Math.max(near,Math.min(p,q));far=Math.min(far,Math.max(p,q));if(near>far)return false;}}return true;}
  public static double wrap(double a){return ((a%360)+540)%360-180;}
  public static boolean sprint(double forward,double side){return Math.hypot(forward,side)>=0.79;}
  public static double[] angles(double x,double y,double z){double horizontal=Math.hypot(x,z);return new double[]{Math.toDegrees(Math.atan2(z,x))-90,-Math.toDegrees(Math.atan2(y,horizontal))};}

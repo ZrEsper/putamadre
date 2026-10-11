@@ -1,10 +1,10 @@
 # Mods de Zomboid
 
-## Dungeons Iso + TACZ: cámara isométrica .9
+## Dungeons Iso + TACZ: cámara isométrica .10
 
-[Descargar Dungeons Iso modificado](mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.9.jar). Sustituir solo Dungeons Iso en el cliente; mantener TACZ hotfix-r7 y los mods de cadáveres/búsqueda.
+[Descargar Dungeons Iso modificado](mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.10.jar). Sustituir solo Dungeons Iso en el cliente; mantener TACZ hotfix-r7 y los mods de cadáveres/búsqueda.
 
-Empieza desactivado y se activa con F4 o su tecla asignada. El cursor en los últimos cinco píxeles laterales gira la cámara; mantener CTRL cambia a desplazamiento de la vista por los bordes. Soltar CTRL devuelve la vista al centro. Selección de bloques no interactuables para romper bayas colgantes y restos, respetando alcance y paredes. Los modelos de entidades fuera de un cono de 140° orientado con la cámara, o tapados por paredes desde los ojos del jugador, quedan ocultos en modo isométrico; no se altera su sonido ni su IA. Mantener clic derecho apunta sin pasar a primera persona; clic izquierdo dispara conservando la mira. Selección independiente de cadáveres y cofres para interactuar con clic derecho. Sprint en ocho direcciones.
+Empieza desactivado y se activa con F4 o su tecla asignada. El cursor en los últimos cinco píxeles laterales gira la cámara; mantener CTRL cambia a desplazamiento de la vista por los bordes. Soltar CTRL devuelve la vista al centro. Selección de bloques no interactuables para romper bayas colgantes y restos, respetando alcance y paredes. Mantener clic derecho apunta sin pasar a primera persona; clic izquierdo dispara conservando la mira. Selección independiente de cadáveres y cofres para interactuar con clic derecho. Sprint en ocho direcciones.
 
 121 comprobaciones con APIs simuladas y verificación de bytecode aprobadas. **Pendiente probar dentro de Minecraft.** [Instalación, comportamiento y límites](iso-tacz-patch/README.md).
 
@@ -12,7 +12,8 @@ En .6, mover bruscamente el cursor acelera el giro de 90°/s hasta 360°/s y la 
 
 
 
-Versión .9: retirada por completo la máscara negra del terreno y su cálculo de rayos. Se mantienen giro acelerado en bordes, CTRL para desplazar/recentrar, selección de construcción e interacción y filtro de modelos de entidades.
+
+Versión .10: sin filtro de modelos de entidades. El apuntado invierte la matriz real de proyección y sigue el rayo del cursor sin selección asistida; si no hay superficie ni entidad, usa un plano a media altura del jugador. La mira clara muestra la línea de tiro; las cruces naranjas breves marcan impactos en bloques recibidos mediante las partículas de TACZ (incluidos disparos cercanos de otros jugadores). No confirma impactos en entidades ni garantiza la trayectoria de cada bala antes de disparar. Con Sodium, el radio de renderizado isométrico baja al 70% del límite anterior, con mínimo de 48 bloques y sin superar el ajuste del usuario. La selección descarta bloques fuera del rayo antes de consultar formas. Rendimiento, aplicación de mixins y precisión visual pendientes de prueba en Minecraft.
 
 ## Faction Friction: clanes del apocalipsis .1
 
