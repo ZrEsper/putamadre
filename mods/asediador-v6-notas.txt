@@ -1,0 +1,29 @@
+Zomboid Hordes reactive-noise-siege v6 — NeoForge Minecraft 1.21.1
+
+INSTALACIÓN
+Reemplaza solamente zomboid-hordes-1.8.3-neoforge-1.21.1-reactive-noise-dodge.5.jar por zomboid-hordes-1.8.3-neoforge-1.21.1-reactive-noise-siege.6.jar en servidor y clientes. No mantengas ambas versiones. Conserva The-Hordes-1.21.1-1.6.3f-zombies-mutants-only.1.jar y zombieawareness-neoforge-1.21.0-1.13.2-reactive-noise.jar enviados: no necesitan reemplazo.
+
+ASEDIADOR
+Variante de los zombis adultos que ya aparecen en el mundo; utiliza su entidad y aspecto originales, con nombre Asediador. No registra una entidad independiente ni aumenta artificialmente el número de zombis. La elección inicial se hace una sola vez por individuo; se guarda en sus datos persistentes y no se sortea nuevamente al cargar el chunk. Los zombis adultos existentes que nunca fueron examinados también reciben ese único sorteo.
+Probabilidad predeterminada 0.005% (1/20.000 zombis elegibles); inferior al 0.01% nominal del Mutant Brute del selector de The Hordes examinado. Las probabilidades de otros mods pueden configurarse por separado y no se modifican aquí.
+300 puntos de vida, daño base efectivo 24 y atributo de velocidad efectivo 0.56. Mantiene estos valores frente a los ajustes individuales y de día/noche de este JAR. No garantiza superar entidades de otros mods con atributos personalizados más altos.
+Visión individual aleatoria de 12 a 56 bloques; en oscuridad se reduce al 55% y al detectar jugadores agachados se reduce adicionalmente al 60%. Necesita visión directa para detectar visualmente un jugador nuevo; las reacciones al ruido anteriores siguen activas. Agresividad individual de 25 a 100% en sus comprobaciones adicionales de detección, y memoria de persecución de 8 a 35 segundos tras perder de vista al objetivo. Reacciona a objetivos existentes, incluyendo enemigos que le asignen otros sistemas; nunca persigue jugadores creativos o espectadores.
+
+ASEDIO
+Busca ruta, salta obstáculos bajos, rompe paredes delante de él, intenta rodear bloques protegidos y construye escaleras orientadas de adoquín, soportes para subir y puentes sobre huecos. No teletransporta ni fuerza la carga de chunks. Las acciones de construcción dependen de encontrar espacio y soporte; no sustituyen un buscador de rutas completo para cualquier geometría.
+La rotura muestra grietas progresivas, golpes y sonidos. El tiempo depende de dureza (mínimo 0.6 segundos, máximo 8 segundos); una piedra normal requiere aproximadamente 2.4 segundos. No rompe bloques con entidades de bloque, como cofres/barriles/máquinas, líquidos, bloques indestructibles ni dureza superior a 30 (por ejemplo obsidiana).
+Respeta /gamerule mobGriefing: false desactiva tanto rotura como construcción. Los bloques colocados y destruidos son cambios reales y permanecen en el mundo. No se implementa integración específica con reclamaciones de terrenos de otros mods.
+Construye como máximo un bloque por segundo y 128 por individuo de forma predeterminada; este límite es persistente. No crea bloques encima de bloques existentes ni agua/lava.
+
+CONFIGURACIÓN
+Se crea config/zomboid-hordes-siege.properties al iniciar/cargar la clase. Reinicia el servidor después de editarlo.
+spawnChance=0.00005
+breakBlocks=true
+buildBlocks=true
+maxBuildBlocksPerZombie=128
+spawnChance=0 desactiva NUEVAS asignaciones, conserva Asediadores ya existentes. Límite permitido 0..0.01 (0..1%). Por ejemplo 0.00001 significa 1/100.000. El presupuesto de construcción admite 0..512. Las opciones breakBlocks/buildBlocks desactivan esas acciones también para variantes existentes; mobGriefing siempre tiene prioridad.
+
+VALIDACIÓN
+29 comprobaciones con dobles de prueba: frecuencia, asignación única, atributos, zombis ordinarios intactos, memoria tras una pared y su caducidad, integración con Reactive.sees/speed, rotura progresiva, protección de inventarios, puentes, escaleras, soporte vertical, límite de construcción y mobGriefing.
+Verificación de pila/variables del JAR completo y carga con java -Xverify:all de las clases alteradas. Recursos, configuraciones, entidades y clases anteriores se conservan, salvo los dos puntos de integración de Reactive.
+No se ejecutó Minecraft ni se verificaron en juego las colisiones, animaciones o la compatibilidad con todos los mods del servidor. Los dobles de prueba comprueban lógica, no reemplazan esa prueba.
