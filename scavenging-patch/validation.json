@@ -1,8 +1,8 @@
 {
   "artifacts": [
     {
-      "file": "quietly-1_0_0-cooldown-v9-search-bar-expanded.jar",
-      "sha256": "71d227c3ca17c09a112fce9ab818d375a6af6cf2fe25938b14b2154be9bc30fd",
+      "file": "quietly-1_0_0-cooldown-v10-storage-sync-hud-fix.jar",
+      "sha256": "746af40e122aace9f2318af05c0dbde46e0976f350fafc2269bd525092110a4a",
       "changed": [
         "cn/kafei/QuietlyCommon.class",
         "cn/kafei/SilentOpenManager.class",
@@ -16,6 +16,7 @@
         "dev/zomboid/scavenging/Loot.class",
         "dev/zomboid/scavenging/R.class",
         "dev/zomboid/scavenging/Rules.class",
+        "dev/zomboid/scavenging/Search$Deferred.class",
         "dev/zomboid/scavenging/Search$Job.class",
         "dev/zomboid/scavenging/Search$Target.class",
         "dev/zomboid/scavenging/Search.class",
@@ -73,7 +74,7 @@
   ],
   "minecraft_runtime_tested": false,
   "rule_cases": 36,
-  "simulated_behavior_cases": 39,
+  "simulated_behavior_cases": 47,
   "all_new_classes_asm_verified": true,
   "original_mixins_unchanged": true
 }

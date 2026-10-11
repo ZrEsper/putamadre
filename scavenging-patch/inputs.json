@@ -2,7 +2,7 @@
   "quietly": {
     "path": "/workspace/attachments/e16da456-1681-4346-ab6f-7a7f2e6c393d/quietly-1_0_0-cooldown-v7-pending-loot.jar",
     "sha256": "3425057d4170b98dd4aff70e91a851650efb5fc7303dba668c74eb7d94f951bf",
-    "output": "quietly-1_0_0-cooldown-v9-search-bar-expanded.jar"
+    "output": "quietly-1_0_0-cooldown-v10-storage-sync-hud-fix.jar"
   },
   "survivor": {
     "path": "/workspace/attachments/56ed2a8b-84bb-458d-a7aa-b5fd286ad166/survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v20-elusive.jar",

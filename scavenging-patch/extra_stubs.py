@@ -2,6 +2,7 @@ from pathlib import Path
 import sys
 r=Path(sys.argv[1])
 sources={
+ 'net.minecraft.network.protocol.game.ClientboundBlockUpdatePacket':'public class ClientboundBlockUpdatePacket {public final Object level,pos;public ClientboundBlockUpdatePacket(Object l,Object p){level=l;pos=p;}}',
  'net.neoforged.neoforge.client.event.RenderGuiEvent':'public class RenderGuiEvent {public static class Post {}}',
  'net.neoforged.neoforge.event.entity.player.PlayerEvent':'public class PlayerEvent {public static class PlayerLoggedOutEvent {}}',
  'net.minecraft.world.level.block.ChestBlock':'public class ChestBlock extends Block {public static Object getContainer(Object block,Object state,Object level,Object pos,boolean force){return null;}}',

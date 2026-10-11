@@ -8,7 +8,7 @@ Cerrar Minecraft y servidor. Reemplazar, sin duplicar versiones:
 
 | Quitar | Poner |
 |---|---|
-| Quietly v7 pending-loot o v8 scavenging-rarity | `quietly-1_0_0-cooldown-v9-search-bar-expanded.jar` |
+| Quietly v7/v8/v9 anteriores | `quietly-1_0_0-cooldown-v10-storage-sync-hud-fix.jar` |
 | Survivor Creator v20 elusive o v21 scavenging | `survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v22-scavenging-boosts.jar` |
 | Zomboid Survival 1.0.3 water-power | `zomboid-survival-1.21.1-1.0.4-water-varieties.jar` |
 | Jade 15.10.6, incluida su revisión pending-loot | `Jade-1.21.1-NeoForge-15.10.6-scavenging-preview.jar` |
@@ -51,7 +51,7 @@ La capacidad aumenta de forma garantizada según la rareza para cofres/barriles 
 | Épico | 108 | Barril de oro |
 | Legendario | 135 | Barril de diamante |
 
-Sophisticated puede tener capacidades predeterminadas mayores por configuración: nunca se reduce un inventario. Un almacenamiento Sophisticated existente recibe 27 espacios adicionales por grado de rareza (27/54/81/108) sobre su capacidad anterior, con el mínimo de la tabla. Se amplía usando `StorageBlockEntity.changeStorageSize`, que actualiza las ranuras y las cachés nativas, y se reabre su menú real. No es una ampliación visual ficticia. Se conservan objetos y nombre. En un cofre doble se convierte solo la mitad pulsada; la otra mitad queda como cofre individual con sus objetos intactos. La mitad ampliada recibe al menos 54 + 27 × rareza espacios. Los cofres bloqueados conservan su bloque y tamaño; los cadáveres conservan su menú nativo y reciben los premios de rareza. Si la conversión falla, se intenta restaurar el bloque y su NBT. Se requieren Sophisticated Storage y Core para la ampliación.
+Sophisticated puede tener capacidades predeterminadas mayores por configuración: nunca se reduce un inventario. Un almacenamiento Sophisticated existente recibe 27 espacios adicionales por grado de rareza (27/54/81/108) sobre su capacidad anterior, con el mínimo de la tabla. Se amplía usando `StorageBlockEntity.changeStorageSize`, que actualiza las ranuras y las cachés nativas, y se reabre su menú real. No es una ampliación visual ficticia. La v10 envía al cliente el nuevo bloque y sus datos antes de reabrir, y difiere la reapertura dos ticks para evitar el fallo «Incorrect block entity … expected StorageBlockEntity». Durante esa espera se bloquean otras aperturas del mismo bloque. Se cancela la reapertura si el jugador cambia de mundo, sale del alcance, abre otro menú o si el bloque cambió. La barra usa el campo de GUI `overlayMessageString`, con alternativa para versiones que lo llaman `overlayMessage`. Se conservan objetos y nombre. En un cofre doble se convierte solo la mitad pulsada; la otra mitad queda como cofre individual con sus objetos intactos. La mitad ampliada recibe al menos 54 + 27 × rareza espacios. Los cofres bloqueados conservan su bloque y tamaño; los cadáveres conservan su menú nativo y reciben los premios de rareza. Si la conversión falla, se intenta restaurar el bloque y su NBT. Se requieren Sophisticated Storage y Core para la ampliación.
 
 Jade / Quietly ocultan el inventario sin revisar, incluso si ya había objetos generados. La rareza se muestra después de revisarlo, sin cambiar nombres como Office Cabinet. Se mantienen las protecciones anteriores para LootTable pendiente. Esto no impide que tolvas u otros mods ajenos soliciten generar loot: el parche evita la lectura anticipada de la vista de Jade / Quietly.
 

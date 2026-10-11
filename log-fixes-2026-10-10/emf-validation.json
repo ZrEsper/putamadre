@@ -1,0 +1,169 @@
+{
+  "base_sha256": "fe09a242a19477960196166063eeba91ed43ba8d260516dd9a59121c491dadbc",
+  "output": "Blues-Better-Zombies-PZ-L4D2-Gore.2-emf-fix.zip",
+  "output_sha256": "f08cfdf9df4e4d09e58e942c59dc16504546f970ac76cda170df01625532e1a0",
+  "fixed_literals": 118,
+  "changed_models": [
+    {
+      "file": "assets/minecraft/optifine/cem/drowned.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/drowned2.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/husk.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie10.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie11.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie12.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie13.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie14.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie15.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie16.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie17.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie18.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie19.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie2.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie21.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie22.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie23.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie24.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie25.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie26.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie27.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie28.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie29.jem",
+      "fixed_literals": 1
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie3.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie30.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie31.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie32.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie33.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie34.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie35.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie36.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie4.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie5.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie6.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie7.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie8.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie9.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie_villager.jem",
+      "fixed_literals": 3
+    },
+    {
+      "file": "assets/minecraft/optifine/cem/zombie_villager2.jem",
+      "fixed_literals": 3
+    }
+  ],
+  "minecraft_runtime_tested": false
+}
