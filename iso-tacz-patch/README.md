@@ -1,6 +1,6 @@
-# Dungeons Iso + TACZ: cámara de supervivencia .12
+# Dungeons Iso + TACZ: cámara de supervivencia .13
 
-[Descargar el JAR](../mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.12.jar).
+[Descargar el JAR](../mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.13.jar).
 
 Con Minecraft cerrado, sustituye **solo Dungeons Iso** en `mods` del cliente. No dejes su versión anterior junto a esta. Conserva TACZ hotfix-r7, Zombie Remains Loot, Quietly y sus dependencias. El parche mantiene el identificador y versión internos originales de Dungeons Iso. No requiere cambios en el mundo ni en el servidor.
 
@@ -19,7 +19,7 @@ Con Minecraft cerrado, sustituye **solo Dungeons Iso** en `mods` del cliente. No
 
 ## Validación y límites
 
-126 comprobaciones con APIs simuladas: inicio desactivado y activación manual, geometría de la mira, ángulos, retroceso, interpolación, ocho direcciones de sprint, rotación manual, bordes extremos, protección de perspectiva, alcance, línea de visión y despacho de clics a cofres/cadáveres. Verificación ASM de todos los métodos añadidos y modificados; integridad ZIP y comparación de todas las entradas originales. Solo cambian cuatro clases originales y el listado de mixins. El JAR de TACZ y el de cadáveres se inspeccionaron sin modificarlos.
+132 comprobaciones con APIs simuladas: inicio desactivado y activación manual, geometría de la mira, ángulos, retroceso, interpolación, ocho direcciones de sprint, rotación manual, bordes extremos, protección de perspectiva, alcance, línea de visión y despacho de clics a cofres/cadáveres. Verificación ASM de todos los métodos añadidos y modificados; integridad ZIP y comparación de todas las entradas originales. Solo cambian cuatro clases originales y el listado de mixins. El JAR de TACZ y el de cadáveres se inspeccionaron sin modificarlos.
 
 **No se ha ejecutado Minecraft en este entorno.** La aplicación real de los nuevos mixins, el renderizado, los eventos con todos los mods y la experiencia en interiores necesitan una prueba en el modpack. No se ha validado la trayectoria balística completa ni la alineación bajo otros mods que alteren posteriormente la cámara/proyección.
 
@@ -45,3 +45,5 @@ Versión .10: sin filtro de modelos de entidades. El apuntado invierte la matriz
 Versión .11: el clic derecho con un melee de LR Tactical llega al ataque pesado nativo en lugar de consumirse como colocación de bloques. Los cofres y cadáveres interactuables conservan prioridad; el JAR de melee del usuario no necesita reemplazarse.
 
 Versión .12: el retroceso temporal se separa del objetivo bajo el cursor y decae exponencialmente hacia él después de disparar; se conservan los impulsos nuevos de TACZ. El ajuste de regreso necesita validación visual dentro del juego.
+
+Versión .13: desplazamiento acumulado del recoil limitado a ±4° verticales y ±3° horizontales respecto al objetivo del cursor. Al soltar la tecla de disparo de TACZ, el desplazamiento se limpia en la siguiente actualización de apuntado; cambiar ampliamente de objetivo también descarta el desplazamiento anterior. Prueba con 600 actualizaciones de ráfaga intensa y retorno del jugador al objetivo aprobada con APIs simuladas. No modifica la cadencia, dispersión ni daño del servidor. Pendiente comprobar ráfagas y ritmo visual en Minecraft.

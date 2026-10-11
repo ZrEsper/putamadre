@@ -1,7 +1,7 @@
 {
   "iso_input_sha256": "053faf5c6acca837193e3546346bd591d581a05791dc0a8cbb83ec186e62ac5f",
   "tacz_inspected_sha256": "fa3a09f15265a4065a566960a8deab315f6c601a5f9a542840b362d455dd5470",
-  "output_sha256": "dcdca3f55d9cbe5d861cdac9d4b92fccbd6f5002ccfa9378668cbecfb5ab4ee9",
+  "output_sha256": "e21ed57fe0afa3f62467bf89adf3be2838a721c9c737124f2a620c97f569f75c",
   "changed_original_entries": [
     "com/cleannrooster/dungeons_iso/mixin/CameraMixin.class",
     "com/cleannrooster/dungeons_iso/mixin/GameRendererMixin.class",
@@ -11,5 +11,5 @@
   ],
   "minecraft_runtime_tested": false,
   "tacz_jar_modified": false,
-  "simulated_checks_passed": 126
+  "simulated_checks_passed": 132
 }
