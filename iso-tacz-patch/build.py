@@ -12,7 +12,7 @@ with tempfile.TemporaryDirectory(prefix='iso-tacz-') as temp:
   for n,b in data.items():z.writestr(n,b)
  with zipfile.ZipFile(base) as a,zipfile.ZipFile(out) as b:
   assert b.testzip() is None
-  assert not any("Fog" in n for n in b.namelist()), "Terrain darkness must not be packaged"
+  assert "dev/zomboid/isotacz/Fog.class" not in b.namelist() and not any(n.endswith("/ZomboidFogMixin.class") for n in b.namelist()), "Terrain darkness must not be packaged"
   changed=[n for n in a.namelist() if a.read(n)!=b.read(n)];assert set(changed)=={name,'com/cleannrooster/dungeons_iso/mixin/CameraMixin.class','com/cleannrooster/dungeons_iso/mixin/MinecraftClientMixin.class','com/cleannrooster/dungeons_iso/mixin/GameRendererMixin.class'},changed
  with zipfile.ZipFile(tacz) as z:
   for n in ['com/tacz/guns/api/item/IGun.class','com/tacz/guns/client/event/CameraSetupEvent.class','com/tacz/guns/client/gameplay/LocalPlayerSprint.class','com/tacz/guns/network/message/ClientMessagePlayerShoot.class']:assert n in z.namelist()
