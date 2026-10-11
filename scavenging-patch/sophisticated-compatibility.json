@@ -1,0 +1,14 @@
+{
+  "file": "sophisticatedstorage-1.21.1-1.6.1.2147.jar",
+  "sha256": "9a423df06f8a3a0424bd8757c9139452e7f68bbf35feeeaf6ada7a4b68fad615",
+  "storage_modified": false,
+  "api_inspected": [
+    "StorageBlockEntity.getStorageWrapper",
+    "StorageBlockEntity.setCustomName",
+    "StorageWrapper.getInventoryHandler",
+    "copper_barrel",
+    "iron_barrel",
+    "diamond_barrel"
+  ],
+  "minecraft_runtime_tested": false
+}

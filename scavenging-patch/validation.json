@@ -1,0 +1,78 @@
+{
+  "artifacts": [
+    {
+      "file": "quietly-1_0_0-cooldown-v8-scavenging-rarity.jar",
+      "sha256": "b92f377e4f20140830e4956a252f69c3e0c71dce79522e29af9cef7179fe4f5f",
+      "changed": [
+        "cn/kafei/QuietlyCommon.class",
+        "cn/kafei/SilentOpenManager.class",
+        "cn/kafei/neoforge/QuietlyNeoForge.class",
+        "cn/kafei/interact/Interaction.class"
+      ],
+      "added": [
+        "dev/zomboid/scavenging/Events.class",
+        "dev/zomboid/scavenging/History.class",
+        "dev/zomboid/scavenging/Loot$Inv.class",
+        "dev/zomboid/scavenging/Loot.class",
+        "dev/zomboid/scavenging/R.class",
+        "dev/zomboid/scavenging/Rules.class",
+        "dev/zomboid/scavenging/Search$Job.class",
+        "dev/zomboid/scavenging/Search$Target.class",
+        "dev/zomboid/scavenging/Search.class"
+      ]
+    },
+    {
+      "file": "survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v21-scavenging.jar",
+      "sha256": "913b61892e4e8eb15fbb979dd3a5257ff672dfa6eae3b62f296d99b753d9b4c3",
+      "changed": [
+        "dev/survivorcreator/skills/Skills.class",
+        "dev/survivorcreator/skills/ActiveSkills.class",
+        "assets/survivorcreator/lang/es_es.json",
+        "assets/survivorcreator/lang/en_us.json"
+      ],
+      "added": [
+        "dev/survivorcreator/skills/ScavengingEffect.class"
+      ]
+    },
+    {
+      "file": "zomboid-survival-1.21.1-1.0.4-water-varieties.jar",
+      "sha256": "195d19cefc2c45d9c36aece4c8841f826c987f8ead34caa952f18a498ea4674c",
+      "changed": [
+        "dev/zomboid/survival/ClientColors.class",
+        "assets/zomboid_survival/models/item/water_bottle.json",
+        "assets/zomboid_survival/lang/es_es.json",
+        "assets/zomboid_survival/lang/en_us.json",
+        "dev/zomboid/survival/WaterItems.class",
+        "assets/zomboid_survival/models/item/contaminated_water.json",
+        "data/zomboid_survival/recipe/filter_water_campfire_cooking.json",
+        "data/zomboid_survival/recipe/filter_water_smelting.json",
+        "data/zomboid_survival/recipe/filter_water_smoking.json"
+      ],
+      "added": [
+        "assets/zomboid_survival/models/item/mineral_water.json",
+        "assets/zomboid_survival/models/item/purified_water.json",
+        "assets/zomboid_survival/textures/item/contaminated_water.png",
+        "assets/zomboid_survival/textures/item/mineral_water.png",
+        "assets/zomboid_survival/textures/item/purified_water.png",
+        "assets/zomboid_survival/textures/item/water_bottle.png",
+        "dev/zomboid/survival/WaterReflect.class",
+        "dev/zomboid/survival/WaterSources.class"
+      ]
+    },
+    {
+      "file": "Jade-1.21.1-NeoForge-15.10.6-scavenging-preview.jar",
+      "sha256": "00d4177c94f441cbf2fdd35291de034c3522a75540fcedf3a16c77883485514a",
+      "changed": [
+        "snownee/jade/addon/universal/ItemStorageProvider.class"
+      ],
+      "added": [
+        "dev/zomboid/scavengingjade/Bridge.class"
+      ]
+    }
+  ],
+  "minecraft_runtime_tested": false,
+  "rule_cases": 21,
+  "simulated_behavior_cases": 32,
+  "all_new_classes_asm_verified": true,
+  "original_mixins_unchanged": true
+}

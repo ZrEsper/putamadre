@@ -1,0 +1,5 @@
+package dev.zomboid.scavenging;
+public final class Checks {
+ static int cases;static void check(boolean ok){cases++;if(!ok)throw new AssertionError("case "+cases);}
+ public static void main(String[] args){check(Rules.ticks(0)==30);check(Rules.ticks(10)==10);check(Rules.ticks(-10)==30);check(Rules.ticks(100)==10);check(Rules.rarity(.001,0,0)==4);check(Rules.rarity(.01,0,0)==3);check(Rules.rarity(.05,0,0)==2);check(Rules.rarity(.2,0,0)==1);check(Rules.rarity(.5,0,0)==0);check(Rules.rarity(.32,4,10)>Rules.rarity(.32,0,0));check(Rules.rarity(.0955,-.75,0)<Rules.rarity(.0955,0,0));check(Rules.bonusRolls(4,10)>Rules.bonusRolls(0,0));check(Rules.xp(4,false)>Rules.xp(0,false));check(Rules.upgrade(4,.999));check(!Rules.upgrade(0,0));check(!Rules.upgrade(2,.051));check(!Rules.valid(30,30,false,true,true,true));check(!Rules.valid(30,30,true,false,true,true));check(!Rules.valid(30,30,true,true,false,true));check(!Rules.valid(30,30,true,true,true,false));check(Rules.valid(30,30,true,true,true,true));System.out.println(cases+" search/rareness rule cases passed");}
+}
