@@ -1,2 +1,2 @@
 package com.cleannrooster.dungeons_iso.mod;
-public class Mod {public static boolean enabled=true;public static float yaw=45,pitch=45,livingPitch,livingYaw,livingHeadYaw,livingBodyYaw;public static Object crosshairTarget,lastPerspective;public static float getZoom(){return 3;}}
+public class Mod {public static boolean enabled=true;public static double x,z;public static float yaw=45,pitch=45,livingPitch,livingYaw,livingHeadYaw,livingBodyYaw;public static Object crosshairTarget,lastPerspective;public static float getZoom(){return 3;}}

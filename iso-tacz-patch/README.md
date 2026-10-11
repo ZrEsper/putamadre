@@ -1,6 +1,6 @@
-# Dungeons Iso + TACZ: cámara de supervivencia .4
+# Dungeons Iso + TACZ: cámara de supervivencia .5
 
-[Descargar el JAR](../mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.4.jar).
+[Descargar el JAR](../mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.5.jar).
 
 Con Minecraft cerrado, sustituye **solo Dungeons Iso** en `mods` del cliente. No dejes su versión anterior junto a esta. Conserva TACZ hotfix-r7, Zombie Remains Loot, Quietly y sus dependencias. El parche mantiene el identificador y versión internos originales de Dungeons Iso. No requiere cambios en el mundo ni en el servidor.
 
@@ -8,16 +8,19 @@ Con Minecraft cerrado, sustituye **solo Dungeons Iso** en `mods` del cliente. No
 
 - El modo isométrico siempre empieza **desactivado** al entrar o cambiar de mundo. Solo se activa con su tecla asignada (F4 por defecto). Impide la activación automática aunque la configuración antigua tuviera `onStartup` o `force` activados y omite el diálogo inicial que podía activarlo.
 - Con la vista isométrica activa y un arma TACZ, muestra una mira pequeña sobre el primer obstáculo o entidad en la dirección del arma. Usa la rotación del jugador que TACZ envía al servidor y la matriz de proyección que Dungeons Iso entrega al renderizador, tanto en perspectiva como en modo ortográfico. Puede apuntar hacia arriba y abajo y conserva los cambios de retroceso de TACZ. Indica la línea de tiro; la dispersión, penetración y caída de la bala siguen siendo las de TACZ.
-- El cursor en los últimos cinco píxeles de los bordes izquierdo/derecho gira la cámara a 90°/s. Mantener CTRL izquierdo o derecho sustituye el giro por desplazamiento de la vista a 7 bloques/s en cualquiera de los cuatro bordes, con distancia limitada. Fuera del borde se detiene. Home recentra el desplazamiento. Conserva los controles manuales originales y no gira automáticamente por obstáculos.
+- El cursor en los últimos cinco píxeles de los bordes izquierdo/derecho gira la cámara a 90°/s. Mantener CTRL izquierdo o derecho sustituye el giro por desplazamiento de la vista a 7 bloques/s en cualquiera de los cuatro bordes, con distancia limitada. Fuera del borde se detiene. Soltar CTRL recentra el desplazamiento; Home también lo recentra. Conserva los controles manuales originales y no gira automáticamente por obstáculos.
 - El sprint admite movimiento en ocho direcciones, independientemente de dónde mire el personaje. Mantiene hambre, colisiones, efectos, estamina y las restricciones de TACZ al apuntar/recargar. Conserva los controles originales WASD y sprint.
 - Clic derecho, tanto en vista normal como isométrica, sobre un cofre, barril, puerta u otro bloque interactuable al alcance utiliza la interacción normal del juego. También reconoce los bloques `doomsday_decoration:remains_*`, restos esqueléticos de Zombie Remains Loot y entidades de Corpse. No necesita O ni la tecla especial de interacción de TACZ. Si no hay un interactuable válido, mantener clic derecho activa el apuntado TACZ sin abandonar la cámara isométrica; disparar con clic izquierdo conserva la mira mientras se mantenga el derecho. La mira incluye una línea y un anillo sobre el objetivo. Respeta alcance y paredes. Las acciones propias del mod de cadáveres, como cortar con un cuchillo, se conservan.
 - La selección isométrica usa un rayo propio desde la cámara y las formas visuales del cadáver, incluso cuando el selector original no lo detecta o el cuerpo no tiene colisión.
 - No reemplaza los menús ni la generación de loot: llama a `MultiPlayerGameMode.useItemOn`/`interact`, que envían los paquetes habituales y ejecutan los eventos de interacción. Quietly puede interceptarlos para su búsqueda y cooldown.
 - Desactiva la ampliación de la mira telescópica sobre el mundo mientras está activa la cámara isométrica, para que apuntar no produzca un zoom brusco. La primera persona conserva la ampliación normal.
 
+- La selección para romper bloques incluye vegetación colgante y cadáveres de bloque, sin exigir que puedan abrirse. Mantiene las herramientas, tiempos de rotura y permisos normales; con un arma TACZ equipada se conserva el disparo.
+- Oculta los modelos de entidades fuera de un cono horizontal de 140° orientado con la cámara o detrás de paredes desde los ojos del jugador. El jugador local permanece visible. Girar la cámara revela las entidades en esa dirección; su IA y sus sonidos no cambian. Esto no oscurece el terreno ni modifica los marcadores de otros mods.
+
 ## Validación y límites
 
-98 comprobaciones con APIs simuladas: inicio desactivado y activación manual, geometría de la mira, ángulos, retroceso, interpolación, ocho direcciones de sprint, rotación manual, bordes extremos, protección de perspectiva, alcance, línea de visión y despacho de clics a cofres/cadáveres. Verificación ASM de todos los métodos añadidos y modificados; integridad ZIP y comparación de todas las entradas originales. Solo cambian tres clases originales y el listado de mixins. El JAR de TACZ y el de cadáveres se inspeccionaron sin modificarlos.
+108 comprobaciones con APIs simuladas: inicio desactivado y activación manual, geometría de la mira, ángulos, retroceso, interpolación, ocho direcciones de sprint, rotación manual, bordes extremos, protección de perspectiva, alcance, línea de visión y despacho de clics a cofres/cadáveres. Verificación ASM de todos los métodos añadidos y modificados; integridad ZIP y comparación de todas las entradas originales. Solo cambian tres clases originales y el listado de mixins. El JAR de TACZ y el de cadáveres se inspeccionaron sin modificarlos.
 
 **No se ha ejecutado Minecraft en este entorno.** La aplicación real de los nuevos mixins, el renderizado, los eventos con todos los mods y la experiencia en interiores necesitan una prueba en el modpack. No se ha validado la trayectoria balística completa ni la alineación bajo otros mods que alteren posteriormente la cámara/proyección.
 

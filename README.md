@@ -1,12 +1,12 @@
 # Mods de Zomboid
 
-## Dungeons Iso + TACZ: cámara isométrica .4
+## Dungeons Iso + TACZ: cámara isométrica .5
 
-[Descargar Dungeons Iso modificado](mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.4.jar). Sustituir solo Dungeons Iso en el cliente; mantener TACZ hotfix-r7 y los mods de cadáveres/búsqueda.
+[Descargar Dungeons Iso modificado](mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.5.jar). Sustituir solo Dungeons Iso en el cliente; mantener TACZ hotfix-r7 y los mods de cadáveres/búsqueda.
 
-Empieza desactivado y se activa con F4 o su tecla asignada. El cursor en los últimos cinco píxeles laterales gira la cámara; mantener CTRL cambia a desplazamiento de la vista por los bordes. Mantener clic derecho apunta sin pasar a primera persona; clic izquierdo dispara conservando la mira. Selección independiente de cadáveres y cofres para interactuar con clic derecho. Sprint en ocho direcciones.
+Empieza desactivado y se activa con F4 o su tecla asignada. El cursor en los últimos cinco píxeles laterales gira la cámara; mantener CTRL cambia a desplazamiento de la vista por los bordes. Soltar CTRL devuelve la vista al centro. Selección de bloques no interactuables para romper bayas colgantes y restos, respetando alcance y paredes. Los modelos de entidades fuera de un cono de 140° orientado con la cámara, o tapados por paredes desde los ojos del jugador, quedan ocultos en modo isométrico; no se altera su sonido ni su IA. Mantener clic derecho apunta sin pasar a primera persona; clic izquierdo dispara conservando la mira. Selección independiente de cadáveres y cofres para interactuar con clic derecho. Sprint en ocho direcciones.
 
-98 comprobaciones con APIs simuladas y verificación de bytecode aprobadas. **Pendiente probar dentro de Minecraft.** [Instalación, comportamiento y límites](iso-tacz-patch/README.md).
+108 comprobaciones con APIs simuladas y verificación de bytecode aprobadas. **Pendiente probar dentro de Minecraft.** [Instalación, comportamiento y límites](iso-tacz-patch/README.md).
 
 ## Faction Friction: clanes del apocalipsis .1
 
