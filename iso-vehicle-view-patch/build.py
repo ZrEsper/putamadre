@@ -1,6 +1,6 @@
 from pathlib import Path
 import hashlib,json,os,subprocess,tempfile,sys,zipfile
-r=Path(__file__).resolve().parent;base=Path(sys.argv[1]);tools=Path(sys.argv[2]);out=r.parent/'mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.20-vehicle-visibility.jar';asm=os.pathsep.join(str(tools/n) for n in ['asm.jar','asm-tree.jar','asm-analysis.jar']);ecj=['java','-jar',str(tools/'ecj.jar'),'-21','-proc:none','-nowarn']
+r=Path(__file__).resolve().parent;base=Path(sys.argv[1]);tools=Path(sys.argv[2]);out=r.parent/'mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.21-ground-preserved.jar';asm=os.pathsep.join(str(tools/n) for n in ['asm.jar','asm-tree.jar','asm-analysis.jar']);ecj=['java','-jar',str(tools/'ecj.jar'),'-21','-proc:none','-nowarn']
 assert hashlib.sha256(base.read_bytes()).hexdigest()==hashlib.sha256((r.parent/'mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.19-vehicles-food.jar').read_bytes()).hexdigest()
 with tempfile.TemporaryDirectory() as tmp:
  t=Path(tmp)

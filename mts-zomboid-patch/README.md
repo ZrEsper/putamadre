@@ -92,3 +92,7 @@ La inspección usa una cola de servidor de 30 ticks (1.5 segundos a 20 TPS), tan
 Durante la espera se envía `Buscando N% - Revisando motor` a la barra de acción, que Quietly v12 convierte en su barra de progreso existente. Al terminar se abre la pantalla y se otorgan 5 XP base a `mechanics` de SurvivorCreator, sujetos a sus requisitos de creación y multiplicadores. Se muestra la ganancia real; una revisión incompleta no concede XP. H envía la petición al servidor y usa la misma espera. Para obtener XP debe instalarse SurvivorCreator .v28, que conserva esta habilidad en la lista activa.
 
 Pruebas: 50 comprobaciones previas de mecánica y choques, 13 del flujo de inspección (tiempo, duplicados, XP, cancelación y menú), 5 de selección de cajas; análisis de 4927 métodos del core, prueba JVM de la reparación previa e integridad ZIP. No se ejecutó Minecraft ni el modpack del usuario.
+
+## .8: taller, capó y terreno
+
+El taller usa componentes de color y dos columnas; consulta ruedas/asientos/motores por sus ranuras reales, diferenciando piezas ausentes. Se separa la acción del capó de la inspección del motor. Se añaden los 20 coches de carretera de Belroft Mk13. Las cajas de ruedas tienen un máximo de subida de 2.5 bloques, los ajustes de inclinación se limitan gradualmente y el daño distingue vegetación blanda de piedra. Se conserva el máximo de 6% por choque. Instalación, vista previa y límites: [vehicle-workshop-patch](../vehicle-workshop-patch/README.md).

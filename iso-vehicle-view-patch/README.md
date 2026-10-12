@@ -11,3 +11,7 @@ Pruebas: 12 casos simulados de foco del coche, foco desplazado con CTRL, actuali
 ```sh
 python iso-vehicle-view-patch/build.py ISO_19 TOOLS
 ```
+
+## .21: conservar el suelo
+
+El foco montado conserva como mínimo el Y inferior del jugador y `floor(vehicle.position.y)+1`. Una caja envolvente inclinada ya no reduce ese mínimo bajo la carretera. Se conservan las correcciones de visibilidad y de actualización al conducir. Doce pruebas simuladas y análisis de 886 métodos; sin ejecución del juego.

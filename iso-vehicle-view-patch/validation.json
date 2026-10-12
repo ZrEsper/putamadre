@@ -1,6 +1,6 @@
 {
   "input_sha256": "813ba1dfd873bdd2520f59cfc4e7fef60fa75793f7a77316257359132af30c1b",
-  "output_sha256": "40984fc06865f4cc655f3f1f89e72204c6710cacc49888f139d2ba28d067e032",
+  "output_sha256": "31be492097926ec669f4588b54064354eccd9789f4e84ca1c96e7fe97b282fd9",
   "changed_entries": [
     "META-INF/neoforge.mods.toml",
     "com/cleannrooster/dungeons_iso/compat/SodiumCompat.class",
