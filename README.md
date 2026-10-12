@@ -293,3 +293,7 @@ Versión .12: el retroceso temporal se separa del objetivo bajo el cursor y deca
 ## Zomboid Clans .7: nexo generador, alertas y mejores recompensas
 
 [Descargar .7](mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.7-nexus-alerts-surface-rewards.jar). Motor y partículas, barra grande de vida/daño, sonidos por fase y resultado, iconos de depósito y recompensas de armas TACZ con munición compatible y armaduras FracturePoint. Spawns en superficies exteriores bajas y comprobación periódica de navegación. 160 comprobaciones simuladas; prueba real pendiente. [Detalles](faction-simple-patch/README.md).
+
+## Dungeons Iso .18: mochilas y recorte con CTRL
+
+[Descargar .18](mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.18-backpacks-ctrl-cutaway.jar). Corrige la clasificación de mochilas colocadas y el uso de mochilas en ambas manos tras una interacción PASS. El recorte de paredes/techos sigue el foco adelantado con CTRL. Reemplaza .17; Sophisticated Backpacks permanece sin modificar. 15 comprobaciones simuladas; prueba en Minecraft pendiente. [Detalles y fuentes](iso-backpack-patch/README.md).

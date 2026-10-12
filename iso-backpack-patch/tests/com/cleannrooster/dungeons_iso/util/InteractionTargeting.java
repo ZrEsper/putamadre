@@ -1,0 +1,1 @@
+package com.cleannrooster.dungeons_iso.util;public class InteractionTargeting {public static boolean isBlacklisted(Object world,Object pos){return ((dev.zomboid.isotacz.BackpackChecks.World)world).blacklisted;}}
