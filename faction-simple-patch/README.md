@@ -1,3 +1,15 @@
+## Actualización .4: aparición accesible y abandono de territorio
+
+[Descargar .4](../mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.4-pve-spawn-territory-fix.jar). Reemplaza versiones anteriores en cliente y servidor.
+
+La búsqueda anterior se limitaba al chunk del nexo y a una altura aleatoria. Ahora prueba suelo sólido en un anillo de 8–24 bloques por eje, a la altura del nexo y hasta cuatro bloques arriba/abajo, incluyendo chunks vecinos ya cargados. Exige espacio para el cuerpo y una ruta de navegación hasta el nexo. No genera a menos de seis bloques del defensor seleccionado.
+
+Primero intenta generar un enemigo antes de consumir la oferta; si no puede, rechaza el inicio y conserva la oferta, con un mensaje para mover el nexo cerca de un patio o entrada abierta. Durante la partida incorpora hasta tres enemigos por segundo. Conserva contornos rojos y especiales.
+
+Debe permanecer al menos un participante vivo y conectado dentro de cualquier chunk reclamado por su clan, en la misma dimensión. Cuando no queda ninguno, la defensa falla en la siguiente comprobación (aproximadamente un segundo), limpia los enemigos y no entrega recompensas. Cambiar a otro chunk propio no cuenta como abandonar.
+
+110 comprobaciones con API simuladas. Prueba real de navegación, spawns y renderizado en Minecraft pendiente.
+
 ## Actualización .3: descripción, contorno rojo y corrección del crash
 
 [Descargar .3](../mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.3-nexus-tooltip-fix.jar). Reemplaza .1 o .2 en cliente y servidor; conserva una sola versión.

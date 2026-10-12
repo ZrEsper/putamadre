@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,subprocess,tempfile,os,zipfile,json,hashlib
-r=Path(__file__).resolve().parent;base=Path(sys.argv[1]).resolve();tools=Path(sys.argv[2]).resolve();stubs=Path(sys.argv[3]).resolve() if len(sys.argv)>3 else None;out=r.parent/'mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.3-nexus-tooltip-fix.jar'
+r=Path(__file__).resolve().parent;base=Path(sys.argv[1]).resolve();tools=Path(sys.argv[2]).resolve();stubs=Path(sys.argv[3]).resolve() if len(sys.argv)>3 else None;out=r.parent/'mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.4-pve-spawn-territory-fix.jar'
 assert hashlib.sha256(base.read_bytes()).hexdigest()=='54a6bc7d6397af982c7e3e0d0c6834cf7c183b9d50a862ff250fe072e4f50fab','Unexpected base'
 with zipfile.ZipFile(r.parent/'faction-clans-patch/faction-clans.1-fuentes.zip') as archive:
  for name,digest in json.loads(archive.read('tools.sha256.json')).items():
@@ -24,12 +24,12 @@ with tempfile.TemporaryDirectory() as tmp:
   texts=['Defiende este nexo para ganar XP y recompensas.', 'El jefe debe colocarlo dentro de un chunk del clan.', 'Inicia la defensa desde K > Oleadas PvE.', 'Vida: 100; mejoras hasta 350 (+25 por nivel).', 'Daño por golpe: zombi 5; infectado especial 10.', 'La vida no se reinicia entre las 3 oleadas.', 'Si cae el nexo o mueren todos los defensores, pierdes.', 'Recogible fuera de defensa. Espera entre partidas: 5 min.'] if lang=='es_es' else ['Defend this nexus to earn clan XP and rewards.', 'The leader must place it inside a claimed clan chunk.', 'Start a defense from K > PvE Waves.', 'Health: 100; upgrade to 350 (+25 per level).', 'Damage per hit: zombie 5; special infected 10.', 'Health does not reset between the 3 waves.', 'Lose if the nexus falls or all defenders die.', 'Move outside defenses. Cooldown between games: 5 min.']
   for i,text in enumerate(texts,1):d['tooltip.factionfriction.tribal_nexus.'+str(i)]=text
   data[n]=(json.dumps(d,ensure_ascii=False,indent=2)+'\n').encode()
- data['META-INF/neoforge.mods.toml']=data['META-INF/neoforge.mods.toml'].replace(b'1.8.0R-zomboid-clans.1',b'1.8.0R-zomboid-clans.3')
+ data['META-INF/neoforge.mods.toml']=data['META-INF/neoforge.mods.toml'].replace(b'1.8.0R-zomboid-clans.1',b'1.8.0R-zomboid-clans.4')
  with zipfile.ZipFile(out,'w',zipfile.ZIP_DEFLATED) as z:
   for n,b in data.items():z.writestr(n,b)
  with zipfile.ZipFile(base) as a,zipfile.ZipFile(out) as b:
   assert b.testzip() is None
   assert not any(n.startswith('net/') for n in b.namelist())
   changed=[n for n in a.namelist() if a.read(n)!=b.read(n)]
- (r/'validation.json').write_text(json.dumps({'input_sha256':hashlib.sha256(base.read_bytes()).hexdigest(),'output_sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'changed_original_entries':changed,'minecraft_runtime_tested':False,'simulated_checks_passed':106},indent=2)+'\n')
+ (r/'validation.json').write_text(json.dumps({'input_sha256':hashlib.sha256(base.read_bytes()).hexdigest(),'output_sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'changed_original_entries':changed,'minecraft_runtime_tested':False,'simulated_checks_passed':110},indent=2)+'\n')
  print('Verified JAR integrity and no packaged API doubles')
