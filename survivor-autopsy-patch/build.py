@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,subprocess,tempfile,zipfile,json,hashlib,os
-r=Path(__file__).resolve().parent;base=Path(sys.argv[1]);tools=Path(sys.argv[2]);asm=os.pathsep.join(str(tools/n) for n in ['asm.jar','asm-tree.jar','asm-analysis.jar']);out=r.parent/'mods/survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v25-autopsy-first-person.jar'
+r=Path(__file__).resolve().parent;base=Path(sys.argv[1]);tools=Path(sys.argv[2]);asm=os.pathsep.join(str(tools/n) for n in ['asm.jar','asm-tree.jar','asm-analysis.jar']);out=r.parent/'mods/survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v26-minimal-death-first-person.jar'
 with tempfile.TemporaryDirectory() as t:
  t=Path(t);c=t/'classes';p=t/'patch';ecj=['java','-jar',str(tools/'ecj.jar'),'-21','-proc:none','-nowarn']
  subprocess.run(ecj+['-d',str(c)]+[str(x) for x in (r/'src').rglob('*.java')],check=True)

@@ -43,9 +43,9 @@ Versión .5: con mano principal vacía y cámara isométrica, antes de `Minecraf
 
 Versión .6: además de las distancias, restaura el color de la niebla después de `CullingBackdrop` de Dungeons Iso, que podía llevar los colores a negro al ocultar techos. Actualiza los campos de FogRenderer, el color del shader y el fondo recortado al mismo tono atmosférico. Un segundo hook de color se ejecuta al final de setupColor; el hook de distancia reaplica también el color. Conserva agua/lava, modo apagado y cámara normal. Añade `/zomboidfog estado` para mostrar intensidad, cámara isométrica detectada y modo. Cuatro regresiones con APIs simuladas reproducen el color negro y comprueban su restauración en las tres salidas; el aspecto y el orden real con BetterFog/Sodium requieren validación en Minecraft.
 
-## Survivor Creator v25: autopsia y spawn en primera persona
+## Survivor Creator v26: pantalla de muerte minimalista
 
-[Descargar Survivor Creator v25](mods/survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v25-autopsy-first-person.jar). Reemplaza v24 en el cliente. Informe con figura anatómica, lesiones graves y mecanismo de muerte registrado/probable según los datos. Primera persona al entrar/reaparecer, sin bloquear cambios posteriores de cámara. [Detalles y validación](survivor-autopsy-patch/README.md). Pendiente comprobar el aspecto y los eventos en Minecraft.
+[Descargar Survivor Creator v26](mods/survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v26-minimal-death-first-person.jar). Reemplaza la versión anterior en el cliente. Pantalla sencilla con silueta pequeña a la derecha, marcas y notas de todas las lesiones registradas por zona y causa de muerte. Primera persona al entrar/reaparecer, sin bloquear cambios posteriores de cámara. [Detalles y validación](survivor-autopsy-patch/README.md). Pendiente comprobar el aspecto y los eventos en Minecraft.
 
 ## Faction Friction: clanes del apocalipsis .1
 
