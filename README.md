@@ -264,7 +264,7 @@ Versión .12: el retroceso temporal se separa del objetivo bajo el cursor y deca
 
 ## First Aid: derribo y reanimación asistida
 
-[Descargar First Aid actualizado](mods/firstaid-1.21.1-ZOMBOID-v3.5.0-assisted-revival.jar). Reemplazar First Aid en cliente y servidor. +3 corazones máximos; cabeza o torso a cero no causan muerte instantánea. Derribo de 100 segundos, ayuda con clic derecho durante 8 segundos, reanimación propia con desfibrilador en mano, regreso con 3 corazones y 20 segundos sin daño de sangrado para vendarse. [Detalles y validación](firstaid-assist-patch/README.md).
+[Descargar First Aid actualizado](mods/firstaid-1.21.1-ZOMBOID-v3.5.1-revival-timer-fix.jar). Reemplazar First Aid en cliente y servidor. +3 corazones máximos; cabeza o torso a cero no causan muerte instantánea. Derribo de 100 segundos, ayuda con clic derecho durante 8 segundos, reanimación propia con desfibrilador en mano, regreso con 3 corazones y 20 segundos sin daño de sangrado para vendarse. [Detalles y validación](firstaid-assist-patch/README.md).
 
 ## Quietly v11: cofres y barriles a cinco bloques
 
