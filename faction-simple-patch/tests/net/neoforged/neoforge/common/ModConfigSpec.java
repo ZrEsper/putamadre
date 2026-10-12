@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.common;public class ModConfigSpec{public static class BooleanValue{public boolean value;public BooleanValue(boolean v){value=v;}public Object get(){return value;}}public static class IntValue{public int value;public IntValue(int v){value=v;}public Object get(){return value;}}}

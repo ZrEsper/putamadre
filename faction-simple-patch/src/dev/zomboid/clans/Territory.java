@@ -1,0 +1,2 @@
+package dev.zomboid.clans;
+public final class Territory {public static void current(boolean release){Object mc=R.call(R.type("net.minecraft.client.Minecraft"),"getInstance"),player=R.get(mc,"player");if(player==null)return;Object chunk=R.call(player,"chunkPosition");String type="me.danialisntcool.factionfriction.network."+(release?"PacketUnclaimChunk":"PacketClaimChunk");Object packet=R.make(type,((Number)R.get(chunk,"x")).intValue(),((Number)R.get(chunk,"z")).intValue());R.call(R.type("me.danialisntcool.factionfriction.network.FFNetwork"),"sendToServer",packet);}}

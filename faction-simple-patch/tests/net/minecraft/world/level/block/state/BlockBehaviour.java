@@ -1,0 +1,1 @@
+package net.minecraft.world.level.block.state;public class BlockBehaviour {public static class Properties {public float hardness,resistance;public Object push;public static Properties of(){return new Properties();}public Properties strength(float h,float r){hardness=h;resistance=r;return this;}public Properties pushReaction(Object p){push=p;return this;}}}

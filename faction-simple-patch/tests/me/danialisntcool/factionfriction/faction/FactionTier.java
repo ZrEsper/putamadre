@@ -1,0 +1,1 @@
+package me.danialisntcool.factionfriction.faction;public enum FactionTier {TEAM,COLONY,COUNTRY}

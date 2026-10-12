@@ -1,0 +1,1 @@
+package me.danialisntcool.factionfriction.network;public class NotificationUtil {public static java.util.List<String> messages=new java.util.ArrayList<>();public static void send(net.minecraft.server.level.ServerPlayer p,net.minecraft.network.chat.Component c){messages.add(((net.minecraft.network.chat.MutableComponent)c).text);}}

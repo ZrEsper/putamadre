@@ -1,0 +1,1 @@
+package net.minecraft.world.item;public class BlockItem extends Item {public Object block;public BlockItem(Object block,Item.Properties properties){super("factionfriction:tribal_nexus");this.block=block;}}

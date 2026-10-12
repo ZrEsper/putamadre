@@ -1,0 +1,1 @@
+package net.minecraft.world.level.block;public class Block {public net.minecraft.world.level.block.state.BlockBehaviour.Properties properties;public Block(net.minecraft.world.level.block.state.BlockBehaviour.Properties p){properties=p;}}

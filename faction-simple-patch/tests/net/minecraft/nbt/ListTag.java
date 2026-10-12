@@ -1,0 +1,1 @@
+package net.minecraft.nbt;public class ListTag extends java.util.ArrayList<Object> {public CompoundTag getCompound(int i){return (CompoundTag)get(i);}}

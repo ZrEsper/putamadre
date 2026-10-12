@@ -1,0 +1,1 @@
+package me.danialisntcool.factionfriction.faction;public enum FactionRank {CITIZEN,MILITARY,COMMANDER,CO_LEADER,LEADER,CREATOR,LANDLORD}

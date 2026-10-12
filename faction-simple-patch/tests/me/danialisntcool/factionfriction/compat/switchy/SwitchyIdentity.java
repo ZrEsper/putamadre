@@ -1,0 +1,1 @@
+package me.danialisntcool.factionfriction.compat.switchy;import java.util.*;public final class SwitchyIdentity {public static UUID id(Object entity){return ((net.minecraft.server.level.ServerPlayer)entity).uuid;}public static net.minecraft.server.level.ServerPlayer online(net.minecraft.server.MinecraftServer s,UUID id){return s.online.get(id);}}

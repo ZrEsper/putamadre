@@ -1,0 +1,1 @@
+package net.minecraft.world.entity.ai.goal;public abstract class Goal {public enum Flag {MOVE,LOOK}private java.util.EnumSet<Flag> flags;public void setFlags(java.util.EnumSet<Flag> flags){this.flags=flags;}public java.util.EnumSet<Flag> getFlags(){return flags;}public abstract boolean canUse();public boolean canContinueToUse(){return canUse();}public void tick(){}}
