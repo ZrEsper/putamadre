@@ -1,0 +1,1 @@
+package com.tacz.guns.api.item;import dev.zomboid.tacz.Bridge;public class IGun {public static Object getIGunOrNull(Object stack){return Bridge.MC.player.gun?new IGun():null;}public float getAimingZoom(Object stack){return Bridge.MC.player.zoom;}}

@@ -1,0 +1,8 @@
+{
+  "input_sha256": "886f64925f62a175e347b20f7ecefea1c440e7008d3b6ae393df853fe43ec125",
+  "output_sha256": "5d138ea54e7fe78793bc42c6ef4f33cdef1b2022e22da48b88f55a166e3b1603",
+  "changed_original_entries": [
+    "com/tacz/guns/client/event/CameraSetupEvent.class"
+  ],
+  "minecraft_runtime_tested": false
+}

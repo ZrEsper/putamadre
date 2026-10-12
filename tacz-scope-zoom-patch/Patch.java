@@ -1,0 +1,10 @@
+import java.nio.file.*;import java.util.*;import java.util.zip.*;import org.objectweb.asm.*;import org.objectweb.asm.tree.*;import org.objectweb.asm.tree.analysis.*;
+public class Patch implements Opcodes {
+ public static void main(String[] a)throws Exception{Map<String,byte[]> data=new TreeMap<>();int changed=0,methods=0;try(ZipFile z=new ZipFile(a[0])){for(var es=z.entries();es.hasMoreElements();){var e=es.nextElement();byte[] b=z.getInputStream(e).readAllBytes();if(e.getName().equals("com/tacz/guns/client/event/CameraSetupEvent.class")){ClassNode c=new ClassNode();new ClassReader(b).accept(c,0);for(MethodNode m:c.methods)if(m.name.equals("applyScopeMagnification")){if(!m.desc.equals("(Lnet/neoforged/neoforge/client/event/ViewportEvent$ComputeFov;)V"))throw new IllegalStateException(m.desc);m.instructions.clear();m.tryCatchBlocks.clear();m.localVariables=null;m.instructions.add(new VarInsnNode(ALOAD,0));m.instructions.add(new MethodInsnNode(INVOKESTATIC,"dev/zomboid/tacz/ScopeZoom","apply","(Ljava/lang/Object;)V",false));m.instructions.add(new InsnNode(RETURN));m.maxStack=1;m.maxLocals=1;changed++;}ClassWriter w=new ClassWriter(ClassWriter.COMPUTE_MAXS);c.accept(w);b=w.toByteArray();}data.put(e.getName(),b);}}
+ if(changed!=1)throw new IllegalStateException("scope hook count "+changed);
+ try(var files=Files.walk(Path.of(a[2]))){for(var p:files.filter(p->p.toString().endsWith(".class")).toList())data.put(Path.of(a[2]).relativize(p).toString(),Files.readAllBytes(p));}
+ for(var e:data.entrySet())if(e.getKey().endsWith(".class")){ClassNode c=new ClassNode();new ClassReader(e.getValue()).accept(c,0);for(var m:c.methods)if((m.access&(ACC_ABSTRACT|ACC_NATIVE))==0){new Analyzer<BasicValue>(new BasicVerifier()).analyze(c.name,m);methods++;}}
+ try(var z=new ZipOutputStream(Files.newOutputStream(Path.of(a[1])))){for(var e:data.entrySet()){z.putNextEntry(new ZipEntry(e.getKey()));z.write(e.getValue());z.closeEntry();}}
+ System.out.println("Verified bytecode methods: "+methods);
+ }
+}
