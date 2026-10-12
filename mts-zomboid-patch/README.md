@@ -60,3 +60,11 @@ El script normaliza los `00` numéricos originales únicamente en las definicion
 ## Corrección Mechanics .2
 
 El log enviado detectó una anotación `@Mixin` con retención incorrecta en `ManualMouseMixin`. Se pasó de RuntimeVisibleAnnotations a RuntimeInvisibleAnnotations, conforme a la retención CLASS que requiere Mixin. El verificador ahora rechaza ese error y reproduce el fallo de .1 antes de aceptar .2. El pack Dashboard/Trunks .1 no cambia. Las mejoras de mecánica se conservan y se recomienda combinar .2 con Dungeons Iso .19 para conducir/comer en esa cámara. Ver `core-validation.json`.
+
+## Corrección Mechanics .3
+
+El nuevo log llegó a construir MTS y encontró `VerifyError: Bad type on operand stack` en `ItemItem.doEntityInteraction`. La comparación de daño ya tomaba la pieza, pero el propietario del campo `damageVar` seguía declarado como `EntityVehicleF_Physics`. Se cambió al propietario real común `AEntityE_Interactable`, sin forzar que el motor/pieza sea un coche.
+
+Respecto de Mechanics .2, sólo cambia `ItemItem.class`; se conserva la corrección de mixin, HUD, controles y maleteras. `FieldJvmCheck.java` extrae el propietario real de la instrucción de reparación, reproduce el VerifyError anterior en una JVM con `-Xverify:all` y verifica la instrucción corregida con receptores base, vehículo y motor. Estas clases pequeñas de prueba no se empaquetan y no sustituyen un arranque completo en Minecraft.
+
+Instalar únicamente MTS Mechanics .3 y retirar .1/.2. Conservar Dungeons Iso .19 y Official Pack Dashboard/Trunks .1. El error final `Mod architectury is not available` ocurrió después de que MTS había dejado la construcción de mods en estado roto; no se cambia Architectury para resolver este VerifyError.
