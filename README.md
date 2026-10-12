@@ -19,7 +19,7 @@ Versión .11: el clic derecho con un melee de LR Tactical llega al ataque pesado
 
 ## TACZ: tercera persona normal, niebla densa, puñetazos y disparos más fuertes .6
 
-[Descargar TACZ modificado](mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.6.jar). Sustituir el TACZ del cliente, sin duplicarlo. Mira de círculo y línea al apuntar en tercera persona normal, sin Dungeons Iso. Niebla periódica y comandos `/zomboidfog prueba`, `/zomboidfog auto` y `/zomboidfog off`. [Instalación, validación y límites](tacz-third-person-patch/README.md).
+[Descargar TACZ modificado](mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.7.jar). Sustituir el TACZ del cliente y servidor, sin duplicarlo. Disparos con el doble de alcance que .6, un poco más fuertes y con refuerzo bajo techo. Mira de círculo y línea al apuntar en tercera persona normal, sin Dungeons Iso. Niebla periódica y comandos `/zomboidfog prueba`, `/zomboidfog auto` y `/zomboidfog off`. [Instalación, validación y límites](tacz-third-person-patch/README.md).
 
 ## Gun Durability: destrabado al disparar .1
 
