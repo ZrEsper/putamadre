@@ -3,7 +3,7 @@ import java.util.*;import minecrafttransportsimulator.entities.instances.*;impor
 public class Checks {
  static int count;static void check(boolean b,String msg){count++;if(!b)throw new AssertionError(msg);}
  public static class Variable {public double currentValue;public boolean isActive;public Variable(double n){currentValue=n;isActive=n!=0;}public void setTo(double v,boolean sync){currentValue=v;isActive=v>0;}public void setActive(boolean b,boolean sync){currentValue=b?1:0;isActive=b;}}
- public static class General {public double health=150;}public static class Motorized {public double fuelCapacity=1000;}
+ public static class General {public double health=150;}public static class Motorized {public boolean isAircraft;public double fuelCapacity=1000;}
  public static class Definition {public String packID="mtsofficialpack",systemName="scout";public General general=new General();public Motorized motorized=new Motorized();public List<Slot> parts=new ArrayList<>();public List<Object> instruments=new ArrayList<>();}
  public static class Slot {public java.util.List<String> types=new java.util.ArrayList<>();public Point pos=new Point(0,0,0);public boolean isController;public String defaultPart="mtsofficialpack:zomboid_trunk";}public static class World {public Set<Object> knownAirBlocks=new HashSet<>();public String name="minecraft:stone";public float hardness=1.5f;public String getBlockName(Object pos){return name;}public float getBlockHardness(Object pos){return hardness;}public boolean client;public boolean isClient(){return client;}}
  public static class Point {public double x,y,z;public Point(double x,double y,double z){this.x=x;this.y=y;this.z=z;}}public static class Box {public Point localCenter=new Point(0,0,2);}

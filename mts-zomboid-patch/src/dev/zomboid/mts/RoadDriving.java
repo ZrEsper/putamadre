@@ -6,7 +6,7 @@ public final class RoadDriving {
  static final Map<Object,Boolean> sent=new WeakHashMap<>();
  public static boolean road(Object v){if(v==null)return false;if(Mechanics.car(v))return true;Object defs=R.get(R.get(v,"definition"),"parts");if(!(defs instanceof List<?>))return false;for(Object slot:(List<?>)defs){Object types=R.get(slot,"types");if(types instanceof Collection<?> c&&c.stream().anyMatch(t->t.toString().equals("engine_car")||t.toString().equals("engine_motorcycle")))return true;}return false;}
  public static boolean obstacle(String id){return id.endsWith("_wall")||id.endsWith("_fence")||id.endsWith("_fence_gate")||id.endsWith(".iron_bars")||id.equals("minecraft:iron_bars");}
- public static boolean transport(Object v){return v!=null&&R.get(R.get(v,"definition"),"motorized")!=null;}
+ public static boolean transport(Object v){return v!=null&&R.type("minecrafttransportsimulator.entities.instances.EntityVehicleF_Physics").isInstance(v)&&R.get(R.get(v,"definition"),"motorized")!=null;}
  public static void enter(Object v){boolean active=transport(v);collisionContext.set(active);if(active){Object world=R.get(v,"world");scopedWorld.set(world);((Set<?>)R.get(world,"knownAirBlocks")).clear();}}
  public static void leave(){Object world=scopedWorld.get();if(world!=null)((Set<?>)R.get(world,"knownAirBlocks")).clear();scopedWorld.remove();collisionContext.remove();}
  public static Object shape(Object shape,Object state){if(!Boolean.TRUE.equals(collisionContext.get()))return shape;String id=R.call(R.call(state,"getBlock"),"getDescriptionId").toString();return obstacle(id)?R.call(R.type("net.minecraft.world.phys.shapes.Shapes"),"empty"):shape;}
