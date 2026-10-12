@@ -13,7 +13,7 @@ with zipfile.ZipFile(official) as z:data={n:z.read(n) for n in z.namelist()}
 for car in ['scout','merc230','fordmustang69','gmcbrig','firetruck','quad']:
  n='assets/mtsofficialpack/jsondefs/vehicles/'+car+'.json';d=parse(data[n]);d['motorized']['climbSpeed']=.12;save(data,n,d)
 for wheel in ['wheelsmall','wheelmedium','wheellarge','wheelhuge']:
- n='assets/mtsofficialpack/jsondefs/parts/'+wheel+'.json';d=parse(data[n]);d['ground']['climbHeight']=2.5;save(data,n,d)
+ n='assets/mtsofficialpack/jsondefs/parts/'+wheel+'.json';d=parse(data[n]);d['ground']['climbHeight']=1.5;save(data,n,d)
 # Static panel and the car's silhouette; coloured component masks live outside the visible panel.
 im=Image.new('RGBA',(1024,512));dr=ImageDraw.Draw(im);dr.rounded_rectangle((0,0,619,369),radius=8,fill=(16,19,19,242),outline=(108,118,114,255),width=2);dr.line((18,48,600,48),fill=(94,107,100,255));dr.line((197,55,197,318),fill=(69,79,74,255));dr.line((418,55,418,318),fill=(50,62,55,255))
 outline=[(55,68),(118,68),(137,81),(151,117),(152,260),(143,283),(127,306),(45,306),(28,281),(21,254),(22,118),(37,82)]
@@ -37,7 +37,7 @@ buf=io.BytesIO();im.save(buf,format='PNG')
 for suffix in ['','_lit']:n='assets/mtsofficialpack/textures/guis/zomboid_check'+suffix+'.png';data[n]=buf.getvalue();changed.append(n)
 for suffix in ['','_lit']:
  n='assets/mtsofficialpack/textures/guis/zomboid_controls'+suffix+'.png';control=Image.new('RGBA',(512,256));cd=ImageDraw.Draw(control);cd.rounded_rectangle((0,0,479,204),radius=8,fill=(17,22,20,230),outline=(103,122,110,255),width=2);b=io.BytesIO();control.save(b,format='PNG');data[n]=b.getvalue();changed.append(n)
-out=repo/'mods/MTS-Official-Pack-1.21.1-V29-zomboid-workshop.4.jar';write(out,data);official_hash=hashlib.sha256(out.read_bytes()).hexdigest();im.crop((0,0,620,370)).save(r/'workshop-layout.png')
+out=repo/'mods/MTS-Official-Pack-1.21.1-V29-zomboid-workshop.5-step-limit.jar';write(out,data);official_hash=hashlib.sha256(out.read_bytes()).hexdigest();im.crop((0,0,620,370)).save(r/'workshop-layout.png')
 # Illustrative preview of the new layout, not a screenshot from Minecraft.
 preview=im.crop((0,0,620,370));pd=ImageDraw.Draw(preview)
 from PIL import ImageFont
@@ -68,9 +68,9 @@ for n in list(bd):
  d=parse(bd[n]);kind=d.get('generic',{}).get('type','')
  if kind not in ['engine_car','ground_wheel']:continue
  if d.get('general',{}).get('health',0)>0:d['general']['health']*=8
- if kind=='ground_wheel':d.setdefault('ground',{})['climbHeight']=2.5
+ if kind=='ground_wheel':d.setdefault('ground',{})['climbHeight']=1.5
  save(bd,n,d)
-bout=repo/'mods/Belroft-Motors-Mk13-zomboid-workshop.1.jar';write(bout,bd)
+bout=repo/'mods/Belroft-Motors-Mk13-zomboid-workshop.2-step-limit.jar';write(bout,bd)
 with zipfile.ZipFile(belroft) as a,zipfile.ZipFile(bout) as b:assert {n for n in a.namelist() if a.read(n)!=b.read(n)}==set(changed)
-(r/'validation.json').write_text(json.dumps({'belroft_input_sha256':hashlib.sha256(belroft.read_bytes()).hexdigest(),'belroft_output_sha256':hashlib.sha256(bout.read_bytes()).hexdigest(),'official_output_sha256':official_hash,'road_vehicles':road,'belroft_changed_entries':changed,'terrain_climb_speed':.12,'maximum_step':2.5,'minecraft_runtime_tested':False},indent=2)+'\n')
+(r/'validation.json').write_text(json.dumps({'belroft_input_sha256':hashlib.sha256(belroft.read_bytes()).hexdigest(),'belroft_output_sha256':hashlib.sha256(bout.read_bytes()).hexdigest(),'official_output_sha256':official_hash,'road_vehicles':road,'belroft_changed_entries':changed,'terrain_climb_speed':.12,'maximum_step':1.5,'minecraft_runtime_tested':False},indent=2)+'\n')
 print('Workshop assets verified; Belroft road vehicles:',len(road))

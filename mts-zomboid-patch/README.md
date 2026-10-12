@@ -96,3 +96,13 @@ Pruebas: 50 comprobaciones previas de mecánica y choques, 13 del flujo de inspe
 ## .8: taller, capó y terreno
 
 El taller usa componentes de color y dos columnas; consulta ruedas/asientos/motores por sus ranuras reales, diferenciando piezas ausentes. Se separa la acción del capó de la inspección del motor. Se añaden los 20 coches de carretera de Belroft Mk13. Las cajas de ruedas tienen un máximo de subida de 2.5 bloques, los ajustes de inclinación se limitan gradualmente y el daño distingue vegetación blanda de piedra. Se conserva el máximo de 6% por choque. Instalación, vista previa y límites: [vehicle-workshop-patch](../vehicle-workshop-patch/README.md).
+
+## Versión .9: altura, impacto y respuesta de motor
+
+Instalar core `mechanics.9-impact-rebound`, Official Pack `workshop.5-step-limit` y Belroft `workshop.2-step-limit`, sustituyendo sus versiones anteriores. Conservar Iso .21, Quietly .12 y SurvivorCreator .28.
+
+La subida de las ruedas se limita a 1.5 bloques, incluido el caso en que el diámetro de una rueda grande forzaba un desplazamiento mínimo mayor. Los choques duros que bloquean la marcha generan un rebote horizontal amortiguado: se refleja la componente normal al impacto y se conserva parte de la componente tangencial. La velocidad de retroceso aplicada se limita a 0.15 bloques/tick. La respuesta se aplica después de la corrección nativa de penetración; el servidor comunica el desplazamiento por el mecanismo original de MTS. Se conservan el límite anterior de 6% de daño al coche, el intervalo de separación entre impactos y la ausencia de daño por hojas/musgo. Los impactos fuertes aplican daño nativo a cada ocupante una sola vez (máximo 8 puntos de salud, cuatro corazones por evento); golpes ligeros no lesionan ocupantes.
+
+La subida de RPM deja de saltar instantáneamente a valores altos. Su velocidad depende del par/potencia nativa del motor (fuelConsumption más contribución del compresor), masa del motor, masa actual del vehículo y relación de marcha. Si el pack omite masa de motor se usa una estimación explícita a partir de su potencia nativa. El mod no ofrece cilindrada ni caballos homologados para todos los motores: no se inventan esos datos. Se conservan el cálculo nativo de tracción, peso, ruedas y relaciones de transmisión. Los descensos de RPM al cambiar de marcha y el arranque quedan libres de este límite. La limitación actúa en cliente y servidor.
+
+Validación: 97 comprobaciones simuladas, 4979 métodos analizados con ASM, comprobación JVM del propietario de damageVar, integridad de los JAR y comparación de recursos del pack. No se ejecutó Minecraft: la sensación de conducción y la corrección de posición por red requieren prueba dentro del juego.

@@ -1,0 +1,1 @@
+package minecrafttransportsimulator.systems;public class LanguageSystem {public static Object DEATH_CRASH_NULL=new Object();}

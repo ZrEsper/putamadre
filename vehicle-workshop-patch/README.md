@@ -26,3 +26,5 @@ python mts-zomboid-patch/build.py CORE_ORIGINAL PACK_ORIGINAL JSON_ANALIZADOS TO
 python vehicle-workshop-patch/build.py BELROFT_ORIGINAL
 python iso-vehicle-view-patch/build.py ISO_19 TOOLS
 ```
+
+Actualización: el límite solicitado ahora es **1.5 bloques**. Usar Official .5 y Belroft .2 con core Mechanics .9. El generador parte de los mismos originales y no vuelve a multiplicar salud ni añade maleteras duplicadas. Cambios y validación de impacto/motor: [README del core](../mts-zomboid-patch/README.md#versión-9-altura-impacto-y-respuesta-de-motor).

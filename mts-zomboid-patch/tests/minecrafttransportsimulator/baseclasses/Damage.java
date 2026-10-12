@@ -1,0 +1,1 @@
+package minecrafttransportsimulator.baseclasses;public class Damage {public final double amount;public Damage(double amount,Object box,Object source,Object responsible,Object language){this.amount=amount;}}

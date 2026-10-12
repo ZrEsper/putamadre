@@ -1,7 +1,7 @@
 {
   "belroft_input_sha256": "f506a81c367d80711b533cbba7d205b5db4e7ddfd469539eb3990eee68d1bc0c",
-  "belroft_output_sha256": "70a5db13fb5ccba3f1ecf601bbf75763cdac02d8d587312512c9f150763ed0eb",
-  "official_output_sha256": "f902adf685da3df765c8c0f4340d36d8c4b60bdfea117329e0340cee85d404dc",
+  "belroft_output_sha256": "65e84cf398ef1a9ea06c06bbfe9537e095174305843c13a6dc93f0c9f67df468",
+  "official_output_sha256": "6a7c4add2b355494bddc6f1ab46d95c24decb12869a3ae043684d02a5dfc68eb",
   "road_vehicles": [
     "adventure",
     "adventure_ambulance",
@@ -59,6 +59,6 @@
     "assets/belroftmotors/jsondefs/parts/engine_turbo_hauler_v8.json"
   ],
   "terrain_climb_speed": 0.12,
-  "maximum_step": 2.5,
+  "maximum_step": 1.5,
   "minecraft_runtime_tested": false
 }
