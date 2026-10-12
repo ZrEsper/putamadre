@@ -1,0 +1,13 @@
+# Valorant y GucciVuitton — NeoForge 1.21.1
+
+Instala los tres JAR de esta entrega en `mods` de tu instancia, tanto cliente como servidor. No van en resourcepacks. Necesitas Java 21, NeoForge 21.1, TaCZ 1.1.8 y, para los cuchillos, LesRaisins Tactical Equipements (`lrtactical`) 0.4.3 para 1.21.1. Tu addon tacz-tactical no sustituye a LesRaisins.
+
+Con el juego cerrado, retira los originales: GucciVuitton de Forge 1.20.1, Valorant Knife Pack 0.1.0 original y el ZIP Valorant original de la carpeta `tacz` si lo habías instalado allí. Revisa también sus carpetas exportadas en `tacz`: mueve únicamente las copias antiguas de estos tres packs fuera de esa carpeta. No dejes dos versiones con los mismos IDs; no borres otros packs. Guarda una copia de seguridad. Las nuevas versiones se exportan automáticamente a `tacz/valorant_neoforge_1211`, `tacz/valorant_knife_neoforge_1211` y `tacz/gucci_vuitton_attachment_neoforge_1211` al arrancar. La exportación requiere que la opción TaCZ que deshabilita la copia de packs incorporados no esté activada.
+
+Contenido: 10 armas (9 Valorant y el arma de cristales), 6 cuchillos, 60 accesorios GucciVuitton. Se conservan los IDs, estadísticas, modelos, sonidos, animaciones, créditos y licencias originales. Los atributos de Minecraft conservan `generic.` porque esta versión es 1.21.1.
+
+Cambios: registro JavaFML de NeoForge; dependencias correctas; rutas `recipe` de 1.21; etiquetas comunes `c:`; ingredientes NBT de TaCZ; resultados personalizados con componentes `minecraft:custom_data`; JSON con comentarios normalizado. El filtro de la mesa predeterminada ya no oculta todas las recetas base. Se elimina una receta de mesa vacía inválida. El cargador de cristal conserva su icono, funciones y sonidos: se retiran únicamente las referencias a un modelo y textura que el ZIP original no incluye, como los cargadores estándar de TaCZ. Dos displays de boquillas GucciVuitton sin texturas ni índices registrados se excluyen; los 60 accesorios registrados permanecen.
+
+Validación: integridad ZIP, JSON, TOML y bytecode; 79 recetas; 1802 comprobaciones de referencias a modelos, texturas, animaciones y scripts incluyendo recursos de las dependencias, sin referencias ausentes en esas comprobaciones. Registro compilado contra la API real de TaCZ; anotación NeoForge mediante stub de compilación que no se incluye en los JAR. Esto es validación estática: no se ha ejecutado Minecraft, por lo que la carga y el combate deben probarse en tu instancia.
+
+Las fuentes y el script de conversión están en el ZIP de fuentes. El script contiene rutas locales de los archivos adjuntos: ajusta PACKS y la ruta del JAR de TaCZ antes de reproducirlo. No incluye los packs originales ni redistribuye las dependencias.
