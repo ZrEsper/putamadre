@@ -1,0 +1,1 @@
+package net.minecraft.core;public class HolderLookup{public interface Provider{}}

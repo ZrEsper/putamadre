@@ -1,0 +1,1 @@
+package net.minecraft.world;import net.minecraft.world.item.ItemStack;public interface Container{int getContainerSize();ItemStack getItem(int i);void setItem(int i,ItemStack s);ItemStack removeItem(int i,int amount);ItemStack removeItemNoUpdate(int i);boolean isEmpty();void clearContent();void setChanged();default int getMaxStackSize(){return 64;}}

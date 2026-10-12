@@ -1,0 +1,1 @@
+package net.minecraft.world.inventory;import net.minecraft.core.NonNullList;public class AbstractContainerMenu{public final NonNullList<Slot> slots=new NonNullList<>();public void broadcastChanges(){}}
