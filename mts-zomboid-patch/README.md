@@ -116,3 +116,9 @@ Durante la actualización física de vehículos con ranuras engine_car/engine_mo
 Mientras el conductor mantiene ESPACIO, se envía pz_drift mediante los paquetes originales de variables y se reduce al 12% el factor nativo de alineación de la velocidad con la dirección de las ruedas. Al girar se conserva más velocidad lateral y aparece el derrape; al soltar vuelve el agarre original. No genera agarre en el aire ni fuerza de aceleración adicional. Se omite el disparo de armas montadas con ESPACIO en estos vehículos; aviones y otras máquinas conservan sus controles. Las lecturas de tecla respetan ventanas abiertas y pérdida de foco. La física utiliza la misma variable en cliente y servidor y requiere conductor.
 
 Pasaron 104 comprobaciones simuladas y el análisis de 4991 métodos, además de la verificación JVM del propietario de damageVar y la integridad del JAR. No se ejecutó Minecraft; falta confirmar la sensación del derrape y las colisiones en el mundo del usuario.
+
+## Versión .11: paso de todos los transportes MTS
+
+El contexto que ignora muros estrechos, vallas y rejas ahora cubre todos los vehículos MTS con definición motorized, incluidos aviones, helicópteros, barcos, botes y lanchas de otros packs. Conserva las colisiones de bloques completos, líquidos, terreno y entidades, así como los controles nativos de vuelo/navegación. El derrape de ESPACIO sigue siendo la función terrestre de .10; no sustituye los controles aéreos ni simula un derrape de ruedas en el agua. No modifica botes vanilla.
+
+Reemplazar solo el core .10 por `Immersive-Vehicles-1.21.1-24.0.0-zomboid-mechanics.11-all-transport-pass.jar`. Conservar los packs y otros mods anteriores. Pasaron 109 comprobaciones simuladas, incluida cobertura de helicóptero, avión y embarcación, el análisis ASM y la verificación JVM. No se ejecutó Minecraft.

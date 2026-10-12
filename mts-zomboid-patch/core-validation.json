@@ -1,6 +1,6 @@
 {
-  "output_sha256": "ebddd906dec8a17ea5511385eca53a7f287703eed91c02561432c546038d3169",
+  "output_sha256": "fc7717f889cefa9b387860e9479df2b47954542b3db74391235aa49fd96fff1a",
   "mixin_retention": "CLASS/invisible",
-  "simulated_checks_passed": 104,
+  "simulated_checks_passed": 109,
   "minecraft_runtime_tested": false
 }
