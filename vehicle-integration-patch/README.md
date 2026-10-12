@@ -24,3 +24,22 @@ Reproducción (Java 21, ECJ/ASM y entradas originales indicadas en los manifiest
 python mts-zomboid-patch/build.py CORE_ORIGINAL PACK_ORIGINAL JSON_ANALIZADOS TOOLS --core-only
 python vehicle-integration-patch/build.py TOOLS QUIETLY_V11
 ```
+
+## Versión de mantenimiento y conducción (.6 / pack .3)
+
+Sustituir el core `.5` por `Immersive-Vehicles-1.21.1-24.0.0-zomboid-mechanics.6.jar` y el pack `.2` por `MTS-Official-Pack-1.21.1-V29-zomboid-resistant-maintenance.3.jar`. Conservar Quietly v12 e Iso .19. Reiniciar cliente y servidor.
+
+El motor y la zona del capó/frontal no asociada a puertas permiten revisar el estado con la mano vacía, mediante el paquete nativo de interacción. La pantalla de 500×310 usa texto de tamaño normal, lista chasis, defensas, capó, puertas/ventanas por lado, motor, ruedas instaladas, batería y combustible. Los porcentajes de carrocería/motor usan también el daño nativo; las condiciones de las zonas de carrocería se guardan en variables de MTS y registran los nuevos impactos. El quad omite componentes cerrados. Una reparación nativa de carrocería reduce proporcionalmente el daño registrado por zonas. Los coches previamente usados no contienen historial de qué puerta recibió cada impacto anterior; esas zonas comienzan sin daño registrado mientras la condición global sí conserva el daño guardado.
+
+El HUD de conducción es una franja digital de 340×66 colocada a cuatro unidades del borde inferior, con velocidad, RPM, marcha, combustible y estado legibles, independientes del oscurecimiento de los instrumentos originales. H abre controles: bloqueo del coche, puertas, ventanas, maletera, mantenimiento y el panel original para motor y controles propios del modelo. V cambia las luces delanteras y de posición con una pulsación; mantenerla no repite el cambio. Los controles exigen ser conductor del vehículo; las puertas y la maletera respetan el bloqueo. Los cristales laterales identificados en los modelos se ocultan al bajar las ventanas; los parabrisas se mantienen.
+
+La respuesta del volante pasa de 2 a 3 grados por tick con el ajuste predeterminado, y su retorno de 4 a 5. Se conserva la reducción de giro a alta velocidad. Las ruedas ganan agarre, su capacidad de subir irregularidades pasa de 1.5 a 1.75 bloques y la recuperación vertical de los coches de 0.125 a 0.22 por tick. Se conservan las colisiones físicas.
+
+Vida: carrocería y motores reciben cuatro veces la vida del pack .2 (carrocería: doce veces la original). Se reemplaza la rama que destruía directamente el coche por velocidad de impacto. Impactos de hasta 3 bloques/segundo no cobran daño; choques ligeros, 1%; a partir de 15 bloques/segundo se incrementa gradualmente hasta un máximo de 6% del máximo de vida por choque. La separación de 60 ticks evita cobrar el mismo choque una vez por cada caja del coche. El golpe frontal afecta defensas, capó y motor; el trasero afecta la zona trasera; los laterales afectan puerta y ventana del lado golpeado. El motor también tiene un límite de 6% por impacto frontal. La destrucción de estos seis modelos no genera explosión, y se retiran los efectos visuales de fuego/explosión del estado de carrocería destruida. Las balas, desgaste y otros daños siguen usando MTS.
+
+Validación actual: 50 casos simulados, incluidos 6% máximo, 1% ligero, daño de motor, protección contra cobro por múltiples hitboxes y restauración de condición al reparar; 4909 métodos analizados con ASM; integridad de ambos JAR y comparación de recursos no modificados. No se ejecutó Minecraft: la conducción, el menú interactivo y la cámara necesitan comprobación en el juego con el modpack real.
+
+```sh
+python mts-zomboid-patch/build.py CORE_ORIGINAL PACK_ORIGINAL JSON_ANALIZADOS TOOLS --core-only
+python vehicle-integration-patch/maintenance_pack.py JSON_ANALIZADOS
+```

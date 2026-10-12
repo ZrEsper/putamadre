@@ -1,0 +1,32 @@
+{
+  "pack_input_sha256": "fc3320333dda051184661f2e75c39c047824df38d27dfd062e195e3995389a75",
+  "pack_output_sha256": "6885a94198f2ca1e808dec4c56bbc15d3a6f1ab61aa1f539cae5e994d7838c37",
+  "changed_entries": [
+    "assets/mtsofficialpack/jsondefs/vehicles/scout.json",
+    "assets/mtsofficialpack/jsondefs/vehicles/merc230.json",
+    "assets/mtsofficialpack/jsondefs/vehicles/fordmustang69.json",
+    "assets/mtsofficialpack/jsondefs/vehicles/gmcbrig.json",
+    "assets/mtsofficialpack/jsondefs/vehicles/firetruck.json",
+    "assets/mtsofficialpack/jsondefs/vehicles/quad.json",
+    "assets/mtsofficialpack/jsondefs/parts/engineamci4.json",
+    "assets/mtsofficialpack/jsondefs/parts/enginedetroitdiesel.json",
+    "assets/mtsofficialpack/jsondefs/parts/enginefordfe428.json",
+    "assets/mtsofficialpack/jsondefs/parts/enginemercedesm102.json",
+    "assets/mtsofficialpack/jsondefs/parts/enginequad.json",
+    "assets/mtsofficialpack/jsondefs/parts/wheelsmall.json",
+    "assets/mtsofficialpack/jsondefs/parts/wheelmedium.json",
+    "assets/mtsofficialpack/jsondefs/parts/wheellarge.json",
+    "assets/mtsofficialpack/jsondefs/parts/wheelhuge.json",
+    "assets/mtsofficialpack/textures/guis/zomboid_check.png",
+    "assets/mtsofficialpack/textures/guis/zomboid_check_lit.png",
+    "assets/mtsofficialpack/textures/guis/zomboid_dashboard.png",
+    "assets/mtsofficialpack/textures/guis/zomboid_dashboard_lit.png",
+    "assets/mtsofficialpack/textures/guis/zomboid_controls.png",
+    "assets/mtsofficialpack/textures/guis/zomboid_controls_lit.png"
+  ],
+  "health_multiplier_relative_to_pack_2": 4,
+  "steering_speed_dependent": true,
+  "climb_speed": 0.22,
+  "wheel_climb_height": 1.75,
+  "minecraft_runtime_tested": false
+}

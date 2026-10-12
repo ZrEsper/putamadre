@@ -76,3 +76,7 @@ El log de juego confirmó un ClassCastException en Mechanics.ensure de .3: parts
 ## Corrección .5: manual real e interacción isométrica
 
 La caja manual ya no utiliza el acelerador simplificado que elegía marchas al acelerar/frenar. Se bloquean los seis emisores nativos de cambio para motores manuales y el modo guardado se aplica durante la actualización. El clic de cambio no se procesa también como interacción nativa. Se omiten los ajustes de cámara propios de MTS durante el modo isométrico y se incorporan rayos de selección para las piezas del vehículo. Instalación y pruebas: [vehicle-integration-patch](../vehicle-integration-patch/README.md).
+
+## Versión .6
+
+Mantenimiento sin kit para inspección, lista de componentes con texto mayor, vida aumentada, choques localizados con límite de 6% (ligeros 1%), eliminación de explosión por destrucción en los seis coches oficiales, luces V, controles H y tablero compacto inferior. Se mantienen los cambios manuales de .5. Los resultados y límites de las pruebas se documentan en [la integración](../vehicle-integration-patch/README.md).
