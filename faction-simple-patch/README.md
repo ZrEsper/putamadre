@@ -1,3 +1,17 @@
+## Actualización .6: suelo, entradas, asedio y comando de prueba
+
+[Descargar .6](../mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.6-ground-entry-debug.jar). Reemplaza versiones anteriores en cliente y servidor. El protocolo cambia: ambos deben usar .6.
+
+Los enemigos buscan pisos sólidos con espacio y sin agua. Priorizan alturas cercanas al nivel del mar + 1 (aproximadamente Y=64 en Mosslorn), como referencia para suelo/primer piso, y recorren después el resto de la altura legal del mundo. Esto no identifica semánticamente el primer piso de cada edificio. Ya no se exige que exista un camino completo antes de generar: la IA puede abrirse paso. Se mantiene el anillo de 8–24 bloques por eje alrededor del nexo.
+
+Si hay una ruta directa, la usan. Si no, buscan entradas alcanzables hasta seis bloques alrededor: puertas y trampillas antes que cristal/ventanas. Los enemigos atascados abren puertas/trampillas próximas, rompen ventanas después y finalmente obstáculos sólidos. No rompen el nexo por esta vía, bloques irrompibles, cofres, barriles, shulkers ni bloques con block entity. Un jugador detrás de una pared no interrumpe la IA de asedio sin línea de visión.
+
+Como último recurso, después de atascarse, pueden colocar peldaños de cobblestone para subir hacia un objetivo más alto, hasta 16 bloques por infectado. Los bloques colocados y rotos modifican el mundo de forma permanente. Esta es una solución local de obstáculos, no un planificador que garantiza superar cualquier edificio.
+
+Prueba: `/clanpvetest`. Requiere operador nivel 2, ser jefe/comandante, tener al menos un chunk y un nexo colocado. Inicia una defensa común saltándose el cooldown y la solicitud de oferta; conserva los requisitos de espacio. No inicia otra si hay una activa. Es una defensa real: puede romper el nexo y entrega sus recompensas normales si ganas. No se añade tecla.
+
+135 comprobaciones simuladas, incluyendo alturas completas, preferencia por puertas sobre ventanas, apertura, rotura de ventanas y paredes, protección de almacenamientos, construcción limitada y registro/permisos del comando. Falta probar la navegación y el rendimiento en Minecraft con tus edificios.
+
 ## Actualización .5: puedes salir y final gradual
 
 [Descargar .5](../mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.5-pve-roaming-gradual-end.jar). Reemplaza versiones anteriores en cliente y servidor.

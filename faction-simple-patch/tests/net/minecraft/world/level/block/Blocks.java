@@ -1,0 +1,1 @@
+package net.minecraft.world.level.block;public class Blocks {public static final Step COBBLESTONE=new Step();public static class Step {public Object defaultBlockState(){return new dev.zomboid.clans.PveChecks.State("minecraft:cobblestone");}}}

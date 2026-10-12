@@ -285,3 +285,7 @@ Versión .12: el retroceso temporal se separa del objetivo bajo el cursor y deca
 ## Zomboid Clans .5: salir de la base y final gradual
 
 [Descargar .5](mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.5-pve-roaming-gradual-end.jar). Salir del territorio ya no termina la defensa. La zona del nexo sigue en simulación, y al perder por destrucción o muertes de participantes los enemigos restantes mueren gradualmente. 120 comprobaciones simuladas; prueba en Minecraft pendiente. Reemplaza versiones anteriores en cliente y servidor.
+
+## Zomboid Clans .6: suelo, entradas y prueba por comando
+
+[Descargar .6](mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.6-ground-entry-debug.jar). Prioriza suelo/primer piso, permite otras alturas, intenta puertas/trampillas/ventanas y añade rotura o peldaños como último recurso. `/clanpvetest` inicia una defensa común sin cooldown para operadores con clan y nexo. 135 comprobaciones simuladas; prueba real pendiente.
