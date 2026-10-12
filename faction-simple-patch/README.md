@@ -1,3 +1,17 @@
+## Actualización .5: puedes salir y final gradual
+
+[Descargar .5](../mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.5-pve-roaming-gradual-end.jar). Reemplaza versiones anteriores en cliente y servidor.
+
+Salir de cualquier chunk o alejarse de la base no termina la defensa. Los zombis siguen buscando destruir el nexo y puedes regresar a defenderlo. Se mantienen las tres fases y la victoria al eliminarlas. Se pierde si cae el nexo o mueren todos los participantes; quienes ya murieron no se reincorporan al reaparecer.
+
+Al perder se detiene la generación y los enemigos restantes mueren en grupos pequeños, aproximadamente durante 12 segundos como máximo, con un segundo adicional para su animación de muerte. La limpieza no da XP ni premios de victoria. Otros mods pueden modificar las animaciones o los drops normales de muerte. El cierre del servidor realiza una limpieza inmediata.
+
+Una zona de 5 × 5 chunks alrededor del nexo permanece en simulación durante la defensa y la limpieza mediante tickets temporales, independientes por partida y liberados al terminar. No se cancelan las defensas por salir, desconectarse sin morir, quedarse temporalmente sin lugar de generación, ni por el antiguo límite de 15 minutos. Borrar el clan, retirar el nexo por comandos o cerrar el servidor sigue interrumpiéndolas.
+
+120 comprobaciones con API simuladas: continuidad fuera del territorio, ausencia del límite anterior, carga y liberación de tickets superpuestos, muerte gradual, animación antes de retirada, limpieza de contornos y ausencia de premios al perder. Falta prueba real de Minecraft.
+
+Las secciones .4 y anteriores de abajo documentan versiones antiguas; .5 reemplaza su regla de abandono.
+
 ## Actualización .4: aparición accesible y abandono de territorio
 
 [Descargar .4](../mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.4-pve-spawn-territory-fix.jar). Reemplaza versiones anteriores en cliente y servidor.
@@ -47,7 +61,7 @@ El nexo tiene 100 PV iniciales y diez mejoras opcionales de +25 PV: máximo 350.
 
 Durante la partida los jugadores no pueden romper ni retirar el nexo. Resiste explosiones y pistones. Los zombis de la defensa buscan el nexo y atacan a supervivientes próximos. Un golpe al nexo quita 5 PV para zombis normales y 10 para especiales/mutantes, con un intervalo individual de un segundo. Solo dañan el bloque con una línea despejada: no golpean a través de paredes. Los especiales conservan sus modelos, atributos y habilidades del mod instalado; se priorizan supervivientes a mayor distancia que los zombis básicos. First Aid derribado no se considera un objetivo que pueda combatir.
 
-Cada defensa tiene **tres fases**. La vida del nexo se conserva entre fases; vuelve a su máximo al iniciar otra partida. Se pierde al destruirse el nexo o morir todos los participantes conectados. Los muertos no vuelven al grupo mediante respawn durante esa misma partida. Sin participantes disponibles durante unos 30 segundos, la partida se cancela. Hay un máximo de 15 minutos por defensa y **cinco minutos de enfriamiento después de terminar**, contando ticks del mundo.
+Cada defensa tiene **tres fases**. La vida del nexo se conserva entre fases; vuelve a su máximo al iniciar otra partida. Se pierde al destruirse el nexo o morir todos los participantes conectados. Los muertos no vuelven al grupo mediante respawn durante esa misma partida. Salir del territorio o alejarse no cancela la defensa. No existe límite de 15 minutos. La zona del nexo permanece cargada mediante tickets transitorios hasta terminar y limpiar enemigos. Hay **cinco minutos de enfriamiento después de terminar**, contando ticks del mundo.
 
 ## Ofertas y recompensas
 

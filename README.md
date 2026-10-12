@@ -281,3 +281,7 @@ Versión .12: el retroceso temporal se separa del objetivo bajo el cursor y deca
 ## Zomboid Clans .4: aparición y defensa territorial
 
 [Descargar .4](mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.4-pve-spawn-territory-fix.jar). Busca suelo y rutas cerca del nexo en chunks vecinos, comprueba el primer spawn antes de iniciar y falla si no quedan participantes dentro del territorio. Conserva la oferta cuando no hay lugar válido para empezar. 110 comprobaciones simuladas; prueba en Minecraft pendiente.
+
+## Zomboid Clans .5: salir de la base y final gradual
+
+[Descargar .5](mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.5-pve-roaming-gradual-end.jar). Salir del territorio ya no termina la defensa. La zona del nexo sigue en simulación, y al perder por destrucción o muertes de participantes los enemigos restantes mueren gradualmente. 120 comprobaciones simuladas; prueba en Minecraft pendiente. Reemplaza versiones anteriores en cliente y servidor.
