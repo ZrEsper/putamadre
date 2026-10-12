@@ -297,3 +297,7 @@ Versión .12: el retroceso temporal se separa del objetivo bajo el cursor y deca
 ## Dungeons Iso .18: mochilas y recorte con CTRL
 
 [Descargar .18](mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.18-backpacks-ctrl-cutaway.jar). Corrige la clasificación de mochilas colocadas y el uso de mochilas en ambas manos tras una interacción PASS. El recorte de paredes/techos sigue el foco adelantado con CTRL. Reemplaza .17; Sophisticated Backpacks permanece sin modificar. 15 comprobaciones simuladas; prueba en Minecraft pendiente. [Detalles y fuentes](iso-backpack-patch/README.md).
+
+## Zomboid Clans .8: nexo interior y losas
+
+[Descargar .8](mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.8-indoor-nexus-slab-spawns.jar). Permite generar fuera aunque el nexo esté resguardado sin ruta directa, admite suelos de losas con altura real y amplía la búsqueda exterior hasta 48 bloques en chunks cargados. Si falla, distingue falta de puntos, colisiones y cancelaciones. 166 comprobaciones simuladas; prueba en Mosslorn pendiente.

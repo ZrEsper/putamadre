@@ -1,3 +1,19 @@
+## Actualización .8: inicio con nexo interior y suelos de losas
+
+[Descargar .8](../mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.8-indoor-nexus-slab-spawns.jar). Reemplaza .7 en cliente y servidor. Se comprobó que el JAR .7 adjunto coincide con el publicado, SHA-256 `8493af27e42b54226b1e93d0093838fb09ec1591e546634d7f2a503300262cde`.
+
+La captura muestra el rechazo del primer spawn. La .7 exigía una ruta inicial al bloque del nexo y aceptaba como piso solo bloques de render sólido. Ambos criterios podían descartar calles válidas con losas y nexos resguardados en habitaciones/pisos superiores. La .8 no exige esa ruta para generar: mantiene la comprobación de espacio del cuerpo, el exterior y la ausencia de agua. Si existe una ruta directa/parcial útil, la usa; si no, intenta acercarse a nivel del suelo hacia la fachada, buscar entradas y aplicar el asedio local de .6.
+
+El apoyo del zombi se calcula a partir de las cajas de colisión del piso, incluyendo losas y formas no completas. La posición vertical usa la parte superior real: una losa inferior en Y=64 produce apoyo en Y=64.5, sin generar flotando a Y=65.
+
+Se muestrean hasta 192 columnas exteriores, primero dentro de 32 bloques y después hasta 48 por eje, consultando solamente chunks ya cargados para la ampliación. Se conservan las superficies más bajas (+2 de margen), los grupos y la separación. Los chunks adicionales elegidos reciben tickets temporales propios de la defensa, liberados al terminar. No se busca dentro de sótanos/habitaciones ni se cambian la vida o recompensas del nexo.
+
+Si todavía no se puede generar, el mensaje informa de puntos exteriores, intentos bloqueados por colisión y spawns cancelados por eventos de otros mods. Conserva la oferta y retira los tickets al rechazar el inicio. La captura por sí sola no identifica cuál de esos factores ocurrió en tu mundo; el nuevo mensaje permite distinguirlos.
+
+166 comprobaciones simuladas (68 + 67 + 31), incluyendo nexo resguardado en un piso superior con ruta nula, apoyo de losas, acercamiento por suelo y cancelación externa sin enemigos contados. No se ha ejecutado Minecraft: navegación en el edificio concreto de Mosslorn pendiente.
+
+Prueba con `/clanpvetest` (operador y nexo colocado). Mantiene partículas, sonidos, HUD, depósito y recompensas de .7.
+
 ## Actualización .7: generador, alertas, recompensas e IA de superficie
 
 [Descargar .7](../mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.7-nexus-alerts-surface-rewards.jar). Sustituye .6 en cliente y servidor. Cambia el protocolo a .7: ambos lados deben actualizarse.
