@@ -1,0 +1,1 @@
+package net.minecraft.world.phys.shapes;public class Shapes {public static final Object EMPTY=new Object();public static Object empty(){return EMPTY;}}
