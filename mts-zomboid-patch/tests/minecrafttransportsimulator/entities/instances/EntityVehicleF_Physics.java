@@ -1,0 +1,3 @@
+package minecrafttransportsimulator.entities.instances;
+import dev.zomboid.mts.Checks.*;import java.util.*;
+public class EntityVehicleF_Physics {public World world=new World();public Map<Integer,Object> partsInSlots=new HashMap<>();public List<Object> instruments=new ArrayList<>();public int added;public Object addPartFromStack(Object stack,Object player,int index,boolean bypass,boolean align){Object part=new Object();partsInSlots.put(index,part);added++;return part;}public Definition definition=new Definition();public java.util.Collection<PartEngine> engines=new ArrayList<>();public Variable damageVar=new Variable(0),batteryCapacityVar=new Variable(12),lockedVar=new Variable(0);public double electricPower=8;public Tank fuelTank=new Tank();}

@@ -1,0 +1,35 @@
+{
+  "mod_sha256": "d364a0921ef1e133c5cad888a6e3af86500e1fbcd81a1d87fe7495d024d77cf0",
+  "pack_sha256": "5b538ac197bda8739a73cb9f867c0386e3d6251a5a1acfca10f12e85a7bef3f5",
+  "cars": [
+    "scout",
+    "merc230",
+    "fordmustang69",
+    "gmcbrig",
+    "firetruck",
+    "quad"
+  ],
+  "engines_six_forward_gears": [
+    "engineamci4",
+    "enginedetroitdiesel",
+    "enginefordfe428",
+    "enginemercedesm102",
+    "enginequad"
+  ],
+  "all_original_part_indices_preserved": true,
+  "trunk_slots": 54,
+  "body_health_multiplier": 3,
+  "simulated_mechanic_checks_passed": 30,
+  "native_methods_analyzed": 4858,
+  "gear_clicks_require_empty_main_hand": true,
+  "gear_shift_sound": "mtsofficialpack:230ce/230c_gearshift0",
+  "minecraft_runtime_tested": false,
+  "changed_core_entries": [
+    "META-INF/neoforge.mods.toml",
+    "minecrafttransportsimulator/entities/components/AEntityF_Multipart.class",
+    "minecrafttransportsimulator/entities/instances/PartEngine.class",
+    "minecrafttransportsimulator/guis/instances/GUIHUD.class",
+    "minecrafttransportsimulator/items/instances/ItemItem.class",
+    "minecrafttransportsimulator/packets/instances/PacketEntityGUIRequest.class"
+  ]
+}

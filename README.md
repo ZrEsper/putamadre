@@ -315,3 +315,7 @@ Versión .12: el retroceso temporal se separa del objetivo bajo el cursor y deca
 [Descargar Doomsday Storage .2](mods/doomsday_decoration-1.1.4.2-neoforge-1.21.1-zomboid-storage.2.jar). Reemplaza el Doomsday original en cliente y servidor, con una copia previa del mundo. Añade inventarios y recetas a 71 muebles, refrigeración de bebidas y casillas físicas vinculadas para 278 decoraciones grandes. Los muebles antiguos que ya invaden una pared necesitan recolocarse. [Uso, límites, compilación y validación](doomsday-functional-patch/README.md). Verificado con API simulada y análisis de bytecode; pendiente de prueba real en Minecraft.
 
 Survival 1.1.0 con FF integrado requiere también [este reemplazo compatible](mods/zomboid-survival-1.21.1-1.1.0-ff-preservation-doomsday-compat.1.jar): su dependencia exacta rechazaba la versión Storage. [Diagnóstico y verificación](survival-doomsday-compat-patch/README.md).
+
+## Coches MTS: tablero y mecánica Zomboid
+
+Reemplazar el mod y el pack juntos: [Immersive Vehicles Mechanics .1](mods/Immersive-Vehicles-1.21.1-24.0.0-zomboid-mechanics.1.jar) y [Official Pack Dashboard/Trunks .1](mods/MTS-Official-Pack-1.21.1-V29-zomboid-dashboard-trunks.1.jar). Tablero inferior, chequeador, reparación corregida, maletera trasera de 54 espacios, mayor resistencia y seis marchas. Automático cambia solo; manual con mano principal vacía: izquierda sube, derecha baja, con aviso y sonido. [Instalación, controles, validación y límites](mts-zomboid-patch/README.md). Pendiente de prueba en Minecraft; usar copia del mundo.
