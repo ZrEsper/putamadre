@@ -1,0 +1,1 @@
+package com.tacz.guns.api.item;import net.minecraft.world.item.ItemStack;public class IAmmo {public static IAmmo getIAmmoOrNull(ItemStack stack){return new IAmmo();}public void setAmmoId(ItemStack stack,Object id){stack.ammoId=id.toString();}}

@@ -2,8 +2,8 @@ package dev.zomboid.clans;
 import java.util.*;import net.minecraft.client.Minecraft;import net.minecraft.network.chat.Component;import me.danialisntcool.factionfriction.client.ui.ModernButton;
 public final class ClientClans {
  public static List<String[]> data=List.of();public static Object connection;
- public static void accept(String text){connection=Minecraft.getInstance().getConnection();data=ClanState.rows(text);}
- public static void reset(){Object c=Minecraft.getInstance().getConnection();if(c!=connection){data=List.of();connection=c;}}
+ public static void accept(String text){Rewards.clearPreviews();connection=Minecraft.getInstance().getConnection();data=ClanState.rows(text);}
+ public static void reset(){Object c=Minecraft.getInstance().getConnection();if(c!=connection){data=List.of();Rewards.clearPreviews();connection=c;}}
  public static String[] one(String kind){for(String[] row:data)if(row[0].equals(kind))return row;return null;}
  public static List<String[]> all(String kind){List<String[]> out=new ArrayList<>();for(String[] row:data)if(row[0].equals(kind))out.add(row);return out;}
  public static Object operationTier(){return R.get(R.type("me.danialisntcool.factionfriction.faction.FactionTier"),"COLONY");}

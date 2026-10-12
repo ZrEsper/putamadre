@@ -1,3 +1,23 @@
+## Actualización .7: generador, alertas, recompensas e IA de superficie
+
+[Descargar .7](../mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.7-nexus-alerts-surface-rewards.jar). Sustituye .6 en cliente y servidor. Cambia el protocolo a .7: ambos lados deben actualizarse.
+
+Durante la defensa el nexo emite humo y chispas, con un motor procedural de tres segundos repetido mientras esté activo. Su daño se agrupa por segundo: alerta sonora personal a los participantes, barra grande arriba de la pantalla con PV actuales/máximos, fase y pérdida reciente en rojo durante 2,5 segundos. No necesitas estar cerca del nexo para recibir la alerta de daño. El motor es un sonido espacial del bloque. Añade ocho sonidos originales: motor, golpe al nexo, inicio, nueva fase, victoria, derrota, depósito de recompensas y recogida. Al terminar deja de emitir partículas y de repetir el motor; la última muestra de tres segundos puede acabar de sonar.
+
+Spawns: se muestrean 96 superficies exteriores en un anillo de 8–32 bloques por eje. Se usa la altura de superficie, no alturas interiores aleatorias, y se conservan las superficies más bajas del área (+2 bloques de margen), descartando azoteas altas cuando hay calles más bajas. Esto evita sótanos y habitaciones interiores. No identifica semánticamente todos los edificios: si todo el entorno disponible está sobre una misma plataforma/azotea, esta puede contar como superficie exterior.
+
+Los grupos salen cerca de un punto común, con separación mínima de dos bloques entre sus miembros, cuerpo sin colisión, piso sólido y una ruta inicial de más de un nodo hacia el nexo. Se admite una ruta parcial hasta el obstáculo para conservar el asedio por puertas, ventanas, rotura y peldaños de .6. La IA se activa explícitamente, comienza a navegar al generarse y recibe una comprobación del servidor cada segundo. No se teletransportan zombis para resolver obstáculos. Si desaparecen por otro mod, se dejan de contar tras diez comprobaciones para evitar una fase bloqueada. Si no hay punto válido al iniciar, se conserva la oferta.
+
+Las tres fases, defensa al salir del territorio, limpieza gradual al perder y `/clanpvetest` se mantienen.
+
+Recompensas: más suministros, experiencia embotellada, equipo y placas de FracturePoint si están registrados. Se incluyen cascos; desde poco común, chalecos; desde rara, piezas de conjunto y placas cerámicas. Las categorías altas entregan más equipo. Armas: se leen los índices reales de TACZ instalados y se priorizan namespaces que contienen `fracture` o `warborn`; si no existe ese gunpack, se usan las armas TACZ disponibles. El JAR FracturePoint 3.0.0 PT2 inspeccionado contiene armaduras/equipo, no un gunpack TACZ de armas incluido. No se inventan IDs de armas.
+
+Se entrega una arma por defensa común/poco común/rara, dos por épica y tres por legendaria, cuando TACZ tiene armas disponibles. Cada una deposita 32 × (rareza + 1) cartuchos de su calibre. Los stacks de armas se crean con ID de arma, modo de disparo válido y descargados; la munición lleva su ID de calibre. Los ítems de un mod/pack ausente permanecen pendientes, sin consumir su recompensa. Los nombres internos `gun@namespace:id` y `ammo@namespace:id` se guardan en el mismo depósito del clan y se reconstruyen al recogerlos. El menú dibuja los iconos reales y sus nombres de objeto.
+
+160 comprobaciones de API simuladas (68 + 67 + 25), incluyendo un spawn real dentro del simulador, rechazo de alturas de azotea frente a calle, navegación iniciada, heartbeat de IA, armas con componentes, munición compatible, armaduras registradas, iconos, registro de sonidos, motor sin spam, partículas, daño/HUD y alertas por fase/derrota. Se verifica que los sonidos originales del mod se conservan y que los ocho nuevos OGG son válidos. No se ha ejecutado Minecraft: falta comprobar audio, renderizado y navegación en Mosslorn con todos tus mods.
+
+Sonidos reproducibles con `python faction-simple-patch/generate_sounds.py` (NumPy y ffmpeg). No se usaron muestras de otros juegos.
+
 ## Actualización .6: suelo, entradas, asedio y comando de prueba
 
 [Descargar .6](../mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.6-ground-entry-debug.jar). Reemplaza versiones anteriores en cliente y servidor. El protocolo cambia: ambos deben usar .6.

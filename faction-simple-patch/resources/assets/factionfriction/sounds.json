@@ -1,0 +1,74 @@
+{
+  "generator": {
+    "subtitle": "subtitle.factionfriction.generator",
+    "sounds": [
+      {
+        "name": "factionfriction:generator",
+        "stream": false
+      }
+    ]
+  },
+  "nexus_hit": {
+    "subtitle": "subtitle.factionfriction.nexus_hit",
+    "sounds": [
+      {
+        "name": "factionfriction:nexus_hit",
+        "stream": false
+      }
+    ]
+  },
+  "phase": {
+    "subtitle": "subtitle.factionfriction.phase",
+    "sounds": [
+      {
+        "name": "factionfriction:phase",
+        "stream": false
+      }
+    ]
+  },
+  "victory": {
+    "subtitle": "subtitle.factionfriction.victory",
+    "sounds": [
+      {
+        "name": "factionfriction:victory",
+        "stream": false
+      }
+    ]
+  },
+  "defeat": {
+    "subtitle": "subtitle.factionfriction.defeat",
+    "sounds": [
+      {
+        "name": "factionfriction:defeat",
+        "stream": false
+      }
+    ]
+  },
+  "deposit": {
+    "subtitle": "subtitle.factionfriction.deposit",
+    "sounds": [
+      {
+        "name": "factionfriction:deposit",
+        "stream": false
+      }
+    ]
+  },
+  "withdraw": {
+    "subtitle": "subtitle.factionfriction.withdraw",
+    "sounds": [
+      {
+        "name": "factionfriction:withdraw",
+        "stream": false
+      }
+    ]
+  },
+  "start": {
+    "subtitle": "subtitle.factionfriction.start",
+    "sounds": [
+      {
+        "name": "factionfriction:start",
+        "stream": false
+      }
+    ]
+  }
+}

@@ -289,3 +289,7 @@ Versión .12: el retroceso temporal se separa del objetivo bajo el cursor y deca
 ## Zomboid Clans .6: suelo, entradas y prueba por comando
 
 [Descargar .6](mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.6-ground-entry-debug.jar). Prioriza suelo/primer piso, permite otras alturas, intenta puertas/trampillas/ventanas y añade rotura o peldaños como último recurso. `/clanpvetest` inicia una defensa común sin cooldown para operadores con clan y nexo. 135 comprobaciones simuladas; prueba real pendiente.
+
+## Zomboid Clans .7: nexo generador, alertas y mejores recompensas
+
+[Descargar .7](mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.7-nexus-alerts-surface-rewards.jar). Motor y partículas, barra grande de vida/daño, sonidos por fase y resultado, iconos de depósito y recompensas de armas TACZ con munición compatible y armaduras FracturePoint. Spawns en superficies exteriores bajas y comprobación periódica de navegación. 160 comprobaciones simuladas; prueba real pendiente. [Detalles](faction-simple-patch/README.md).

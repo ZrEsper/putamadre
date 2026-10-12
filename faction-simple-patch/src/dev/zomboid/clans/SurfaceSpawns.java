@@ -1,0 +1,6 @@
+package dev.zomboid.clans;
+import java.util.*;
+public final class SurfaceSpawns {
+ static void refresh(Pve.Wave w,Object nexus){w.surface.clear();Object height=R.get(R.type("net.minecraft.world.level.levelgen.Heightmap$Types"),"MOTION_BLOCKING_NO_LEAVES");int x=(int)R.coord(nexus,"X"),z=(int)R.coord(nexus,"Z");for(int i=0;i<96;i++){int[] point=Pve.candidate(x,z);int y=((Number)R.call(w.level,"getHeight",height,point[0],point[1])).intValue();Object feet=R.make("net.minecraft.core.BlockPos",point[0],y,point[1]),floor=R.make("net.minecraft.core.BlockPos",point[0],y-1,point[1]);if(!R.yes(R.call(w.level,"hasChunkAt",feet))||!R.yes(R.call(w.level,"canSeeSky",feet)))continue;Object state=R.call(w.level,"getBlockState",floor);if(!R.yes(R.call(state,"isSolidRender",w.level,floor))||!R.yes(R.call(R.call(R.call(w.level,"getBlockState",feet),"getFluidState"),"isEmpty")))continue;w.surface.add(new int[]{point[0],y,point[1]});}if(!w.surface.isEmpty()){int minimum=w.surface.stream().mapToInt(p->p[1]).min().orElse(0);w.surface.removeIf(p->p[1]>minimum+2);}w.nextSurface=Clans.now(R.call(w.level,"getServer"))+100;}
+ static void enable(Object mob){R.call(mob,"setNoAi",false);try{Object eval=R.call(R.call(mob,"getNavigation"),"getNodeEvaluator");R.call(eval,"setCanOpenDoors",true);R.call(eval,"setCanPassDoors",true);}catch(Exception unsupported){}}
+}
