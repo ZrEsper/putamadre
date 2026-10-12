@@ -309,3 +309,7 @@ Versión .12: el retroceso temporal se separa del objetivo bajo el cursor y deca
 ## Zomboid Clans .10: cadáveres de oleada solo por bajas de jugador
 
 [Descargar .10](mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.10-player-kill-corpse-loot.jar). Los enemigos de oleada muertos por entorno o limpieza automática no generan cadáver looteable, drops ni XP. Las bajas de jugadores/proyectiles y los zombis normales fuera de oleadas conservan su loot. 183 comprobaciones simuladas; prueba en Minecraft pendiente.
+
+## Doomsday Decoration: almacenamiento y casillas reales
+
+[Descargar Doomsday Storage .1](mods/doomsday_decoration-1.1.4.2-neoforge-1.21.1-zomboid-storage.1.jar). Reemplaza el Doomsday original en cliente y servidor, con una copia previa del mundo. Añade inventarios y recetas a 71 muebles, refrigeración de bebidas y casillas físicas vinculadas para 278 decoraciones grandes. Los muebles antiguos que ya invaden una pared necesitan recolocarse. [Uso, límites, compilación y validación](doomsday-functional-patch/README.md). Verificado con API simulada y análisis de bytecode; pendiente de prueba real en Minecraft.

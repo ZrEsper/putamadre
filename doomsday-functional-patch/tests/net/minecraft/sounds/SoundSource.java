@@ -1,0 +1,2 @@
+package net.minecraft.sounds;
+public class SoundSource {public static final Object BLOCKS=new Object();}
