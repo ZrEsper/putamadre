@@ -10,7 +10,7 @@ public class Checks {
  public static class Callback {public boolean canceled;public void cancel(){canceled=true;}}
  public static class Event {boolean attack,use,canceled,swing=true;String hand="MAIN_HAND";public Event(boolean a,boolean u){attack=a;use=u;}public boolean isAttack(){return attack;}public boolean isUseItem(){return use;}public String getHand(){return hand;}public void setCanceled(boolean c){canceled=c;}public void setSwingHand(boolean s){swing=s;}}
  public static class Held {boolean empty=true;public boolean isEmpty(){return empty;}}public static class Player {public Object seat;public Held held=new Held();public Object getEntityRiding(){return seat;}public Held getHeldStack(){return held;}}
- public static class Placement {public boolean isController=true;}public static class Tank {public double getFluidLevel(){return 500;}}
+ public static class Placement {public boolean isController=true;}public static class Tank {public double level=500;public int capacity=1000;public double getFluidLevel(){return level;}public int getMaxLevel(){return capacity;}}
  public static class GUI {public Object vehicle;GUI(Object v){vehicle=v;}}
  public static void main(String[] args){
  check(Mechanics.fraction(0,100)==1,"full health");check(Mechanics.fraction(50,100)==.5,"half");check(Mechanics.fraction(250,100)==0,"cannot negative");check(Mechanics.fraction(-10,100)==1,"cannot exceed max");
