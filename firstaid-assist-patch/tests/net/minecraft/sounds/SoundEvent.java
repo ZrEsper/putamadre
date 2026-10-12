@@ -1,0 +1,1 @@
+package net.minecraft.sounds;public record SoundEvent(Object id){public static SoundEvent createVariableRangeEvent(Object id){return new SoundEvent(id);}}

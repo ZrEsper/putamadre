@@ -1,0 +1,18 @@
+{
+  "input_sha256": "3176281031fa84034384d478397a0b91e479a146c7c22418701afa7eb7a3ce70",
+  "output_sha256": "b0ae673e173ac93e16767be0a46a708db042d7532151b571d2461b47fd0baa44",
+  "minecraft_runtime_tested": false,
+  "changed_original_entries": [
+    "ichttt/mods/firstaid/client/ClientEventHandler.class",
+    "ichttt/mods/firstaid/common/EventHandler.class",
+    "ichttt/mods/firstaid/common/damagesystem/PlayerDamageModel.class",
+    "ichttt/mods/firstaid/common/util/CommonUtils.class",
+    "ichttt/mods/firstaid/fracture/Bleeding.class",
+    "assets/firstaid/lang/en_us.json",
+    "assets/firstaid/lang/es_es.json",
+    "assets/firstaid/sounds.json",
+    "dev/zomboid/firstaid/Revival.class",
+    "dev/zomboid/firstaid/RevivalHud.class"
+  ],
+  "simulated_checks_passed": 67
+}

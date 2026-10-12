@@ -1,0 +1,18 @@
+{
+  "revive_work": {
+    "sounds": [
+      {
+        "name": "firstaid:revive_work",
+        "stream": false
+      }
+    ]
+  },
+  "revive_complete": {
+    "sounds": [
+      {
+        "name": "firstaid:revive_complete",
+        "stream": false
+      }
+    ]
+  }
+}

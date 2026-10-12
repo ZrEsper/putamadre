@@ -43,9 +43,9 @@ Versión .5: con mano principal vacía y cámara isométrica, antes de `Minecraf
 
 Versión .6: además de las distancias, restaura el color de la niebla después de `CullingBackdrop` de Dungeons Iso, que podía llevar los colores a negro al ocultar techos. Actualiza los campos de FogRenderer, el color del shader y el fondo recortado al mismo tono atmosférico. Un segundo hook de color se ejecuta al final de setupColor; el hook de distancia reaplica también el color. Conserva agua/lava, modo apagado y cámara normal. Añade `/zomboidfog estado` para mostrar intensidad, cámara isométrica detectada y modo. Cuatro regresiones con APIs simuladas reproducen el color negro y comprueban su restauración en las tres salidas; el aspecto y el orden real con BetterFog/Sodium requieren validación en Minecraft.
 
-## Survivor Creator v26: pantalla de muerte minimalista
+## Survivor Creator v27: pantalla de muerte minimalista
 
-[Descargar Survivor Creator v26](mods/survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v26-minimal-death-first-person.jar). Reemplaza la versión anterior en el cliente. Pantalla sencilla con silueta pequeña a la derecha, marcas y notas de todas las lesiones registradas por zona y causa de muerte. Primera persona al entrar/reaparecer, sin bloquear cambios posteriores de cámara. [Detalles y validación](survivor-autopsy-patch/README.md). Pendiente comprobar el aspecto y los eventos en Minecraft.
+[Descargar Survivor Creator v27](mods/survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v27-small-death-first-person.jar). Reemplaza la versión anterior en el cliente. Pantalla sencilla con silueta pequeña a la derecha, marcas y notas de todas las lesiones registradas por zona y causa de muerte. Primera persona al entrar/reaparecer, sin bloquear cambios posteriores de cámara. [Detalles y validación](survivor-autopsy-patch/README.md). Pendiente comprobar el aspecto y los eventos en Minecraft.
 
 ## Faction Friction: clanes del apocalipsis .1
 
@@ -261,3 +261,7 @@ Las comprobaciones de lógica, bytecode, capacidades, guardado, tanque, hidratac
 [Código del parche y comprobaciones](generator-patch/README.md). Los JAR anteriores se conservan como base o respaldo, no deben instalarse junto con la versión actual.
 
 Versión .12: el retroceso temporal se separa del objetivo bajo el cursor y decae exponencialmente hacia él después de disparar; se conservan los impulsos nuevos de TACZ. El ajuste de regreso necesita validación visual dentro del juego.
+
+## First Aid: derribo y reanimación asistida
+
+[Descargar First Aid actualizado](mods/firstaid-1.21.1-ZOMBOID-v3.5.0-assisted-revival.jar). Reemplazar First Aid en cliente y servidor. +3 corazones máximos; cabeza o torso a cero no causan muerte instantánea. Derribo de 100 segundos, ayuda con clic derecho durante 8 segundos, reanimación propia con desfibrilador en mano, regreso con 3 corazones y 20 segundos sin daño de sangrado para vendarse. [Detalles y validación](firstaid-assist-patch/README.md).
