@@ -1,0 +1,34 @@
+{
+  "artifacts": [
+    {
+      "file": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.19-cached-path-retries.jar",
+      "input_sha256": "50771eb545219e15d8198380c74a4e472609535c75f2641ce0f645260ae53193",
+      "output_sha256": "fb561ca062e53118d053caa2238b22c894e8384c6527536ff53d55e704997ce4",
+      "changed": [
+        "dev/zomboid/hordes/ChunkReflection.class",
+        "dev/zomboid/reactive/R.class",
+        "dev/zomboid/hordes/PathThrottle.class",
+        "dev/zomboid/hordes/PathThrottle$State.class",
+        "dev/zomboid/hordes/PathThrottle$Budget.class"
+      ]
+    },
+    {
+      "file": "zomboid-zombie-gore-1.0.3-neoforge-1.21.1-cached-corpse-drops.jar",
+      "input_sha256": "07415c397e44379bcc30ccfde5943c4682e67b5b3e64963a64a2fe5ea0ecbaae",
+      "output_sha256": "1511a953dfd986d5deb709781755dd0a291883407862df368389d2752acd88a5",
+      "changed": [
+        "dev/zomboid/gore/Events.class",
+        "dev/zomboid/gore/R.class",
+        "META-INF/neoforge.mods.toml"
+      ]
+    }
+  ],
+  "minecraft_runtime_tested": false,
+  "path_reflection_checks": 17,
+  "inventory_collection_checks": 27,
+  "asm_verified_methods": {
+    "hordes": 727,
+    "gore": 157
+  },
+  "block_corpse_expansion_complete": false
+}
