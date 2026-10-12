@@ -1,0 +1,9 @@
+{
+  "input_sha256": "746af40e122aace9f2318af05c0dbde46e0976f350fafc2269bd525092110a4a",
+  "output_sha256": "7789fa19882177efa99c37628f79ba41406027b35f1a9c4b2ca409252ae74935",
+  "changed_original_entries": [
+    "quietly.mixins.json"
+  ],
+  "simulated_checks_passed": 4,
+  "minecraft_runtime_tested": false
+}
