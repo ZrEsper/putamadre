@@ -1,3 +1,17 @@
+## Actualización .10: loot de oleada solo por baja de jugador
+
+[Descargar .10](../mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.10-player-kill-corpse-loot.jar). Sustituye .9 en cliente y servidor. Conserva dificultades elegibles y ausencia de cooldown.
+
+La regla se aplica exclusivamente a entidades marcadas `FactionPveWave`, tanto zombis normales como mutantes de defensa. El daño final debe atribuirse a un ServerPlayer real para conservar cadáver looteable, drops y XP. Los proyectiles con dueño jugador califican; NPC, entorno y FakePlayer de automatización no. Haber golpeado antes al zombi no habilita loot si el daño final fue ambiental.
+
+Se registra la atribución al morir y se conserva para drops diferidos, de modo que la atribución antigua de combate no convierta una muerte natural en una baja looteable. La limpieza automática marca a cada enemigo antes de infligir daño letal y bloquea su loot incluso si otro mod reescribe la fuente de ese daño. Un enemigo que el jugador mate antes de recibir el daño automático de limpieza sigue las reglas de baja de jugador.
+
+En muertes sin jugador se cancela LivingDropsEvent con prioridad HIGHEST y se vacía la lista de drops. Se inspeccionaron Zombie Remains Loot 1.6.1 npc-compat y 1.6.2 death-compat.4-mutant-loot.1: sus creadores de cadáveres escuchan LivingDropsEvent en LOWEST, sin recibir eventos cancelados. Su secuencia visual de muerte puede seguir funcionando, pero no recibe el evento que genera el inventario/cadáver pendiente. No se cancela LivingDeathEvent ni se impide el conteo normal de la defensa. La recompensa de victoria del clan se conserva; no se modifica el loot de zombis fuera de oleadas.
+
+También se pone a cero LivingExperienceDropEvent para esas muertes, evitando XP por daño reciente previo. Otros mods que creen cadáveres por mecanismos independientes de LivingDropsEvent podrían requerir un adaptador adicional.
+
+183 comprobaciones simuladas (68 + 71 + 33 + 11): muertes ambientales, baja real, atribución del dueño, NPC, limpieza, baja previa seguida de muerte natural, drops diferidos, XP, FakePlayer y conservación de mobs ajenos a la oleada. Se verifica el bytecode y el JAR. No se ha ejecutado Minecraft: comprobar una baja natural y otra por jugador con tu mod de cadáveres sigue pendiente.
+
 ## Actualización .9: dificultad elegible, más mutantes y sin cooldown
 
 [Descargar .9](../mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.9-selectable-difficulty-no-cooldown.jar). Reemplaza .8 en cliente y servidor; el protocolo cambia a .9.

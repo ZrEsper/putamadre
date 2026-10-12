@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.common.util;public class FakePlayer extends net.minecraft.server.level.ServerPlayer {public FakePlayer(net.minecraft.server.MinecraftServer server){super(server);}}

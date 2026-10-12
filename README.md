@@ -305,3 +305,7 @@ Versión .12: el retroceso temporal se separa del objetivo bajo el cursor y deca
 ## Zomboid Clans .9: dificultad seleccionable y sin cooldown PvE
 
 [Descargar .9](mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.9-selectable-difficulty-no-cooldown.jar). En Oleadas PvE elige Fácil, Normal, Difícil, Extrema o Pesadilla e inicia directamente sin cooldown. Mutantes por fase: 0/3/8/14/24; recompensas y XP aumentan con dificultad. 172 comprobaciones simuladas; prueba en Minecraft pendiente. Actualizar cliente y servidor.
+
+## Zomboid Clans .10: cadáveres de oleada solo por bajas de jugador
+
+[Descargar .10](mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.10-player-kill-corpse-loot.jar). Los enemigos de oleada muertos por entorno o limpieza automática no generan cadáver looteable, drops ni XP. Las bajas de jugadores/proyectiles y los zombis normales fuera de oleadas conservan su loot. 183 comprobaciones simuladas; prueba en Minecraft pendiente.
