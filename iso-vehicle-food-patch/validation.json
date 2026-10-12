@@ -1,0 +1,13 @@
+{
+  "base_sha256": "9b59eb5d88e0edd66c93cf4f7fba1808409435d8c5e1254fe4a2a7f18b6c6c11",
+  "output_sha256": "813ba1dfd873bdd2520f59cfc4e7fef60fa75793f7a77316257359132af30c1b",
+  "changed_entries": [
+    "META-INF/neoforge.mods.toml",
+    "com/cleannrooster/dungeons_iso/mixin/KeyBindingMixin.class",
+    "com/cleannrooster/dungeons_iso/mixin/KeyboardInputMixin.class",
+    "com/cleannrooster/dungeons_iso/mixin/MinecraftClientMixin.class",
+    "dev/zomboid/isotacz/Bridge.class"
+  ],
+  "simulated_checks_passed": 11,
+  "minecraft_runtime_tested": false
+}

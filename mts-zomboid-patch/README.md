@@ -56,3 +56,7 @@ python mts-zomboid-patch/build.py /ruta/Immersive-Vehicles-original.jar /ruta/MT
 ```
 
 El script normaliza los `00` numéricos originales únicamente en las definiciones que modifica y usa JSON5 para leer comentarios/comas finales. No reescribe aviones ni las demás definiciones. Opcionalmente admite una carpeta de definiciones ya parseadas antes del argumento de herramientas para ahorrar tiempo. La salida va a `mods/`; no se empaquetan las clases de prueba ni instaladores.
+
+## Corrección Mechanics .2
+
+El log enviado detectó una anotación `@Mixin` con retención incorrecta en `ManualMouseMixin`. Se pasó de RuntimeVisibleAnnotations a RuntimeInvisibleAnnotations, conforme a la retención CLASS que requiere Mixin. El verificador ahora rechaza ese error y reproduce el fallo de .1 antes de aceptar .2. El pack Dashboard/Trunks .1 no cambia. Las mejoras de mecánica se conservan y se recomienda combinar .2 con Dungeons Iso .19 para conducir/comer en esa cámara. Ver `core-validation.json`.
