@@ -1,0 +1,9 @@
+{
+  "input_sha256": "a2d3ea6dab6159d274d43d0793f368beb116525203c64e49d2c17da3f781ef05",
+  "output_sha256": "798a9b50858737e277846cd7bb7bed41b0fefada1bb5a064d972a4ea599f97fb",
+  "changed_original_entries": [
+    "dev/survivorcreator/skills/ActiveSkills.class"
+  ],
+  "simulated_checks_passed": 4,
+  "minecraft_runtime_tested": false
+}

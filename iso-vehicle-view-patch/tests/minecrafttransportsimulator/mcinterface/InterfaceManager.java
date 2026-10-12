@@ -1,0 +1,1 @@
+package minecrafttransportsimulator.mcinterface;public class InterfaceManager {public static Client clientInterface=new Client();public static class Client {public Object player;public Object getClientPlayer(){return player;}}}

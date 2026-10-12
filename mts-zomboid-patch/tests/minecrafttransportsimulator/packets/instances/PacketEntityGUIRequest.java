@@ -1,0 +1,1 @@
+package minecrafttransportsimulator.packets.instances;public class PacketEntityGUIRequest {public enum EntityGUIType {INSTRUMENTS}public PacketEntityGUIRequest(Object v,Object p,EntityGUIType type){}}

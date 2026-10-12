@@ -1,0 +1,1 @@
+package mcinterface1211;public class BuilderEntityExisting {public boolean culled=true,out=true,forced;public void setCulled(boolean b){culled=b;}public void setOutOfCamera(boolean b){out=b;}public void setForcedVisible(boolean b){forced=b;}}

@@ -80,3 +80,15 @@ La caja manual ya no utiliza el acelerador simplificado que elegía marchas al a
 ## Versión .6
 
 Mantenimiento sin kit para inspección, lista de componentes con texto mayor, vida aumentada, choques localizados con límite de 6% (ligeros 1%), eliminación de explosión por destrucción en los seis coches oficiales, luces V, controles H y tablero compacto inferior. Se mantienen los cambios manuales de .5. Los resultados y límites de las pruebas se documentan en [la integración](../vehicle-integration-patch/README.md).
+
+## Versión .7: selección e inspección con Mecánica
+
+Instalar core `.7`, Iso `.20`, SurvivorCreator `.v28`. Mantener el Official Pack `.3-resistant-maintenance` y Quietly v12 en cliente/servidor donde corresponda; sustituir las versiones anteriores, sin duplicados.
+
+La selección isométrica conserva primero una puerta u otra caja de acción interceptada. Si el rayo choca con una caja genérica de la carrocería, busca cajas de asiento, motor o inventario bajo el mismo cursor, a un máximo de cinco bloques desde los ojos del jugador. Mantiene la comprobación de paredes del mundo y envía los paquetes de interacción originales de MTS, con sus reglas de bloqueo y ocupación de asientos.
+
+La inspección usa una cola de servidor de 30 ticks (1.5 segundos a 20 TPS), tanto al pulsar el motor/capó como desde H y con el chequeador. Los clics repetidos durante una revisión no reinician la espera ni generan recompensas adicionales. Alejarse del coche, morir o perder acceso cancela la revisión. El coche guarda su estado original; la revisión no consume kit.
+
+Durante la espera se envía `Buscando N% - Revisando motor` a la barra de acción, que Quietly v12 convierte en su barra de progreso existente. Al terminar se abre la pantalla y se otorgan 5 XP base a `mechanics` de SurvivorCreator, sujetos a sus requisitos de creación y multiplicadores. Se muestra la ganancia real; una revisión incompleta no concede XP. H envía la petición al servidor y usa la misma espera. Para obtener XP debe instalarse SurvivorCreator .v28, que conserva esta habilidad en la lista activa.
+
+Pruebas: 50 comprobaciones previas de mecánica y choques, 13 del flujo de inspección (tiempo, duplicados, XP, cancelación y menú), 5 de selección de cajas; análisis de 4927 métodos del core, prueba JVM de la reparación previa e integridad ZIP. No se ejecutó Minecraft ni el modpack del usuario.

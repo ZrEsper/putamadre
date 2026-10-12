@@ -1,0 +1,1 @@
+package dev.survivorcreator.skills;public class Skills {public static double total;static final Object SKILL=new Object();public static Object get(String id){return id.equals("mechanics")?SKILL:null;}public static double xp(Object p,Object skill){return total;}public static void addXp(Object p,Object s,double amount){total+=amount;}}

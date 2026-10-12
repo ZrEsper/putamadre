@@ -1,0 +1,1 @@
+package minecrafttransportsimulator.baseclasses;public class EntityInteractResult {public Object entity,box,position;public EntityInteractResult(Object e,Object b,Object p){entity=e;box=b;position=p;}}

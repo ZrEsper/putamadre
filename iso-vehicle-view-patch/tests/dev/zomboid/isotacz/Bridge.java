@@ -1,0 +1,1 @@
+package dev.zomboid.isotacz;public class Bridge {public static Object client;public static boolean enabled;public static double edgeX,edgeZ;public static Object mc(){return client;}public static boolean active(){return enabled;}}
