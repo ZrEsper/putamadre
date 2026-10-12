@@ -1,3 +1,25 @@
+## Actualización .9: dificultad elegible, más mutantes y sin cooldown
+
+[Descargar .9](../mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.9-selectable-difficulty-no-cooldown.jar). Reemplaza .8 en cliente y servidor; el protocolo cambia a .9.
+
+En K → Oleadas PvE, el botón «Dificultad» recorre cinco opciones y «Iniciar defensa» comienza directamente con la seleccionada. No exige solicitar una oferta aleatoria. No existe cooldown PvE de inicio ni al terminar, y los tiempos guardados por versiones anteriores se ignoran/restablecen a cero. Se conserva una defensa activa por clan y un máximo global de tres. No cambia la preparación ni las treguas de guerras PvP.
+
+| Dificultad | Enemigos por fase, incluyendo mutantes | Mutantes por fase | XP al ganar las tres fases |
+|---|---:|---:|---:|
+| Fácil | 12 | 0 | 20 |
+| Normal | 20 | 3 | 35 |
+| Difícil | 28 | 8 | 60 |
+| Extrema | 36 | 14 | 100 |
+| Pesadilla | 48 | 24 | 160 |
+
+Hay tres fases. La vida del nexo se conserva entre ellas. Los niveles altos mantienen la preferencia por especiales más fuertes y mejores cantidades/calidad de recompensas. Para Normal o superior se requiere Mutants Zombies. Los mutantes sustituyen parte de los enemigos del total de la tabla; no son un número añadido encima del total.
+
+El selector puede cambiarse antes de iniciar; durante una defensa no se modifica su dificultad. El servidor valida el rango 0–4 y la autoridad del clan. `/clanpvetest` conserva la prueba de dificultad Fácil para operadores. Las condiciones de nexo/territorio, spawns exteriores de .8, HUD, sonidos, depósito y limpieza gradual se mantienen.
+
+172 comprobaciones simuladas (68 + 71 + 33), incluyendo selección explícita, rechazo de dificultad inválida, aumento de mutantes, inicio de Pesadilla sin solicitar oferta pese a un cooldown antiguo y final sin cooldown. No se ha ejecutado Minecraft: probar el selector y el balance real pendiente.
+
+Las reglas de ofertas aleatorias y cooldown de las secciones anteriores son históricas y quedan reemplazadas por .9.
+
 ## Actualización .8: inicio con nexo interior y suelos de losas
 
 [Descargar .8](../mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.8-indoor-nexus-slab-spawns.jar). Reemplaza .7 en cliente y servidor. Se comprobó que el JAR .7 adjunto coincide con el publicado, SHA-256 `8493af27e42b54226b1e93d0093838fb09ec1591e546634d7f2a503300262cde`.

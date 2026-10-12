@@ -301,3 +301,7 @@ Versión .12: el retroceso temporal se separa del objetivo bajo el cursor y deca
 ## Zomboid Clans .8: nexo interior y losas
 
 [Descargar .8](mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.8-indoor-nexus-slab-spawns.jar). Permite generar fuera aunque el nexo esté resguardado sin ruta directa, admite suelos de losas con altura real y amplía la búsqueda exterior hasta 48 bloques en chunks cargados. Si falla, distingue falta de puntos, colisiones y cancelaciones. 166 comprobaciones simuladas; prueba en Mosslorn pendiente.
+
+## Zomboid Clans .9: dificultad seleccionable y sin cooldown PvE
+
+[Descargar .9](mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.9-selectable-difficulty-no-cooldown.jar). En Oleadas PvE elige Fácil, Normal, Difícil, Extrema o Pesadilla e inicia directamente sin cooldown. Mutantes por fase: 0/3/8/14/24; recompensas y XP aumentan con dificultad. 172 comprobaciones simuladas; prueba en Minecraft pendiente. Actualizar cliente y servidor.
