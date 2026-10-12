@@ -72,3 +72,7 @@ Instalar únicamente MTS Mechanics .3 y retirar .1/.2. Conservar Dungeons Iso .1
 ## Corrección .4: colocación de vehículos
 
 El log de juego confirmó un ClassCastException en Mechanics.ensure de .3: partsInSlots es una List nativa, no un Map. .4 usa la lista y conserva las piezas existentes. La prueba de maletera usa ahora la misma estructura nativa; el verificador comprueba el descriptor del campo en el JAR real. Pasaron 30 comprobaciones simuladas y el análisis de 4858 métodos; no se ejecutó Minecraft. Reemplazar únicamente el core .3 por .4; conservar el pack dashboard-trunks.1.
+
+## Corrección .5: manual real e interacción isométrica
+
+La caja manual ya no utiliza el acelerador simplificado que elegía marchas al acelerar/frenar. Se bloquean los seis emisores nativos de cambio para motores manuales y el modo guardado se aplica durante la actualización. El clic de cambio no se procesa también como interacción nativa. Se omiten los ajustes de cámara propios de MTS durante el modo isométrico y se incorporan rayos de selección para las piezas del vehículo. Instalación y pruebas: [vehicle-integration-patch](../vehicle-integration-patch/README.md).

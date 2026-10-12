@@ -1,0 +1,13 @@
+{
+  "quietly_input_sha256": "7789fa19882177efa99c37628f79ba41406027b35f1a9c4b2ca409252ae74935",
+  "quietly_output_sha256": "bb4dcba63ff91a8514c8264fa0db60e94aae91a86a502b24ee1a5d11a00bde24",
+  "quietly_changed_entries": [
+    "dev/zomboid/scavenging/SearchHud.class"
+  ],
+  "pack_output_sha256": "fc3320333dda051184661f2e75c39c047824df38d27dfd062e195e3995389a75",
+  "hidden_model_objects": [
+    "crate",
+    "lid"
+  ],
+  "minecraft_runtime_tested": false
+}
