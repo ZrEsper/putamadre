@@ -1,6 +1,6 @@
 {
   "input_sha256": "54a6bc7d6397af982c7e3e0d0c6834cf7c183b9d50a862ff250fe072e4f50fab",
-  "output_sha256": "040a703809acc2bc912a148ddc326289f68476f62c8b010eec73b5be113eb1b2",
+  "output_sha256": "98cfee0c20fbfe9f60ef26faa1d2de9ec990c8140f5d50c7de75f2a8358d387f",
   "changed_original_entries": [
     "me/danialisntcool/factionfriction/client/screen/OperationMapScreen.class",
     "me/danialisntcool/factionfriction/data/FactionManager.class",
@@ -14,5 +14,5 @@
     "dev/zomboid/clans/Clans.class"
   ],
   "minecraft_runtime_tested": false,
-  "simulated_checks_passed": 100
+  "simulated_checks_passed": 106
 }

@@ -1,3 +1,11 @@
+## Actualización .3: descripción, contorno rojo y corrección del crash
+
+[Descargar .3](../mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.3-nexus-tooltip-fix.jar). Reemplaza .1 o .2 en cliente y servidor; conserva una sola versión.
+
+El nexo muestra ocho líneas de explicación al pasar el ratón por su objeto en el inventario. Los enemigos de defensa tienen brillo rojo vanilla (puede verse a través de paredes); los zombis normales mantienen su aspecto. Las entradas de su equipo temporal se retiran al morir o terminar la defensa.
+
+Corrige el crash adjunto `ClassNotFoundException: dev.zomboid/clans/NexusGoal`: la carga reflectiva ahora usa el nombre de clase con puntos. Incluye una comprobación de creación real de la IA sobre las API simuladas y del tooltip y color. Total: 106 comprobaciones simuladas; sin ejecución de Minecraft ni verificación visual.
+
 # Zomboid Clans .2: menú sencillo y defensa del nexo
 
 [Descargar JAR](../mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.2-nexus-pve.jar).

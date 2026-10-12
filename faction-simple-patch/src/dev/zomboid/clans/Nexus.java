@@ -1,6 +1,8 @@
 package dev.zomboid.clans;
 import java.util.*;import java.util.function.Consumer;
 public final class Nexus {
+ public static Object goal(Object mob){return R.make("dev.zomboid.clans.NexusGoal",mob);}
+ public static void tooltip(Object event){Object stack=R.call(event,"getItemStack");if(ITEM==null||R.call(stack,"getItem")!=ITEM)return;@SuppressWarnings("unchecked") List<Object> lines=(List<Object>)R.call(event,"getToolTip");for(int i=1;i<=8;i++)lines.add(R.call(R.type("net.minecraft.network.chat.Component"),"translatable","tooltip.factionfriction.tribal_nexus."+i));}
  public static Object BLOCK,ITEM;public static final String ID="factionfriction:tribal_nexus";
  static Object key(){return R.call(R.type("net.minecraft.resources.ResourceLocation"),"parse",ID);}
  public static void register(Object event){Object registry=R.call(event,"getRegistryKey"),registries=R.type("net.minecraft.core.registries.Registries");if(registry.equals(R.get(registries,"BLOCK"))){Object properties=R.call(R.type("net.minecraft.world.level.block.state.BlockBehaviour$Properties"),"of");R.call(properties,"strength",2f,3600000f);R.call(properties,"pushReaction",R.get(R.type("net.minecraft.world.level.material.PushReaction"),"BLOCK"));BLOCK=R.make("net.minecraft.world.level.block.Block",properties);R.call(event,"register",registry,(Consumer<Object>)h->R.call(h,"register",key(),BLOCK));}else if(registry.equals(R.get(registries,"ITEM"))){if(BLOCK==null)throw new IllegalStateException("Nexus block not registered");ITEM=R.make("net.minecraft.world.item.BlockItem",BLOCK,R.make("net.minecraft.world.item.Item$Properties"));R.call(event,"register",registry,(Consumer<Object>)h->R.call(h,"register",key(),ITEM));}}

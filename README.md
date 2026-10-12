@@ -273,3 +273,7 @@ Versión .12: el retroceso temporal se separa del objetivo bajo el cursor y deca
 ## Zomboid Clans .2: defensa del nexo y menú simplificado
 
 [Descargar Zomboid Clans .2](mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.2-nexus-pve.jar). Reemplaza .1 en cliente y servidor. Menú contextual, límites 4/6/8 chunks, protección frente a spawns, nexo de 100 PV mejorable, defensas PvE de tres fases con especiales, recompensas, XP y top de clanes. [Uso, probabilidades y validación](faction-simple-patch/README.md). Pruebas simuladas; pendiente probarse en Minecraft.
+
+## Zomboid Clans .3: nexo explicado y enemigos de oleada rojos
+
+[Descargar .3](mods/factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.3-nexus-tooltip-fix.jar). Añade la descripción del nexo y contornos rojos para los enemigos de defensa. Corrige el crash al cargar NexusGoal con una ruta incorrecta. Reemplazar versiones anteriores en cliente y servidor. 106 comprobaciones simuladas; prueba en Minecraft pendiente. [Detalles y fuentes](faction-simple-patch/README.md).
