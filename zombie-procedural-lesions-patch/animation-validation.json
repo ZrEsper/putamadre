@@ -1,0 +1,7 @@
+{
+  "parsed_animation_lines": 999,
+  "simulated_frames": 2400,
+  "healthy_and_burning_uninjured_materials_hidden": true,
+  "bounded_finite_poses": true,
+  "game_runtime_tested": false
+}

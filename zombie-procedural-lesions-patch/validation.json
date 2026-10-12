@@ -1,0 +1,8 @@
+{
+  "source_sha256": "e100f70b24bb1686d67ec9f4d9d4b184db1467c6d599acea875952f580db9d78",
+  "output_sha256": "1a3b81c688167eb20936ba7d97f2542b1ba4c0adbb7d1b4164f3a8f9844604c4",
+  "structural_checks": 368,
+  "original_images_and_sounds_preserved": 3938,
+  "injury_subparts_with_hidden_default": 111,
+  "minecraft_runtime_tested": false
+}
