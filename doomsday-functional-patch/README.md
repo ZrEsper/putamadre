@@ -46,4 +46,10 @@ Java 21, Python 3, ECJ 3.40 y ASM 9.7.1; los artefactos se verifican mediante `t
 python doomsday-functional-patch/build.py /ruta/doomsday_decoration-1.1.4.2-neoforge-1.21.1.jar /ruta/herramientas
 ```
 
-La salida va a `mods/doomsday_decoration-1.1.4.2-neoforge-1.21.1-zomboid-storage.1.jar`. Las clases de prueba no se incluyen. `validation.json` registra hashes y el alcance de las verificaciones. No incluye instaladores ni ejecutables externos.
+La salida va a `mods/doomsday_decoration-1.1.4.2-neoforge-1.21.1-zomboid-storage.2.jar`. Las clases de prueba no se incluyen. `validation.json` registra hashes y el alcance de las verificaciones. No incluye instaladores ni ejecutables externos.
+
+## Compatibilidad Storage .2
+
+El registro de tamaños ahora ocurre en el constructor común de los muebles. También se ejecuta cuando el mixin de Zomboid Survival sustituye la fábrica original y crea neveras/generadores directamente. Al interactuar con una parte vinculada se llama a la interacción original del bloque principal: las neveras de Survival conservan el refresco del motor FF y el dispensador de agua.
+
+El log aportado identifica además una dependencia exacta: Survival 1.1.0 sólo aceptaba Doomsday 1.1.4.2. Instalar también `zomboid-survival-1.21.1-1.1.0-ff-preservation-doomsday-compat.1.jar`, cuyo rango permite la familia 1.1.4.2 y sus variantes Storage; no modifica las clases ni los datos del motor FF.

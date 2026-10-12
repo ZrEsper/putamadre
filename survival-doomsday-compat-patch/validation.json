@@ -1,0 +1,9 @@
+{
+  "input_sha256": "6393155c45e2c86d177fc15afcb8cae6dbe45bbc3d8d076147057b7a8e237c33",
+  "output_sha256": "30b54b2fbfad5125bf2cc75e9a9b3dab1bb64ece7757d2a566bf8ed4cd931d9d",
+  "changed_entries": [
+    "META-INF/neoforge.mods.toml"
+  ],
+  "all_classes_assets_configs_and_embedded_libraries_preserved": true,
+  "minecraft_runtime_tested": false
+}

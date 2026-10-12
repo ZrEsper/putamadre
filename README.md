@@ -312,4 +312,6 @@ Versión .12: el retroceso temporal se separa del objetivo bajo el cursor y deca
 
 ## Doomsday Decoration: almacenamiento y casillas reales
 
-[Descargar Doomsday Storage .1](mods/doomsday_decoration-1.1.4.2-neoforge-1.21.1-zomboid-storage.1.jar). Reemplaza el Doomsday original en cliente y servidor, con una copia previa del mundo. Añade inventarios y recetas a 71 muebles, refrigeración de bebidas y casillas físicas vinculadas para 278 decoraciones grandes. Los muebles antiguos que ya invaden una pared necesitan recolocarse. [Uso, límites, compilación y validación](doomsday-functional-patch/README.md). Verificado con API simulada y análisis de bytecode; pendiente de prueba real en Minecraft.
+[Descargar Doomsday Storage .2](mods/doomsday_decoration-1.1.4.2-neoforge-1.21.1-zomboid-storage.2.jar). Reemplaza el Doomsday original en cliente y servidor, con una copia previa del mundo. Añade inventarios y recetas a 71 muebles, refrigeración de bebidas y casillas físicas vinculadas para 278 decoraciones grandes. Los muebles antiguos que ya invaden una pared necesitan recolocarse. [Uso, límites, compilación y validación](doomsday-functional-patch/README.md). Verificado con API simulada y análisis de bytecode; pendiente de prueba real en Minecraft.
+
+Survival 1.1.0 con FF integrado requiere también [este reemplazo compatible](mods/zomboid-survival-1.21.1-1.1.0-ff-preservation-doomsday-compat.1.jar): su dependencia exacta rechazaba la versión Storage. [Diagnóstico y verificación](survival-doomsday-compat-patch/README.md).

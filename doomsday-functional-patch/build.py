@@ -2,7 +2,7 @@ from pathlib import Path
 import zipfile,hashlib,json,tempfile,subprocess,os,sys,re,math
 r=Path(__file__).resolve().parent
 base=Path(sys.argv[1]).resolve();tools=Path(sys.argv[2]).resolve()
-out=r.parent/'mods/doomsday_decoration-1.1.4.2-neoforge-1.21.1-zomboid-storage.1.jar'
+out=r.parent/'mods/doomsday_decoration-1.1.4.2-neoforge-1.21.1-zomboid-storage.2.jar'
 sha=hashlib.sha256(base.read_bytes()).hexdigest()
 assert sha=='8bf48165646d11f1622aa9a015e573070eaccac12e98052b37548df8b4240d52','Expected uploaded Doomsday 1.1.4.2'
 for name,digest in json.loads((r/'tools.sha256.json').read_text()).items():assert hashlib.sha256((tools/name).read_bytes()).hexdigest()==digest,name

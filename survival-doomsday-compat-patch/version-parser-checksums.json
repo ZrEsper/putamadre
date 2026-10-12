@@ -1,0 +1,12 @@
+{
+  "maven-artifact-3.9.9.jar": {
+    "published_sha1": "a130ec431ef32e12a4424f9b074735bb58e15d2d",
+    "sha256": "30f015d1c1a393e19c18cd4f43532089c36d4ca328608ce3dda78b74d3d31515",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.9.9/maven-artifact-3.9.9.jar"
+  },
+  "commons-lang3-3.14.0.jar": {
+    "published_sha1": "1ed471194b02f2c6cb734a0cd6f6f107c673afae",
+    "sha256": "7b96bf3ee68949abb5bc465559ac270e0551596fa34523fddf890ec418dde13c",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar"
+  }
+}
