@@ -1,12 +1,11 @@
 {
-  "input_sha256": "813ba1dfd873bdd2520f59cfc4e7fef60fa75793f7a77316257359132af30c1b",
-  "output_sha256": "31be492097926ec669f4588b54064354eccd9789f4e84ca1c96e7fe97b282fd9",
+  "input_sha256": "31be492097926ec669f4588b54064354eccd9789f4e84ca1c96e7fe97b282fd9",
+  "output_sha256": "263693f67c937d2091c31a3795b8810166e2ae90268b326fe63267f57ae822c1",
   "changed_entries": [
     "META-INF/neoforge.mods.toml",
-    "com/cleannrooster/dungeons_iso/compat/SodiumCompat.class",
-    "com/cleannrooster/dungeons_iso/mixin/MinecraftClientMixin.class",
-    "dev/zomboid/isotacz/PanRecut.class"
+    "com/cleannrooster/dungeons_iso/mixin/compat/sodium/AbstractRenderContextMixin2.class",
+    "dev/zomboid/isotacz/Bridge.class"
   ],
-  "simulated_checks_passed": 12,
+  "simulated_checks_passed": 18,
   "minecraft_runtime_tested": false
 }
