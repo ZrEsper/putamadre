@@ -1,0 +1,34 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+[[mods]]
+modId="zomboid_gore"
+version="1.0.0"
+displayName="Zomboid Zombie Injuries"
+description="Targeted TACZ zombie wounds, progressive burns, reduced limb combat ability and synced EMF models."
+[[mixins]]
+config="zomboid_gore.mixins.json"
+[[dependencies.zomboid_gore]]
+modId="neoforge"
+type="required"
+versionRange="[21.1,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.zomboid_gore]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.21.2)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.zomboid_gore]]
+modId="entity_model_features"
+type="required"
+versionRange="[3.3.11,)"
+ordering="AFTER"
+side="CLIENT"
+[[dependencies.zomboid_gore]]
+modId="tacz"
+type="optional"
+versionRange="[1.1.8,)"
+ordering="AFTER"
+side="BOTH"

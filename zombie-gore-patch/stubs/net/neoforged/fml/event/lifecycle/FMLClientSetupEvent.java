@@ -1,0 +1,1 @@
+package net.neoforged.fml.event.lifecycle;public class FMLClientSetupEvent{public java.util.concurrent.CompletableFuture<Void> enqueueWork(Runnable r){return null;}}

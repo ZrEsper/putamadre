@@ -1,0 +1,1 @@
+package org.spongepowered.asm.mixin.injection.callback;public class CallbackInfoReturnable<T>{public void setReturnValue(T v){}public T getReturnValue(){return null;}}

@@ -1,0 +1,1 @@
+package com.tacz.guns.api;import java.util.*;public class TimelessAPI{public record Index(String type){public String getType(){return type;}}public static Map<Object,Index> entries=new HashMap<>();public static Optional<Index> getCommonGunIndex(Object id){return Optional.ofNullable(entries.get(id));}}

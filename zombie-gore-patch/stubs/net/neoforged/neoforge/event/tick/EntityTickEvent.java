@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.event.tick;public class EntityTickEvent {public static class Post{}}

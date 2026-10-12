@@ -1,0 +1,1 @@
+package net.neoforged.fml.common;@java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy.RUNTIME)public @interface EventBusSubscriber {String modid();Bus bus() default Bus.GAME;net.neoforged.api.distmarker.Dist[] value() default {};enum Bus{MOD,GAME;}}
