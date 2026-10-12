@@ -1,0 +1,9 @@
+# Zomboid Zombie Injuries 1.0.1 — TaCZ y reacción melee
+
+Con el juego cerrado, reemplaza `zomboid-zombie-gore-1.0.0-neoforge-1.21.1.jar` por `zomboid-zombie-gore-1.0.1-neoforge-1.21.1-tacz-melee-reactions.jar` en mods. Usa la misma versión en cliente y servidor. Conserva las dependencias actuales: NeoForge 21.1, Minecraft 1.21.1, EMF 3.3.11 o superior en cliente y tu TaCZ 1.1.8 para las heridas de bala.
+
+Se corrigen zg$hit y zg$end con el parámetro TacHitResult real, reemplazando Object y su @Coerce. Las llamadas existentes a Gore.begin/end se conservan. Ese era el error fatal documentado en latest.log; los errores posteriores del estado roto no prueban que los packs Valorant o GucciVuitton lo causaran.
+
+Se añaden reacciones visuales a golpes melee que realmente producen daño, mediante eventos de entidad enviados por el servidor a los jugadores que ven el zombi. Tres variantes de sacudida, torso inclinado hacia atrás, cabeza y brazos, con recuperación en 12 ticks. Se excluyen proyectiles, disparos TaCZ y golpes sin daño; no cambia el daño, la IA ni añade una parálisis. La pose es aditiva y se resta antes del siguiente cálculo para evitar acumulación. Se aplica a entidades derivadas de Zombie con modelos humanoides: los modelos especiales de mutantes que usan otra jerarquía necesitan su propia adaptación. Los brazos pueden ser recalculados después por un modelo de zombi o por EMF; el resultado final con EMF debe comprobarse en juego.
+
+Validación realizada: integridad ZIP y bytecode (20 clases, 119 métodos); firma contra EntityKineticBullet.onHitEntity de tu TaCZ; 636 comprobaciones simuladas de selección melee, sincronización, tres variantes, recuperación y no acumulación de rotaciones. Las clases de Minecraft y anotaciones se compilaron con stubs, no incluidos en el JAR. No se ejecutó Minecraft ni se pudo probar la apariencia final con tus resourcepacks. Los demás archivos originales se conservan byte por byte.
