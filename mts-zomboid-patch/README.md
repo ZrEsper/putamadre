@@ -68,3 +68,7 @@ El nuevo log llegó a construir MTS y encontró `VerifyError: Bad type on operan
 Respecto de Mechanics .2, sólo cambia `ItemItem.class`; se conserva la corrección de mixin, HUD, controles y maleteras. `FieldJvmCheck.java` extrae el propietario real de la instrucción de reparación, reproduce el VerifyError anterior en una JVM con `-Xverify:all` y verifica la instrucción corregida con receptores base, vehículo y motor. Estas clases pequeñas de prueba no se empaquetan y no sustituyen un arranque completo en Minecraft.
 
 Instalar únicamente MTS Mechanics .3 y retirar .1/.2. Conservar Dungeons Iso .19 y Official Pack Dashboard/Trunks .1. El error final `Mod architectury is not available` ocurrió después de que MTS había dejado la construcción de mods en estado roto; no se cambia Architectury para resolver este VerifyError.
+
+## Corrección .4: colocación de vehículos
+
+El log de juego confirmó un ClassCastException en Mechanics.ensure de .3: partsInSlots es una List nativa, no un Map. .4 usa la lista y conserva las piezas existentes. La prueba de maletera usa ahora la misma estructura nativa; el verificador comprueba el descriptor del campo en el JAR real. Pasaron 30 comprobaciones simuladas y el análisis de 4858 métodos; no se ejecutó Minecraft. Reemplazar únicamente el core .3 por .4; conservar el pack dashboard-trunks.1.

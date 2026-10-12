@@ -1,10 +1,6 @@
 {
-  "output_sha256": "cf14c9ef4039bc42b06f5ec47e6b5426215d247f2e9e4904d80efcaaebe20688",
+  "output_sha256": "aaa7a08cc7c9a6354aae6555c7f047f78109f36836871285adaba4c804ce757e",
   "mixin_retention": "CLASS/invisible",
   "simulated_checks_passed": 30,
-  "minecraft_runtime_tested": false,
-  "changed_since_mechanics_2": [
-    "minecrafttransportsimulator/items/instances/ItemItem.class"
-  ],
-  "jvm_field_receiver_check": "Old wrong owner rejected by JVM; output field verified with base, vehicle and engine receivers"
+  "minecraft_runtime_tested": false
 }

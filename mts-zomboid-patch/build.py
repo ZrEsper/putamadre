@@ -5,7 +5,7 @@ r=Path(__file__).resolve().parent;mod=Path(sys.argv[1]).resolve();pack=Path(sys.
 for name,digest in json.loads((r/'tools.sha256.json').read_text()).items():assert hashlib.sha256((tools/name).read_bytes()).hexdigest()==digest,name
 for p,k in [(mod,'mod'),(pack,'pack')]:assert hashlib.sha256(p.read_bytes()).hexdigest()==json.loads((r/'inputs.sha256.json').read_text())[k]
 asm=os.pathsep.join(str(tools/n) for n in ['asm.jar','asm-tree.jar','asm-analysis.jar']);ecj=['java','-jar',str(tools/'ecj.jar'),'-21','-proc:none','-nowarn']
-modout=r.parent/'mods/Immersive-Vehicles-1.21.1-24.0.0-zomboid-mechanics.3.jar';packout=r.parent/'mods/MTS-Official-Pack-1.21.1-V29-zomboid-dashboard-trunks.1.jar'
+modout=r.parent/'mods/Immersive-Vehicles-1.21.1-24.0.0-zomboid-mechanics.4.jar';packout=r.parent/'mods/MTS-Official-Pack-1.21.1-V29-zomboid-dashboard-trunks.1.jar'
 with tempfile.TemporaryDirectory() as temp:
  t=Path(temp);c=t/'classes';p=t/'patch';tests=t/'tests'
  for cmd in [ecj+['-d',str(c)]+[str(f) for f in (r/'src').rglob('*.java')],ecj+['-cp',asm,'-d',str(p),str(r/'Patch.java'),str(r/'Verify.java'),str(r/'FieldJvmCheck.java')],['java','-cp',str(p)+os.pathsep+asm,'Patch',str(mod),str(modout),str(c)],ecj+['-cp',str(modout),'-d',str(tests)]+[str(f) for f in (r/'tests').rglob('*.java')],['java','-Xverify:all','-cp',str(tests)+os.pathsep+str(modout),'dev.zomboid.mts.Checks'],['java','-cp',str(p)+os.pathsep+asm,'Verify',str(modout)],['java','-Xverify:all','-cp',str(p)+os.pathsep+asm,'FieldJvmCheck',str(modout)]]:subprocess.run(cmd,check=True)
