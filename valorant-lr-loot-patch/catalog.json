@@ -1,0 +1,183 @@
+{
+  "guns": [
+    {
+      "id": "crystals:golden",
+      "ammo": "crystals:crystal_acp",
+      "capacity": 1,
+      "mode": "SEMI",
+      "min_quality": 4
+    },
+    {
+      "id": "valorant:classic",
+      "ammo": "tacz:9mm",
+      "capacity": 12,
+      "mode": "SEMI",
+      "min_quality": 0
+    },
+    {
+      "id": "valorant:ghost",
+      "ammo": "tacz:45acp",
+      "capacity": 13,
+      "mode": "SEMI",
+      "min_quality": 1
+    },
+    {
+      "id": "valorant:judge",
+      "ammo": "tacz:12g",
+      "capacity": 8,
+      "mode": "AUTO",
+      "min_quality": 2
+    },
+    {
+      "id": "valorant:odin",
+      "ammo": "tacz:762x54",
+      "capacity": 100,
+      "mode": "AUTO",
+      "min_quality": 3
+    },
+    {
+      "id": "valorant:operator",
+      "ammo": "tacz:338",
+      "capacity": 5,
+      "mode": "SEMI",
+      "min_quality": 3
+    },
+    {
+      "id": "valorant:outlaw",
+      "ammo": "tacz:12g",
+      "capacity": 2,
+      "mode": "SEMI",
+      "min_quality": 2
+    },
+    {
+      "id": "valorant:phantom",
+      "ammo": "tacz:556x45",
+      "capacity": 30,
+      "mode": "AUTO",
+      "min_quality": 2
+    },
+    {
+      "id": "valorant:sheriff",
+      "ammo": "tacz:357mag",
+      "capacity": 6,
+      "mode": "SEMI",
+      "min_quality": 1
+    },
+    {
+      "id": "valorant:vandal",
+      "ammo": "tacz:762x39",
+      "capacity": 25,
+      "mode": "AUTO",
+      "min_quality": 2
+    }
+  ],
+  "knives": [
+    {
+      "id": "wtyj:desire_blade",
+      "base_item": "lrtactical:melee",
+      "min_quality": 2
+    },
+    {
+      "id": "wtyj:eternal_axe",
+      "base_item": "lrtactical:melee",
+      "min_quality": 2
+    },
+    {
+      "id": "wtyj:eternal_karambit",
+      "base_item": "lrtactical:melee",
+      "min_quality": 1
+    },
+    {
+      "id": "wtyj:future_butterfly",
+      "base_item": "lrtactical:melee",
+      "min_quality": 2
+    },
+    {
+      "id": "wtyj:future_dagger",
+      "base_item": "lrtactical:melee",
+      "min_quality": 1
+    },
+    {
+      "id": "wtyj:thunder_hammer",
+      "base_item": "lrtactical:melee",
+      "min_quality": 2
+    }
+  ],
+  "armor": [
+    "armored_chemical_boots",
+    "armored_chemical_chestplate",
+    "armored_chemical_helmet",
+    "armored_chemical_leggings",
+    "atf_boots",
+    "atf_chestplate",
+    "atf_helmet",
+    "atf_leggings",
+    "atf_vest_boots",
+    "atf_vest_chestplate",
+    "atf_vest_helmet",
+    "atf_vest_leggings",
+    "attacker_boots",
+    "attacker_chestplate",
+    "attacker_helmet",
+    "attacker_leggings",
+    "chemical_protective_boots",
+    "chemical_protective_chestplate",
+    "chemical_protective_helmet",
+    "chemical_protective_leggings",
+    "dea_armed_boots",
+    "dea_armed_chestplate",
+    "dea_armed_helmet",
+    "dea_armed_leggings",
+    "dea_boots",
+    "dea_chestplate",
+    "dea_helmet",
+    "dea_leggings",
+    "defender_boots",
+    "defender_chestplate",
+    "defender_helmet",
+    "defender_leggings",
+    "fbi_armed_boots",
+    "fbi_armed_chestplate",
+    "fbi_armed_helmet",
+    "fbi_armed_leggings",
+    "fbi_boots",
+    "fbi_chestplate",
+    "fbi_helmet",
+    "fbi_leggings",
+    "irs_boots",
+    "irs_chestplate",
+    "irs_helmet",
+    "irs_leggings",
+    "joker_armed_chestplate",
+    "joker_armed_helmet",
+    "joker_boots",
+    "joker_chestplate",
+    "joker_helmet",
+    "joker_leggings",
+    "medical_boots",
+    "medical_chestplate",
+    "medical_helmet",
+    "medical_leggings",
+    "scout_boots",
+    "scout_chestplate",
+    "scout_helmet",
+    "scout_leggings",
+    "sniper_boots",
+    "sniper_chestplate",
+    "sniper_helmet",
+    "sniper_leggings"
+  ],
+  "ammo": [
+    "crystals:crystal",
+    "crystals:crystal_acp",
+    "crystals:unstable_crystal",
+    "valorant:wg100",
+    "valorant:wg50"
+  ],
+  "attachments": [
+    "crystals:crystal_mag",
+    "crystals:muzzle_crystal_muffler",
+    "valorant:scope_operator_default",
+    "valorant:scope_outlaw_default"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "changed_original_entries": [
+    "dev/zomboid/remains/ZombieRemainsLoot.class"
+  ],
+  "output_sha256": "a360bccdc8dd8eb2d1f72aba838454a875b6fe92d7a96cbeba25dde7d9dd9494",
+  "compiled_against_real_minecraft_apis": true,
+  "input_sha256": "865044efdae152a2448e7f8cb38ed1a5aeda292a7a7ceccea3466c867cb96e2a"
+}

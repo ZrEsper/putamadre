@@ -1,0 +1,9 @@
+{
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.255",
+  "native_game_tests_passed": 4,
+  "tested_artifact_sha256": "a360bccdc8dd8eb2d1f72aba838454a875b6fe92d7a96cbeba25dde7d9dd9494",
+  "gun_indices_verified": 10,
+  "knife_runtime_tested": false,
+  "visual_client_tested": false
+}

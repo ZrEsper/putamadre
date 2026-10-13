@@ -1,0 +1,8 @@
+{
+  "new_tables": 28,
+  "extended_tables": 27,
+  "reference_checks": 158,
+  "unchanged_original_entries": 4074,
+  "original_scan_functions_preserved": true,
+  "output_sha256": "a05fac3555ae57a5e0d32a3f3292ac5d2e7f708e11e6261f7d927e1230a5781d"
+}
