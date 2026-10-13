@@ -1,0 +1,34 @@
+{
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.255",
+  "native_server_tests": {
+    "brimm": {
+      "passed": 3,
+      "coverage": [
+        "153 armor pieces retain attributes/durability",
+        "Patch recipe addition/removal, copy isolation and recovered patch",
+        "Vanilla and workbench recipes load"
+      ]
+    },
+    "apocalypticarsenal": {
+      "passed": 1,
+      "coverage": [
+        "3 actual LRTactical indexes and item IDs",
+        "Attack damage 12/8/6",
+        "3 smithing recipe outputs and ingredient tags",
+        "Loads alongside BRIMM, TACZ, LRTactical isometric-melee.1, FirstAid, The Hordes, AtlasLib"
+      ]
+    }
+  },
+  "graphical_client": "not run; no display server",
+  "outputs": {
+    "brimm-1.21.1-3.0.1-neoforge.1.jar": {
+      "bytes": 9466868,
+      "sha256": "76aee349e11b533394d307dd9dd2464f42f87b3f2ca798deb5bf593f2d6c77cb"
+    },
+    "apocalypticarsenal-1.21.1-1.0.1-neoforge.1.jar": {
+      "bytes": 2302852,
+      "sha256": "eadf3479402bb3c3397b7a7f1df93e8347ad6a32c93f9a342550e29e1ec3c6e2"
+    }
+  }
+}

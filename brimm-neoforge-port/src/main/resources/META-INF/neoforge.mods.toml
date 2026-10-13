@@ -1,0 +1,20 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="All Rights Reserved"
+[[mods]]
+modId="brimm"
+version="3.0.1-neoforge.1"
+displayName="Brimm Armors"
+authors="LIRAY, Concord, strubium, ema_08_"
+[[dependencies.brimm]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.255,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.brimm]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.21.2)"
+ordering="NONE"
+side="BOTH"

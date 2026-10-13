@@ -1,0 +1,12 @@
+package blackoutInteractive.ema_08_.items.effectsProvidingArmors;
+
+import blackoutInteractive.ema_08_.items.effectsProvidingArmors.IAmplifiableApplicableEffect;
+import net.minecraft.world.effect.MobEffect;
+
+@Deprecated
+public interface IEffectProvidingArmor {
+    public IAmplifiableApplicableEffect[] getAddedOnWear();
+
+    public MobEffect[] getPreventedOnWear();
+}
+

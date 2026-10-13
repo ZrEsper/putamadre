@@ -1,0 +1,32 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="All Rights Reserved"
+[[mods]]
+modId="apocalypticarsenal"
+version="1.0.1-neoforge.1"
+displayName="Apocalyptic Arsenal"
+authors="ChaosCraft_HD, Admany"
+[[dependencies.apocalypticarsenal]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.255,)"
+ordering="AFTER"
+side="BOTH"
+[[dependencies.apocalypticarsenal]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.21.2)"
+ordering="AFTER"
+side="BOTH"
+[[dependencies.apocalypticarsenal]]
+modId="tacz"
+type="required"
+versionRange="[1.1.8,)"
+ordering="AFTER"
+side="BOTH"
+[[dependencies.apocalypticarsenal]]
+modId="lrtactical"
+type="required"
+versionRange="[0.4.3,0.4.4)"
+ordering="AFTER"
+side="BOTH"

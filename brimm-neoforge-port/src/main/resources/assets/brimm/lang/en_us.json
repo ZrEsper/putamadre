@@ -1,0 +1,595 @@
+{
+	
+  "itemGroup.brimm.armors": "Brimm Armors",
+  "itemGroup.brimm.brimm_misc": "Brimm Misc",
+
+  "item.brimm.iron_plate": "Iron Plate",
+  "item.brimm.diamond_plate": "Diamond Plate",
+  "item.brimm.nether_plate": "Netherite Plate",
+
+  "item.brimm.base": "Modular Plate Carrier",
+  "tooltip.brimm.base": "If you can still breathe, it’s working",
+
+  "item.brimm.civilian": "Civilian Vest",
+  "tooltip.brimm.civilian": "Armored Non-Combatant",
+
+  "item.brimm.infantry": "TBD",
+  "tooltip.brimm.infantry": "",
+
+  "item.brimm.us": "US Vest (Marine Corps)",
+  "tooltip.brimm.us": "",
+
+  "item.brimm.ukrainian": "Ukrainian Vest",
+  "tooltip.brimm.ukrainian": "",
+
+  "item.brimm.osprey": "Osprey Body Armor",
+  "tooltip.brimm.osprey": "British armor, because tea won't stop bullets",
+
+  "item.brimm.ratnik": "Ratnik Vest",
+  "tooltip.brimm.ratnik": "",
+
+  "item.brimm.vietnamese_basic": "Vietnamese Chest Rig",
+  "tooltip.brimm.vietnamese_basic": "...but right now, they're speaking Vietnamese",
+
+  "item.brimm.civilian_medic": "Medic Vest",
+  "tooltip.brimm.civilian_medic": "",
+
+  "item.brimm.defender": "Defender Body Armor",
+  "tooltip.brimm.defender": "",
+
+  "item.brimm.ukrainian_mobilized": "Mobilized Ukrainian Vest",
+  "tooltip.brimm.ukrainian_mobilized": "",
+
+  "item.brimm.defender_iii": "Mobilized Defender Body Armor",
+  "tooltip.brimm.defender_iii": "",
+
+  "item.brimm.us_mobilized": "Mobilized US Vest (Army)",
+  "tooltip.brimm.us_mobilized": "",
+
+  "item.brimm.nato": "US Urban Camouflage Vest",
+  "tooltip.brimm.nato": "Built for the concrete jungle",
+
+  "item.brimm.nato_ii": "California National Guard Vest",
+  "tooltip.brimm.nato_ii": "Fires, floods, and paperwork",
+
+  "item.brimm.a_police": "US Police Vest",
+  "tooltip.brimm.a_police": "Stop resisting!",
+
+  "item.brimm.r_police": "Russian Police Vest",
+  "tooltip.brimm.r_police": "Crime pays. Everyone gets a cut",
+
+  "item.brimm.ratnik_mobilized": "Mobilized Ratnik Vest",
+  "tooltip.brimm.ratnik_mobilized": "",
+
+  "item.brimm.atleti": "Atleti's Body Armor",
+  "tooltip.brimm.atleti": "Simple Athletes from the Periphery",
+
+  "item.brimm.assault": "Assault Body Armor",
+  "tooltip.brimm.assault": "Stops small talk and small arms fire",
+
+  "item.brimm.pmc": "PMC Body Armor",
+  "tooltip.brimm.pmc": "Temperature +50. Everything we love!",
+
+  "item.brimm.veteran_ratnik": "Veteran Ratnik Vest",
+  "tooltip.brimm.veteran_ratnik": "",
+
+  "item.brimm.hazard_kit": "Hazard Suit Vest",
+  "tooltip.brimm.hazard_kit": "Safety first. Panic second.",
+
+  "item.brimm.us_veteran": "Veteran US Vest (Marine Raiders)",
+  "tooltip.brimm.us_veteran": "MARSOC Calls",
+
+  "item.brimm.ukrainian_veteran": "Veteran Ukrainian Vest",
+  "tooltip.brimm.ukrainian_veteran": "",
+
+  "item.brimm.swat_kit": "SWAT Vest",
+  "tooltip.brimm.swat_kit": "Doors are just suggestions",
+
+  "item.brimm.sobr_kit": "SOBR Vest",
+  "tooltip.brimm.sobr_kit": "",
+
+  "item.brimm.cqb_kit": "CQB Body Armor",
+  "tooltip.brimm.cqb_kit": "The wrong kind of room service",
+
+  "item.brimm.press": "Press Body Armor",
+  "tooltip.brimm.press": "You're here to document it, not survive it",
+
+  "item.brimm.spn": "Jagdkommando Body Armor",
+  "tooltip.brimm.spn": "Austrian Engineering",
+
+  "item.brimm.ratnik_veteran": "Veteran Ratnik Vest",
+  "tooltip.brimm.ratnik_veteran": "",
+
+  "item.brimm.horse": "517 Body Armor",
+  "tooltip.brimm.horse": "",
+
+  "item.brimm.guard": "Guard Body Armor",
+  "tooltip.brimm.guard": "Always Ready, Always There!",
+
+  "item.brimm.marine": "MarineRaiders Body Armor",
+  "tooltip.brimm.marine": "",
+
+  "item.brimm.tmspmg": "TMSPMG Field Medic",
+  "tooltip.brimm.tmspmg": "Saving the bloody, broken, and bruised",
+
+  "item.brimm.berserk": "Berserk Vest",
+  "tooltip.brimm.berserk": "Scotland's Finest Export",
+
+  "item.brimm.vanderer": "Vanderer Body Armor",
+  "tooltip.brimm.vanderer": "",
+
+  "item.brimm.bydlovka": "Bydlovka Vest",
+  "tooltip.brimm.bydlovka": "Rednecks of Europe",
+
+  "item.brimm.concord": "Concord's Body Armor",
+  "tooltip.brimm.concord": "He skinned a bear for this",
+
+  "item.brimm.taro": "Taro's Body Armor",
+  "tooltip.brimm.taro": "",
+
+  "item.brimm.maid": "Housemaid Body Armor",
+  "tooltip.brimm.maid": "Every militarist is a little girl at heart",
+
+  "item.brimm.medic": "Futuristic Medic Body Armor",
+  "tooltip.brimm.medic": "Heroes never die!",
+
+  "item.brimm.killa": "Killa's Vest",
+  "tooltip.brimm.killa": "Please enjoy your shopping experience",
+
+  "item.brimm.saper": "Saper Body Armor",
+  "tooltip.brimm.saper": "Explosives don't forgive mistakes.",
+
+  "item.brimm.ratnik_advance": "Ratnik Scout Body Armor",
+  "tooltip.brimm.ratnik_advance": "Built-In Complaints Department",
+
+  "item.brimm.ghost": "Ghost's Vest",
+  "tooltip.brimm.ghost": "Bravo Six, going dark",
+
+  "item.brimm.base_h": "Special Ops Core",
+  "tooltip.brimm.base_h": "",
+
+  "item.brimm.civilian_h": "Civilian Helmet",
+  "tooltip.brimm.civilian_h": "",
+
+  "item.brimm.infantry_h": "US Infantry Helmet",
+  "tooltip.brimm.infantry_h": "",
+
+  "item.brimm.us_h": "US Helmet (Marine Corps)",
+  "tooltip.brimm.us_h": "",
+
+  "item.brimm.ukrainian_h": "Ukrainian Helmet",
+  "tooltip.brimm.ukrainian_h": "",
+
+  "item.brimm.osprey_h": "Osprey Helmet",
+  "tooltip.brimm.osprey_h": "For a proper British egghead.",
+
+  "item.brimm.six_b_four_seven_dark_h": "Ratnik Helmet",
+  "tooltip.brimm.six_b_four_seven_dark_h": "",
+
+  "item.brimm.vietnamese_basic_h": "Vietnamese Nón Lá",
+  "tooltip.brimm.vietnamese_basic_h": "I am the Lorax and I speak for the trees...",
+
+  "item.brimm.zch_h": "ZSH12 (Defender)",
+  "tooltip.brimm.zch_h": "",
+
+  "item.brimm.tshfour_green_h": "TSh-4 Forest Green Helmet",
+  "tooltip.brimm.tshfour_green_h": "Camouflage for steel coffins",
+
+  "item.brimm.cap_h": "Plain Cap",
+  "tooltip.brimm.cap_h": "",
+
+  "item.brimm.pakol_h": "Pakol Cap",
+  "tooltip.brimm.pakol_h": "The Afghan classic",
+
+  "item.brimm.civilian_medic_h": "Civilian Medic Helmet",
+  "tooltip.brimm.civilian_medic_h": "Protect the Heavy!",
+
+  "item.brimm.ukrainian_mobilized_h": "Mobilized Ukrainian Helmet",
+  "tooltip.brimm.ukrainian_mobilized_h": "",
+
+  "item.brimm.zabralo_h": "ZSH12 Visor (Defender)",
+  "tooltip.brimm.zabralo_h": "",
+
+  "item.brimm.us_mobilized_h": "Mobilized US Helmet (Army)",
+  "tooltip.brimm.us_mobilized_h": "",
+
+  "item.brimm.a_police_h": "American Police Hat",
+  "tooltip.brimm.a_police_h": "Authority looks surprisingly wearable",
+
+  "item.brimm.r_police_h": "Russian Police Hat",
+  "tooltip.brimm.r_police_h": "Your cooperation has a fee",
+
+  "item.brimm.ratnik_mobilized_h": "Mobilized Ratnik Helmet",
+  "tooltip.brimm.ratnik_mobilized_h": "",
+
+  "item.brimm.airframe_h": "Airframe Helmet",
+  "tooltip.brimm.airframe_h": "Designed to keep you moving",
+
+  "item.brimm.assault_h": "Assault Helmet",
+  "tooltip.brimm.assault_h": "Brain Bucket Deluxe",
+
+  "item.brimm.pmc_h": "PMC Helmet",
+  "tooltip.brimm.pmc_h": "Reliable protection for wars that never make the news",
+
+  "item.brimm.tshfour_h": "TSh-4 Ground Crew Helmet",
+  "tooltip.brimm.tshfour_h": "Smells like oil, smells like diesel",
+
+  "item.brimm.cossack_red_h": "Kubanka (Red)",
+  "tooltip.brimm.cossack_red_h": "",
+
+  "item.brimm.cossack_blue_h": "Kubanka (Blue)",
+  "tooltip.brimm.cossack_blue_h": "",
+
+  "item.brimm.ratnik_veteran_h": "Veteran Ratnik Helmet",
+  "tooltip.brimm.ratnik_veteran_h": "",
+
+  "item.brimm.hazard_kit_h": "Hazard Suit Helmet",
+  "tooltip.brimm.hazard_kit_h": "",
+
+  "item.brimm.us_veteran_h": "US Veteran Helmet (Marine Raiders)",
+  "tooltip.brimm.us_veteran_h": "",
+
+  "item.brimm.ukrainian_veteran_h": "Veteran Ukrainian Helmet",
+  "tooltip.brimm.ukrainian_veteran_h": "",
+
+  "item.brimm.swat_kit_h": "SWAT Helmet",
+  "tooltip.brimm.swat_kit_h": "Diplomacy with guns",
+
+  "item.brimm.sobr_kit_h": "SOBR Helmet",
+  "tooltip.brimm.sobr_kit_h": "",
+
+  "item.brimm.cqb_kit_h": "CQB Helmet",
+  "tooltip.brimm.cqb_kit_h": "",
+
+  "item.brimm.press_h": "Press PASGT Helmet",
+  "tooltip.brimm.press_h": "Journalism-grade protection",
+
+  "item.brimm.gasmask_h": "Gas Mask Helmet",
+  "tooltip.brimm.gasmask_h": "Poisoning? What is that?",
+
+  "item.brimm.gasmask_alt_h": "Gas Mask (Alternate)",
+  "tooltip.brimm.gasmask_alt_h": "Poisoning? What is that?",
+
+  "item.brimm.gpnvg_h": "Black Ops Helmet",
+  "tooltip.brimm.gpnvg_h": "A face only night vision could love",
+
+  "item.brimm.tmspmg_h": "TMSPMG Field Medic Hat",
+  "tooltip.brimm.tmspmg_h": "The squad’s designated problem solver",
+
+  "item.brimm.berserk_h": "Berserk Beret",
+  "tooltip.brimm.berserk_h": "Proudly British. Proudly SAS.",
+
+  "item.brimm.vanderer_h": "Vanderer Headwear",
+  "tooltip.brimm.vanderer_h": "",
+
+  "item.brimm.bydlovka_h": "Bydlovka Helmet",
+  "tooltip.brimm.bydlovka_h": "",
+
+  "item.brimm.concord_h": "Concord's Helmet",
+  "tooltip.brimm.concord_h": "",
+
+  "item.brimm.taro_h": "Taro's Helmet",
+  "tooltip.brimm.taro_h": "",
+
+  "item.brimm.medic_h": "Futuristic Medic Helmet",
+  "tooltip.brimm.medic_h": "This helmet makes you sexier and heals your allies",
+
+  "item.brimm.maid_h": "Housemaid Helmet",
+  "tooltip.brimm.maid_h": "Big-Back Activities",
+
+  "item.brimm.killa_h": "Killa's Helmet",
+  "tooltip.brimm.killa_h": "Forged for endurance. Worn by madness",
+
+  "item.brimm.saper_h": "Saper MK-2",
+  "tooltip.brimm.saper_h": "No smoking in the mines",
+
+  "item.brimm.ghost_h": "Ghost's Helmet",
+  "tooltip.brimm.ghost_h": "Show my face?",
+
+  "item.brimm.nato_h": "US Urban Camouflage Helmet",
+  "tooltip.brimm.nato_h": "Optimized for steel, glass, and asphalt",
+
+  "item.brimm.six_b_four_seven_h": "Veteran 6B47 Helmet",
+  "tooltip.brimm.six_b_four_seven_h": "Worn by someone who stopped counting deployments",
+
+  "item.brimm.base_p": "Hardened Green Kneepads",
+  "tooltip.brimm.base_p": "",
+
+  "item.brimm.civilian_kneepads_p": "Civilian Kneepads",
+  "tooltip.brimm.civilian_kneepads_p": "",
+
+  "item.brimm.us_p": "US Kneepads (Marine Corps)",
+  "tooltip.brimm.us_p": "",
+
+  "item.brimm.osprey_p": "Osprey Kneepads",
+  "tooltip.brimm.osprey_p": "",
+
+  "item.brimm.ratnik_basic_p": "Ratnik Kneepads",
+  "tooltip.brimm.ratnik_basic_p": "",
+
+  "item.brimm.defender_p": "Defender Kneepads",
+  "tooltip.brimm.defender_p": "",
+
+  "item.brimm.ukrainian_p": "Ukrainian Kneepads",
+  "tooltip.brimm.ukrainian_p": "",
+
+  "item.brimm.civilian_medic_p": "Medic Kneepads",
+  "tooltip.brimm.civilian_medic_p": "",
+
+  "item.brimm.ukrainian_mobilized_p": "Mobilized Ukrainian Kneepads",
+  "tooltip.brimm.ukrainian_mobilized_p": "",
+
+  "item.brimm.defender_mobilized_p": "Mobilized Defender Kneepads",
+  "tooltip.brimm.defender_mobilized_p": "",
+
+  "item.brimm.us_mobilized_p": "Mobilized US Kneepads (Army)",
+  "tooltip.brimm.us_mobilized_p": "",
+
+  "item.brimm.a_police_p": "American Police Kneepads",
+  "tooltip.brimm.a_police_p": "",
+
+  "item.brimm.r_police_p": "Russian Police Kneepads",
+  "tooltip.brimm.r_police_p": "",
+
+  "item.brimm.ratnik_mobilized_p": "Mobilized Ratnik Kneepads",
+  "tooltip.brimm.ratnik_mobilized_p": "",
+
+  "item.brimm.generic_urban_p": "Generic Kneepads (Urban)",
+  "tooltip.brimm.generic_urban_p": "",
+
+  "item.brimm.generic_dark_tan_p": "Generic Kneepads (Dark Tan)",
+  "tooltip.brimm.generic_dark_tan_p": "",
+
+  "item.brimm.ratnik_veteran_p": "Veteran Ratnik Kneepads",
+  "tooltip.brimm.ratnik_veteran_p": "",
+
+  "item.brimm.hazard_kit_p": "Hazard Kit Kneepads",
+  "tooltip.brimm.hazard_kit_p": "",
+
+  "item.brimm.us_veteran_p": "Veteran US Kneepads (Marine Raiders)",
+  "tooltip.brimm.us_veteran_p": "",
+
+  "item.brimm.ukrainian_veteran_p": "Veteran Ukrainian Kneepads",
+  "tooltip.brimm.ukrainian_veteran_p": "",
+
+  "item.brimm.swat_kit_p": "SWAT Kit Kneepads",
+  "tooltip.brimm.swat_kit_p": "",
+
+  "item.brimm.sobr_kit_p": "SOBR Kit Kneepads",
+  "tooltip.brimm.sobr_kit_p": "",
+
+  "item.brimm.cqb_kit_p": "CQB Kit Kneepads",
+  "tooltip.brimm.cqb_kit_p": "",
+
+  "item.brimm.generic_brown_p": "Generic Kneepads (Brown)",
+  "tooltip.brimm.generic_brown_p": "",
+
+  "item.brimm.tmspmg_p": "TMSPMG Kneepads",
+  "tooltip.brimm.tmspmg_p": "",
+
+  "item.brimm.berserk_p": "Berserk Kneepads",
+  "tooltip.brimm.berserk_p": "",
+
+  "item.brimm.bydlovka_p": "Bydlovka Kneepads",
+  "tooltip.brimm.bydlovka_p": "",
+
+  "item.brimm.concord_p": "Concord's Kneepads",
+  "tooltip.brimm.concord_p": "",
+
+  "item.brimm.taro_p": "Taro's Kneepads",
+  "tooltip.brimm.taro_p": "",
+
+  "item.brimm.generic_light_tan_p": "Generic Kneepads (Light Tan)",
+  "tooltip.brimm.generic_light_tan_p": "",
+
+  "item.brimm.ghost_p": "Generic Kneepads (Black)",
+  "tooltip.brimm.ghost_p": "",
+
+  "item.brimm.base_b": "Base Green Boots",
+  "tooltip.brimm.base_b": "",
+
+  "item.brimm.civilian_b": "Civilian Boots",
+  "tooltip.brimm.civilian_b": "",
+
+  "item.brimm.us_b": "US Boots (Marine Corps)",
+  "tooltip.brimm.us_b": "",
+
+  "item.brimm.ukrainian_b": "Ukrainian Boots",
+  "tooltip.brimm.ukrainian_b": "",
+
+  "item.brimm.osprey_b": "Osprey Boots",
+  "tooltip.brimm.osprey_b": "",
+
+  "item.brimm.ratnik_b": "Ratnik Boots",
+  "tooltip.brimm.ratnik_b": "",
+
+  "item.brimm.defender_b": "Defender Boots",
+  "tooltip.brimm.defender_b": "",
+
+  "item.brimm.civilian_medic_b": "Medic Boots",
+  "tooltip.brimm.civilian_medic_b": "",
+
+  "item.brimm.ukrainian_mobilized_b": "Mobilized Ukrainian Boots",
+  "tooltip.brimm.ukrainian_mobilized_b": "",
+
+  "item.brimm.defender_mobilized_b": "Mobilized Defender Boots",
+  "tooltip.brimm.defender_mobilized_b": "",
+
+  "item.brimm.us_mobilized_b": "Mobilized US Boots (Army)",
+  "tooltip.brimm.us_mobilized_b": "",
+
+  "item.brimm.a_police_b": "American Police Boots",
+  "tooltip.brimm.a_police_b": "",
+
+  "item.brimm.r_police_b": "Russian Police Boots",
+  "tooltip.brimm.r_police_b": "",
+
+  "item.brimm.ratnik_mobilized_b": "Mobilized Ratnik Boots",
+  "tooltip.brimm.ratnik_mobilized_b": "",
+
+  "item.brimm.generic_urban_b": "Generic Boots (Urban)",
+  "tooltip.brimm.generic_urban_b": "",
+
+  "item.brimm.generic_dark_tan_b": "Generic Boots (Dark Tan)",
+  "tooltip.brimm.generic_dark_tan_b": "",
+
+  "item.brimm.ratnik_veteran_b": "Veteran Ratnik Boots",
+  "tooltip.brimm.ratnik_veteran_b": "",
+
+  "item.brimm.hazard_kit_b": "Hazard Kit Boots",
+  "tooltip.brimm.hazard_kit_b": "",
+
+  "item.brimm.us_veteran_b": "Veteran US Boots",
+  "tooltip.brimm.us_veteran_b": "",
+
+  "item.brimm.ukrainian_veteran_b": "Veteran Ukrainian Boots",
+  "tooltip.brimm.ukrainian_veteran_b": "",
+
+  "item.brimm.swat_kit_b": "SWAT Kit Boots",
+  "tooltip.brimm.swat_kit_b": "",
+
+  "item.brimm.sobr_kit_b": "SOBR Kit Boots",
+  "tooltip.brimm.sobr_kit_b": "",
+
+  "item.brimm.cqb_kit_b": "CQB Kit Boots",
+  "tooltip.brimm.cqb_kit_b": "",
+
+  "item.brimm.press_b": "Press Boots",
+  "tooltip.brimm.press_b": "",
+
+  "item.brimm.generic_brown_b": "Generic Boots (Brown)",
+  "tooltip.brimm.generic_brown_b": "",
+
+  "item.brimm.tmspmg_b": "TMSPMG Boots",
+  "tooltip.brimm.tmspmg_b": "",
+
+  "item.brimm.berserk_b": "Berserk Boots",
+  "tooltip.brimm.berserk_b": "",
+
+  "item.brimm.bydlovka_b": "Bydlovka Boots",
+  "tooltip.brimm.bydlovka_b": "",
+
+  "item.brimm.concord_b": "Concord's Boots",
+  "tooltip.brimm.concord_b": "",
+
+  "item.brimm.taro_b": "Taro's Boots",
+  "tooltip.brimm.taro_b": "",
+
+  "item.brimm.maid_b": "Housemaid Shoes",
+  "tooltip.brimm.maid_b": "",
+
+  "item.brimm.ghost_b": "Generic Boots (Black)",
+  "tooltip.brimm.ghost_b": "",
+
+  "item.brimm.generic_light_tan_b": "Generic Boots (Light Tan)",
+  "tooltip.brimm.generic_light_tan_b": "",
+
+  "item.brimm.new_york_patch": "27th Infantry Patch",
+  "tooltip.brimm.new_york_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.american_flag_patch": "American Flag Patch",
+  "tooltip.brimm.american_flag_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.austrian_flag_patch": "Austrian Flag Patch",
+  "tooltip.brimm.austrian_flag_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.battle_scarred_patch": "Battle-Scarred Patch (CS2)",
+  "tooltip.brimm.battle_scarred_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.belgian_flag_patch": "Belgian Flag Patch",
+  "tooltip.brimm.belgian_flag_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.belorussian_flag_patch": "Belorussian Flag Patch",
+  "tooltip.brimm.belorussian_flag_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.british_flag_patch": "British Flag Patch",
+  "tooltip.brimm.british_flag_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.centurion_patch": "Centurion Patch",
+  "tooltip.brimm.centurion_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.chinese_flag_patch": "Chinese Flag Patch",
+  "tooltip.brimm.chinese_flag_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.covenant_patch": "Covenant Patch",
+  "tooltip.brimm.covenant_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.crimson_patch": "Crimson Patch",
+  "tooltip.brimm.crimson_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.crown_patch": "Crown Patch (CS2)",
+  "tooltip.brimm.crown_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.egyptian_flag_patch": "Egyptian Flag Patch",
+  "tooltip.brimm.egyptian_flag_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.french_flag_patch": "French Flag Patch",
+  "tooltip.brimm.french_flag_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.italian_flag_patch": "Italian Flag Patch",
+  "tooltip.brimm.italian_flag_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.german_flag_patch": "German Flag Patch",
+  "tooltip.brimm.german_flag_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.japanese_flag_patch": "Japanese Flag Patch",
+  "tooltip.brimm.japanese_flag_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.kill_joy_patch": "Kill Joy Patch (CS2)",
+  "tooltip.brimm.kill_joy_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.omicron_patch": "Omicron Patch",
+  "tooltip.brimm.omicron_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.operative_patch": "Operative Patch",
+  "tooltip.brimm.operative_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.pakistani_flag_patch": "Pakistani Flag Patch",
+  "tooltip.brimm.pakistani_flag_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.ukraine_flag_patch": "Ukrainian Flag Patch",
+  "tooltip.brimm.ukraine_flag_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.polish_flag_patch": "Polish Flag Patch",
+  "tooltip.brimm.polish_flag_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.praetorian_patch": "Praetorian Patch",
+  "tooltip.brimm.praetorian_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.russian_flag_patch": "Russian Flag Patch",
+  "tooltip.brimm.russian_flag_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.stalwart_patch": "Stalwart Patch",
+  "tooltip.brimm.stalwart_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.titan_patch": "Titan Patch (CS2)",
+  "tooltip.brimm.titan_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.titan_ii_patch": "Titan Patch II (CS2)",
+  "tooltip.brimm.titan_ii_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "item.brimm.urban_american_flag_patch": "Urban American Flag Patch",
+  "tooltip.brimm.urban_american_flag_patch": "Add With Intended Vest/Helmet to Crafting Table to Apply",
+
+  "block.brimm.workbench": "Workbench",
+  "screen.brimm.workbench.title": "Brimm Workbench",
+  "screen.brimm.workbench.craft": "CRAFT",
+  "screen.brimm.workbench.not_enough_items": "Not enough items.",
+  "screen.brimm.workbench.tooltip": "Drag to move",
+  "screen.brimm.workbench.section.plates": "Armor Plates",
+  "screen.brimm.workbench.section.chestplates": "Chestplates",
+  "screen.brimm.workbench.section.helmets": "Helmets",
+  "screen.brimm.workbench.section.leggings": "Kneepads",
+  "screen.brimm.workbench.section.boots": "Boots",
+  "screen.brimm.workbench.section.patches": "Patches",
+  
+  "tooltip.brimm.armors.current_patch": "Current patch",
+  
+  "item.brimm.patches_adjuster_debug_patch": "Debug Patch",
+
+  "message.brimm.version_check_outdated": "A new version of Brimm Armors is available",
+  "message.brimm.version_check_error": "An error occured while checking whether Brimm Armors is up to date (this may be because you're offline)",
+  "message.brimm.version_check_incomplete": "Failed to verify whether Brimm Armors is up to date",
+  "message.brimm.version_check_overdated": "This version of Brimm Armors is newer than expected, please report this to the developers",
+  "tooltip.brimm.armors.no_patch_supported": "This armor does not support patches."
+}

@@ -1,0 +1,22 @@
+package blackoutInteractive.brimmArmors.common.configurations;
+
+import blackoutInteractive.brimmArmors.common.configurations.MaterialOverrides;
+import blackoutInteractive.brimmArmors.common.items.BrimmRarity;
+import blackoutInteractive.ema_08_.items.SimpleArmorMaterial;
+import java.util.Optional;
+import net.minecraft.world.item.ArmorItem;
+
+public class ConfigMergers {
+    private static final MaterialOverrides EMPTY_MATERIALS_OVERRIDE = new MaterialOverrides(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+
+    public static SimpleArmorMaterial mergeBasicMaterial(String name, float toughness, float knockbackResistance, int defenseValue, int durabilityValue, ArmorItem.Type type, MaterialOverrides overrides) {
+        overrides = overrides == null ? EMPTY_MATERIALS_OVERRIDE : overrides;
+        return SimpleArmorMaterial.basic(name, overrides.toughness().orElse(Float.valueOf(toughness)).floatValue(), overrides.knockbackResistance().orElse(Float.valueOf(knockbackResistance)).floatValue(), overrides.defenseValue().orElse(defenseValue), overrides.durabilityValue().orElse(durabilityValue), type);
+    }
+
+    public static BrimmRarity mergeRarity(BrimmRarity rarity, Optional<BrimmRarity> override) {
+        override = override == null ? Optional.empty() : override;
+        return override.orElse(rarity);
+    }
+}
+
