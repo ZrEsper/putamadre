@@ -1,0 +1,11 @@
+{
+  "input_sha256": "74dda8def63e41be6910f65afc4b89077b4e0b435551040ac1e6368faaee907c",
+  "output_sha256": "085f56b46bfa2294155e14320cb2bba0dad7d8c2527d8e2dc60350cee8bfae38",
+  "changed_original_entries": [
+    "META-INF/neoforge.mods.toml",
+    "dev/zomboid/gore/Events.class",
+    "dev/zomboid/gore/Gore.class",
+    "dev/zomboid/gore/Rules.class"
+  ],
+  "minecraft_runtime_tested": false
+}

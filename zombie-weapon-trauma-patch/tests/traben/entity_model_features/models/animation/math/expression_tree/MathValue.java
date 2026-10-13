@@ -1,0 +1,1 @@
+package traben.entity_model_features.models.animation.math.expression_tree;public class MathValue {public interface ResultSupplier {float get();}}

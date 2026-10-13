@@ -1,0 +1,1 @@
+package traben.entity_model_features.models.animation.state;public class EMFState {public static Object current;public record State(Object entity){}public static State state(){return new State(current);}}
