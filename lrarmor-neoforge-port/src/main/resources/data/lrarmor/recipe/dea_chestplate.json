@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "S S",
+    "STS",
+    "SBS"
+  ],
+  "key": {
+    "T": {
+      "tag": "c:ingots/iron"
+    },
+    "S": {
+      "tag": "c:leathers"
+    },
+    "B": {
+      "tag": "c:dyes/blue"
+    }
+  },
+  "result": {
+    "id": "lrarmor:dea_chestplate"
+  }
+}

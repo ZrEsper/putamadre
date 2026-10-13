@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "SBS",
+    "S S"
+  ],
+  "key": {
+    "B": {
+      "tag": "c:dyes/black"
+    },
+    "S": {
+      "tag": "c:leathers"
+    }
+  },
+  "result": {
+    "id": "lrarmor:dea_armed_boots"
+  }
+}

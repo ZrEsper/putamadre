@@ -1,0 +1,2 @@
+# Keep imported visual resources byte-for-byte identical to the original JAR.
+src/main/resources/assets/** -whitespace

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "SSS",
+    "SGS",
+    " X "
+  ],
+  "key": {
+    "S": {
+      "tag": "c:leathers"
+    },
+    "G": {
+      "tag": "c:glass_blocks"
+    },
+    "X": {
+      "item": "minecraft:charcoal"
+    }
+  },
+  "result": {
+    "id": "lrarmor:chemical_protective_helmet"
+  }
+}

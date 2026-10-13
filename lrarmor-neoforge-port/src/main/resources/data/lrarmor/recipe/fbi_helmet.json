@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " BS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "tag": "c:leathers"
+    },
+    "B": {
+      "tag": "c:dyes/yellow"
+    }
+  },
+  "result": {
+    "id": "lrarmor:fbi_helmet"
+  }
+}

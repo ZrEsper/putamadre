@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "T T",
+    "SKS",
+    "TDT"
+  ],
+  "key": {
+    "T": {
+      "tag": "c:ingots/iron"
+    },
+    "S": {
+      "tag": "c:leathers"
+    },
+    "D": {
+      "tag": "c:gems/diamond"
+    },
+    "K": {
+      "tag": "minecraft:terracotta"
+    }
+  },
+  "result": {
+    "id": "lrarmor:fbi_armed_chestplate"
+  }
+}

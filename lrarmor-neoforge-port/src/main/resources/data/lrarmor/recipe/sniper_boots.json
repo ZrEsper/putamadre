@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "S S",
+    "E E",
+    "S S"
+  ],
+  "key": {
+    "S": {
+      "tag": "c:leathers"
+    },
+    "E": {
+      "tag": "c:feathers"
+    }
+  },
+  "result": {
+    "id": "lrarmor:sniper_boots"
+  }
+}

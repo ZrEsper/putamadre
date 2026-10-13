@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "STS",
+    "S S",
+    "S S"
+  ],
+  "key": {
+    "T": {
+      "tag": "c:ingots/iron"
+    },
+    "S": {
+      "tag": "c:leathers"
+    }
+  },
+  "result": {
+    "id": "lrarmor:chemical_protective_leggings"
+  }
+}

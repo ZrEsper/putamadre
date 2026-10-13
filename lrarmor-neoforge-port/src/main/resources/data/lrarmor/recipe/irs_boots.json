@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "S S",
+    "SBS"
+  ],
+  "key": {
+    "B": {
+      "tag": "c:dyes/white"
+    },
+    "S": {
+      "tag": "c:leathers"
+    }
+  },
+  "result": {
+    "id": "lrarmor:irs_boots"
+  }
+}

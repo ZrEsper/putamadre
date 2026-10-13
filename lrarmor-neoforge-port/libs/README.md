@@ -1,0 +1,1 @@
+Dependencia de compilación: GeckoLib para NeoForge 1.21.1, versión 4.9.3, igual al JAR proporcionado por el usuario. GeckoLib conserva su licencia MIT y autoría original. No se integra dentro del JAR de LesRaisinsArmor; también debe instalarse como mod separado.

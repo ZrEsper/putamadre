@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "S S",
+    "WUW",
+    "TTT"
+  ],
+  "key": {
+    "S": {
+      "tag": "c:leathers"
+    },
+    "W": {
+      "tag": "minecraft:wool"
+    },
+    "U": {
+      "item": "minecraft:ghast_tear"
+    },
+    "T": {
+      "tag": "c:ingots/iron"
+    }
+  },
+  "result": {
+    "id": "lrarmor:medical_chestplate"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "TTT",
+    "S S",
+    "S S"
+  ],
+  "key": {
+    "T": {
+      "tag": "c:ingots/iron"
+    },
+    "S": {
+      "tag": "c:strings"
+    }
+  },
+  "result": {
+    "id": "lrarmor:atf_vest_helmet"
+  }
+}

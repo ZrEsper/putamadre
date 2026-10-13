@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "S S",
+    "SBS",
+    "WXW"
+  ],
+  "key": {
+    "S": {
+      "tag": "c:leathers"
+    },
+    "B": {
+      "tag": "c:dyes/black"
+    },
+    "X": {
+      "tag": "c:dyes/white"
+    },
+    "W": {
+      "tag": "minecraft:wool"
+    }
+  },
+  "result": {
+    "id": "lrarmor:joker_chestplate"
+  }
+}

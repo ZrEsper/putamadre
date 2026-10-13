@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "lrarmor:item/dea_armed_boots"
+  }
+}

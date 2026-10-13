@@ -1,0 +1,46 @@
+{
+  "helmet": {
+    "defense": 1,
+    "toughness": 0,
+    "knockbackResistance": 0,
+    "enchantmentValue": 15,
+    "maxDurability": 50,
+    "sound": "minecraft:item.armor.equip_leather",
+    "repairIngredient": {
+      "item": "minecraft:leather"
+    }
+  },
+  "chestplate": {
+    "defense": 4,
+    "toughness": 0,
+    "knockbackResistance": 0,
+    "enchantmentValue": 15,
+    "maxDurability": 96,
+    "sound": "minecraft:item.armor.equip_leather",
+    "repairIngredient": {
+      "item": "minecraft:leather"
+    }
+  },
+  "leggings": {
+    "defense": 2,
+    "toughness": 0,
+    "knockbackResistance": 0,
+    "enchantmentValue": 15,
+    "maxDurability": 86,
+    "sound": "minecraft:item.armor.equip_leather",
+    "repairIngredient": {
+      "item": "minecraft:leather"
+    }
+  },
+  "boots": {
+    "defense": 1,
+    "toughness": 0,
+    "knockbackResistance": 0,
+    "enchantmentValue": 15,
+    "maxDurability": 45,
+    "sound": "minecraft:item.armor.equip_leather",
+    "repairIngredient": {
+      "item": "minecraft:leather"
+    }
+  }
+}

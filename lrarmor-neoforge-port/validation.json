@@ -1,0 +1,14 @@
+{
+  "original_sha256": "cae5f556c1722de1b1cc3ff112eef9cd6054fdc16e77d879eaabadb6bf0a1670",
+  "artifact_sha256": "70a8d234596ae567b0ba100dfab3d303ec3218512fcfa6ac48a924cd7993388a",
+  "minecraft": "1.21.1",
+  "neoforge_tested": "21.1.255",
+  "geckolib_tested": "4.9.3",
+  "original_visual_assets_preserved": 101,
+  "recipes": 62,
+  "registered_armor_items_tested": 62,
+  "native_server_game_tests_passed": 5,
+  "visual_client_tested": false,
+  "legacy_epic_fight_integration_ported": false,
+  "reproduction_build_passed": true
+}

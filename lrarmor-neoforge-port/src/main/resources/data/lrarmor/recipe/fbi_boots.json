@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "SBS"
+  ],
+  "key": {
+    "B": {
+      "tag": "c:dyes/yellow"
+    },
+    "S": {
+      "tag": "c:leathers"
+    }
+  },
+  "result": {
+    "id": "lrarmor:fbi_boots"
+  }
+}

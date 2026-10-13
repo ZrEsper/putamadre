@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "STS",
+    "TGT",
+    " X "
+  ],
+  "key": {
+    "T": {
+      "tag": "c:ingots/iron"
+    },
+    "S": {
+      "tag": "c:leathers"
+    },
+    "G": {
+      "tag": "c:glass_blocks"
+    },
+    "X": {
+      "item": "minecraft:charcoal"
+    }
+  },
+  "result": {
+    "id": "lrarmor:armored_chemical_helmet"
+  }
+}

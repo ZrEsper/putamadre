@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "T T",
+    "SLS",
+    "EWE"
+  ],
+  "key": {
+    "S": {
+      "tag": "c:leathers"
+    },
+    "W": {
+      "tag": "minecraft:wool"
+    },
+    "T": {
+      "tag": "c:ingots/iron"
+    },
+    "L": {
+      "tag": "c:gems/amethyst"
+    },
+    "E": {
+      "tag": "c:feathers"
+    }
+  },
+  "result": {
+    "id": "lrarmor:sniper_chestplate"
+  }
+}

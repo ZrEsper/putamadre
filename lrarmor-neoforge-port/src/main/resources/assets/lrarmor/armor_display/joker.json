@@ -1,0 +1,19 @@
+{
+	"helmet": {
+		"hideParts": [
+			"head", "hat"
+		]
+	},
+	"chestplate": {
+		"hideParts": [
+			"left_arm", "left_sleeve",
+			"right_arm", "right_sleeve", "body"
+		]
+	},
+	"leggings": {
+		"hideParts": [
+			"left_leg", "left_pants",
+			"right_leg", "right_pants"
+		]
+	}
+}

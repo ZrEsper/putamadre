@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "SSS",
+    "QLQ"
+  ],
+  "key": {
+    "S": {
+      "tag": "c:leathers"
+    },
+    "Q": {
+      "tag": "c:gems/quartz"
+    },
+    "L": {
+      "tag": "c:gems/amethyst"
+    }
+  },
+  "result": {
+    "id": "lrarmor:sniper_helmet"
+  }
+}

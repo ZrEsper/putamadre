@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "WWW",
+    "WXW",
+    "SRS"
+  ],
+  "key": {
+    "S": {
+      "tag": "c:leathers"
+    },
+    "W": {
+      "tag": "minecraft:wool"
+    },
+    "X": {
+      "tag": "c:dyes/white"
+    },
+    "R": {
+      "tag": "c:dyes/red"
+    }
+  },
+  "result": {
+    "id": "lrarmor:joker_helmet"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "D D",
+    "TBT",
+    "DTD"
+  ],
+  "key": {
+    "T": {
+      "tag": "c:ingots/iron"
+    },
+    "B": {
+      "tag": "c:storage_blocks/iron"
+    },
+    "D": {
+      "tag": "c:gems/diamond"
+    }
+  },
+  "result": {
+    "id": "lrarmor:defender_chestplate"
+  }
+}

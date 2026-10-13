@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "S S",
+    "TDT",
+    "TDT"
+  ],
+  "key": {
+    "T": {
+      "tag": "c:ingots/iron"
+    },
+    "S": {
+      "tag": "c:leathers"
+    },
+    "D": {
+      "tag": "c:gems/diamond"
+    }
+  },
+  "result": {
+    "id": "lrarmor:attacker_chestplate"
+  }
+}
