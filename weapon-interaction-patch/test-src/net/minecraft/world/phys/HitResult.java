@@ -1,0 +1,1 @@
+package net.minecraft.world.phys;public class HitResult{public enum Type{MISS,BLOCK,ENTITY}public final Type type;public final Vec3 location;public HitResult(Type t,Vec3 v){type=t;location=v;}public Type getType(){return type;}public Vec3 getLocation(){return location;}}

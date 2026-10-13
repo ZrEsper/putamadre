@@ -1,0 +1,30 @@
+{
+  "tacz": {
+    "input_sha256": "33a68f16cba9fc94b54a0d97762aadfd8762f5b6ea0ba85a551672c50c63fd66",
+    "output_sha256": "b25bd24ba5599afeb05d1fcf121f2cb2d73ddd1aed49121fcf0a821aa857c327",
+    "changed_entries": [
+      "com/tacz/guns/client/event/ClientPreventGunClick.class",
+      "com/tacz/guns/client/input/AimKey.class"
+    ],
+    "added_entries": [
+      "dev/zomboid/taczinteract/Priority.class",
+      "dev/zomboid/taczinteract/Reflect$1.class",
+      "dev/zomboid/taczinteract/Reflect$Cache.class",
+      "dev/zomboid/taczinteract/Reflect$Resolved.class",
+      "dev/zomboid/taczinteract/Reflect.class"
+    ]
+  },
+  "lr": {
+    "input_sha256": "2b2d17a930c2783964d2c0013a710b4ece6f64070ce037fd658c7e10d4caa370",
+    "output_sha256": "b6fef8d2320df062d897d94286dcee288524f50ef48a3b5044f71ab441af79ff",
+    "changed_entries": [
+      "me/xjqsh/lrtactical/client/ClientEventsHandler.class",
+      "me/xjqsh/lrtactical/client/input/AttackKeys.class"
+    ],
+    "added_entries": [
+      "dev/zomboid/lriso/UsePriority.class"
+    ]
+  },
+  "simulated_input_checks_passed": 122,
+  "minecraft_runtime_tested": false
+}

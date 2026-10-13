@@ -1,0 +1,1 @@
+package com.tacz.guns.client.renderer.item;public class AnimateGeoItemRenderer extends net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer{public void triggerAnimation(net.minecraft.world.item.ItemStack stack,String animation){}}

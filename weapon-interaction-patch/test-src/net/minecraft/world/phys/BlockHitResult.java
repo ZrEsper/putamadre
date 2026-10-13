@@ -1,0 +1,1 @@
+package net.minecraft.world.phys;import net.minecraft.core.BlockPos;public class BlockHitResult extends HitResult{public final BlockPos pos;public BlockHitResult(BlockPos p,double d){super(Type.BLOCK,new Vec3(d,0,0));pos=p;}public BlockPos getBlockPos(){return pos;}}

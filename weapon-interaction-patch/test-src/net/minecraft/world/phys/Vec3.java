@@ -1,0 +1,1 @@
+package net.minecraft.world.phys;public class Vec3{public static final Vec3 ZERO=new Vec3(0,0,0);public final double x,y,z;public Vec3(double x,double y,double z){this.x=x;this.y=y;this.z=z;}public double distanceTo(Vec3 v){return Math.sqrt((x-v.x)*(x-v.x)+(y-v.y)*(y-v.y)+(z-v.z)*(z-v.z));}}

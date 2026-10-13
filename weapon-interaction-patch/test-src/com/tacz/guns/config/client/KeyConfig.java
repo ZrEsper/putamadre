@@ -1,0 +1,1 @@
+package com.tacz.guns.config.client;public class KeyConfig{public static final net.neoforged.neoforge.common.ModConfigSpec.BooleanValue HOLD_TO_AIM=new net.neoforged.neoforge.common.ModConfigSpec.BooleanValue();}

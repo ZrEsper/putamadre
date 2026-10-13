@@ -1,0 +1,1 @@
+package me.xjqsh.lrtactical.capability;import me.xjqsh.lrtactical.api.melee.MeleeAction;import net.minecraft.world.phys.Vec3;public class CombatProperties{public int attacks;public boolean preAttack(MeleeAction action,Vec3 from,Vec3 look){attacks++;return true;}}

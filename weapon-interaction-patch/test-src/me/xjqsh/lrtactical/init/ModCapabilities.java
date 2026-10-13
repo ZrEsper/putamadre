@@ -1,0 +1,1 @@
+package me.xjqsh.lrtactical.init;public class ModCapabilities{public static final net.neoforged.neoforge.registries.DeferredHolder COMBAT_PROPERTIES=new net.neoforged.neoforge.registries.DeferredHolder();}

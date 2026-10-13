@@ -1,0 +1,1 @@
+package com.tacz.guns.api.item;import net.minecraft.world.item.*;import net.minecraft.world.entity.LivingEntity;public interface IGun{public static Object getIGunOrNull(ItemStack stack){return stack.getItem() instanceof IGun?stack.getItem():null;}public static boolean mainHandHoldGun(LivingEntity player){return getIGunOrNull(player.getMainHandItem())!=null;}}

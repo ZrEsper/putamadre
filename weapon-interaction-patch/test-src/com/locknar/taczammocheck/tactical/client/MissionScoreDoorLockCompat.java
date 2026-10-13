@@ -1,0 +1,1 @@
+package com.locknar.taczammocheck.tactical.client;public class MissionScoreDoorLockCompat{public static boolean locked,revealed,handled=true;public static int requests;public static boolean isCurrentTargetLocked(){return locked;}public static boolean isCurrentTargetRevealed(){return revealed;}public static boolean requestCurrentDoorOpenAttempt(){requests++;return handled;}}

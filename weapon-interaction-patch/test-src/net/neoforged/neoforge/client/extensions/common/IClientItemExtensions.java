@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.client.extensions.common;public interface IClientItemExtensions{static IClientItemExtensions of(net.minecraft.world.item.ItemStack stack){return ()->new com.tacz.guns.client.renderer.item.AnimateGeoItemRenderer();}net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer getCustomRenderer();}

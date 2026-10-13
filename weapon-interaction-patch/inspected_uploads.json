@@ -1,0 +1,26 @@
+[
+  {
+    "name": "zomboid-global-melee-animations-2.3.1-range-plus-one-ezweight-v11 (1).jar",
+    "sha256": "da8ebdeac5ab4351d5493bbde56c7cc7285902ec158b63c1000d8a175db394d5",
+    "class_count": 31,
+    "modified": false
+  },
+  {
+    "name": "apocalypticarsenal-1.21.1-1.0.1-neoforge.3-third-person-axe.jar",
+    "sha256": "a3a70b535dba381140c0ecdde21bf16ddda1a1ef778e9c44fd0d1f838201d063",
+    "class_count": 1,
+    "modified": false
+  },
+  {
+    "name": "valorant-gunpack-0.1.4-neoforge-1.21.1-block-data-fix.2.jar",
+    "sha256": "9e6fd6289414aaf21b4c81a47ce88410c9fa8926fe7535ed7279f0f218edc84b",
+    "class_count": 1,
+    "modified": false
+  },
+  {
+    "name": "valorant-knife-pack-0.1.0-neoforge-1.21.1-melee-arms-fix.1.jar",
+    "sha256": "ffe819bb8d0548eae742ca54377a9aabd27988bb8b7df266ee6af4e770443a12",
+    "class_count": 1,
+    "modified": false
+  }
+]

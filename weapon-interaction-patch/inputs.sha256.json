@@ -1,0 +1,10 @@
+{
+  "tacz": {
+    "name": "tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.10-addon-compat.jar",
+    "sha256": "33a68f16cba9fc94b54a0d97762aadfd8762f5b6ea0ba85a551672c50c63fd66"
+  },
+  "lr": {
+    "name": "LesRaisins-Tactical-Equipements-1.21.1-0.4.3-zomboid-isometric-melee.1.jar",
+    "sha256": "2b2d17a930c2783964d2c0013a710b4ece6f64070ce037fd658c7e10d4caa370"
+  }
+}

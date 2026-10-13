@@ -1,0 +1,1 @@
+package dev.zomboid.isotacz;public class NativeActions{public static boolean mounted,consuming;public static boolean riding(Object mc){return mounted;}public static boolean food(Object mc){return consuming;}}

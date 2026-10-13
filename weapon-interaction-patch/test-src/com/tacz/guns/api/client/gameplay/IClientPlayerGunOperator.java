@@ -1,0 +1,1 @@
+package com.tacz.guns.api.client.gameplay;import net.minecraft.client.player.LocalPlayer;public interface IClientPlayerGunOperator{boolean isAim();void aim(boolean aim);static IClientPlayerGunOperator fromLocalPlayer(LocalPlayer player){return player;}}

@@ -1,0 +1,1 @@
+package net.minecraft.world.entity;import net.minecraft.world.item.*;public class LivingEntity extends Entity{public ItemStack main=new ItemStack(new Item());public ItemStack getMainHandItem(){return main;}}

@@ -1,0 +1,1 @@
+package dev.zomboid.isotacz;public class Bridge{public static Object selected;public static boolean valid=true;public static Object cursorPick(Object mc){return selected;}public static boolean interactable(Object mc,Object hit){return valid;}}

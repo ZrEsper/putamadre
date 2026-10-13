@@ -1,5 +1,9 @@
 # Mods de Zomboid
 
+## Armas y melees: clic derecho para interactuar
+
+Reemplazar TACZ .10 por [TACZ .11: prioridad de interacción](mods/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.11-interaction-priority.jar) y LR Tactical isometric-melee.1 por [LR Tactical .2](mods/LesRaisins-Tactical-Equipements-1.21.1-0.4.3-zomboid-isometric-melee.2-interaction-priority.jar), en cliente y servidor, sin duplicarlos. Puertas, cofres, cadáveres y otros objetos interactuables al alcance tienen prioridad sobre la mira/ataque pesado al hacer clic derecho. Conserva los packs Valorant/Apocalyptic, Global Melee v11 y los cambios del addon TACZ .10. Dungeons Iso y Quietly v15 se conservan. 122 comprobaciones de entrada aprobadas; **pendiente de prueba dentro de Minecraft**. [Causa, instalación, fuentes y límites](weapon-interaction-patch/README.md).
+
 ## Cadáveres con contorno y botín dentro de cofres/cuerpos
 
 **Actualización Quietly v15:** corrige el cierre al arrancar causado por el mixin de apertura de v14. [Descargar solo Quietly corregido](mods/quietly-1_0_0-cooldown-v15-neoforge-menu-fix.jar). Retirar v14; los otros tres reemplazos se conservan. [Diagnóstico del log](corpse-storage-patch/LOG_FIX.md).

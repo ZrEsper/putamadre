@@ -1,0 +1,1 @@
+package net.minecraft.world.phys;import net.minecraft.world.entity.Entity;public class EntityHitResult extends HitResult{final Entity entity;public EntityHitResult(Entity e){super(Type.ENTITY,new Vec3(3,0,0));entity=e;}public Entity getEntity(){return entity;}}
