@@ -1,0 +1,12 @@
+{
+  "input_sha256": "b25bd24ba5599afeb05d1fcf121f2cb2d73ddd1aed49121fcf0a821aa857c327",
+  "output_sha256": "680d4eee990d6e2e2c1bc5f061e15c5708fb22f90a3e64d34306faf95d2dbaf3",
+  "changed": [
+    "com/locknar/taczammocheck/tactical/DoorCompat.class",
+    "com/locknar/taczammocheck/tactical/client/DoorTarget.class",
+    "com/locknar/taczammocheck/tactical/server/ServerKickHandler.class"
+  ],
+  "minecraft_runtime_tested": false,
+  "extracted_method_checks": 7,
+  "asm_verified_methods": 7661
+}
