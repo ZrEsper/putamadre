@@ -1,0 +1,8 @@
+Descarga las 7 partes en la misma carpeta, sin cambiar sus nombres.
+Abre modpack-solo-servidor-1.21.1.zip.001 con 7-Zip y pulsa Extraer.
+Si tu herramienta no abre el archivo dividido, reconstruye el ZIP:
+Windows CMD: copy /b modpack-solo-servidor-1.21.1.zip.001+modpack-solo-servidor-1.21.1.zip.002+modpack-solo-servidor-1.21.1.zip.003+modpack-solo-servidor-1.21.1.zip.004+modpack-solo-servidor-1.21.1.zip.005+modpack-solo-servidor-1.21.1.zip.006+modpack-solo-servidor-1.21.1.zip.007 modpack-solo-servidor-1.21.1.zip
+Linux/macOS: cat modpack-solo-servidor-1.21.1.zip.0* > modpack-solo-servidor-1.21.1.zip
+
+Contenido: 99 mods para servidor Minecraft 1.21.1 / NeoForge 21.1.255 o posterior de la rama 21.1 / Java 21. Configs, datapacks y mundo deben copiarse aparte.
+Integridad y dependencias verificadas; arranque real no probado.
