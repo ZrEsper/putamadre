@@ -1,0 +1,10 @@
+{
+  "input_sha256": "fb561ca062e53118d053caa2238b22c894e8384c6527536ff53d55e704997ce4",
+  "output_sha256": "65f8d7a50790cff05faf311fc49bc3cbabc63f99951087952c3d3d948d9c18a1",
+  "changed": [
+    "dev/zomboid/danger/Zones.class",
+    "dev/zomboid/hordes/HordeRules.class"
+  ],
+  "population_multiplier": 0.5,
+  "minecraft_runtime_tested": false
+}
