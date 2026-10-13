@@ -1,0 +1,9 @@
+{
+  "source_sha256": "07a24e9f777e74028c1e32936c922d9913fb79024ba6c2b02ea34eda5640ee05",
+  "output_sha256": "e6b3fc1611f5ef674d0d230a9cab2e2161b67f8f48b069456a6d1e396c38e54a",
+  "models": 4,
+  "animation_lines": 1159,
+  "decimal_literals_fixed": 160,
+  "other_entries_preserved": 3958,
+  "minecraft_runtime_tested": false
+}
