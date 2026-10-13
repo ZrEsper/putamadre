@@ -1,0 +1,1 @@
+package net.minecraft.world.entity;public record EntityDimensions(float width,float height){public static EntityDimensions scalable(float w,float h){return new EntityDimensions(w,h);}}

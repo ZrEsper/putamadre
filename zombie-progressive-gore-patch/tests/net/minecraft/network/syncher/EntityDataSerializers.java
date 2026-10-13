@@ -1,0 +1,1 @@
+package net.minecraft.network.syncher;public class EntityDataSerializers{public static Object INT=new Object();}
