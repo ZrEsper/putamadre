@@ -1,0 +1,10 @@
+Instalación: reemplaza las versiones anteriores de Zomboid Hordes e Integration por estos dos JAR, tanto en cliente como en servidor. No conserves versiones duplicadas.
+
+/zhorda panel -> Población y limpieza -> Aplicar.
+Límite normal: 32 zombis activos por zona fija de 6x6 chunks (96x96 bloques), configurable de 1 a 256. El exceso queda en reserva sin entidad ni IA y vuelve gradualmente cuando hay espacio y posiciones seguras. Cada zona y dimensión tiene su propio límite.
+
+El panel permite pausar población, eliminar zombis, regenerarlos con las tablas actuales y limpiar cadáveres/esqueletos registrados. Las zonas descargadas se procesan al cargarse, sin forzar chunks. Haz una copia del mundo antes de usar las herramientas de limpieza.
+
+Reiniciar loot usa function mosslorn:loot/reiniciar: necesita tu datapack Mosslorn y afecta sus cofres y barriles registrados. No cubre contenedores sin registrar. El loot nuevo se genera al abrirlos; los chunks descargados se procesan al visitarlos.
+
+Validación: pruebas de reserva, persistencia, límite, limpieza y archivo; comprobación de bytecode y ZIP. No se ha ejecutado Minecraft para medir FPS.
