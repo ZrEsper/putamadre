@@ -1,0 +1,1 @@
+package dev.zomboid.hordes.client;public final class LootExamples{public static final String[] SAMPLE={"rifle TaCZ / arma melee","venda / férula / medicina","pan / conservas / comida","hacha / pico / herramienta","uniforme / casco / ropa","cartuchos TaCZ","mira / silenciador","pólvora / lingotes / piezas"};}

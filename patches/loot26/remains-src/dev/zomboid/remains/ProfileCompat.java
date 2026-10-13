@@ -1,0 +1,4 @@
+package dev.zomboid.remains;
+public final class ProfileCompat {
+ public static void corpse(Object corpse,Object level,Object event){try{Class<?> profiles=Class.forName("dev.zomboid.hordes.LootProfiles");profiles.getMethod("markConverted",Object.class).invoke(null,event);profiles.getMethod("corpse",Object.class,Object.class).invoke(null,corpse,level);}catch(ClassNotFoundException e){}catch(ReflectiveOperationException e){System.getLogger("CorpseLootProfile").log(System.Logger.Level.ERROR,"No se pudo aplicar el perfil del cadáver",e);}}
+}

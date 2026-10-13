@@ -1,0 +1,1590 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:iz_helmet_ops",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:iz_chestplate_ops",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:iz_leggings_ops",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:iz_boots_ops",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:iz_uniform_ops",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:iz_backpack_ops",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:iz_helmet_urban",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:iz_chestplate_urban",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:iz_leggings_urban",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:iz_boots_urban",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:iz_uniform_urban",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:iz_balaclava",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:nato_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:ru_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:soviet_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:soviet_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:soviet_uniform",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:autumn_gardener_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:autumn_gardener_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:autumn_gardener_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:work_apron_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:work_apron_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:police_2_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:police_2_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:police_2_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:police_2_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:police_armor_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:police_armor_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:police_armor_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:police_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:police_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:police_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:apocalypsise_survivor_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:apocalypsise_survivor_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:apocalypsise_survivor_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:apocalypsise_survivor_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:survivor_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:survivor_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:survivor_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:scarf",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:wool_vest",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:hat",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:fishing_apron",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:leather_apron",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:hardened_leather_apron",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:doctor_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:doctor_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:doctor_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:doctor_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:farmer_hat",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:explorers_hat",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:entertainers_shirt",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:entertainers_pants",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:snowy_coat",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:snowy_pants",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:snowy_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:taiga_coat",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:taiga_pants",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:taiga_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:desert_pants",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:jungle_pants",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:savanna_pants",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:swampy_pants",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "luckyswardrobe:top_hat",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:black_work_apron_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:black_work_apron_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:woodworker_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:woodworker_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "selfexpression:woodworker_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:balaclava_open_face",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:nvg_battery",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fracturepoint:simple_nvg_goggles",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:armored_chemical_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:armored_chemical_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:armored_chemical_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:armored_chemical_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:attacker_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:attacker_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:attacker_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:attacker_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:defender_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:defender_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:defender_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:defender_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:medical_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:medical_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:medical_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:medical_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:scout_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:scout_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:scout_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:scout_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:sniper_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:sniper_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:sniper_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:sniper_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:atf_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:atf_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:atf_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:atf_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:atf_vest_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:atf_vest_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:atf_vest_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:atf_vest_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:dea_armed_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:dea_armed_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:dea_armed_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:dea_armed_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:dea_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:dea_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:dea_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:dea_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:fbi_armed_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:fbi_armed_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:fbi_armed_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:fbi_armed_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:fbi_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:fbi_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:fbi_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:fbi_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:irs_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:irs_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:irs_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:irs_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:chemical_protective_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:chemical_protective_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:chemical_protective_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:chemical_protective_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:joker_armed_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:joker_armed_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:joker_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:joker_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:joker_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lrarmor:joker_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:base",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:us",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ukrainian",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:osprey",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ratnik",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:vietnamese_basic",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:defender",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ukrainian_mobilized",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:defender_iii",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:us_mobilized",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:nato",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:nato_ii",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:a_police",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:r_police",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:atleti",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:assault",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:pmc",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ratnik_mobilized",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:hazard_kit",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:us_veteran",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:swat_kit",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:sobr_kit",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:cqb_kit",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ukrainian_veteran",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:spn",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ratnik_veteran",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:horse",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:guard",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:tmspmg",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:berserk",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:vanderer",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:bydlovka",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:concord",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:taro",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:killa",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:saper",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ghost",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:base_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:us_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ukrainian_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:osprey_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:six_b_four_seven_dark_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:vietnamese_basic_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:zch_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:tshfour_green_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:cap_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:pakol_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ukrainian_mobilized_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:zabralo_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:us_mobilized_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:nato_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:a_police_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:r_police_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ratnik_mobilized_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:airframe_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:assault_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:pmc_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:tshfour_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:cossack_red_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:cossack_blue_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ratnik_veteran_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:hazard_kit_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:us_veteran_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ukrainian_veteran_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:swat_kit_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:sobr_kit_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:cqb_kit_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:gasmask_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:gasmask_alt_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:gpnvg_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:tmspmg_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:berserk_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:vanderer_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:bydlovka_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:concord_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:taro_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:killa_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:saper_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ghost_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:base_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:us_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:osprey_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ratnik_basic_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:defender_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ukrainian_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ukrainian_mobilized_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:defender_mobilized_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:us_mobilized_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:a_police_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:r_police_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ratnik_mobilized_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:generic_urban_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:generic_dark_tan_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ratnik_veteran_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:hazard_kit_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:us_veteran_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ukrainian_veteran_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:swat_kit_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:sobr_kit_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:cqb_kit_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:generic_brown_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:tmspmg_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:berserk_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:bydlovka_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:concord_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:taro_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:generic_light_tan_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ghost_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:base_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:us_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ukrainian_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:osprey_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ratnik_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:defender_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ukrainian_mobilized_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:defender_mobilized_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:us_mobilized_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:a_police_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:r_police_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ratnik_mobilized_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:generic_urban_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:generic_dark_tan_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ratnik_veteran_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:hazard_kit_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:us_veteran_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ukrainian_veteran_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:swat_kit_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:sobr_kit_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:cqb_kit_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:generic_brown_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:tmspmg_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:berserk_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:bydlovka_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:concord_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:taro_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ghost_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:generic_light_tan_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:civilian_medic",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:medic",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:civilian_medic_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:medic_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:civilian_medic_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:civilian_medic_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:civilian",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:civilian_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:civilian_kneepads_p",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:civilian_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:press",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:maid",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:press_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:maid_h",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:press_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:maid_b",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:new_york_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:american_flag_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:austrian_flag_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:battle_scarred_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:belgian_flag_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:belorussian_flag_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:british_flag_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:centurion_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:chinese_flag_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:covenant_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:crimson_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:crown_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:egyptian_flag_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:french_flag_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:italian_flag_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:german_flag_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:japanese_flag_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:kill_joy_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:omicron_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:operative_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:pakistani_flag_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:ukraine_flag_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:polish_flag_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:praetorian_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:russian_flag_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:stalwart_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:titan_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:titan_ii_patch",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brimm:urban_american_flag_patch",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}
