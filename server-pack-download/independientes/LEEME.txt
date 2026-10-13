@@ -1,0 +1,5 @@
+Estos son 7 ZIPs independientes. Descarga y extrae TODOS en la misma carpeta.
+Cada ZIP contiene mods completos; permite combinar la carpeta mods al extraerlos.
+Total: 99 JARs distintos. No uses las antiguas partes .zip.001 a .zip.007 con estos ZIPs.
+No incluye configs, datapacks, mundo ni instalación de NeoForge. Java 21, Minecraft 1.21.1 y NeoForge 21.1.255 o posterior de la rama 21.1, coincidente con clientes.
+Integridad y dependencias verificadas, arranque no probado.
