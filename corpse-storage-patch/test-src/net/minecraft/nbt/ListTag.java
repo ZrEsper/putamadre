@@ -1,0 +1,1 @@
+package net.minecraft.nbt;import java.util.*;public class ListTag extends Tag{private final List<Tag> entries=new ArrayList<>();public int size(){return entries.size();}public CompoundTag getCompound(int i){return (CompoundTag)entries.get(i);}public boolean add(Tag t){return entries.add(t);}public boolean add(Object t){return entries.add((Tag)t);}}

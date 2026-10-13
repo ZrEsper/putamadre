@@ -1,0 +1,71 @@
+{
+  "quietly": {
+    "input_sha256": "5186577d12cf92b61a0b5e3aefc24cd01540bcc0ed921ad58a38ba81ab1c78b6",
+    "output_sha256": "809701132a603d1d01c73350c64cd7a90795b6785efa9685faca96e48a7074a3",
+    "changed_entries": [
+      "cn/kafei/interact/Interaction.class",
+      "cn/kafei/mixin/InteractionOutlineMixin.class",
+      "dev/zomboid/scavenging/Loot.class",
+      "quietly.mixins.json"
+    ],
+    "added_entries": [
+      "cn/kafei/mixin/ExpandedChestDropsMixin.class",
+      "cn/kafei/mixin/ExpandedChestMenuMixin.class",
+      "dev/zomboid/scavenging/KeepLoot.class",
+      "dev/zomboid/storage/ChestMenus.class",
+      "dev/zomboid/storage/ChestPageMenu$1.class",
+      "dev/zomboid/storage/ChestPageMenu.class",
+      "dev/zomboid/storage/ChestPages.class",
+      "dev/zomboid/storage/ChestStorage.class",
+      "dev/zomboid/storage/CorpseOutline.class",
+      "dev/zomboid/storage/Reflect$1.class",
+      "dev/zomboid/storage/Reflect$Cache.class",
+      "dev/zomboid/storage/Reflect$Resolved.class",
+      "dev/zomboid/storage/Reflect.class"
+    ]
+  },
+  "remains": {
+    "input_sha256": "5480df00e3816801cd72fd8916d0b080242ef6540df58b571504f61d1bc21f85",
+    "output_sha256": "15bc6a7dcede64305a975175d7145f6088b1ed36d6e82a20922561780196642e",
+    "changed_entries": [
+      "dev/zomboid/remains/ZombieRemainsLoot$CorpseData.class",
+      "dev/zomboid/remains/ZombieRemainsLoot.class"
+    ],
+    "added_entries": [
+      "dev/zomboid/remains/delivery/NpcCorpses.class",
+      "dev/zomboid/remains/delivery/Reflect$1.class",
+      "dev/zomboid/remains/delivery/Reflect$Cache.class",
+      "dev/zomboid/remains/delivery/Reflect$Resolved.class",
+      "dev/zomboid/remains/delivery/Reflect.class"
+    ]
+  },
+  "npc": {
+    "input_sha256": "bc96cc72bd11f68107152a83f034990f175eb2aa3de54382ff4b3e0d89e9d991",
+    "output_sha256": "bff3c27d9b1f657c6b09060e0f6c00c90a2c1f0941c76792d195fc6fb42ab5dc",
+    "changed_entries": [
+      "mod/cdv/tnpc/tactical/SurvivorPatch.class"
+    ],
+    "added_entries": [
+      "mod/cdv/tnpc/tactical/CorpseDelivery.class"
+    ]
+  },
+  "iso": {
+    "input_sha256": "125404643b039fa61b7c9aa07c83dc81232a8aff2afa65c77ff8c88f3cdea951",
+    "output_sha256": "cee3507dac095d25e8aef3e774b8d8d4087f1873dd48e70597f0ec1ac617f4e4",
+    "changed_entries": [
+      "dev/zomboid/isotacz/Bridge.class"
+    ],
+    "added_entries": [
+      "dev/zomboid/isotacz/BodyCursor.class"
+    ]
+  },
+  "checks": {
+    "quietly_storage": 54,
+    "npc_cargo": 17,
+    "corpse_outline": 13,
+    "native_corpse_and_pending_save_load": 13,
+    "npc_death_delivery": 27,
+    "isometric_body_cursor": 14
+  },
+  "minecraft_runtime_tested": false
+}

@@ -1,0 +1,18 @@
+{
+  "quietly": {
+    "name": "quietly-1_0_0-cooldown-v13-reflection-cache.jar",
+    "sha256": "5186577d12cf92b61a0b5e3aefc24cd01540bcc0ed921ad58a38ba81ab1c78b6"
+  },
+  "remains": {
+    "name": "zombie-remains-loot-1.6.1-neoforge-1.21.1-military-nvg-mythic.6-expanded-addons.jar",
+    "sha256": "5480df00e3816801cd72fd8916d0b080242ef6540df58b571504f61d1bc21f85"
+  },
+  "npc": {
+    "name": "tacznpcs-2.1.0-1.21.1-tactical.13.jar",
+    "sha256": "bc96cc72bd11f68107152a83f034990f175eb2aa3de54382ff4b3e0d89e9d991"
+  },
+  "iso": {
+    "name": "dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.26-mounted-aim-side-zoom.jar",
+    "sha256": "125404643b039fa61b7c9aa07c83dc81232a8aff2afa65c77ff8c88f3cdea951"
+  }
+}

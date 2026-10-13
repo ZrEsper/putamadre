@@ -1,5 +1,11 @@
 # Mods de Zomboid
 
+## Cadáveres con contorno y botín dentro de cofres/cuerpos
+
+[Descargar los cuatro reemplazos juntos](cadaveres-cofres-sin-desbordamiento.zip): Quietly v14, Zombie Remains .7, TacZ NPCs tactical.14 y Dungeons Iso .27, construido sobre la .26 enviada. Contorno al apuntar cadáveres y looteo con clic derecho; el botín adicional de búsqueda se guarda dentro del cofre, ampliando con páginas si falta espacio. Los NPC conservan toda la mochila, equipo y objetos guardados en su cadáver, sin el límite anterior de nueve entradas. Si no hay sitio para colocar el cuerpo, el botín queda en una entrega persistente pendiente, sin objetos flotantes.
+
+Reemplazar versiones anteriores; actualizar Quietly, Remains y TacZ NPCs juntos en cliente y servidor. 138 comprobaciones con APIs simuladas, guardado/carga de clases reales parcheadas y verificación de bytecode aprobadas. **Pendiente probar el arranque, renderizado y sincronización dentro de Minecraft.** [Instalación, fuentes y límites](corpse-storage-patch/README.md).
+
 ## Dungeons Iso + TACZ: cámara isométrica .13
 
 [Descargar Dungeons Iso modificado](mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.13.jar). Sustituir solo Dungeons Iso en el cliente; mantener TACZ hotfix-r7 y los mods de cadáveres/búsqueda.

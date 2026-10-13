@@ -1,0 +1,1 @@
+package net.minecraft.world;import net.minecraft.world.entity.player.*;import net.minecraft.world.inventory.*;public interface MenuProvider{AbstractContainerMenu createMenu(int id,Inventory inv,Player player);}

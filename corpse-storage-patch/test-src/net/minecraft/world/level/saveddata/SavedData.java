@@ -1,0 +1,1 @@
+package net.minecraft.world.level.saveddata;import net.minecraft.nbt.CompoundTag;import net.minecraft.core.HolderLookup;public class SavedData{public boolean dirty;public void setDirty(){dirty=true;}public void setDirty(boolean d){dirty=d;}public CompoundTag save(CompoundTag t,HolderLookup.Provider p){return t;}}

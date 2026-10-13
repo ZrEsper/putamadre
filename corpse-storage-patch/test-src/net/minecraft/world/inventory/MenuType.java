@@ -1,0 +1,1 @@
+package net.minecraft.world.inventory;public class MenuType<T>{public static final MenuType<ChestMenu> GENERIC_9x1=new MenuType<>(),GENERIC_9x2=new MenuType<>(),GENERIC_9x3=new MenuType<>(),GENERIC_9x4=new MenuType<>(),GENERIC_9x5=new MenuType<>(),GENERIC_9x6=new MenuType<>();}
