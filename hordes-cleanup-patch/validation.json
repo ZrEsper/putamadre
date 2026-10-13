@@ -1,0 +1,8 @@
+{
+  "input_sha256": "65f8d7a50790cff05faf311fc49bc3cbabc63f99951087952c3d3d948d9c18a1",
+  "output_sha256": "bc24f249ff0efa75ea0026c2fed56ac82e141222f3acf4e041dbf6b76078f741",
+  "changed_original_entries": [
+    "dev/zomboid/hordes/HordeEvents.class"
+  ],
+  "minecraft_runtime_tested": false
+}

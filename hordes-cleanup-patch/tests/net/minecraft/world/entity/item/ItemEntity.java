@@ -1,0 +1,1 @@
+package net.minecraft.world.entity.item;public class ItemEntity extends dev.zomboid.cleanup.Checks.Base {public int age;public dev.zomboid.cleanup.Checks.Stack stack=new dev.zomboid.cleanup.Checks.Stack();public int getAge(){return age;}public dev.zomboid.cleanup.Checks.Stack getItem(){return stack;}}

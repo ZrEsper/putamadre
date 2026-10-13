@@ -1,0 +1,1 @@
+package dev.zomboid.hordes;import java.util.*;public class HordeData {public static final HordeData INSTANCE=new HordeData();public List<Ticket> tickets=new ArrayList<>();public static HordeData get(dev.zomboid.cleanup.Checks.World w){return INSTANCE;}public static class Ticket{public UUID id;public int remaining=5;public Ticket(UUID id){this.id=id;}}}
