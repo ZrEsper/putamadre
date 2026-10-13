@@ -1,0 +1,18 @@
+ZOMBIES POLDO · INSTALADOR HORROR 1.2.0
+
+Extrae TODO el ZIP y abre Instalar.cmd. Requiere Java 21.
+Si falla al abrir, usa Instalar-debug.cmd: deja la consola abierta.
+
+Conserva tus carpetas componentes y pack al actualizar; este ZIP no incluye los mods del modpack.
+Añade tus JAR/ZIP desde Componentes. El instalador admite detección de instancia o selección manual.
+
+La revisión muestra solo problemas inicialmente. Selecciona una fila para ver el archivo que requiere la dependencia y cómo corregirla.
+Añadir JAR faltante importa un archivo que tú ya tengas y repite la revisión. Buscar dependencia abre la búsqueda en CurseForge.
+Las dependencias deben ser para Minecraft 1.21.1 y NeoForge; no se omiten comprobaciones para forzar la instalación.
+
+Copiar diagnóstico: copia el informe completo. Guardar informe: exporta un TXT. Abrir logs: abre registros.
+logs/ultimo-diagnostico.txt contiene la última revisión; sesion-*.log incluye operaciones y excepciones completas.
+arranque-*-salida.log y arranque-*-error.log registran el inicio en Windows.
+No se modifica la instancia hasta instalar un plan válido; se conservan respaldos.
+
+Validado con pruebas de motor y asistente en Java 21. El script de Windows necesita validación en tu equipo.
