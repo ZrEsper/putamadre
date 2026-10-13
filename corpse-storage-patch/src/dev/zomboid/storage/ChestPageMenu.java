@@ -7,8 +7,9 @@ import net.minecraft.world.item.ItemStack;
 public final class ChestPageMenu extends ChestMenu {
     final ChestPages view;
     final ChestMenu original;
-    public ChestPageMenu(int id, Inventory inventory, ChestStorage storage, ChestMenu original) { this(id, inventory, new ChestPages(storage), original); }
-    private ChestPageMenu(int id, Inventory inventory, ChestPages view, ChestMenu original) {
+    public ChestPageMenu(int id, Inventory inventory, ChestStorage storage, ChestMenu original) { this(id, inventory, storage, original, true); }
+    public ChestPageMenu(int id, Inventory inventory, ChestStorage storage, ChestMenu original, boolean originalOpen) { this(id, inventory, new ChestPages(storage), original, originalOpen); }
+    private ChestPageMenu(int id, Inventory inventory, ChestPages view, ChestMenu original, boolean originalOpen) {
         super(MenuType.GENERIC_9x6, id, inventory, view, 6);
         this.view = view; this.original = original;
         for (int i = 45; i < 54; i++) {
@@ -20,7 +21,7 @@ public final class ChestPageMenu extends ChestMenu {
             control.index = old.index; slots.set(i, control);
         }
         // The native provider has already opened its inventory; keep exactly one opener.
-        original.getContainer().stopOpen(inventory.player);
+        if(originalOpen) original.getContainer().stopOpen(inventory.player);
     }
     @Override public boolean stillValid(Player player) { return original.stillValid(player) && view.stillValid(player); }
     @Override public void clicked(int slot, int button, ClickType type, Player player) {

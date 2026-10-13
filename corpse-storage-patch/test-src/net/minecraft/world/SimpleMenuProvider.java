@@ -1,0 +1,2 @@
+package net.minecraft.world;import net.minecraft.world.inventory.*;import net.minecraft.world.entity.player.*;import net.minecraft.network.chat.Component;
+public class SimpleMenuProvider implements MenuProvider{final MenuConstructor factory;public final Component title;public SimpleMenuProvider(MenuConstructor factory,Component title){this.factory=factory;this.title=title;}public AbstractContainerMenu createMenu(int id,Inventory inventory,Player player){return factory.createMenu(id,inventory,player);}}

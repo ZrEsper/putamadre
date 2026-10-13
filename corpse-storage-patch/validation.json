@@ -1,16 +1,13 @@
 {
   "quietly": {
     "input_sha256": "5186577d12cf92b61a0b5e3aefc24cd01540bcc0ed921ad58a38ba81ab1c78b6",
-    "output_sha256": "809701132a603d1d01c73350c64cd7a90795b6785efa9685faca96e48a7074a3",
+    "output_sha256": "5d353997ba29e50af955fe1523bbcf8d948e5a1727b589c0aa22f6119dcdde47",
     "changed_entries": [
       "cn/kafei/interact/Interaction.class",
       "cn/kafei/mixin/InteractionOutlineMixin.class",
-      "dev/zomboid/scavenging/Loot.class",
-      "quietly.mixins.json"
+      "dev/zomboid/scavenging/Loot.class"
     ],
     "added_entries": [
-      "cn/kafei/mixin/ExpandedChestDropsMixin.class",
-      "cn/kafei/mixin/ExpandedChestMenuMixin.class",
       "dev/zomboid/scavenging/KeepLoot.class",
       "dev/zomboid/storage/ChestMenus.class",
       "dev/zomboid/storage/ChestPageMenu$1.class",
@@ -21,7 +18,8 @@
       "dev/zomboid/storage/Reflect$1.class",
       "dev/zomboid/storage/Reflect$Cache.class",
       "dev/zomboid/storage/Reflect$Resolved.class",
-      "dev/zomboid/storage/Reflect.class"
+      "dev/zomboid/storage/Reflect.class",
+      "dev/zomboid/storage/StorageEvents.class"
     ]
   },
   "remains": {
@@ -61,6 +59,7 @@
   },
   "checks": {
     "quietly_storage": 54,
+    "neoforge_storage_events": 26,
     "npc_cargo": 17,
     "corpse_outline": 13,
     "native_corpse_and_pending_save_load": 13,

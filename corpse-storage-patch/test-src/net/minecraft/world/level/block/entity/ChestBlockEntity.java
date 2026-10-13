@@ -6,7 +6,7 @@ import net.minecraft.world.entity.player.Player;
 public class ChestBlockEntity extends SimpleContainer {
     public CompoundTag persistent=new CompoundTag();public final TestLevel level=new TestLevel();public int opens,dirty;public boolean valid=true;
     public ChestBlockEntity(){super(27);}
-    public CompoundTag getPersistentData(){return persistent;}
+    public net.minecraft.network.chat.Component getDisplayName(){return net.minecraft.network.chat.Component.literal("Custom chest");}public CompoundTag getPersistentData(){return persistent;}
     public TestLevel getLevel(){return level;}
     @Override public void setChanged(){dirty++;}
     @Override public boolean stillValid(Player p){return valid;}

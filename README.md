@@ -2,9 +2,11 @@
 
 ## Cadáveres con contorno y botín dentro de cofres/cuerpos
 
-[Descargar los cuatro reemplazos juntos](cadaveres-cofres-sin-desbordamiento.zip): Quietly v14, Zombie Remains .7, TacZ NPCs tactical.14 y Dungeons Iso .27, construido sobre la .26 enviada. Contorno al apuntar cadáveres y looteo con clic derecho; el botín adicional de búsqueda se guarda dentro del cofre, ampliando con páginas si falta espacio. Los NPC conservan toda la mochila, equipo y objetos guardados en su cadáver, sin el límite anterior de nueve entradas. Si no hay sitio para colocar el cuerpo, el botín queda en una entrega persistente pendiente, sin objetos flotantes.
+**Actualización Quietly v15:** corrige el cierre al arrancar causado por el mixin de apertura de v14. [Descargar solo Quietly corregido](mods/quietly-1_0_0-cooldown-v15-neoforge-menu-fix.jar). Retirar v14; los otros tres reemplazos se conservan. [Diagnóstico del log](corpse-storage-patch/LOG_FIX.md).
 
-Reemplazar versiones anteriores; actualizar Quietly, Remains y TacZ NPCs juntos en cliente y servidor. 138 comprobaciones con APIs simuladas, guardado/carga de clases reales parcheadas y verificación de bytecode aprobadas. **Pendiente probar el arranque, renderizado y sincronización dentro de Minecraft.** [Instalación, fuentes y límites](corpse-storage-patch/README.md).
+[Descargar los cuatro reemplazos juntos](cadaveres-cofres-sin-desbordamiento.zip): Quietly v15, Zombie Remains .7, TacZ NPCs tactical.14 y Dungeons Iso .27, construido sobre la .26 enviada. Contorno al apuntar cadáveres y looteo con clic derecho; el botín adicional de búsqueda se guarda dentro del cofre, ampliando con páginas si falta espacio. Los NPC conservan toda la mochila, equipo y objetos guardados en su cadáver, sin el límite anterior de nueve entradas. Si no hay sitio para colocar el cuerpo, el botín queda en una entrega persistente pendiente, sin objetos flotantes.
+
+Reemplazar versiones anteriores; actualizar Quietly, Remains y TacZ NPCs juntos en cliente y servidor. 164 comprobaciones con APIs simuladas, guardado/carga de clases reales parcheadas y verificación de bytecode aprobadas. **Pendiente probar el arranque, renderizado y sincronización dentro de Minecraft.** [Instalación, fuentes y límites](corpse-storage-patch/README.md).
 
 ## Dungeons Iso + TACZ: cámara isométrica .13
 

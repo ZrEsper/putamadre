@@ -1,1 +1,1 @@
-package net.minecraft.network.chat;public record Component(String text){public static Component literal(String s){return new Component(s);}}
+package net.minecraft.network.chat;public record Component(String text){public static Component translatable(String s,Object...args){return new Component(s);}public static Component literal(String s){return new Component(s);}}

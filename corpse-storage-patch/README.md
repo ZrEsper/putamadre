@@ -2,11 +2,13 @@
 
 Reemplazos construidos sobre los cuatro JAR del usuario: Quietly v13, Remains .6, TacZ NPCs tactical.13 y **Dungeons Iso .26 mounted-aim-side-zoom**. La .25 anterior no se usa como base.
 
+La revisión **Quietly v15** corrige el cierre al arrancar registrado en el log del usuario: usa los eventos oficiales de NeoForge para las páginas y la rotura de cofres, sin los dos mixins nuevos de v14. El formato de guardado sigue siendo compatible. [Diagnóstico y verificación](LOG_FIX.md). Si ya instalaste el paquete anterior, solo sustituye Quietly v14 por v15; los otros tres JAR son idénticos.
+
 ## Instalación
 
 Cerrar Minecraft y el servidor, hacer una copia del mundo y sustituir las versiones anteriores. Una sola versión de cada mod:
 
-- `quietly-1_0_0-cooldown-v14-corpse-outline-no-spill.jar`
+- `quietly-1_0_0-cooldown-v15-neoforge-menu-fix.jar`
 - `zombie-remains-loot-1.6.1-neoforge-1.21.1-military-nvg-mythic.7-npc-full-cargo.jar`
 - `tacznpcs-2.1.0-1.21.1-tactical.14-corpse-cargo.jar`
 - `dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.27-corpse-outline.jar`
@@ -29,8 +31,9 @@ Conservar esta versión de Quietly/Remains o una posterior compatible al guardar
 
 ## Verificación
 
-138 comprobaciones con los helpers reales y dobles explícitos de las APIs del juego:
+164 comprobaciones con los helpers reales y dobles explícitos de las APIs del juego:
 
+- 26 de los eventos oficiales de apertura/rotura, identidad del menú, recursión, contadores, títulos, cofres dobles y conservación del contenido al romper.
 - 54 de inserción nativa, componentes, pilas, cofres dobles, ampliación, páginas, acceso válido, guardado de índices mayores de 255 y conservación al romper deliberadamente el cofre.
 - 17 de mochila completa de 150 entradas, equipo almacenado, deduplicación del equipo capturado y codificación de entregas pendientes.
 - 13 del reconocimiento real de bloques y entidades de cadáver por Quietly.
