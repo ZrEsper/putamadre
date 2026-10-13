@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+[[mods]]
+modId="locknar_doorkick"
+version="1.2.5-neoforge.1"
+displayName="TACZ Animation Additions"
+authors="Locknar"
+[[dependencies.locknar_doorkick]]
+modId="tacz"
+type="required"
+versionRange="[1.1.8,)"
+ordering="AFTER"
+side="BOTH"
+
+[[mixins]]
+config="locknar_doorkick_tactical.mixins.json"
+[[mixins]]
+config="locknar_doorkick_tacz.mixins.json"
+[[mixins]]
+config="locknar_doorkick_prone.mixins.json"
+[[mixins]]
+config="locknar_doorkick.mixins.json"
+
+[[mixins]]
+config="tacz.feedback.mixins.json"

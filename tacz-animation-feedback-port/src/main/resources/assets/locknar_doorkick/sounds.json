@@ -1,0 +1,10 @@
+{
+  "check": {
+    "sounds": [
+      {
+        "name": "locknar_doorkick:check",
+        "stream": false
+      }
+    ]
+  }
+}

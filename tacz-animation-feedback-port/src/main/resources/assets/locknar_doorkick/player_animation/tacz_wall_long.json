@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "uuid": "0ac1fbd6-5d3c-4e83-a354-ef2b5ff46d31",
+  "name": "tacz_wall_long",
+  "_comment": "Original third-person TaCZ long-gun wall obstruction pose. Only arms are changed so the muzzle raises upward against a wall.",
+  "emote": {
+    "beginTick": 0,
+    "endTick": 20,
+    "stopTick": 4,
+    "isLoop": true,
+    "returnTick": 4,
+    "nsfw": false,
+    "degrees": false,
+    "moves": [
+      { "tick": 0,  "easing": "OUTCUBIC", "rightArm": { "pitch": -0.82, "yaw": 0.08, "roll": 0.03 } },
+      { "tick": 10, "easing": "INOUTSINE", "rightArm": { "pitch": -0.78, "yaw": 0.06, "roll": 0.04 } },
+      { "tick": 20, "easing": "INOUTSINE", "rightArm": { "pitch": -0.82, "yaw": 0.08, "roll": 0.03 } },
+
+      { "tick": 0,  "easing": "OUTCUBIC", "leftArm": { "pitch": -0.72, "yaw": 0.16, "roll": -0.08 } },
+      { "tick": 10, "easing": "INOUTSINE", "leftArm": { "pitch": -0.68, "yaw": 0.14, "roll": -0.06 } },
+      { "tick": 20, "easing": "INOUTSINE", "leftArm": { "pitch": -0.72, "yaw": 0.16, "roll": -0.08 } }
+    ]
+  }
+}

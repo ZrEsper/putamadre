@@ -1,0 +1,15 @@
+{
+  "key.categories.locknar_doorkick": "Tacz Animation Additions",
+  "item.locknar_doorkick.mirror_gun": "Mirror Gun",
+  "hud.locknar_doorkick.open": "[F:Open]",
+  "hud.locknar_doorkick.kick": "[F:Kick]",
+  "hud.locknar_doorkick.mirror": "Mirror Gun",
+  "hud.locknar_doorkick.mirror_view": "Mirror View",
+  "hud.locknar_doorkick.mirror_view_cancel": "Right click to cancel",
+  "hud.locknar_doorkick.mirror_use_progress": "Deploying mirror gun",
+  "hud.locknar_doorkick.mirror_cancel_progress": "Putting mirror gun away",
+  "hud.locknar_doorkick.muzzle_obstructed": "Muzzle obstructed",
+  "key.locknar_tacz_ammo_check.high_ready": "High Ready",
+  "key.locknar_tacz_ammo_check.prone": "Prone / Stand up",
+  "message.locknar_doorkick.prone_blocked": "Not enough room to stand up"
+}

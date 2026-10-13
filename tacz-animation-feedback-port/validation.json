@@ -1,0 +1,75 @@
+{
+  "base_sha256": "5d138ea54e7fe78793bc42c6ef4f33cdef1b2022e22da48b88f55a166e3b1603",
+  "output_sha256": "8855a6512c021ee643a25a7ef12dc4f23e277fd208e9b84d056df806b22d2d38",
+  "changed_original_entries": [
+    "META-INF/neoforge.mods.toml",
+    "assets/tacz/particles/bullet_hole.json",
+    "com/tacz/guns/client/event/ClientHitMark.class",
+    "com/tacz/guns/client/event/PlayerEnterWorld.class",
+    "com/tacz/guns/client/event/PlayerHurtByGunEvent.class",
+    "com/tacz/guns/client/event/PreventsHotbarEvent.class",
+    "com/tacz/guns/client/event/ReloadResourceEvent.class",
+    "com/tacz/guns/client/event/RenderHeadShotAABB.class",
+    "com/tacz/guns/client/event/TooltipEvent.class",
+    "com/tacz/guns/client/init/ModContainerScreen.class",
+    "com/tacz/guns/client/init/ModEntitiesRender.class",
+    "com/tacz/guns/client/input/AimKey.class",
+    "com/tacz/guns/client/input/ConfigKey.class",
+    "com/tacz/guns/client/input/CrawlKey.class",
+    "com/tacz/guns/client/input/FireSelectKey.class",
+    "com/tacz/guns/client/input/InspectKey.class",
+    "com/tacz/guns/client/input/InteractKey.class",
+    "com/tacz/guns/client/input/MeleeKey.class",
+    "com/tacz/guns/client/input/RefitKey.class",
+    "com/tacz/guns/client/input/ReloadKey.class",
+    "com/tacz/guns/client/input/ShootKey.class",
+    "com/tacz/guns/client/input/ZoomKey.class",
+    "com/tacz/guns/client/particle/BulletHoleParticle$Provider.class",
+    "com/tacz/guns/client/particle/BulletHoleParticle.class",
+    "com/tacz/guns/event/EntityDamageEvent.class",
+    "com/tacz/guns/event/HitboxHelperEvent.class",
+    "com/tacz/guns/event/KnockbackChange.class",
+    "com/tacz/guns/event/LoadingConfigEvent.class",
+    "com/tacz/guns/event/PlayerRespawnEvent.class",
+    "com/tacz/guns/event/PreventGunClick.class",
+    "com/tacz/guns/event/ServerTickEvent.class",
+    "com/tacz/guns/event/SyncBaseTimestamp.class",
+    "com/tacz/guns/event/SyncedEntityDataEvent.class",
+    "com/tacz/guns/event/TravelToDimensionEvent.class",
+    "com/tacz/guns/event/ammo/BellRing.class",
+    "com/tacz/guns/event/ammo/DestroyGlassBlock.class",
+    "com/tacz/guns/init/CommandRegistry.class",
+    "com/tacz/guns/init/CommonRegistry.class",
+    "com/tacz/guns/init/CompatRegistry.class",
+    "com/tacz/guns/init/ModItems.class",
+    "com/tacz/guns/network/NetworkHandler.class",
+    "com/tacz/guns/resource/CommonAssetsManager.class",
+    "dev/zomboid/tacz/Bridge.class"
+  ],
+  "added_entries": 311,
+  "pinned_subscribers": 38,
+  "native_server_tests": {
+    "required": 4,
+    "passed": 4,
+    "runtime": [
+      "TACZ merged9",
+      "Dungeons Iso22",
+      "Immersive Vehicles mechanics13"
+    ]
+  },
+  "native_client": {
+    "passed": true,
+    "checks": [
+      "adaptive target and restored shot angles",
+      "native particle atlas and wall impact",
+      "server directional hit packet received by HUD",
+      "scoped sniper glare cache",
+      "Iso disables adaptive normal third person",
+      "real MTS camera handler cancels seat camera and clears adjustedCamera in Iso",
+      "Iso blocks gun scope FOV and camera animation"
+    ]
+  },
+  "limits": [
+    "Isolated test world; full user modpack and extended actual driving not tested."
+  ]
+}

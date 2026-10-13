@@ -1,0 +1,10 @@
+.gradle/
+build/
+run/
+output/
+repo/
+*.log
+merge-report.json
+tools/*.class
+__pycache__/
+tools/*.jar

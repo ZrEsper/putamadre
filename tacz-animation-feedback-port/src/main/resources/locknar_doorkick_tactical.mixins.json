@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.locknar.taczammocheck.tactical.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "MouseHandlerMixin",
+    "PlayerModelMixin",
+    "PlayerRendererMixin",
+    "TaczLeftHandRenderMixin",
+    "TaczBedrockGunModelPoseMixin",
+    "TaczGunItemRendererWrapperMixin",
+    "TaczHotbarGunRenderMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "uuid": "86b4fedc-df88-4188-81ee-8210d37fa21d",
+  "name": "tacz_wall_pistol",
+  "_comment": "Original third-person TaCZ pistol wall obstruction pose. Only arms are changed; smaller raise than long guns.",
+  "emote": {
+    "beginTick": 0,
+    "endTick": 20,
+    "stopTick": 4,
+    "isLoop": true,
+    "returnTick": 4,
+    "nsfw": false,
+    "degrees": false,
+    "moves": [
+      { "tick": 0,  "easing": "OUTCUBIC", "rightArm": { "pitch": -0.62, "yaw": 0.05, "roll": -0.02 } },
+      { "tick": 10, "easing": "INOUTSINE", "rightArm": { "pitch": -0.58, "yaw": 0.04, "roll": -0.01 } },
+      { "tick": 20, "easing": "INOUTSINE", "rightArm": { "pitch": -0.62, "yaw": 0.05, "roll": -0.02 } },
+
+      { "tick": 0,  "easing": "OUTCUBIC", "leftArm": { "pitch": -0.25, "yaw": 0.05, "roll": -0.03 } },
+      { "tick": 10, "easing": "INOUTSINE", "leftArm": { "pitch": -0.22, "yaw": 0.04, "roll": -0.02 } },
+      { "tick": 20, "easing": "INOUTSINE", "leftArm": { "pitch": -0.25, "yaw": 0.05, "roll": -0.03 } }
+    ]
+  }
+}

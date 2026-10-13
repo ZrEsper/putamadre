@@ -1,0 +1,15 @@
+{
+  "key.categories.locknar_doorkick": "Tacz Animation Additions",
+  "item.locknar_doorkick.mirror_gun": "镜枪",
+  "hud.locknar_doorkick.open": "[F:打开]",
+  "hud.locknar_doorkick.kick": "[F:踢开]",
+  "hud.locknar_doorkick.mirror": "镜枪",
+  "hud.locknar_doorkick.mirror_view": "镜枪视角",
+  "hud.locknar_doorkick.mirror_view_cancel": "鼠标右键取消",
+  "hud.locknar_doorkick.mirror_use_progress": "正在使用镜枪",
+  "hud.locknar_doorkick.mirror_cancel_progress": "正在收回镜枪",
+  "hud.locknar_doorkick.muzzle_obstructed": "枪口受阻",
+  "key.locknar_tacz_ammo_check.high_ready": "高姿态持枪",
+  "key.locknar_tacz_ammo_check.prone": "趴下 / 起身",
+  "message.locknar_doorkick.prone_blocked": "上方空间不足，无法起身"
+}

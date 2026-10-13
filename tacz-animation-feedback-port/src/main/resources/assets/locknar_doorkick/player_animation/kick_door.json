@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "uuid": "46c4a81f-1639-4528-8ef7-3d275f2f6d2c",
+  "name": "kick_door",
+  "_comment": "Original locknar_doorkick front-kick animation. 0.25s windup is handled by server timing; this animation starts when the kick actually happens. Arm pose is no longer modified here; TaCZ kick-raise handles arm posture separately.",
+  "emote": {
+    "beginTick": 0,
+    "endTick": 14,
+    "stopTick": 16,
+    "isLoop": false,
+    "returnTick": 0,
+    "nsfw": false,
+    "degrees": false,
+    "moves": [
+      {
+        "tick": 0,
+        "easing": "LINEAR",
+        "rightLeg": {
+          "pitch": 0.0,
+          "yaw": 0.0,
+          "roll": 0.0
+        }
+      },
+      {
+        "tick": 3,
+        "easing": "OUTCUBIC",
+        "rightLeg": {
+          "pitch": -1.95,
+          "yaw": 0.08,
+          "roll": -0.1
+        }
+      },
+      {
+        "tick": 6,
+        "easing": "LINEAR",
+        "rightLeg": {
+          "pitch": -1.88,
+          "yaw": 0.06,
+          "roll": -0.08
+        }
+      },
+      {
+        "tick": 14,
+        "easing": "INOUTSINE",
+        "rightLeg": {
+          "pitch": 0.0,
+          "yaw": 0.0,
+          "roll": 0.0
+        }
+      },
+      {
+        "tick": 0,
+        "easing": "LINEAR",
+        "leftLeg": {
+          "pitch": 0.0,
+          "yaw": 0.0,
+          "roll": 0.0
+        }
+      },
+      {
+        "tick": 3,
+        "easing": "OUTCUBIC",
+        "leftLeg": {
+          "pitch": 0.24,
+          "yaw": -0.04,
+          "roll": 0.04
+        }
+      },
+      {
+        "tick": 14,
+        "easing": "INOUTSINE",
+        "leftLeg": {
+          "pitch": 0.0,
+          "yaw": 0.0,
+          "roll": 0.0
+        }
+      },
+      {
+        "tick": 0,
+        "easing": "LINEAR",
+        "body": {
+          "pitch": 0.0,
+          "yaw": 0.0,
+          "roll": 0.0
+        }
+      },
+      {
+        "tick": 3,
+        "easing": "OUTCUBIC",
+        "body": {
+          "pitch": -0.1,
+          "yaw": 0.07,
+          "roll": 0.0
+        }
+      },
+      {
+        "tick": 14,
+        "easing": "INOUTSINE",
+        "body": {
+          "pitch": 0.0,
+          "yaw": 0.0,
+          "roll": 0.0
+        }
+      }
+    ]
+  }
+}

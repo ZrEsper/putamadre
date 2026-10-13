@@ -1,0 +1,27 @@
+package dev.zomboid.tacz;
+import java.util.*;
+public final class Bridge {
+ static Object projection;static final Set<String> warned=new HashSet<>();
+ static Object mc(){return R.call(R.type("net.minecraft.client.Minecraft"),"getInstance");}
+ static boolean gun(Object player){return player!=null&&R.call(R.type("com.tacz.guns.api.item.IGun"),"getIGunOrNull",R.call(player,"getMainHandItem"))!=null;}
+ public static boolean thirdPerson(){Object mc=mc();return R.get(mc,"player")!=null&&!R.yes(R.call(R.call(R.get(mc,"options"),"getCameraType"),"isFirstPerson"))&&gun(R.get(mc,"player"));}
+ static boolean isoActive(){try{return R.yes(R.get(R.type("com.cleannrooster.dungeons_iso.mod.Mod"),"enabled"));}catch(IllegalStateException e){if(e.getCause() instanceof ClassNotFoundException)return false;throw e;}}
+ static boolean aiming(Object p){return p!=null&&R.yes(R.call(R.call(R.type("com.tacz.guns.api.client.gameplay.IClientPlayerGunOperator"),"fromLocalPlayer",p),"isAim"));}
+ static void warn(String n,Throwable e){if(warned.add(n))R.warn(n,e);}
+ public static void finalColor(Object camera){Weather.finalColor(camera);}
+ public static void bareHand(Object callback){BareHand.prepare();}
+ public static void captureProjection(Object callback){try{projection=R.make("org.joml.Matrix4f",R.call(callback,"getReturnValue"));dev.zomboid.taczfeedback.ThirdPersonAimClient.projection((org.joml.Matrix4f)projection);}catch(Throwable e){warn("projection",e);}}
+ public static boolean drawEvent(Object event){return dev.zomboid.taczfeedback.ThirdPersonAimClient.drawEvent(event);}
+
+ static Object vec(double x,double y,double z){return R.make("net.minecraft.world.phys.Vec3",x,y,z);}
+ static double v(Object p,String axis){return R.num(R.get(p,axis));}
+ static Object plus(Object p,double x,double y,double z){return vec(v(p,"x")+x,v(p,"y")+y,v(p,"z")+z);}
+ static Object clip(Object level,Object player,Object a,Object b){return R.call(level,"clip",R.make("net.minecraft.world.level.ClipContext",a,b,R.get(R.type("net.minecraft.world.level.ClipContext$Block"),"COLLIDER"),R.get(R.type("net.minecraft.world.level.ClipContext$Fluid"),"NONE"),player));}
+ static double distance(Object a,Object b){return R.num(R.call(a,"distanceTo",b));}
+ static void render(Object graphics){try{Object mc=mc(),player=R.get(mc,"player");if(!thirdPerson()||!aiming(player)||projection==null||player==null||R.get(mc,"screen")!=null||R.yes(R.get(R.get(mc,"options"),"hideGui"))||!gun(player))return;Object eye=R.call(player,"getEyePosition"),direction=R.call(player,"getViewVector",1f),end=plus(eye,v(direction,"x")*128,v(direction,"y")*128,v(direction,"z")*128),level=R.get(mc,"level");Object point=R.call(clip(level,player,eye,end),"getLocation");double best=distance(eye,point);Object box=R.call(R.call(player,"getBoundingBox"),"expandTowards",R.call(direction,"scale",128d));box=R.call(box,"inflate",1d);java.util.function.Predicate<Object> pick=e->R.yes(R.call(e,"isPickable"))&&!R.yes(R.call(e,"isSpectator"));for(Object entity:(List<?>)R.call(level,"getEntities",player,box,pick)){Object bounds=R.call(R.call(entity,"getBoundingBox"),"inflate",(double)((Number)R.call(entity,"getPickRadius")).floatValue());Optional<?> intersection=(Optional<?>)R.call(bounds,"clip",eye,end);if(intersection.isPresent()&&distance(eye,intersection.get())<best){point=intersection.get();best=distance(eye,point);}}
+  double[] screen=screenPoint(mc,graphics,point);if(screen==null)return;double[] from=screenPoint(mc,graphics,eye);if(from!=null)line(graphics,from,screen);draw(graphics,(int)Math.round(screen[0]),(int)Math.round(screen[1]));
+ }catch(Throwable e){warn("third person crosshair",e);}}
+ static double[] screenPoint(Object mc,Object graphics,Object point){Object camera=R.call(R.get(mc,"gameRenderer"),"getMainCamera"),pos=R.call(camera,"getPosition"),q=R.make("org.joml.Quaternionf",R.call(camera,"rotation"));R.call(q,"conjugate");Object relative=R.make("org.joml.Vector3f",(float)(v(point,"x")-v(pos,"x")),(float)(v(point,"y")-v(pos,"y")),(float)(v(point,"z")-v(pos,"z")));R.call(q,"transform",relative);Object clip=R.make("org.joml.Vector4f",(float)v(relative,"x"),(float)v(relative,"y"),(float)v(relative,"z"),1f);R.call(projection,"transform",clip);return Rules.project(v(clip,"x"),v(clip,"y"),v(clip,"w"),((Number)R.call(graphics,"guiWidth")).intValue(),((Number)R.call(graphics,"guiHeight")).intValue());}
+ static void line(Object g,double[] a,double[] b){int steps=Math.min(48,(int)(Math.hypot(b[0]-a[0],b[1]-a[1])/6));for(int i=1;i<steps;i++){double t=(double)i/steps;int x=(int)Math.round(a[0]+(b[0]-a[0])*t),y=(int)Math.round(a[1]+(b[1]-a[1])*t);R.call(g,"fill",x,y,x+1,y+1,0xAA9BC698);}}
+ static void draw(Object g,int x,int y){for(int i=0;i<24;i++){double a=i*Math.PI/12;int px=x+(int)Math.round(Math.cos(a)*6),py=y+(int)Math.round(Math.sin(a)*6);R.call(g,"fill",px,py,px+1,py+1,0xFFF2E7C5);}R.call(g,"fill",x,y,x+1,y+1,0xFFE3AB4F);}
+}

@@ -1,0 +1,7 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+[[mods]]
+modId="tacz_validation"
+version="1"
+displayName="TACZ native validation fixture"

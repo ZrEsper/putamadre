@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "dev.zomboid.taczfeedback.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "ThirdPersonShotMixin",
+    "CrosshairAccess",
+    "IsoGunCameraMixin",
+    "IsoVehicleCameraMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "locknar_doorkick:item/mirror_gun"
+  }
+}
