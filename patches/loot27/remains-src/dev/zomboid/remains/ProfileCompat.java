@@ -1,0 +1,5 @@
+package dev.zomboid.remains;
+public final class ProfileCompat {
+ public static void converted(Object event){try{Class.forName("dev.zomboid.hordes.LootProfiles").getMethod("markConverted",Object.class).invoke(null,event);}catch(ClassNotFoundException e){}catch(ReflectiveOperationException e){System.getLogger("CorpseLootProfile").log(System.Logger.Level.ERROR,"No se pudo marcar el cadáver del NPC",e);}}
+ public static void corpse(Object corpse,Object level,Object event){try{Class<?> profiles=Class.forName("dev.zomboid.hordes.LootProfiles");profiles.getMethod("markConverted",Object.class).invoke(null,event);Object entity=event.getClass().getMethod("getEntity").invoke(event);Object origin=entity.getClass().getMethod("position").invoke(entity);profiles.getMethod("corpse",Object.class,Object.class,Object.class).invoke(null,corpse,level,origin);}catch(ClassNotFoundException e){}catch(ReflectiveOperationException e){System.getLogger("CorpseLootProfile").log(System.Logger.Level.ERROR,"No se pudo aplicar el perfil del cadáver",e);}}
+}
