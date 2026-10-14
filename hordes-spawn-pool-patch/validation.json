@@ -1,0 +1,22 @@
+{
+  "file": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.28-spawn-personality-pool.jar",
+  "sha256": "18b31b0efbcd268e5f6f791aa9bb78cfcf1808d768e0a0bf8f9a206cf599dc99",
+  "behavior_checks": 88,
+  "native_methods_executed_with_API_doubles": true,
+  "minecraft_runtime_tested": false,
+  "modified_methods_verified": "ASM BasicVerifier",
+  "resources_unchanged": true,
+  "changed_classes": [
+    "dev/zomboid/hordes/AdminNetwork.class",
+    "dev/zomboid/hordes/ZombieIndividual.class",
+    "dev/zomboid/hordes/client/AdminScreen.class",
+    "dev/zomboid/hordes/client/ScrollSpeed.class",
+    "dev/zomboid/reactive/Reactive.class",
+    "dev/zomboid/reactive/Rules.class",
+    "dev/zomboid/hordes/ZoneSettings.class"
+  ],
+  "added_classes": [
+    "dev/zomboid/hordes/SpawnPool.class",
+    "dev/zomboid/hordes/SpawnPoolUi.class"
+  ]
+}

@@ -1,3 +1,7 @@
+# Actualización Hordes .28: spawn e IA
+
+[Descargar Hordes .28](mods/zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.28-spawn-personality-pool.jar). Dos pestañas nuevas en `/zhorda panel`: mezcla normalizada de tontos/brutos/astutos; reacción, agresividad y oído; velocidad y daño por personalidad. Presets Fácil/Equilibrado/Difícil. Reemplazar el mod anterior en cliente y servidor. [Instrucciones y validación](hordes-spawn-pool-patch/README.md). 88 comprobaciones aprobadas con dobles de APIs; pendiente de prueba dentro de Minecraft.
+
 # Actualización: apuntado manual y scopes
 
 [Descarga e instrucciones de los tres mods](free-aim-scopes-patch/README.md). Retira sus versiones anteriores antes de instalar los nuevos JAR de `mods/`. Zoom óptico según la mira equipada, destello de sniper reforzado para otros jugadores y correcciones de asistencia/rotación al disparar. 33 comprobaciones de lógica e integridad aprobadas; pendiente de prueba visual dentro de Minecraft.

@@ -1,0 +1,3 @@
+package net.minecraft.world.entity.ai.attributes;
+import net.minecraft.resources.ResourceLocation;
+public record AttributeModifier(ResourceLocation id,double amount,Operation operation){public enum Operation{ADD_VALUE,ADD_MULTIPLIED_BASE,ADD_MULTIPLIED_TOTAL}}

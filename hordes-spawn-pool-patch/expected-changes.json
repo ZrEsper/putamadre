@@ -1,0 +1,9 @@
+[
+  "dev/zomboid/hordes/AdminNetwork.class",
+  "dev/zomboid/hordes/ZombieIndividual.class",
+  "dev/zomboid/hordes/client/AdminScreen.class",
+  "dev/zomboid/hordes/client/ScrollSpeed.class",
+  "dev/zomboid/reactive/Reactive.class",
+  "dev/zomboid/reactive/Rules.class",
+  "dev/zomboid/hordes/ZoneSettings.class"
+]
