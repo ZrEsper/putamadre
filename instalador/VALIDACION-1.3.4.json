@@ -1,0 +1,22 @@
+{
+  "version": "1.3.4",
+  "functional_checks_passed": 52,
+  "archive_checks_passed": 30,
+  "languages": [
+    "es",
+    "en",
+    "de"
+  ],
+  "language_selection": "startup and sidebar",
+  "language_persistence": "language.txt under installer cache root",
+  "translated_guides": [
+    "GUIA.html",
+    "GUIA-en.html",
+    "GUIA-de.html"
+  ],
+  "world_selection_required": false,
+  "windows_execution": "not tested",
+  "minecraft_runtime": "not tested",
+  "screenshots": "headless Swing rendering inspected for English and German",
+  "update_sha256": "86863bf7314f2b34a849cea2b23e647bcaea6ec488867910de4a8434e61ae2e6"
+}
