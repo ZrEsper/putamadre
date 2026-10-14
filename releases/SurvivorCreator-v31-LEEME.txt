@@ -1,0 +1,7 @@
+SURVIVOR CREATOR v31 · PANTALLAS A ESCALA 3
+Reemplaza v30 por este JAR, sin dejar ambos.
+Creacion, perfiles, seleccion de spawn y muerte usan temporalmente la escala de GUI 3, independientemente del ajuste general.
+El diseño y los clicks comparten las dimensiones correctas; se restablece la escala seleccionada al salir.
+Conserva el HUD de XP a escala 3, audio, traducciones y logica del personaje de v30.
+Pantallas demasiado pequeñas usan el limite minimo de Minecraft, igual que GUI Scale 3 normal.
+Pruebas: Auto, GUI 1–6, entradas del raton, reinit, cambio de tamaño y restauracion de preferencia. ASM y JAR verificados. Sin prueba visual dentro de Minecraft.
