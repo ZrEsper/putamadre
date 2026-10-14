@@ -1,0 +1,23 @@
+ZOMBIES POLDO · DISTRIBUCION COMPRIMIDA 1.2.3
+
+PARA EL CREADOR DEL MODPACK
+1. Pon los ZIP y JAR en componentes. No tienes que descomprimir los mapas.
+   Ejemplo: componentes/Mapa.zip, componentes/Mods.zip, componentes/Resourcepacks.zip.
+   Mods.zip debe contener mods/*.jar; Config.zip debe contener config/...;
+   Resourcepacks.zip puede contener resourcepacks/*.zip. Un mapa ZIP puede contener level.dat en la raiz o una carpeta con level.dat.
+   Tambien puedes usar un unico ZIP estructurado con mods, config, resourcepacks, datapacks y saves.
+2. Abre Preparar-distribucion.cmd. Crea Zombies-Poldo-Modpack-Completo.zip con instalador y componentes comprimidos.
+3. Envia ese ZIP a tus jugadores.
+
+PARA EL JUGADOR
+Extrae el ZIP recibido. Abre Instalar.cmd. Requiere Java 21.
+El contenido de componentes se carga automaticamente; no hay que anadir ni seleccionar cada ZIP.
+Elige tu instancia, continua, revisa e instala. Los mapas se descomprimen en saves.
+Un mundo distinto con el mismo nombre no se sobrescribe. Renombra el mapa entrante si aparece ese bloqueo.
+Los datapacks del propio mapa se conservan. Datapacks separados necesitan seleccionar un mundo existente.
+
+ALTERNATIVA PARA PAQUETES GRANDES
+Con 7-Zip, comprime juntos Zomboid-Installer.jar, Instalar.cmd, Instalar-debug.cmd, Abrir-Instalador.ps1, audio, pack, componentes y LEEME.txt.
+No incluyas imports ni logs. No incluyas credenciales de launchers.
+Este paquete base no incluye tus mods ni tu mapa: debes colocarlos en componentes antes de distribuirlo.
+Logs en logs/. Instalar-debug.cmd deja la consola abierta. Windows pendiente de validar en tu equipo.
