@@ -1,0 +1,1 @@
+Reemplazar v31 por v32, no instalar ambos. Escala local de las cuatro pantallas: dibujo y raton usan GUI 3. No cambia Window.guiScale ni opciones. Mantiene red, habilidades, spawn y recursos originales. Verificado bytecode y coordenadas con fixtures; no probado dentro de Minecraft. Si confirmar sigue bloqueado, enviar latest.log de esa sesion para diagnosticar el error real.
