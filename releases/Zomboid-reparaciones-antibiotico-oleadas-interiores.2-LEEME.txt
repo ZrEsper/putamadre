@@ -1,0 +1,21 @@
+ZOMBOID — REPARACIONES 2 / Minecraft 1.21.1 NeoForge
+
+INSTALACION
+Cierra Minecraft. Sustituye las versiones anteriores de los siete mods incluidos; no conserves duplicados. Actualiza tambien el servidor o la instancia del anfitrion, especialmente FirstAid, FactionFriction, Hordes y TaCZ. tp_shooting es de cliente. Conserva Zombie Remains Loot v8: utiliza la integracion existente.
+
+OLEADAS Y HORDES
+Hordes30 parte del Hordes29 enviado. El filtro de apariciones naturales/diurnas estaba cancelando las entidades de oleada: ahora reconoce FactionPveWave y permite su admision, conservando las restricciones de los zombis naturales. Las oleadas quedan protegidas frente al archivado por zona. Se mantienen las herramientas y ajustes del panel.
+Busqueda de suelos en habitaciones y tuneles sin exigir cielo abierto, con comprobacion de colisiones y sin cargar chunks nuevos. Si los mutantes grandes no caben tras varios intentos, se utilizan zombis normales. Se conserva el limite de 16 activos por oleada y la cola de refuerzos. Siguen siendo necesarios territorio/nexo y permisos validos.
+
+MEDICINA
+Los consumibles medicos compatibles de FirstAid y LesRaisins tratan infecciones de heridas al completar su uso. Comida y bebidas no cuentan como medicamentos. Se conservan las correcciones anteriores de revivir sin objeto, prioridad sobre el menu medico, regeneracion II durante cinco segundos al levantarse, curacion de partes y lavado de vendas con liquidos.
+Nuevo antibiotico profilactico: firstaid:prophylactic_antibiotic.
+Uso de 1,6 segundos: cura infecciones de heridas y otorga inmunidad durante 6000 ticks (cinco minutos a 20 TPS), con icono visible. Otra dosis renueva el tiempo, no lo acumula. No trata la infeccion viral/zombificacion de The Hordes.
+Comando de prueba: /give @s firstaid:prophylactic_antibiotic
+Loot normal nuevo de cofres/barriles: 8%; cadaveres: 12%, respetando espacios y sin duplicar el antibiotico. Si activas perfiles completos de loot del panel, entra en la categoria medicinas con peso 1 y respeta sus ajustes, sin probabilidad adicional. No rellena retroactivamente contenedores ya saqueados.
+
+ARMAS Y MELEE
+La postura de arma alta comprueba Alt fisico y foco de ventana; apuntar o disparar baja esa postura y sincroniza el estado. El render del jugador local ya no intercambia temporalmente su arma real. Se conservan los ajustes de camara y minado al mantener ataque sobre un bloque alcanzable. La obstruccion real de paredes sigue impidiendo disparar.
+
+VALIDACION
+CRC de archivos y conservacion byte a byte de entradas no modificadas. Verificacion ASM de once clases parcheadas. Pruebas con fixtures: registro y expiracion del antibiotico, consumibles medicos, entrega de loot, habitaciones/tuneles, admision de oleadas en zona llena y postura/estado de arma. No se ha ejecutado este modpack dentro de Minecraft; requiere prueba en tu instancia.
