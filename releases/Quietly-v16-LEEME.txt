@@ -1,0 +1,7 @@
+QUIETLY v16 — Minecraft 1.21.1 NeoForge
+Sustituye Quietly v15 por este JAR. No conserves dos versiones. Instala tambien en el servidor/anfitrion.
+Los bloques colocados por jugadores se marcan en datos persistentes del bloque. Quedan fuera de la busqueda Scavenging, loot extra y conversion/ampliacion automatica de Quietly. No se borran objetos del inventario. La marca se conserva al guardar y cargar.
+Los cofres naturales individuales mejoran a cofres de Sophisticated Storage; los barriles a barriles. Conservan orientacion y waterlogged cuando la nueva variante lo admite. Los cofres dobles y trampa conservan su bloque original para no alterar inventarios ni redstone.
+Los cofres del jugador colocados ANTES de instalar esta version no tienen un registro fiable de procedencia: retira su contenido, rompe y vuelve a colocar el contenedor para registrarlo, y devuelve su contenido. No hay restauracion automatica de cofres ya convertidos a barril.
+Esto protege frente a Quietly. Otros datapacks/mods que fuerzan rellenos por su cuenta necesitan respetar esta marca por separado: ForgeData.QuietlyPlayerPlaced.
+Validado: CRC, entradas no modificadas identicas, ASM de tres clases y pruebas con fixtures de colocacion servidor/jugador, exclusion de busqueda/bonus/mejora y seleccion cofre/barril. No ejecutado dentro de Minecraft.
