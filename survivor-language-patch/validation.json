@@ -1,0 +1,43 @@
+{
+  "input_sha256": "798a9b50858737e277846cd7bb7bed41b0fefada1bb5a064d972a4ea599f97fb",
+  "output_sha256": "ad8c10c4343863d2462ae53b27a40fd7c5e3419102a443857e689ec2d6e6a5b8",
+  "language_key_counts": {
+    "en_us.json": 446,
+    "es_es.json": 446,
+    "de_de.json": 446,
+    "es_ar.json": 446,
+    "es_cl.json": 446,
+    "es_ec.json": 446,
+    "es_mx.json": 446,
+    "es_uy.json": 446,
+    "es_ve.json": 446
+  },
+  "changed_entries": [
+    "assets/survivorcreator/lang/en_us.json",
+    "assets/survivorcreator/lang/es_es.json",
+    "dev/survivorcreator/Events.class",
+    "dev/survivorcreator/GraceProtection.class",
+    "dev/survivorcreator/client/ClientHooks.class",
+    "dev/survivorcreator/client/CreatorScreen.class",
+    "dev/survivorcreator/client/ProfileScreen.class",
+    "dev/survivorcreator/creation/CreationSummary.class",
+    "dev/survivorcreator/data/DataRegistry.class",
+    "dev/survivorcreator/hearing/DeathPanel.class",
+    "dev/survivorcreator/mixin/CombatSkillsPanelMixin.class",
+    "dev/survivorcreator/profiles/ProfileStore.class",
+    "dev/survivorcreator/skills/CombatSkillRules.class",
+    "dev/survivorcreator/skills/DamagePopups.class",
+    "dev/survivorcreator/skills/ScavengingEffect.class",
+    "dev/survivorcreator/skills/WorkBenefits.class",
+    "dev/survivorcreator/spawn/SpawnScreen.class",
+    "dev/survivorcreator/spawn/Spawns.class",
+    "dev/zomboid/autopsy/Autopsy.class",
+    "dev/zomboid/autopsy/Minimal.class"
+  ],
+  "minecraft_runtime_tested": false,
+  "language_and_preserved_mechanics_checks": 192,
+  "asm_verified_methods": 900,
+  "localized_literals": 64,
+  "localized_concat_templates": 17,
+  "localized_zone_lookups": 4
+}

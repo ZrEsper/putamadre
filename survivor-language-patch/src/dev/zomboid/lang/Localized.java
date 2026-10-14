@@ -1,0 +1,14 @@
+package dev.zomboid.lang;
+import java.util.*;import java.io.*;import java.nio.charset.StandardCharsets;import net.minecraft.locale.Language;import net.minecraft.network.chat.Component;import net.minecraft.network.chat.MutableComponent;import java.util.regex.*;
+public final class Localized {
+ static final Map<String,String> keys=load();
+ static Map<String,String> load(){Map<String,String> map=new HashMap<>();try(InputStream in=Localized.class.getResourceAsStream("/assets/survivorcreator/localized-map.tsv")){if(in==null)throw new IOException("Missing localization map");for(String line:new String(in.readAllBytes(),StandardCharsets.UTF_8).split("\n")){if(line.isEmpty())continue;String[] parts=line.split("\t",2);map.put(new String(Base64.getDecoder().decode(parts[0]),StandardCharsets.UTF_8),parts[1]);}}catch(IOException e){throw new IllegalStateException(e);}return Map.copyOf(map);}
+ public static String text(String source,String key){return Language.getInstance().getOrDefault(key,source);}
+ public static String raw(String source){String key=keys.get(source);return key==null?source:text(source,key);}
+ record Template(String key,String fallback,Pattern pattern,int count){}
+ static final List<Template> templates=templates();
+ static List<Template> templates(){List<Template> result=new ArrayList<>();for(var entry:keys.entrySet()){String recipe=entry.getKey();if(recipe.indexOf('\u0001')<0)continue;String[]pieces=recipe.split("\u0001",-1);StringBuilder pattern=new StringBuilder("^");for(int i=0;i<pieces.length;i++){if(i>0)pattern.append("(.*?)");pattern.append(Pattern.quote(pieces[i]));}pattern.append("$");result.add(new Template(entry.getValue(),recipe.replace("%","%%").replace("\u0001","%s"),Pattern.compile(pattern.toString(),Pattern.DOTALL),pieces.length-1));}return List.copyOf(result);}
+ public static MutableComponent component(String source){String key=keys.get(source);if(key!=null)return Component.translatableWithFallback(key,source);for(Template template:templates){Matcher match=template.pattern.matcher(source);if(!match.matches())continue;Object[]args=new Object[template.count];for(int i=0;i<args.length;i++)args[i]=match.group(i+1);return Component.translatableWithFallback(template.key,template.fallback,args);}return Component.literal(source);}
+
+ public static String concat(String key,String fallback,Object[]args){for(int i=0;i<args.length;i++)if(args[i] instanceof String text)args[i]=raw(text);if(key.equals("survivorcreator.localized.injury_count")&&args.length==4&&!args[2].toString().isEmpty()){String suffix=Language.getInstance().getOrDefault("survivorcreator.localized.plural_suffix","es");args[2]=suffix.equals("es")?"":suffix;key="survivorcreator.localized.injury_count_plural";}return String.format(Locale.ROOT,Language.getInstance().getOrDefault(key,fallback),args);}
+}
