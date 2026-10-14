@@ -1,0 +1,114 @@
+CONTROLES DEL VEHICULO	VEHICLE CONTROLS	FAHRZEUGSTEUERUNG
+MECANICA DEL VEHICULO	VEHICLE MECHANICS	FAHRZEUGMECHANIK
+MECANICA · AVION	AIRCRAFT MECHANICS	FLUGZEUGMECHANIK
+MECANICA · EMBARCACION	BOAT MECHANICS	BOOTSMECHANIK
+MECANICA · HELICOPTERO	HELICOPTER MECHANICS	HUBSCHRAUBERMECHANIK
+MECANICA · MOTO	MOTORCYCLE MECHANICS	MOTORRADMECHANIK
+PIEZAS INSTALADAS	INSTALLED PARTS	EINGEBAUTE TEILE
+< Anterior	< Previous	< Zurück
+Siguiente >	Next >	Weiter >
+Abrir / cerrar	Open / close	Öffnen / schließen
+Abrir / cerrar capo	Open / close hood	Motorhaube öffnen / schließen
+Abrir / cerrar puertas	Open / close doors	Türen öffnen / schließen
+Abrir / interactuar	Open / interact	Öffnen / interagieren
+Abrir almacenamiento: 54 espacios	Open storage: 54 slots	Stauraum öffnen: 54 Plätze
+Abrir maletera	Open trunk	Kofferraum öffnen
+Almacenamiento del vehiculo	Vehicle storage	Fahrzeugstauraum
+Apaga todos los motores y detente para reparar.	Stop and turn off all engines before repairing.	Zum Reparieren anhalten und alle Motoren ausschalten.
+Asiento / timon	Seat / steering wheel	Sitz / Lenkrad
+Asiento conductor	Driver seat	Fahrersitz
+Bateria (carga)	Battery (charge)	Batterie (Ladung)
+Bateria: %.0f%%	Battery: %.0f%%	Batterie: %.0f%%
+Bloquear / desbloquear	Lock / unlock	Verriegeln / entriegeln
+Buscando 0% - Revisando motor	Checking 0% - Inspecting engine	Prüfung 0% - Motor wird überprüft
+COMBUSTIBLE %.0f%%	FUEL %.0f%%	KRAFTSTOFF %.0f%%
+Caja AUTO · Cambiar a manual	AUTO transmission · Switch to manual	AUTOMATIK · Zu manuell wechseln
+Caja MANUAL · Cambiar a auto	MANUAL transmission · Switch to auto	MANUELL · Zu Automatik wechseln
+Cambiar caja: manual / automatica	Switch transmission: manual / automatic	Getriebe wechseln: manuell / automatisch
+Carroceria: %.0f%%     Combustible: %.0f%%	Body: %.0f%%     Fuel: %.0f%%	Karosserie: %.0f%%     Kraftstoff: %.0f%%
+Controles originales	Original controls	Originalsteuerung
+Cristal trasero	Rear window	Heckscheibe
+Defensa delantera	Front bumper	Vordere Stoßstange
+Defensa trasera	Rear bumper	Hintere Stoßstange
+ESC para cerrar.	ESC to close.	ESC zum Schließen.
+ESPACIO derrape | V luces | H controles	SPACE skid | V lights | H controls	LEERTASTE driften | V Licht | H Steuerung
+Esta pieza no tiene punto de reparacion accesible.	This part has no accessible repair point.	Dieses Teil hat keinen zugänglichen Reparaturpunkt.
+Estado %.0f%% | Combustible %.0f%% | Bat %.0f%%	Condition %.0f%% | Fuel %.0f%% | Battery %.0f%%	Zustand %.0f%% | Kraftstoff %.0f%% | Batterie %.0f%%
+Estado del coche	Vehicle condition	Fahrzeugzustand
+Estado general: %.0f%%	Overall condition: %.0f%%	Gesamtzustand: %.0f%%
+Estado: %.0f%%	Condition: %.0f%%	Zustand: %.0f%%
+Interactuar con puerta o pieza | Kit: reparar carroceria	Interact with door or part | Kit: repair body	Tür oder Teil bedienen | Kit: Karosserie reparieren
+Izq + / der - | ESPACIO derrape | V luces | H	Left + / right - | SPACE skid | V lights | H	Links + / rechts - | LEERTASTE driften | V Licht | H
+Kit compatible en mano	Compatible kit in hand	Passendes Kit in der Hand
+Kit de carroceria: clic derecho en el coche.	Body repair kit: right-click the vehicle.	Karosserie-Reparaturkit: Rechtsklick auf das Fahrzeug.
+Luneta trasera	Rear window	Heckscheibe
+Mano vacia: revisar 1.5 s / Mecanica	Empty hand: inspect 1.5 s / Mechanics	Leere Hand: 1,5 s prüfen / Mechanik
+Mano vacia: revisar 1.5 s / Mecanica | Kit: reparar	Empty hand: inspect 1.5 s / Mechanics | Kit: repair	Leere Hand: 1,5 s prüfen / Mechanik | Kit: reparieren
+Mecanica +%.1f XP	Mechanics +%.1f XP	Mechanik +%.1f EP
+Motor %d: %s    Estado %.0f%%	Engine %d: %s    Condition %.0f%%	Motor %d: %s    Zustand %.0f%%
+Motor / capo	Engine / hood	Motor / Motorhaube
+Motor apagado	Engine off	Motor aus
+Motor en buen estado.	Engine in good condition.	Motor in gutem Zustand.
+Motor revisado	Engine inspected	Motor geprüft
+Motor y controles originales	Engine and original controls	Motor und Originalsteuerung
+Necesita mantenimiento: kit de motor + clic derecho.	Maintenance needed: engine kit + right-click.	Wartung nötig: Motor-Kit + Rechtsklick.
+No hay motor instalado.	No engine installed.	Kein Motor eingebaut.
+No instalado	Not installed	Nicht eingebaut
+Pasa el raton por las piezas	Hover over the parts	Maus über die Teile bewegen
+Patin de aterrizaje	Landing skid	Landekufe
+Pieza ausente: debes instalarla.	Missing part: install it first.	Teil fehlt: zuerst einbauen.
+Pieza auxiliar	Auxiliary part	Zusatzteil
+Puerta del vehiculo	Vehicle door	Fahrzeugtür
+Puerta derecha	Right door	Rechte Tür
+Puerta izquierda	Left door	Linke Tür
+Puertas derechas	Right doors	Rechte Türen
+Puertas izquierdas	Left doors	Linke Türen
+RPM %.0f    Temperatura %.0f C	RPM %.0f    Temperature %.0f C	Drehzahl %.0f    Temperatur %.0f C
+Aceite %.1f    Desgaste %.1f h	Oil %.1f    Wear %.1f h	Öl %.1f    Verschleiß %.1f h
+Reparar con el motor apagado y el coche detenido.	Repair with engine off and vehicle stopped.	Mit ausgeschaltetem Motor im Stand reparieren.
+Reparar pieza	Repair part	Teil reparieren
+Reparar: motor apagado + kit.	Repair: engine off + kit.	Reparieren: Motor aus + Kit.
+Revisar no consume objetos.	Inspection does not consume items.	Die Prüfung verbraucht keine Gegenstände.
+Revision cancelada	Inspection cancelled	Prüfung abgebrochen
+Rotor / helice	Rotor / propeller	Rotor / Propeller
+Rueda de aterrizaje	Landing wheel	Fahrwerksrad
+Rueda del. der.	Front right wheel	Rad vorne rechts
+Rueda del. izq.	Front left wheel	Rad vorne links
+Rueda delantera derecha	Front right wheel	Rad vorne rechts
+Rueda delantera izquierda	Front left wheel	Rad vorne links
+Rueda tras. der.	Rear right wheel	Rad hinten rechts
+Rueda tras. izq.	Rear left wheel	Rad hinten links
+Rueda trasera derecha	Rear right wheel	Rad hinten rechts
+Rueda trasera izquierda	Rear left wheel	Rad hinten links
+Selecciona la pieza a reparar	Select the part to repair	Zu reparierendes Teil auswählen
+Selecciona un kit de reparacion compatible en la mano.	Hold a compatible repair kit.	Ein passendes Reparaturkit in der Hand halten.
+Selecciona una casilla vacia en la barra de objetos.	Select an empty hotbar slot.	Einen leeren Schnellleistenplatz auswählen.
+Sin deposito	No tank	Kein Tank
+Subir / bajar ventanas	Raise / lower windows	Fenster schließen / öffnen
+Subir como pasajero	Enter as passenger	Als Beifahrer einsteigen
+Subir y conducir	Enter and drive	Einsteigen und fahren
+Vacio ·	Empty ·	Leer ·
+Vehiculo detenido	Vehicle stopped	Fahrzeug steht
+Ventanas derechas	Right windows	Rechte Fenster
+Ventanas izquierdas	Left windows	Linke Fenster
+%.0f km/h  |  %.0f RPM  |  Combustible %.0f%%	%.0f km/h  |  %.0f RPM  |  Fuel %.0f%%	%.0f km/h  |  %.0f U/min  |  Kraftstoff %.0f%%
+%s %s | Motor %.0f%% | Bat %.0f%% | Vida %.0f%%	%s %s | Engine %.0f%% | Battery %.0f%% | Health %.0f%%	%s %s | Motor %.0f%% | Batterie %.0f%% | Zustand %.0f%%
+Motor	Engine	Motor
+Casco	Hull	Rumpf
+Bastidor	Frame	Rahmen
+Fuselaje	Fuselage	Rumpf
+Chasis	Chassis	Fahrgestell
+Helice	Propeller	Propeller
+Rueda	Wheel	Rad
+Bateria	Battery	Batterie
+Combustible	Fuel	Kraftstoff
+Carroceria	Body	Karosserie
+Estado	Condition	Zustand
+Cerrar	Close	Schließen
+Reparar	Repair	Reparieren
+Revisar	Inspect	Prüfen
+Bueno	Good	Gut
+Danado	Damaged	Beschädigt
+Roto	Broken	Defekt
+Buscando	Checking	Prüfung
+Motor de arranque	Starter motor	Anlasser

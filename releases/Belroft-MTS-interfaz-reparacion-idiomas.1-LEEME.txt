@@ -1,0 +1,14 @@
+BELROFT · INTERFAZ MTS Y TRADUCCIONES
+Reemplaza el Belroft workshop.2 por Belroft workshop.3 incluido.
+Para las traducciones de la interfaz de chequeo/reparacion, reemplaza Immersive Vehicles por mechanics.15 incluido (basado en mechanics.14 con compatibilidad de camara externa).
+Conserva tu MTS Official Pack workshop.5: contiene kits y piezas que Belroft utiliza.
+No mantengas dos versiones de Belroft ni dos versiones de Immersive Vehicles.
+
+30 vehiculos configurados con HUD del pack oficial. Texturas del HUD incluidas en Belroft.
+Camara interior nativa definida desde el asiento conductor. Las vistas externas/isometricas mantienen la compatibilidad de mechanics.14; no se fuerzan cambios de perspectiva.
+Chequeo, reparacion y mantenimiento utilizan la implementacion existente de MTS. No se duplican kits ni sistemas de daño.
+English y Deutsch: interfaz de taller traducida segun idioma de Minecraft; español conserva sus cadenas originales.
+456 entradas de nombres y descripciones del contenido: ingles conserva originales; aleman traduce nombres y usa descripciones funcionales breves. No se modifica el texto original del pack base.
+Al cambiar idioma, cierra y abre el menu de mecanica para actualizar sus etiquetas.
+
+Validacion: 30 clases verificadas con ASM, 114 cadenas comprobadas con formatos intactos, JSON y archivos JAR revisados. Sin prueba visual dentro de Minecraft.
