@@ -1,0 +1,21 @@
+{
+  "file": "tacznpcs-2.1.0-1.21.1-tactical.15-playerlike-test-npc.jar",
+  "sha256": "019c42b9fa85762056291690f679b1a9cc5b18552d0eaa759361c3ed8525b651",
+  "behavior_checks": 130,
+  "body_model_and_lifecycle_executed_with_API_doubles": true,
+  "minecraft_runtime_tested": false,
+  "modified_methods_verified": "ASM BasicVerifier",
+  "resources_unchanged": true,
+  "changed_classes": [
+    "mod/cdv/tnpc/entity/AutoGunOperator.class",
+    "mod/cdv/tnpc/TNPC.class",
+    "mod/cdv/tnpc/tactical/CalmBrain.class"
+  ],
+  "added_classes": [
+    "dev/zomboid/npcprobe/Commands.class",
+    "dev/zomboid/npcprobe/Events.class",
+    "dev/zomboid/npcprobe/Parts.class",
+    "dev/zomboid/npcprobe/Probe.class",
+    "dev/zomboid/npcprobe/R.class"
+  ]
+}

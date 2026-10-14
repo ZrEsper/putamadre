@@ -1,0 +1,1 @@
+package net.minecraft.core.registries;import net.minecraft.resources.ResourceLocation;public class BuiltInRegistries{public static final Registry ITEM=new Registry();public static class Registry{public ResourceLocation getKey(Object item){return ResourceLocation.parse(item.toString());}}}

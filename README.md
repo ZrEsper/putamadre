@@ -1,3 +1,7 @@
+# Actualización TacZ NPCs tactical.15: NPC de pruebas por partes
+
+[Descargar mod y guía](distribuciones/Zombies-Poldo-NPC-Pruebas-15.zip). `/npcprueba crear` crea un NPC de prueba con equipo copiado y ocho zonas de salud. Disparo/recarga TaCZ, melee nativo, derribo, curación dirigida y reanimación. [Uso y límites](npc-probe-patch/GUIA.md): es una adaptación Mob, no sustituye un jugador real para las APIs Player de First Aid. 130 comprobaciones con dobles de APIs aprobadas; pendiente de prueba en Minecraft.
+
 # Actualización Hordes .29: cooldowns, interiores y guía de loot
 
 [Paquete de los dos mods y guía fácil](distribuciones/Zombies-Poldo-Hordas-Melee-29.zip). Reemplaza Hordes .28 y Global Melee v12 en cliente y servidor. Cooldowns por ataque/familia sincronizados; spawn interior opcional en otro cuarto; categorías de loot corregidas y ayuda clara para todos los controles. [Guía completa](hordes-melee-interiors-patch/GUIA.md). 99 comprobaciones con dobles de APIs aprobadas; pendiente de prueba dentro de Minecraft.
