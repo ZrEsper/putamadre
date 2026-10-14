@@ -1,0 +1,14 @@
+ZOMBIES POLDO · INSTALADOR 1.2.2
+Extrae todo y abre Instalar.cmd. Requiere Java 21.
+Conserva tus carpetas componentes y pack; no incluye mods.
+Dependencias inferidas: avisos orientativos, no bloquean la copia. NeoForge valida al iniciar.
+Datapacks sin mundo: pendientes y no copiados. Sin Iris/Oculus: shaders omitidos.
+Duplicados primarios reales, archivos dañados y versiones de instancia incorrectas: bloquean.
+No se cuentan bibliotecas compartidas jarjar como duplicados primarios.
+Instalar-debug.cmd deja la consola abierta. Copiar diagnóstico, Guardar informe y Abrir logs disponibles.
+Probado en Java 21 con fixtures; arranque Windows pendiente de comprobar en tu equipo.
+
+MUNDOS: añade una carpeta que contenga level.dat, un ZIP del mundo o una carpeta saves con varios mundos. Se instalan en saves/NombreDelMundo.
+Para ZIP con level.dat en la raíz se usa el nombre del ZIP. Se conserva region, entities, dimensiones, playerdata y datapacks del mapa. session.lock se omite.
+Un mundo existente diferente con el mismo nombre bloquea la instalación: renombra la carpeta del mapa de entrada. No se fusionan partidas.
+Exportar instancia continúa omitiendo partidas por defecto; para compartir mundos, añádelos explícitamente como componentes y guarda el paquete.
