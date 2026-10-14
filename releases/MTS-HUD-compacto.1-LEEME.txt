@@ -1,0 +1,15 @@
+MTS · HUD COMPACTO DE AVIONES, HELICOPTEROS Y BOTES
+Reemplaza MTS Official Pack workshop.5 por workshop.6 incluido.
+Reemplaza Immersive Vehicles por mechanics.16 incluido. No mantengas dos versiones de cada mod.
+El parche del HUD necesita ambos JAR: datos/texturas en Official Pack y codigo de interfaz en Immersive Vehicles.
+Mantiene compatibilidad de camaras externas de mechanics.14 y traducciones de mechanics.15.
+
+HUD de 260x54 (unidades de GUI), texto a escala 0.7 y tres lineas:
+Velocidad km/h y RPM reales; hasta cuatro motores separados, con contador para adicionales.
+Combustible restante en porcentaje y litros/capacidad.
+Consumo total en L/min (suma de fuelFlow de los motores encendidos; misma conversion usada por MTS).
+Desaparece el panel nativo grande en esas familias. Los coches mantienen su HUD anterior.
+Funciona para botes detectados por MTS, incluido Belroft; el pack oficial enviado no contiene botes propios.
+Los instrumentos fisicos de cabina, controles y fisica no se modifican.
+
+Verificado: 8 hooks del ciclo de HUD, deteccion de familias, calculos con multiples motores, motor apagado y ausencia de datos; archivos JAR y definiciones revisados. Sin prueba visual en Minecraft.
