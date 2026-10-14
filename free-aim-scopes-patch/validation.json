@@ -1,0 +1,49 @@
+{
+  "minecraft_runtime_tested": false,
+  "checks": "33 math/pose checks plus ASM BasicVerifier on changed methods, ZIP CRC and unchanged-resource checks",
+  "mods": [
+    {
+      "file": "dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.28-free-aim-scopes.jar",
+      "sha256": "1953a1d9cb4ff3e514b03132a986cf578f94b516cc80379fd60bf9b5b114301b",
+      "changed_classes": [
+        "com/cleannrooster/dungeons_iso/api/Ortho.class",
+        "com/cleannrooster/dungeons_iso/config/Config.class",
+        "com/cleannrooster/dungeons_iso/mixin/MinecraftClientMixin.class",
+        "dev/zomboid/isotacz/Bridge.class"
+      ],
+      "added_classes": [
+        "dev/zomboid/isotacz/FreeAim.class",
+        "dev/zomboid/isotacz/ScopeView.class"
+      ]
+    },
+    {
+      "file": "tp_shooting-neoforge-1.21.1-tacz1.1.8-ssr5-6.0.1-free-aim-scopes.2.jar",
+      "sha256": "d6cdf38c98d9bdbe2c74938da5e5ff6e31cdd2689cf3c94bdf0430a823a0bc56",
+      "changed_classes": [
+        "mod/chloeprime/thirdpersonshooting/client/eventhandler/ClientGunFireEvent.class",
+        "mod/chloeprime/thirdpersonshooting/client/TpsSsPlugin.class",
+        "mod/chloeprime/thirdpersonshooting/mixin/client/bugfix/FixIncompatibleClassChangeInCameraSetupEvent.class",
+        "mod/chloeprime/thirdpersonshooting/mixin/client/MixinTacAimingHandler$MixinFovEvent.class",
+        "mod/chloeprime/thirdpersonshooting/mixin/client/MixinTacAimingHandler.class"
+      ],
+      "added_classes": [
+        "mod/chloeprime/thirdpersonshooting/client/FreeCamera.class"
+      ]
+    },
+    {
+      "file": "tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.13-free-aim-scopes.jar",
+      "sha256": "fcd37a6724b80c67c1b4c73fe3c440c8df0f76bdad6339092f7dc37545452bd2",
+      "changed_classes": [
+        "dev/zomboid/tacz/ScopeZoom.class",
+        "dev/zomboid/taczfeedback/FeedbackClient.class",
+        "dev/zomboid/taczfeedback/FeedbackMath.class",
+        "dev/zomboid/taczfeedback/ThirdPersonAimClient.class",
+        "dev/zomboid/taczfeedback/mixin/IsoGunCameraMixin.class"
+      ],
+      "added_classes": [
+        "dev/zomboid/tacz/ShotPose.class",
+        "dev/zomboid/taczfeedback/GlareRules.class"
+      ]
+    }
+  ]
+}

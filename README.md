@@ -1,3 +1,7 @@
+# Actualización: apuntado manual y scopes
+
+[Descarga e instrucciones de los tres mods](free-aim-scopes-patch/README.md). Retira sus versiones anteriores antes de instalar los nuevos JAR de `mods/`. Zoom óptico según la mira equipada, destello de sniper reforzado para otros jugadores y correcciones de asistencia/rotación al disparar. 33 comprobaciones de lógica e integridad aprobadas; pendiente de prueba visual dentro de Minecraft.
+
 # Mods de Zomboid
 
 ## Armas y melees: clic derecho para interactuar

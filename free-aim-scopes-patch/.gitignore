@@ -1,0 +1,5 @@
+/build/
+/output/
+__pycache__/
+base/tacz-*.jar
+base/dungeons_iso-*.jar
