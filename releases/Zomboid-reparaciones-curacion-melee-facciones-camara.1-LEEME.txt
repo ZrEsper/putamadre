@@ -1,0 +1,75 @@
+ZOMBIES POLDO — Curación, interacción, cámara y facciones
+Minecraft 1.21.1 / NeoForge. Paquete basado en los seis JAR exactos adjuntados.
+
+INSTALACIÓN
+Cierra Minecraft. Sustituye los JAR anteriores de First Aid, TaCZ, Third Person Shooting,
+LesRaisins Tactical Equipements, Global Melee Animations y Faction Friction por los seis
+JAR de la carpeta mods de este ZIP. No conserves dos versiones del mismo mod.
+En multijugador, First Aid, LesRaisins, Global Melee, TaCZ y Faction Friction deben
+actualizarse también en el servidor. Third Person Shooting es del cliente.
+Conserva tus otros mods, mundos y configuraciones.
+
+REVIVIR
+Clic derecho directamente sobre un jugador en estado crítico, sin necesitar un objeto.
+Se inicia la reanimación de 8 segundos: permanece a menos de 3 bloques.
+Los eventos de interacción general y específica tienen prioridad frente al menú médico.
+El cliente envía el clic real al servidor antes de bloquear la apertura del menú.
+Al terminar conserva la regeneración II durante 5 segundos y el reseteo de postura.
+El chequeo de heridas sigue disponible para jugadores conscientes.
+
+HERIDAS Y VENDAS
+La recuperación ya no deja de restaurar la salud de una parte cuando termina el temporizador
+de la herida. Vendajes limpios permiten curación externa y recuperación gradual completa.
+Cortes nuevos: 60 segundos de cierre; disparos nuevos, tras extraer la bala: 120 segundos.
+La salud pendiente sigue recuperándose después del cierre de la lesión.
+La venda tarda 6 minutos en ensuciarse en vez de 2, dando tiempo para recuperarse.
+Balas retenidas con recuperación bloqueada siguen requiriendo extracción.
+Amoxycillin de LesRaisins trata también la infección registrada en las heridas de First Aid.
+Esto no es una cura de la infección viral/zombificación de The Hordes.
+Puedes retirar las telas sucias, lavarlas y colocarlas de nuevo.
+Para lavar: tela sucia en mano, botella/bebida en la otra mano (o en el inventario), clic derecho.
+Acepta objetos que se beben y cubos de agua. Una dosis limpia una tela; se conserva el
+recipiente vacío cuando el objeto lo define, o botella/cubo de Minecraft cuando corresponde.
+También mantiene el lavado mediante agua del mundo o calderos.
+No lava con botellas vacías. Prioriza el líquido de la mano secundaria.
+
+MELEE Y BLOQUES
+Si apuntas a un bloque dentro de tu alcance, mantener clic izquierdo permite romperlo
+mediante la minería normal, sin atacar el aire en cada tick. Si apuntas a una entidad,
+se mantiene el ataque melee. Funciona también con la selección del ratón isométrica.
+No añade alcance, no ignora protección del servidor y no aumenta la velocidad de minería.
+Global Melee aporta la decisión y LesRaisins respeta ese modo en su entrada de ataques.
+
+CÁMARA
+Los cambios de jugador, F5, vehículo o modo isométrico limpian el estado de retroceso previo.
+Las animaciones de cámara del modelo en mano se reservan para primera persona a pie;
+no se aplican a las cámaras de tercera persona, isométrica o vehículo.
+El retroceso no gira directamente la cámara isométrica. En las otras vistas se conserva.
+Esto corrige esas rutas de interferencia; no demuestra que todas las posibles incompatibilidades
+con otros mods de cámara estén resueltas.
+
+ANTORCHAS
+Añade una receta independiente firstaid:restored_torches: carbón o carbón vegetal sobre
+un palo, produce 4 antorchas. Se desbloquea al entrar para funcionar también con crafteo limitado.
+El log no identifica qué pack bloqueó la receta original; esta es una restauración alternativa.
+
+FACCIONES Y OLEADAS
+El acceso al menú original de facciones abre una pantalla sencilla con seis opciones:
+mi facción, territorio, compañeros, depósito, oleadas PvE y opciones avanzadas.
+Las funciones y permisos originales permanecen detrás de esas opciones.
+Las oleadas buscan suelo real y espacio libre bajo techos; ya no exigen cielo abierto
+ni descartan todo por encontrar una altura mínima aislada del terreno.
+Solo leen chunks cargados y guardan resultados de búsqueda durante 5 segundos.
+Hasta 16 enemigos activos por oleada; los pendientes entran conforme se reducen los activos.
+Los enemigos de la oleada se identifican con un nombre no visible para evitar que la
+virtualización que excluye entidades nombradas los archive en medio de la defensa.
+Siguen siendo necesarios un clan con permisos, territorio reclamado y un nexo colocado.
+Se preservan las recompensas x3, el depósito de extracción parcial y los sonidos territoriales.
+
+VERIFICACIÓN
+Integridad de los seis ZIP/JAR y conservación de entradas no modificadas.
+Bytecode comprobado; pruebas de clases reales con fixtures para despacho de reanimación,
+regeneración, cierre de lesiones, restauración de salud completa, antibiótico, lavado con
+consumo/recipientes, elección entre melee/minería, suelo urbano y límite de oleadas,
+y reseteo de cámara al cambiar de vista/vehículo.
+No se ejecutó Minecraft con el modpack completo en este entorno.
