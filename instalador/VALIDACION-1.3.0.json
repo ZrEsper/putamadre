@@ -1,0 +1,10 @@
+{
+  "version": "1.3.0",
+  "functional_checks_passed": 34,
+  "powershell_syntax": "passed",
+  "java_probe": "passed on Linux",
+  "windows_execution": "not tested",
+  "minecraft_runtime": "not tested",
+  "modpack_included": false,
+  "distribution_sha256": "a44bdb9968421e076274adcba372e33a2d07f366f2d3f06fd3083ffb83c80d5d"
+}
