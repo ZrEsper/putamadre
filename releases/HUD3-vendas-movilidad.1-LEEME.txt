@@ -1,0 +1,16 @@
+HUD ESCALA 3 · VENDAS Y MOVILIDAD
+Reemplaza First Aid por 3.5.3 incluido y Survivor Creator por v30 incluido.
+First Aid: instalar en clientes y servidor. Survivor Creator: reemplazar donde ya lo utilizas.
+
+El HUD de salud/lesiones de First Aid, su contador de inconsciencia y el aviso XP de Survivor Creator mantienen el tamaño equivalente a GUI Scale 3.
+No fija la escala global de los menus ni modifica los HUD de otros mods. En pantallas pequeñas usa el limite mínimo de Minecraft.
+La penalizacion de movilidad por partes a cero se limita al 25 %. La lentitud de lesiones aplicada por First Aid se limita a nivel II mientras estás consciente. Fracturas e inconsciencia conservan sus penalizaciones específicas.
+
+Venda de First Aid: nombre visible Venda médica y nuevo icono táctico verde oliva (64x64), con Regeneracion I durante 10 segundos al completar la aplicación.
+Venda de LR Tactical/LesRaisin: nombre diferenciado Venda táctica en el tooltip y Regeneracion I + Absorcion I durante 10 segundos. Se integra mediante el puente opcional de First Aid para ids lrtactical:...bandage.
+Se conservan los dos IDs de objetos para mantener compatibilidad con partidas, recetas y loot. Su duplicidad visual se resuelve diferenciando nombres y beneficios. El JAR externo de LR Tactical no se modifica.
+El icono de inventario de First Aid se rediseña; la textura UV del modelo 3D y la de LR Tactical se mantienen.
+
+Reanimacion: clic derecho al jugador caido, sin objeto ni agacharte; permanecer cerca 8 segundos. Conserva el arreglo 3.5.2 de despertar y Regeneracion II durante 5 segundos.
+
+Verificado con fixtures: escalas 1–4, coordenadas virtuales, restauracion de matriz, 256 máscaras de lesiones, beneficios temporales y reanimacion real Assist. ASM y JAR revisados. No probado dentro de Minecraft ni con el JAR externo de LR Tactical.
