@@ -1,0 +1,25 @@
+{
+  "hordes": [
+    "data/zomboid_hordes/loot_table/profiles/accesorios.json",
+    "data/zomboid_hordes/loot_table/profiles/armas.json",
+    "data/zomboid_hordes/loot_table/profiles/comida.json",
+    "data/zomboid_hordes/loot_table/profiles/herramientas.json",
+    "data/zomboid_hordes/loot_table/profiles/materiales.json",
+    "data/zomboid_hordes/loot_table/profiles/medicinas.json",
+    "data/zomboid_hordes/loot_table/profiles/municion.json",
+    "data/zomboid_hordes/loot_table/profiles/ropa.json",
+    "dev/zomboid/hordes/AdminNetwork.class",
+    "dev/zomboid/hordes/ChunkPopulation.class",
+    "dev/zomboid/hordes/HordeEvents.class",
+    "dev/zomboid/hordes/WorldTuning.class",
+    "dev/zomboid/hordes/ZoneSettings.class",
+    "dev/zomboid/hordes/client/AdminScreen.class",
+    "dev/zomboid/hordes/client/ScrollSpeed.class"
+  ],
+  "melee": [
+    "dev/zomboidmelee/combat/PushClient.class",
+    "dev/zomboidmelee/combat/ShoveCombat.class",
+    "dev/zomboidmelee/mixin/MeleeTimingMixin.class",
+    "dev/zomboidmelee/mixin/VanillaCombatMixin.class"
+  ]
+}

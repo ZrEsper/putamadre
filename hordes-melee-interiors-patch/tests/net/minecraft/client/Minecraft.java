@@ -1,0 +1,1 @@
+package net.minecraft.client;public class Minecraft{public static final Minecraft INSTANCE=new Minecraft();public static Minecraft getInstance(){return INSTANCE;}public Object connection=new Object();public Object getConnection(){return connection;}}

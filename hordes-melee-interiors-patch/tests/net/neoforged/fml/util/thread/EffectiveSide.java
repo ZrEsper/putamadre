@@ -1,0 +1,1 @@
+package net.neoforged.fml.util.thread;public class EffectiveSide{public static final EffectiveSide INSTANCE=new EffectiveSide();public static EffectiveSide get(){return INSTANCE;}public static boolean server=true;public boolean isServer(){return server;}}

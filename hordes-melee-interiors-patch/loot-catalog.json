@@ -1,0 +1,7771 @@
+{
+  "moved": [
+    {
+      "item": "luckyswardrobe:entertainers_shoes",
+      "from": "herramientas",
+      "to": "ropa"
+    },
+    {
+      "item": "luckyswardrobe:swampy_shoes",
+      "from": "herramientas",
+      "to": "ropa"
+    },
+    {
+      "item": "minecraft:lead",
+      "from": "materiales",
+      "to": "herramientas"
+    },
+    {
+      "item": "okadditions:flashbang",
+      "from": "materiales",
+      "to": "armas"
+    },
+    {
+      "item": "okadditions:bola_iron",
+      "from": "materiales",
+      "to": "armas"
+    },
+    {
+      "item": "okadditions:binoculars",
+      "from": "materiales",
+      "to": "herramientas"
+    },
+    {
+      "item": "farmersdelight:beef_stew",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:tomato",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:cabbage",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:milk_bottle",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:tomato_sauce",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:rotten_tomato",
+      "from": "materiales",
+      "to": "armas"
+    },
+    {
+      "item": "okadditions:energy_drink",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "okadditions:mounted_light",
+      "from": "materiales",
+      "to": "herramientas"
+    },
+    {
+      "item": "lrtactical:consumable",
+      "from": "materiales",
+      "to": "medicinas"
+    },
+    {
+      "item": "lrtactical:consumable",
+      "from": "materiales",
+      "to": "medicinas"
+    },
+    {
+      "item": "lrtactical:consumable",
+      "from": "materiales",
+      "to": "medicinas"
+    },
+    {
+      "item": "lrtactical:consumable",
+      "from": "materiales",
+      "to": "medicinas"
+    },
+    {
+      "item": "lrtactical:consumable",
+      "from": "materiales",
+      "to": "medicinas"
+    },
+    {
+      "item": "lrtactical:consumable",
+      "from": "materiales",
+      "to": "medicinas"
+    },
+    {
+      "item": "lrtactical:consumable",
+      "from": "materiales",
+      "to": "medicinas"
+    },
+    {
+      "item": "lrtactical:consumable",
+      "from": "materiales",
+      "to": "medicinas"
+    },
+    {
+      "item": "lrtactical:consumable",
+      "from": "materiales",
+      "to": "medicinas"
+    },
+    {
+      "item": "farmersdelight:cod_slice",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:salmon_slice",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:kelp_roll",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:fish_stew",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:grilled_salmon",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "minecraft:oak_boat",
+      "from": "materiales",
+      "to": "herramientas"
+    },
+    {
+      "item": "minecraft:spruce_boat",
+      "from": "materiales",
+      "to": "herramientas"
+    },
+    {
+      "item": "minecraft:bamboo_raft",
+      "from": "materiales",
+      "to": "herramientas"
+    },
+    {
+      "item": "okadditions:ice_pack",
+      "from": "materiales",
+      "to": "medicinas"
+    },
+    {
+      "item": "okadditions:smelling_salts",
+      "from": "materiales",
+      "to": "medicinas"
+    },
+    {
+      "item": "minecraft:writable_book",
+      "from": "materiales",
+      "to": "herramientas"
+    },
+    {
+      "item": "minecraft:red_candle",
+      "from": "materiales",
+      "to": "herramientas"
+    },
+    {
+      "item": "farmersdelight:hamburger",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:honey_cookie",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:apple_pie",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:milk_bottle",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:tomato",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "lookinsharp:iron_cleaver",
+      "from": "materiales",
+      "to": "armas"
+    },
+    {
+      "item": "lookinsharp:wooden_cleaver",
+      "from": "materiales",
+      "to": "armas"
+    },
+    {
+      "item": "farmersdelight:hot_cocoa",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:sweet_berry_cookie",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:apple_cider",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "minecraft:map",
+      "from": "materiales",
+      "to": "herramientas"
+    },
+    {
+      "item": "minecraft:spyglass",
+      "from": "materiales",
+      "to": "herramientas"
+    },
+    {
+      "item": "minecraft:name_tag",
+      "from": "materiales",
+      "to": "herramientas"
+    },
+    {
+      "item": "minecraft:lantern",
+      "from": "materiales",
+      "to": "herramientas"
+    },
+    {
+      "item": "minecraft:ladder",
+      "from": "materiales",
+      "to": "herramientas"
+    },
+    {
+      "item": "lrtactical:throwable",
+      "from": "materiales",
+      "to": "armas"
+    },
+    {
+      "item": "lrtactical:throwable",
+      "from": "materiales",
+      "to": "armas"
+    },
+    {
+      "item": "lrtactical:throwable",
+      "from": "materiales",
+      "to": "armas"
+    },
+    {
+      "item": "lrtactical:throwable",
+      "from": "materiales",
+      "to": "armas"
+    },
+    {
+      "item": "lrtactical:throwable",
+      "from": "materiales",
+      "to": "armas"
+    },
+    {
+      "item": "lrtactical:flash_shield",
+      "from": "materiales",
+      "to": "ropa"
+    },
+    {
+      "item": "lrtactical:throwable",
+      "from": "materiales",
+      "to": "armas"
+    },
+    {
+      "item": "lrtactical:detonator",
+      "from": "materiales",
+      "to": "armas"
+    },
+    {
+      "item": "okadditions:crowbar",
+      "from": "materiales",
+      "to": "herramientas"
+    },
+    {
+      "item": "minecraft:torch",
+      "from": "materiales",
+      "to": "herramientas"
+    },
+    {
+      "item": "farmersdelight:chicken_cuts",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:minced_beef",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:bacon",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:ham",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:smoked_ham",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:mutton_chops",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "minecraft:egg",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:milk_bottle",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:cooked_bacon",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:cooked_chicken_cuts",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:cooked_cod_slice",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:cooked_salmon_slice",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "lrtactical:consumable",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "minecraft:campfire",
+      "from": "materiales",
+      "to": "herramientas"
+    },
+    {
+      "item": "farmersdelight:bacon_and_eggs",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:hamburger",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:roast_chicken",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:shepherds_pie",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:apple_pie",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:onion",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:raw_pasta",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:wheat_dough",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:minced_beef",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:bacon",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "minecraft:egg",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:honey_cookie",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:sweet_berry_cookie",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "minecraft:bowl",
+      "from": "materiales",
+      "to": "herramientas"
+    },
+    {
+      "item": "farmersdelight:skillet",
+      "from": "materiales",
+      "to": "armas"
+    },
+    {
+      "item": "minecraft:torch",
+      "from": "materiales",
+      "to": "herramientas"
+    },
+    {
+      "item": "minecraft:bowl",
+      "from": "materiales",
+      "to": "herramientas"
+    },
+    {
+      "item": "farmersdelight:honey_cookie",
+      "from": "materiales",
+      "to": "comida"
+    },
+    {
+      "item": "farmersdelight:sweet_berry_cookie",
+      "from": "materiales",
+      "to": "comida"
+    }
+  ],
+  "additions": [
+    [
+      "herramientas",
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:white_bed",
+        "weight": 1
+      }
+    ],
+    [
+      "herramientas",
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:stone_pickaxe",
+        "weight": 1
+      }
+    ]
+  ],
+  "entries_per_category": {
+    "armas": 70,
+    "medicinas": 22,
+    "comida": 84,
+    "herramientas": 35,
+    "ropa": 319,
+    "municion": 32,
+    "accesorios": 87,
+    "materiales": 128
+  },
+  "catalog": {
+    "armas": [
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:flint_knife",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:iron_knife",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:glock_17\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:m1911\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:cz75\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:p320\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:hk_mk23\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:m9a4\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:taurus943\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:m870\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:db_short\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:sks_tactical\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lookinsharp:stone_sword",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lookinsharp:iron_sword",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:melee",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{MeleeWeaponId:\"lrtactical:baseball_bat\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:melee",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{MeleeWeaponId:\"lrtactical:dagger\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:bow",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:melee",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{MeleeWeaponId:\"lrtactical:karambit\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:melee",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{MeleeWeaponId:\"lrtactical:baseball_bat\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:uzi\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:ump45\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:hk_mp5a5\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:vector45\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:m1014\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:ak47\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:m4a1\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:hk416d\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:scar_l\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:hk_g3\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:fn_fal\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:m700\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:kar98\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:mk14\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:deagle\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:aa12\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:spas_12\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:scar_h\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"tacz:p90\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"crystals:golden\",GunFireMode:\"SEMI\",GunCurrentAmmoCount:1}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"valorant:classic\",GunFireMode:\"SEMI\",GunCurrentAmmoCount:4}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"valorant:ghost\",GunFireMode:\"SEMI\",GunCurrentAmmoCount:4}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"valorant:judge\",GunFireMode:\"AUTO\",GunCurrentAmmoCount:2}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"valorant:odin\",GunFireMode:\"AUTO\",GunCurrentAmmoCount:33}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"valorant:operator\",GunFireMode:\"SEMI\",GunCurrentAmmoCount:1}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"valorant:outlaw\",GunFireMode:\"SEMI\",GunCurrentAmmoCount:1}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"valorant:phantom\",GunFireMode:\"AUTO\",GunCurrentAmmoCount:10}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"valorant:sheriff\",GunFireMode:\"SEMI\",GunCurrentAmmoCount:2}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:modern_kinetic_gun",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{GunId:\"valorant:vandal\",GunFireMode:\"AUTO\",GunCurrentAmmoCount:8}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:melee",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{MeleeWeaponId:\"wtyj:desire_blade\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:melee",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{MeleeWeaponId:\"wtyj:eternal_axe\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:melee",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{MeleeWeaponId:\"wtyj:eternal_karambit\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:melee",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{MeleeWeaponId:\"wtyj:future_butterfly\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:melee",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{MeleeWeaponId:\"wtyj:future_dagger\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:melee",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{MeleeWeaponId:\"wtyj:thunder_hammer\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:melee",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "MeleeWeaponId": "lrtactical:wooden_baseball_bat"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:melee",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "MeleeWeaponId": "lrtactical:fire_axe"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:melee",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "MeleeWeaponId": "lrtactical:hardened_katana"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "okadditions:flashbang",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "okadditions:bola_iron",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:rotten_tomato",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lookinsharp:iron_cleaver",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lookinsharp:wooden_cleaver",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:throwable",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{ThrowableId:\"lrtactical:m67\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:throwable",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{ThrowableId:\"lrtactical:molotov\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:throwable",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{ThrowableId:\"lrtactical:smoke_grenade\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:throwable",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{ThrowableId:\"lrtactical:flash_grenade\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:throwable",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{ThrowableId:\"lrtactical:rgn\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:throwable",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{ThrowableId:\"lrtactical:c4\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:detonator",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:skillet",
+        "weight": 1
+      }
+    ],
+    "medicinas": [
+      {
+        "type": "minecraft:item",
+        "name": "firstaid:bandage",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "firstaid:plaster",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "firstaid:cloth",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 6
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "firstaid:painkillers",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "firstaid:splint",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "firstaid:bandage",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "firstaid:plaster",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "firstaid:plant_fiber",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 6
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "firstaid:morphine_injector",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "firstaid:adrenaline_injector",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "firstaid:cloth",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:consumable",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{ConsumableId:\"lrtactical:ibuprofen\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:consumable",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{ConsumableId:\"lrtactical:vaseline\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:consumable",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{ConsumableId:\"lrtactical:ai2\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:consumable",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{ConsumableId:\"lrtactical:amoxycillin\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:consumable",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{ConsumableId:\"lrtactical:carfak\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:consumable",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{ConsumableId:\"lrtactical:blood_pack\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:consumable",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{ConsumableId:\"lrtactical:cms\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:consumable",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{ConsumableId:\"lrtactical:surv12\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:consumable",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{ConsumableId:\"lrtactical:goldenstar\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "okadditions:ice_pack",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "okadditions:smelling_salts",
+        "weight": 1
+      }
+    ],
+    "comida": [
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:potato",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 6
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:carrot",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 6
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:bacon_sandwich",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:chicken_sandwich",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:egg_sandwich",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:fried_rice",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:rice",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 8
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:cod",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 5
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:salmon",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 5
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:tropical_fish",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:pufferfish",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:dried_kelp",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 6
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:bacon_sandwich",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:chicken_sandwich",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:vegetable_soup",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:bread",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:apple",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:carrot",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:rotten_flesh",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:bread",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:apple",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:beef",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:porkchop",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:chicken",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:pumpkin_pie",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:cooked_beef",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:vegetable_soup",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:chicken_soup",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:noodle_soup",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:pasta_with_meatballs",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:steak_and_potatoes",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:potato",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 5
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:carrot",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 5
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:honey_bottle",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:apple",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:carrot",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:potato",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:beef_stew",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:tomato",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:cabbage",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:milk_bottle",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:tomato_sauce",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "okadditions:energy_drink",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:cod_slice",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:salmon_slice",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:kelp_roll",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:fish_stew",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:grilled_salmon",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:hamburger",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:honey_cookie",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:apple_pie",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:milk_bottle",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:tomato",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:hot_cocoa",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:sweet_berry_cookie",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:apple_cider",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:chicken_cuts",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:minced_beef",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:bacon",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:ham",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:smoked_ham",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:mutton_chops",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:egg",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 3,
+              "max": 8
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:milk_bottle",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:cooked_bacon",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:cooked_chicken_cuts",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:cooked_cod_slice",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:cooked_salmon_slice",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:consumable",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{ConsumableId:\"lrtactical:condensed_milk\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:bacon_and_eggs",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:hamburger",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:roast_chicken",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:shepherds_pie",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:apple_pie",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:onion",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:raw_pasta",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:wheat_dough",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:minced_beef",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:bacon",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:egg",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 6
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:honey_cookie",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:sweet_berry_cookie",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:honey_cookie",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "farmersdelight:sweet_berry_cookie",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      }
+    ],
+    "herramientas": [
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:iron_hoe",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_damage",
+            "damage": {
+              "type": "minecraft:uniform",
+              "min": 0.2,
+              "max": 0.85
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:clock",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:bucket",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:water_bucket",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:fishing_rod",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:iron_axe",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:iron_pickaxe",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_damage",
+            "damage": {
+              "type": "minecraft:uniform",
+              "min": 0.2,
+              "max": 0.85
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:iron_axe",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_damage",
+            "damage": {
+              "type": "minecraft:uniform",
+              "min": 0.2,
+              "max": 0.85
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:iron_shovel",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_damage",
+            "damage": {
+              "type": "minecraft:uniform",
+              "min": 0.2,
+              "max": 0.85
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:flint_and_steel",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:iron_shovel",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:compass",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:fishing_rod",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_damage",
+            "damage": {
+              "type": "minecraft:uniform",
+              "min": 0.2,
+              "max": 0.85
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:shears",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:lead",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "okadditions:binoculars",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "okadditions:mounted_light",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:oak_boat",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:spruce_boat",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:bamboo_raft",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:writable_book",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:red_candle",
+        "functions": [
+          {
+            "function": "minecraft:set_name",
+            "name": {
+              "text": "Bookmark",
+              "italic": false
+            }
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ],
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:map",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:spyglass",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:name_tag",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:lantern",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:ladder",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 8
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "okadditions:crowbar",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:torch",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 8
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:campfire",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:bowl",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:torch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:bowl",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:white_bed",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:stone_pickaxe",
+        "weight": 1
+      }
+    ],
+    "ropa": [
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:entertainers_shoes",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:swampy_shoes",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:iz_helmet_ops",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:iz_chestplate_ops",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:iz_leggings_ops",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:iz_boots_ops",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:iz_uniform_ops",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:iz_backpack_ops",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:iz_helmet_urban",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:iz_chestplate_urban",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:iz_leggings_urban",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:iz_boots_urban",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:iz_uniform_urban",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:iz_balaclava",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:nato_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:ru_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:soviet_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:soviet_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:soviet_uniform",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:autumn_gardener_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:autumn_gardener_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:autumn_gardener_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:work_apron_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:work_apron_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:police_2_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:police_2_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:police_2_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:police_2_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:police_armor_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:police_armor_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:police_armor_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:police_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:police_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:police_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:apocalypsise_survivor_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:apocalypsise_survivor_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:apocalypsise_survivor_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:apocalypsise_survivor_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:survivor_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:survivor_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:survivor_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:scarf",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:wool_vest",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:hat",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:fishing_apron",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:leather_apron",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:hardened_leather_apron",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:doctor_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:doctor_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:doctor_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:doctor_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:farmer_hat",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:explorers_hat",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:entertainers_shirt",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:entertainers_pants",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:snowy_coat",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:snowy_pants",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:snowy_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:taiga_coat",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:taiga_pants",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:taiga_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:desert_pants",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:jungle_pants",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:savanna_pants",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:swampy_pants",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "luckyswardrobe:top_hat",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:black_work_apron_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:black_work_apron_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:woodworker_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:woodworker_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "selfexpression:woodworker_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:balaclava_open_face",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:nvg_battery",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "fracturepoint:simple_nvg_goggles",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:armored_chemical_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:armored_chemical_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:armored_chemical_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:armored_chemical_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:attacker_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:attacker_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:attacker_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:attacker_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:defender_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:defender_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:defender_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:defender_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:medical_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:medical_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:medical_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:medical_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:scout_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:scout_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:scout_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:scout_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:sniper_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:sniper_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:sniper_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:sniper_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:atf_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:atf_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:atf_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:atf_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:atf_vest_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:atf_vest_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:atf_vest_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:atf_vest_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:dea_armed_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:dea_armed_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:dea_armed_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:dea_armed_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:dea_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:dea_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:dea_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:dea_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:fbi_armed_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:fbi_armed_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:fbi_armed_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:fbi_armed_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:fbi_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:fbi_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:fbi_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:fbi_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:irs_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:irs_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:irs_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:irs_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:chemical_protective_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:chemical_protective_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:chemical_protective_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:chemical_protective_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:joker_armed_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:joker_armed_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:joker_boots",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:joker_chestplate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:joker_helmet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrarmor:joker_leggings",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:base",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:us",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ukrainian",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:osprey",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ratnik",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:vietnamese_basic",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:defender",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ukrainian_mobilized",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:defender_iii",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:us_mobilized",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:nato",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:nato_ii",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:a_police",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:r_police",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:atleti",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:assault",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:pmc",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ratnik_mobilized",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:hazard_kit",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:us_veteran",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:swat_kit",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:sobr_kit",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:cqb_kit",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ukrainian_veteran",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:spn",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ratnik_veteran",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:horse",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:guard",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:tmspmg",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:berserk",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:vanderer",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:bydlovka",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:concord",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:taro",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:killa",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:saper",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ghost",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:base_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:us_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ukrainian_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:osprey_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:six_b_four_seven_dark_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:vietnamese_basic_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:zch_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:tshfour_green_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:cap_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:pakol_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ukrainian_mobilized_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:zabralo_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:us_mobilized_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:nato_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:a_police_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:r_police_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ratnik_mobilized_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:airframe_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:assault_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:pmc_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:tshfour_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:cossack_red_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:cossack_blue_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ratnik_veteran_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:hazard_kit_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:us_veteran_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ukrainian_veteran_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:swat_kit_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:sobr_kit_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:cqb_kit_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:gasmask_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:gasmask_alt_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:gpnvg_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:tmspmg_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:berserk_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:vanderer_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:bydlovka_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:concord_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:taro_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:killa_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:saper_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ghost_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:base_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:us_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:osprey_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ratnik_basic_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:defender_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ukrainian_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ukrainian_mobilized_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:defender_mobilized_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:us_mobilized_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:a_police_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:r_police_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ratnik_mobilized_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:generic_urban_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:generic_dark_tan_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ratnik_veteran_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:hazard_kit_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:us_veteran_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ukrainian_veteran_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:swat_kit_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:sobr_kit_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:cqb_kit_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:generic_brown_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:tmspmg_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:berserk_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:bydlovka_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:concord_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:taro_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:generic_light_tan_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ghost_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:base_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:us_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ukrainian_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:osprey_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ratnik_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:defender_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ukrainian_mobilized_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:defender_mobilized_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:us_mobilized_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:a_police_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:r_police_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ratnik_mobilized_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:generic_urban_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:generic_dark_tan_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ratnik_veteran_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:hazard_kit_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:us_veteran_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ukrainian_veteran_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:swat_kit_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:sobr_kit_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:cqb_kit_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:generic_brown_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:tmspmg_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:berserk_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:bydlovka_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:concord_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:taro_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ghost_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:generic_light_tan_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:civilian_medic",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:medic",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:civilian_medic_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:medic_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:civilian_medic_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:civilian_medic_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:civilian",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:civilian_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:civilian_kneepads_p",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:civilian_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:press",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:maid",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:press_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:maid_h",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:press_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:maid_b",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:new_york_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:american_flag_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:austrian_flag_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:battle_scarred_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:belgian_flag_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:belorussian_flag_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:british_flag_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:centurion_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:chinese_flag_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:covenant_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:crimson_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:crown_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:egyptian_flag_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:french_flag_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:italian_flag_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:german_flag_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:japanese_flag_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:kill_joy_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:omicron_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:operative_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:pakistani_flag_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:ukraine_flag_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:polish_flag_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:praetorian_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:russian_flag_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:stalwart_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:titan_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:titan_ii_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:urban_american_flag_patch",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "lrtactical:flash_shield",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "municion": [
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:9mm\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 8,
+              "max": 24
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:45acp\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 8,
+              "max": 20
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:357mag\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 6,
+              "max": 12
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:12g\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 4,
+              "max": 10
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:arrow",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 6,
+              "max": 16
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:9mm\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 8,
+              "max": 16
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:45acp\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 8,
+              "max": 16
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:9mm\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 12,
+              "max": 32
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:45acp\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 12,
+              "max": 28
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:357mag\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 6,
+              "max": 14
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:50ae\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 4,
+              "max": 8
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:12g\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 6,
+              "max": 14
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:556x45\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 15,
+              "max": 40
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:762x39\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 15,
+              "max": 35
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:308\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 10,
+              "max": 24
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:30_06\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 8,
+              "max": 16
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:57x28\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 10,
+              "max": 24
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:45acp\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 8,
+              "max": 24
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:762x39\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 8,
+              "max": 24
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:308\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 8,
+              "max": 24
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:556x45\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 8,
+              "max": 24
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:12g\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 6,
+              "max": 12
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"crystals:crystal_acp\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 8,
+              "max": 24
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:12g\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 8,
+              "max": 24
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:762x54\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 8,
+              "max": 24
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:338\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 8,
+              "max": 24
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"tacz:357mag\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 8,
+              "max": 24
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"crystals:crystal\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 4,
+              "max": 20
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"crystals:crystal_acp\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 4,
+              "max": 20
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"crystals:unstable_crystal\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 4,
+              "max": 20
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"valorant:wg100\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 4,
+              "max": 20
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:ammo",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AmmoId:\"valorant:wg50\"}"
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 4,
+              "max": 20
+            }
+          }
+        ]
+      }
+    ],
+    "accesorios": [
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:sight_t1\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:sight_rmr_dot\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:sight_okp7\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:grip_vertical_military\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:muzzle_compensator_trident\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:extended_mag_1\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:light_extended_mag_1\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:shotgun_extended_mag_1\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:oem_stock_light\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:laser_peq6\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:scope_acog_ta31\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:scope_hamr\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:scope_elcan_4x\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:scope_lpvo_1_6\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:muzzle_silencer_mirage\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:muzzle_brake_pioneer\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:extended_mag_2\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:extended_mag_3\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:grip_magpul_afg_2\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:stock_moe\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:stock_tactical_ar\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:laser_peq15\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"tacz:sight_exp3\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"crystals:crystal_mag\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"crystals:muzzle_crystal_muffler\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"valorant:scope_operator_default\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": "{AttachmentId:\"valorant:scope_outlaw_default\"}"
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_anchorage"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_angled3"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_bcm"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_bipod"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_bipod1"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_bipod2"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_bipod_aio"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_bojin1"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_cqr"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_cqr_g2"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_flat"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_minivert"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_phase"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_rk1_b25u"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_rk2"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_rk6"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_td"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_vert1"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_vert2"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_vert3"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_vert6"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:grip_vg1"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:laser_hs507c"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:muzzle_b_claun50"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:muzzle_b_estein290"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:muzzle_b_fjx"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:muzzle_b_komodo"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:muzzle_fr_coors2"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:muzzle_fr_kx30"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:muzzle_fr_wolf"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:muzzle_kraken"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:muzzle_pws"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:muzzle_s_c784"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:muzzle_s_fd197"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:muzzle_s_fss5"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:muzzle_s_gogol9"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:muzzle_s_gsx"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:muzzle_s_osprey"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:muzzle_s_widemouth"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:muzzle_s_z60"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:nsic_sight"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:scope_bojin1"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:scope_holosun"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:scope_karrina"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:scope_re"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:scope_strikefire2"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:sight_hco"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:sight_holosun_reddot"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:sight_olight_red_dot"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:sight_romeo1"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:stock_ar1"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:stock_ar2"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:stock_ar3"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:stock_bojin1"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:stock_heavy1"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:stock_heavy2"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:stock_light1"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:stock_light2"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:stock_light3"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "tacz:attachment",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_custom_data",
+            "tag": {
+              "AttachmentId": "gucci_attachments:stock_precise"
+            }
+          }
+        ]
+      }
+    ],
+    "materiales": [
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:wheat_seeds",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 3,
+              "max": 12
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:beetroot_seeds",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 8
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:bone_meal",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 8
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:coal",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:string",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:redstone",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 8
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:copper_ingot",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:comparator",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:repeater",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:iron_nugget",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 8
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:paper",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 4,
+              "max": 12
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:sponge",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:wet_sponge",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:white_wool",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:glass_bottle",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:moss_block",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:moss_carpet",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:small_dripleaf",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:short_grass",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:fern",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:moss_carpet",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:moss_block",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:small_dripleaf",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:short_grass",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:fern",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:string",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 6
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:cobweb",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:protection": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:sharpness": 5
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:smite": 5
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:bane_of_arthropods": 5
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:power": 5
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:unbreaking": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:efficiency": 5
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:feather_falling": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:respiration": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:aqua_affinity": 1
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:depth_strider": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:projectile_protection": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:fire_protection": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:blast_protection": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:looting": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:fortune": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:silk_touch": 1
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:thorns": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:frost_walker": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:infinity": 1
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:flame": 1
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:soul_speed": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:swift_sneak": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:lure": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:luck_of_the_sea": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:knockback": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:sweeping_edge": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:enchanted_book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_enchantments",
+            "enchantments": {
+              "minecraft:mending": 1
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:book",
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ],
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:cobweb",
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 4
+            }
+          }
+        ],
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 6
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:cobweb",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:cobweb",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:moss_carpet",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:bone",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:book",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:paper",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:feather",
+        "functions": [
+          {
+            "function": "minecraft:set_name",
+            "name": {
+              "text": "Quill",
+              "italic": false
+            }
+          }
+        ],
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:ink_sac",
+        "functions": [
+          {
+            "function": "minecraft:set_name",
+            "name": {
+              "text": "Ink Bottle",
+              "italic": false
+            }
+          }
+        ],
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:tripwire_hook",
+        "functions": [
+          {
+            "function": "minecraft:set_name",
+            "name": {
+              "text": "Paperclip",
+              "italic": false
+            }
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 5
+            }
+          }
+        ],
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:iron_nugget",
+        "functions": [
+          {
+            "function": "minecraft:set_name",
+            "name": {
+              "text": "Thumbtack",
+              "italic": false
+            }
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 3,
+              "max": 6
+            }
+          }
+        ],
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:cobweb",
+        "functions": [
+          {
+            "function": "minecraft:set_name",
+            "name": {
+              "text": "Dust Bunny",
+              "italic": false
+            }
+          }
+        ],
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:paper",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 6
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:tripwire_hook",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_name",
+            "name": {
+              "text": "Paperclip",
+              "italic": false
+            }
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 6
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:iron_nugget",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_name",
+            "name": {
+              "text": "Thumbtack",
+              "italic": false
+            }
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 3,
+              "max": 8
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:ink_sac",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_name",
+            "name": {
+              "text": "Ink Bottle",
+              "italic": false
+            }
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:feather",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_name",
+            "name": {
+              "text": "Quill",
+              "italic": false
+            }
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:string",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_name",
+            "name": {
+              "text": "Twine",
+              "italic": false
+            }
+          },
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 6
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:moss_block",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 6
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:mossy_cobblestone",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 5
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:moss_carpet",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:short_grass",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:fern",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:small_dripleaf",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:vine",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 8
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:mossy_cobblestone",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:vine",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:moss_block",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:mossy_cobblestone",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:moss_carpet",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:vine",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:iron_ingot",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:copper_ingot",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 6
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:redstone",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 6
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:chain",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:iron_nugget",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 3,
+              "max": 12
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:string",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 8
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:leather",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "okadditions:iron_rod",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:leather",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:glass_bottle",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:string",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 5
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:stick",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 6
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:charcoal",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 6
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:cobweb",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:ice",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:packed_ice",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:snowball",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:snow",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:snowball",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 6
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:snow",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:ice",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:packed_ice",
+        "weight": 1,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:book",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:feather",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:ink_sac",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:string",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:iron_nugget",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:leather",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:chain",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:redstone",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:copper_ingot",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:coal",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:amethyst_shard",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:wheat_seeds",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:beetroot_seeds",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:bone_meal",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:flower_pot",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:iron_plate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:diamond_plate",
+        "weight": 1
+      },
+      {
+        "type": "minecraft:item",
+        "name": "brimm:nether_plate",
+        "weight": 1
+      }
+    ]
+  }
+}

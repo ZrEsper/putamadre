@@ -1,3 +1,7 @@
+# Actualización Hordes .29: cooldowns, interiores y guía de loot
+
+[Paquete de los dos mods y guía fácil](distribuciones/Zombies-Poldo-Hordas-Melee-29.zip). Reemplaza Hordes .28 y Global Melee v12 en cliente y servidor. Cooldowns por ataque/familia sincronizados; spawn interior opcional en otro cuarto; categorías de loot corregidas y ayuda clara para todos los controles. [Guía completa](hordes-melee-interiors-patch/GUIA.md). 99 comprobaciones con dobles de APIs aprobadas; pendiente de prueba dentro de Minecraft.
+
 # Actualización Hordes .28: spawn e IA
 
 [Descargar Hordes .28](mods/zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.28-spawn-personality-pool.jar). Dos pestañas nuevas en `/zhorda panel`: mezcla normalizada de tontos/brutos/astutos; reacción, agresividad y oído; velocidad y daño por personalidad. Presets Fácil/Equilibrado/Difícil. Reemplazar el mod anterior en cliente y servidor. [Instrucciones y validación](hordes-spawn-pool-patch/README.md). 88 comprobaciones aprobadas con dobles de APIs; pendiente de prueba dentro de Minecraft.

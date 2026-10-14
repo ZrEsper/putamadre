@@ -1,0 +1,52 @@
+{
+  "minecraft_runtime_tested": false,
+  "behavior_checks_with_API_doubles": 99,
+  "methods_verified": "ASM BasicVerifier",
+  "mods": [
+    {
+      "file": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.29-melee-indoor-loot-guide.jar",
+      "sha256": "eff9583dbd0fd570f9ac5b5c906d84a828c1004ecd43436a9db20d06ea74996a",
+      "changed_entries": [
+        "data/zomboid_hordes/loot_table/profiles/accesorios.json",
+        "data/zomboid_hordes/loot_table/profiles/armas.json",
+        "data/zomboid_hordes/loot_table/profiles/comida.json",
+        "data/zomboid_hordes/loot_table/profiles/herramientas.json",
+        "data/zomboid_hordes/loot_table/profiles/materiales.json",
+        "data/zomboid_hordes/loot_table/profiles/medicinas.json",
+        "data/zomboid_hordes/loot_table/profiles/municion.json",
+        "data/zomboid_hordes/loot_table/profiles/ropa.json",
+        "dev/zomboid/hordes/AdminNetwork.class",
+        "dev/zomboid/hordes/ChunkPopulation.class",
+        "dev/zomboid/hordes/HordeEvents.class",
+        "dev/zomboid/hordes/WorldTuning.class",
+        "dev/zomboid/hordes/ZoneSettings.class",
+        "dev/zomboid/hordes/client/AdminScreen.class",
+        "dev/zomboid/hordes/client/ScrollSpeed.class"
+      ],
+      "added_classes": [
+        "dev/zomboid/hordes/CombatPanel.class",
+        "dev/zomboid/hordes/CombatSync.class",
+        "dev/zomboid/hordes/IndoorGraph$Cell.class",
+        "dev/zomboid/hordes/IndoorGraph$Grid.class",
+        "dev/zomboid/hordes/IndoorGraph.class",
+        "dev/zomboid/hordes/IndoorSpawn$Cached.class",
+        "dev/zomboid/hordes/IndoorSpawn$WorldGrid.class",
+        "dev/zomboid/hordes/IndoorSpawn.class",
+        "dev/zomboid/hordes/PanelHelp.class"
+      ]
+    },
+    {
+      "file": "zomboid-global-melee-animations-2.3.1-range-plus-one-ezweight-v13-panel-cooldowns.jar",
+      "sha256": "e42ff019fb1e1a4a3f4efef26169bd81a37fc01c4a930fae74c4b1f831251696",
+      "changed_entries": [
+        "dev/zomboidmelee/combat/PushClient.class",
+        "dev/zomboidmelee/combat/ShoveCombat.class",
+        "dev/zomboidmelee/mixin/MeleeTimingMixin.class",
+        "dev/zomboidmelee/mixin/VanillaCombatMixin.class"
+      ],
+      "added_classes": [
+        "dev/zomboidmelee/combat/PanelCooldown.class"
+      ]
+    }
+  ]
+}
