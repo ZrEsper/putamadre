@@ -1,0 +1,7 @@
+XAERO · SIN RADAR DE ENTIDADES
+Reemplaza ambos JAR de Xaero por los incluidos, solo en el cliente. Reinicia Minecraft.
+Oculta radar de zombis, animales, objetos y otros jugadores en el minimapa y mapa completo. Se omite la actualizacion de listas de radar y el dibujo de iconos/puntos. El minimapa se dibuja encima de la capa de efectos del jugador.
+Conserva terreno, exploracion, waypoints normales y la eliminacion previa de marcadores de muerte. La posicion propia en el mapa se conserva.
+Desactivacion fija en estos JAR, incluso si la configuracion anterior tenia radar activado.
+No elimina ni cambia entidades del mundo. No modifica archivos del mapa guardado.
+Comprobados bytecode e integridad; falta probar dentro de Minecraft. La mejora de FPS depende de la parte de carga que correspondia al radar.
