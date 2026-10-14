@@ -1,0 +1,16 @@
+{
+  "version": "1.3.3",
+  "functional_checks_passed": 46,
+  "archive_checks_passed": 27,
+  "datapack_paxi_destination": "config/paxi/datapacks",
+  "world_selection_required": false,
+  "install_progress": [
+    "Preparation and backup",
+    "Current file installation",
+    "Final hash verification"
+  ],
+  "windows_execution": "not tested",
+  "minecraft_runtime": "not tested",
+  "update_sha256": "7c8c27a0890c1050a3daee6980480b4b8ae8796650345501ef6f9a569ba4978d",
+  "shaderpacks_copied_without_loader": true
+}
