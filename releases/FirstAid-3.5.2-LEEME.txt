@@ -1,0 +1,8 @@
+FIRST AID 3.5.2 · REANIMACION CON CLIC DERECHO
+Reemplaza First Aid 3.5.1 por el JAR 3.5.2. Instalar en servidor y clientes.
+Haz clic derecho sobre un jugador caido: sin vendas, sin objetos y sin agacharte. Permanece a menos de 3 bloques durante 8 segundos. La barra real se muestra en el texto del servidor.
+Se elimina la barra fantasma del cliente que avanzaba al agacharse.
+El clic del cliente deja pasar el paquete al servidor; antes se cancelaba prematuramente.
+Al completar se limpia la inconsciencia y la postura forzada, se resincroniza el modelo y se aplica Regeneracion II durante 5 segundos.
+Se conserva el sistema existente de autoreanimacion con desfibrilador.
+Verificado con ASM y fixtures ejecutando Assist real; no probado dentro de Minecraft.
