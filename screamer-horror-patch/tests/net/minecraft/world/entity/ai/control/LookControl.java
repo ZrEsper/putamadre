@@ -1,0 +1,1 @@
+package net.minecraft.world.entity.ai.control;import net.minecraft.world.entity.Entity;public class LookControl{public void setLookAt(Entity e,float a,float b){}}

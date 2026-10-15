@@ -1,0 +1,1 @@
+package ichttt.mods.firstaid.common.util;import net.minecraft.world.item.ItemStack;import net.minecraft.world.entity.EquipmentSlot;public class ArmorUtils{public static double getArmor(ItemStack s,EquipmentSlot slot){return s.armor;}}

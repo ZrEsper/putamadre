@@ -1,0 +1,41 @@
+{
+  "input_sha256": "dbf15dcdf087ecc793b2586fac87bf5e1027018a3633066e1ec4869a7bf0b1b3",
+  "original_audio_sha256": "cf7e4f36dd14c0f1f8a7b94936a173e406bfc68ff2310d939dd7a694c5f767bb",
+  "output": "mutants-l4d2-addon-1.4.0-neoforge-1.21.1-screamer-horror.1.jar",
+  "output_sha256": "c5d20931e2cb975fa30c89b1e6f8d5da55ea847cc693d0cd588247fd2d45bcba",
+  "changed": [
+    "assets/mutants_l4d2/lang/de_de.json",
+    "assets/mutants_l4d2/lang/en_us.json",
+    "assets/mutants_l4d2/lang/es_es.json",
+    "dev/zomboid/mutants/MutantAddon.class",
+    "dev/zomboid/mutants/Screamers$Screamer.class",
+    "dev/zomboid/mutants/Screamers.class",
+    "dev/zomboid/mutants/client/ScreamerClient$Model.class"
+  ],
+  "added": [
+    "assets/mutants_l4d2/models/item/screamer_spawn_egg.json",
+    "assets/mutants_l4d2/sounds.json",
+    "assets/mutants_l4d2/sounds/screamer_detect.ogg",
+    "dev/zomboid/mutants/horror/CreativeEgg.class",
+    "dev/zomboid/mutants/horror/Horror.class",
+    "dev/zomboid/mutants/horror/R$1.class",
+    "dev/zomboid/mutants/horror/R$Cache.class",
+    "dev/zomboid/mutants/horror/R$Resolved.class",
+    "dev/zomboid/mutants/horror/R.class"
+  ],
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "vorbis",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "10.100680"
+    }
+  },
+  "minecraft_runtime_tested": false,
+  "behavior_checks": "HORROR_CHECKS=18020"
+}

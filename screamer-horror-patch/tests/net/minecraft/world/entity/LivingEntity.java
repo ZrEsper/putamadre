@@ -1,0 +1,1 @@
+package net.minecraft.world.entity;import net.minecraft.world.level.Level;public class LivingEntity extends Entity{public LivingEntity(Level l){super(l);}}

@@ -1,0 +1,1 @@
+package net.minecraft.world.entity.ai.navigation;import net.minecraft.world.entity.Entity;public class PathNavigation{public int moves,stops;public double speed;public boolean moveTo(Entity e,double s){moves++;speed=s;return true;}public void stop(){stops++;}}

@@ -1,0 +1,1 @@
+package net.minecraft.tags;public class DamageTypeTags{public static final Object BYPASSES_ARMOR=new Object();}

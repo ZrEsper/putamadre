@@ -1,0 +1,1 @@
+package net.minecraft.resources;public record ResourceLocation(String id){public static ResourceLocation parse(String s){return new ResourceLocation(s);}public String toString(){return id;}}

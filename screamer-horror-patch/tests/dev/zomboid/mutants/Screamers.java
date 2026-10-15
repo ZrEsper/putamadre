@@ -1,0 +1,1 @@
+package dev.zomboid.mutants;import net.neoforged.neoforge.registries.DeferredRegister;import net.minecraft.world.entity.EntityType;public class Screamers{public static Object TYPE=new DeferredRegister.Holder(()->new EntityType());}

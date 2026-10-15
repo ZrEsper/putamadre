@@ -1,3 +1,7 @@
+# Screamer horror y FirstAid 3.6.2
+
+[Descargar los dos reemplazos y guía](distribuciones/Zombies-Poldo-Screamer-Armadura-362.zip). Huevo del screamer, más velocidad, pose asimétrica y mandíbula abierta, audio del usuario al detectar al jugador y atracción de hordas. FirstAid: 8 puntos de armadura local equivalen nominalmente a 16 impactos totales de pistola; potencia, distancia y penetración conservan el daño efectivo de TaCZ. [Guía de instalación y límites](screamer-horror-patch/GUIA.md). Reemplaza el addon Mutants L4D2 1.4.0 y FirstAid 3.6.1 en clientes y servidor; conserva MutantsZombies base, Integration 1.7.8 y Hordes. 32.793 comprobaciones con APIs simuladas; pendiente de prueba dentro de Minecraft.
+
 # Corrección Integration 1.7.8: permite Mutants L4D2 1.4.0
 
 [Descargar Integration corregido](mods/zomboid-integration-1.7.8-neoforge-1.21.1-mutants-1.4-compat.jar). Reemplaza Integration 1.7.7 en clientes y servidor; conserva el addon Mutants L4D2 1.4.0. Corrige el rango de versiones que impedía cargar el juego. Código y recursos idénticos; verificadas cuatro llamadas al addon, dos destinos de mixin y tres miembros Shadow. [Diagnóstico e instalación](integration-mutants140-fix/README.md). Pendiente confirmar arranque dentro de Minecraft.

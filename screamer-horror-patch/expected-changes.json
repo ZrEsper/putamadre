@@ -1,0 +1,22 @@
+{
+  "changed": [
+    "assets/mutants_l4d2/lang/de_de.json",
+    "assets/mutants_l4d2/lang/en_us.json",
+    "assets/mutants_l4d2/lang/es_es.json",
+    "dev/zomboid/mutants/MutantAddon.class",
+    "dev/zomboid/mutants/Screamers$Screamer.class",
+    "dev/zomboid/mutants/Screamers.class",
+    "dev/zomboid/mutants/client/ScreamerClient$Model.class"
+  ],
+  "added": [
+    "assets/mutants_l4d2/models/item/screamer_spawn_egg.json",
+    "assets/mutants_l4d2/sounds.json",
+    "assets/mutants_l4d2/sounds/screamer_detect.ogg",
+    "dev/zomboid/mutants/horror/CreativeEgg.class",
+    "dev/zomboid/mutants/horror/Horror.class",
+    "dev/zomboid/mutants/horror/R$1.class",
+    "dev/zomboid/mutants/horror/R$Cache.class",
+    "dev/zomboid/mutants/horror/R$Resolved.class",
+    "dev/zomboid/mutants/horror/R.class"
+  ]
+}

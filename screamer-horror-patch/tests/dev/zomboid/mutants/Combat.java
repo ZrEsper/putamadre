@@ -1,0 +1,1 @@
+package dev.zomboid.mutants;import net.minecraft.world.entity.LivingEntity;public class Combat{public static boolean valid(LivingEntity e){return e!=null&&e.isAlive();}}

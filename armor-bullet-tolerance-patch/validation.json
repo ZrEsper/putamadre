@@ -1,0 +1,15 @@
+{
+  "input_sha256": "c5d501590fe2682413cd753d0c0ca51dfd6932a15686faea24b468a599876ab5",
+  "output": "firstaid-1.21.1-ZOMBOID-v3.6.2-local-ballistic-armor.jar",
+  "output_sha256": "4168216eef12e0b2d76a0bb9379cd1e4f4df73e6d2ad8cddb5f380043ca8be5f",
+  "changed": [
+    "ichttt/mods/firstaid/common/damagesystem/DamageablePart.class",
+    "ichttt/mods/firstaid/common/util/ArmorUtils.class",
+    "ichttt/mods/firstaid/survival/ClinicalHooks.class"
+  ],
+  "added": [
+    "dev/zomboid/firstaid/ArmorTolerance.class"
+  ],
+  "minecraft_runtime_tested": false,
+  "checks": "ARMOR_CHECKS=14773"
+}

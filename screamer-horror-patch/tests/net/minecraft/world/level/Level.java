@@ -1,0 +1,1 @@
+package net.minecraft.world.level;import net.minecraft.world.entity.Entity;public class Level{public long time;public int broadcasts,lastEvent;public long getGameTime(){return time;}public void broadcastEntityEvent(Entity e,byte event){broadcasts++;lastEvent=event;}}

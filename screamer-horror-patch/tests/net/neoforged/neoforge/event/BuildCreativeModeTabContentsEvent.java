@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.event;import java.util.*;import net.minecraft.world.item.Item;public class BuildCreativeModeTabContentsEvent{public Object tab;public List<Object>items=new ArrayList<>();public BuildCreativeModeTabContentsEvent(Object t){tab=t;}public Object getTabKey(){return tab;}public void accept(Item item){items.add(item);}}

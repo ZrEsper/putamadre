@@ -1,0 +1,1 @@
+package net.minecraft.world.entity.player;import net.minecraft.world.level.Level;public class Player extends net.minecraft.world.entity.LivingEntity{public Player(Level l){super(l);}}

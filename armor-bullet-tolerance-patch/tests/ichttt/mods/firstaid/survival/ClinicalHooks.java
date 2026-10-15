@@ -1,0 +1,1 @@
+package ichttt.mods.firstaid.survival;public class ClinicalHooks{public static ThreadLocal<Boolean>BULLET=ThreadLocal.withInitial(()->false);}

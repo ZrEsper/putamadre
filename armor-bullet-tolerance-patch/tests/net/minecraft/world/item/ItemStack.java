@@ -1,0 +1,1 @@
+package net.minecraft.world.item;public class ItemStack{public double armor;public boolean empty;public ItemStack(double a){armor=a;}public boolean isEmpty(){return empty;}}
