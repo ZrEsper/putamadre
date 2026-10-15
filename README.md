@@ -1,3 +1,7 @@
+# Marcas de bala: duración máxima de 3 minutos
+
+[Descargar Tactical actualizado](distribuciones/Zombies-Poldo-Marcas-Bala-3-Minutos.zip). Las marcas de impacto caducan a los 180 segundos (3.600 ticks del cliente) y se eliminan del registro de restauración, incluso con la zona descargada. Recrear una partícula no reinicia el plazo. Sustituye Tactical .1 por .2; conserva TaCZ .18. 3.607 comprobaciones sobre el constructor y registro reales con partículas simuladas; pendiente de prueba visual en Minecraft. [Instalación](impact-expiry2/GUIA.md).
+
 # Visión manual con N y cámara isométrica .29
 
 [Descargar los dos reemplazos y guías](distribuciones/Zombies-Poldo-NVG-Manual-3-Iso-Audio-29.zip). Fracture Point .3 empieza con el visor arriba: N lo baja y activa su filtro e iluminación; N lo sube y apaga ambos. Sin activación automática al equipar o entrar. Conserva batería de 15 minutos y filtros originales; procesa el registro también al comenzar cada fotograma. Isométrica .29 escucha desde los ojos y orientación del jugador, prioriza apuntar con clic derecho y bloquea interacciones normales durante el apuntado. Mayús + clic derecho permite interactuar con arma al dejar de apuntar. Sustituye NVG .2 e Iso .28; conserva TaCZ y Tactical. 935 + 380 comprobaciones con APIs simuladas; pendiente de prueba visual y auditiva en Minecraft. [Visión](nvg-visor3/GUIA.md) · [Audio e interacción](iso-audio29/GUIA.md).
