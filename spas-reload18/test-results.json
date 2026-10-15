@@ -1,0 +1,5 @@
+{
+  "result": "6421 checks passed using bundled LuaJ: original crash reproduced, orphan cancellation, restart, differential reload and interruption",
+  "original_crash_reproduced": true,
+  "minecraft_runtime_tested": false
+}

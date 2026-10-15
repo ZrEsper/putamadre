@@ -1,3 +1,7 @@
+# TaCZ .18: evita el cierre al recargar la SPAS-12
+
+[Descargar reemplazo y guía](distribuciones/Zombies-Poldo-TaCZ-18-Recarga-SPAS.zip). Basado en el TaCZ .17 enviado: conserva trazadoras, impactos y límites de zoom. Cancela de forma segura una recarga SPAS sin caché, incluso con el pack predeterminado ya extraído; pulsa R para reiniciarla. Sustituye solo TaCZ en clientes y servidor; conserva Tactical .1. [Instalación y límites](spas-reload18/GUIA.md). Error original reproducido con el LuaJ incluido y 6.421 comprobaciones aprobadas; pendiente de prueba dentro de Minecraft.
+
 # Fracture Point NVG .2: visor y visión en N
 
 [Descargar reemplazo y guía](distribuciones/Zombies-Poldo-NVG-Visor-N-2.zip). N sube/baja el visor y vincula su visión a la posición física; cambia al modo de las gafas del casco nuevo, incluso entre cascos del mismo modelo. Recupera el shader si un efecto de daño lo sustituye y evita reactivar una batería agotada. Conserva los filtros originales y la batería de 15 minutos. Sustituye Fracture Point NVG .1 en clientes y servidor. [Controles, batería y límites](nvg-linked2/GUIA.md). 930 comprobaciones con APIs simuladas; pendiente de prueba visual dentro de Minecraft.

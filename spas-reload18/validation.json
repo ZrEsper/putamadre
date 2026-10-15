@@ -1,0 +1,14 @@
+{
+  "base_sha256": "95a82bfd7fa1755c3105a7c2a377bc5a6b93b0979aaa566bb60df5dda9288756",
+  "output_sha256": "d1f5395e1e773a3fe6056efefc6920900426737d2fc100e290809f07c8ecade9",
+  "changed": [
+    "assets/tacz/custom/tacz_default_gun/data/tacz/scripts/spas_12_gun_logic.lua",
+    "com/tacz/guns/item/ModernKineticGunItem.class"
+  ],
+  "added": [
+    "dev/zomboid/tacz/Reload18$1.class",
+    "dev/zomboid/tacz/Reload18$Access.class",
+    "dev/zomboid/tacz/Reload18.class"
+  ],
+  "minecraft_runtime_tested": false
+}
