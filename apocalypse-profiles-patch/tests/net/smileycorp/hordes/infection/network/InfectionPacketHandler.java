@@ -1,0 +1,1 @@
+package net.smileycorp.hordes.infection.network;public class InfectionPacketHandler{public static int tracking,self;public static void sendTracking(Object packet,Object entity){tracking++;}public static void sendTo(Object packet,Object player){self++;}}

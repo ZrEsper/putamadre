@@ -1,3 +1,7 @@
+# Actualización Apocalipsis .31: profesiones, perfiles y cura zombi
+
+[Descargar los cuatro mods y guía](distribuciones/Zombies-Poldo-Apocalipsis-31.zip). Cinco perfiles editables de escasez/dificultad, 37 tipos de cadáver profesional con pesos, siete mutantes configurables, cura de infección y curación por nivel opcional. Sustituir Hordes .30, Remains .8, FirstAid 3.5.6 y SurvivorCreator v32. [Guía sencilla](apocalypse-profiles-patch/GUIA.md). Reconocimiento de TZP por catálogo de apariencia editable; no identifica perfectamente todas las skins. 374 comprobaciones con dobles de API; pendiente de prueba dentro de Minecraft.
+
 # Actualización TacZ NPCs tactical.15: NPC de pruebas por partes
 
 [Descargar mod y guía](distribuciones/Zombies-Poldo-NPC-Pruebas-15.zip). `/npcprueba crear` crea un NPC de prueba con equipo copiado y ocho zonas de salud. Disparo/recarga TaCZ, melee nativo, derribo, curación dirigida y reanimación. [Uso y límites](npc-probe-patch/GUIA.md): es una adaptación Mob, no sustituye un jugador real para las APIs Player de First Aid. 130 comprobaciones con dobles de APIs aprobadas; pendiente de prueba en Minecraft.

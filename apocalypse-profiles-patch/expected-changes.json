@@ -1,0 +1,61 @@
+{
+  "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.31-apocalypse-profession-corpses.jar": {
+    "changed": [
+      "dev/zomboid/hordes/AdminNetwork$Apply.class",
+      "dev/zomboid/hordes/AdminNetwork$View.class",
+      "dev/zomboid/hordes/AdminNetwork.class",
+      "dev/zomboid/hordes/LootProfiles.class",
+      "dev/zomboid/hordes/ZombieIndividual.class",
+      "dev/zomboid/hordes/ZoneSettings.class",
+      "dev/zomboid/hordes/client/AdminScreen.class",
+      "dev/zomboid/rarehorde/Mutants.class"
+    ],
+    "added": [
+      "apocalypse31/skin-profiles.properties",
+      "dev/zomboid/hordes/ApocalypsePanel.class",
+      "dev/zomboid/hordes/ApocalypseSettings.class",
+      "dev/zomboid/hordes/AppearanceSync.class",
+      "dev/zomboid/hordes/CorpseProfessions.class",
+      "dev/zomboid/hordes/MutantPool.class",
+      "dev/zomboid/hordes/ProfessionCatalog.class",
+      "dev/zomboid/hordes/client/AppearanceClient.class",
+      "dev/zomboid/hordes/client/AppearanceEvents.class"
+    ]
+  },
+  "zombie-remains-loot-1.6.1-neoforge-1.21.1-military-nvg-mythic.9-profession-corpses.jar": {
+    "changed": [
+      "dev/zomboid/remains/ProfileCompat.class",
+      "dev/zomboid/remains/ZombieRemainsLoot$Corpse.class",
+      "dev/zomboid/remains/ZombieRemainsLoot$CorpseData.class",
+      "dev/zomboid/remains/ZombieRemainsLoot.class"
+    ],
+    "added": [
+      "dev/zomboid/remains/CorpseMeta31.class",
+      "dev/zomboid/remains/ProfessionCompat31.class"
+    ]
+  },
+  "firstaid-1.21.1-ZOMBOID-v3.5.7-zombie-cure-level-heal.jar": {
+    "changed": [
+      "META-INF/neoforge.mods.toml",
+      "assets/firstaid/lang/de_de.json",
+      "assets/firstaid/lang/en_us.json",
+      "assets/firstaid/lang/es_es.json",
+      "dev/zomboid/firstaid/Antibiotic.class",
+      "ichttt/mods/firstaid/FirstAid.class"
+    ],
+    "added": [
+      "assets/firstaid/models/item/zombie_cure_injector.json",
+      "assets/firstaid/textures/item/zombie_cure_injector.png",
+      "dev/zomboid/firstaid/ApocalypseMedicine.class",
+      "dev/zomboid/firstaid/CureInjector.class"
+    ]
+  },
+  "survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v33-level-heal-toggle.jar": {
+    "changed": [
+      "dev/survivorcreator/skills/Skills.class"
+    ],
+    "added": [
+      "dev/survivorcreator/skills/LevelHeal31.class"
+    ]
+  }
+}

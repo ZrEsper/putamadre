@@ -1,0 +1,1 @@
+package ichttt.mods.firstaid.common.util;import dev.zomboid.hordes.Checks31.Player;public class CommonUtils{public static int sync;public static Object getDamageModel(Object p){return ((Player)p).model;}public static void syncDamageModel(Object p){sync++;}}

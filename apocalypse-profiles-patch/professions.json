@@ -1,0 +1,407 @@
+[
+  {
+    "id": "blacksmith",
+    "name": "Herrero",
+    "weight": 3,
+    "loot": [
+      "iron_ingot@3",
+      "coal@3",
+      "iron_pickaxe"
+    ],
+    "clothes": "blacksmith_boots"
+  },
+  {
+    "id": "burger_flipper",
+    "name": "Trabajador de hamburguesería",
+    "weight": 2,
+    "loot": [
+      "cooked_beef@2",
+      "bread@2",
+      "bowl"
+    ],
+    "clothes": "brown_shirt_chestplate"
+  },
+  {
+    "id": "burglar",
+    "name": "Ladrón",
+    "weight": 2,
+    "loot": [
+      "iron_nugget@4",
+      "tripwire_hook",
+      "shears"
+    ],
+    "clothes": "gray_jacket_leggings"
+  },
+  {
+    "id": "butcher",
+    "name": "Carnicero",
+    "weight": 3,
+    "loot": [
+      "cooked_porkchop@2",
+      "iron_axe",
+      "bone@2"
+    ],
+    "clothes": "brown_shirt_chestplate"
+  },
+  {
+    "id": "carpenter",
+    "name": "Carpintero",
+    "weight": 4,
+    "loot": [
+      "oak_planks@8",
+      "stick@4",
+      "iron_axe"
+    ],
+    "clothes": "brown_shirt_chestplate"
+  },
+  {
+    "id": "chef",
+    "name": "Cocinero",
+    "weight": 3,
+    "loot": [
+      "baked_potato@3",
+      "bread@2",
+      "bowl"
+    ],
+    "clothes": "simple_chestplate"
+  },
+  {
+    "id": "construction_worker",
+    "name": "Constructor",
+    "weight": 5,
+    "loot": [
+      "cobblestone@12",
+      "bricks@6",
+      "iron_shovel"
+    ],
+    "clothes": "orange_jacket_leggings"
+  },
+  {
+    "id": "delivery_worker",
+    "name": "Repartidor",
+    "weight": 3,
+    "loot": [
+      "paper@3",
+      "bread@2",
+      "string@2"
+    ],
+    "clothes": "blue_jacket_chestplate"
+  },
+  {
+    "id": "diy_expert",
+    "name": "Manitas",
+    "weight": 3,
+    "loot": [
+      "iron_nugget@5",
+      "redstone@3",
+      "lever"
+    ],
+    "clothes": "brown_shirt_chestplate"
+  },
+  {
+    "id": "doctor",
+    "name": "Médico",
+    "weight": 3,
+    "loot": [
+      "firstaid:bandage@2",
+      "firstaid:plaster@2",
+      "firstaid:prophylactic_antibiotic"
+    ],
+    "clothes": "doctor_helmet"
+  },
+  {
+    "id": "electrician",
+    "name": "Electricista",
+    "weight": 3,
+    "loot": [
+      "redstone@5",
+      "copper_ingot@3",
+      "lever"
+    ],
+    "clothes": "orange_jacket_leggings"
+  },
+  {
+    "id": "engineer",
+    "name": "Ingeniero",
+    "weight": 3,
+    "loot": [
+      "redstone@4",
+      "iron_ingot@2",
+      "piston"
+    ],
+    "clothes": "strict_chestplate"
+  },
+  {
+    "id": "farmer",
+    "name": "Agricultor",
+    "weight": 5,
+    "loot": [
+      "wheat_seeds@6",
+      "carrot@3",
+      "iron_hoe"
+    ],
+    "clothes": "brown_shirt_chestplate"
+  },
+  {
+    "id": "fire_officer",
+    "name": "Bombero",
+    "weight": 2,
+    "loot": [
+      "iron_axe",
+      "bucket",
+      "firstaid:bandage"
+    ],
+    "clothes": "orange_jacket_leggings"
+  },
+  {
+    "id": "fisherman",
+    "name": "Pescador",
+    "weight": 4,
+    "loot": [
+      "fishing_rod",
+      "cooked_cod@3",
+      "string@3"
+    ],
+    "clothes": "brown_shirt_chestplate"
+  },
+  {
+    "id": "fishing_guide",
+    "name": "Guía de pesca",
+    "weight": 2,
+    "loot": [
+      "fishing_rod",
+      "cooked_salmon@3",
+      "compass"
+    ],
+    "clothes": "blue_jacket_chestplate"
+  },
+  {
+    "id": "fitness_instructor",
+    "name": "Entrenador físico",
+    "weight": 2,
+    "loot": [
+      "cooked_chicken@2",
+      "water_bucket",
+      "leather"
+    ],
+    "clothes": "simple_chestplate"
+  },
+  {
+    "id": "hunter",
+    "name": "Cazador",
+    "weight": 3,
+    "loot": [
+      "bow",
+      "arrow@8",
+      "cooked_rabbit@2"
+    ],
+    "clothes": "stalker_leggings"
+  },
+  {
+    "id": "lumberjack",
+    "name": "Leñador",
+    "weight": 4,
+    "loot": [
+      "iron_axe",
+      "oak_log@6",
+      "stick@3"
+    ],
+    "clothes": "brown_shirt_chestplate"
+  },
+  {
+    "id": "maintenance_worker",
+    "name": "Personal de mantenimiento",
+    "weight": 4,
+    "loot": [
+      "iron_nugget@5",
+      "iron_pickaxe",
+      "lever"
+    ],
+    "clothes": "gray_jacket_leggings"
+  },
+  {
+    "id": "mechanic",
+    "name": "Mecánico",
+    "weight": 5,
+    "loot": [
+      "iron_ingot@3",
+      "copper_ingot@3",
+      "iron_pickaxe"
+    ],
+    "clothes": "gray_jacket_leggings"
+  },
+  {
+    "id": "musician",
+    "name": "Músico",
+    "weight": 2,
+    "loot": [
+      "note_block",
+      "string@4",
+      "paper@2"
+    ],
+    "clothes": "strict_chestplate"
+  },
+  {
+    "id": "nurse",
+    "name": "Enfermero",
+    "weight": 3,
+    "loot": [
+      "firstaid:plaster@2",
+      "firstaid:bandage@2",
+      "firstaid:painkillers"
+    ],
+    "clothes": "doctor_helmet"
+  },
+  {
+    "id": "paramedic",
+    "name": "Paramédico",
+    "weight": 2,
+    "loot": [
+      "firstaid:bandage@2",
+      "firstaid:adrenaline_injector",
+      "firstaid:prophylactic_antibiotic"
+    ],
+    "clothes": "doctor_helmet"
+  },
+  {
+    "id": "park_ranger",
+    "name": "Guardabosques",
+    "weight": 3,
+    "loot": [
+      "compass",
+      "iron_axe",
+      "bread@3"
+    ],
+    "clothes": "stalker_leggings"
+  },
+  {
+    "id": "police_officer",
+    "name": "Policía",
+    "weight": 3,
+    "loot": [
+      "iron_sword",
+      "firstaid:bandage",
+      "paper@2"
+    ],
+    "clothes": "police_boots"
+  },
+  {
+    "id": "rancher",
+    "name": "Ganadero",
+    "weight": 3,
+    "loot": [
+      "lead",
+      "cooked_beef@3",
+      "wheat@4"
+    ],
+    "clothes": "brown_shirt_chestplate"
+  },
+  {
+    "id": "scout",
+    "name": "Explorador",
+    "weight": 3,
+    "loot": [
+      "compass",
+      "torch@6",
+      "bread@2"
+    ],
+    "clothes": "stalker_leggings"
+  },
+  {
+    "id": "scrap_worker",
+    "name": "Chatarrero",
+    "weight": 4,
+    "loot": [
+      "iron_nugget@8",
+      "copper_ingot@3",
+      "flint@2"
+    ],
+    "clothes": "gray_jacket_leggings"
+  },
+  {
+    "id": "security_guard",
+    "name": "Guardia de seguridad",
+    "weight": 3,
+    "loot": [
+      "iron_sword",
+      "torch@4",
+      "firstaid:plaster"
+    ],
+    "clothes": "strict_chestplate"
+  },
+  {
+    "id": "supply_runner",
+    "name": "Recolector de suministros",
+    "weight": 4,
+    "loot": [
+      "bread@3",
+      "torch@5",
+      "firstaid:plaster@2"
+    ],
+    "clothes": "survivors_armor_chestplate"
+  },
+  {
+    "id": "tailor",
+    "name": "Sastre",
+    "weight": 3,
+    "loot": [
+      "shears",
+      "string@6",
+      "leather@3"
+    ],
+    "clothes": "simple_chestplate"
+  },
+  {
+    "id": "unemployed",
+    "name": "Civil / desempleado",
+    "weight": 20,
+    "loot": [
+      "bread",
+      "paper@2",
+      "stick@2"
+    ],
+    "clothes": "brown_shirt_chestplate"
+  },
+  {
+    "id": "veteran",
+    "name": "Veterano",
+    "weight": 2,
+    "loot": [
+      "iron_sword",
+      "firstaid:bandage",
+      "iron_ingot@3"
+    ],
+    "clothes": "stalker_leggings"
+  },
+  {
+    "id": "welder",
+    "name": "Soldador",
+    "weight": 3,
+    "loot": [
+      "iron_ingot@4",
+      "copper_ingot@3",
+      "coal@3"
+    ],
+    "clothes": "orange_jacket_leggings"
+  },
+  {
+    "id": "military",
+    "name": "Militar",
+    "weight": 3,
+    "loot": [
+      "firstaid:bandage@2",
+      "iron_sword",
+      "iron_ingot@4"
+    ],
+    "clothes": "survivors_armor_chestplate"
+  },
+  {
+    "id": "nude",
+    "name": "Desnudo",
+    "weight": 1,
+    "loot": [
+      "rotten_flesh"
+    ],
+    "clothes": ""
+  }
+]

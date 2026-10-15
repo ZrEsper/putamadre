@@ -1,0 +1,79 @@
+{
+  "minecraft_runtime_tested": false,
+  "mods": [
+    {
+      "file": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.31-apocalypse-profession-corpses.jar",
+      "input_sha256": "dfe23e23bc3b03a7aff09420568e60e100dcde27d7df757d62187825c0becbab",
+      "sha256": "215a00468a2b33fc57210fc2cd26358fff3142735938e6b830ac8c31b1881417",
+      "changed": [
+        "dev/zomboid/hordes/AdminNetwork$Apply.class",
+        "dev/zomboid/hordes/AdminNetwork$View.class",
+        "dev/zomboid/hordes/AdminNetwork.class",
+        "dev/zomboid/hordes/LootProfiles.class",
+        "dev/zomboid/hordes/ZombieIndividual.class",
+        "dev/zomboid/hordes/ZoneSettings.class",
+        "dev/zomboid/hordes/client/AdminScreen.class",
+        "dev/zomboid/rarehorde/Mutants.class"
+      ],
+      "added": [
+        "apocalypse31/skin-profiles.properties",
+        "dev/zomboid/hordes/ApocalypsePanel.class",
+        "dev/zomboid/hordes/ApocalypseSettings.class",
+        "dev/zomboid/hordes/AppearanceSync.class",
+        "dev/zomboid/hordes/CorpseProfessions.class",
+        "dev/zomboid/hordes/MutantPool.class",
+        "dev/zomboid/hordes/ProfessionCatalog.class",
+        "dev/zomboid/hordes/client/AppearanceClient.class",
+        "dev/zomboid/hordes/client/AppearanceEvents.class"
+      ]
+    },
+    {
+      "file": "zombie-remains-loot-1.6.1-neoforge-1.21.1-military-nvg-mythic.9-profession-corpses.jar",
+      "input_sha256": "5f5b7774e66244853d6e5816771ef3637ca82ceff9e33da4d364d7c0ebbfd083",
+      "sha256": "a6c6128e22960c4e1629b05c7630ae1febc8c9a2e8dc91b91f5ec7cbbe506542",
+      "changed": [
+        "dev/zomboid/remains/ProfileCompat.class",
+        "dev/zomboid/remains/ZombieRemainsLoot$Corpse.class",
+        "dev/zomboid/remains/ZombieRemainsLoot$CorpseData.class",
+        "dev/zomboid/remains/ZombieRemainsLoot.class"
+      ],
+      "added": [
+        "dev/zomboid/remains/CorpseMeta31.class",
+        "dev/zomboid/remains/ProfessionCompat31.class"
+      ]
+    },
+    {
+      "file": "firstaid-1.21.1-ZOMBOID-v3.5.7-zombie-cure-level-heal.jar",
+      "input_sha256": "d6f75183c28d4217450311ea9fc31d4dab988427f7be06a61484b245bc71ecaf",
+      "sha256": "6663ca9eb687bb603fb4e28a950ca8c2ef6eea26c8a3c867451b29dc7ca30741",
+      "changed": [
+        "META-INF/neoforge.mods.toml",
+        "assets/firstaid/lang/de_de.json",
+        "assets/firstaid/lang/en_us.json",
+        "assets/firstaid/lang/es_es.json",
+        "dev/zomboid/firstaid/Antibiotic.class",
+        "ichttt/mods/firstaid/FirstAid.class"
+      ],
+      "added": [
+        "assets/firstaid/models/item/zombie_cure_injector.json",
+        "assets/firstaid/textures/item/zombie_cure_injector.png",
+        "dev/zomboid/firstaid/ApocalypseMedicine.class",
+        "dev/zomboid/firstaid/CureInjector.class"
+      ]
+    },
+    {
+      "file": "survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v33-level-heal-toggle.jar",
+      "input_sha256": "44aae9d7fd1f46cd1c8845699ba0de812956f82dae70cb289132a4f2f9f7a9b0",
+      "sha256": "86e5d9da7730f7f654350cfc97a1a59947b4a4c640a93cca39b3480af23bc7db",
+      "changed": [
+        "dev/survivorcreator/skills/Skills.class"
+      ],
+      "added": [
+        "dev/survivorcreator/skills/LevelHeal31.class"
+      ]
+    }
+  ],
+  "behavior_checks_with_API_doubles": 374,
+  "methods_verified": "ASM BasicVerifier for every changed original method",
+  "reproducible_second_build": true
+}
