@@ -1,0 +1,7 @@
+{
+  "checks": [
+    "Simulated checks passed: 245",
+    "CLIMATE_STORAGE_CHECKS=52; bonus rolls=3411/10000"
+  ],
+  "minecraft_runtime_tested": false
+}

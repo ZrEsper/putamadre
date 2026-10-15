@@ -1,0 +1,5 @@
+package dev.zomboid.decor;
+public final class Boards {
+ public static double factor(Object world,Object pos){if(!R.yes(R.call(world,"hasChunkAt",pos)))return 1;Object state=R.call(world,"getBlockState",pos);String id=Storage.id(state);boolean glass=id.contains("glass")||id.contains("window")||R.yes(R.call(state,"is",R.get(R.type("net.minecraft.tags.BlockTags"),"IMPERMEABLE")));if(!glass)return 1;for(int[] d:new int[][]{{1,0,0},{-1,0,0},{0,1,0},{0,-1,0},{0,0,1},{0,0,-1}}){Object p=R.call(pos,"offset",d[0],d[1],d[2]);if(!R.yes(R.call(world,"hasChunkAt",p)))continue;String other=Storage.id(R.call(world,"getBlockState",p));if(other.startsWith("planking_"))return 3;}return 1;}
+ public static void breaking(Object e){Object player=R.call(e,"getEntity"),world=R.call(player,"level");Object optional=R.call(e,"getPosition");if(optional instanceof java.util.Optional<?> op&&op.isPresent()){double f=factor(world,op.get());if(f>1)R.call(e,"setNewSpeed",((Number)R.call(e,"getNewSpeed")).floatValue()/(float)f);}}
+}

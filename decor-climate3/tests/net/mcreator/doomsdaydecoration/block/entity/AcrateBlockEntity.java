@@ -1,0 +1,3 @@
+package net.mcreator.doomsdaydecoration.block.entity;
+import dev.zomboid.decor.Checks.*;
+public class AcrateBlockEntity {public boolean ddPart;public long ddRoot;public String ddOwner="";public int ddIce,ddChill,changes,reads;public long ddNextTick;public Object lootTable;public java.util.Map<Integer,Stack> inventory=new java.util.HashMap<>();public World world;P p;State state;public AcrateBlockEntity(World w,P p,State s){world=w;this.p=p;state=s;}public World getLevel(){return world;}public State getBlockState(){return state;}public P getBlockPos(){return p;}public Object getItem(int index){reads++;return inventory.computeIfAbsent(index,i->{Stack s=new Stack("minecraft:air","NONE");s.empty=true;return s;});}public void setChanged(){changes++;}}

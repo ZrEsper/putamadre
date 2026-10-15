@@ -1,0 +1,1 @@
+package net.minecraft.world.level.block;import dev.zomboid.decor.Checks.*;public class CropBlock extends B{public CropBlock(){super("minecraft:wheat");}public int getAge(State s){return s.age;}public int getMaxAge(){return 7;}public Object getAgeProperty(){return "age";}}
