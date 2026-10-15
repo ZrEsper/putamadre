@@ -1,0 +1,18 @@
+{
+  "input_sha256": "07ce12d8b6eaa797588b1a994db3dc0ca12766427ec44085bbc7789c0bdfdd48",
+  "addon_sha256": "dbf15dcdf087ecc793b2586fac87bf5e1027018a3633066e1ec4869a7bf0b1b3",
+  "output": "zomboid-integration-1.7.8-neoforge-1.21.1-mutants-1.4-compat.jar",
+  "output_sha256": "1c36a56dc1d457b81bdee8607c5463ba11aea2d1902e76f2cab97e340c6d80eb",
+  "changed_entries": [
+    "META-INF/neoforge.mods.toml"
+  ],
+  "bytecode_unchanged": true,
+  "api_and_mixin_structure_checks": [
+    "PUBLIC_API_REFERENCES=4 MIXIN_TARGETS=2 SHADOWS=3",
+    "dev/zomboid/mutants/AbilitySounds.cut(Lnet/minecraft/world/entity/Entity;)V",
+    "dev/zomboid/mutants/Combat.valid(Lnet/minecraft/world/entity/LivingEntity;)Z",
+    "dev/zomboid/mutants/Tethers.active(Lnet/minecraft/world/entity/Mob;)Z",
+    "dev/zomboid/mutants/Tethers.release(Ljava/util/UUID;)V"
+  ],
+  "minecraft_runtime_tested": false
+}

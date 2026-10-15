@@ -1,3 +1,7 @@
+# Corrección Integration 1.7.8: permite Mutants L4D2 1.4.0
+
+[Descargar Integration corregido](mods/zomboid-integration-1.7.8-neoforge-1.21.1-mutants-1.4-compat.jar). Reemplaza Integration 1.7.7 en clientes y servidor; conserva el addon Mutants L4D2 1.4.0. Corrige el rango de versiones que impedía cargar el juego. Código y recursos idénticos; verificadas cuatro llamadas al addon, dos destinos de mixin y tres miembros Shadow. [Diagnóstico e instalación](integration-mutants140-fix/README.md). Pendiente confirmar arranque dentro de Minecraft.
+
 # Actualización .35: equipo militar completo y loot equilibrado
 
 [Descargar Hordes .35 + Remains .11 y guía](distribuciones/Zombies-Poldo-Loot-Militar-35.zip). Sustituye Hordes .34 y Remains .10 en clientes y servidor. Una tirada de arma/melee por cuerpo civil (1/13), ropa militar con otra tirada de 1/13 y munición compatible en el 35% de armas de fuego. Militares conservan su equipo real y llevan dos vendas; mutantes con restos biológicos y objetos en casillas aleatorias. [Guía y controles](corpse-loot-balance35/GUIA.md). 16.221 comprobaciones de lógica y 7.800 cuerpos simulados; pendiente de prueba dentro de Minecraft. Conserva NPC .16, FirstAid 3.5.8 y FracturePoint NVG .1.
