@@ -1,0 +1,13 @@
+import org.objectweb.asm.*;import org.objectweb.asm.tree.*;import org.objectweb.asm.tree.analysis.*;import java.util.*;import java.nio.file.*;import java.util.zip.*;
+public class Patch implements Opcodes{
+ static int hooks;static final String P="dev/zomboid/isotacz/",H=P+"MedicalInput30";
+ static MethodInsnNode call(String n){return new MethodInsnNode(INVOKESTATIC,H,n,"()Z",false);}
+ static void guard(MethodNode m,String fn,boolean result){InsnList x=new InsnList();x.add(call(fn));LabelNode pass=new LabelNode();x.add(new JumpInsnNode(IFEQ,pass));if(result)x.add(new InsnNode(ICONST_1));x.add(new InsnNode(result?IRETURN:RETURN));x.add(pass);x.add(new FrameNode(F_SAME,0,null,0,null));m.instructions.insert(x);hooks++;}
+ static byte[]patch(byte[]b)throws Exception{ClassNode c=new ClassNode();new ClassReader(b).accept(c,0);int before=hooks;for(MethodNode m:c.methods){
+ if(c.name.equals(P+"NativeActions")&&m.name.equals("nativeInput"))guard(m,"nativeInput",true);
+ if(c.name.equals(P+"AimStability")&&m.name.equals("medical")){m.instructions.clear();m.tryCatchBlocks.clear();m.localVariables=null;m.instructions.add(call("medical"));m.instructions.add(new InsnNode(IRETURN));hooks++;}
+ if(c.name.endsWith("/mixin/KeyboardInputMixin")&&m.name.equals("movementXIV"))for(AbstractInsnNode n:m.instructions.toArray())if(n instanceof MethodInsnNode mc&&mc.owner.equals(P+"NativeActions")&&mc.name.equals("riding")){m.instructions.set(n,call("skipMovement"));hooks++;}
+ if(c.name.endsWith("/mixin/MinecraftClientMixin")&&m.name.equals("tickXIV"))guard(m,"medical",false);
+ }if(before==hooks)return b;ClassWriter w=new ClassWriter(ClassWriter.COMPUTE_MAXS);c.accept(w);ClassNode v=new ClassNode();new ClassReader(w.toByteArray()).accept(v,0);for(MethodNode m:v.methods)if((m.access&(ACC_NATIVE|ACC_ABSTRACT))==0)new Analyzer<BasicValue>(new BasicVerifier()).analyze(v.name,m);return w.toByteArray();}
+ public static void main(String[]a)throws Exception{Map<String,byte[]>e=new TreeMap<>();try(ZipFile z=new ZipFile(a[0])){for(ZipEntry n:Collections.list(z.entries())){byte[]b=z.getInputStream(n).readAllBytes();e.put(n.getName(),n.getName().endsWith(".class")?patch(b):b);}}if(hooks!=4)throw new IllegalStateException("hooks "+hooks);try(var f=Files.walk(Path.of(a[2]))){for(Path p:f.filter(p->p.toString().endsWith(".class")).toList())e.put(Path.of(a[2]).relativize(p).toString(),Files.readAllBytes(p));}try(ZipOutputStream z=new ZipOutputStream(Files.newOutputStream(Path.of(a[1])))){for(var n:e.entrySet()){ZipEntry ze=new ZipEntry(n.getKey());ze.setTime(0);z.putNextEntry(ze);z.write(n.getValue());z.closeEntry();}}System.out.println("Four medical input hooks verified");}
+}

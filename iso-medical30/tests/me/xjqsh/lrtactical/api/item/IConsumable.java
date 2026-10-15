@@ -1,0 +1,1 @@
+package me.xjqsh.lrtactical.api.item;public interface IConsumable{}

@@ -1,0 +1,6 @@
+{
+  "checks": "MEDICAL30_CHECKS=69",
+  "original_native_input_probe": "SELF_DEFIB_USE=false",
+  "patched_native_input_probe": "SELF_DEFIB_USE=true",
+  "minecraft_runtime_tested": false
+}

@@ -1,0 +1,1 @@
+package checks;public class Probe{public static void main(String[]args){net.minecraft.client.Minecraft mc=net.minecraft.client.Minecraft.INSTANCE;mc.player.main=new Checks.Stack(new Checks.Item("firstaid:defibrillator"));mc.options.keyUse.physical=true;System.out.println("SELF_DEFIB_USE="+mc.options.keyUse.isDown());}}

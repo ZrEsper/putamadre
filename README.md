@@ -1,3 +1,7 @@
+# Isométrica .30: curaciones de Les Raisins y botón del desfibrilador
+
+[Descargar cámara corregida](distribuciones/Zombies-Poldo-Iso-30-Curaciones-Desfibrilador.zip). Reconoce consumibles de LR aunque compartan un nombre interno genérico, separa el botón médico de la navegación y suspende la orientación al cursor durante tratamientos. Corrige el conflicto que hacía leer como no pulsado el botón de autorreanimación. Reemplaza solo dungeons_iso .28/.29 por .30; conserva FirstAid 3.6.3 y LR .4 enviados. Mantiene audio y apuntado de .29. 69 comprobaciones y reproducción antes/después del conflicto de entrada sobre la clase nativa. Pendiente de prueba dentro de Minecraft. [Guía](iso-medical30/GUIA.md).
+
 # Marcas de bala: duración máxima de 3 minutos
 
 [Descargar Tactical actualizado](distribuciones/Zombies-Poldo-Marcas-Bala-3-Minutos.zip). Las marcas de impacto caducan a los 180 segundos (3.600 ticks del cliente) y se eliminan del registro de restauración, incluso con la zona descargada. Recrear una partícula no reinicia el plazo. Sustituye Tactical .1 por .2; conserva TaCZ .18. 3.607 comprobaciones sobre el constructor y registro reales con partículas simuladas; pendiente de prueba visual en Minecraft. [Instalación](impact-expiry2/GUIA.md).
