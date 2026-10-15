@@ -1,0 +1,1 @@
+package net.minecraft.world.item;public class Item implements net.minecraft.world.level.ItemLike{public final String id;public Item(String id){this.id=id;}public String id(){return id;}public int getDefaultMaxStackSize(){return 64;}public ItemStack getDefaultInstance(){return new ItemStack(this,1);}public int getUseDuration(ItemStack s,Object p){return 32;}}

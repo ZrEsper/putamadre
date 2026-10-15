@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.event.server; public class ServerStartedEvent { public Object getServer() {return null;} }

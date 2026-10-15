@@ -1,0 +1,1 @@
+package net.minecraft.world.level.storage;public class LevelResource{public static final Object ROOT=new Object();}

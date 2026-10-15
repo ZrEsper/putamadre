@@ -1,0 +1,1 @@
+package net.minecraft.client.gui.components;public record Tooltip(Object text){public static Tooltip create(Object c){return new Tooltip(c);}}

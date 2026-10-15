@@ -1,0 +1,1 @@
+package com.tacz.guns.api.item;import net.minecraft.world.item.ItemStack;public interface IGun{static IGun getIGunOrNull(ItemStack s){return s.item instanceof IGun g?g:null;}int getCurrentAmmoCount(ItemStack s);void setCurrentAmmoCount(ItemStack s,int n);void setBulletInBarrel(ItemStack s,boolean b);Object getGunId(ItemStack s);}

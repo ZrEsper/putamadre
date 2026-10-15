@@ -1,0 +1,1 @@
+package net.minecraft.resources;public record ResourceKey(Object registry,ResourceLocation location){public static ResourceKey create(Object r,ResourceLocation l){return new ResourceKey(r,l);}}

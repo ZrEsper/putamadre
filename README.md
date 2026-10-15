@@ -1,3 +1,7 @@
+# Hordes .40: panel sencillo y loot efectivo
+
+[Descargar reemplazo y guía](distribuciones/Zombies-Poldo-Panel-Sencillo-40.zip). Sustituye Hordes .39 en clientes y servidor. Cinco perfiles directos y dos bloques de cinco campos: barriles/cofres y cadáveres. Cantidades independientes del loot original, porcentajes directos y vista previa corregida. Opciones detalladas en Avanzado. [Uso y límites](simple-loot-panel40/GUIA.md). 70 comprobaciones, 2.500 inventarios simulados y guardado/carga real de ajustes sobre disco con APIs del juego simuladas; pendiente de prueba dentro de Minecraft. Conserva las funciones de rotura y screamer de .39.
+
 # Screamer horror y FirstAid 3.6.2
 
 [Descargar los dos reemplazos y guía](distribuciones/Zombies-Poldo-Screamer-Armadura-362.zip). Huevo del screamer, más velocidad, pose asimétrica y mandíbula abierta, audio del usuario al detectar al jugador y atracción de hordas. FirstAid: 8 puntos de armadura local equivalen nominalmente a 16 impactos totales de pistola; potencia, distancia y penetración conservan el daño efectivo de TaCZ. [Guía de instalación y límites](screamer-horror-patch/GUIA.md). Reemplaza el addon Mutants L4D2 1.4.0 y FirstAid 3.6.1 en clientes y servidor; conserva MutantsZombies base, Integration 1.7.8 y Hordes. 32.793 comprobaciones con APIs simuladas; pendiente de prueba dentro de Minecraft.

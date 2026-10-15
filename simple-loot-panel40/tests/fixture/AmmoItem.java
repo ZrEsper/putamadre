@@ -1,0 +1,1 @@
+package fixture;import net.minecraft.world.item.*;public class AmmoItem extends Item implements com.tacz.guns.api.item.IAmmo{public AmmoItem(){super("tacz:ammo");}public Object getAmmoId(ItemStack s){return s.ammoId;}}

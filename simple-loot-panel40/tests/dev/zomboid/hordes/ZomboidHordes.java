@@ -1,0 +1,1 @@
+package dev.zomboid.hordes;public class ZomboidHordes{public static final Config CONFIG=new Config();public static class Config{public int daySpawnIntervalTicks=100,noiseCooldownTicks=100,nightWaveIntervalTicks=100,helicopterWaveIntervalTicks=100;}}

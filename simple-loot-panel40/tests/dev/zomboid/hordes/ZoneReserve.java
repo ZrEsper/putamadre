@@ -1,0 +1,1 @@
+package dev.zomboid.hordes;public class ZoneReserve{public static int limit;public static void pauseAll(Object s,boolean p){}public static void maintenance(Object s,boolean[]a){}}

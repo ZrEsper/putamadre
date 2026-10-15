@@ -1,0 +1,13 @@
+package dev.zomboid.hordes;
+import java.util.*;
+public final class SimpleSettings{
+ public static final String[]PREFIX={"cofres","cadaveres"},NAMES={"Desolado","Medio","Normal","Sobrado","Inicio"};
+ public static final double[]QUANTITY={.3,2,4,8,12},WEAPONS={2,5,100./13,15,25},AMMO={10,20,35,55,80},MEDICINE={3,12,25,45,70};
+ public static void install(Map<String,Double>d,Map<String,Double>min,Map<String,Double>max,Map<String,Double>v){for(String k:new String[]{"panel_cofres_pilas","panel_cadaveres_pilas","panel_perfil"}){double value=k.equals("panel_perfil")?5:4;d.put(k,value);min.put(k,0.);max.put(k,k.equals("panel_perfil")?5.:27.);v.putIfAbsent(k,value);}}
+ public static void afterPreset(Map<String,Double>d,int profile){if(profile<0||profile>=5)throw new IllegalArgumentException("Perfil desconocido");for(String prefix:PREFIX){d.put("panel_"+prefix+"_pilas",QUANTITY[profile]);d.put(prefix+"_cantidad",1.);d.put(prefix+"_loot_todos",1.);d.put(prefix+"_armas",WEAPONS[profile]);d.put(prefix+"_ropa",WEAPONS[profile]);d.put(prefix+"_municion",AMMO[profile]);d.put(prefix+"_medicinas",MEDICINE[profile]);}d.put("panel_perfil",(double)profile);d.put("loot_arma_rara",WEAPONS[profile]);d.put("loot_armadura_rara",WEAPONS[profile]);d.put("loot_municion_rara",AMMO[profile]);}
+ public static int rolls(double mean,double random){double m=Math.max(0,Math.min(64,mean));return (int)Math.floor(m)+(random<m-Math.floor(m)?1:0);}
+ public static String profile(Map<String,Double>d){int i=d.getOrDefault("panel_perfil",5.).intValue();return i>=0&&i<5?NAMES[i]:"Personalizado";}
+ public static double value(Map<String,Double>d,String key){return d.getOrDefault(key,0.);}public static double mean(Map<String,Double>d,String p){return value(d,"panel_"+p+"_pilas")*value(d,p+"_cantidad");}
+ // Aliases in the old advanced scarcity page stay connected to the visible corpse controls.
+ public static void normalize(Map<String,Double>d){Map<String,Double>old=WorldTuning.snapshot();for(String[]pair:new String[][]{{"cadaveres_armas","loot_arma_rara"},{"cadaveres_ropa","loot_armadura_rara"},{"cadaveres_municion","loot_municion_rara"}}){if(!Objects.equals(d.get(pair[0]),old.get(pair[0])))d.put(pair[1],d.get(pair[0]));else if(!Objects.equals(d.get(pair[1]),old.get(pair[1])))d.put(pair[0],d.get(pair[1]));}int selected=d.getOrDefault("panel_perfil",5.).intValue();if(selected>=0&&selected<5){Map<String,Double>expected=new HashMap<>();ApocalypseSettings.preset(expected,selected);for(var entry:expected.entrySet())if(Math.abs(d.getOrDefault(entry.getKey(),0.)-entry.getValue())>.001){d.put("panel_perfil",5.);break;}}}
+}

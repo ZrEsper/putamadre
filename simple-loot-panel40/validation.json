@@ -1,0 +1,21 @@
+{
+  "input_sha256": "5285f7bc7a6d94424519b797e66ac2de5c05881e00be63916160b112a601fffe",
+  "output": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.40-simple-effective-loot.jar",
+  "output_sha256": "9148040f4463b37b07e22d76d9a8402f1c9298e9349019acf5f664fb08b0b250",
+  "changed": [
+    "dev/zomboid/hordes/AdminNetwork.class",
+    "dev/zomboid/hordes/ApocalypseSettings.class",
+    "dev/zomboid/hordes/PanelLootAuthority.class",
+    "dev/zomboid/hordes/WorldTuning.class",
+    "dev/zomboid/hordes/ZoneSettings.class",
+    "dev/zomboid/hordes/client/AdminScreen.class",
+    "dev/zomboid/hordes/client/LootPreviewScreen.class"
+  ],
+  "added": [
+    "dev/zomboid/hordes/SimpleLoot.class",
+    "dev/zomboid/hordes/SimplePanel.class",
+    "dev/zomboid/hordes/SimpleSettings.class"
+  ],
+  "minecraft_runtime_tested": false,
+  "checks": "PANEL_CHECKS=70\n500 inventories per profile: Desolado=0.32 (empty=347,weapons=3) Medio=2.13 (empty=0,weapons=23) Normal=3.93 (empty=0,weapons=33) Sobrado=7.04 (empty=0,weapons=80) Inicio=10.31 (empty=0,weapons=145)"
+}
