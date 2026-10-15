@@ -1,0 +1,38 @@
+{
+  "tacz": {
+    "output": "tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.17-tracers-impacts-scope-limits.jar",
+    "input_sha256": "90260866974bfc95d6a9612cb5ad0c4c9df2180c09dbf00239d109525bdcb508",
+    "output_sha256": "95a82bfd7fa1755c3105a7c2a377bc5a6b93b0979aaa566bb60df5dda9288756",
+    "changed": [
+      "assets/minecraft/atlases/particles.json",
+      "com/tacz/guns/client/particle/BulletHoleParticle.class",
+      "com/tacz/guns/client/renderer/entity/EntityBulletRenderer.class",
+      "com/tacz/guns/entity/EntityKineticBullet.class",
+      "dev/zomboid/tacz/ScopeZoom.class"
+    ],
+    "added": [
+      "assets/tacz/textures/particle/bullet_hole_heavy.png",
+      "assets/tacz/textures/particle/bullet_hole_pistol.png",
+      "assets/tacz/textures/particle/bullet_hole_rifle.png",
+      "assets/tacz/textures/particle/bullet_hole_shotgun.png",
+      "dev/zomboid/tacz/Visual17.class"
+    ],
+    "minecraft_runtime_tested": false
+  },
+  "tactical": {
+    "output": "tacz-tactical-1.2.4-neoforge-1.21.1-tracers-impacts-scope-limits.1.jar",
+    "input_sha256": "5f248ed8ea9a4cda29a6ffcb55c826c5c727bab421087b489015caf34405acc9",
+    "output_sha256": "19f498ebe15b2d1e4bf4f93511f4c06b4ddbb07fa64e3357de03320f4ec79f75",
+    "changed": [
+      "dev/tactical/tacz/ImpactMarks.class",
+      "dev/tactical/tacz/ScopeZoom.class",
+      "dev/tactical/tacz/ShotTrails.class",
+      "tacz_tactical.mixins.json"
+    ],
+    "added": [
+      "dev/tactical/tacz/ScopeLimits.class",
+      "dev/tactical/tacz/TracePose.class"
+    ],
+    "minecraft_runtime_tested": false
+  }
+}

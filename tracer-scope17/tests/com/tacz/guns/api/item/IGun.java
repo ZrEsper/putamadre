@@ -1,0 +1,1 @@
+package com.tacz.guns.api.item;public interface IGun{float getAimingZoom(Object stack);Object getGunId(Object stack);Object getAttachmentId(Object stack,Object type);Object getBuiltInAttachmentId(Object stack,Object type);}

@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.client.event;public class InputEvent{public static class MouseScrollingEvent{public double delta;public boolean canceled;public MouseScrollingEvent(double d){delta=d;}public double getScrollDeltaY(){return delta;}public void setCanceled(boolean b){canceled=b;}}}

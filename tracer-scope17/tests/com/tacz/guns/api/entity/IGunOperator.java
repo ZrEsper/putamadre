@@ -1,0 +1,1 @@
+package com.tacz.guns.api.entity;public class IGunOperator{public double progress=.9;public static IGunOperator fromLivingEntity(Object p){return ((checks.ScopeVisualChecks.Player)p).operator;}public double getSynAimingProgress(){return progress;}}

@@ -1,0 +1,5 @@
+{
+  "behavior": "SCOPE_VISUAL_CHECKS=310",
+  "bytecode": "BYTECODE_POSE_CHECKS=332",
+  "minecraft_runtime_tested": false
+}

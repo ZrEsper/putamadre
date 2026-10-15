@@ -1,0 +1,30 @@
+{
+  "tacz": {
+    "changed": [
+      "assets/minecraft/atlases/particles.json",
+      "com/tacz/guns/client/particle/BulletHoleParticle.class",
+      "com/tacz/guns/client/renderer/entity/EntityBulletRenderer.class",
+      "com/tacz/guns/entity/EntityKineticBullet.class",
+      "dev/zomboid/tacz/ScopeZoom.class"
+    ],
+    "added": [
+      "assets/tacz/textures/particle/bullet_hole_heavy.png",
+      "assets/tacz/textures/particle/bullet_hole_pistol.png",
+      "assets/tacz/textures/particle/bullet_hole_rifle.png",
+      "assets/tacz/textures/particle/bullet_hole_shotgun.png",
+      "dev/zomboid/tacz/Visual17.class"
+    ]
+  },
+  "tactical": {
+    "changed": [
+      "dev/tactical/tacz/ImpactMarks.class",
+      "dev/tactical/tacz/ScopeZoom.class",
+      "dev/tactical/tacz/ShotTrails.class",
+      "tacz_tactical.mixins.json"
+    ],
+    "added": [
+      "dev/tactical/tacz/ScopeLimits.class",
+      "dev/tactical/tacz/TracePose.class"
+    ]
+  }
+}

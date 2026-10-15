@@ -1,0 +1,17 @@
+import org.objectweb.asm.*;import org.objectweb.asm.tree.*;import java.util.*;import java.util.zip.*;
+public class Verify{
+ static int checks;static void ok(boolean b,String s){checks++;if(!b)throw new AssertionError(s);}
+ static ClassNode read(String jar,String path)throws Exception{try(ZipFile z=new ZipFile(jar)){ClassNode c=new ClassNode();new ClassReader(z.getInputStream(z.getEntry(path)).readAllBytes()).accept(c,0);return c;}}
+ static MethodNode method(ClassNode c,String n){return c.methods.stream().filter(m->m.name.equals(n)).findFirst().orElseThrow();}
+ static List<String> ops(MethodNode m){List<String> result=new ArrayList<>();for(AbstractInsnNode a:m.instructions)if(a instanceof MethodInsnNode mc&&mc.owner.equals("com/mojang/blaze3d/vertex/PoseStack")&&Set.of("mulPose","pushPose","popPose").contains(mc.name))result.add(mc.name);return result;}
+ static String fingerprint(MethodNode m){StringBuilder s=new StringBuilder();for(AbstractInsnNode a:m.instructions){s.append(a.getOpcode()).append('/');if(a instanceof MethodInsnNode c)s.append(c.owner).append(c.name).append(c.desc);if(a instanceof FieldInsnNode f)s.append(f.owner).append(f.name).append(f.desc);if(a instanceof LdcInsnNode l)s.append(l.cst);if(a instanceof VarInsnNode v)s.append(v.var);}return s.toString();}
+ public static void main(String[]a)throws Exception{
+  String path="com/tacz/guns/client/renderer/entity/EntityBulletRenderer.class";ClassNode base=read(a[0],path),out=read(a[1],path);ok(ops(method(base,"lambda$render$0")).equals(List.of("mulPose","mulPose","pushPose","popPose")),"input reproduces leaked ammo-model rotations");ok(ops(method(out,"lambda$render$0")).equals(List.of("pushPose","mulPose","mulPose","popPose")),"output restores world transform before tracer");
+  for(String name:List.of("lambda$renderTracerAmmo$1","renderTracerAmmo","render"))ok(fingerprint(method(base,name)).equals(fingerprint(method(out,name))),"preserved native tracer method/mixin targets: "+name);
+  // Symbolic pose stack replay over all headings: model rotations must not survive pop.
+  for(int yaw=-180;yaw<=180;yaw+=15)for(int pitch=-90;pitch<=90;pitch+=15){Deque<double[]> stack=new ArrayDeque<>();double y=0,p=0;int rotation=0;for(String op:ops(method(out,"lambda$render$0"))){switch(op){case "pushPose":stack.push(new double[]{y,p});break;case "mulPose":if(rotation++==0)y+=yaw;else p+=pitch;break;case "popPose":double[] saved=stack.pop();y=saved[0];p=saved[1];break;}}ok(y==0&&p==0&&stack.isEmpty(),"no stale yaw/pitch reaches next tracer");}
+  MethodNode spawn=method(read(a[1],"com/tacz/guns/entity/EntityKineticBullet.class"),"readSpawnData");long old=Arrays.stream(spawn.instructions.toArray()).filter(n->n instanceof FieldInsnNode f&&Set.of("xRotO","yRotO").contains(f.name)&&f.getOpcode()==Opcodes.PUTFIELD).count();ok(old==2,"spawn initializes both interpolation angles");
+  MethodNode trace=method(out,"lambda$renderTracerAmmo$1");int camera=0,translate=0,near=0,width=0;for(AbstractInsnNode n:trace.instructions){if(n instanceof MethodInsnNode mc){if(mc.owner.equals("net/minecraft/client/CameraType")&&mc.name.equals("isFirstPerson"))camera++;if(mc.owner.equals("com/mojang/blaze3d/vertex/PoseStack")&&mc.name.equals("translate"))translate++;}if(n instanceof InsnNode&&n.getOpcode()==Opcodes.ICONST_5)near++;if(n instanceof LdcInsnNode l&&Float.valueOf(.005f).equals(l.cst))width++;}ok(camera==1&&translate==2&&near==1&&width==1,"all four require=1 WorldTracerMixin targets retained");
+  System.out.println("BYTECODE_POSE_CHECKS="+checks);
+ }
+}

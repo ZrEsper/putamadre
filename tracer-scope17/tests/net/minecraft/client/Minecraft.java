@@ -1,0 +1,1 @@
+package net.minecraft.client;import checks.ScopeVisualChecks.*;public class Minecraft{public static final Minecraft INSTANCE=new Minecraft();public Object level=new Object(),screen;public Player player=new Player();public Textures textures=new Textures();public static Minecraft getInstance(){return INSTANCE;}public Textures getTextureManager(){return textures;}}
