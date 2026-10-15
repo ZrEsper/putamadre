@@ -1,3 +1,7 @@
+# Actualización Hordes .32: una herramienta por cadáver
+
+[Descargar actualización y guía](distribuciones/Zombies-Poldo-Apocalipsis-32.zip). El loot generado de cada cadáver contiene como máximo una herramienta de una unidad; mantiene los demás objetos y la carga real de NPC. Reemplazar Hordes .31 por .32. Pendiente de prueba dentro de Minecraft.
+
 # Actualización Apocalipsis .31: profesiones, perfiles y cura zombi
 
 [Descargar los cuatro mods y guía](distribuciones/Zombies-Poldo-Apocalipsis-31.zip). Cinco perfiles editables de escasez/dificultad, 37 tipos de cadáver profesional con pesos, siete mutantes configurables, cura de infección y curación por nivel opcional. Sustituir Hordes .30, Remains .8, FirstAid 3.5.6 y SurvivorCreator v32. [Guía sencilla](apocalypse-profiles-patch/GUIA.md). Reconocimiento de TZP por catálogo de apariencia editable; no identifica perfectamente todas las skins. 374 comprobaciones con dobles de API; pendiente de prueba dentro de Minecraft.

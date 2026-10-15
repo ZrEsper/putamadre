@@ -1,5 +1,5 @@
 {
-  "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.31-apocalypse-profession-corpses.jar": {
+  "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.32-single-tool-corpses.jar": {
     "changed": [
       "dev/zomboid/hordes/AdminNetwork$Apply.class",
       "dev/zomboid/hordes/AdminNetwork$View.class",

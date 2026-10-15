@@ -42,7 +42,7 @@ public final class CorpseProfessions {
    // Cargo is owned inventory, not procedural supply: never replace it with a rolled profile.
    if(type.contains("tacznpcs")||type.contains("bandit"))return;
    Object inv=ZoneReflection.get(corpse,"inventory");int i=WorldTuning.flag("profesion_por_aspecto_todos")?recognize(entity):index(String.valueOf(c(tag(entity),"getString",ROLE)));
-   if(i<0||!WorldTuning.flag("profesion_cadaveres_todos")){LootProfiles.corpse(corpse,level,c(entity,"position"));ensureClothes(inv,entity,i);return;}
+   if(i<0||!WorldTuning.flag("profesion_cadaveres_todos")){LootProfiles.corpse(corpse,level,c(entity,"position"));ensureClothes(inv,entity,i);limitTools(inv);return;}
    Properties p=settings();String id=ProfessionCatalog.IDS[i];ZoneReflection.set(corpse,"profession31",id);List<Object>items=new ArrayList<>();double amount=WorldTuning.get("cadaveres_cantidad")*WorldTuning.get("profesion_loot_cantidad")*Double.parseDouble(p.getProperty(id+".amount"));
    int n=roll(level)*100<Double.parseDouble(p.getProperty(id+".chance"))?ApocalypseSettings.count(3,amount,roll(level),20):0;
    List<Object>pool=new ArrayList<>();for(String spec:p.getProperty(id+".loot").split(",")){Object s=stack(spec);if(s!=null)pool.add(s);}
@@ -52,13 +52,15 @@ public final class CorpseProfessions {
    }
    for(int j=0;j<n&&!pool.isEmpty();j++)items.add(c(pool.get((int)(roll(level)*pool.size())),"copy"));
    // Construct first; failed catalog entries keep original inventory rather than clearing it.
-   c(inv,"clearContent");for(Object s:items)add(inv,s);ensureClothes(inv,entity,i);injection(inv,level,"cadaveres");
+   c(inv,"clearContent");for(Object s:items)add(inv,s);ensureClothes(inv,entity,i);injection(inv,level,"cadaveres");limitTools(inv);
   }catch(RuntimeException e){warn("loot profesional",e);}
  }
  static void ensureClothes(Object inv,Object entity,int role){if(!WorldTuning.flag("ropa_cadaveres_todos")||role==index("nude"))return;List<Object>equipped=armor(entity);for(Object s:equipped){boolean found=false;int n=((Number)c(inv,"getContainerSize")).intValue();for(int j=0;j<n;j++)if(!yes(c(c(inv,"getItem",j),"isEmpty"))&&yes(c(ZoneReflection.type("net.minecraft.world.item.ItemStack"),"isSameItemSameComponents",s,c(inv,"getItem",j)))){found=true;break;}if(!found)add(inv,s);}
  if(equipped.isEmpty()){int p=role>=0?role:index("unemployed");boolean added=false;for(String spec:settings().getProperty(ProfessionCatalog.IDS[p]+".clothes","").split(",")){if(!spec.isBlank()){Object clothing=stack(spec);if(clothing!=null){add(inv,clothing);added=true;}}}if(!added){add(inv,stack("leather_chestplate"));add(inv,stack("leather_leggings"));}}
 }
  public static void injection(Object inv,Object level,String prefix){double chance=WorldTuning.get("cura_inyeccion_loot")/100*Math.min(1,WorldTuning.get(prefix+"_cantidad"));if(roll(level)<chance)add(inv,stack("firstaid:zombie_cure_injector"));}
- public static void afterGeneric(Object corpse,Object level){injection(ZoneReflection.get(corpse,"inventory"),level,"cadaveres");}
+ static boolean tool(Object stack){if(yes(c(stack,"isEmpty")))return false;Object item=c(stack,"getItem");for(Class<?>type=item.getClass();type!=null;type=type.getSuperclass()){String name=type.getSimpleName();if(Set.of("DiggerItem","ShearsItem","FishingRodItem","FlintAndSteelItem","BrushItem").contains(name))return true;}String id=itemId(stack).toLowerCase(Locale.ROOT);String path=id.substring(id.indexOf(':')+1);return path.endsWith("_axe")||path.endsWith("_pickaxe")||path.endsWith("_shovel")||path.endsWith("_hoe")||path.equals("shears")||path.equals("fishing_rod")||path.equals("flint_and_steel")||path.equals("brush")||path.contains("wrench")||path.contains("screwdriver")||path.contains("crowbar");}
+ public static void limitTools(Object inv){boolean kept=false;int n=((Number)c(inv,"getContainerSize")).intValue();for(int i=0;i<n;i++){Object stack=c(inv,"getItem",i);if(!tool(stack))continue;if(kept)c(inv,"setItem",i,ZoneReflection.get(ZoneReflection.type("net.minecraft.world.item.ItemStack"),"EMPTY"));else{c(stack,"setCount",1);kept=true;}}}
+ public static void afterGeneric(Object corpse,Object level){Object inv=ZoneReflection.get(corpse,"inventory");injection(inv,level,"cadaveres");limitTools(inv);}
  public static Object container(Object list,Object block,Object params){if(!java.util.List.class.isInstance(list))return list;boolean supported=false;for(Class<?>t=block.getClass();t!=null;t=t.getSuperclass()){String name=t.getName().toLowerCase(Locale.ROOT);if(name.contains("chest")||name.contains("barrel")){supported=true;break;}}if(!supported)return list;Object level=c(params,"getLevel");double chance=WorldTuning.get("cura_inyeccion_loot")/100*Math.min(1,WorldTuning.get("cofres_cantidad"));if(roll(level)<chance){Object item=stack("firstaid:zombie_cure_injector");@SuppressWarnings("unchecked") List<Object>items=(List<Object>)list;int free=0;for(int i=0;i<((Number)c(block,"getContainerSize")).intValue();i++)if(yes(c(c(block,"getItem",i),"isEmpty")))free++;if(item!=null&&items.size()<free)items.add(item);}return list;}
 }

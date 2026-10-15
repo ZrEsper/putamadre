@@ -2,9 +2,9 @@
   "minecraft_runtime_tested": false,
   "mods": [
     {
-      "file": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.31-apocalypse-profession-corpses.jar",
+      "file": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.32-single-tool-corpses.jar",
       "input_sha256": "dfe23e23bc3b03a7aff09420568e60e100dcde27d7df757d62187825c0becbab",
-      "sha256": "215a00468a2b33fc57210fc2cd26358fff3142735938e6b830ac8c31b1881417",
+      "sha256": "d2c58e9dbebed2cb2bdbc7bd170a0710cb6a8e1d9fdee5d71916d8211abc546b",
       "changed": [
         "dev/zomboid/hordes/AdminNetwork$Apply.class",
         "dev/zomboid/hordes/AdminNetwork$View.class",
@@ -73,7 +73,6 @@
       ]
     }
   ],
-  "behavior_checks_with_API_doubles": 374,
-  "methods_verified": "ASM BasicVerifier for every changed original method",
-  "reproducible_second_build": true
+  "behavior_checks_with_API_doubles": 378,
+  "methods_verified": "ASM BasicVerifier for every changed original method"
 }

@@ -12,7 +12,7 @@ inputs=json.loads((R/'inputs.sha256.json').read_text());base=list((R/'base').glo
 for name,digest in inputs.items():assert sha(R/'base'/name)==digest
 compiler=['java','-jar',T/'ecj.jar','-21','-proc:none','-nowarn'];asm=os.pathsep.join(str(T/(n+'.jar')) for n in ['asm','asm-tree','asm-analysis']);cp=os.pathsep.join(map(str,base))
 run(*compiler,'-cp',cp,'-d','build/classes',*pathlib.Path('src').rglob('*.java'));run(*compiler,'-cp',asm,'-d','build/tool','Patch.java')
-targets=[('hordes','zomboid-hordes','zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.31-apocalypse-profession-corpses.jar'),('remains','zombie-remains','zombie-remains-loot-1.6.1-neoforge-1.21.1-military-nvg-mythic.9-profession-corpses.jar'),('firstaid','firstaid','firstaid-1.21.1-ZOMBOID-v3.5.7-zombie-cure-level-heal.jar'),('survivor','survivorcreator','survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v33-level-heal-toggle.jar')]
+targets=[('hordes','zomboid-hordes','zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.32-single-tool-corpses.jar'),('remains','zombie-remains','zombie-remains-loot-1.6.1-neoforge-1.21.1-military-nvg-mythic.9-profession-corpses.jar'),('firstaid','firstaid','firstaid-1.21.1-ZOMBOID-v3.5.7-zombie-cure-level-heal.jar'),('survivor','survivorcreator','survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v33-level-heal-toggle.jar')]
 report={'minecraft_runtime_tested':False,'mods':[]}
 for kind,prefix,name in targets:
  source=next(p for p in base if p.name.startswith(prefix));out=R/'output'/name;run('java','-cp',asm+os.pathsep+'build/tool','Patch',kind,source,out,'build/classes')

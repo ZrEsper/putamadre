@@ -52,6 +52,10 @@ Un **peso** indica qué tipo es más común comparado con los demás. No tiene q
 
 La probabilidad de recibir oficio y el peso de cada oficio son controles distintos. Un oficio reconocido por apariencia tiene prioridad. Para excluirlo también en ese caso, apaga Reconocer equipo y nombres y pon su peso a 0.
 
+## Una sola herramienta por cadáver
+
+El loot generado deja como máximo una herramienta, de una sola unidad: hacha, pico, pala, azada, tijeras, caña y herramientas identificadas como llave, destornillador o palanca. Puede salir ninguna si el sorteo o la escasez lo determinan. Espadas, armas, comida, materiales y ropa mantienen sus reglas. La carga real de NPC y jugadores se conserva. Los cuerpos ya guardados no se modifican.
+
 ## Todas las profesiones
 
 Incluye las 35 profesiones de tu SurvivorCreator, más Militar y Desnudo. Un perfil indica qué puede llevar el cuerpo; no todos los oficios pueden distinguirse visualmente de forma fiable.
