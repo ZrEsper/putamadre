@@ -1,0 +1,8 @@
+{
+  "checks": "PLAYER_CORPSE_CHECKS=149",
+  "native_corpse_equipment_before_after": [
+    "HELMET_SLOT=0",
+    "HELMET_SLOT=5"
+  ],
+  "minecraft_runtime_tested": false
+}

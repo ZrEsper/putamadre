@@ -1,0 +1,40 @@
+{
+  "hordes": {
+    "output": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.43-infected-player-corpse.jar",
+    "input_sha256": "b1e9a96f67d8c1c288c8edd320d9f842a584d7692ba8142a872114ebc1f1284f",
+    "output_sha256": "3a1e9de1323bcda95fa9294d4c417469b2885bca9bac33b202a9f0f366a61047",
+    "changed": [
+      "dev/zomboid/hordes/HordeEvents.class",
+      "dev/zomboid/hordes/PlayerGrave.class"
+    ],
+    "added": [
+      "dev/zomboid/hordes/PlayerCorpse43$Pending.class",
+      "dev/zomboid/hordes/PlayerCorpse43.class"
+    ],
+    "minecraft_runtime_tested": false
+  },
+  "corpse": {
+    "output": "corpse-neoforge-1.21.1-1.1.13-player-equipment-slots.2.jar",
+    "input_sha256": "7cd38a88f1c84f371212385b929fa5effea974d09a7c7af69ba20ffc57f433ed",
+    "output_sha256": "a49e41158eee7aa10888937b3f65be244c102001d8a797d2de95163d2ced9e74",
+    "changed": [
+      "de/maxhenkel/corpse/corelib/item/ItemUtils.class"
+    ],
+    "added": [
+      "dev/zomboid/corpse/EquipmentCodec43.class"
+    ],
+    "minecraft_runtime_tested": false
+  },
+  "remains": {
+    "output": "zombie-remains-loot-1.6.1-neoforge-1.21.1-military-nvg-mythic.12-player-zombie-exclusion.jar",
+    "input_sha256": "2e345a22152caf017159d302d97a7da5e0495ef841e25efccc2ab0e52927446d",
+    "output_sha256": "73103024eceb4c580cbb9b0810bd929fdd6ff9c1681efd55804db94af7d042f0",
+    "changed": [
+      "dev/zomboid/remains/ZombieRemainsLoot.class"
+    ],
+    "added": [
+      "dev/zomboid/remains/PlayerZombieGuard43.class"
+    ],
+    "minecraft_runtime_tested": false
+  }
+}

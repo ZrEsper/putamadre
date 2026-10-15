@@ -1,0 +1,1 @@
+package net.smileycorp.hordes.common.entities;public interface PlayerZombie{}

@@ -1,0 +1,1 @@
+package net.minecraft.world.entity.player;public class Player extends fixture.Game.Entity{public Player(fixture.Game.Level level){super(level);}}

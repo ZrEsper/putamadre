@@ -1,0 +1,1 @@
+package net.smileycorp.hordes.common.capability;public class HordesCapabilities{public static final Object ZOMBIFY_PLAYER=new Object();}

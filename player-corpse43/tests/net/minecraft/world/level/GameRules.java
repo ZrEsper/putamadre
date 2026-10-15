@@ -1,0 +1,1 @@
+package net.minecraft.world.level;public class GameRules{public static final Object RULE_KEEPINVENTORY=new Object();public boolean keep;public boolean getBoolean(Object key){return keep;}}

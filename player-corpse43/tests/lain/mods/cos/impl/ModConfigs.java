@@ -1,0 +1,1 @@
+package lain.mods.cos.impl;public class ModConfigs{public static boolean keep;public static boolean getCosArmorKeepThroughDeath(){return keep;}}

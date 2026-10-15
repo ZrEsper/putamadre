@@ -1,0 +1,1 @@
+package lain.mods.cos.api;import java.util.*;import fixture.Game;public class CosArmorAPI{public static Map<UUID,Game.Cosmetic>inventories=new HashMap<>();public static Game.Cosmetic getCAStacks(UUID uuid){return inventories.computeIfAbsent(uuid,u->new Game.Cosmetic());}}

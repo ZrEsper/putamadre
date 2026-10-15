@@ -1,0 +1,1 @@
+package net.minecraft.world.entity;public enum EquipmentSlot{MAINHAND(-1),OFFHAND(-1),FEET(0),LEGS(1),CHEST(2),HEAD(3),BODY(-1);int index;EquipmentSlot(int i){index=i;}public int getIndex(){return index;}public String getType(){return index>=0?"HUMANOID_ARMOR":"HAND";}}

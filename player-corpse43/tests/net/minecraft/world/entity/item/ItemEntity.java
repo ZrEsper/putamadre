@@ -1,0 +1,1 @@
+package net.minecraft.world.entity.item;import fixture.Game;import net.minecraft.world.item.ItemStack;public class ItemEntity{public ItemStack item;public ItemEntity(Game.Level l,double x,double y,double z,ItemStack item){this.item=item;}}
