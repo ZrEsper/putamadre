@@ -1,0 +1,1 @@
+package ichttt.mods.firstaid.common;import net.minecraft.world.item.ItemStack;public class EventHandler{public static boolean isDefibrillator(Object s){return s instanceof ItemStack stack&&stack.item.id.equals("firstaid:defibrillator")&&!stack.isEmpty();}public enum InteractionType{RESCUE}public record InteractionSelection(InteractionType type,Object hand){}}

@@ -1,0 +1,1 @@
+package ichttt.mods.firstaid.client;public class ClientEventHandler{public enum InteractionType{SELF_DEFIB}public record InteractionPrompt(int targetId,Object name,InteractionType type,boolean isSneaking,Object hand,int holdDurationTicks){}}

@@ -1,0 +1,1 @@
+package com.raiiiden.warborn.common.event;import java.util.*;public class HelmetBatteryTickHandler{public static final Map<UUID,String>nvgActiveMap=new HashMap<>();public static final Map<UUID,Integer>batteryEnergyCache=new HashMap<>();}

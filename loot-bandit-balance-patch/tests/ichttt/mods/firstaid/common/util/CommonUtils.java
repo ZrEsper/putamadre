@@ -1,0 +1,1 @@
+package ichttt.mods.firstaid.common.util;import fixture.Game.Actor;public class CommonUtils{public static Object getDamageModel(Object p){return ((Actor)p).model;}public static void syncDamageModel(Object p){}public static void killPlayerDirectly(Object p,Object s){((Actor)p).alive=false;}}

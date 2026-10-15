@@ -1,0 +1,70 @@
+{
+  "hordes": {
+    "changed": [
+      "dev/zomboid/hordes/AdminNetwork.class",
+      "dev/zomboid/hordes/ApocalypsePanel.class",
+      "dev/zomboid/hordes/LootProfiles.class",
+      "dev/zomboid/hordes/WorldTuning.class",
+      "dev/zomboid/hordes/ZoneSettings.class",
+      "dev/zomboid/hordes/client/AdminScreen.class"
+    ],
+    "added": [
+      "dev/zomboid/hordes/LootNerf.class",
+      "dev/zomboid/hordes/ScarcityControls.class",
+      "dev/zomboid/hordes/ScarcityPanel.class"
+    ]
+  },
+  "remains": {
+    "changed": [
+      "dev/zomboid/remains/BalancePolicy.class",
+      "dev/zomboid/remains/ExtraLootRules.class",
+      "dev/zomboid/remains/QualityRules.class",
+      "dev/zomboid/remains/ZombieRemainsLoot.class",
+      "dev/zomboid/remains/delivery/NpcCorpses.class"
+    ],
+    "added": [
+      "dev/zomboid/remains/ScarcityCompat33.class"
+    ]
+  },
+  "npc": {
+    "changed": [
+      "mod/cdv/tnpc/entity/AutoGunOperator.class",
+      "mod/cdv/tnpc/tactical/CalmBrain.class",
+      "mod/cdv/tnpc/tactical/SurvivalGear.class",
+      "mod/cdv/tnpc/tactical/SurvivorPatch.class",
+      "mod/cdv/tnpc/tactical/TeamBrain.class"
+    ],
+    "added": [
+      "mod/cdv/tnpc/tactical/StarterGear.class"
+    ]
+  },
+  "firstaid": {
+    "changed": [
+      "assets/firstaid/lang/de_de.json",
+      "assets/firstaid/lang/en_us.json",
+      "assets/firstaid/lang/es_es.json",
+      "dev/zomboid/firstaid/Assist.class",
+      "ichttt/mods/firstaid/client/ClientEventHandler.class",
+      "ichttt/mods/firstaid/common/EventHandler.class"
+    ],
+    "added": [
+      "dev/zomboid/firstaid/MedicineEvents33.class",
+      "dev/zomboid/firstaid/MedicineProgress33.class",
+      "dev/zomboid/firstaid/ReviveFix33.class"
+    ]
+  },
+  "fracture": {
+    "changed": [
+      "assets/fracturepoint/lang/en_us.json",
+      "com/raiiiden/warborn/common/event/HelmetBatteryTickHandler.class",
+      "com/raiiiden/warborn/common/item/NVGBatteryItem.class"
+    ],
+    "added": [
+      "assets/fracturepoint/lang/de_de.json",
+      "assets/fracturepoint/lang/es_es.json",
+      "com/raiiiden/warborn/common/util/NvgReflection.class",
+      "com/raiiiden/warborn/common/util/NvgSupport33$Backup.class",
+      "com/raiiiden/warborn/common/util/NvgSupport33.class"
+    ]
+  }
+}

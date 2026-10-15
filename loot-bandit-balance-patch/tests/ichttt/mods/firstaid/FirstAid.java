@@ -1,0 +1,1 @@
+package ichttt.mods.firstaid;public class FirstAid{public static final Network NETWORKING=new Network();public static class Network{public int requests;public void sendToServer(Object p){requests++;}}}

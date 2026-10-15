@@ -1,0 +1,1 @@
+package net.minecraft.world.item;public class ArmorItem extends Item{public ArmorItem(String id){super(id);}public Object getEquipmentSlot(){return net.minecraft.world.entity.EquipmentSlot.CHEST;}public int getDefense(){return 6;}}

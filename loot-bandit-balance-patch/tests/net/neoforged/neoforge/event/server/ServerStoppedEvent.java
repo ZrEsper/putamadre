@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.event.server; public class ServerStoppedEvent { public Object getServer() {return null;} }

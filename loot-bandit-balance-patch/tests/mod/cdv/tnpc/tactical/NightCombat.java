@@ -1,0 +1,1 @@
+package mod.cdv.tnpc.tactical;import net.minecraft.world.item.ItemStack;public class NightCombat{public record Data(int getAmmoAmount){}public static Object data(Object s){return new Data(10);}public static Object ammoId(Object s){return ((ItemStack)s).ammoId;}}
