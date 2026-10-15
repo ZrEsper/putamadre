@@ -1,0 +1,39 @@
+REPARACIONES DE REVIVIR, CADAVERES Y CAMARA — Minecraft 1.21.1 NeoForge
+
+INSTALACION
+Cierra Minecraft y el servidor. Sustituye las cinco familias de mods por los JAR de este paquete, sin versiones duplicadas:
+1. FirstAid v3.5.8 (o anterior) -> v3.5.9.
+2. Corpse 1.1.13 -> player-storage-protection.1.
+3. dungeons_iso .26 -> .27.
+4. Zomboid Hordes panel .35/.36/.37 -> .38.
+5. The Hordes zombies-mutants-admin.2 -> admin.3-player-inventory-fallback.
+Actualiza tambien la instancia del anfitrion/servidor. dungeons_iso es de cliente: no añadas mods de cliente a un dedicado donde antes no estaban. No cambies TaCZ, Tactical ni CarryOn con este paquete.
+
+REVIVIR Y DESFIBRILADOR
+El crash aportado señala ClickRevival -> R.call(send) -> NullPointerException. La solicitud de revivir usa ahora envio tipado, valida conexion, jugador local, objetivo vivo y mismo mundo. Un envio fallido no cierra el juego ni consume un uso.
+El desfibrilador tiene cinco cargas. Se descuenta una por reanimacion completada, tanto propia como a un compañero; los intentos fallidos/interrumpidos no gastan. Creativo no gasta. La descripcion muestra las cargas restantes. Se reinicia el bloqueo de solicitud/progreso al entrar en una nueva caida y se conserva el flujo de uso normal y los cambios medicos de v3.5.8.
+Reanimar vuelve a levantar al jugador y mantiene regeneracion II durante cinco segundos.
+
+RECETA DE CURA ZOMBI
+Resultado: 1 firstaid:zombie_cure_injector. Mesa de crafteo:
+A A A
+A B A
+C H A
+A = manzana de oro normal (seis unidades, no encantadas).
+B = firstaid:prophylactic_antibiotic (una unidad).
+C = polvo de blaze (una unidad).
+H = botella de miel (una unidad).
+La receta se descubre al obtener una manzana de oro. No cambia el antibiotico preventivo de heridas por la cura zombi: son objetos diferentes.
+
+CADAVERES E INVENTARIO
+Corpse ya no suelta su contenido por descargar el chunk o cambiar de dimension. El daño normal, fuego, explosiones y ataques no lo rompen. El temporizador de Corpse no elimina cuerpos con objetos; los vacios siguen su ciclo normal. La eliminacion destructiva explicita del administrador puede seguir retirando cuerpos y soltando sus objetos una vez.
+Zomboid Hordes .38 excluye los cuerpos de jugadores de su limpieza y sus epocas de borrado, y conserva las protecciones del zombi del jugador de .37 y la prioridad del loot del panel de .36.
+The Hordes admin.3 devuelve los objetos a los drops de muerte si otro mod rechaza la aparicion del zombi del jugador. Corpse puede recogerlos. No se obliga a otros mods a aceptar entidades.
+Estos cambios previenen nuevas perdidas; no recuperan objetos que ya desaparecieron. Eso requiere un respaldo del mundo.
+
+CAMARA ISOMETRICA
+El cursor da prioridad a una entidad que el tirador puede ver desde sus ojos, aunque un techo cercano obstruya la camara. Un techo por encima del jugador no sustituye ese objetivo; sin objetivo se usa el plano corporal. Se conserva el bloqueo por paredes, los blancos elevados reales y las perspectivas/zoom/vehiculos de .26. La correccion se limita al selector de apuntado isometrico.
+
+VALIDACION Y PRUEBA EN JUEGO
+Verificacion de CRC y conservacion byte a byte de entradas no modificadas. ASM de seis clases parcheadas y nueve clases auxiliares. Pruebas con fixtures: conexion ausente/desconectada, solicitudes validas; cinco reanimaciones y cargas; rearme en cinco caidas; metodo de eliminacion del cadaver sin soltar objetos al descargar; cursor con techo, pared y blancos elevados. Receta verificada con seis manzanas exactas. No ejecutado dentro de Minecraft.
+Prueba en una copia del mundo: reanimar cinco veces, alejarse de un cuerpo con objetos y volver, guardar/reabrir, golpear el cuerpo y apuntar a otro jugador en interiores. Si queda un fallo visual o de otro mod, aporta el log de esa prueba.
