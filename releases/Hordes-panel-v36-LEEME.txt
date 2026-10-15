@@ -1,0 +1,9 @@
+HORDES PANEL v36 — PRIORIDAD DEL LOOT PERSONALIZADO
+Reemplaza v35 por este JAR, sin duplicados, tanto en cliente como servidor/anfitrion.
+Se conserva el contenido de v35, incluidas funciones, catalogos y configuraciones del panel.
+Cambiar cantidad o categorias en un perfil Original activa ese perfil Personalizado al recordar los valores (Aplicar, cambiar pestaña o ver ejemplo). Puede volver a Original manualmente; los cambios del mundo requieren Aplicar.
+Los cofres/barriles personalizados ya no pasan despues por el filtro de escasez ni por añadidos de profesiones. Los cadaveres personalizados tampoco se vuelven a sortear con el balance de v35 ni con profesiones: usan sus categorias. El equipo real y los drops capturados del muerto se conservan, incluso si la categoria de loot generado tiene peso 0. Modo Original conserva el balance v35.
+El panel conserva tambien ajustes recibidos que no aparecen en la pagina actual.
+Solo se modifica LOOT NUEVO. No se borran ni rellenan automaticamente inventarios ya generados. Los cambios no regeneran cofres ni cadaveres antiguos. Las categorias son pesos relativos, no probabilidades independientes.
+Prueba: en Cofres/barriles, Comida 100 y las demas categorias 0, cantidad 1; Aplicar. Abrir un cofre del mapa cuyo loot aun no se haya generado. Para cadaveres, matar un enemigo nuevo y revisar su cuerpo; puede conservar equipo que ya llevaba.
+Validacion: CRC, conservacion de entradas sin modificar, ASM de cuatro clases, fixtures de activacion de perfil, preservacion de opciones, seleccion de rutas Original/Personalizado y conservacion de equipo. No ejecutado dentro de Minecraft.
