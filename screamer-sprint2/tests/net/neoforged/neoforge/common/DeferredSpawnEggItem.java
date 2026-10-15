@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.common;import java.util.function.*;import net.minecraft.world.item.Item;public class DeferredSpawnEggItem extends Item{public final Supplier<?>type;public final int background,highlight;public DeferredSpawnEggItem(Supplier<?>type,int a,int b,Item.Properties p){this.type=type;background=a;highlight=b;}}

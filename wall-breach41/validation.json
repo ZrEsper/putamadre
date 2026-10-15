@@ -1,0 +1,11 @@
+{
+  "input_sha256": "9148040f4463b37b07e22d76d9a8402f1c9298e9349019acf5f664fb08b0b250",
+  "output_sha256": "b16cd18ffe4921c2f98647b78959c9b0e63f86d89ef4699760b775605648cab6",
+  "changed": [
+    "dev/zomboid/hordes/BreachAI.class",
+    "dev/zomboid/hordes/SiegeZombie.class",
+    "dev/zomboid/hordes/ZombieIndividual.class"
+  ],
+  "checks": "57 geometry, navigation and permission checks passed",
+  "minecraft_runtime_tested": false
+}

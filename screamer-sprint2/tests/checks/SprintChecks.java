@@ -1,0 +1,17 @@
+package checks;
+import net.minecraft.world.entity.*;import net.minecraft.world.entity.monster.Zombie;import net.minecraft.world.entity.player.Player;import net.minecraft.server.level.ServerLevel;import net.minecraft.world.entity.ai.attributes.Attributes;import dev.zomboid.mutants.horror.*;
+public class SprintChecks{
+ static int checks;static void ok(boolean b,String s){checks++;if(!b)throw new AssertionError(s);}
+ public static void main(String[]a)throws Exception{
+  Horror.register(new HorrorChecks.Bus());ServerLevel level=new ServerLevel();Player p=new Player(level);p.x=20;level.players.add(p);
+  Class<?> type=Class.forName("dev.zomboid.mutants.Screamers$Screamer");Zombie caller=(Zombie)type.getConstructor(EntityType.class,net.minecraft.world.level.Level.class).newInstance(new EntityType(),level);caller.x=10;
+  Zombie idle=new Zombie(new EntityType(),level);idle.x=30;level.mobs.add(idle);Zombie fighting=new Zombie(new EntityType(),level);fighting.setTarget(p);level.mobs.add(fighting);Zombie dead=new Zombie(new EntityType(),level);dead.alive=false;level.mobs.add(dead);Zombie far=new Zombie(new EntityType(),level);far.x=110;level.mobs.add(far);Mob civilian=new Mob(level);level.mobs.add(civilian);level.mobs.add(caller);
+  caller.tick();ok(caller.getTarget()==p,"native screamer acquires player");ok(idle.getTarget()==null,"horde does not attack screamer");ok(idle.data.getLong("zh_pos")==caller.blockPosition().asLong(),"noise centered on screamer, not player");ok(idle.data.getLong("zh_until")==480,"24 second investigation");ok(idle.nav.moves==1&&idle.nav.x==14,"initial waypoint approaches caller within 16 blocks");ok(fighting.getTarget()==p&&fighting.nav.moves==0,"existing combat preserved");ok(dead.nav.moves==0&&far.nav.moves==0&&civilian.nav.moves==0,"dead, far, noninfected excluded");
+  p.x=12;level.time=10;caller.tick();ok(caller.nav.speed==1.5&&caller.nav.moves==2,"runs closer than old three-block stop radius");
+  Class<?> stats=Class.forName("dev.zomboid.hordes.ScreamerStats");var key=net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("zomboid_hordes","individual_pace");caller.getAttribute(Attributes.MOVEMENT_SPEED).modifiers.put(key,new Object());
+  ok((Boolean)stats.getMethod("apply",Object.class).invoke(null,caller),"real native screamer recognized by Hordes bridge");ok(caller.getAttribute(Attributes.MOVEMENT_SPEED).base==.50,"dedicated fast movement restored");ok(caller.getAttribute(Attributes.MOVEMENT_SPEED).modifiers.isEmpty(),"stale common-zombie slowdown removed");ok(caller.getAttribute(Attributes.MAX_HEALTH).base==40&&caller.health==40,"old screamer clamped to 40 HP");caller.health=13;stats.getMethod("apply",Object.class).invoke(null,caller);ok(caller.health==13,"stat updates never heal injuries");ok(!caller.data.getBoolean("zh_siege")&&caller.data.getBoolean("zh_siege_checked"),"cannot randomly become 300 HP siege zombie");ok(!(Boolean)stats.getMethod("apply",Object.class).invoke(null,idle),"ordinary zombies untouched");
+  caller.x=15;level.time=240;caller.tick();ok(idle.data.getLong("zh_pos")==caller.blockPosition().asLong()&&idle.data.getLong("zh_until")==720,"next cry updates rally location");
+  level.mobs.clear();for(int i=0;i<150;i++){Zombie z=new Zombie(new EntityType(),level);z.x=20;level.mobs.add(z);}Rally.alert(level,caller,96);long moved=level.mobs.stream().filter(z->z.nav.moves>0).count();ok(moved==128,"bounded horde work per cry");
+  System.out.println("SPRINT_RALLY_CHECKS="+checks);
+ }
+}

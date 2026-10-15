@@ -1,3 +1,7 @@
+# Hordes .41 y Screamer corredor: paredes y 40 de vida
+
+[Descargar los dos reemplazos directamente](distribuciones/Zombies-Poldo-Paredes-41-Screamer-40HP.zip). Corrige la selección de paredes y los atascos con navegación activa; comprueba pies, cabeza y ancho del zombi. Screamer con 40 de vida, carrera propia sin el ritmo de zombi común y grito que reúne a los infectados disponibles alrededor del screamer (96 bloques), sin convertirlo en objetivo de ataque. Conserva el panel sencillo .40, el huevo, el audio y la animación anteriores. [Instalación](screamer-sprint2/GUIA.md) · [Rotura de paredes y permisos](wall-breach41/GUIA.md). Sustituye Hordes y el addon Mutants L4D2 en clientes y servidor; conserva los demás mods. 18.094 comprobaciones automatizadas con APIs simuladas y verificación del bytecode; pendiente de prueba dentro de Minecraft.
+
 # Hordes .40: panel sencillo y loot efectivo
 
 [Descargar reemplazo y guía](distribuciones/Zombies-Poldo-Panel-Sencillo-40.zip). Sustituye Hordes .39 en clientes y servidor. Cinco perfiles directos y dos bloques de cinco campos: barriles/cofres y cadáveres. Cantidades independientes del loot original, porcentajes directos y vista previa corregida. Opciones detalladas en Avanzado. [Uso y límites](simple-loot-panel40/GUIA.md). 70 comprobaciones, 2.500 inventarios simulados y guardado/carga real de ajustes sobre disco con APIs del juego simuladas; pendiente de prueba dentro de Minecraft. Conserva las funciones de rotura y screamer de .39.

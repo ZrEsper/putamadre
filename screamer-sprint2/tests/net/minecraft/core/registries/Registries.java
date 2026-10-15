@@ -1,0 +1,1 @@
+package net.minecraft.core.registries;public class Registries{public static final Object ITEM=new Object(),SOUND_EVENT=new Object();}

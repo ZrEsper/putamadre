@@ -1,0 +1,1 @@
+package net.minecraft.world.entity.ai.goal;import net.minecraft.world.entity.Mob;public class FloatGoal extends Goal{public FloatGoal(Mob m){}}

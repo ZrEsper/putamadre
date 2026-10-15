@@ -1,0 +1,13 @@
+{
+  "input_sha256": "c5d20931e2cb975fa30c89b1e6f8d5da55ea847cc693d0cd588247fd2d45bcba",
+  "output_sha256": "28c6ae193c085e65224b8cc5b9d0b6a1282cbdcebad1721870846a626f0dca89",
+  "changed": [
+    "dev/zomboid/mutants/Screamers$Screamer.class",
+    "dev/zomboid/mutants/Screamers.class"
+  ],
+  "checks": [
+    "HORROR_CHECKS=18020",
+    "SPRINT_RALLY_CHECKS=17"
+  ],
+  "minecraft_runtime_tested": false
+}

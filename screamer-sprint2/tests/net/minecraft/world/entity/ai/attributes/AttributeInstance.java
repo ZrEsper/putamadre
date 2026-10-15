@@ -1,0 +1,1 @@
+package net.minecraft.world.entity.ai.attributes;import java.util.*;public class AttributeInstance{public double base;public Map<Object,Object> modifiers=new HashMap<>();public void setBaseValue(double v){base=v;}public Object getModifier(Object key){return modifiers.get(key);}public void removeModifier(Object key){modifiers.remove(key);}}

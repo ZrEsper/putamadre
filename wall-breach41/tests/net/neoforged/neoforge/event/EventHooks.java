@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.event;import net.minecraft.world.level.Level;import net.minecraft.world.entity.Entity;import net.minecraft.server.level.ServerLevel;public class EventHooks{public static boolean canEntityGrief(Level l,Entity e){return ((ServerLevel)l).grief;}}

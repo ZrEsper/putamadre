@@ -1,0 +1,1 @@
+package net.minecraft.world.phys;import net.minecraft.core.BlockPos;public class BlockHitResult extends HitResult{BlockPos p;public BlockHitResult(BlockPos p){this.p=p;}public Type getType(){return p==null?Type.MISS:Type.BLOCK;}public BlockPos getBlockPos(){return p;}}

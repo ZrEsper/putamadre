@@ -1,0 +1,1 @@
+package dev.zomboid.mutants;import net.minecraft.world.entity.LivingEntity;public class Combat{public static boolean infected(net.minecraft.world.entity.Entity e){return e instanceof net.minecraft.world.entity.monster.Zombie;}public static boolean valid(LivingEntity e){return e!=null&&e.isAlive();}}

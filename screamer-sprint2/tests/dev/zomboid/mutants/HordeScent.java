@@ -1,0 +1,1 @@
+package dev.zomboid.mutants;import net.minecraft.world.entity.LivingEntity;import net.minecraft.server.level.ServerLevel;public class HordeScent{public static int calls;public static double radius;public static LivingEntity target;public static void alert(ServerLevel w,LivingEntity e,double r){calls++;target=e;radius=r;}}
