@@ -1,3 +1,7 @@
+# Corrección .34: cierre al aparecer NPC
+
+[Descargar solo Hordes corregido](mods/zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.34-npc-mixin-fix.jar). Sustituye Hordes .33 en clientes y servidor; conserva los otros cuatro mods. Corrige la conexión `MilitaryBanditBalanceMixin` con el método de equipamiento de NPC .16. [Paquete completo actualizado](distribuciones/Zombies-Poldo-Escasez-NVG-Reanimacion-34.zip) · [Instalación y diagnóstico](hordes-npc-mixin-hotfix/GUIA.md). Fallo original reproducido y tres inyecciones verificadas para NPC .15 y .16; pendiente de prueba dentro de Minecraft.
+
 # Actualización .33: loot escaso, bandidos y atención médica
 
 [Descargar los cinco mods y guía](distribuciones/Zombies-Poldo-Escasez-NVG-Reanimacion-33.zip). Menos loot de común a mítico, armas y armaduras raras, bandidos nuevos casi siempre desarmados y recarga con munición recogida. Zombis sin cambios. Visión nocturna con batería de 15 minutos, prioridad del desfibrilador y reanimación sin bucle; barra y porcentaje para la inyección contra la infección zombi. [Instalación y controles](loot-bandit-balance-patch/GUIA.md). Reemplaza Hordes .32, Remains .9, TacZ NPCs .15, FirstAid 3.5.7 y FracturePoint PT2. 21.845 comprobaciones con APIs simuladas aprobadas; pendiente de prueba dentro de Minecraft.

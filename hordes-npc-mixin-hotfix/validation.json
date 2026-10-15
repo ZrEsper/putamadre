@@ -1,0 +1,23 @@
+{
+  "input_sha256": "ef0bfc8eccf46d5c4e0509902506abd3289301b3eb58c98a6e84f3279e02da26",
+  "output": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.34-npc-mixin-fix.jar",
+  "output_sha256": "8c67c6872e7f4cf375a31a05558357749f85b6fd5365ca4c2eafcaad21dcf051",
+  "changed_entries": [
+    "dev/zomboid/hordes/mixin/MilitaryBanditBalanceMixin.class"
+  ],
+  "original_failure_reproduced": true,
+  "compatibility": [
+    {
+      "npc": "tacznpcs-2.1.0-1.21.1-tactical.16-unarmed-scavenger-progression.jar",
+      "sha256": "319b0df981d0af93a97b880fc4ee406854d9fe7cfa406260f29a6120d7cfcf17",
+      "injections_verified": 3
+    },
+    {
+      "npc": "tacznpcs-2.1.0-1.21.1-tactical.15-playerlike-test-npc.jar",
+      "sha256": "019c42b9fa85762056291690f679b1a9cc5b18552d0eaa759361c3ed8525b651",
+      "injections_verified": 3
+    }
+  ],
+  "minecraft_runtime_tested": false,
+  "scope": "ASM annotation selectors, instruction targets and unchanged executable methods. Not a full Mixin transformer or Minecraft run."
+}
