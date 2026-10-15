@@ -1,0 +1,1 @@
+package com.raiiiden.warborn.common.object.capability;public class NVGBatteryStorage{public static int readEnergy(net.minecraft.world.item.ItemStack s){return s.tag.values.containsKey("BatteryEnergy")?s.tag.getInt("BatteryEnergy"):50000;}}

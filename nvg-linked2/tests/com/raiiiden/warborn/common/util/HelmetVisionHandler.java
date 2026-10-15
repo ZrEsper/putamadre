@@ -1,0 +1,1 @@
+package com.raiiiden.warborn.common.util;public class HelmetVisionHandler{public static String getShaderIdFromVisionType(String v){return switch(v){case "simple_nvg"->"snvg";case "digital"->"dvg";case "thermal"->"tvg";case "thermal_white"->"twvg";case "thermal_black"->"tbvg";default->v;};}}

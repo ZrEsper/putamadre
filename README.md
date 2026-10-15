@@ -1,3 +1,7 @@
+# Fracture Point NVG .2: visor y visión en N
+
+[Descargar reemplazo y guía](distribuciones/Zombies-Poldo-NVG-Visor-N-2.zip). N sube/baja el visor y vincula su visión a la posición física; cambia al modo de las gafas del casco nuevo, incluso entre cascos del mismo modelo. Recupera el shader si un efecto de daño lo sustituye y evita reactivar una batería agotada. Conserva los filtros originales y la batería de 15 minutos. Sustituye Fracture Point NVG .1 en clientes y servidor. [Controles, batería y límites](nvg-linked2/GUIA.md). 930 comprobaciones con APIs simuladas; pendiente de prueba visual dentro de Minecraft.
+
 # TaCZ .17: trazadoras, marcas y zoom según la mira
 
 [Descargar los dos reemplazos](distribuciones/Zombies-Poldo-TaCZ-17-Trazadoras-Miras.zip). Aísla las rotaciones del modelo de munición antes de dibujar trazadoras e inicializa los ángulos recibidos por red. Corrige el cruce entre atlas de bloques y partículas; marcas y tamaños según categoría de munición. La rueda respeta el mínimo y máximo declarados por la mira: punto rojo 1×, variable 4–25× hasta 25×. Elimina el multiplicador oculto de cámara. Reemplaza TaCZ .16 y Tactical scope-range64 juntos en clientes y servidor; conserva taczaddon. [Instalación y límites](tracer-scope17/GUIA.md). 310 comprobaciones con APIs simuladas y 332 del bytecode/transformaciones simbólicas; pendiente de prueba visual en Minecraft.
