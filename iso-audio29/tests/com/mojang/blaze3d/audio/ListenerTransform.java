@@ -1,0 +1,1 @@
+package com.mojang.blaze3d.audio;import net.minecraft.world.phys.Vec3;public record ListenerTransform(Vec3 position,Vec3 forward,Vec3 up){}

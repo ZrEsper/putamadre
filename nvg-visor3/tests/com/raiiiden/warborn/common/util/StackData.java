@@ -1,0 +1,1 @@
+package com.raiiiden.warborn.common.util;import net.minecraft.world.item.ItemStack;import checks.NvgChecks.Tag;public class StackData{public static Tag get(ItemStack s){return s.tag;}public static void set(ItemStack s,Tag t){s.tag=t;}}

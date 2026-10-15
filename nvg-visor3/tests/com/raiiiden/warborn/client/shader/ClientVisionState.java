@@ -1,0 +1,1 @@
+package com.raiiiden.warborn.client.shader;import java.util.*;public class ClientVisionState{public static Map<UUID,String> states=new HashMap<>();public static String getActive(UUID id){return states.getOrDefault(id,"");}public static void setActive(UUID id,String v){states.put(id,v);}}

@@ -1,0 +1,1 @@
+package com.raiiiden.warborn.client.network;public class ClientBatteryUpdateHandler{public static int cached=-1;public static void clear(){cached=-1;}public static int getCachedEnergy(){return cached;}public static void handle(int n){cached=n;}}

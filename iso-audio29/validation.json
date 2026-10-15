@@ -1,0 +1,12 @@
+{
+  "input_sha256": "de3f338a56327b9e33f541562e20c02496267aa318e8d6b34b014633e7e2807f",
+  "output": "dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.29-player-audio-aim-interactions.jar",
+  "output_sha256": "a83ec49d893f9b08c3e63abb27b38e9fa92203273370091ca51fd0ad9b43914d",
+  "changed": [
+    "com/cleannrooster/dungeons_iso/mixin/SoundSystemMixin.class",
+    "com/cleannrooster/dungeons_iso/util/SoundReference.class",
+    "dev/zomboid/isotacz/Bridge.class",
+    "dungeons_iso.mixins.json"
+  ],
+  "minecraft_runtime_tested": false
+}

@@ -1,3 +1,7 @@
+# Visión manual con N y cámara isométrica .29
+
+[Descargar los dos reemplazos y guías](distribuciones/Zombies-Poldo-NVG-Manual-3-Iso-Audio-29.zip). Fracture Point .3 empieza con el visor arriba: N lo baja y activa su filtro e iluminación; N lo sube y apaga ambos. Sin activación automática al equipar o entrar. Conserva batería de 15 minutos y filtros originales; procesa el registro también al comenzar cada fotograma. Isométrica .29 escucha desde los ojos y orientación del jugador, prioriza apuntar con clic derecho y bloquea interacciones normales durante el apuntado. Mayús + clic derecho permite interactuar con arma al dejar de apuntar. Sustituye NVG .2 e Iso .28; conserva TaCZ y Tactical. 935 + 380 comprobaciones con APIs simuladas; pendiente de prueba visual y auditiva en Minecraft. [Visión](nvg-visor3/GUIA.md) · [Audio e interacción](iso-audio29/GUIA.md).
+
 # TaCZ .18: evita el cierre al recargar la SPAS-12
 
 [Descargar reemplazo y guía](distribuciones/Zombies-Poldo-TaCZ-18-Recarga-SPAS.zip). Basado en el TaCZ .17 enviado: conserva trazadoras, impactos y límites de zoom. Cancela de forma segura una recarga SPAS sin caché, incluso con el pack predeterminado ya extraído; pulsa R para reiniciarla. Sustituye solo TaCZ en clientes y servidor; conserva Tactical .1. [Instalación y límites](spas-reload18/GUIA.md). Error original reproducido con el LuaJ incluido y 6.421 comprobaciones aprobadas; pendiente de prueba dentro de Minecraft.

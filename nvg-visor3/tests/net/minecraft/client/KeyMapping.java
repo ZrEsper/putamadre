@@ -1,0 +1,1 @@
+package net.minecraft.client;import com.mojang.blaze3d.platform.InputConstants.Key;public class KeyMapping{Key key;public KeyMapping(int n){key=new Key(n);}public Key getKey(){return key;}public void setKey(Key k){key=k;}public static void resetMapping(){}}

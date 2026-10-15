@@ -1,0 +1,20 @@
+package checks;
+import dev.zomboid.isotacz.*;import net.minecraft.client.Minecraft;import net.minecraft.world.phys.Vec3;import com.mojang.blaze3d.audio.ListenerTransform;
+public class Checks{
+ static int count;static void ok(boolean value,String reason){count++;if(!value)throw new AssertionError(reason);}
+ public static class Player{public boolean shift;public float pitch,yaw;public Vec3 eyes=new Vec3(1,65.6,3);public Vec3 getEyePosition(float partial){return new Vec3(eyes.x()+partial,eyes.y(),eyes.z());}public float getViewXRot(float partial){return pitch;}public float getViewYRot(float partial){return yaw;}public boolean isShiftKeyDown(){return shift;}}
+ public static class Camera{public boolean initialized=true;public Vec3 pos=new Vec3(500,500,500);public Vec3 getPosition(){return pos;}public float getPartialTickTime(){return .25f;}public boolean isInitialized(){return initialized;}}
+ public static class Window{public long getWindow(){return 42;}}
+ public static class CI{public boolean cancelled;public Object returned;public void cancel(){cancelled=true;}public void setReturnValue(Object v){returned=v;cancelled=true;}}
+ public static class Executor{public Runnable queued;public void execute(Runnable r){queued=r;}}
+ public static class Listener{public ListenerTransform transform;public void setTransform(ListenerTransform t){transform=t;}}
+ static double dot(Vec3 a,Vec3 b){return a.x()*b.x()+a.y()*b.y()+a.z()*b.z();}
+ public static void main(String[]args){Minecraft mc=Minecraft.INSTANCE;Camera cam=new Camera();
+ for(int yaw=-180;yaw<=180;yaw+=30)for(int pitch=-90;pitch<=90;pitch+=30){mc.player.yaw=yaw;mc.player.pitch=pitch;Executor executor=new Executor();Listener listener=new Listener();CI ci=new CI();PlayerAudio29.update(cam,true,listener,executor,ci);ok(ci.cancelled&&listener.transform==null&&executor.queued!=null,"schedule only on audio executor");Vec3 expected=mc.player.getEyePosition(.25f);mc.player.eyes=new Vec3(9,9,9);executor.queued.run();ok(listener.transform.position().equals(expected),"snapshot eye position, never detached camera");ok(Math.abs(dot(listener.transform.forward(),listener.transform.up()))<1e-6,"orthogonal player orientation");ok(Math.abs(dot(listener.transform.forward(),listener.transform.forward())-1)<1e-6,"unit forward");mc.player.eyes=new Vec3(1,65.6,3);}
+ Bridge.iso=false;CI ci=new CI();Executor ex=new Executor();PlayerAudio29.update(cam,true,new Listener(),ex,ci);ok(!ci.cancelled&&ex.queued==null,"vanilla audio when isometric off");Bridge.iso=true;
+ for(int condition=0;condition<3;condition++){CI c=new CI();Executor e=new Executor();cam.initialized=condition!=0;Player old=mc.player;if(condition==1)mc.player=null;PlayerAudio29.update(cam,condition!=2,new Listener(),e,c);ok(!c.cancelled&&e.queued==null,"startup safeguards");mc.player=old;cam.initialized=true;}
+ Bridge.aim=false;ci=new CI();ok(AimInteraction29.mouse(42,1,1,0,ci)&&Bridge.aim&&ci.cancelled,"gun RMB prioritizes aim over containers");ci=new CI();AimInteraction29.guard(ci);ok(ci.cancelled&&ci.returned==net.minecraft.world.InteractionResult.PASS,"block entity and block interactions while aiming");ci=new CI();ok(!AimInteraction29.mouse(42,1,0,0,ci)&&!ci.cancelled,"release reaches native handler");Bridge.aim=false;ci=new CI();AimInteraction29.guard(ci);ok(!ci.cancelled,"interactions restored immediately after aiming");mc.player.shift=true;ok(!AimInteraction29.mouse(42,1,1,0,new CI())&&!Bridge.aim,"shift RMB can interact with gun when not aiming");mc.player.shift=false;
+ for(int mode=0;mode<5;mode++){Bridge.aim=false;Bridge.iso=mode!=0;Bridge.armed=mode!=1;mc.screen=mode==2?new Object():null;ci=new CI();ok(!AimInteraction29.mouse(mode==3?99:42,mode==4?0:1,1,0,ci)&&!ci.cancelled,"unrelated input preserved");}
+ mc.screen=null;Bridge.iso=true;Bridge.armed=false;Bridge.aim=true;ci=new CI();AimInteraction29.guard(ci);ok(!ci.cancelled,"non guns unaffected");mc.player=null;ok(PlayerAudio29.point(cam)==cam.pos,"no-player sound fallback");
+ System.out.println("ISO29_CHECKS="+count);
+ }}
