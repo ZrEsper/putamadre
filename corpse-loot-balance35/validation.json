@@ -1,0 +1,36 @@
+{
+  "minecraft_runtime_tested": false,
+  "scope": "Real helper pipeline against API doubles; bytecode verification; military mixin preserved.",
+  "mods": [
+    {
+      "file": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.35-corpse-equipment-balanced.jar",
+      "input_sha256": "8c67c6872e7f4cf375a31a05558357749f85b6fd5365ca4c2eafcaad21dcf051",
+      "sha256": "2b907293aaafc5d39d42d816773e70c9af95e44c3ee7568a12d420daceab2040",
+      "changed": [
+        "assets/zomboid_hordes/lang/en_us.json",
+        "assets/zomboid_hordes/lang/es_es.json",
+        "dev/zomboid/hordes/ScarcityControls.class",
+        "dev/zomboid/hordes/ScarcityPanel.class",
+        "dev/zomboid/hordes/WorldTuning.class"
+      ],
+      "added": [
+        "assets/zomboid_hordes/lang/de_de.json",
+        "dev/zomboid/hordes/CorpseBalance35.class"
+      ]
+    },
+    {
+      "file": "zombie-remains-loot-1.6.1-neoforge-1.21.1-military-nvg-mythic.11-owned-equipment-shuffle.jar",
+      "input_sha256": "78e12fffa45ee8ff25c072a7ae2310405163016546685bef1cbb8e9021835f76",
+      "sha256": "2e345a22152caf017159d302d97a7da5e0495ef841e25efccc2ab0e52927446d",
+      "changed": [
+        "dev/zomboid/remains/ZombieRemainsLoot.class",
+        "dev/zomboid/remains/delivery/NpcCorpses.class"
+      ],
+      "added": [
+        "dev/zomboid/remains/CorpseBridge35.class",
+        "dev/zomboid/remains/EquipmentCapture35.class"
+      ]
+    }
+  ],
+  "checks": "CORPSE_CHECKS=16221\nSAMPLES=7800 weapons=596 military_clothes=583 firearms=404 paired_ammo=142"
+}

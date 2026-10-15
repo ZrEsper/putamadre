@@ -1,3 +1,7 @@
+# Actualización .35: equipo militar completo y loot equilibrado
+
+[Descargar Hordes .35 + Remains .11 y guía](distribuciones/Zombies-Poldo-Loot-Militar-35.zip). Sustituye Hordes .34 y Remains .10 en clientes y servidor. Una tirada de arma/melee por cuerpo civil (1/13), ropa militar con otra tirada de 1/13 y munición compatible en el 35% de armas de fuego. Militares conservan su equipo real y llevan dos vendas; mutantes con restos biológicos y objetos en casillas aleatorias. [Guía y controles](corpse-loot-balance35/GUIA.md). 16.221 comprobaciones de lógica y 7.800 cuerpos simulados; pendiente de prueba dentro de Minecraft. Conserva NPC .16, FirstAid 3.5.8 y FracturePoint NVG .1.
+
 # Corrección .34: cierre al aparecer NPC
 
 [Descargar solo Hordes corregido](mods/zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.34-npc-mixin-fix.jar). Sustituye Hordes .33 en clientes y servidor; conserva los otros cuatro mods. Corrige la conexión `MilitaryBanditBalanceMixin` con el método de equipamiento de NPC .16. [Paquete completo actualizado](distribuciones/Zombies-Poldo-Escasez-NVG-Reanimacion-34.zip) · [Instalación y diagnóstico](hordes-npc-mixin-hotfix/GUIA.md). Fallo original reproducido y tres inyecciones verificadas para NPC .15 y .16; pendiente de prueba dentro de Minecraft.

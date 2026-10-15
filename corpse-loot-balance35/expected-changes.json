@@ -1,0 +1,25 @@
+{
+  "hordes": {
+    "changed": [
+      "assets/zomboid_hordes/lang/en_us.json",
+      "assets/zomboid_hordes/lang/es_es.json",
+      "dev/zomboid/hordes/ScarcityControls.class",
+      "dev/zomboid/hordes/ScarcityPanel.class",
+      "dev/zomboid/hordes/WorldTuning.class"
+    ],
+    "added": [
+      "assets/zomboid_hordes/lang/de_de.json",
+      "dev/zomboid/hordes/CorpseBalance35.class"
+    ]
+  },
+  "remains": {
+    "changed": [
+      "dev/zomboid/remains/ZombieRemainsLoot.class",
+      "dev/zomboid/remains/delivery/NpcCorpses.class"
+    ],
+    "added": [
+      "dev/zomboid/remains/CorpseBridge35.class",
+      "dev/zomboid/remains/EquipmentCapture35.class"
+    ]
+  }
+}
