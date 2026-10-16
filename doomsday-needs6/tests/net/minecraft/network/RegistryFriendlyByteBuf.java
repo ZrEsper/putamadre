@@ -1,0 +1,1 @@
+package net.minecraft.network;public class RegistryFriendlyByteBuf{java.util.List<Integer> values=new java.util.ArrayList<>();int index;public Object writeInt(int n){values.add(n);return this;}public int readInt(){return values.get(index++);}}

@@ -1,3 +1,7 @@
+## Doomsday .6: necesidades con X, baños automáticos y alambre
+
+[Descargar ZIP directo](distribuciones/Zombies-Poldo-Doomsday-6-Necesidades-Banos.zip). Un reemplazo de Doomsday .5: aviso cada diez minutos, X para hacerlo donde estás o uso automático al acercarte al inodoro; aplazamiento único, partículas, sonidos y regeneración II en baño. Baño portátil con colocación corregida, colchón con tres lanas y alambre crafteable que daña criaturas y causa sangrado inferior con FirstAid. [Guía y recetas](doomsday-needs6/GUIA.txt). 64 comprobaciones con APIs simuladas; prueba dentro de Minecraft pendiente.
+
 ## Higiene de cadáveres, torretas y pantalla de inconsciencia
 
 [Descargar ZIP directo](distribuciones/Zombies-Poldo-Torretas-Inconsciente-Digital-Higiene.zip). Cuatro reemplazos: Remains .14 con moscas, náuseas, vómito y suciedad; torretas .3 con 0,8 s de adquisición y 0,5 s entre tiros; FirstAid 3.6.5 con pantalla negra y desfibrilador propio; Fracture .5 con menor exposición digital. Incluye integración de agua con Homeostatic/TAN sin consumo doble. [Guía sencilla](recovery-digital6/GUIA.txt). 681 controles de lógica y prueba del shader con OpenGL por software; prueba dentro de Minecraft pendiente.

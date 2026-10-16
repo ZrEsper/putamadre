@@ -1,0 +1,1 @@
+package net.minecraft.world.level.block;import dev.zomboid.decor.needs.Checks.State;public class Blocks{public static final Block REDSTONE_BLOCK=new Block();public static class Block{public State defaultBlockState(){return new State("redstone");}}}

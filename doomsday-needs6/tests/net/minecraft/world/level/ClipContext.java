@@ -1,0 +1,1 @@
+package net.minecraft.world.level;import net.minecraft.world.phys.Vec3;public class ClipContext{public final Vec3 end;public ClipContext(Vec3 s,Vec3 e,Block b,Fluid f,Object p){end=e;}public enum Block{COLLIDER}public enum Fluid{NONE}}

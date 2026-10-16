@@ -1,0 +1,83 @@
+DOOMSDAY .6 — NECESIDADES, BAÑOS, COLCHÓN Y ALAMBRE
+Minecraft NeoForge 1.21.1
+
+INSTALAR
+Cierra el juego/servidor y guarda una copia del mundo.
+Quita el JAR anterior de doomsday_decoration de mods y pon el .6 de este ZIP.
+Hazlo en el servidor y en todos los clientes. No pongas ambos JAR a la vez.
+Conserva tus demás mods: FirstAid actual, Remains .14, Homeostatic, TAN, etc.
+
+CÓMO JUGAR
+Cada 10 minutos de juego en supervivencia aparece una necesidad, alternando
+pichi y caca. Los menús no detienen el contador si el servidor sigue activo.
+El aviso dice: pulsa X para hacerlo aquí o acércate a un inodoro.
+X es la tecla predeterminada; puedes cambiarla en Controles > Doomsday.
+No hay que hacer clic al llegar al baño: empieza automáticamente al estar
+junto a él (aproximadamente 1,6 bloques), con el camino visual despejado.
+El urinario solo sirve para pichi. Inodoro y baño portátil sirven para ambos.
+También puedes hacer clic derecho en el baño cuando lo necesitas.
+
+Tienes 2 minutos para llegar. Para aguantar, abre el chat con T y pulsa
+[Aguantar 2 minutos más]. Reinicia el plazo a 2 minutos una sola vez.
+Si agotas el plazo, el jugador empieza donde esté. No se teletransporta al baño.
+Cada acción dura 10 segundos de juego y muestra el porcentaje.
+Al hacer caca se obliga a agacharse durante la acción, sin saltar.
+Las partículas salen delante/detrás del cuerpo y siguen su orientación actual;
+caen por gravedad. Incluye sonidos de agua, deposición, descarga y cortes.
+En el suelo, la caca deja el bloque decorativo existente si hay sitio libre;
+puedes romperlo. No sustituye cofres ni bloques ocupados.
+
+Al terminar, se reinicia la necesidad y aparece un mensaje de alivio.
+Si terminas junto al mismo inodoro/baño portátil, ganas Regeneración II
+por 10 segundos. Alejarte o romper el baño durante la acción quita ese premio.
+Usar un baño sin necesitarlo no da regeneración.
+
+Los tiempos usan ticks (20 TPS). El servidor decide el estado y finalización.
+Dormir o estar derribado con el FirstAid actual pausa el sistema; morir cancela
+la acción. Creativo/espectador están exentos. El contador se guarda, no avanza
+con el jugador desconectado y no se reinicia al volver a entrar.
+Si sales a mitad de la acción, volverás con la necesidad pendiente.
+
+RECETAS
+Colchón abandonado (mat): tres lanas de cualquier color en una fila.
+Permite dormir como las camas de Doomsday; no cambia el punto de reaparición.
+
+Inodoro (closestool): 6 ladrillos de arcilla, así:
+ B B
+ BBB
+  B
+
+Baño portátil (wc): 5 tablones, 1 inodoro y 3 lingotes de hierro:
+ PPP
+ PTP
+ III
+P = tablón, T = inodoro, I = hierro.
+Colócalo en un espacio libre de 3 x 3 y 3 bloques de alto. El anclaje corregido
+lo eleva para que la base no choque con el suelo. El modelo original se conserva.
+
+Urinario (urinepool): 5 ladrillos:
+ B B
+ BBB
+
+Alambre de púas (wiremesh): 4 hierros y 2 hilos dan 4 piezas:
+ IHI
+ IHI
+H = hilo. Una pieza se puede convertir en sus otras variantes y recuperar
+la original, sin multiplicar la cantidad. JEI muestra las recetas.
+
+ALAMBRE
+Daña a jugadores y criaturas vivas que toquen su forma real, incluidos zombis
+y mutantes. Hace 2 puntos de daño por segundo (1 corazón), sujeto a las
+resistencias y reglas de daño de cada entidad/mod. El contacto continuado mata.
+Tocar varias piezas a la vez no multiplica ese daño.
+Los jugadores sufren sangrado nativo de FirstAid en una pierna: requiere venda.
+El daño rechazado, por ejemplo por creativo, no inicia el sangrado.
+
+CONSERVA
+Almacenamiento, generadores, aires acondicionados, recetas de refuerzos,
+modelos/texturas y el resto de funciones de tu Doomsday .5.
+
+COMPROBACIÓN
+Lógica de servidor, tecla X, sincronización, recetas, tiempos y bytecode
+comprobados con APIs simuladas. Sonidos mono y sus duraciones verificados.
+Pendiente de prueba visual, auditiva y multijugador dentro de Minecraft.

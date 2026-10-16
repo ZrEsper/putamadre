@@ -1,0 +1,1 @@
+package ichttt.mods.firstaid.fracture;import java.util.*;import ichttt.mods.firstaid.api.enums.EnumPlayerPart;public class Bleeding{public static final List<EnumPlayerPart> parts=new ArrayList<>();public static void start(Object p,EnumPlayerPart part){parts.add(part);}}

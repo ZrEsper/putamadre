@@ -1,0 +1,1 @@
+package net.minecraft.client;public class KeyMapping{public final int key;public int pending;public KeyMapping(String name,int key,String category){this.key=key;}public boolean consumeClick(){if(pending>0){pending--;return true;}return false;}}

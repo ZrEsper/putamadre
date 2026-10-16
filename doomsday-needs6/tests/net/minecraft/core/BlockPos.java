@@ -1,0 +1,1 @@
+package net.minecraft.core;public record BlockPos(int x,int y,int z){public int getX(){return x;}public int getY(){return y;}public int getZ(){return z;}public BlockPos offset(int x,int y,int z){return new BlockPos(this.x+x,this.y+y,this.z+z);}public BlockPos below(){return offset(0,-1,0);}}

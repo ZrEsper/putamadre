@@ -1,0 +1,10 @@
+{
+  "checks": [
+    "NEEDS_BATHROOM_WIRE_CHECKS=41",
+    "NEEDS_CLIENT_NETWORK_CHECKS=12",
+    "NATIVE_HOOK_AND_SIDE_CHECKS=11",
+    "Recipes, mono Foley durations, ES/EN/DE text, original climate/storage/boards and models/textures unchanged"
+  ],
+  "minecraft_runtime_tested": false,
+  "method": "Production server adapter, cycle, toilet search, wire damage and packet codec with Minecraft/NeoForge/FirstAid API doubles; JVM -Xverify:all"
+}

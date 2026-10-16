@@ -1,0 +1,1 @@
+package net.minecraft.network.chat;public class Component{public String key;public Style style;public Component(String k){key=k;}public static Component translatable(String key,Object...args){return new Component(key);}public Component setStyle(Style s){style=s;return this;}}

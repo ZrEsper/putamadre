@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.registries;public record RegisterEvent(String key){public Object getRegistryKey(){return key;}public void register(Object k,Object id,java.util.function.Supplier<?> s){s.get();}}

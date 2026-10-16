@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.client.event;import net.minecraft.core.particles.*;import net.minecraft.client.particle.*;public class RegisterParticleProvidersEvent{public <T extends ParticleOptions>void registerSpriteSet(ParticleType<T> t,ParticleEngine.SpriteParticleRegistration<T> r){}}
