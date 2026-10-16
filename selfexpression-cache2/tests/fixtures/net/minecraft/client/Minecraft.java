@@ -1,0 +1,1 @@
+package net.minecraft.client;import net.minecraft.client.model.geom.EntityModelSet;public class Minecraft{public static final Minecraft INSTANCE=new Minecraft();public EntityModelSet models=new EntityModelSet();public static Minecraft getInstance(){return INSTANCE;}public EntityModelSet getEntityModels(){return models;}}

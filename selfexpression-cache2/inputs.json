@@ -1,0 +1,14 @@
+{
+  "selfexpression": {
+    "file": "selfexpression-2.22a-neoforge-1.21.1-armor-cache.1.jar",
+    "sha256": "88f39199cd2ad03a192d9bf772c9229d6efb00c53ef228585d1f5cbd803d217d"
+  },
+  "emf": {
+    "file": "entity_model_features-3.3.11-1.21-neoforge.jar",
+    "sha256": "8337d6b71c8e026efef852a5905f46631cbeb2620ae16fd200264a9230932296"
+  },
+  "etf": {
+    "file": "entity_texture_features-7.2.5-1.21-neoforge.jar",
+    "sha256": "2276e6c23e4ebb0c26aac68e5c7b547bc31bdaff0ee60beb9b5060de878fe91c"
+  }
+}

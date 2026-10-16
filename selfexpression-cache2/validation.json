@@ -1,0 +1,20 @@
+{
+  "input_sha256": "88f39199cd2ad03a192d9bf772c9229d6efb00c53ef228585d1f5cbd803d217d",
+  "output": "selfexpression-2.22a-neoforge-1.21.1-shared-armor-cache.2.jar",
+  "sha256": "63111d46dd72fdf5fd57d4cdd49d145deda3721b1daa45ddfe027ec6dcddd84c",
+  "changed_classes": 876,
+  "added": [
+    "net/mcreator/selfexpression/client/SharedArmorFactories.class",
+    "net/mcreator/selfexpression/client/SharedArmorModels.class"
+  ],
+  "native_factory_audit": [
+    "Native armor methods=876, unique geometries=5, previous bakes per full collection=1879",
+    "Geometry 0: 1 layer bakes per reload",
+    "Geometry 1: 3 layer bakes per reload",
+    "Geometry 2: 2 layer bakes per reload",
+    "Geometry 3: 2 layer bakes per reload",
+    "Geometry 4: 2 layer bakes per reload"
+  ],
+  "all_other_entries_byte_identical": true,
+  "minecraft_runtime_tested": false
+}

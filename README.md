@@ -1,3 +1,7 @@
+## Selfexpression .2: ropa y armaduras con cache compartida
+
+[Descargar ZIP directo](distribuciones/Zombies-Poldo-Selfexpression-Cache-2.zip). Corrige la construccion repetida de `modelcustom_model` que activa el limite de EMF: cinco geometrias compartidas, 10 horneados por recarga frente a 1.879 al recorrer todas las prendas. Sustituye solo Selfexpression .1; conserva ETF 7.2.5 y EMF 3.3.11. Texturas, items y recetas intactos. 876 metodos nativos comprobados antes/despues con APIs simuladas; prueba visual en Minecraft pendiente. [Instalacion y validacion](selfexpression-cache2/README.md).
+
 ## Sonido isometrico, disparos lejanos y Planks correctas
 
 [Descargar ZIP directo](distribuciones/Zombies-Poldo-Sonido-Lejano-Iso31-Planks5.zip). Iso .31 comparte los oidos del jugador con Sound Physics 1.5.1 para calcular paredes desde su habitacion. Tactical .4: disparos hasta 768 bloques sin silenciador y 128 con silenciador, atenuados por distancia. Doomsday .5: tres tablones dan seis refuerzos `board` (las Planks rugosas), con resistencia doble en ventanas/puertas. Tres reemplazos; conserva tus mods de sonido. [Instalacion sencilla](iso-audio31/GUIA.txt). Pruebas de logica y bytecode superadas; comprobacion auditiva en Minecraft pendiente.

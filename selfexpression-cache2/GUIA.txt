@@ -1,0 +1,24 @@
+SELFEXPRESSION - CORRECCION DE MODELOS .2
+
+1. Cierra Minecraft.
+2. En mods, quita Selfexpression armor-cache.1.
+3. Copia el unico JAR de este ZIP a mods.
+4. Conserva Entity Texture Features (ETF) y Entity Model Features (EMF).
+   No instales dos versiones de Selfexpression.
+
+En multijugador, reemplaza Selfexpression tambien en el servidor si lo usa.
+ETF y EMF siguen siendo mods del cliente.
+
+QUE CAMBIA
+Las prendas con la misma geometria reutilizan el modelo, en lugar de
+construirlo cientos de veces y hacer que EMF lo bloquee. Mantiene sus
+texturas, recetas, estadisticas y equipo. La cache se renueva al recargar
+recursos (por ejemplo, F3+T).
+
+COMPROBAR
+Prueba varias prendas, cascos y armaduras. Mira tambien un zombi equipado
+y un cadaver. No deberia reaparecer el error de EMF "model attempted
+creation more than 64 times" para selfexpression:modelcustom_model#main.
+
+Pruebas de codigo superadas. El aspecto en Minecraft aun no se ha probado.
+Esto no incluye la correccion de los filtros FirstAid/vision nocturna.

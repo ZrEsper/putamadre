@@ -1,0 +1,1 @@
+package net.minecraft.client.model;import net.minecraft.client.model.geom.ModelPart;public class HumanoidModel<T> extends EntityModel<T>{public ModelPart root;public boolean crouching;public HumanoidModel(ModelPart root){this.root=root;}}

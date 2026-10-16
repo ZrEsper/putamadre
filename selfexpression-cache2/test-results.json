@@ -1,0 +1,9 @@
+{
+  "checks": [
+    "BASELINE_NATIVE_ARMOR_CHECKS=10519; uniqueModels=876; initialBakes=1879",
+    "PATCHED_NATIVE_ARMOR_CHECKS=10522; uniqueModels=5; initialBakes=10",
+    "All 876 native model/limb maps identical before and after; original model class and every texture/item/recipe untouched"
+  ],
+  "minecraft_runtime_tested": false,
+  "method": "Actual 876 native item-extension methods plus actual Modelcustom_model constructor and ArmorCacheEpoch; Minecraft API doubles; original EMF repeated-layer guard simulated at its exact threshold; ASM BasicVerifier and JVM -Xverify:all"
+}
