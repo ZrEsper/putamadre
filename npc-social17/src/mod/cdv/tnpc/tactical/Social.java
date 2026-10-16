@@ -44,7 +44,7 @@ public final class Social {
   if(order.equals("follow")||order.equals("deliver")){String owner=s(tag(n),"soc_owner");Object p=owner.isEmpty()?null:c(world(n),"getPlayerByUUID",UUID.fromString(owner));if(p!=null&&!member(n,p))p=null;if(p!=null&&distance(n,p)>9){move(n,p,1.05);return;}c(c(n,"getNavigation"),"stop");if(p!=null&&order.equals("deliver")){deliver(n,p);c(tag(n),"putString","soc_order","follow");}return;}
   if(order.equals("stay")){c(c(n,"getNavigation"),"stop");return;}
   if(order.equals("cook")){Tasks.cook(n,m,now);return;}if(order.equals("craft")){if(now>=m.nextWork){m.nextWork=now+200;if(!Tasks.craft(n)){Tasks.scan(n,m,"craft");if(m.work!=null)Tasks.reach(n,m.work);}}return;}if(order.equals("clean")){Tasks.clean(n,m,now);return;}if(order.equals("farm")){Tasks.farm(n,m,now);return;}
-  
+
   if(order.equals("patrol")){if(now>=m.pathAt){m.pathAt=now+100;double a=(now/100%8)*Math.PI/4;move(n,num(c(tag(n),"getDouble","soc_home_x"))+Math.cos(a)*10,num(c(tag(n),"getDouble","soc_home_y")),num(c(tag(n),"getDouble","soc_home_z"))+Math.sin(a)*10,.95);}return;}
   m.occupied=false;Tasks.idle(n,m,now);
  }
