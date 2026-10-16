@@ -13,6 +13,7 @@ checks=[result,run('java','-Xverify:all','-cp',str(r/'build/test')+':'+cp+':'+st
 checks.append(run('java','-Xverify:all','-cp',str(r/'build/test')+':'+cp+':'+str(r/'build/api'),'mod.cdv.tnpc.tactical.JobChecks'))
 checks.append(run('java','-Xverify:all','-cp',str(r/'build/test')+':'+cp+':'+str(r/'build/api'),'mod.cdv.tnpc.tactical.AdvancedChecks'))
 checks.append(run('java','-Xverify:all','-cp',str(r/'build/test')+':'+cp+':'+str(r/'build/api'),'mod.cdv.tnpc.tactical.Conversation19Checks'))
+checks.append(run('java','-Xverify:all','-cp',str(r/'build/test')+':'+cp+':'+str(r/'build/api'),'mod.cdv.tnpc.tactical.Social21Checks'))
 checks.append(run('java','-Xverify:all','-cp',str(r/'build/test')+':'+cp+':'+str(r/'build/api'),'mod.cdv.tnpc.tactical.Survivor20Checks'))
 checks.append(run('java','-Xverify:all','-cp',str(r/'build/test')+':'+cp+':'+str(r/'build/api'),'mod.cdv.tnpc.tactical.CorpseAppearance20Checks'))
 for kind,info in report.items():

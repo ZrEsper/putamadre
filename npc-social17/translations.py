@@ -95,6 +95,10 @@ for topic,(es,en) in ambient.items():
   for v,line in enumerate(lines):labels[loc]['dialog.soc.ambient.'+topic+'.'+str(v)]=line
 labels['es_es']['soc.treat.need']='Lleva una venda o un apósito en una mano y permanece cerca.'
 labels['en_us']['soc.treat.need']='Hold a bandage or plaster in either hand and stay nearby.'
+for loc in ['es_es','en_us']:
+ en=loc=='en_us';labels[loc]['soc.button.apologize']='Apologize / make peace' if en else 'Disculparme / hacer las paces'
+ for topic,es,text in [('apology','Te escucho, pero todavía no confío en ti. Ayúdame y demuéstralo.','I hear you, but trust takes time. Help me and prove it.'),('apology_wait','Necesito tiempo. No insistas con la misma disculpa.','I need time. Repeating an apology will not fix this.'),('forgiven','De acuerdo, dejemos de pelear. No vuelvas a hacerlo.','All right. Let us stop fighting. Do not do that again.'),('grudge','No he olvidado lo que hiciste. Si quieres paz, tendrás que ganártela.','I remember what you did. You will have to earn peace.'),('distrust','He oído cosas sobre ti. Mantén las manos donde pueda verlas.','I have heard things about you. Keep your hands where I can see them.')]:
+  for v in range(4):labels[loc]['dialog.soc.'+topic+'.'+str(v)]=text if en else es
 labels['es_mx']=labels['es_es'].copy()
 (r/'translations.json').write_text(json.dumps(labels,ensure_ascii=False,indent=2)+'\n')
 print('Dialogue variants per language:',sum(k.startswith('dialog.soc.')for k in labels['es_es']))

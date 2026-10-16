@@ -3,7 +3,7 @@ import mod.cdv.tnpc.tactical.SocialR;import net.minecraft.client.Minecraft;impor
 /** Three tones, six choices at a time, and an opaque dialogue panel without background blur. */
 public final class ConversationScreen extends Screen {
  final String[] data;int tone,offset;static int lastTone,lastOffset;
- static final String[][] CHOICES={{"greet","promise","joke","feeling","favor_ask","favor_give","gift","heal","invite"},{"weather","day","time","past","horde","rumor","favor_help","favor_clean","inventory","orders","depot"},{"insult","threaten","leave","dismiss"},{"follow","stay","patrol","farm","scavenge","clean","craft","cook","deliver","free"}};
+ static final String[][] CHOICES={{"greet","apologize","promise","joke","feeling","favor_ask","favor_give","gift","heal","invite"},{"weather","day","time","past","horde","rumor","favor_help","favor_clean","inventory","orders","depot"},{"insult","threaten","leave","dismiss"},{"follow","stay","patrol","farm","scavenge","clean","craft","cook","deliver","free"}};
  public ConversationScreen(String value){super(Component.translatable("soc.screen.title"));data=value.split("\n",-1);tone=lastTone;offset=lastOffset;}
  public static void open(String value){if(value.length()>8192||value.split("\n",-1).length!=16)return;Minecraft mc=Minecraft.getInstance();if(mc.player==null)return;if(mc.screen instanceof ConversationScreen old){lastTone=old.tone;lastOffset=old.offset;}else{lastTone=0;lastOffset=0;}mc.setScreen(new ConversationScreen(value));}
  static Component tr(String key,Object...args){return Component.translatable(key,args);}void page(int t,int o){lastTone=t;lastOffset=o;Minecraft.getInstance().setScreen(new ConversationScreen(String.join("\n",data)));}

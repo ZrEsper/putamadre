@@ -1,8 +1,8 @@
 {
   "npc": {
     "input_sha256": "319b0df981d0af93a97b880fc4ee406854d9fe7cfa406260f29a6120d7cfcf17",
-    "output": "tacznpcs-2.1.0-1.21.1-tactical.20-identities-reactions.jar",
-    "sha256": "8727881e21af945d8825c452377e79e8eb0c9fe61c7a0b6943f1c088769ed2e4",
+    "output": "tacznpcs-2.1.0-1.21.1-tactical.21-conversation-defense.jar",
+    "sha256": "9e04b16aea26ca07fb982a715cb5588c74672b251be29f18dc96f5ed7fb32122",
     "changed": [
       "META-INF/neoforge.mods.toml",
       "assets/tacznpcs/lang/en_us.json",
@@ -89,6 +89,11 @@
       "mod/cdv/tnpc/tactical/Expression20$Motion.class",
       "mod/cdv/tnpc/tactical/Expression20.class",
       "mod/cdv/tnpc/tactical/Identity20.class",
+      "mod/cdv/tnpc/tactical/Interaction21.class",
+      "mod/cdv/tnpc/tactical/InteractionEntity21.class",
+      "mod/cdv/tnpc/tactical/InteractionInput21.class",
+      "mod/cdv/tnpc/tactical/InteractionMouse21.class",
+      "mod/cdv/tnpc/tactical/InteractionSpecific21.class",
       "mod/cdv/tnpc/tactical/NpcClinic20.class",
       "mod/cdv/tnpc/tactical/NpcDeath20.class",
       "mod/cdv/tnpc/tactical/NpcMedicine$PlayerTreatment.class",

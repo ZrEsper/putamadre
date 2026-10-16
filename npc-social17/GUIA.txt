@@ -1,10 +1,40 @@
-SUPERVIVIENTES 20.1 — IDENTIDAD, REACCIONES, LESIONES Y REANIMACION
+NOVEDADES 21 — HABLAR, DEFENDERSE Y HACER LAS PACES
+Clic derecho mirando al NPC: abre la conversación con arma, melee o cura
+sin consumir el objeto. Para curar usa la opción Curar del diálogo.
+Un NPC derribado abre directamente su pantalla médica.
+En una conversación segura se acerca hasta unos 2,5 bloques y se queda.
+Cierra el diálogo para que vuelva al trabajo; si hay enemigos, la seguridad
+va primero. La sesión caduca tras 60 segundos sin acciones.
+Los sonidos de voz tienen volumen reducido y no se repiten en cada pregunta.
+Los pasivos también se defienden, incluso desarmados. Una reputación mala
+no vuelve inmune al jugador a las represalias. Traicionar a un compañero
+permite que se defienda aunque sea de tu facción. Testigos con línea de visión
+a ambos, hasta 24 bloques, defienden a compañeros de facción y otros pacíficos.
+No responden contra espectadores ni creativos. Mantienen la persecución
+personal durante 2 minutos (víctima) o 5 minutos (testigos), sin ignorar
+las amenazas próximas. La confianza negativa puede prolongar la hostilidad.
+Amigable > Disculparme / hacer las paces permite reparar la relación.
+Una disculpa por minuto; la personalidad cambia cuánto confía. La tregua
+personal llega al recuperar confianza 0. Regalos, favores y curas siguen
+ayudando. Cada testigo conserva su propia relación: disculparte con uno
+no borra lo que saben los demás ni restaura tu reputación global.
+La reputación global ahora participa en lo que conocen de ti, ayuda médica,
+desconfianza e intimidación, además de las condiciones para reclutar.
+Corregida la actualización del registro de muertes en el cliente.
+
+PAQUETE PEQUEÑO: reemplaza solo TacZ NPCs por .21 en cliente y servidor.
+Conserva FirstAid 3.6.9, Integration 1.7.9, FactionFriction .16 y Corpse .4.
+No mezcles dos versiones del mismo mod. El ZIP completo incluye esos archivos.
+Verificado con APIs simuladas, pruebas de interfaz y bytecode. No se ha
+probado dentro de Minecraft: prueba primero una copia de tu mundo.
+
+SUPERVIVIENTES 21 — IDENTIDAD, REACCIONES, LESIONES Y REANIMACION
 Minecraft NeoForge 1.21.1
 
 INSTALAR
 Cierra Minecraft y el servidor. Haz una copia del mundo.
 Sustituye los JAR anteriores de estos cuatro mods, sin duplicados:
-- TacZ NPCs .19 -> .20 identities-reactions.
+- TacZ NPCs .16/.17/.18/.19/.20 -> .21 conversation-defense.
 - First Aid 3.6.8 -> 3.6.9 injured-only-body-care.
 - Zomboid Integration 1.7.8 -> 1.7.9 injured-body-care.
 - Corpse player-equipment-slots.2 -> npc-survivor-cargo.4 (tambien reemplaza .3).

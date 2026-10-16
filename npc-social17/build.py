@@ -8,11 +8,11 @@ for info in inputs.values():assert sha(Path('base')/info['file'])==info['sha256'
 for n,h in json.loads((root/'spas-reload18/inputs.json').read_text())['tools'].items():assert sha(tools/(n+'.jar'))==h
 for d in ['build/tool','build/api','build/npc','build/clan','build/aid','build/integration','build/corpse','output']:Path(d).mkdir(parents=True,exist_ok=True)
 run(*ecj,'-cp',asm,'-d','build/tool','Patch.java');run(*ecj,'-d','build/api',*Path('api').rglob('*.java'));reports={}
-for kind,src,out in [('npc','src','tacznpcs-2.1.0-1.21.1-tactical.20-identities-reactions.jar'),('clan','src-clans','factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.16-npc-companions.jar'),('aid','src-aid','firstaid-1.21.1-ZOMBOID-v3.6.9-injured-only-body-care.jar'),('integration','src-integration','zomboid-integration-1.7.9-neoforge-1.21.1-injured-body-care.jar'),('corpse','src-corpse','corpse-neoforge-1.21.1-1.1.13-npc-survivor-cargo.4.jar')]:
+for kind,src,out in [('npc','src','tacznpcs-2.1.0-1.21.1-tactical.21-conversation-defense.jar'),('clan','src-clans','factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.16-npc-companions.jar'),('aid','src-aid','firstaid-1.21.1-ZOMBOID-v3.6.9-injured-only-body-care.jar'),('integration','src-integration','zomboid-integration-1.7.9-neoforge-1.21.1-injured-body-care.jar'),('corpse','src-corpse','corpse-neoforge-1.21.1-1.1.13-npc-survivor-cargo.4.jar')]:
  base=Path('base')/inputs[kind]['file'];sources=list(Path(src).rglob('*.java'));sources+=list(Path('src-client').rglob('*.java'))if kind=='npc'else list(Path('src-aid-client').rglob('*.java'))if kind=='aid'else[];run(*ecj,'-cp','build/api:'+str(base)+':'+str(Path('base')/inputs['aid']['file']),'-d','build/'+kind,*sources);p=Path('output')/out;run('java','-cp','build/tool:'+asm,'Patch',base,p,'build/'+kind,kind)
  with zipfile.ZipFile(p)as z:entries={n:z.read(n)for n in z.namelist()}
  metadata='META-INF/neoforge.mods.toml'
- versions={'npc':'2.1.0-tactical.20-social','clan':'1.8.0R-zomboid-clans.16','aid':'1.3.3+neoforge1.21.1-zomboid-v3.6.9-body-care','integration':'1.7.9-injured-body-care','corpse':'1.21.1-1.1.13'}
+ versions={'npc':'2.1.0-tactical.21-social','clan':'1.8.0R-zomboid-clans.16','aid':'1.3.3+neoforge1.21.1-zomboid-v3.6.9-body-care','integration':'1.7.9-injured-body-care','corpse':'1.21.1-1.1.13'}
  if metadata in entries and kind!='corpse':entries[metadata]=re.sub(r'(?m)^version\s*=\s*"[^"\n]*"','version="'+versions[kind]+'"',entries[metadata].decode(),count=1).encode()
  if kind=='aid':
   for loc,text in [('es_es','Chat: tu tecla de chat | Esc: menú del juego'),('es_mx','Chat: tu tecla de chat | Esc: menú del juego'),('en_us','Chat: your chat key | Esc: game menu')]:
