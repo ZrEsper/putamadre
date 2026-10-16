@@ -1,5 +1,9 @@
 ## Loot .45: ropa garantizada, policías y tres niveles de torreta
 
+## Linternas con baterías y variantes
+
+[Descargar ZIP directo: Flashlight .4 y SurvivorCreator .34](distribuciones/Zombies-Poldo-Linternas-Baterias-4.zip). Equipo inicial encendido con batería de 10 minutos; cambio manual, barra de carga y variantes de expedición, económica y táctica. [Guía y recetas](flashlight-battery4/GUIA.txt).
+
 [Descargar ZIP directo](distribuciones/Zombies-Poldo-Loot-45-Torretas-3-Niveles.zip). Cuatro reemplazos: Hordes .45, Remains .15, Quietly .17 y Turrets .4. Finaliza el loot después de todas las rutas, limita una herramienta por familia, dispersa objetos y completa ropa profesional. Policías con arma corta/bate y mochila; mutantes con más suministros respetando el panel. Torretas de 50/100/160 de vida, 7/13/20 bloques y 3/1,6/0,8 s entre tiros, con niveles guardados y apariencias nativas distintas. [Guía y recetas](loot-turrets45/GUIA.txt) · [Perfil Spark: Xaero destaca en el hilo gráfico](loot-turrets45/RENDIMIENTO.txt). 418 comprobaciones con APIs simuladas; prueba en Minecraft pendiente.
 
 ## Doomsday .6: necesidades con X, baños automáticos y alambre

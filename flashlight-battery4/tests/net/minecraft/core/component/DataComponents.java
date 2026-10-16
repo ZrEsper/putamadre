@@ -1,0 +1,1 @@
+package net.minecraft.core.component;public class DataComponents{public static final String CUSTOM_DATA="data";}

@@ -1,0 +1,64 @@
+LINTERNAS Y BATERIAS — MINECRAFT NEOFORGE 1.21.1
+
+INSTALACION
+Cierra el juego. En mods, quita las versiones anteriores de Flashlight y
+SurvivorCreator y coloca los dos JAR de este ZIP. No dejes dos versiones del
+mismo mod. Instala ambos tambien en el servidor si juegas con uno.
+Los mundos, profesiones, curacion al subir de nivel y ajustes se conservan.
+
+COMO SE USA
+El equipo inicial de un personaje nuevo trae la linterna encendida en la
+mano secundaria, con una bateria completa de 10 minutos. No vuelve a
+rellenarse al reconectar.
+Clic derecho con la linterna: encender o apagar.
+Agachado + clic derecho con la linterna: cambiar la bateria.
+Si esta vacia, un clic derecho busca una bateria en las 36 casillas normales
+del inventario, la consume y enciende la luz. No busca dentro de mochilas.
+No cambia pilas automaticamente al agotarse: se apaga y te avisa.
+Una bateria parcialmente usada se descarta al cambiarla. Si esta llena,
+no gastas otra bateria por error. El modo creativo tambien consume carga.
+La barra bajo el objeto muestra la carga. Pasa el cursor para ver el tiempo.
+El tiempo se gasta solo encendida y sostenida en una mano. Apagada, guardada,
+tirada o con el jugador desconectado no gasta bateria. Cada objeto conserva
+su carga aunque se cambie de mano, se apague o lo recoja otro jugador.
+
+BATERIA
+En cualquier mesa: 1 lingote de cobre + 1 polvo de redstone + 1 lapislazuli,
+sin un orden especial, dan una bateria. Sirve para las cuatro linternas.
+
+VARIANTES
+Basica: 10 minutos, alcance maximo de 25 bloques.
+Expedicion: 20 minutos, alcance maximo de 25 bloques.
+Economica: 30 minutos, alcance maximo de 12 bloques.
+Tactica: 10 minutos, alcance maximo de 40 bloques.
+El alcance no atraviesa paredes y depende de la direccion de la mirada.
+Las variantes comparten el modelo original; tienen nombre y comportamiento
+propios. Son objetos registrados distintos, visibles en JEI y en creativo.
+Las linternas fabricadas empiezan apagadas y vacias: carga una bateria.
+Estos cambios afectan a las linternas de mano, no a los cascos, gafas ni al
+farol antiguo del mod. Los filtros de vision nocturna de otros mods no cambian.
+
+RECETAS (mesa de 3 x 3; punto = hueco vacio)
+Basica: C=cobre, G=cristal, I=hierro, R=redstone
+ . C G
+ . I R
+ . I .
+Expedicion: I=hierro, C=cobre, R=redstone, F=linterna basica APAGADA
+ I C I
+ R F R
+ I C I
+Economica: C=cobre, G=oro, R=redstone, F=linterna basica APAGADA
+ . C .
+ G F G
+ . R .
+Tactica: D=diamante, I=hierro, L=cristal, F=linterna basica APAGADA
+ . D .
+ I F I
+ . L .
+Al mejorar una linterna se consume la anterior. Usa una vacia: la carga de
+la anterior no pasa a la nueva. Las recetas se muestran tambien en JEI.
+
+Mensajes y controles traducidos al espanol, ingles y aleman.
+Verificado con pruebas de carga, agotamiento, cambio de manos, transferencia,
+equipo inicial y conservacion de funciones nativas. No probado en un cliente
+real de Minecraft desde este entorno.

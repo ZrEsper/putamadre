@@ -1,0 +1,1 @@
+package net.minecraft.world.item;import java.util.*;public interface DefaultHolder{Map<Object,Object> storage();default Object getOrDefault(Object k,Object d){return storage().getOrDefault(k,d);}}

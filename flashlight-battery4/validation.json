@@ -1,0 +1,14 @@
+{
+  "flash": {
+    "input": "flashlight-5.1-neoforge-1.21.1-safe-light.3-stable-beam.jar",
+    "input_sha256": "252f8a595829d7629323fec6ea08cbcda3cc8d4c7b184f630486c265e4a56740",
+    "output": "flashlight-5.1-neoforge-1.21.1-batteries-variants.4.jar",
+    "sha256": "89413deb7f1b3f65904870454d927b0a195716c86093fc9208682ba6a8fba5d6"
+  },
+  "survivor": {
+    "input": "survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v33-level-heal-toggle.jar",
+    "input_sha256": "86e5d9da7730f7f654350cfc97a1a59947b4a4c640a93cca39b3480af23bc7db",
+    "output": "survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v34-flashlight-battery.jar",
+    "sha256": "07f9d118dcff2e621c9b29d067a86cc9bbaa913304454a322d37f2ebce277af4"
+  }
+}

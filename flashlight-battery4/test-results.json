@@ -1,0 +1,6 @@
+{
+  "checks": "FLASHLIGHT_BATTERY_CHECKS=78",
+  "native_hook_checks": 9,
+  "native_assets_and_survivor_features_preserved": true,
+  "minecraft_runtime_tested": false
+}

@@ -1,0 +1,1 @@
+package net.minecraft.core.registries;import net.minecraft.resources.ResourceLocation;public class BuiltInRegistries{public static final Registry ITEM=new Registry(),SOUND_EVENT=new Registry();public static class Registry{public Object get(ResourceLocation id){return id;}public Object getKey(Object item){return item;}}}
