@@ -1,0 +1,1 @@
+package net.minecraft.client.particle;import net.minecraft.core.particles.ParticleOptions;public class ParticleEngine{public interface SpriteParticleRegistration<T extends ParticleOptions>{ParticleProvider<T> create(SpriteSet s);}}

@@ -1,0 +1,1 @@
+package homeostatic.common.attachments;public class WaterData{public static boolean available=true;public static java.util.Optional<?> getData(Object p){return available?java.util.Optional.of(((dev.zomboid.remains.hygiene.HygieneChecks.Player)p).water):java.util.Optional.empty();}}

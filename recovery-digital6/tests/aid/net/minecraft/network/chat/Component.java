@@ -1,0 +1,1 @@
+package net.minecraft.network.chat;public class Component{public String key;public Object[] args;public static MutableComponent translatable(String key,Object...args){MutableComponent c=new MutableComponent();c.key=key;c.args=args;return c;}public static MutableComponent literal(String text){return translatable(text);}}

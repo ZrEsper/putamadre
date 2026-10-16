@@ -1,0 +1,24 @@
+{
+  "renderer": "llvmpipe (LLVM 19.1.7, 256 bits)",
+  "actual_glsl_compiled_and_rendered": true,
+  "bright_scene": {
+    "old": {
+      "shadow_wall_sky_green_channel": [
+        0.2888887539505959,
+        0.5212013781070709,
+        0.6333207190036774
+      ],
+      "mean_green": 0.4835148242127616
+    },
+    "new": {
+      "shadow_wall_sky_green_channel": [
+        0.0694501556456089,
+        0.1570818729698658,
+        0.21699054762721062
+      ],
+      "mean_green": 0.1489213232016482
+    }
+  },
+  "checks": "Digital filter reduces bright-scene luminance while retaining ordered shadow/wall/sky contrast",
+  "minecraft_runtime_tested": false
+}

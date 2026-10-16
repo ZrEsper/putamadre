@@ -1,3 +1,7 @@
+## Higiene de cadáveres, torretas y pantalla de inconsciencia
+
+[Descargar ZIP directo](distribuciones/Zombies-Poldo-Torretas-Inconsciente-Digital-Higiene.zip). Cuatro reemplazos: Remains .14 con moscas, náuseas, vómito y suciedad; torretas .3 con 0,8 s de adquisición y 0,5 s entre tiros; FirstAid 3.6.5 con pantalla negra y desfibrilador propio; Fracture .5 con menor exposición digital. Incluye integración de agua con Homeostatic/TAN sin consumo doble. [Guía sencilla](recovery-digital6/GUIA.txt). 681 controles de lógica y prueba del shader con OpenGL por software; prueba dentro de Minecraft pendiente.
+
 ## Vision con N estable y maximo 200 impactos durante 85 segundos
 
 [Descargar ZIP directo](distribuciones/Zombies-Poldo-Vision-N-200-Marcas-85s.zip). FirstAid 3.6.4 y Fracture Point NVG .4 coordinan el filtro: el casco conserva su vision nativa digital/termica/nocturna mientras el visor esta abajo, evitando las recargas cruzadas con el composite medico. Tactical .5 conserva solo los 200 impactos mas recientes y los elimina a los 85 segundos. Tres reemplazos; conserva TaCZ .18. [Guia y pruebas](vision-impact5/README.md). Conflicto original reproducido y corregido con metodos nativos y APIs simuladas; prueba visual/FPS en Minecraft pendiente.

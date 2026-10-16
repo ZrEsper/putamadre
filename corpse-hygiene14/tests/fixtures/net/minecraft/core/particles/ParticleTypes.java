@@ -1,0 +1,1 @@
+package net.minecraft.core.particles;public class ParticleTypes{public static final Object BLOCK="block";}

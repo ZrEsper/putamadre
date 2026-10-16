@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.registries;public class RegisterEvent{public Object key;public java.util.Map<Object,Object> entries=new java.util.HashMap<>();public RegisterEvent(Object key){this.key=key;}public Object getRegistryKey(){return key;}public void register(Object k,Object id,java.util.function.Supplier<?> s){entries.put(id,s.get());}}

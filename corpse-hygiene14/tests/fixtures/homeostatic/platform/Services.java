@@ -1,0 +1,1 @@
+package homeostatic.platform;public class Services{public static final Platform PLATFORM=new Platform();public static class Platform{public int syncs;public void syncWaterData(Object player,Object water){syncs++;}}}

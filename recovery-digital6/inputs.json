@@ -1,0 +1,14 @@
+{
+  "turret": {
+    "file": "tacz_turrets-neoforge-3.0.0-1.21.1-doomsday-scrap-sounds.2.jar",
+    "sha256": "3c3c83ea191f5b1b25dab7c96dcb3a0183d6c07c56fb01d988257dfbe7230546"
+  },
+  "aid": {
+    "file": "firstaid-1.21.1-ZOMBOID-v3.6.4-nvg-filter-priority.jar",
+    "sha256": "bb7d366e01cfaf99891ba75936e1ac8d5f5f6bef7d2f88121d3f929b4c28bb04"
+  },
+  "nvg": {
+    "file": "fracturepoint-1.21.1-3.0.0-PT2-nvg-filter-priority.4.jar",
+    "sha256": "4a3b7470641492e229ac70e1fa0092ba0a36723dadddb93fd490fc9bc40e6f31"
+  }
+}

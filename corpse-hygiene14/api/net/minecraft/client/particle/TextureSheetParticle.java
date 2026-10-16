@@ -1,0 +1,1 @@
+package net.minecraft.client.particle;public class TextureSheetParticle extends Particle{protected float quadSize;protected TextureSheetParticle(net.minecraft.client.multiplayer.ClientLevel l,double x,double y,double z,double vx,double vy,double vz){}protected void setSpriteFromAge(SpriteSet s){}}

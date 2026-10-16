@@ -1,0 +1,1 @@
+package net.minecraft.client.particle;public class Particle{protected double xd,yd,zd;protected int lifetime,age;protected boolean hasPhysics;protected float rCol,gCol,bCol;public void tick(){age++;}}

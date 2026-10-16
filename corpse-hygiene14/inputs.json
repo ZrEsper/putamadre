@@ -1,0 +1,18 @@
+{
+  "remains": {
+    "file": "zombie-remains-loot-1.6.1-neoforge-1.21.1-military-nvg-mythic.13-electronic-scrap.jar",
+    "sha256": "b597d93ed7c5f10ff4c5cee57a1ef0e622111bb9341db0638eb7e21e34f8f777"
+  },
+  "sound": {
+    "file": "Vomiting sound effect.ogg",
+    "sha256": "422961d4b518dcaf7e5b83af1b755e3df8e19162d3dee4d0bbce17ec681e2b87"
+  },
+  "homeostatic": {
+    "file": "homeostatic-1.21.1-neoforge-2.12.0.0-doomsday-ac.1.jar",
+    "sha256": "b10703acff894ea7e00e49b02d3cca75a94c4b86de8315d4add09e3fb7d30e99"
+  },
+  "tan": {
+    "file": "ToughAsNails-neoforge-1.21.1-10.1.0.13-doomsday-ac.1.jar",
+    "sha256": "a850aaa819924b532a338f5f2d7d9fd98461f52ecd8079dc3f2f2816c8fb2454"
+  }
+}

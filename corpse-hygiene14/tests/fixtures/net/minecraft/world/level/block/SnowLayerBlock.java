@@ -1,0 +1,1 @@
+package net.minecraft.world.level.block;public class SnowLayerBlock{public net.minecraft.world.level.block.state.BlockBehaviour.Properties properties;public SnowLayerBlock(net.minecraft.world.level.block.state.BlockBehaviour.Properties p){properties=p;}public Object defaultBlockState(){return new dev.zomboid.remains.hygiene.HygieneChecks.BlockState("vomit",false);}}

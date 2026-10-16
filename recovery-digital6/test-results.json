@@ -1,0 +1,9 @@
+{
+  "checks": [
+    "TURRET_TIMING_CHECKS=120",
+    "BLACKOUT_UI_AND_NATIVE_INVENTORY_CHECKS=21",
+    "Original turret native fire/LOS, sounds, scrap recipes and assets unchanged; ES/EN/MX blackout translations complete"
+  ],
+  "minecraft_runtime_tested": false,
+  "method": "Production turret Link with generator/event API doubles; actual blackout Screen with GUI API doubles, real Assist.defib inventory bridge and packet-count checks; JVM -Xverify:all"
+}

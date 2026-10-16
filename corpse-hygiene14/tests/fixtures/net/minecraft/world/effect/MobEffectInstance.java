@@ -1,0 +1,1 @@
+package net.minecraft.world.effect;public class MobEffectInstance{public int duration,amplifier;public MobEffectInstance(Object effect,int duration,int amplifier,boolean ambient,boolean particles,boolean icon){this.duration=duration;this.amplifier=amplifier;}public int getDuration(){return duration;}public int getAmplifier(){return amplifier;}}

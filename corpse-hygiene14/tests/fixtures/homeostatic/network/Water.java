@@ -1,0 +1,1 @@
+package homeostatic.network;public class Water{public int level=20;public float saturation=5;public int getWaterLevel(){return level;}public float getWaterSaturationLevel(){return saturation;}public float getWaterExhaustionLevel(){return 0;}public void setWaterLevel(int v){level=v;}public void setWaterSaturationLevel(float v){saturation=v;}}

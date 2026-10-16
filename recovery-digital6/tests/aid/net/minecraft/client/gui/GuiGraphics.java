@@ -1,0 +1,1 @@
+package net.minecraft.client.gui;import net.minecraft.network.chat.Component;public class GuiGraphics{public int fillColor;public java.util.List<String> keys=new java.util.ArrayList<>();public void fill(int a,int b,int c,int d,int color){fillColor=color;}public void drawCenteredString(Font f,Component c,int x,int y,int color){keys.add(c.key);}}

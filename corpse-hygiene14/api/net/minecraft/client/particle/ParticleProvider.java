@@ -1,0 +1,1 @@
+package net.minecraft.client.particle;import net.minecraft.core.particles.ParticleOptions;public interface ParticleProvider<T extends ParticleOptions>{Particle createParticle(T t,net.minecraft.client.multiplayer.ClientLevel l,double x,double y,double z,double vx,double vy,double vz);}

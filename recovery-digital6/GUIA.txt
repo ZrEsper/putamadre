@@ -1,0 +1,56 @@
+ZOMBIES POLDO — CUATRO REEMPLAZOS — Minecraft NeoForge 1.21.1
+
+INSTALAR
+1. Cierra el juego y el servidor. Haz una copia del mundo.
+2. En mods, quita las versiones anteriores de tacz_turrets, firstaid,
+   fracturepoint y zombie-remains-loot. Copia los cuatro JAR de este ZIP.
+3. Haz lo mismo en todos los clientes y en el servidor.
+Conserva Homeostatic y ToughAsNails doomsday-ac.1, TaCZ .18, Tactical .5
+(200 marcas/85 segundos), Isometrica .31 y los demas mods existentes.
+No mezcles dos versiones del mismo mod.
+
+CADAVERES, MOSCAS Y VOMITO
+Incluye los restos de Zombie Remains Loot .13 enviado y los cuerpos reales
+de Corpse. El loot y equipo originales se conservan.
+Un cuerpo de al menos 60 segundos atrae moscas. Hay un presupuesto visual
+por mundo para evitar llenar la pantalla; todos los cuerpos cuentan igual.
+Con dos o mas cuerpos a 6 bloques, tras 60 segundos aparece nausea ligera;
+a los 90 segundos llega el primer vomito. Se repite cada 60 segundos.
+Una vez enfermo, dejar un solo cuerpo mantiene el malestar. Limpia todos
+los cuerpos cercanos o alejate: tras 10 segundos sin cuerpos se limpia el efecto.
+Cada vomito quita 2 iconos de comida y 2 de agua (4 puntos de cada uno).
+Homeostatic es prioritario y sincroniza el agua; TAN solo actua como alternativa,
+sin cobrar dos veces. No baja agua por debajo de cero.
+Se oye el audio de vomito enviado y caen particulas verdes. Queda una capa
+verde fina en el suelo: rompela con cualquier objeto/mano. No desaparece sola.
+La mancha no produce enfermedad; la causa son los cuerpos. El sistema no
+borra automaticamente cadaveres ni sus inventarios. Creativo/espectador exentos.
+Los tiempos son ticks de juego a 20 TPS; con lag transcurren mas despacio.
+
+TORRETA
+Al detectar o volver a detectar un objetivo espera 0,8 segundos (16 ticks).
+Cada disparo queda separado al menos 0,5 segundos (10 ticks); un arma con
+recarga o cerrojo mas lento conserva su demora. Cambiar objetivo, perder
+vision o energia reinicia la adquisicion. Conserva energia real de generador,
+alcance 20 bloques, linea de vision y sonidos de movimiento/deteccion.
+
+VISION DIGITAL
+Menor exposicion, brillo y resplandor para distinguir paredes y sombras.
+Conserva filtros propios del mod, activacion manual con N y bateria de 15 min.
+
+INCONSCIENCIA
+Pantalla negra con texto segun idioma del juego (espanol/ingles).
+Solo aparece Levantarse si tienes un desfibrilador propio en inventario/manos.
+Un clic solicita la reanimacion al servidor; conserva su duracion y consumo.
+No concede objetos, curacion inmediata ni repite solicitudes automaticamente.
+Si no responde, se permite reintentar manualmente tras 5 segundos.
+Sin desfibrilador puedes esperar ayuda. Sigue existiendo el limite nativo de
+100 segundos de estado critico: esperar no garantiza sobrevivir.
+La inyeccion cura la infeccion por separado; el desfibrilador no la elimina.
+
+VERIFICACION
+120 controles de torreta, 21 de pantalla/inventario y 540 de higiene.
+Bytecode verificado con JVM; integraciones probadas con APIs simuladas.
+Shader original y nuevo compilados/renderizados con OpenGL por software:
+menor exposicion y contraste conservado en escena sintetica.
+PENDIENTE: prueba visual, auditiva y multijugador dentro de Minecraft.

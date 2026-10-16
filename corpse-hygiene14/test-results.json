@@ -1,0 +1,8 @@
+{
+  "checks": [
+    "HYGIENE_SERVER_POLICY_CHECKS=540",
+    "Original loot, NPC, military equipment, electronic scrap and player-zombie exclusion classes byte-identical; single native tick/constructor hookup; custom flies and green thin-layer assets validated"
+  ],
+  "minecraft_runtime_tested": false,
+  "method": "Production exposure policy, content registration and server hygiene adapter using original reflection helper with Minecraft/entity/world/hydration API doubles; counts food, water, sync packets, sound, particles, placement and cleanup; JVM -Xverify:all"
+}

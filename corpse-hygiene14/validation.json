@@ -1,0 +1,34 @@
+{
+  "input_sha256": "b597d93ed7c5f10ff4c5cee57a1ef0e622111bb9341db0638eb7e21e34f8f777",
+  "output": "zombie-remains-loot-1.6.1-neoforge-1.21.1-corpse-hygiene.14.jar",
+  "sha256": "8730e85ce57cec950969bd64520d2c8cfed8521f12e903a4344bf44d561e559a",
+  "changed": [
+    "assets/zombie_remains_loot/lang/en_us.json",
+    "assets/zombie_remains_loot/lang/es_es.json",
+    "assets/zombie_remains_loot/sounds.json",
+    "dev/zomboid/remains/ZombieRemainsLoot.class"
+  ],
+  "added": [
+    "assets/zombie_remains_loot/blockstates/vomit.json",
+    "assets/zombie_remains_loot/lang/es_mx.json",
+    "assets/zombie_remains_loot/models/block/vomit.json",
+    "assets/zombie_remains_loot/particles/corpse_fly.json",
+    "assets/zombie_remains_loot/sounds/vomit.ogg",
+    "assets/zombie_remains_loot/textures/block/vomit.png",
+    "assets/zombie_remains_loot/textures/particle/corpse_fly0.png",
+    "assets/zombie_remains_loot/textures/particle/corpse_fly1.png",
+    "data/zombie_remains_loot/loot_table/blocks/vomit.json",
+    "dev/zomboid/remains/hygiene/Exposure$Result.class",
+    "dev/zomboid/remains/hygiene/Exposure.class",
+    "dev/zomboid/remains/hygiene/Hydration.class",
+    "dev/zomboid/remains/hygiene/Hygiene$Body.class",
+    "dev/zomboid/remains/hygiene/Hygiene$PlayerState.class",
+    "dev/zomboid/remains/hygiene/Hygiene.class",
+    "dev/zomboid/remains/hygiene/HygieneContent.class",
+    "dev/zomboid/remains/hygiene/HygieneRegistry.class",
+    "dev/zomboid/remains/hygiene/client/FlyParticle$Provider.class",
+    "dev/zomboid/remains/hygiene/client/FlyParticle.class",
+    "dev/zomboid/remains/hygiene/client/HygieneClient.class"
+  ],
+  "minecraft_runtime_tested": false
+}
