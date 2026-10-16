@@ -1,0 +1,104 @@
+ZOMBIES POLDO — LOOT .45 Y TRES NIVELES DE TORRETA
+Minecraft NeoForge 1.21.1
+
+INSTALACIÓN
+1. Cierra juego y servidor. Guarda una copia del mundo.
+2. Quita las versiones anteriores de estos cuatro mods de tu carpeta mods:
+   zombie-remains-loot, zomboid-hordes, quietly y tacz_turrets.
+3. Abre la carpeta mods de este ZIP. Copia sus CUATRO JAR dentro de tu carpeta
+   mods habitual. No copies el ZIP ni una carpeta mods dentro de otra.
+4. Hazlo también en todos los clientes y en el servidor.
+Conserva Doomsday .6, FirstAid, cámara isométrica, TaCZ, Tactical y demás mods.
+
+HERRAMIENTAS Y ORDEN DEL LOOT
+Un cadáver o contenedor de loot puede tener un hacha y un pico, pero no varios
+objetos de la misma familia de herramienta. La diferencia de material o desgaste
+no permite colar otra del mismo tipo. Se limita también la cantidad a una.
+Quietly lo comprueba antes de insertar sus premios y al terminar la búsqueda.
+Así no vuelve a añadir varios ejemplares después de generar el cadáver.
+Los objetos quedan dispersos por los huecos de todo el inventario.
+Los almacenes marcados como colocados por jugadores y los Corpse de jugadores
+mantienen su protección. La carga propia de NPC se conserva.
+
+ROPA
+Los nuevos cadáveres de zombis incluyen la ropa de su profesión, con prendas
+para torso y piernas. Un casco de médico o unas botas ya no hacen que falte
+el resto del vestido. Se conserva el equipo real que llevaba el zombi.
+Si una prenda configurada no existe en el pack, se usa ropa de cuero teñida
+según el oficio. No todos reciben armadura militar: ropa y armadura rara son
+cosas distintas. Incluso una profesión sin traje completo recibe ropa básica.
+Se reconoce la profesión guardada, nombre, equipo y nombres de skin/metadatos;
+no se analizan los píxeles de una textura que solo conoce el cliente.
+Los cuerpos anteriores se reparan una sola vez al abrirlos: reciben ropa según
+la profesión guardada, o civil si no se puede recuperar. No se rellenan de nuevo
+cada vez que los abres. El contenido que ya hayas saqueado no se restaura.
+
+POLICÍAS
+Los nuevos policías siempre tienen un arma corta de TaCZ o un bate de Les Raisins,
+y una mochila del mod instalado. El bate usa su índice real de Les Raisins,
+con sus datos; no un ID de objeto inexistente.
+Las armas generadas van descargadas. Si hay pistola/revólver, existe un 35 % de
+probabilidad de que venga munición compatible: de 2 a 6 balas. El bate no crea
+munición. El equipo que poseía realmente la entidad se mantiene.
+El peso por defecto de policía pasa a 5, frente a 3 de militar: son pesos del
+sorteo de profesiones, no porcentajes absolutos. Se pueden cambiar en Avanzado.
+Se migra una sola vez el valor antiguo por defecto; después tus cambios quedan.
+
+MUTANTES
+Los nuevos cadáveres conservan su loot específico y añaden suministros útiles:
+como referencia de valores base, 3 vendas, 2 apósitos, 1 antibiótico preventivo,
+3 lingotes de hierro, 3 de cobre y 2 chatarras electrónicas, si están instalados.
+El bonus escala con cantidad/perfil y medicinas/materiales del panel: Desolado
+da menos y poner la categoría o cantidad a cero desactiva ese extra.
+Las vendas/apósitos son material de tratamiento; el antibiótico funciona según
+FirstAid. No es una curación automática al abrir el cuerpo.
+Se conserva la probabilidad existente de la inyección contra infección.
+También se reconoce al Screamer y otros mutants_l4d2 para crear su cadáver
+mutante. Esta corrección de loot no cambia su vida, velocidad ni IA.
+Las moscas, náuseas, vómito y manchas de Remains .14 se conservan.
+
+TORRETAS
+Nivel I — Básica:     50 de vida,  7 bloques, 3 segundos entre disparos.
+Nivel II — Reforzada: 100 de vida, 13 bloques, 1,6 segundos entre disparos.
+Nivel III — Avanzada: 160 de vida, 20 bloques, 0,8 segundos entre disparos.
+Las torretas ya colocadas pasan a básica, conservando su proporción de vida.
+La básica usa el aspecto configurado; reforzada usa el modelo/textura Industrial
+y avanzada Tactical, con sus imágenes nativas para cada estado de funcionamiento.
+El nivel se guarda, se sincroniza con los clientes y se conserva al recogerla.
+
+Las tres necesitan energía real de generador Doomsday y consumen 100 FE por tiro.
+Sin energía no disparan; una pared impide disparar. Conservan sonidos y daño
+recibido de zombis/mutantes. Cada adquisición de objetivo espera al menos 0,8 s.
+El intervalo por nivel es mínimo: un arma de cerrojo/recarga más lenta lo respeta.
+Los tiempos se miden en ticks: si baja el TPS, transcurren más despacio.
+
+CÓMO MEJORARLAS
+Recoge tu torreta agachado con clic derecho, como antes. Deja espacio para el
+arma y su contenido. Usa la torreta como ingrediente y vuelve a colocar la mejora.
+La receta de la básica se mantiene. JEI muestra todas.
+
+Reforzada:
+ IGI
+ STS
+ IRI
+T = torreta básica, I = lingote de hierro, G = lingote de oro,
+S = chatarra electrónica, R = redstone.
+
+Avanzada:
+ DGD
+ STS
+ IRI
+T = torreta reforzada, D = diamante, G = bloque de oro,
+S = chatarra electrónica, I = lingote de hierro, R = bloque de redstone.
+
+RENDIMIENTO
+Lee RENDIMIENTO.txt: el perfil identifica sobre todo coste del mapa Xaero
+en el hilo gráfico. No es una medición de FPS ganados por este parche.
+
+VERIFICACIÓN
+418 comprobaciones con APIs simuladas y verificación de bytecode.
+Se ejecutó el método original de bonus de Quietly: generó 12 herramientas;
+el mismo caso corregido conserva un hacha y un pico, con el resto de loot igual.
+Se probaron las 37 profesiones y 100 cadáveres policiales, persistencia,
+protección de inventarios, los tres niveles y rutas nativas de recogida/guardado.
+Prueba visual, auditiva y multijugador dentro de Minecraft pendiente.

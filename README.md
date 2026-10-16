@@ -1,3 +1,7 @@
+## Loot .45: ropa garantizada, policías y tres niveles de torreta
+
+[Descargar ZIP directo](distribuciones/Zombies-Poldo-Loot-45-Torretas-3-Niveles.zip). Cuatro reemplazos: Hordes .45, Remains .15, Quietly .17 y Turrets .4. Finaliza el loot después de todas las rutas, limita una herramienta por familia, dispersa objetos y completa ropa profesional. Policías con arma corta/bate y mochila; mutantes con más suministros respetando el panel. Torretas de 50/100/160 de vida, 7/13/20 bloques y 3/1,6/0,8 s entre tiros, con niveles guardados y apariencias nativas distintas. [Guía y recetas](loot-turrets45/GUIA.txt) · [Perfil Spark: Xaero destaca en el hilo gráfico](loot-turrets45/RENDIMIENTO.txt). 418 comprobaciones con APIs simuladas; prueba en Minecraft pendiente.
+
 ## Doomsday .6: necesidades con X, baños automáticos y alambre
 
 [Descargar ZIP directo](distribuciones/Zombies-Poldo-Doomsday-6-Necesidades-Banos.zip). Un reemplazo de Doomsday .5: aviso cada diez minutos, X para hacerlo donde estás o uso automático al acercarte al inodoro; aplazamiento único, partículas, sonidos y regeneración II en baño. Baño portátil con colocación corregida, colchón con tres lanas y alambre crafteable que daña criaturas y causa sangrado inferior con FirstAid. [Guía y recetas](doomsday-needs6/GUIA.txt). 64 comprobaciones con APIs simuladas; prueba dentro de Minecraft pendiente.

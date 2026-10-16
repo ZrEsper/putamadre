@@ -1,0 +1,10 @@
+{
+  "checks": [
+    "PROFESSION_FINAL_LOOT_CHECKS=344 POLICE_GUNS=60 BATS=40 AMMO=20",
+    "QUIET_NATIVE_BEFORE_AFTER_CHECKS=9 ORIGINAL_TOOLS=12 PATCHED_TOOLS=2",
+    "TURRET_THREE_TIER_CHECKS=50",
+    "NATIVE_PIPELINE_HOOK_CHECKS=15",
+    "Native hygiene, player/NPC inventory protection and turret sound/geometry/texture assets preserved; upgrade recipes consume previous tier and all visual states exist"
+  ],
+  "minecraft_runtime_tested": false
+}

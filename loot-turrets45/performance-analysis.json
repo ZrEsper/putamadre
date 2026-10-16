@@ -1,0 +1,34 @@
+{
+  "profile_sha256": "ad7fbfd1dbaf5fc7d20d35e4d9fe877d8b7dd7916129c03ba6f1de699bb13abc",
+  "log_sha256": "654e0b9eb99a376e506513ec2b9eaac39693e68dab4a6acdbf62275bd8cca695",
+  "capture_seconds": 49.481,
+  "sampled_thread": "Render thread",
+  "sampled_thread_ms": 49380.0,
+  "server_snapshot": {
+    "tps_1m": 20.000904040862647,
+    "mspt_mean_1m": 6.379136333333333,
+    "mspt_p95_1m": 7.5121,
+    "mspt_max_1m": 267.4116,
+    "entities": 178
+  },
+  "render_thread_percent": {
+    "xaero_combined_non_nested": 21.68,
+    "xaero_worldmap_render_tick": 13.13,
+    "xaero_minimap_render": 5.68,
+    "entity_model_features_non_nested": 4.58,
+    "sound_physics_non_nested": 0.02,
+    "hordes_client_non_nested": 0.28,
+    "glfw_swap_buffers_inclusive": 5.88,
+    "fps_limit_wait_inclusive": 5.01
+  },
+  "log_findings": [
+    "Isolated server overload notices, not sustained loss of TPS in sampler snapshot",
+    "Essential screenshot save file locked, followed by screenshot checksum NullPointerException",
+    "Sodium unoptimized BufferBuilder warning; no frame cost assigned from log alone"
+  ],
+  "limits": [
+    "Client CPU samples and server metrics snapshot; not a server-thread profile",
+    "Percentages are sampled thread time, not predicted FPS gain or GPU usage",
+    "No Minecraft runtime test performed for replacement JARs"
+  ]
+}

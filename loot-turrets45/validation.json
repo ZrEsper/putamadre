@@ -1,0 +1,75 @@
+{
+  "hordes": {
+    "input_sha256": "77ae8e6d8eb864bc7f151b51b66328d7578c76b838ec15d7d9f6dcb428d6f8f0",
+    "output": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.45-profession-police-mutant-loot.jar",
+    "sha256": "12b7c6aea7b187930969ecde95946c039e86be7e37161abe1e73c76ebf3a5602",
+    "changed": [
+      "assets/zomboid_hordes/lang/de_de.json",
+      "assets/zomboid_hordes/lang/en_us.json",
+      "assets/zomboid_hordes/lang/es_es.json",
+      "assets/zomboid_hordes/lang/es_mx.json",
+      "dev/zomboid/hordes/CorpseProfessions.class",
+      "dev/zomboid/hordes/ProfessionCatalog.class",
+      "dev/zomboid/hordes/WorldTuning.class"
+    ],
+    "added": [
+      "dev/zomboid/hordes/CorpseFinish45.class"
+    ],
+    "minecraft_runtime_tested": false
+  },
+  "remains": {
+    "input_sha256": "8730e85ce57cec950969bd64520d2c8cfed8521f12e903a4344bf44d561e559a",
+    "output": "zombie-remains-loot-1.6.1-neoforge-1.21.1-profession-clothes-scatter.15.jar",
+    "sha256": "80d7de90760327bf44c1d9b4f3930f2d5478d7defeceebbf20afc7ee1b607ab2",
+    "changed": [
+      "dev/zomboid/remains/CorpseBridge35.class",
+      "dev/zomboid/remains/CorpseMeta31.class",
+      "dev/zomboid/remains/ZombieRemainsLoot$Corpse.class",
+      "dev/zomboid/remains/ZombieRemainsLoot.class",
+      "dev/zomboid/remains/delivery/NpcCorpses.class"
+    ],
+    "added": [
+      "dev/zomboid/remains/LootFinish15.class"
+    ],
+    "minecraft_runtime_tested": false
+  },
+  "quiet": {
+    "input_sha256": "d8cdb9c125dc9d14bc9a683c2c6425b37adb28aa76355d809ad14d347e56d499",
+    "output": "quietly-1_0_0-cooldown-v17-final-loot-tools-scatter.jar",
+    "sha256": "5432599b06aaaa723531c655bf49bf397f9fcb0124ae776e223c3d1f7aaf4aa8",
+    "changed": [
+      "dev/zomboid/scavenging/Loot.class"
+    ],
+    "added": [
+      "dev/zomboid/scavenging/FinalLoot17$View.class",
+      "dev/zomboid/scavenging/FinalLoot17.class"
+    ],
+    "minecraft_runtime_tested": false
+  },
+  "turret": {
+    "input_sha256": "4edcb11e28f54d3ff906bc445655f934ee0ace1e6f719f1b23881c3b00bbbe46",
+    "output": "tacz_turrets-neoforge-3.0.0-1.21.1-three-tiers.4.jar",
+    "sha256": "d6047437ef10638e44709e1e59da093bb088f2ee1c7c51c32e2c3441d3fe80c5",
+    "changed": [
+      "assets/tacz_turrets/lang/de_de.json",
+      "assets/tacz_turrets/lang/en_us.json",
+      "assets/tacz_turrets/lang/es_es.json",
+      "com/entropy/tacz_turrets/client/model/TurretModel.class",
+      "com/entropy/tacz_turrets/item/TurretItem.class",
+      "com/entropy/tacz_turrets/turret/TurretEntity.class",
+      "dev/zomboid/turretpower/Link.class"
+    ],
+    "added": [
+      "assets/tacz_turrets/lang/es_mx.json",
+      "assets/tacz_turrets/models/item/turret_advanced.json",
+      "assets/tacz_turrets/models/item/turret_reinforced.json",
+      "data/tacz_turrets/advancement/recipes/turret_advanced.json",
+      "data/tacz_turrets/advancement/recipes/turret_reinforced.json",
+      "data/tacz_turrets/recipe/turret_advanced.json",
+      "data/tacz_turrets/recipe/turret_reinforced.json",
+      "dev/zomboid/turretpower/Tier4.class",
+      "dev/zomboid/turretpower/TierEvents4.class"
+    ],
+    "minecraft_runtime_tested": false
+  }
+}

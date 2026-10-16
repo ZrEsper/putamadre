@@ -1,0 +1,1 @@
+package net.minecraft.world.item;public class Item implements net.minecraft.world.level.ItemLike{public String id;public Item(String id){this.id=id;}public int getDefaultMaxStackSize(){return id.contains("_axe")||id.contains("_pickaxe")?1:64;}}

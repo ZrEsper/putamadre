@@ -1,0 +1,18 @@
+{
+  "remains": {
+    "file": "zombie-remains-loot-1.6.1-neoforge-1.21.1-corpse-hygiene.14.jar",
+    "sha256": "8730e85ce57cec950969bd64520d2c8cfed8521f12e903a4344bf44d561e559a"
+  },
+  "hordes": {
+    "file": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.44-electronic-scrap-barrels.jar",
+    "sha256": "77ae8e6d8eb864bc7f151b51b66328d7578c76b838ec15d7d9f6dcb428d6f8f0"
+  },
+  "quiet": {
+    "file": "quietly-1_0_0-cooldown-v16-player-storage-protection.jar",
+    "sha256": "d8cdb9c125dc9d14bc9a683c2c6425b37adb28aa76355d809ad14d347e56d499"
+  },
+  "turret": {
+    "file": "tacz_turrets-neoforge-3.0.0-1.21.1-reaction08-interval05.3.jar",
+    "sha256": "4edcb11e28f54d3ff906bc445655f934ee0ace1e6f719f1b23881c3b00bbbe46"
+  }
+}

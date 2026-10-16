@@ -1,0 +1,49 @@
+package dev.zomboid.hordes;
+import java.util.*;import java.nio.file.*;
+/** Completes ownership/profession invariants after either panel generation path. */
+public final class CorpseFinish45{
+ static Object c(Object o,String n,Object...a){return ZoneReflection.call(o,n,a);}static Object g(Object o,String n){return ZoneReflection.get(o,n);}static boolean empty(Object o){return o==null||Boolean.TRUE.equals(c(o,"isEmpty"));}static Object copy(Object o){return c(o,"copy");}static Object stack(String id){return CorpseProfessions.stack(id);}static String id(Object s){return CorpseProfessions.itemId(s);}
+ static String slot(Object s){String n=id(s).toLowerCase(Locale.ROOT);if(n.endsWith("_helmet"))return"head";if(n.endsWith("_chestplate")||n.contains("_shirt"))return"chest";if(n.endsWith("_leggings")||n.endsWith("_pants"))return"legs";if(n.endsWith("_boots"))return"feet";Object item=c(s,"getItem");try{return c(item,"getEquipmentSlot").toString().toLowerCase(Locale.ROOT);}catch(RuntimeException ignored){return"";}}
+ static void add(List<Object> out,Object s){if(empty(s))return;for(Object other:out)if(CorpseBalance35.same(other,s))return;out.add(copy(s));}
+ static boolean hasSlot(List<Object> out,String wanted){return out.stream().anyMatch(s->slot(s).equals(wanted));}
+ static void clothes(List<Object> out,Object entity,int profession){if(entity!=null)for(Object s:CorpseProfessions.armor(entity))add(out,s);String role=ProfessionCatalog.IDS[profession];String configured=CorpseProfessions.settings().getProperty(role+".clothes",ProfessionCatalog.CLOTHES[profession]);for(String name:configured.split(","))if(!name.isBlank())add(out,stack(name));
+  String prefix=role.equals("police_officer")?"police":Set.of("doctor","nurse","paramedic").contains(role)?"doctor":Set.of("military","veteran").contains(role)?"survivors_armor":"";
+  if(!prefix.isEmpty())for(String part:new String[]{"helmet","chestplate","leggings","boots"}){Object s=stack("selfexpression:"+prefix+"_"+part);if(!empty(s)&&!hasSlot(out,slot(s)))add(out,s);}
+  // A profession may only define a hat or boots; body clothing is still guaranteed.
+  for(String part:new String[]{"chestplate","leggings"}){String wanted=part.equals("chestplate")?"chest":"legs";if(hasSlot(out,wanted))continue;Object s=stack("minecraft:leather_"+part);if(empty(s))continue;int color=role.equals("police_officer")?0x273e69:Set.of("doctor","nurse","paramedic").contains(role)?0xe5e8e3:Set.of("construction_worker","electrician","welder").contains(role)?0xc87527:Set.of("military","veteran","hunter","park_ranger").contains(role)?0x52623a:0x6d6258;
+   Object component=g(ZoneReflection.type("net.minecraft.core.component.DataComponents"),"DYED_COLOR");c(s,"set",component,color(color));add(out,s);}
+ }
+ public static int recognize(int original,Object entity){StringBuilder names=new StringBuilder();Object name=c(entity,"getCustomName");if(name!=null)names.append(c(name,"getString"));Object tag=c(entity,"getPersistentData");for(String key:new String[]{"zh31_profession","profession","Profession","skin","Skin","outfit","Outfit"})names.append(' ').append(c(tag,"getString",key));for(Object item:CorpseProfessions.armor(entity))names.append(' ').append(id(item));String text=names.toString().toLowerCase(Locale.ROOT);if(text.contains("police")||text.contains("policía")||text.contains("policia")||text.contains("sheriff"))return CorpseProfessions.index("police_officer");return original;}
+ static Object color(int rgb){try{return ZoneReflection.type("net.minecraft.world.item.component.DyedItemColor").getConstructor(int.class,boolean.class).newInstance(rgb,true);}catch(ReflectiveOperationException e){throw new IllegalStateException(e);}}
+ static boolean handgun(Object profile){if(profile==null)return false;Object index=c(ZoneReflection.type("dev.zomboid.remains.GunAccess"),"index",g(profile,"id"));if(index==null)return false;String type=String.valueOf(c(index,"getType")).toLowerCase(Locale.ROOT);return type.contains("pistol")||type.contains("revolver");}
+ static Object profileSource;static List<Object> cachedHandguns=List.of();
+ static Object policeWeapon(Object world){List<?> profiles;try{profiles=(List<?>)c(ZoneReflection.type("dev.zomboid.remains.GunAccess"),"profiles");}catch(RuntimeException noPack){profiles=List.of();}if(profileSource!=profiles){List<Object> result=new ArrayList<>();for(Object p:profiles)if(handgun(p))result.add(p);cachedHandguns=result;profileSource=profiles;}List<Object> handguns=cachedHandguns;
+  if(!handguns.isEmpty()&&CorpseBalance35.pick(world,3)!=0)return c(ZoneReflection.type("dev.zomboid.remains.GunAccess"),"create",handguns.get(CorpseBalance35.pick(world,handguns.size())),0);
+  try{for(Object index:(Iterable<?>)c(ZoneReflection.type("me.xjqsh.lrtactical.api.LrTacticalAPI"),"getMeleeIndexes")){String name=String.valueOf(c(index,"getId"));if(name.endsWith(":baseball_bat")||name.endsWith(":police_baton"))return c(index,"createItemStack");}}catch(RuntimeException optionalMissing){}
+  for(String n:new String[]{"lrtactical:baseball_bat","lrtactical:bat","lookinsharp:baseball_bat"}){Object s=stack(n);if(!empty(s))return s;}
+  // Modpack fallback: no generated rifle replaces the requested sidearm.
+  if(!handguns.isEmpty())return c(ZoneReflection.type("dev.zomboid.remains.GunAccess"),"create",handguns.get(CorpseBalance35.pick(world,handguns.size())),0);
+  Object bat=stack("minecraft:wooden_sword");if(!empty(bat))c(bat,"set",g(ZoneReflection.type("net.minecraft.core.component.DataComponents"),"CUSTOM_NAME"),c(ZoneReflection.type("net.minecraft.network.chat.Component"),"translatable","item.zomboid_hordes.police_baton",new Object[0]));return bat;
+ }
+ static Object backpack(){for(String n:new String[]{"sophisticatedbackpacks:backpack","travelersbackpack:standard","selfexpression:backpack_chestplate","minecraft:bundle"}){Object s=stack(n);if(!empty(s))return s;}return null;}
+ public static void finish(Object corpse,Object world,Object event){Object entity=c(event,"getEntity");if(CorpseBalance35.npc(entity)){ZoneReflection.set(corpse,"lootOwned15",true);return;}Object inv=g(corpse,"inventory");List<Object> out=CorpseBalance35.items(inv);int role=CorpseProfessions.recognize(entity);if(role<0)role=CorpseProfessions.index(String.valueOf(g(corpse,"profession31")));if(role<0&&CorpseBalance35.military(entity,CorpseBalance35.equipment(entity)))role=CorpseProfessions.index("military");if(role<0)role=CorpseProfessions.index("unemployed");if(ProfessionCatalog.IDS[role].equals("nude"))role=CorpseProfessions.index("unemployed");ZoneReflection.set(corpse,"profession31",ProfessionCatalog.IDS[role]);clothes(out,entity,role);
+  if(ProfessionCatalog.IDS[role].equals("police_officer")){
+   // Generated police loadout is a single sidearm/bat; actual owned equipment stays.
+   List<Object> owned=CorpseBalance35.equipment(entity);out.removeIf(s->(LootNerf.kind(s)==1&&!CorpseProfessions.tool(s)||LootNerf.kind(s)==3)&&owned.stream().noneMatch(o->CorpseBalance35.same(o,s)));Object gun=policeWeapon(world);add(out,gun);
+   add(out,backpack());if(gun!=null&&CorpseBalance35.pick(world,100)<35){Object ammo=CorpseBalance35.ammo(gun,world,0);if(!empty(ammo)){c(ammo,"setCount",2+CorpseBalance35.pick(world,5));add(out,ammo);}}
+  }
+  if(CorpseBalance35.mutant(corpse,entity)){
+   // Additional useful rewards, once at corpse creation; no search-time refill.
+   reward(out,world,"medicinas",new String[]{"firstaid:bandage@3","firstaid:plaster@2","firstaid:prophylactic_antibiotic@1"});
+   reward(out,world,"materiales",new String[]{"iron_ingot@3","copper_ingot@3","tacz_turrets:electronic_scrap@2"});
+  }
+  CorpseBalance35.write(inv,out,world);
+ }
+ static double scale(String category){Map<String,Double> settings=WorldTuning.snapshot();double count=settings.getOrDefault("cadaveres_cantidad",1.);double rolls=WorldTuning.flag("cadaveres_loot_todos")?settings.getOrDefault("panel_cadaveres_pilas",4.)/4.:1.;double baseline=category.equals("medicinas")?20.:5.;double frequency=settings.getOrDefault("cadaveres_"+category,baseline)/baseline;return Math.max(0,Math.min(3,count*rolls*frequency));}
+ static void reward(List<Object> out,Object world,String category,String[] entries){double multiplier=scale(category);if(multiplier<=0)return;for(String entry:entries){String[] parts=entry.split("@");int n=SimpleSettings.rolls(Integer.parseInt(parts[1])*multiplier,CorpseProfessions.roll(world));if(n>0)grant(out,stack(parts[0]+"@"+Math.min(64,n)));}}
+ static void grant(List<Object> out,Object s){if(empty(s))return;for(Object other:out)if(CorpseBalance35.same(other,s)){c(other,"setCount",Math.max(((Number)c(other,"getCount")).intValue(),((Number)c(s,"getCount")).intValue()));return;}out.add(copy(s));}
+ public static void repair(Object corpse,Object world){Object inv=g(corpse,"inventory");List<Object> out=CorpseBalance35.items(inv);int role=CorpseProfessions.index(String.valueOf(g(corpse,"profession31")));if(role<0||ProfessionCatalog.IDS[role].equals("nude"))role=CorpseProfessions.index("unemployed");clothes(out,null,role);CorpseBalance35.write(inv,out,world);}
+ /** Only migrate unchanged old default weights. Manual admin values survive. */
+ static final Set<Path> migrated=new HashSet<>();
+ public static void migrate(){Path file=(Path)g(WorldTuning.class,"file");if(file==null)return;Path marker=file.resolveSibling("zomboid-corpse-final45.marker");if(Files.exists(marker)||!migrated.add(file))return;try{Map<String,Double> values=(Map<String,Double>)g(WorldTuning.class,"values");if(values.getOrDefault("cadaver_pool_police_officer",3.)==3.){values.put("cadaver_pool_police_officer",5.);c(WorldTuning.class,"persist",values);}Files.writeString(marker,"Final corpse loot v45: default police weight 5, military 3. Later admin values remain configurable.\n",StandardOpenOption.CREATE_NEW);}catch(Exception failure){CorpseProfessions.warn("migracion final de loot",failure);}}
+}

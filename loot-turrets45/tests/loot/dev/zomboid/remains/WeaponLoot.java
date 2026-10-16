@@ -1,0 +1,1 @@
+package dev.zomboid.remains;import net.minecraft.resources.ResourceLocation;import net.minecraft.world.item.ItemStack;public class WeaponLoot{public static ItemStack ammo(ResourceLocation id,int n){ItemStack s=fixture.Game.stack("tacz:ammo",n);s.data.put("ammo",id.toString());return s;}}

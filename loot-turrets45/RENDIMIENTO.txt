@@ -1,0 +1,28 @@
+QUÉ MUESTRA TU PERFIL SgmXqhc7Gc
+
+Captura de 49,5 segundos del hilo gráfico (Render thread).
+El servidor indica unos 20 TPS y una media de 6,4 ms por tick; el 95 % de los
+ticks medidos queda por debajo de 7,6 ms. Hubo un pico de 267 ms: puede haber
+tirones puntuales aunque la media sea buena. Había 178 entidades registradas.
+
+El mayor coste identificable de mods es Xaero: aproximadamente 21,7 % del
+tiempo muestreado del hilo gráfico entre mapa y minimapa. Destacan la escritura
+de chunks al mapa y actualización de texturas. EMF ronda el 4,6 %.
+Los cadáveres, Hordes y Sound Physics no destacan como gasto principal en este
+hilo durante esta captura. Esto no mide el coste completo del hilo del servidor.
+La espera al presentar fotogramas y al limitar FPS también consume muestras;
+no toda espera significa trabajo de CPU ni permite diagnosticar la GPU.
+
+PRIMERA PRUEBA ÚTIL
+Desactiva temporalmente Xaero World Map y el minimapa, y compara en el mismo
+sitio, con la misma cámara, clima y límite de FPS. Si mejora, reduce su calidad
+/frecuencia de actualización o deja solo el minimapa. Cambia una cosa por vez.
+Este parche corrige el loot y añade torretas; no modifica Xaero ni promete una
+mejora concreta de FPS. Para analizar un tirón de servidor hace falta perfilar
+Server thread mientras esté ocurriendo.
+
+EL LOG
+Hay avisos aislados de que el servidor va retrasado. Essential también falla
+al guardar una captura: el archivo estaba ocupado y luego falla su checksum.
+Ese error pertenece al guardado de imágenes. El aviso de BufferBuilder de Sodium
+no identifica por sí solo cuánto cuesta ni qué mod es responsable.

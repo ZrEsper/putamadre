@@ -1,0 +1,1 @@
+package me.xjqsh.lrtactical.api.item;import net.minecraft.world.item.ItemStack;public class IMeleeWeapon{public static IMeleeWeapon of(ItemStack s){return s.item.id.equals("lrtactical:melee")?new IMeleeWeapon():null;}public Object getId(ItemStack s){return s.data.getOrDefault("MeleeWeaponId","lrtactical:empty");}}
