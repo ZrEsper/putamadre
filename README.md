@@ -1,6 +1,6 @@
 ## Clanes .15: sin nuevas criaturas en chunks reclamados
 
-[Descargar ZIP directo](distribuciones/Zombies-Poldo-Clanes-15-Sin-Spawn-en-Reclamos.zip). Bloquea nuevos enemigos, animales y NPC dentro de reclamos, incluidas oleadas y spawners; conserva criaturas existentes y permite entrar desde fuera. Los zombis siguen pudiendo romper conforme a los ajustes del modpack. Basado en el .14 enviado, con su territorio ampliado. [Guía y validación](clans-no-spawn15/README.md). 63 controles del cambio y tres diagnósticos originales; prueba en partida pendiente.
+[Descargar ZIP directo](distribuciones/Zombies-Poldo-Clanes-15-Sin-Spawn-en-Reclamos.zip). Bloquea nuevos enemigos, animales y NPC dentro de reclamos, incluidas oleadas y spawners; conserva criaturas existentes y permite entrar desde fuera. Los zombis siguen pudiendo romper conforme a los ajustes del modpack. Basado en el .14 enviado, con su territorio ampliado. [Guía y validación](clans-no-spawn15/README.md). 69 controles del cambio y tres diagnósticos originales; prueba en partida pendiente.
 
 ## Torretas con energía de Doomsday y camas .4
 

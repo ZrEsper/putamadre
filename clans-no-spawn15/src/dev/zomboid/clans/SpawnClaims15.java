@@ -2,6 +2,7 @@ package dev.zomboid.clans;
 /** Only fresh creature insertion is blocked. No entity scanning or removal. */
 public final class SpawnClaims15 {
  static final String SEEN="zp15_existing_creature";
+ static final java.util.Map<Object,Boolean> DENIED=new java.util.WeakHashMap<>();
  public static boolean claimed(Object world,Object chunk){Object manager=R.call(R.type("me.danialisntcool.factionfriction.data.FactionManager"),"get",R.call(world,"getServer"));return manager!=null&&R.call(manager,"getFactionByChunk",world,chunk)!=null;}
  public static boolean spot(Object world,int x,int z){return !claimed(world,R.make("net.minecraft.world.level.ChunkPos",Math.floorDiv(x,16),Math.floorDiv(z,16)));}
  static boolean playerZombie(Object entity){try{return R.type("net.smileycorp.hordes.common.entities.PlayerZombie").isInstance(entity);}catch(IllegalStateException absent){return false;}}
@@ -10,9 +11,11 @@ public final class SpawnClaims15 {
   // Keep native orphan-wave cleanup; active waves receive no spawn exemption.
   if(!R.call(tag,"getString","FactionPveWave").toString().isEmpty()){R.call(R.type("dev.zomboid.clans.Pve"),"zp15OriginalJoin",event);if(R.yes(R.call(event,"isCanceled")))return;}
   boolean existing=R.yes(R.call(event,"loadedFromDisk"))||R.yes(R.call(tag,"getBoolean",SEEN))||playerZombie(entity);
-  if(!existing&&!machine(entity)&&claimed(world,R.call(entity,"chunkPosition"))){R.call(event,"setCanceled",true);return;}
+  if(!existing&&!machine(entity)&&claimed(world,R.call(entity,"chunkPosition"))){DENIED.put(entity,true);R.call(event,"setCanceled",true);return;}
   R.call(tag,"putBoolean",SEEN,true);
  }
+ /** A native conversion replaces an existing creature; it is not population growth. */
+ public static void converted(Object event){Object source=R.call(event,"getEntity"),outcome=R.call(event,"getOutcome"),world=R.call(outcome,"level");if(R.yes(R.call(world,"isClientSide"))||!R.yes(R.call(R.call(source,"getPersistentData"),"getBoolean",SEEN))||DENIED.remove(outcome)==null||R.yes(R.call(outcome,"isRemoved"))||R.yes(R.call(outcome,"isAddedToLevel")))return;Object tag=R.call(outcome,"getPersistentData");R.call(tag,"putBoolean",SEEN,true);if(!R.yes(R.call(world,"addFreshEntity",outcome)))R.call(tag,"remove",SEEN);}
  /** Removes this mod's claim veto, without enabling the global mobGriefing rule. */
  public static boolean zombieGrief(Object event){Object entity=R.call(event,"getEntity"),world=R.call(entity,"level");if(R.yes(R.call(world,"isClientSide")))return false;String id=R.call(R.get(R.type("net.minecraft.core.registries.BuiltInRegistries"),"ENTITY_TYPE"),"getKey",R.call(entity,"getType")).toString();return id.contains("zombie")||id.equals("minecraft:husk")||id.equals("minecraft:drowned")||id.startsWith("mutantszombies:")||id.startsWith("mutants_l4d2:");}
 }

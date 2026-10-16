@@ -1,7 +1,7 @@
 {
   "results": [
     "Native .14 reproduced: 3\n",
-    "Native .15 and production policy checks: 63\n"
+    "Native .15 and production policy checks: 69\n"
   ],
   "method": "Exact original and patched native join / grief bodies, production helper and API doubles",
   "minecraft_runtime_tested": false

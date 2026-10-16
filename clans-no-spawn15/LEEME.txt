@@ -16,6 +16,7 @@ Al liberar el chunk vuelve a permitir las nuevas apariciones inmediatamente.
 
 Los que ya estaban allí se conservan, incluso al guardar/reabrir el mundo
 o descargar/recargar chunks. Pueden seguir entrando criaturas desde fuera.
+Sus transformaciones naturales, como zombi a ahogado, también se conservan.
 No se borra ninguna criatura con barridos o limpiezas de territorio.
 
 Los zombis y mutantes pueden seguir rompiendo: el reclamo ya no veta su
@@ -30,7 +31,7 @@ del jugador existente, para mantener su equipamiento y cadáver.
 La limpieza original de oleadas abandonadas se mantiene.
 
 VALIDACIÓN
-Se reprodujeron tres comportamientos originales de .14 y pasaron 63 controles
+Se reprodujeron tres comportamientos originales de .14 y pasaron 69 controles
 sobre la política nueva y métodos nativos de aparición/roturas con API simulada.
-Se verificó el bytecode y que solo cambien tres clases y se añada el filtro.
+Se verificó el bytecode y que solo cambien tres clases y se añadan el filtro y su manejador de conversiones.
 No se ejecutó Minecraft: falta comprobarlo en una partida del modpack completo.
