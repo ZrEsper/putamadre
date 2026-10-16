@@ -1,0 +1,1 @@
+package de.maxhenkel.corpse.gui;public class Guis{public static int opened;public static void openCorpseGUI(Object player,Object corpse){opened++;}}

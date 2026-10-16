@@ -22,5 +22,13 @@
   "brain": {
     "file": "SmartBrainLib-neoforge-1.21.1-1.16.11.jar",
     "sha256": "68036561cc5511766d54cc0deabc3fc3a5e68f9e3db2478f2574ec82b494374b"
+  },
+  "integration": {
+    "file": "zomboid-integration-1.7.8-neoforge-1.21.1-mutants-1.4-compat.jar",
+    "sha256": "1c36a56dc1d457b81bdee8607c5463ba11aea2d1902e76f2cab97e340c6d80eb"
+  },
+  "corpse": {
+    "file": "corpse-neoforge-1.21.1-1.1.13-player-equipment-slots.2.jar",
+    "sha256": "a49e41158eee7aa10888937b3f65be244c102001d8a797d2de95163d2ced9e74"
   }
 }

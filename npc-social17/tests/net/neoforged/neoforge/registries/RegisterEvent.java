@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.registries;public class RegisterEvent{public java.util.Map<Object,Object> entries=new java.util.HashMap<>();public Object getRegistryKey(){return "sound";}public void register(Object key,Object id,java.util.function.Supplier<?> value){entries.put(id,value.get());}}

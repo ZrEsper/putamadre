@@ -1,0 +1,1 @@
+package net.minecraft.core;public class NonNullList<T> extends java.util.ArrayList<T>{public static <T> NonNullList<T> withSize(int n,T empty){NonNullList<T> a=new NonNullList<>();for(int i=0;i<n;i++)a.add(empty);return a;}}

@@ -1,0 +1,1 @@
+package net.minecraft.client.resources;public record PlayerSkin(Object texture,String url,Object cape,Object elytra,Model model,boolean secure){public enum Model{WIDE,SLIM}}

@@ -1,1 +1,1 @@
-package mod.cdv.tnpc.entity;public class AutoGunOperator extends fixture.Entity{public AutoGunOperator(fixture.World w){super(w);}}
+package mod.cdv.tnpc.entity;public class AutoGunOperator extends fixture.Entity{public static Object SYNCED_SKIN=new Object();public AutoGunOperator(fixture.World w){super(w);}}

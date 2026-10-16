@@ -75,6 +75,26 @@ for key,(es,en) in extra.items():labels['es_es'][key]=es;labels['en_us'][key]=en
 for topic,(es,en) in new_responses.items():
  for loc,value in [('es_es',es),('en_us',en)]:
   for v in range(4):labels[loc]['dialog.soc.'+topic+'.'+str(v)]=value
+identity_labels={'soc.gender.female':('Mujer','Woman'),'soc.gender.male':('Hombre','Man'),'soc.identity':('%s · %s años | %s | %s','%s · Age %s | %s | %s'),'soc.reaction_status':('%s | Confianza: %s','%s | Trust: %s'),'soc.chat.named':('[%s · %s] %s','[%s · %s] %s')}
+for state,es,en in [('friendly','Amigable','Friendly'),('neutral','Neutral','Neutral'),('enemy','Enemigo','Enemy'),('afraid','Asustado','Afraid')]:identity_labels['soc.attitude.'+state]=(es,en)
+for state,es,en in [('calm','Tranquilo','Calm'),('happy','Encantado','Delighted'),('angry','Enfadado','Angry'),('hostile','Hostil','Hostile'),('afraid','Asustado','Afraid')]:identity_labels['soc.reaction.'+state]=(es,en);identity_labels['soc.sound.'+state]=('Superviviente: '+es,'Survivor: '+en)
+for key,(es,en) in identity_labels.items():labels['es_es'][key]=es;labels['en_us'][key]=en
+ambient={
+'friendly':(['Tranquilo, voy de tu parte.','Si necesitas ayuda, estoy cerca.','Me alegra ver una cara conocida.','Entre nosotros no tiene que haber problemas.'],['Easy, I am on your side.','If you need help, I am nearby.','Good to see a familiar face.','There does not have to be trouble between us.']),
+'neutral':(['No busco problemas. Sigamos cada uno por su lado.','Manos a la vista y nos entenderemos.','No te conozco. Mantengamos un poco de distancia.','Podemos hablar, pero todavía no confío en ti.'],['I am not looking for trouble. Let us go our own ways.','Keep your hands visible and we will get along.','I do not know you. Let us keep some distance.','We can talk, but I do not trust you yet.']),
+'enemy':(['No somos amigos. Aléjate.','Te tengo en la mira.','No vuelvas a acercarte a mí.','Tú y yo tenemos un problema.'],['We are not friends. Back off.','I have you in my sights.','Do not come near me again.','You and I have a problem.']),
+'horde':(['¡Demasiados zombis! Buscad una salida.','¡Una horda! No os quedéis encerrados.','He visto demasiados muertos moverse por aquí.','Tenemos que salir de esta zona.'],['Too many zombies! Find an exit.','A horde! Do not get trapped.','I have seen too many dead things moving here.','We need to leave this area.']),
+'wounded':(['Estoy herido. Necesito vendas.','Cada paso me duele.','No me dejes atrás, sigo vivo.','Me vendría bien una mano con estas heridas.'],['I am hurt. I need bandages.','Every step hurts.','Do not leave me behind. I am still alive.','I could use a hand with these wounds.']),
+'afraid':(['Baja el arma. No quiero hacerte daño.','Por favor, no dispares.','¡Tranquilo! Soy una persona, no uno de ellos.','No hace falta pelear. Podemos hablar.'],['Lower the gun. I do not want to hurt you.','Please do not shoot.','Easy! I am a person, not one of them.','We do not have to fight. We can talk.']),
+'night':(['Está oscureciendo. Busquemos refugio.','No me gusta estar fuera de noche.','¿Has oído pasos entre las sombras?','Hay que vigilar bien las entradas.'],['It is getting dark. Let us find shelter.','I do not like being outside at night.','Did you hear footsteps in the shadows?','Keep an eye on the entrances.']),
+'rain':(['Otra vez lluvia. Hay que buscar un techo.','La lluvia no me deja oír lo que viene.','No quiero pasar la noche empapado.','Con este tiempo prefiero esperar bajo techo.'],['Rain again. We need a roof.','I cannot hear what is coming over the rain.','I do not want to spend the night soaked.','I would rather wait indoors in this weather.']),
+'good_action':(['Gracias por eso. No lo olvidaré.','Me has ayudado. Puedes contar conmigo un poco más.','Todavía queda gente decente. Gracias.','Eso ha estado bien. Ahora me fío más de ti.'],['Thank you for that. I will remember.','You helped me. You can count on me a little more.','There are still decent people. Thank you.','That was kind. I trust you more now.']),
+'bad_action':(['Eso no se hace. Me has dado motivos para desconfiar.','He visto lo que has hecho. No lo olvidaré.','Así no vas a ganarte mi amistad.','Basta. Cada vez me fío menos de ti.'],['That is not right. You gave me a reason to distrust you.','I saw what you did. I will remember.','That will not earn my friendship.','Enough. I trust you less and less.'])}
+for topic,(es,en) in ambient.items():
+ for loc,lines in [('es_es',es),('en_us',en)]:
+  for v,line in enumerate(lines):labels[loc]['dialog.soc.ambient.'+topic+'.'+str(v)]=line
+labels['es_es']['soc.treat.need']='Lleva una venda o un apósito en una mano y permanece cerca.'
+labels['en_us']['soc.treat.need']='Hold a bandage or plaster in either hand and stay nearby.'
 labels['es_mx']=labels['es_es'].copy()
 (r/'translations.json').write_text(json.dumps(labels,ensure_ascii=False,indent=2)+'\n')
 print('Dialogue variants per language:',sum(k.startswith('dialog.soc.')for k in labels['es_es']))

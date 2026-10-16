@@ -1,69 +1,101 @@
-NPC Y RECUPERACION — MENUS LEGIBLES, CHAT Y LINTERNA
+SUPERVIVIENTES 20 — IDENTIDAD, REACCIONES, LESIONES Y REANIMACION
 Minecraft NeoForge 1.21.1
 
 INSTALAR
-1. Cierra Minecraft y el servidor. Haz una copia del mundo.
-2. En mods, quita las versiones anteriores de TacZ NPCs, First Aid,
-   Flashlight y SurvivorCreator. Copia los JAR de este paquete.
-3. FactionFriction .16 es el mismo de la actualizacion anterior.
-   Si ya lo tienes, conservalo. No dejes dos versiones de ningun mod.
-Instala las mismas versiones en cada cliente y en el servidor.
-Conserva SmartBrainLib, Hordes y Zombie Remains.
-No hace falta empezar otro mundo.
+Cierra Minecraft y el servidor. Haz una copia del mundo.
+Sustituye los JAR anteriores de estos cuatro mods, sin duplicados:
+- TacZ NPCs .19 -> .20 identities-reactions.
+- First Aid 3.6.8 -> 3.6.9 injured-only-body-care.
+- Zomboid Integration 1.7.8 -> 1.7.9 injured-body-care.
+- Corpse player-equipment-slots.2 -> npc-survivor-cargo.3.
+El paquete incluye tambien FactionFriction .16, Flashlight .5 y
+SurvivorCreator .34. Son los mismos de la entrega anterior; si ya los
+tienes, conservalos. Mantén SmartBrainLib y el resto del pack.
+Instala las mismas versiones en servidor y clientes. No hace falta
+crear otro mundo. Conserva las copias antiguas fuera de mods.
 
-HABLAR
-Acercate a un superviviente, baja el arma si estas apuntando y haz clic
- derecho. Su respuesta aparece en el recuadro oscuro, sin desenfoque.
-Solo veras hasta seis opciones a la vez. Usa Mas opciones para ver otras.
-Esc cierra la conversacion. El mundo sigue avanzando mientras hablas.
+IDENTIDAD Y APARIENCIA
+Hay 48 skins originales: 24 masculinas y 24 femeninas, con variedad de
+pelo, tono de piel y ropa. La skin se guarda y no cambia al reencontrarlos.
+Los NPC reciben nombre y apellido ficticios, edad entre 18 y 72 anos y
+conservan su personalidad. Los NPC antiguos tambien reciben identidad.
+El menu muestra nombre, edad, personalidad, relacion y ultima reaccion.
+La lista de nombres y apellidos se incluye como referencia en el ZIP.
 
-AMIGABLE
-Saludar, tranquilizar, bromear o preguntar como se siente.
-Que necesitas: te pide comida o material medico.
-Entregar lo que me pidio: lleva ese objeto en la mano. Se consume uno,
-va a su mochila y mejora la confianza. Hay una pausa de un minuto entre
-recompensas por favores. Dar un objeto sigue funcionando para otros regalos.
-Curar: lleva una venda y permanece cerca durante tres segundos.
-Unirse al grupo: necesita confianza y una faccion tuya en FactionFriction.
-Si aun no tienes faccion, creala desde el menu de FactionFriction primero.
+HABLAR Y REACCIONAR
+Baja el arma si estas apuntando, acercate y haz clic derecho.
+El menu conserva Amigable, Neutral y Agresivo, con seis opciones por pagina.
+Regalos, favores cumplidos, curaciones e invitaciones aceptadas pueden
+provocar una reaccion contenta, un saludo con la mano y asentimientos.
+Los comentarios tranquilos provocan un asentimiento mas suave.
+Insultos, amenazas y ataques provocan enfado, hostilidad o miedo segun
+el NPC. Pueden negar con la cabeza, gesticular o agacharse asustados.
+Los gestos no atacan ni disparan por si mismos, y no interrumpen combate,
+curaciones o movimientos de huida que ya esten en curso.
+Hay voces cortas masculinas y femeninas para las reacciones; son
+vocalizaciones sinteticas, no lectura en voz alta de todo el dialogo.
 
-NEUTRAL
-Preguntar por clima, dia, hora, pasado, hordas y rumores.
-Puedes pedir que te cure: necesita vendas propias, estar dispuesto a ayudar
-y llegar hasta ti. No crea curaciones gratis ni elimina la infeccion.
-Puedes pedir que limpie cadaveres: un conocido necesita 15 de confianza y
-ayuda dos minutos; un miembro de tu grupo recibe la orden normal.
-Necesita espacio para guardar el contenido. No elimina cadaveres de jugador.
-Mochila y trabajos se habilitan para los integrantes de tu faccion.
+COMENTARIOS CERCANOS
+Fuera de una conversacion pueden comentar el clima, la noche, sus
+heridas, una horda o su relacion contigo. El chat indica:
+[Nombre Apellido · Amigable/Neutral/Enemigo/Asustado] comentario.
+Solo los oyen en el chat jugadores visibles, en la misma dimension y
+hasta 12 bloques. Los espectadores no reciben estos comentarios.
+Cada NPC espera aproximadamente 45-90 segundos entre intentos; los
+reservados hablan menos. Cada jugador recibe como maximo un comentario
+ambiental cada 20 segundos. Las reacciones a acciones tambien tienen
+limites para evitar mensajes y sonidos repetidos.
+No hay charla ambiental mientras el NPC conversa. Los hostiles no usan
+esta charla para anunciarte antes de terminar su inspeccion de combate.
 
-AGRESIVO
-Incluye insultar y amenazar. Bajan la confianza y la reputacion;
-pueden empeorar la actitud del NPC. No son bromas ni una forma de ganar
-amistad. Tambien puedes terminar la conversacion o despedir un companero.
+SALUD: TU, OTROS JUGADORES Y NPC
+Tu pantalla de Salud conserva la silueta y muestra solo las partes con
+lesiones. Las tarjetas sanas y los vendajes de zonas ya recuperadas se
+ocultan; al sanar la ultima parte desaparece la opcion de tratamiento.
+No se muestra vida con decimales en la vista de curacion a terceros.
+Para otros jugadores, usa la interaccion medica habitual y elige al
+paciente. Veras la misma idea de silueta y tarjetas de lesiones, con un
+solo boton de tratamiento. El sistema elige un tratamiento compatible
+con la lesion y tus suministros; el servidor sigue validandolo.
+Para un NPC, haz clic derecho llevando una venda o un aposíto en una
+mano, o elige Curar en la conversacion. No necesita estar en tu faccion.
+Selecciona la parte herida y pulsa Tratar parte. Permanece cerca con la
+venda durante 3 segundos. Se consume una y se cura la parte elegida.
+Tambien puedes seleccionar la tarjeta con clic izquierdo y tratarla con
+clic derecho. Se muestra el porcentaje mientras dura el tratamiento.
+Los NPC tienen ocho partes: cabeza, torso, brazos, piernas y pies.
+Su sistema de partes y reanimacion no los convierte en jugadores reales:
+los tratamientos clinicos avanzados de First Aid siguen siendo propios
+de los jugadores. Para los NPC se usan sus lesiones de parte y vendas.
 
-INCONSCIENTE
-Pantalla negra, texto legible y sin desenfoque.
-Tu tecla de chat abre el chat; la tecla de comandos abre /.
-Esc abre el menu normal del juego, con sus opciones.
-Al cerrar esos menus vuelves a la pantalla negra si sigues inconsciente.
-La opcion de levantarte solo aparece si tienes un desfibrilador valido.
+DERRIBADOS Y CADAVERES
+Un golpe mortal normal o una lesion critica de cabeza/torso puede
+mandar al NPC al suelo. No pierde su faccion ni su equipo por derribarse.
+Tiene unos 100 segundos para recibir ayuda. Un golpe mortal posterior
+puede rematarlo. El vacio y la orden de matar no crean un bucle de derribo.
+Haz clic derecho al NPC derribado y pulsa Reanimar:
+- Con un desfibrilador en una mano: 3 segundos y un uso del aparato.
+- Sin desfibrilador: reanimacion manual de 8 segundos.
+No te alejes mas de 3 bloques ni pierdas la linea de vision. Si usas el
+desfibrilador debes mantenerlo en la mano. Se recupera con salud parcial,
+no completamente curado. Ayudarle mejora su confianza.
+Si muere definitivamente, aparece un Corpse con su apariencia, mochila,
+armadura y objetos de ambas manos. No genera otro cuerpo de Remains ni
+vuelve a generar un lote de loot. El inventario se transfiere una vez.
+Se conservan los cambios del Corpse que enviaste para equipo de jugadores.
+La proteccion de cadaveres de jugadores sigue igual. Los cadaveres de NPC
+se pueden saquear aunque este activado el acceso exclusivo del propietario.
 
-LINTERNA
-El equipo inicial de SurvivorCreator incluye la linterna encendida y
-cargada. Una linterna antigua en la mano se adapta al sistema de baterias.
-Al revivir del estado de inconsciente, se enciende la linterna que tengas
-en una mano si tiene carga. No recarga ni duplica la bateria al revivir.
-Clic derecho: encender/apagar. Agachado + clic derecho: cambiar bateria.
-Puedes apagarla manualmente; permanece apagada hasta que la enciendas
-o vuelvas a ser reanimado.
-Bateria: un lingote de cobre + redstone + lapislazuli, sin forma fija.
-Basica: 10 minutos. Expedicion: 20. Economica: 30 con menos alcance.
-Tactica: 10 minutos con mas alcance. Conserva las recetas de estas mejoras.
+SE CONSERVA DE LA ENTREGA ANTERIOR
+Sin desenfoque en conversaciones y pantalla de inconsciente.
+Chat y Esc siguen disponibles al estar inconsciente.
+La linterna inicial se enciende; al reanimarte se enciende si tiene carga.
+Se conservan baterias, facciones, trabajos, reputacion y favores.
+Los textos nuevos usan espanol o ingles segun el idioma del juego.
 
-IDIOMA
-Textos en espanol o ingles segun el idioma del juego.
-
-VALIDACION
-Pruebas automatizadas de dialogos, favores, inventario, trabajos,
-reanimacion, chat/menu, apertura de pantallas y baterias.
-No se ha ejecutado Minecraft ni se ha comprobado visualmente en el juego.
+PRUEBAS
+Pruebas automatizadas de identidades, skins, reacciones, proximidad,
+menus, lesiones seleccionadas, curaciones, derribos, reanimacion,
+inventarios y cadaveres. Se comprueba tambien la apertura de pantallas
+con la forma de interfaz que usa Minecraft para sus textos.
+No se ha ejecutado ni probado visualmente dentro de Minecraft.

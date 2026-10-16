@@ -1,1 +1,1 @@
-package net.minecraft.world.entity;public enum Pose{STANDING,CROUCHING}
+package net.minecraft.world.entity;public enum Pose{STANDING,CROUCHING,SWIMMING}

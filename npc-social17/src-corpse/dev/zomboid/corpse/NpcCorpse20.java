@@ -1,0 +1,7 @@
+package dev.zomboid.corpse;
+import java.util.*;
+public final class NpcCorpse20 {
+ static Object c(Object o,String n,Object...a){return CorpseR20.call(o,n,a);}public static Object interact(Object corpse,Object player,Object hand){if(!Boolean.TRUE.equals(c(c(corpse,"getPersistentData"),"getBoolean","soc_npc_corpse20")))return null;if(CorpseR20.type("net.minecraft.server.level.ServerPlayer").isInstance(player))c(CorpseR20.type("de.maxhenkel.corpse.gui.Guis"),"openCorpseGUI",player,corpse);return CorpseR20.get(CorpseR20.type("net.minecraft.world.InteractionResult"),"SUCCESS");}
+ /** Vanilla player account names cannot contain spaces; generated NPC full names do. */
+ public static Object skin(Object dummy){Object profile=c(dummy,"getGameProfile");String name=(String)c(profile,"getName");if(name==null||!name.contains(" "))return null;UUID id=(UUID)c(profile,"getId");Random r=new Random(id.getMostSignificantBits()^id.getLeastSignificantBits()^0x5a87be291L);int female=r.nextBoolean()?1:0;r.nextInt(16);r.nextInt(32);r.nextInt(55);int index=2*r.nextInt(24)+female;Object texture=c(CorpseR20.type("net.minecraft.resources.ResourceLocation"),"parse","tacznpcs:entity/survivors/survivor_"+String.format(Locale.ROOT,"%02d",index)+".png");return CorpseR20.make("net.minecraft.client.resources.PlayerSkin",texture,null,null,null,CorpseR20.get(CorpseR20.type("net.minecraft.client.resources.PlayerSkin$Model"),"WIDE"),false);}
+}
