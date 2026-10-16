@@ -1,0 +1,61 @@
+ZOMBIES POLDO — TORRETAS Y DOOMSDAY
+
+INSTALACIÓN
+1. Cierra Minecraft y el servidor.
+2. Copia los 4 JAR de la carpeta mods de este ZIP a tu carpeta mods.
+3. Quita las versiones anteriores de TACZ Turrets, Doomsday Decoration,
+   Zomboid Survival y Zomboid Hordes. Debe quedar una versión de cada mod.
+4. Haz lo mismo en los clientes y el servidor. Conserva TaCZ y las demás dependencias.
+
+TORRETA
+Colócala a 25 bloques o menos del bloque principal de un generador de Doomsday.
+Ponle un arma TaCZ y su munición. El generador necesita energía almacenada.
+La torreta usa 100 FE por disparo y detecta objetivos hasta 20 bloques.
+Dispara en grupos de tres, con una pausa de 0,6 segundos entre grupos.
+Respeta la cadencia, la recarga y el modo conservador del arma/torreta.
+Si pierde la energía, el objetivo pasa de 20 bloques o una pared tapa su visión,
+los siguientes tiros se bloquean, incluso los programados en una ráfaga de TaCZ.
+Una escopeta gasta energía por cartucho, no por cada perdigón.
+Su batería propia u otros sistemas de electricidad no permiten saltarse el generador.
+Puede utilizar la energía ya almacenada aunque el generador se quede sin combustible.
+La barra muestra la energía del generador enlazado.
+
+Con energía y un arma hace un sonido suave de motor cada 4 segundos.
+Al adquirir un objetivo emite otra alerta, con un límite de una cada 3 segundos.
+Los zombis y mutantes pueden dañarla incluso si el ajuste general de daño de
+las torretas estaba desactivado. Los cercanos sin objetivo pueden atacarla;
+no se obliga a los que ya persiguen a un jugador a abandonarlo.
+
+GENERADORES
+Modelo       Almacenamiento   Generación     Duración de 64 carbones activos
+Pequeño      128.000 FE        80 FE/tick     30 minutos
+Fijo         512.000 FE        160 FE/tick    60 minutos
+Remolque     768.000 FE        240 FE/tick    90 minutos
+
+El almacenamiento es el doble del anterior. Los grandes generan más energía
+por segundo y obtienen más duración del mismo combustible. Con la batería
+llena dejan de gastar combustible. La energía y el combustible que ya tenías
+se conservan; el nuevo rendimiento del combustible se aplica al siguiente objeto.
+Los minutos suponen 20 ticks por segundo y generación continua.
+
+REFUERZOS / PLANKS
+Tres tablones de cualquier madera, en una fila horizontal, dan 6 planking_0.
+Usa el cortapiedras para cambiar el diseño, uno por uno.
+Coloca el refuerzo pegado a una ventana o puerta: tarda el doble en romperse.
+En una puerta protege las dos mitades. Varios refuerzos no acumulan el multiplicador.
+Funciona al romper el jugador y con las roturas de Hordes .43 incluido.
+Al quitar el refuerzo vuelve la resistencia habitual.
+
+CAMAS — SOLO DORMIR
+Cama/colchón: tres lanas en una fila horizontal.
+Cama médica: tres lanas en una columna vertical.
+Clic derecho para dormir. Conservan las restricciones normales de descanso:
+noche, lugar seguro y dimensión válida. Nunca cambian tu punto de reaparición.
+No sirven para reaparecer ni curan automáticamente.
+
+VALIDACIÓN
+81 comprobaciones con API simulada y métodos originales parcheados; análisis
+de bytecode y archivos JAR. No se ejecutó Minecraft en este entorno: falta
+la prueba en partida de animaciones, sonidos y compatibilidad del modpack completo.
+Se mantienen los aires acondicionados y los arreglos de muebles de Doomsday .3.
+Hordes .43 conserva el cadáver de jugador infectado y su equipamiento.

@@ -1,0 +1,6 @@
+package dev.zomboid.turretpower;
+import dev.zomboid.survival.*;import com.entropy.tacz_turrets.turret.TurretEntity;import dev.zomboid.turretpower.Checks.*;import java.util.*;
+public class NativeChecks {
+ static int checks;static void ok(boolean b,String m){checks++;if(!b)throw new AssertionError(m);}
+ public static void main(String[]a){W w=new W();TurretEntity t=new TurretEntity(w);ok(t.getRange()==20,"native hard range");ok(!t.hasEnoughEnergy(),"native powerless guard");MachineEntity g=new MachineEntity();P p=new P(0,0,0);w.machines.put(p,g);w.blocks.put(p,new S("doomsday_decoration:generator"));MachineEntity.GENERATORS.put(w,Set.of(p));ok(t.hasEnoughEnergy(),"native linked generator");ok(t.getEnergyStored()==10000,"native energy GUI");ok(t.getMaxEnergyStored()==128000,"native capacity GUI");g.energy.stored=0;ok(!t.hasEnoughEnergy(),"native energy lost");int[] expected={36000,72000,108000};int i=0;for(String n:new String[]{"generator","fixedgenerator","trailergenerator"}){g.name=n;g.zsFuelCarry=0;int ticks=0;for(int k=0;k<64;k++)ticks+=GeneratorFuel.consume(g,1600);ok(ticks==expected[i++],"native fuel tier "+n);}System.out.println("Native turret method + fuel checks: "+checks);}
+}

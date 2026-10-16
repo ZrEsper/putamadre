@@ -1,0 +1,9 @@
+{
+  "checks": [
+    "Turret, sounds, power and generator checks: 43\n",
+    "Beds and boards checks: 29\n",
+    "Native turret method + fuel checks: 9\n"
+  ],
+  "minecraft_runtime_tested": false,
+  "method": "Compiled production helpers with API doubles; extracted unchanged patched native methods with fixture superclass; ASM BasicVerifier on patched methods"
+}

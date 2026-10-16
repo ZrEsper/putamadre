@@ -1,3 +1,7 @@
+## Torretas con energía de Doomsday y camas .4
+
+[Descargar ZIP directo](distribuciones/Zombies-Poldo-Torretas-Doomsday-4.zip): ráfagas, alcance máximo 20, energía real de generador y línea de visión por tiro; sonidos de motor/objetivo y daño de zombis. Generadores con doble almacenamiento y mayor rendimiento por tamaño. Refuerzos con receta y resistencia ×2 en ventanas/puertas; camas con tres lanas, solo para dormir, sin cambiar reaparición. Incluye cuatro reemplazos para clientes y servidor. [Guía y validación](turret-power4/README.md). 81 comprobaciones de lógica/métodos y verificación de bytecode; partida real pendiente.
+
 # Jugador infectado: equipo y cosmética en un Corpse real
 
 [Descargar cuatro reemplazos y guía](distribuciones/Zombies-Poldo-Cadaver-Jugador-43-Curaciones-30.zip). Hordes .43 registra la identidad y equipo del jugador, muestra la cosmética encima de la armadura normal y traslada las piezas originales sin duplicar copias visuales. Al matar al zombi crea una entidad de Corpse con su inventario guardado; Remains .12 excluye estos zombis. Corpse .2 conserva huecos vacíos para que el casco no cambie de posición al cargar. Incluye Isométrica .30 para tratamientos y botón de autorreanimación. Sustituye Hordes .42, Remains .11, Corpse .1 e Iso .28/.29; conserva Cosmetic Armor .2, FirstAid 3.6.3 y Les Raisins .4. 149 comprobaciones del traspaso, serialización nativa antes/después y 69 del control médico, con APIs simuladas; pendiente de prueba dentro de Minecraft. [Instalación y condiciones](player-corpse43/GUIA.md).
@@ -12,7 +16,7 @@
 
 # Visión manual con N y cámara isométrica .29
 
-[Descargar los dos reemplazos y guías](distribuciones/Zombies-Poldo-NVG-Manual-3-Iso-Audio-29.zip). Fracture Point .3 empieza con el visor arriba: N lo baja y activa su filtro e iluminación; N lo sube y apaga ambos. Sin activación automática al equipar o entrar. Conserva batería de 15 minutos y filtros originales; procesa el registro también al comenzar cada fotograma. Isométrica .29 escucha desde los ojos y orientación del jugador, prioriza apuntar con clic derecho y bloquea interacciones normales durante el apuntado. Mayús + clic derecho permite interactuar con arma al dejar de apuntar. Sustituye NVG .2 e Iso .28; conserva TaCZ y Tactical. 935 + 380 comprobaciones con APIs simuladas; pendiente de prueba visual y auditiva en Minecraft. [Visión](nvg-visor3/GUIA.md) · [Audio e interacción](iso-audio29/GUIA.md).
+[Descargar los dos reemplazos y guías](distribuciones/Zombies-Poldo-NVG-Manual-3-Iso-Audio-29.zip). Fracture Point .3 empieza con el visor arriba: N lo baja y activa su filtro e iluminación; N lo sube y apaga ambos. Sin activación automática al equipar o entrar. Conserva batería de 15 minutos y filtros originales; procesa el registro también al comenzar cada fotograma. Isométrica .29 escucha desde los ojos y orientación del jugador, prioriza apuntar con clic derecho y bloquea interacciones normales durante el apuntado. Mayús + clic derecho permite interactuar con arma al dejar de apuntar. Sustituye NVG .2 e Iso .28; conserva TaCZ y Tactical. 935 + 381 comprobaciones con APIs simuladas; pendiente de prueba visual y auditiva en Minecraft. [Visión](nvg-visor3/GUIA.md) · [Audio e interacción](iso-audio29/GUIA.md).
 
 # TaCZ .18: evita el cierre al recargar la SPAS-12
 

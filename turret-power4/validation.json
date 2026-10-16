@@ -1,0 +1,58 @@
+{
+  "turret": {
+    "input_sha256": "1153f6aeace9b3648accb5ddd64e2faad90ffc199bf24c5d0e5dea7a984b1c09",
+    "output": "tacz_turrets-neoforge-3.0.0-1.21.1-doomsday-power-burst.1.jar",
+    "sha256": "b184f0c11cb16238ad7f244606027596da536bf0fad1b01e4ef30df75dd6cab7",
+    "changed": [
+      "assets/tacz_turrets/lang/en_us.json",
+      "assets/tacz_turrets/sounds.json",
+      "com/entropy/tacz_turrets/menu/TurretMenu$TurretMenuData.class",
+      "com/entropy/tacz_turrets/turret/TurretEntity.class"
+    ],
+    "added": [
+      "assets/tacz_turrets/lang/de_de.json",
+      "assets/tacz_turrets/lang/es_es.json",
+      "assets/tacz_turrets/sounds/servo_idle.ogg",
+      "assets/tacz_turrets/sounds/target_alert.ogg",
+      "dev/zomboid/turretpower/FireEvents.class",
+      "dev/zomboid/turretpower/Link$Burst.class",
+      "dev/zomboid/turretpower/Link.class",
+      "dev/zomboid/turretpower/R.class",
+      "dev/zomboid/turretpower/SoundEvents.class",
+      "dev/zomboid/turretpower/Sounds$State.class",
+      "dev/zomboid/turretpower/Sounds.class"
+    ],
+    "minecraft_runtime_tested": false
+  },
+  "decor": {
+    "input_sha256": "09180f47e317a5842a0fa3daf1388b88768496c63c02144ed3778a06f4549400",
+    "output": "doomsday_decoration-1.1.4.2-neoforge-1.21.1-zomboid-beds-barricades.4.jar",
+    "sha256": "315e60bcffc777576c0b9c4c5ad7f5df6959068b3ac01e9d21ce103b410f167a",
+    "changed": [
+      "dev/zomboid/decor/Boards.class",
+      "net/mcreator/doomsdaydecoration/port/PortedBlock.class"
+    ],
+    "added": [
+      "data/doomsday_decoration/advancement/recipes/bed.json",
+      "data/doomsday_decoration/advancement/recipes/medical_bed.json",
+      "data/doomsday_decoration/recipe/bed.json",
+      "data/doomsday_decoration/recipe/medical_bed.json",
+      "dev/zomboid/decor/BedEvents.class",
+      "dev/zomboid/decor/Beds$Use.class",
+      "dev/zomboid/decor/Beds.class"
+    ],
+    "minecraft_runtime_tested": false
+  },
+  "survival": {
+    "input_sha256": "30b54b2fbfad5125bf2cc75e9a9b3dab1bb64ece7757d2a566bf8ed4cd931d9d",
+    "output": "zomboid-survival-1.21.1-1.1.0-generator-tiers.2.jar",
+    "sha256": "2a207d65aa333974232ea29f07d58a72bc37fbe9efc8cbe9cad560424288df6e",
+    "changed": [
+      "dev/zomboid/survival/GeneratorFuel.class",
+      "dev/zomboid/survival/MachineEntity.class",
+      "dev/zomboid/survival/PowerPolicy.class"
+    ],
+    "added": [],
+    "minecraft_runtime_tested": false
+  }
+}

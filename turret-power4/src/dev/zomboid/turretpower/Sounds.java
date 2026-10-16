@@ -1,0 +1,8 @@
+package dev.zomboid.turretpower;
+import java.util.*;
+public final class Sounds {
+ static final Map<String,Object> SOUNDS=new HashMap<>();static final Map<Object,State> STATES=new WeakHashMap<>();static final class State{Object target;long alert=-100;}
+ public static void register(Object e){Object key=R.get(R.type("net.minecraft.core.registries.Registries"),"SOUND_EVENT");if(!key.equals(R.call(e,"getRegistryKey")))return;for(String name:new String[]{"servo_idle","target_alert"}){Object id=R.call(R.type("net.minecraft.resources.ResourceLocation"),"fromNamespaceAndPath","tacz_turrets",name);Object sound=R.call(R.type("net.minecraft.sounds.SoundEvent"),"createVariableRangeEvent",id);SOUNDS.put(name,sound);R.call(e,"register",key,id,(java.util.function.Supplier<Object>)()->sound);}}
+ static void play(Object t,String name,float volume){Object sound=SOUNDS.get(name);if(sound!=null)R.call(R.call(t,"level"),"playSound",null,R.call(t,"blockPosition"),sound,R.get(R.type("net.minecraft.sounds.SoundSource"),"BLOCKS"),volume,1f);}
+ public static void tick(Object t){Object w=R.call(t,"level");if(!Link.server(w))return;State s=STATES.computeIfAbsent(t,k->new State());if(!R.yes(R.call(t,"isEnabled"))||!R.yes(R.call(t,"hasGun"))||!Link.power(t)){s.target=null;return;}long n=Link.now(t);if(n%80==0)play(t,"servo_idle",.18f);Object target=R.call(R.type("net.tslat.smartbrainlib.util.BrainUtils"),"getTargetOfEntity",t);Object id=target!=null&&R.yes(R.call(target,"isAlive"))&&R.yes(R.call(t,"isValidTarget",target))&&R.yes(R.call(t,"hasLineOfSight",target))?R.call(target,"getUUID"):null;if(id!=null&&!id.equals(s.target)&&n-s.alert>=60){play(t,"target_alert",.7f);s.alert=n;}s.target=id;}
+}
