@@ -1,4 +1,4 @@
-SUPERVIVIENTES 20 — IDENTIDAD, REACCIONES, LESIONES Y REANIMACION
+SUPERVIVIENTES 20.1 — IDENTIDAD, REACCIONES, LESIONES Y REANIMACION
 Minecraft NeoForge 1.21.1
 
 INSTALAR
@@ -7,7 +7,7 @@ Sustituye los JAR anteriores de estos cuatro mods, sin duplicados:
 - TacZ NPCs .19 -> .20 identities-reactions.
 - First Aid 3.6.8 -> 3.6.9 injured-only-body-care.
 - Zomboid Integration 1.7.8 -> 1.7.9 injured-body-care.
-- Corpse player-equipment-slots.2 -> npc-survivor-cargo.3.
+- Corpse player-equipment-slots.2 -> npc-survivor-cargo.4 (tambien reemplaza .3).
 El paquete incluye tambien FactionFriction .16, Flashlight .5 y
 SurvivorCreator .34. Son los mismos de la entrega anterior; si ya los
 tienes, conservalos. Mantén SmartBrainLib y el resto del pack.
@@ -99,3 +99,8 @@ menus, lesiones seleccionadas, curaciones, derribos, reanimacion,
 inventarios y cadaveres. Se comprueba tambien la apertura de pantallas
 con la forma de interfaz que usa Minecraft para sus textos.
 No se ha ejecutado ni probado visualmente dentro de Minecraft.
+
+CORRECCION 20.1
+Corpse conserva su version interna original 1.21.1-1.1.13, para satisfacer
+la dependencia de Zombie Remains. Solo cambia la identificacion del mod;
+el codigo y los recursos de Corpse .3 se conservan.

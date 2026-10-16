@@ -155,10 +155,9 @@
   },
   "corpse": {
     "input_sha256": "a49e41158eee7aa10888937b3f65be244c102001d8a797d2de95163d2ced9e74",
-    "output": "corpse-neoforge-1.21.1-1.1.13-npc-survivor-cargo.3.jar",
-    "sha256": "5dfa76bb4030ce5ec13ad4745c56e5519d7752685c9a99199be11ecb64af5476",
+    "output": "corpse-neoforge-1.21.1-1.1.13-npc-survivor-cargo.4.jar",
+    "sha256": "24c61bc2a9f878b0bde060b8a694a1ec5df242930a3b13f647a5b119164a79b2",
     "changed": [
-      "META-INF/neoforge.mods.toml",
       "de/maxhenkel/corpse/entities/CorpseEntity.class",
       "de/maxhenkel/corpse/entities/DummyPlayer.class"
     ],

@@ -1,6 +1,6 @@
 {
-  "file": "distribuciones/Zombies-Poldo-Supervivientes-20-Salud-Corpse.zip",
-  "sha256": "75e3d78e0767dbb08a0c1939585f69cd9ddb4ccb15af09036735919cd0ddd6c7",
+  "file": "distribuciones/Zombies-Poldo-Supervivientes-20.1-Correccion-Arranque.zip",
+  "sha256": "e6a7a2f5399d947372f438a1b5acc2f95e4476b8cc24baa8890c72d4d07b420d",
   "jars": 7,
   "minecraft_runtime_tested": false
 }

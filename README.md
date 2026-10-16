@@ -1,3 +1,5 @@
+Corrección de arranque para Supervivientes 20: [reemplazo de Corpse solamente](https://raw.githubusercontent.com/ZrEsper/putamadre/main/distribuciones/Zombies-Poldo-Corpse-4-Correccion-Arranque.zip) o [paquete completo 20.1](https://raw.githubusercontent.com/ZrEsper/putamadre/main/distribuciones/Zombies-Poldo-Supervivientes-20.1-Correccion-Arranque.zip). Restaura la versión interna de Corpse que exige Zombie Remains.
+
 [Descargar Supervivientes 20: identidades, 48 skins, reacciones, salud y cadáveres Corpse](https://raw.githubusercontent.com/ZrEsper/putamadre/main/distribuciones/Zombies-Poldo-Supervivientes-20-Salud-Corpse.zip). Actualiza TacZ NPCs .20, First Aid 3.6.9, Integration 1.7.9 y Corpse .3. La guía del ZIP explica las interacciones y los reemplazos.
 
 [Descargar NPCs: diálogos sencillos, chat al estar inconsciente y linterna automática](https://raw.githubusercontent.com/ZrEsper/putamadre/main/distribuciones/Zombies-Poldo-Dialogos-19-Chat-Linterna.zip). TacZ NPCs .19, First Aid 3.6.8 y Flashlight .5; incluye SurvivorCreator .34 y FactionFriction .16.

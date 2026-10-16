@@ -1,0 +1,9 @@
+{
+  "restored_version": "1.21.1-1.1.13",
+  "zombie_remains_required_range": "[1.21.1-1.1.13,)",
+  "matches_inclusive_minimum": true,
+  "previous_release_metadata_was_incompatible": true,
+  "unchanged_nonmetadata_entries": 198,
+  "sha256": "24c61bc2a9f878b0bde060b8a694a1ec5df242930a3b13f647a5b119164a79b2",
+  "minecraft_runtime_tested": false
+}
