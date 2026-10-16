@@ -1,3 +1,5 @@
+[Descargar NPCs: diálogos sencillos, chat al estar inconsciente y linterna automática](https://raw.githubusercontent.com/ZrEsper/putamadre/main/distribuciones/Zombies-Poldo-Dialogos-19-Chat-Linterna.zip). TacZ NPCs .19, First Aid 3.6.8 y Flashlight .5; incluye SurvivorCreator .34 y FactionFriction .16.
+
 Correccion de pantallas NPC y First Aid: [descarga directa del ZIP](https://raw.githubusercontent.com/ZrEsper/putamadre/main/distribuciones/Zombies-Poldo-Correccion-Pantallas-18.zip). Sustituye TacZ NPCs .17 por .18 y First Aid 3.6.6 por 3.6.7; FactionFriction .16 se conserva.
 
 ## Loot .45: ropa garantizada, policías y tres niveles de torreta

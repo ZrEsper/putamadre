@@ -1,165 +1,69 @@
-CORRECCION DEL CIERRE AL HABLAR O QUEDAR INCONSCIENTE
-Corrige IncompatibleClassChangeError de Component.translatable/literal.
-No exige empezar un mundo nuevo. Haz copia de seguridad antes de actualizar.
-
-SUPERVIVIENTES — CONVERSACIONES, COMPANEROS Y TRABAJOS
+NPC Y RECUPERACION — MENUS LEGIBLES, CHAT Y LINTERNA
 Minecraft NeoForge 1.21.1
 
-1. INSTALAR
-Cierra Minecraft y el servidor. Sustituye estas tres versiones:
-- TacZ NPCs tactical.16 o .17 -> tactical.18-screen-linkage-fix.
-- FactionFriction clans.15 -> clans.16-npc-companions (si ya tienes .16, es el mismo archivo).
-- First Aid v3.6.5 o .6 -> v3.6.7-screen-linkage-fix.
-No dejes dos versiones del mismo mod en mods.
-Instala los tres JAR tanto en clientes como en el servidor.
-Conserva SmartBrainLib 1.16.11, Hordes .46 y Zombie Remains .15 que enviaste,
-y las dependencias anteriores del pack: estos tres no se reemplazan.
-La reputacion y las ordenes se guardan en tu mundo.
+INSTALAR
+1. Cierra Minecraft y el servidor. Haz una copia del mundo.
+2. En mods, quita las versiones anteriores de TacZ NPCs, First Aid,
+   Flashlight y SurvivorCreator. Copia los JAR de este paquete.
+3. FactionFriction .16 es el mismo de la actualizacion anterior.
+   Si ya lo tienes, conservalo. No dejes dos versiones de ningun mod.
+Instala las mismas versiones en cada cliente y en el servidor.
+Conserva SmartBrainLib, Hordes y Zombie Remains.
+No hace falta empezar otro mundo.
 
-2. HABLAR
-Baja el arma si estabas apuntando. Acercate y haz clic derecho al NPC.
-Se abre un menu con tres pestanas:
-- Conversar: clima, dia, hora, estado de animo, pasado, horda, rumores,
-  prometer que no le haras dano y contar un chiste.
-- Relacion: regalo, tratamiento, invitacion, inventario, almacen y despedida.
-- Ordenes: seguir, esperar, patrullar, buscar, cosechar, limpiar, fabricar,
-  cocinar, entregar suministros y actuar por su cuenta.
-El juego sigue avanzando mientras hablas. Un hostil no se vuelve seguro
-por abrir el menu.
-Hay 148 textos de conversacion por idioma, contando variantes y respuestas
-de personalidad. El clima, hora, salud, hordas y multitudes cambian algunas
-respuestas. La conversacion usa opciones escritas, no un chat de texto libre.
-Interfaz y textos en espanol e ingles segun el idioma del juego.
+HABLAR
+Acercate a un superviviente, baja el arma si estas apuntando y haz clic
+ derecho. Su respuesta aparece en el recuadro oscuro, sin desenfoque.
+Solo veras hasta seis opciones a la vez. Usa Mas opciones para ver otras.
+Esc cierra la conversacion. El mundo sigue avanzando mientras hablas.
 
-3. TIPOS DE SUPERVIVIENTE
-Hostil: solo se asigna este tipo a NPC que llevan arma de fuego o melee.
-Tras mantenerte localizado y visible durante unos 5 segundos puede atacar
-sin avisar. Perderte de vista reinicia la inspeccion. Sin arma no inicia ese
-ataque. Conserva las reglas de municion, precision y recarga del mod base.
-Normal: no te ataca por verte. Puede defenderse si lo atacas; una relacion
-personal muy deteriorada tambien puede llevarlo a atacarte si esta armado.
-Pacifico: no decide atacar al jugador, incluso si le haces dano; intenta huir.
-Normales y pacificos pueden agacharse repetidas veces como gesto de paz.
-Los pacificos reaccionan al arma que sostienes y pueden pedir que la bajes.
-Todos pueden defenderse de monstruos. Las personalidades nerviosas se
-repliegan antes que las valientes ante grandes grupos de enemigos.
-Las probabilidades iniciales son 25% hostil, 50% normal y 25% pacifico entre
-los que estan armados. Si uno no lleva arma, ese 25% hostil pasa a normal.
-No se les regalan armas para convertirlos en hostiles.
+AMIGABLE
+Saludar, tranquilizar, bromear o preguntar como se siente.
+Que necesitas: te pide comida o material medico.
+Entregar lo que me pidio: lleva ese objeto en la mano. Se consume uno,
+va a su mochila y mejora la confianza. Hay una pausa de un minuto entre
+recompensas por favores. Dar un objeto sigue funcionando para otros regalos.
+Curar: lleva una venda y permanece cerca durante tres segundos.
+Unirse al grupo: necesita confianza y una faccion tuya en FactionFriction.
+Si aun no tienes faccion, creala desde el menu de FactionFriction primero.
 
-4. CONFIANZA Y REPUTACION
-Confianza: lo que ese NPC concreto piensa de ti, entre -100 y 100.
-Reputacion: lo que se sabe de tus acciones, tambien entre -100 y 100.
-Hablar ayuda poco; repetir la misma opcion no aumenta confianza otra vez
-hasta pasado un minuto. Cada NPC tiene su propio tiempo de espera.
-Un regalo util de la mano principal ayuda mas: vendas, comida compatible,
-combustible, municion, herramientas o materiales que realmente pueda usar.
-Cada regalo consume un objeto. Hay espera entre regalos y debe tener espacio.
-Curarlo aumenta confianza. Atacarlo la reduce y perjudica tu reputacion.
-Matar supervivientes no hostiles empeora mucho tu reputacion.
-Testigos cercanos recuerdan lo ocurrido. Los NPC que se encuentran pueden
-transmitirse esos rumores incluso si tu ya no estas delante.
-Con reputacion de -60 o peor, incluso hostiles armados pueden tenerte miedo.
-Eso permite reclutar a algunos por intimidacion. Los supervivientes buenos
-necesitan mas confianza para unirse a alguien con mala reputacion.
-Personalidades: amable, cauto, practico, valiente, nervioso, grunon, bromista
-y reservado. Cambian su forma de hablar y algunas reacciones; los cautos y
-grunones ganan confianza mas despacio y los amables mas deprisa.
+NEUTRAL
+Preguntar por clima, dia, hora, pasado, hordas y rumores.
+Puedes pedir que te cure: necesita vendas propias, estar dispuesto a ayudar
+y llegar hasta ti. No crea curaciones gratis ni elimina la infeccion.
+Puedes pedir que limpie cadaveres: un conocido necesita 15 de confianza y
+ayuda dos minutos; un miembro de tu grupo recibe la orden normal.
+Necesita espacio para guardar el contenido. No elimina cadaveres de jugador.
+Mochila y trabajos se habilitan para los integrantes de tu faccion.
 
-5. UNIR A TU FACCION
-Primero crea o entra en una faccion usando FactionFriction.
-Gana su confianza y pulsa Invitar a mi faccion en Relacion.
-Como referencia: un pacifico necesita alrededor de 35 de confianza y un
-normal 45. Con mala reputacion puede exigir 75. Un hostil muy intimidado
-puede aceptar sin esos puntos.
-Al aceptar, se vincula a la faccion real del jugador. Los companeros NPC se
-guardan aparte de los miembros humanos; no ocupan cargos ni pueden heredar
-el liderazgo del clan. Los miembros de esa faccion pueden darles ordenes.
-Si muere, se elimina del registro de companeros. No reaparece ni se clona.
-Se conserva la entrega de pertenencias al cadaver del mod anterior.
-Despedirlo lo deja vivo y libre. Disolver la faccion invalida su afiliacion.
+AGRESIVO
+Incluye insultar y amenazar. Bajan la confianza y la reputacion;
+pueden empeorar la actitud del NPC. No son bromas ni una forma de ganar
+amistad. Tambien puedes terminar la conversacion o despedir un companero.
 
-6. INVENTARIO, ARMAS Y ARMADURAS
-Solo los de tu faccion permiten abrir Mochila y equipo desde Relacion.
-Se abre un inventario normal de Minecraft. Puedes mover objetos con sus
-controles habituales. Los cambios afectan a sus suministros y equipo reales.
-Tiene 47 espacios de mochila. En la ULTIMA FILA:
- columna 1: mochila             columna 2: mochila
- columna 3: casco               columna 4: pecho
- columna 5: piernas             columna 6: botas
- columna 7: arma/mano principal columna 8: mano secundaria
- columna 9: reservada; no admite objetos.
-Las casillas de armadura solo admiten objetos que puedan equiparse ahi.
-Un unico jugador puede revisarlo a la vez. El NPC pausa sus trabajos mientras
-lo revisas. Alejarte, cerrar el menu o perder la afiliacion cierra el acceso.
-Si trae mas de 47 pilas de una version anterior, el sobrante se conserva;
-no se borra al abrir este inventario.
+INCONSCIENTE
+Pantalla negra, texto legible y sin desenfoque.
+Tu tecla de chat abre el chat; la tecla de comandos abre /.
+Esc abre el menu normal del juego, con sus opciones.
+Al cerrar esos menus vuelves a la pantalla negra si sigues inconsciente.
+La opcion de levantarte solo aparece si tienes un desfibrilador valido.
 
-7. CURACIONES Y REANIMACION
-No hace falta pertenecer a su faccion para curarlo.
-Sosten una venda o tirita de First Aid y haz clic derecho al NPC. Tambien
-puedes usar Curar con venda en Relacion. Mantente cerca unos 3 segundos,
-con la venda en la mano. Se consume una solo si recibe curacion.
-El NPC usa vendas reales de su mochila para curarse, atender a otro NPC
-amigo o tratar partes heridas del jugador mediante First Aid.
-Los NPC naturales conservan su vida de criatura y un registro compatible
-de partes heridas; First Aid sigue usando su modelo completo para jugadores.
-No se convierte a la criatura en un ServerPlayer ni en una cuenta falsa.
-Normales y pacificos pueden ayudar a jugadores cercanos en quienes confian.
-Los de tu faccion intentan ayudarte aunque tu reputacion sea mala.
-Para un jugador derribado: RCP de 8 segundos; si el NPC lleva desfibrilador,
-usa la reanimacion rapida de 3 segundos y gasta una carga de ESE objeto.
-No gasta el desfibrilador del jugador para hacerse pasar por uno suyo.
-Debe poder acercarse, verte y mantenerse a tu lado. El dano recibido o
-separarse interrumpe el intento. No revive a quien ya murio definitivamente.
-Reanimar no cura todas las lesiones ni elimina automaticamente la infeccion.
-Los controles de autorreanimacion del jugador siguen como en First Aid .5.
+LINTERNA
+El equipo inicial de SurvivorCreator incluye la linterna encendida y
+cargada. Una linterna antigua en la mano se adapta al sistema de baterias.
+Al revivir del estado de inconsciente, se enciende la linterna que tengas
+en una mano si tiene carga. No recarga ni duplica la bateria al revivir.
+Clic derecho: encender/apagar. Agachado + clic derecho: cambiar bateria.
+Puedes apagarla manualmente; permanece apagada hasta que la enciendas
+o vuelvas a ser reanimado.
+Bateria: un lingote de cobre + redstone + lapislazuli, sin forma fija.
+Basica: 10 minutos. Expedicion: 20. Economica: 30 con menos alcance.
+Tactica: 10 minutos con mas alcance. Conserva las recetas de estas mejoras.
 
-8. TRABAJOS
-Seguir: intenta acercarse a quien dio la orden, dentro de la misma dimension.
-No se teletransporta ni sigue trabajando en chunks descargados.
-Quedarse: espera y mantiene sus reacciones a peligros y necesidad de ayuda.
-Patrullar: recorre puntos alrededor del lugar donde diste la orden, a unos
-10 bloques del centro. Usa la navegacion del juego.
-Buscar suministros: conserva la busqueda de restos/objetos del mod base y
-anade busqueda local de cofres y barriles. Recoge contenidos existentes;
-no rellena un cofre cada vez que lo visita. Descarta cosas que no necesita.
-Los no reclutados tambien pueden buscar suministros y fabricar utiles.
-Cosechar: busca cultivos maduros, recoge sus drops y usa una semilla para
-replantar si la ha recogido o ya la tenia. No cosecha cultivos inmaduros.
-Limpiar: recoge los objetos del resto de zombi antes de retirarlo. Si no
-cabe todo, deja el cuerpo intacto. No elimina cadaveres de jugadores.
-Fabricar: usa recetas reales, solo con ingredientes de su mochila. Prioriza
-algunos utiles basicos y revisa otras recetas compatibles de forma gradual.
-Las recetas que requieren una mesa de 3x3 necesitan una mesa cercana.
-No repite indefinidamente un objeto que ya tiene en cantidad suficiente.
-No construye automaticamente una mina, una casa ni una cadena de maquinas.
-Cocinar: busca horno o ahumador, coloca un ingrediente compatible y carbon
-o carbon vegetal de su mochila, y espera el proceso normal del bloque.
-Solo recoge el resultado cuando el horno lo ha producido. Ponle combustible.
-Un horno colocado y protegido por un jugador debe autorizarse con el boton
-de almacen antes de que el companero lo utilice.
-Entregar: vuelve al jugador que dio la orden y pasa lo que quepa a su
-inventario. Guarda el sobrante y pasa a seguirlo.
-Actuar por su cuenta: vuelve a su comportamiento de supervivencia.
+IDIOMA
+Textos en espanol o ingles segun el idioma del juego.
 
-9. PROTECCIONES Y ESTACIONES
-No saquea almacenes de otras facciones. Los almacenes marcados como puestos
-por jugadores se respetan, salvo el punto que autorices expresamente desde
-Relacion. Para autorizarlo, acercate y pulsa Autorizar almacen cercano.
-Prefiere el cofre, barril, horno o ahumador que miras; si no hay uno en esa
-direccion, elige el mas cercano a 4 bloques. No es un deposito automatico.
-No abre ni trabaja a traves de una pared. Necesita camino y proximidad.
-Los trabajos se hacen en bloques cargados. No generan chunks a distancia.
-Si no encuentra algo o esta lleno, cambia de zona, dale recursos, vacia su
-mochila o vuelve a ordenar la tarea. Un camino cerrado necesita abrirse.
-
-10. COMPROBACIONES Y LIMITES DE ESTA ENTREGA
-Se probaron las reglas y operaciones con dobles de Minecraft: hostilidad,
-inspeccion, confianza, reputacion, persistencia, amistad, curacion, RCP,
-desfibrilador, consumo, cofres, hornos, recetas, cultivos, limpieza y acceso
-al inventario. Se verificaron tambien los hooks y clases nativas en la JVM.
-No se ha iniciado Minecraft/NeoForge real con el pack completo en este entorno.
-Prueba primero esta entrega en una copia del mundo. La comprobacion visual,
-el pathfinding en tu mapa y el rendimiento con muchos NPC quedan por validar
-en partida; no se promete una mejora de FPS ni equivalencia total a un jugador.
+VALIDACION
+Pruebas automatizadas de dialogos, favores, inventario, trabajos,
+reanimacion, chat/menu, apertura de pantallas y baterias.
+No se ha ejecutado Minecraft ni se ha comprobado visualmente en el juego.

@@ -8,11 +8,12 @@ result=run('java','-Xverify:all','-cp',str(r/'build/test')+':'+cp+':'+str(r/'bui
 checks=[result,run('java','-Xverify:all','-cp',str(r/'build/test')+':'+cp+':'+str(r/'build/api'),'dev.zomboid.firstaid.AidChecks')]
 checks.append(run('java','-Xverify:all','-cp',str(r/'build/test')+':'+cp+':'+str(r/'build/api'),'mod.cdv.tnpc.tactical.JobChecks'))
 checks.append(run('java','-Xverify:all','-cp',str(r/'build/test')+':'+cp+':'+str(r/'build/api'),'mod.cdv.tnpc.tactical.AdvancedChecks'))
+checks.append(run('java','-Xverify:all','-cp',str(r/'build/test')+':'+cp+':'+str(r/'build/api'),'mod.cdv.tnpc.tactical.Conversation19Checks'))
 for kind,info in report.items():
  with zipfile.ZipFile(r/'base'/json.loads((r/'inputs.json').read_text())[kind]['file'])as old,zipfile.ZipFile(r/'output'/info['output'])as new:
   assert new.testzip()is None
   for n in old.namelist():
-   if n=='META-INF/neoforge.mods.toml' or (kind=='aid' and n=='dev/zomboid/firstaid/UnconsciousScreen.class'):continue
+   if n=='META-INF/neoforge.mods.toml' or (kind=='aid' and (n in {'dev/zomboid/firstaid/UnconsciousScreen.class','dev/zomboid/firstaid/UnconsciousClient.class'} or n.startswith('assets/firstaid/lang/'))):continue
    if '/textures/'in n or '/sounds/'in n or n.endswith('SpawnClaims15.class') or n.startswith('dev/zomboid/npcprobe/') or kind=='aid':assert old.read(n)==new.read(n),n
   if kind=='npc':
    es=json.loads(new.read('assets/tacznpcs/lang/es_es.json'));en=json.loads(new.read('assets/tacznpcs/lang/en_us.json'));assert set(k for k in es if k.startswith(('soc.','dialog.soc.')))<=en.keys();assert sum(k.startswith('dialog.soc.')for k in es)>=148

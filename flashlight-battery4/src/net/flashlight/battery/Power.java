@@ -1,6 +1,7 @@
 package net.flashlight.battery;
 import java.util.*;import java.util.function.Supplier;
 public final class Power {
+ static final Map<Object,Life> LIFE=new WeakHashMap<>();static Class<?> aid;static boolean aidChecked;static final class Life{boolean initialized,down;}
  public static final String[] TYPES={"flashlight","expedition","eco","tactical"};public static final int[] CAPACITY={12000,24000,36000,12000};public static final double[] RANGE={25,25,12,40};
  static Object c(Object o,String n,Object...a){return R.call(o,n,a);}static Object type(String n){return R.type(n);}static Object component(String n){return R.get(type("net.minecraft.core.component.DataComponents"),n);}static Object registry(){return R.get(type("net.minecraft.core.registries.BuiltInRegistries"),"ITEM");}
  static String id(Object s){return c(registry(),"getKey",c(s,"getItem")).toString();}public static int tier(Object s){String id=id(s);for(int i=1;i<TYPES.length;i++)if(id.equals("flashlight:"+TYPES[i])||id.equals("flashlight:"+TYPES[i]+"_off"))return i;return 0;}
@@ -14,12 +15,16 @@ public final class Power {
  static void message(Object e,String key){c(e,"displayClientMessage",c(type("net.minecraft.network.chat.Component"),"translatable",key,new Object[0]),true);}
  static void sound(Object e,boolean active){Object world=c(e,"level");c(world,"playSound",null,c(e,"blockPosition"),c(R.get(type("net.minecraft.core.registries.BuiltInRegistries"),"SOUND_EVENT"),"get",c(type("net.minecraft.resources.ResourceLocation"),"parse","flashlight:flashlight-clicking-"+(active?"on":"off"))),R.get(type("net.minecraft.sounds.SoundSource"),"PLAYERS"),0.5f,1f);}
  static boolean reload(Object e,Object s){Object inv=c(e,"getInventory");for(int i=0;i<36;i++){Object cell=c(inv,"getItem",i);if(id(cell).equals("flashlight:battery")&&((Number)c(cell,"getCount")).intValue()>0){c(cell,"shrink",1);charge(s,CAPACITY[tier(s)]);c(inv,"setChanged");message(e,"message.flashlight.reloaded");return true;}}message(e,"message.flashlight.no_battery");return false;}
- public static void click(Object e,Object used){if(e==null||client(e)||!light(used))return;Object h=null;for(String name:new String[]{"MAIN_HAND","OFF_HAND"}){Object candidate=hand(name);if(c(e,"getItemInHand",candidate)==used){h=candidate;break;}}if(h==null)return;
+ public static void click(Object e,Object used){if(e==null||client(e)||!light(used))return;Object h=null;for(String name:new String[]{"MAIN_HAND","OFF_HAND"}){Object candidate=hand(name);if(c(e,"getItemInHand",candidate)==used){h=candidate;break;}}if(h==null)return;LIFE.computeIfAbsent(e,k->new Life()).initialized=true;
   if(Boolean.TRUE.equals(c(e,"isShiftKeyDown"))){if(remaining(used)>=CAPACITY[tier(used)]){message(e,"message.flashlight.full");return;}reload(e,used);return;}
   boolean active=!on(used);if(active&&remaining(used)==0&&!reload(e,used))return;c(e,"setItemInHand",h,state(used,active));c(c(e,"getInventory"),"setChanged");sound(e,active);
  }
+ static boolean down(Object p){if(!aidChecked){aidChecked=true;try{aid=typeClass("dev.zomboid.firstaid.DownedSupport");}catch(RuntimeException missing){aid=null;}}return aid!=null&&Boolean.TRUE.equals(c(aid,"down",p));}
+ static Class<?> typeClass(String name){return R.type(name);}
+ /** Only initial equipment and an unconscious-to-awake transition trigger this, never manual toggling. */
+ static void lifecycle(Object e){Life life=LIFE.computeIfAbsent(e,k->new Life());boolean unconscious=down(e),wake=life.down&&!unconscious;life.down=unconscious;if(unconscious||life.initialized&&!wake)return;boolean found=false;for(String name:new String[]{"MAIN_HAND","OFF_HAND"}){Object h=hand(name),s=c(e,"getItemInHand",h);if(!light(s))continue;found=true;Object tag=tag(s);if(!Boolean.TRUE.equals(c(tag,"contains","FlashTicks4")))charge(s,CAPACITY[tier(s)]);if(remaining(s)>0&&!on(s))c(e,"setItemInHand",h,state(s,true));}if(found){life.initialized=true;c(c(e,"getInventory"),"setChanged");}}
  /** Called once before the native beam tick. Only held, lit lights consume charge. */
- public static void tick(Object e){if(e==null||client(e))return;for(String name:new String[]{"MAIN_HAND","OFF_HAND"}){Object h=hand(name),s=c(e,"getItemInHand",h);if(!on(s))continue;int n=remaining(s);if(n>0){charge(s,--n);if(n==1200)message(e,"message.flashlight.low");}if(n==0){c(e,"setItemInHand",h,state(s,false));message(e,"message.flashlight.empty");sound(e,false);}}}
+ public static void tick(Object e){if(e==null||client(e))return;lifecycle(e);for(String name:new String[]{"MAIN_HAND","OFF_HAND"}){Object h=hand(name),s=c(e,"getItemInHand",h);if(!on(s))continue;int n=remaining(s);if(n>0){charge(s,--n);if(n==1200)message(e,"message.flashlight.low");}if(n==0){c(e,"setItemInHand",h,state(s,false));message(e,"message.flashlight.empty");sound(e,false);}}}
  public static Object beamItem(Object s){if(on(s))return c(stack("flashlight:flashlight"),"getItem");return c(s,"getItem");}
  public static double range(Object e){double n=0;for(String name:new String[]{"getMainHandItem","getOffhandItem"}){Object s=c(e,name);if(on(s))n=Math.max(n,RANGE[tier(s)]);}return n;}
  public static int width(Object s){return (int)Math.ceil(13.0*remaining(s)/CAPACITY[tier(s)]);}public static int color(Object s){return remaining(s)<=1200?0xe04838:0x65d34f;}

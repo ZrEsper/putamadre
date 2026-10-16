@@ -5,7 +5,7 @@ def run(*args):subprocess.run(list(map(str,args)),cwd=r,check=True)
 def sha(b):return hashlib.sha256(b).hexdigest()
 for d in ['build/tool','build/flash','build/survivor','output']:(r/d).mkdir(parents=True,exist_ok=True)
 run(*ecj,'-cp',asm,'-d','build/tool','Patch.java');reports={}
-for kind,src,out in [('flash','src','flashlight-5.1-neoforge-1.21.1-batteries-variants.4.jar'),('survivor','src-survivor','survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v34-flashlight-battery.jar')]:
+for kind,src,out in [('flash','src','flashlight-5.1-neoforge-1.21.1-batteries-auto-wake.5.jar'),('survivor','src-survivor','survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v34-flashlight-battery.jar')]:
  base=next((r/'base').glob('flashlight*'if kind=='flash'else'survivor*'));assert sha(base.read_bytes())==json.loads((r/'inputs.json').read_text())[kind]['sha256'];run(*ecj,'-d','build/'+kind,*map(str,(r/src).rglob('*.java')));p=r/'output'/out;run('java','-cp','build/tool:'+asm,'Patch',base,p,'build/'+kind,kind)
  with zipfile.ZipFile(p)as z:entries={n:z.read(n)for n in z.namelist()}
  def js(n,data):entries[n]=json.dumps(data,ensure_ascii=False,separators=(',',':')).encode()

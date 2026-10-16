@@ -52,6 +52,29 @@ for name,(a,b)in personas.items():
   for i,text in enumerate(lines):labels[loc]['dialog.soc.persona.'+name+'.'+str(i)]=text
 labels['es_es']['soc.inventory.busy']='Otro jugador está revisando este inventario. Espera a que lo cierre.'
 labels['en_us']['soc.inventory.busy']='Another player is using this inventory. Wait until they close it.'
+extra={
+'soc.tone.0':('Amigable','Friendly'),'soc.tone.1':('Neutral','Neutral'),'soc.tone.2':('Agresivo','Aggressive'),'soc.simple_status':('Confianza: %s | Salud: %s%%','Trust: %s | Health: %s%%'),'soc.close':('Cerrar','Close'),'soc.previous':('Anterior','Previous'),'soc.next':('Más opciones','More options'),
+'soc.button.favor_ask':('¿Qué necesitas?','What do you need?'),'soc.button.favor_give':('Entregar lo que me pidió','Give requested supply'),'soc.button.favor_help':('¿Puedes curarme?','Can you treat me?'),'soc.button.favor_clean':('¿Limpias los cadáveres?','Can you clean the bodies?'),'soc.button.orders':('Pedir un trabajo...','Ask for a job...'),'soc.button.insult':('Eres un inútil.','You are useless.'),'soc.button.threaten':('No me hagas enfadar.','Do not make me angry.'),'soc.button.leave':('No quiero hablar más.','I am done talking.'),'soc.button.invite':('¿Te unes a mi grupo?','Will you join my group?'),
+}
+new_responses={
+'need_medicine':('Estoy herido. Tráeme una venda o un apósito. Ponlo en tu mano y elige «Entregar lo que me pidió».','I am hurt. Bring a bandage or plaster. Hold it and choose Give requested supply.'),
+'need_food':('Necesito comida: pan, una manzana, una zanahoria, una patata asada o carne cocinada. Lleva una en la mano y entrégamela.','I need food: bread, an apple, a carrot, a baked potato or cooked meat. Hold one and give it to me.'),
+'ask_first':('Pregúntame primero qué necesito. Así sabrás cómo ayudarme.','Ask me what I need first. Then you will know how to help.'),
+'favor_done':('Gracias por cumplir el favor. Lo guardaré; ahora confío más en ti.','Thank you for helping. I will keep this; I trust you more now.'),
+'favor_wait':('Gracias, pero todavía tengo lo que me diste. Espera un minuto.','Thanks, but I still have what you gave me. Wait a minute.'),
+'favor_full':('No me cabe nada más en la mochila.','My backpack is full.'),
+'no_medicine':('Quiero ayudarte, pero no tengo vendas. Puedes darme una desde Amigable.','I want to help, but I have no bandages. You can give me one under Friendly.'),
+'healthy':('No veo ninguna lesión que pueda vendar ahora mismo.','I cannot see an injury I can bandage right now.'),
+'help_ready':('Acércate. Voy a intentar curarte con mis vendas. No te alejes mientras te atiendo.','Come closer. I will try to treat you with my bandages. Stay near me during treatment.'),
+'clean_favor':('Limpiaré los cadáveres cercanos. Si no somos compañeros, te ayudaré durante dos minutos. Necesito sitio en mi mochila.','I will clear nearby bodies. If we are not companions, I will help for two minutes. I need space in my backpack.'),
+'insult':('¿Así agradeces que hable contigo? No vuelvas a insultarme.','Is that how you thank me for talking? Do not insult me again.'),
+'threaten':('He oído la amenaza. No esperes que siga confiando en ti.','I heard that threat. Do not expect me to keep trusting you.'),
+'rude_wait':('Ya te he oído. Hablar así solo empeora las cosas.','I heard you. Talking like that only makes things worse.'),
+}
+for key,(es,en) in extra.items():labels['es_es'][key]=es;labels['en_us'][key]=en
+for topic,(es,en) in new_responses.items():
+ for loc,value in [('es_es',es),('en_us',en)]:
+  for v in range(4):labels[loc]['dialog.soc.'+topic+'.'+str(v)]=value
 labels['es_mx']=labels['es_es'].copy()
 (r/'translations.json').write_text(json.dumps(labels,ensure_ascii=False,indent=2)+'\n')
 print('Dialogue variants per language:',sum(k.startswith('dialog.soc.')for k in labels['es_es']))
