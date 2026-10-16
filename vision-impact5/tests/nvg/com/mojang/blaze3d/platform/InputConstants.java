@@ -1,0 +1,1 @@
+package com.mojang.blaze3d.platform;public class InputConstants{public static final Key UNKNOWN=new Key(-1);public record Key(int getValue){}public enum Type{KEYSYM;public Key getOrCreate(int n){return new Key(n);}}}

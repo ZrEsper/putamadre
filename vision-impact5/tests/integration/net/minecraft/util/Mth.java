@@ -1,0 +1,1 @@
+package net.minecraft.util;public class Mth{public static int clamp(int v,int min,int max){return Math.max(min,Math.min(max,v));}public static float clamp(float v,float min,float max){return Math.max(min,Math.min(max,v));}}

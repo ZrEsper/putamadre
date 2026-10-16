@@ -1,0 +1,38 @@
+{
+  "nvg": {
+    "input_sha256": "b561143ee221420cbc710d283ebfee80e5c491cc39837c8803c7dba0d479c5e6",
+    "output": "fracturepoint-1.21.1-3.0.0-PT2-nvg-filter-priority.4.jar",
+    "sha256": "4a3b7470641492e229ac70e1fa0092ba0a36723dadddb93fd490fc9bc40e6f31",
+    "changed": [
+      "com/raiiiden/warborn/client/util/NvgClient2.class"
+    ],
+    "added": [],
+    "minecraft_runtime_tested": false
+  },
+  "aid": {
+    "input_sha256": "23d769cc70b5212cb82c7c9d5d87cdf6c31bb86949fa843d87122dafe698146e",
+    "output": "firstaid-1.21.1-ZOMBOID-v3.6.4-nvg-filter-priority.jar",
+    "sha256": "bb7d366e01cfaf99891ba75936e1ac8d5f5f6bef7d2f88121d3f929b4c28bb04",
+    "changed": [
+      "ichttt/mods/firstaid/client/PainVisualEffectsController.class"
+    ],
+    "added": [
+      "ichttt/mods/firstaid/client/HelmetFilterPriority.class"
+    ],
+    "minecraft_runtime_tested": false
+  },
+  "tac": {
+    "input_sha256": "c184e822c41184d2616aca0d09f3f81a65c9f0b2bbf875782c4ca61e5a62d256",
+    "output": "tacz-tactical-1.2.4-neoforge-1.21.1-marks200-85s.5.jar",
+    "sha256": "02c2eee19ecd3c8ae014eaa795be1c7d1802b49edd2af774b221164ef1ea8e46",
+    "changed": [
+      "dev/tactical/tacz/ImpactMarks.class",
+      "dev/tactical/tacz/OnceEffects.class",
+      "dev/tactical/tacz/TimedMarks.class"
+    ],
+    "added": [
+      "dev/tactical/tacz/BoundedMarks.class"
+    ],
+    "minecraft_runtime_tested": false
+  }
+}

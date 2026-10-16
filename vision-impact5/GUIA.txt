@@ -1,0 +1,46 @@
+ZOMBIES POLDO - VISION MANUAL CON N + 200 MARCAS / 85 SEGUNDOS
+
+INSTALAR
+1. Cierra Minecraft y el servidor si lo usas.
+2. Quita de mods las versiones anteriores de:
+   - firstaid (3.6.3 treatment-animations)
+   - fracturepoint (nvg-manual-visor.3)
+   - tacz-tactical (distant-shots-768.4)
+3. Copia los tres JAR de este ZIP a mods.
+4. En multijugador, coloca los tres reemplazos en clientes y servidor.
+   Conserva el TaCZ principal .18; NO hace falta reemplazarlo ni extraerlo.
+   Conserva tambien taczaddon, Iso, ETF, EMF y los otros mods.
+   Nunca dejes dos versiones del mismo mod.
+
+MARCAS DE BALA
+- Como maximo 200 marcas de impacto en total por cliente/mundo.
+- El disparo 201 borra la marca mas antigua para dejar sitio al nuevo.
+- Repetir un impacto en el mismo punto lo renueva y pasa a ser el mas nuevo.
+- Cada marca dura 1 minuto y 25 segundos: 1700 ticks a 20 ticks/segundo.
+- Restaurarla al volver a una zona no reinicia su tiempo ni crea otro brillo.
+- Las marcas caducadas o retiradas por limite no reaparecen.
+- No cambia el alcance de las balas ni las trazadoras en vuelo.
+- Conserva los sonidos a 768 bloques sin silenciador y 128 silenciados.
+
+VISION CON N
+Equipa un casco compatible con gafas y bateria. Empieza con el visor arriba.
+Pulsa N: baja el visor y, al completar el movimiento, activa el filtro
+original que corresponda a sus gafas (nocturno, digital o termico).
+Pulsa N otra vez: sube el visor y desactiva la vision.
+Cambiar de casco exige bajar el nuevo visor manualmente.
+La bateria conserva sus 15 minutos de funcionamiento.
+
+FirstAid ya no sustituye el filtro del casco por el de dolor/morfina
+mientras la vision esta activa. Mantiene curaciones, salud y sus
+indicadores de pantalla; su desenfoque/desaturacion de pantalla completa
+cede prioridad al casco y vuelve al subir el visor o apagar la vision.
+No se recargan ambos filtros una y otra vez.
+
+PRUEBA RAPIDA
+- Con bateria y casco: N, recibir dano, N otra vez.
+- Repite con gafas digitales y termicas, y con otro casco.
+- Haz muchos impactos: deben quedar los 200 mas recientes.
+- Espera 85 segundos sin disparar: las marcas deben desaparecer.
+
+Las pruebas de codigo y metodos reales con APIs simuladas pasaron.
+No se ha ejecutado Minecraft/OpenGL: falta confirmar aspecto y FPS en partida.

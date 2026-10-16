@@ -1,0 +1,1 @@
+package com.raiiiden.warborn.common.network;import java.util.*;public class ModNetworking{public static List<Object> packets=new ArrayList<>();public static void sendToServer(Object p){packets.add(p);}}

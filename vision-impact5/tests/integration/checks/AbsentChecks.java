@@ -1,0 +1,1 @@
+package checks;public class AbsentChecks{public static void main(String[]a){for(int i=0;i<1000;i++)if(ichttt.mods.firstaid.client.HelmetFilterPriority.defer())throw new AssertionError("absent NVG must not suppress medical filter");System.out.println("OPTIONAL_NVGMOD_ABSENCE_CHECKS=1000");}}

@@ -1,3 +1,7 @@
+## Vision con N estable y maximo 200 impactos durante 85 segundos
+
+[Descargar ZIP directo](distribuciones/Zombies-Poldo-Vision-N-200-Marcas-85s.zip). FirstAid 3.6.4 y Fracture Point NVG .4 coordinan el filtro: el casco conserva su vision nativa digital/termica/nocturna mientras el visor esta abajo, evitando las recargas cruzadas con el composite medico. Tactical .5 conserva solo los 200 impactos mas recientes y los elimina a los 85 segundos. Tres reemplazos; conserva TaCZ .18. [Guia y pruebas](vision-impact5/README.md). Conflicto original reproducido y corregido con metodos nativos y APIs simuladas; prueba visual/FPS en Minecraft pendiente.
+
 ## Selfexpression .2: ropa y armaduras con cache compartida
 
 [Descargar ZIP directo](distribuciones/Zombies-Poldo-Selfexpression-Cache-2.zip). Corrige la construccion repetida de `modelcustom_model` que activa el limite de EMF: cinco geometrias compartidas, 10 horneados por recarga frente a 1.879 al recorrer todas las prendas. Sustituye solo Selfexpression .1; conserva ETF 7.2.5 y EMF 3.3.11. Texturas, items y recetas intactos. 876 metodos nativos comprobados antes/despues con APIs simuladas; prueba visual en Minecraft pendiente. [Instalacion y validacion](selfexpression-cache2/README.md).

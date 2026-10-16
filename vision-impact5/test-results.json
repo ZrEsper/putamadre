@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "NVG4_CHECKS=937",
+    "Native effects and decal replay checks: 109",
+    "IMPACT_EXPIRY_CHECKS=1707",
+    "NATIVE_CAPACITY_CHECKS=3005",
+    "BASELINE_FILTER_CHECKS=4; repeated loads=240",
+    "PATCHED_FILTER_CHECKS=23; no repeated loads across 9000+ simulated frames",
+    "OPTIONAL_NVGMOD_ABSENCE_CHECKS=1000"
+  ],
+  "minecraft_runtime_tested": false,
+  "method": "Actual native ImpactMarks/Mark with API particle doubles; manual visor/battery regression; actual native ShaderRegistry plus extracted unchanged native FirstAid updateEffect/forceShutdown/load selection instructions; original conflict reproduced and compared to patched methods; API renderer counts instead of OpenGL"
+}

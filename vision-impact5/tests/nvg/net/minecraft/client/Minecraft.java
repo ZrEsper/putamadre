@@ -1,0 +1,1 @@
+package net.minecraft.client;import checks.NvgChecks.*;import net.minecraft.server.level.ServerPlayer;public class Minecraft{public static final Minecraft INSTANCE=new Minecraft();public ServerPlayer player;public Object level;public Renderer gameRenderer=new Renderer();public static Minecraft getInstance(){return INSTANCE;}}

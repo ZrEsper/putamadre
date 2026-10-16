@@ -1,0 +1,10 @@
+package dev.tactical.tacz;
+import java.util.*;import net.minecraft.core.BlockPos;import net.minecraft.client.Minecraft;import com.tacz.guns.client.particle.BulletHoleParticle;
+public class CapacityChecks{
+ static int checks;static void ok(boolean b,String why){checks++;if(!b)throw new AssertionError(why);}
+ public static void main(String[]a)throws Exception{EffectsChecks.World w=new EffectsChecks.World();Minecraft mc=Minecraft.getInstance();mc.level=w;mc.player=new EffectsChecks.Player();mc.particleEngine=new EffectsChecks.Engine();BlockPos wall=new BlockPos(0,1,1);w.states.put(wall,new EffectsChecks.State("stone",0));EffectsChecks.Face face=new EffectsChecks.Face();List<BulletHoleParticle> particles=new ArrayList<>();
+ for(int i=0;i<1000;i++){BulletHoleParticle p=new BulletHoleParticle(w,i+.1,1.2,1.3,face,wall,"tacz:9mm","tacz:gun","tacz:gun");particles.add(p);ok(ImpactMarks.marks.size()==Math.min(200,i+1),"native remember enforces 200 on every shot");ok(TimedMarks.born.size()==ImpactMarks.marks.size(),"eviction removes timer record too");}
+ for(int i=0;i<particles.size();i++)ok(particles.get(i).alive==(i>=800),"oldest physical particles removed first");
+ BulletHoleParticle refreshed=new BulletHoleParticle(w,800.1,1.2,1.3,face,wall,"tacz:9mm","tacz:gun","tacz:gun");ok(!particles.get(800).alive&&refreshed.alive&&ImpactMarks.marks.size()==200,"same location replaces old particle");new BulletHoleParticle(w,1000.1,1.2,1.3,face,wall,"tacz:9mm","tacz:gun","tacz:gun");ok(!particles.get(801).alive&&refreshed.alive,"repeated coordinate is newest, not oldest");
+ for(int i=0;i<1699;i++)ImpactMarks.tick();ok(refreshed.alive&&ImpactMarks.marks.size()==200,"all remain before 85 seconds even if replay maintenance runs");ImpactMarks.tick();ok(!refreshed.alive&&ImpactMarks.marks.isEmpty()&&TimedMarks.born.isEmpty(),"all removed at 1700 ticks with no restore records");
+ for(int i=0;i<100;i++)ImpactMarks.tick();ok(ImpactMarks.marks.isEmpty(),"expired holes never reappear");System.out.println("NATIVE_CAPACITY_CHECKS="+checks);}}

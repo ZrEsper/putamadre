@@ -1,0 +1,1 @@
+package net.minecraft.client.player;public class LocalPlayer{public java.util.UUID id=java.util.UUID.randomUUID();public net.minecraft.world.item.ItemStack helmet=new net.minecraft.world.item.ItemStack();public net.minecraft.world.item.ItemStack getItemBySlot(net.minecraft.world.entity.EquipmentSlot s){return helmet;}public java.util.UUID getUUID(){return id;}}

@@ -1,0 +1,1 @@
+package net.minecraft.client.renderer;public class PostChain{public String name;public java.util.List<PostPass> passes=java.util.List.of();public PostChain(String n){name=n;}public String getName(){return name;}}

@@ -1,0 +1,1 @@
+package com.raiiiden.warborn.client.event;import net.minecraft.client.KeyMapping;public class ModKeybindings{public static final KeyMapping TOGGLE_HELMET_TOP=new KeyMapping(72),TOGGLE_SPECIAL_VISION=new KeyMapping(78);}

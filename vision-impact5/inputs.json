@@ -1,0 +1,14 @@
+{
+  "nvg": {
+    "file": "fracturepoint-1.21.1-3.0.0-PT2-nvg-manual-visor.3.jar",
+    "sha256": "b561143ee221420cbc710d283ebfee80e5c491cc39837c8803c7dba0d479c5e6"
+  },
+  "aid": {
+    "file": "firstaid-1.21.1-ZOMBOID-v3.6.3-treatment-animations.jar",
+    "sha256": "23d769cc70b5212cb82c7c9d5d87cdf6c31bb86949fa843d87122dafe698146e"
+  },
+  "tac": {
+    "file": "tacz-tactical-1.2.4-neoforge-1.21.1-distant-shots-768.4.jar",
+    "sha256": "c184e822c41184d2616aca0d09f3f81a65c9f0b2bbf875782c4ca61e5a62d256"
+  }
+}
