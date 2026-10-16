@@ -1,0 +1,14 @@
+{
+  "input_sha256": "9266060c6e14dae5d1f9182f4cfe7c4080f2095a6a5614aaf857d203ae883354",
+  "output": "factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.15-no-claim-spawns.jar",
+  "output_sha256": "e0c80307bbb06e000119859a3ff4b723283ee065a40a80e3f5f734a1f2facb56",
+  "changed": [
+    "dev/zomboid/clans/Pve.class",
+    "dev/zomboid/clans/SurfaceSpawns.class",
+    "me/danialisntcool/factionfriction/event/protection/ProtectionEventHandler.class"
+  ],
+  "added": [
+    "dev/zomboid/clans/SpawnClaims15.class"
+  ],
+  "minecraft_runtime_tested": false
+}

@@ -1,0 +1,36 @@
+ZOMBOID CLANS .15 — CHUNKS RECLAMADOS SIN APARICIONES
+
+INSTALAR
+Cierra el juego y el servidor. Quita el FactionFriction/Zomboid Clans .14
+y pon el .15 incluido en mods. Una sola versión del mod por instalación.
+Actualiza tanto el servidor como los clientes.
+
+CÓMO FUNCIONA
+En los chunks reclamados se bloquean las nuevas criaturas: zombis normales,
+mutantes, otros enemigos, animales, aldeanos y NPC. También si proceden de
+spawners, huevos, reproducción, comandos o apariciones directas de otros mods.
+Las oleadas tampoco pueden generar enemigos dentro: buscan suelo fuera.
+El bloqueo afecta al chunk completo, a cualquier altura, y consulta los
+territorios actuales respetando las dimensiones habilitadas por FactionFriction.
+Al liberar el chunk vuelve a permitir las nuevas apariciones inmediatamente.
+
+Los que ya estaban allí se conservan, incluso al guardar/reabrir el mundo
+o descargar/recargar chunks. Pueden seguir entrando criaturas desde fuera.
+No se borra ninguna criatura con barridos o limpiezas de territorio.
+
+Los zombis y mutantes pueden seguir rompiendo: el reclamo ya no veta su
+mobGriefing. Siguen vigentes el gamerule mobGriefing, la configuración de
+roturas de Hordes y las reglas que impongan otros mods.
+La protección contra otros jugadores y contra otras criaturas sigue vigente.
+
+Se pueden colocar las torretas TaCZ. Jugadores, proyectiles, objetos caídos,
+vehículos y cadáveres no se consideran nuevas criaturas para este filtro.
+La transformación de un jugador infectado se conserva como continuación
+del jugador existente, para mantener su equipamiento y cadáver.
+La limpieza original de oleadas abandonadas se mantiene.
+
+VALIDACIÓN
+Se reprodujeron tres comportamientos originales de .14 y pasaron 63 controles
+sobre la política nueva y métodos nativos de aparición/roturas con API simulada.
+Se verificó el bytecode y que solo cambien tres clases y se añada el filtro.
+No se ejecutó Minecraft: falta comprobarlo en una partida del modpack completo.
