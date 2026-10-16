@@ -1,0 +1,55 @@
+{
+  "turret": {
+    "input_sha256": "b184f0c11cb16238ad7f244606027596da536bf0fad1b01e4ef30df75dd6cab7",
+    "output": "tacz_turrets-neoforge-3.0.0-1.21.1-doomsday-scrap-sounds.2.jar",
+    "sha256": "3c3c83ea191f5b1b25dab7c96dcb3a0183d6c07c56fb01d988257dfbe7230546",
+    "changed": [
+      "assets/tacz_turrets/lang/de_de.json",
+      "assets/tacz_turrets/lang/en_us.json",
+      "assets/tacz_turrets/lang/es_es.json",
+      "assets/tacz_turrets/sounds.json",
+      "assets/tacz_turrets/sounds/target_alert.ogg",
+      "com/entropy/tacz_turrets/TACZTurrets.class",
+      "data/tacz_turrets/recipe/turret.json",
+      "dev/zomboid/turretpower/SoundEvents.class",
+      "dev/zomboid/turretpower/Sounds$State.class",
+      "dev/zomboid/turretpower/Sounds.class"
+    ],
+    "added": [
+      "assets/tacz_turrets/models/item/electronic_scrap.json",
+      "assets/tacz_turrets/sounds/servo_move.ogg",
+      "assets/tacz_turrets/textures/item/electronic_scrap.png",
+      "data/tacz_turrets/advancement/recipes/electronic_scrap.json",
+      "data/tacz_turrets/advancement/recipes/turret.json",
+      "data/tacz_turrets/recipe/electronic_scrap.json",
+      "dev/zomboid/turretpower/RegistryListener2.class",
+      "dev/zomboid/turretpower/Scrap.class",
+      "dev/zomboid/turretpower/ScrapLoot.class"
+    ],
+    "minecraft_runtime_tested": false
+  },
+  "remains": {
+    "input_sha256": "73103024eceb4c580cbb9b0810bd929fdd6ff9c1681efd55804db94af7d042f0",
+    "output": "zombie-remains-loot-1.6.1-neoforge-1.21.1-military-nvg-mythic.13-electronic-scrap.jar",
+    "sha256": "b597d93ed7c5f10ff4c5cee57a1ef0e622111bb9341db0638eb7e21e34f8f777",
+    "changed": [
+      "dev/zomboid/remains/CorpseBridge35.class"
+    ],
+    "added": [
+      "dev/zomboid/remains/ScrapBridge2.class"
+    ],
+    "minecraft_runtime_tested": false
+  },
+  "hordes": {
+    "input_sha256": "3a1e9de1323bcda95fa9294d4c417469b2885bca9bac33b202a9f0f366a61047",
+    "output": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.44-electronic-scrap-barrels.jar",
+    "sha256": "77ae8e6d8eb864bc7f151b51b66328d7578c76b838ec15d7d9f6dcb428d6f8f0",
+    "changed": [
+      "dev/zomboid/hordes/LootProfiles.class"
+    ],
+    "added": [
+      "dev/zomboid/hordes/ScrapBridge2.class"
+    ],
+    "minecraft_runtime_tested": false
+  }
+}

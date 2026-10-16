@@ -1,0 +1,9 @@
+{
+  "checks": [
+    "Native visual bug reproduced: 6\n",
+    "Native effects and decal replay checks: 209\n",
+    "IMPACT_EXPIRY_CHECKS=3607\n"
+  ],
+  "minecraft_runtime_tested": false,
+  "method": "Actual native ClientEffects and ImpactMarks, API doubles, original .2 comparison and existing three-minute expiry regression suite"
+}

@@ -1,0 +1,62 @@
+ZOMBIES POLDO — CHATARRA ELECTRÓNICA, TORRETAS Y EFECTOS DE DISPARO
+
+INSTALAR
+1. Cierra Minecraft y el servidor.
+2. Quita las versiones anteriores de TACZ Turrets, Zombie Remains Loot,
+   Zomboid Hordes y TaCZ Tactical. Pon los cuatro JAR del ZIP en mods.
+3. Actualiza clientes y servidor. Una sola versión de cada mod.
+Conserva Dungeons Iso .30, TaCZ .18, Doomsday .4, Survival .2 y Clanes .15.
+Este paquete no sustituye esos otros mods.
+
+CHATARRA ELECTRÓNICA / ELECTRONIC SCRAP
+Nuevo material: tacz_turrets:electronic_scrap.
+Puedes encontrarlo en JEI y en la pestaña de objetos de TaCZ.
+
+Receta sin forma: 1 lapislázuli + 1 redstone + 1 lingote de cobre +
+1 lingote de hierro = 2 chatarras electrónicas.
+Pon los cuatro ingredientes donde quieras en la mesa de crafteo.
+
+La torreta conserva sus ingredientes anteriores y ahora requiere 2 chatarras:
+  lingote de hierro | chatarra | lingote de hierro
+        vacío       | barrotes de hierro | vacío
+    bloque de hierro | chatarra | bloque de hierro
+
+BOTÍN
+Cadáveres de Zombie Remains generados después de actualizar:
+15% de probabilidad base de 1 chatarra en una casilla vacía al azar.
+Barriles con tabla de botín generada: 30% de probabilidad base de 1 o 2 chatarras.
+No aparece gratis en los barriles vacíos que fabrique el jugador.
+Los cofres no reciben este añadido específico de barriles.
+
+El añadido respeta los controles de cantidad y materiales de Hordes.
+Si la cantidad efectiva es menor de 1, baja también la probabilidad:
+por ejemplo, 0,3 de cantidad deja 4,5% en cuerpos y 9% en barriles.
+Con cantidad o materiales a cero no se añade chatarra.
+No se cambia el botín ya guardado ni se renueva al cerrar y abrir un inventario.
+No sustituye armas, ropa ni objetos que llevaba el personaje.
+Los cadáveres de jugadores infectados conservan su sistema de pertenencias.
+
+SONIDOS DE TORRETA
+Sonido de motor al girar horizontalmente o elevar/bajar la cabeza.
+Al reconocer un objetivo visible emite una alerta más audible.
+Los giros se limitan a un sonido cada 0,4 segundos y las alertas a una cada
+3 segundos para evitar ruido continuo. Si cambia de objetivo durante esa
+pausa, lo anuncia cuando se cumple el tiempo y sigue siendo visible.
+Conserva un sonido suave de reposo. Sin energía no hace estos sonidos.
+Necesita el arma instalada y un generador de Doomsday con energía, como antes.
+
+DISPAROS SIN PARPADEO RESIDUAL
+TaCZ Tactical .3 corrige la restauración de marcas: reconstruir una marca
+antigua ya no crea otra tanda de chispas ni otro pulso de luz.
+La marca restaurada conserva su edad y no vuelve a la fase de brillo inicial.
+Un impacto real nuevo sí conserva las chispas, el destello y la luz breve.
+Las marcas de bala siguen desapareciendo a los tres minutos desde el impacto
+original, aunque se restauren. Funciona en primera persona e isométrica.
+No hace falta reemplazar tu Dungeons Iso .30.
+
+VALIDACIÓN
+37 controles de registro, material, botín, recetas y sonidos; 209 controles
+sobre efectos y restauración, y los 3607 controles previos de caducidad.
+Se reprodujo también el fallo de la versión .2 como comparación.
+Se verificó el bytecode de los métodos modificados.
+No se ejecutó Minecraft: falta probar el sonido, el icono y el render en partida.

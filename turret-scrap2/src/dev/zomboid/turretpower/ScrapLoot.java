@@ -1,0 +1,11 @@
+package dev.zomboid.turretpower;
+import java.util.*;
+public final class ScrapLoot {
+ static final double CORPSE=.15,BARREL=.30;
+ static double roll(Object level){return R.num(R.call(R.call(level,"getRandom"),"nextDouble"));}
+ static boolean empty(Object stack){return stack==null||R.yes(R.call(stack,"isEmpty"));}
+ static boolean barrel(Object block){for(Class<?> c=block.getClass();c!=null;c=c.getSuperclass())if(c.getSimpleName().toLowerCase(Locale.ROOT).contains("barrel"))return true;return false;}
+ static double factor(Object world,String prefix){Class<?> tuning;try{tuning=Class.forName("dev.zomboid.hordes.WorldTuning");}catch(ClassNotFoundException absent){return 1;}try{Map<?,?> d=(Map<?,?>)R.call(tuning,"snapshot");Class<?> settings=R.type("dev.zomboid.hordes.SimpleSettings");return R.num(R.call(settings,"value",d,prefix+"_materiales"))>0?Math.max(0,Math.min(1,R.num(R.call(settings,"mean",d,prefix)))):0;}catch(IllegalStateException error){return 0;}}
+ public static void corpse(Object corpse,Object level,Object event){if(Scrap.ITEM==null||R.yes(R.call(level,"isClientSide"))||factor(level,"cadaveres")<=0)return;Object inv=R.get(corpse,"inventory");List<Integer>slots=new ArrayList<>();for(int i=0;i<R.num(R.call(inv,"getContainerSize"));i++)if(empty(R.call(inv,"getItem",i)))slots.add(i);if(slots.isEmpty()||roll(level)>=CORPSE*factor(level,"cadaveres"))return;Object item=Scrap.stack(1);int index=((Number)R.call(R.call(level,"getRandom"),"nextInt",slots.size())).intValue();R.call(inv,"setItem",slots.get(index),item);R.call(inv,"setChanged");}
+ @SuppressWarnings("unchecked") public static Object container(Object list,Object block,Object params){if(Scrap.ITEM==null||!(list instanceof List<?> original)||!barrel(block))return list;Object level=R.call(params,"getLevel");if(R.yes(R.call(level,"isClientSide"))||factor(level,"cofres")<=0)return list;int free=0;for(int i=0;i<R.num(R.call(block,"getContainerSize"));i++)if(empty(R.call(block,"getItem",i)))free++;if(original.size()>=free||roll(level)>=BARREL*factor(level,"cofres"))return list;Object item=Scrap.stack(R.num(R.call(R.call(level,"getRandom"),"nextDouble"))<.25?2:1);if(item!=null)((List<Object>)original).add(item);return list;}
+}

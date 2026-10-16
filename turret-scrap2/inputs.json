@@ -1,0 +1,14 @@
+{
+  "turret": {
+    "file": "mods/tacz_turrets-neoforge-3.0.0-1.21.1-doomsday-power-burst.1.jar",
+    "sha256": "b184f0c11cb16238ad7f244606027596da536bf0fad1b01e4ef30df75dd6cab7"
+  },
+  "remains": {
+    "file": "mods/zombie-remains-loot-1.6.1-neoforge-1.21.1-military-nvg-mythic.12-player-zombie-exclusion.jar",
+    "sha256": "73103024eceb4c580cbb9b0810bd929fdd6ff9c1681efd55804db94af7d042f0"
+  },
+  "hordes": {
+    "file": "mods/zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.43-infected-player-corpse.jar",
+    "sha256": "3a1e9de1323bcda95fa9294d4c417469b2885bca9bac33b202a9f0f366a61047"
+  }
+}

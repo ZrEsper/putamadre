@@ -1,3 +1,7 @@
+## Chatarra electrónica, torretas y efectos de impacto
+
+[Descargar ZIP directo](distribuciones/Zombies-Poldo-Chatarra-Torretas-Impactos.zip). Añade chatarra electrónica con receta y botín en cuerpos/barriles; las torretas requieren dos chatarras y suenan al girar/reconocer objetivos. Tactical .3 impide que restaurar marcas repita brillo, chispas o luz; las marcas conservan sus tres minutos. Mantén Iso .30. [Guía y validación](turret-scrap2/README.md). Cuatro reemplazos, pruebas de lógica/bytecode superadas; prueba en Minecraft pendiente.
+
 ## Clanes .15: sin nuevas criaturas en chunks reclamados
 
 [Descargar ZIP directo](distribuciones/Zombies-Poldo-Clanes-15-Sin-Spawn-en-Reclamos.zip). Bloquea nuevos enemigos, animales y NPC dentro de reclamos, incluidas oleadas y spawners; conserva criaturas existentes y permite entrar desde fuera. Los zombis siguen pudiendo romper conforme a los ajustes del modpack. Basado en el .14 enviado, con su territorio ampliado. [Guía y validación](clans-no-spawn15/README.md). 69 controles del cambio y tres diagnósticos originales; prueba en partida pendiente.

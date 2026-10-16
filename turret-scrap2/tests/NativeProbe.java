@@ -1,0 +1,3 @@
+import java.nio.file.*;import java.util.*;import java.util.zip.*;import org.objectweb.asm.*;import org.objectweb.asm.tree.*;
+public class NativeProbe implements Opcodes{public static void main(String[]a)throws Exception{try(ZipFile z=new ZipFile(a[0])){String owner="dev/zomboid/hordes/LootProfiles";ClassNode c=new ClassNode();new ClassReader(z.getInputStream(z.getEntry(owner+".class")).readAllBytes()).accept(c,0);c.fields.clear();c.methods.removeIf(m->!m.name.equals("container"));ClassWriter w=new ClassWriter(ClassWriter.COMPUTE_MAXS);c.accept(w);Path p=Path.of(a[1],owner+".class");Files.createDirectories(p.getParent());Files.write(p,w.toByteArray());}}
+}

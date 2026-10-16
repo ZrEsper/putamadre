@@ -1,0 +1,13 @@
+{
+  "input_sha256": "f3798366eda3bcf5e5dac5166407c06541b85306c74e52d9dc23b0f0b7e0dc57",
+  "output": "tacz-tactical-1.2.4-neoforge-1.21.1-impact-once-180s.3.jar",
+  "sha256": "9b7eac19423252ba8eed26565795b5ebe5312510b6c69b5fe3a01de2241e3148",
+  "changed": [
+    "dev/tactical/tacz/ClientEffects.class",
+    "dev/tactical/tacz/ImpactMarks.class"
+  ],
+  "added": [
+    "dev/tactical/tacz/OnceEffects.class"
+  ],
+  "minecraft_runtime_tested": false
+}
