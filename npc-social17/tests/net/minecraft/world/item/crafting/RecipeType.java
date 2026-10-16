@@ -1,0 +1,1 @@
+package net.minecraft.world.item.crafting;public class RecipeType{public static final String CRAFTING="craft",SMELTING="smelt",SMOKING="smoke";}

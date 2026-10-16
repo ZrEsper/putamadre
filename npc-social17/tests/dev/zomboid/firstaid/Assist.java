@@ -1,0 +1,1 @@
+package dev.zomboid.firstaid;import java.util.*;public class Assist{static Object completing;public static final Map<Object,Object> models=new WeakHashMap<>();public static Object model(Object p){return models.get(p);}static long time(Object p){return ((fixture.Entity)p).w.now;}public static boolean allowed(Object m){return !Revival.active(m)||completing==m;}}

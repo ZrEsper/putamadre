@@ -1,0 +1,1 @@
+package net.minecraft.world.item.crafting;import java.util.*;public record CraftingInput(List<net.minecraft.world.item.ItemStack> grid){public static CraftingInput of(int w,int h,List<net.minecraft.world.item.ItemStack> i){return new CraftingInput(i);}}

@@ -1,0 +1,1 @@
+package mod.cdv.tnpc.entity;public class AutoGunOperator extends fixture.Entity{public AutoGunOperator(fixture.World w){super(w);}}

@@ -1,5 +1,9 @@
 ## Loot .45: ropa garantizada, policías y tres niveles de torreta
 
+## Supervivientes con conversaciones y compañeros
+
+[Descargar ZIP directo: NPCs Sociales .17](distribuciones/Zombies-Poldo-NPCs-Sociales-17.zip). Personalidades, confianza, reputación, afiliación, mochila/equipo, trabajos y ayuda médica con First Aid. [Guía sencilla](npc-social17/GUIA.txt). Esta entrega tiene pruebas simuladas y de bytecode; requiere validación en una copia del mundo dentro de Minecraft.
+
 ## Linternas con baterías y variantes
 
 [Descargar ZIP directo: Flashlight .4 y SurvivorCreator .34](distribuciones/Zombies-Poldo-Linternas-Baterias-4.zip). Equipo inicial encendido con batería de 10 minutos; cambio manual, barra de carga y variantes de expedición, económica y táctica. [Guía y recetas](flashlight-battery4/GUIA.txt).

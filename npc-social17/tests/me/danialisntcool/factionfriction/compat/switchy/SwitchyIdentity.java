@@ -1,0 +1,1 @@
+package me.danialisntcool.factionfriction.compat.switchy;import java.util.*;public class SwitchyIdentity{public static UUID id(Object p){return ((fixture.Entity)p).uuid;}}

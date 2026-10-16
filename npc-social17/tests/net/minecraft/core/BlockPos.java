@@ -1,0 +1,1 @@
+package net.minecraft.core;public record BlockPos(int x,int y,int z){public static BlockPos containing(double x,double y,double z){return new BlockPos((int)Math.floor(x),(int)Math.floor(y),(int)Math.floor(z));}public int getX(){return x;}public int getY(){return y;}public int getZ(){return z;}public long asLong(){return ((long)x&0x3ffffff)<<38|((long)z&0x3ffffff)<<12|y&4095;} }

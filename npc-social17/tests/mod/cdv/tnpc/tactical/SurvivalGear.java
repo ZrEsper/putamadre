@@ -1,0 +1,1 @@
+package mod.cdv.tnpc.tactical;import java.util.*;public class SurvivalGear{static Map<Object,Object> records(Object world){return ((fixture.World)world).corpseData.corpses;}}

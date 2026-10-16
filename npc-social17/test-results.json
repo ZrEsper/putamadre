@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "NPC_SOCIAL_WORLD_CHECKS=283",
+    "NPC_FIRSTAID_BRIDGE_CHECKS=25",
+    "NPC_JOBS_AND_TREATMENT_CHECKS=24",
+    "NPC_GENERIC_CRAFT_FARM_GOSSIP_INVENTORY_CHECKS=13",
+    "NPC_NATIVE_HOOK_AND_JVM_CHECKS=13"
+  ],
+  "native_assets_and_medical_player_rules_preserved": true,
+  "minecraft_runtime_tested": false
+}

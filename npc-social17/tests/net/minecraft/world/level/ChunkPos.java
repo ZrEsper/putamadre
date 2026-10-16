@@ -1,0 +1,1 @@
+package net.minecraft.world.level;import net.minecraft.core.BlockPos;public record ChunkPos(int x,int z){public ChunkPos(BlockPos p){this(p.x()>>4,p.z()>>4);}}

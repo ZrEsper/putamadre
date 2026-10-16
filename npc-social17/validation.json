@@ -1,0 +1,62 @@
+{
+  "npc": {
+    "input_sha256": "319b0df981d0af93a97b880fc4ee406854d9fe7cfa406260f29a6120d7cfcf17",
+    "output": "tacznpcs-2.1.0-1.21.1-tactical.17-social-companions.jar",
+    "sha256": "c902c7024563ba5a3a362cf526e9ce51d62aa805543e1bce06bebae6ea9440de",
+    "changed": [
+      "META-INF/neoforge.mods.toml",
+      "assets/tacznpcs/lang/en_us.json",
+      "assets/tacznpcs/lang/es_es.json",
+      "assets/tacznpcs/lang/es_mx.json",
+      "mod/cdv/tnpc/entity/AutoGunOperator.class",
+      "mod/cdv/tnpc/tactical/CalmBrain.class",
+      "mod/cdv/tnpc/tactical/StarterGear.class",
+      "mod/cdv/tnpc/tactical/TeamBrain.class"
+    ],
+    "added": [
+      "mod/cdv/tnpc/social/client/ConversationScreen.class",
+      "mod/cdv/tnpc/tactical/CompanionInventory.class",
+      "mod/cdv/tnpc/tactical/Conversation$Session.class",
+      "mod/cdv/tnpc/tactical/Conversation.class",
+      "mod/cdv/tnpc/tactical/ConversationEvents17.class",
+      "mod/cdv/tnpc/tactical/ConversationNetwork17.class",
+      "mod/cdv/tnpc/tactical/CraftPlanner.class",
+      "mod/cdv/tnpc/tactical/NpcMedicine$PlayerTreatment.class",
+      "mod/cdv/tnpc/tactical/NpcMedicine.class",
+      "mod/cdv/tnpc/tactical/Social$Memory.class",
+      "mod/cdv/tnpc/tactical/Social.class",
+      "mod/cdv/tnpc/tactical/SocialGoal.class",
+      "mod/cdv/tnpc/tactical/SocialR$1.class",
+      "mod/cdv/tnpc/tactical/SocialR$2.class",
+      "mod/cdv/tnpc/tactical/SocialR.class",
+      "mod/cdv/tnpc/tactical/SocialRules.class",
+      "mod/cdv/tnpc/tactical/TalkNetwork.class",
+      "mod/cdv/tnpc/tactical/TalkPayload$1.class",
+      "mod/cdv/tnpc/tactical/TalkPayload.class",
+      "mod/cdv/tnpc/tactical/Tasks.class"
+    ]
+  },
+  "clan": {
+    "input_sha256": "536bed271d956316ddded0ca3120a158d0ac057d6941ba3f89795ff3497b0822",
+    "output": "factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.16-npc-companions.jar",
+    "sha256": "4923c58eca52be28e6adf9e3ec8c5eb429bbdedf9e5051539bd55a8df3be445c",
+    "changed": [
+      "META-INF/neoforge.mods.toml",
+      "me/danialisntcool/factionfriction/data/FactionManager.class"
+    ],
+    "added": [
+      "dev/zomboid/clans/Companions16.class"
+    ]
+  },
+  "aid": {
+    "input_sha256": "5a37bb8219700fd0756a7ea8e49d105dd50bed41f1aa98e19ff3fe010f751071",
+    "output": "firstaid-1.21.1-ZOMBOID-v3.6.6-npc-medical-bridge.jar",
+    "sha256": "a5495735c4bb7767ec04a5793688bdd70a688717461cacb08ddf1e2e59a934f0",
+    "changed": [
+      "META-INF/neoforge.mods.toml"
+    ],
+    "added": [
+      "dev/zomboid/firstaid/NpcAid7.class"
+    ]
+  }
+}

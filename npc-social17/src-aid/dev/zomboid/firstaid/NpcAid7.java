@@ -1,0 +1,12 @@
+package dev.zomboid.firstaid;
+/** Calls the real First Aid part/rescue code, never a vanilla-health-only wake-up. */
+public final class NpcAid7 {
+ public static boolean down(Object p){return DownedSupport.down(p);}
+ public static float missing(Object p){Object m=Assist.model(p);if(m==null)return 0;float amount=0;for(Object part:ZeroParts.parts(m))amount+=Math.max(0,((Number)R.call(part,"getMaxHealth")).floatValue()-((Number)R.get(part,"currentHealth")).floatValue());return amount;}
+ public static boolean heal(Object p,float points){Object m=Assist.model(p);if(m==null||down(p))return false;Object chosen=null;float lowest=1;for(Object part:ZeroParts.parts(m)){float fraction=((Number)R.get(part,"currentHealth")).floatValue()/((Number)R.call(part,"getMaxHealth")).floatValue();if(fraction<lowest){chosen=part;lowest=fraction;}}if(chosen==null)return false;float before=((Number)R.get(chosen,"currentHealth")).floatValue();R.call(chosen,"heal",points,p,false);R.call(m,"syncVanillaHealth",p);R.call(m,"scheduleResync");R.call(R.type("ichttt.mods.firstaid.common.util.CommonUtils"),"syncDamageModel",p);return ((Number)R.get(chosen,"currentHealth")).floatValue()>before;}
+ public static boolean revive(Object p,boolean defib){Object m=Assist.model(p);if(m==null||!Revival.active(m)||!R.yes(R.call(p,"isAlive")))return false;Object previous=Assist.completing;Assist.completing=m;try{
+  boolean rescued=R.yes(defib?R.call(m,"defibrillatorRescueFromCriticalState",p,false):R.call(m,"rescueFromCriticalState",p,null,false));if(!rescued)return false;
+  for(Object part:ZeroParts.parts(m)){float max=((Number)R.call(part,"getMaxHealth")).floatValue();R.set(part,"currentHealth",Math.max(((Number)R.get(part,"currentHealth")).floatValue(),max*.3f));}
+  R.set(m,"criticalConditionActive",false);R.call(m,"clearUnconsciousState");R.call(m,"clearUnconsciousPenalties",p);R.call(p,"setForcedPose",new Object[]{null});R.call(p,"setShiftKeyDown",false);R.call(p,"refreshDimensions");Object tag=R.call(p,"getPersistentData");R.call(tag,"putLong","FADownDeadline",0L);R.call(tag,"putInt","FAFinishHits",0);R.call(tag,"putLong","FABleedGraceUntil",Assist.time(p)+400);R.call(m,"syncVanillaHealth",p);R.call(m,"scheduleResync");R.call(R.type("ichttt.mods.firstaid.common.util.CommonUtils"),"syncDamageModel",p);ClickRevival.wake(m,p);ReviveFix33.say(p,"firstaid.revive33.complete");return true;
+ }finally{Assist.completing=previous;}}
+}

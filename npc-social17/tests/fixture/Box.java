@@ -1,0 +1,1 @@
+package fixture;public record Box(double x,double y,double z,double radius){public Box inflate(double r){return new Box(x,y,z,r);}public boolean contains(Entity e){return Math.abs(e.x-x)<=radius&&Math.abs(e.y-y)<=radius&&Math.abs(e.z-z)<=radius;}}

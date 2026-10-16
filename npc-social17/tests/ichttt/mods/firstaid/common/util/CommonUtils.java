@@ -1,0 +1,1 @@
+package ichttt.mods.firstaid.common.util;public class CommonUtils{public static int syncs;public static void syncDamageModel(Object p){syncs++;}public static Object getDamageModel(Object p){return dev.zomboid.firstaid.Assist.model(p);}}

@@ -1,0 +1,1 @@
+package net.minecraft.client.gui;import net.minecraft.network.chat.Component;public class GuiGraphics{public void fill(int a,int b,int c,int d,int color){}public void drawCenteredString(Font f,Component c,int x,int y,int color){}}

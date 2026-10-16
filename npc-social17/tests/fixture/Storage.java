@@ -1,0 +1,1 @@
+package fixture;public class Storage extends net.minecraft.world.SimpleContainer{public net.minecraft.nbt.CompoundTag tag=new net.minecraft.nbt.CompoundTag();public Storage(){super(3);}public net.minecraft.nbt.CompoundTag getPersistentData(){return tag;}}

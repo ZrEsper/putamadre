@@ -1,0 +1,1 @@
+package fixture;public class Server{public me.danialisntcool.factionfriction.data.FactionManager manager=new me.danialisntcool.factionfriction.data.FactionManager();}

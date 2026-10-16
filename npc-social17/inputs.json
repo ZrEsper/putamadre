@@ -1,0 +1,26 @@
+{
+  "npc": {
+    "file": "tacznpcs-2.1.0-1.21.1-tactical.16-unarmed-scavenger-progression.jar",
+    "sha256": "319b0df981d0af93a97b880fc4ee406854d9fe7cfa406260f29a6120d7cfcf17"
+  },
+  "clan": {
+    "file": "factionfriction-1.8.0R-1.21.1-NEOFORGE-zomboid-clans.15-no-claim-spawns.jar",
+    "sha256": "536bed271d956316ddded0ca3120a158d0ac057d6941ba3f89795ff3497b0822"
+  },
+  "aid": {
+    "file": "firstaid-1.21.1-ZOMBOID-v3.6.5-blackout-defib.jar",
+    "sha256": "5a37bb8219700fd0756a7ea8e49d105dd50bed41f1aa98e19ff3fe010f751071"
+  },
+  "hordes": {
+    "file": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.46-corpse-access-fix.jar",
+    "sha256": "66d9213954a123ef0c63d335b6ee47ecffa915dd33c38aca705f59d23ab84554"
+  },
+  "remains": {
+    "file": "zombie-remains-loot-1.6.1-neoforge-1.21.1-profession-clothes-scatter.15.jar",
+    "sha256": "80d7de90760327bf44c1d9b4f3930f2d5478d7defeceebbf20afc7ee1b607ab2"
+  },
+  "brain": {
+    "file": "SmartBrainLib-neoforge-1.21.1-1.16.11.jar",
+    "sha256": "68036561cc5511766d54cc0deabc3fc3a5e68f9e3db2478f2574ec82b494374b"
+  }
+}

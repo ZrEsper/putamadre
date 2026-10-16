@@ -1,0 +1,1 @@
+package fixture;public class Nav{public int moves,stops;public boolean moveTo(double x,double y,double z,double speed){moves++;return true;}public void stop(){stops++;}}

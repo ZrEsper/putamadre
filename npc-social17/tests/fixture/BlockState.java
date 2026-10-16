@@ -1,0 +1,1 @@
+package fixture;public class BlockState{public String id;public Object block;public int age;public BlockState(String id){this.id=id;}public Object getBlock(){return block==null?id:block;}}

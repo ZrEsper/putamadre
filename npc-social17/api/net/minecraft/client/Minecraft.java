@@ -1,0 +1,1 @@
+package net.minecraft.client;import net.minecraft.client.gui.screens.Screen;import net.minecraft.client.player.LocalPlayer;import net.minecraft.client.multiplayer.ClientLevel;public class Minecraft{public LocalPlayer player;public ClientLevel level;public Screen screen;public static Minecraft getInstance(){return null;}public void setScreen(Screen s){}}

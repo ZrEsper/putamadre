@@ -1,0 +1,1 @@
+package net.minecraft.world.entity.monster;public class Monster extends fixture.Entity{public Monster(fixture.World w){super(w);}}

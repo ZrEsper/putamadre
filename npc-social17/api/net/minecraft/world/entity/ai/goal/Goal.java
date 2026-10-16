@@ -1,0 +1,1 @@
+package net.minecraft.world.entity.ai.goal;import java.util.EnumSet;public abstract class Goal{public enum Flag{MOVE,LOOK,TARGET,JUMP}public void setFlags(EnumSet<Flag> f){}public abstract boolean canUse();public boolean canContinueToUse(){return false;}public boolean requiresUpdateEveryTick(){return false;}public void tick(){}public void stop(){}}

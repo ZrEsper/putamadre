@@ -1,0 +1,1 @@
+package net.minecraft.world.entity.item;public class ItemEntity extends fixture.Entity{public net.minecraft.world.item.ItemStack stack;public ItemEntity(fixture.World w,net.minecraft.world.item.ItemStack s){super(w);stack=s;}public net.minecraft.world.item.ItemStack getItem(){return stack;}public void discard(){alive=false;w.entities.remove(this);}}

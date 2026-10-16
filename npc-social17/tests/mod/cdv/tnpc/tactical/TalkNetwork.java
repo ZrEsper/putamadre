@@ -1,0 +1,1 @@
+package mod.cdv.tnpc.tactical;public class TalkNetwork{static String last;public static void send(Object p,String s){last=s;}}
