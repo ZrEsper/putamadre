@@ -7,6 +7,7 @@ Path('build/test-loot').mkdir(parents=True,exist_ok=True);run(*ecj,'-cp',cp,'-d'
 for cls in ['dev.zomboid.hordes.FinishChecks','dev.zomboid.scavenging.QuietChecks']:
  args=[str(Path('base')/json.loads(Path('inputs.json').read_text())['quiet']['file'])] if cls.endswith('QuietChecks') else []
  checks.append(run('java','-Xverify:all','-cp','build/test-loot:'+cp,cls,*args))
+checks.append(run('java','-Xverify:all','-cp','build/test-loot:'+cp,'fixture.CorpseAccessChecks',str(Path('base')/json.loads(Path('inputs.json').read_text())['hordes']['file'])))
 exec(compile(Path('turret_fixtures.py').read_text(),'turret_fixtures.py','exec'),{'__file__':str(r/'turret_fixtures.py')})
 Path('build/test-turret').mkdir(parents=True,exist_ok=True)
 run(*ecj,'-cp',cp,'-d','build/test-turret',*Path('build/fixtures-src').rglob('*.java'),*Path('tests/turret').rglob('*.java'))

@@ -1,3 +1,11 @@
+# Corrección .46: cierre al generar cadáveres
+
+[Descargar ZIP corregido](../distribuciones/Zombies-Poldo-Loot-46-Correccion-Crash.zip).
+
+El log del usuario revela `IllegalAccessException` en `ZoneReflection.set` al escribir `profession31` de `ZombieRemainsLoot$Corpse`: el campo es público pero su clase contenedora no lo es. El setter ahora habilita acceso al campo antes de escribir, como ya hace el getter nativo. No cambia la visibilidad de la clase ni el balance de loot.
+
+La regresión usa una clase no pública de otro paquete: carga el setter original y reproduce exactamente `IllegalAccessException`, después verifica el setter corregido para profesión y ambas marcas de finalización/propiedad. Las pruebas anteriores usaban una clase pública y no cubrían esa restricción. Total: 422 comprobaciones; sin ejecución real de Minecraft. Reemplazar Hordes .45 por .46 en cliente y servidor; los otros tres JAR del ZIP son idénticos a la entrega anterior.
+
 # Loot profesional .45 y tres niveles de torreta
 
 [Descargar ZIP directo](../distribuciones/Zombies-Poldo-Loot-45-Torretas-3-Niveles.zip) · [Guía sencilla y recetas](GUIA.txt) · [Análisis de rendimiento](RENDIMIENTO.txt).

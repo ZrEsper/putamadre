@@ -6,7 +6,7 @@ def run(*args):subprocess.run(list(map(str,args)),check=True)
 for n,h in json.loads((root/'spas-reload18/inputs.json').read_text())['tools'].items():assert sha(t/(n+'.jar'))==h
 for v in inp.values():assert sha(Path('base')/v['file'])==v['sha256']
 Path('build/tool').mkdir(parents=True,exist_ok=True);Path('output').mkdir(exist_ok=True);run(*ecj,'-cp',asm,'-d','build/tool','Patch.java')
-names={'remains':'zombie-remains-loot-1.6.1-neoforge-1.21.1-profession-clothes-scatter.15.jar','hordes':'zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.45-profession-police-mutant-loot.jar','quiet':'quietly-1_0_0-cooldown-v17-final-loot-tools-scatter.jar','turret':'tacz_turrets-neoforge-3.0.0-1.21.1-three-tiers.4.jar'}
+names={'remains':'zombie-remains-loot-1.6.1-neoforge-1.21.1-profession-clothes-scatter.15.jar','hordes':'zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.46-corpse-access-fix.jar','quiet':'quietly-1_0_0-cooldown-v17-final-loot-tools-scatter.jar','turret':'tacz_turrets-neoforge-3.0.0-1.21.1-three-tiers.4.jar'}
 reports={}
 for kind in ['hordes','remains','quiet','turret']:
  base=Path('base')/inp[kind]['file'];classes=Path('build')/kind;classes.mkdir(exist_ok=True);run(*ecj,'-cp',base,'-d',classes,*Path('src',kind).rglob('*.java'));out=Path('output')/names[kind];run('java','-cp','build/tool:'+asm,'Patch',base,out,classes,kind)

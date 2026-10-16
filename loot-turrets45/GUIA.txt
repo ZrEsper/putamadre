@@ -1,3 +1,9 @@
+CORRECCION 46 — CIERRE AL MORIR UN ZOMBI
+Reemplaza el Hordes .45 por .46. Nunca dejes las dos versiones juntas.
+Los otros tres JAR son los mismos de la entrega 45.
+Instala en cliente y servidor. Conserva tus mundos y ajustes.
+Corrige IllegalAccessException al guardar la profesion/equipamiento del cadaver.
+
 ZOMBIES POLDO — LOOT .45 Y TRES NIVELES DE TORRETA
 Minecraft NeoForge 1.21.1
 

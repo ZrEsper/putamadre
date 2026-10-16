@@ -1,8 +1,8 @@
 {
   "hordes": {
     "input_sha256": "77ae8e6d8eb864bc7f151b51b66328d7578c76b838ec15d7d9f6dcb428d6f8f0",
-    "output": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.45-profession-police-mutant-loot.jar",
-    "sha256": "12b7c6aea7b187930969ecde95946c039e86be7e37161abe1e73c76ebf3a5602",
+    "output": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.46-corpse-access-fix.jar",
+    "sha256": "66d9213954a123ef0c63d335b6ee47ecffa915dd33c38aca705f59d23ab84554",
     "changed": [
       "assets/zomboid_hordes/lang/de_de.json",
       "assets/zomboid_hordes/lang/en_us.json",
@@ -10,7 +10,8 @@
       "assets/zomboid_hordes/lang/es_mx.json",
       "dev/zomboid/hordes/CorpseProfessions.class",
       "dev/zomboid/hordes/ProfessionCatalog.class",
-      "dev/zomboid/hordes/WorldTuning.class"
+      "dev/zomboid/hordes/WorldTuning.class",
+      "dev/zomboid/hordes/ZoneReflection.class"
     ],
     "added": [
       "dev/zomboid/hordes/CorpseFinish45.class"
