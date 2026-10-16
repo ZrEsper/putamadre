@@ -1,0 +1,10 @@
+{
+  "file": "dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.30-medical-input-defib.jar",
+  "sha256": "f011855d355501081889de41094ccb5bc3754cc2b0901652a79ca33848959a8d",
+  "sound_physics_compatibility": {
+    "jar_sha256": "65372ad64422a20f03ad6e39aabaa827c191abbe9be5c35631acc3a8105fe177",
+    "fixture_class_sha256": "f0b88eb46984d5c0c55b25b7b60bc74be3ee8137b5676299d649cef1d647d70b",
+    "source": "User-provided sound-physics-remastered-neoforge-1.21.1-1.5.1.jar",
+    "mod_id": "sound_physics_remastered"
+  }
+}

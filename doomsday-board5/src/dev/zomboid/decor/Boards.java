@@ -1,0 +1,6 @@
+package dev.zomboid.decor;
+public final class Boards {
+ static boolean near(Object world,Object pos){for(int[] d:new int[][]{{1,0,0},{-1,0,0},{0,1,0},{0,-1,0},{0,0,1},{0,0,-1}}){Object p=R.call(pos,"offset",d[0],d[1],d[2]);if(!R.yes(R.call(world,"hasChunkAt",p)))continue;String id=Storage.id(R.call(world,"getBlockState",p));if(id.equals("board")||id.startsWith("planking_"))return true;}return false;}
+ public static double factor(Object world,Object pos){if(!R.yes(R.call(world,"hasChunkAt",pos)))return 1;Object state=R.call(world,"getBlockState",pos);String id=Storage.id(state);boolean door=id.contains("door"),glass=id.contains("glass")||id.contains("window")||R.yes(R.call(state,"is",R.get(R.type("net.minecraft.tags.BlockTags"),"IMPERMEABLE")));if(!door&&!glass)return 1;if(near(world,pos))return 2;if(door)for(int y:new int[]{-1,1}){Object half=R.call(pos,"offset",0,y,0);if(R.yes(R.call(world,"hasChunkAt",half))&&id.equals(Storage.id(R.call(world,"getBlockState",half)))&&near(world,half))return 2;}return 1;}
+ public static void breaking(Object e){Object player=R.call(e,"getEntity"),world=R.call(player,"level");Object optional=R.call(e,"getPosition");if(optional instanceof java.util.Optional<?> op&&op.isPresent()){double f=factor(world,op.get());if(f>1)R.call(e,"setNewSpeed",((Number)R.call(e,"getNewSpeed")).floatValue()/(float)f);}}
+}

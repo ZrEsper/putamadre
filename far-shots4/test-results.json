@@ -1,0 +1,10 @@
+{
+  "checks": [
+    "FAR_SHOT_CHECKS=81",
+    "NATIVE_DISTANCE_PATH_CHECKS=7",
+    "Native effects and decal replay checks: 209",
+    "IMPACT_EXPIRY_CHECKS=3607",
+    "All original .3 class files unchanged; long-shot hook installed on both client and server"
+  ],
+  "minecraft_runtime_tested": false
+}

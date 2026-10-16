@@ -1,0 +1,7 @@
+{
+  "checks": [
+    "Beds and boards checks: 30",
+    "Correct board ID, 3 wood-tag ingredients -> 6 reinforcement boards; valid tag item predicate; original models/textures and beds/climate unchanged"
+  ],
+  "minecraft_runtime_tested": false
+}

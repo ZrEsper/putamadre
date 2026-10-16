@@ -1,0 +1,1 @@
+package net.minecraft.world.phys;public record Vec3(double x,double y,double z){public static Vec3 directionFromRotation(float pitch,float yaw){double p=Math.toRadians(pitch),y=Math.toRadians(yaw);return new Vec3(-Math.sin(y)*Math.cos(p),-Math.sin(p),Math.cos(y)*Math.cos(p));}}

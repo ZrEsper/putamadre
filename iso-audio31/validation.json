@@ -1,0 +1,15 @@
+{
+  "input_sha256": "f011855d355501081889de41094ccb5bc3754cc2b0901652a79ca33848959a8d",
+  "output": "dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.31-room-audio.jar",
+  "sha256": "b035b8f4b708b4c930af6024c56d6a5d8b22abdcb6c59232309687e1749838d1",
+  "changed": [
+    "dev/zomboid/isotacz/PlayerAudio29.class",
+    "dungeons_iso.mixins.json"
+  ],
+  "added": [
+    "com/cleannrooster/dungeons_iso/mixin/compat/sound_physics_remastered/PlayerAcoustics31Mixin.class",
+    "dev/zomboid/isotacz/PlayerAudio31$Frame.class",
+    "dev/zomboid/isotacz/PlayerAudio31.class"
+  ],
+  "minecraft_runtime_tested": false
+}

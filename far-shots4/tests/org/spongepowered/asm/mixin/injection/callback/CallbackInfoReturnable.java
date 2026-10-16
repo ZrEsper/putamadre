@@ -1,0 +1,1 @@
+package org.spongepowered.asm.mixin.injection.callback;public class CallbackInfoReturnable<T>{public int value;public boolean canceled;public CallbackInfoReturnable(int v){value=v;}public int getReturnValueI(){return value;}public void setReturnValue(Object v){value=((Number)v).intValue();canceled=true;}}

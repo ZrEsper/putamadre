@@ -1,0 +1,13 @@
+{
+  "input_sha256": "9b7eac19423252ba8eed26565795b5ebe5312510b6c69b5fe3a01de2241e3148",
+  "output": "tacz-tactical-1.2.4-neoforge-1.21.1-distant-shots-768.4.jar",
+  "sha256": "c184e822c41184d2616aca0d09f3f81a65c9f0b2bbf875782c4ca61e5a62d256",
+  "changed": [
+    "tacz_tactical.mixins.json"
+  ],
+  "added": [
+    "dev/tactical/tacz/DistantShots.class",
+    "dev/tactical/tacz/mixin/FarShotRangeMixin.class"
+  ],
+  "minecraft_runtime_tested": false
+}

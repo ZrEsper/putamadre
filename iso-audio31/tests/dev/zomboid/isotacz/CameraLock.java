@@ -1,0 +1,1 @@
+package dev.zomboid.isotacz;public class CameraLock{public static boolean aiming(){return Bridge.aim;}}

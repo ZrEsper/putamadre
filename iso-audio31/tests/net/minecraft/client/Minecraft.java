@@ -1,0 +1,1 @@
+package net.minecraft.client;import checks.Checks.*;public class Minecraft{public static final Minecraft INSTANCE=new Minecraft();public Player player=new Player();public Object screen,level=new Object();public Window getWindow(){return new Window();}}

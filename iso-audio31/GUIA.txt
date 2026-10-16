@@ -1,0 +1,43 @@
+ZOMBIES POLDO - SONIDO, DISPAROS LEJANOS Y TABLAS
+
+INSTALAR
+1. Cierra Minecraft. Si usas servidor, cierralo tambien.
+2. En mods, quita las versiones anteriores de dungeons_iso, tacz-tactical
+   y doomsday_decoration. No quites el mod principal tacz ni taczaddon.
+3. Copia los 3 JAR de la carpeta mods de este ZIP a tu carpeta mods.
+   En multijugador: los 3 en cada cliente; Tactical y Doomsday tambien
+   en el servidor. Iso solo se necesita en el cliente.
+4. Conserva tus Sound Physics 1.5.1, SoundAttract 6.3.8d y Sounds 2.4.22.
+   Este paquete no los sustituye. Tampoco sustituye los demas mods.
+   No dejes dos versiones de un mismo mod dentro de mods.
+
+SONIDOS
+En isometrica se escucha desde el jugador: sus disparos, pasos y lo
+que pasa en su habitacion. Sound Physics calcula las paredes desde
+el mismo punto, en vez de usar la camara alejada sobre el tejado.
+Los disparos sin silenciador tienen alcance de 768 bloques y los
+silenciados de 128. Se oyen cada vez menos al alejarse; las paredes
+pueden amortiguarlos. No es volumen constante en todo el mapa.
+Tambien se envia el sonido si el tirador esta fuera de la zona visible.
+No modifica el alcance ni el dano de las balas ni el oido de los zombis.
+
+TABLAS DE REFUERZO (PLANKS)
+Son las tres tablas de madera de aspecto apocaliptico de Doomsday.
+ID correcto: doomsday_decoration:board. No son las paredes decorativas.
+Pon 3 tablones de madera en una fila horizontal de la mesa de crafteo:
+[tabla] [tabla] [tabla] -> 6 tablas de refuerzo.
+Acepta cualquier madera del grupo minecraft:planks, incluso mezcladas.
+Colocalas pegadas a una ventana o puerta: se tarda el doble en romperla,
+tanto para el jugador como para los zombis del Hordes actualizado.
+Poner varias no multiplica la resistencia indefinidamente.
+En espanol aparecen como "Tablas de refuerzo"; en ingles, "Planks".
+
+COMPROBACION RAPIDA
+- En una casa cerrada: activa isometrica y dispara. Debes oirlo desde
+  el personaje aunque la camara este fuera de la casa.
+- Con un amigo: uno dispara a 100, 300 y 600 bloques en campo abierto.
+  Comprueba que el sonido se atenue y siga viniendo del tirador.
+- Busca Planks/Tablas de refuerzo en JEI y comprueba el crafteo 3 -> 6.
+
+Se verificaron las clases y la logica con APIs simuladas. No se ha
+probado la escucha ni el renderizado dentro de Minecraft en este entorno.

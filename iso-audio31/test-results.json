@@ -1,0 +1,8 @@
+{
+  "checks": [
+    "ISO31_REGRESSION_CHECKS=380",
+    "ROOM_AUDIO_CHECKS=23",
+    "NATIVE_ACOUSTIC_TARGET_CHECKS=7"
+  ],
+  "minecraft_runtime_tested": false
+}

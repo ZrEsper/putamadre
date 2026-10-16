@@ -1,0 +1,36 @@
+{
+  "file": "distribuciones/Zombies-Poldo-Sonido-Lejano-Iso31-Planks5.zip",
+  "sha256": "c46ea33380e1466af706380a116303c4e5816a7247ab3e130b1ac029b65852a8",
+  "jars": 3,
+  "projects": {
+    "iso-audio31": {
+      "jar": "dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.31-room-audio.jar",
+      "sha256": "b035b8f4b708b4c930af6024c56d6a5d8b22abdcb6c59232309687e1749838d1",
+      "checks": [
+        "ISO31_REGRESSION_CHECKS=380",
+        "ROOM_AUDIO_CHECKS=23",
+        "NATIVE_ACOUSTIC_TARGET_CHECKS=7"
+      ]
+    },
+    "doomsday-board5": {
+      "jar": "doomsday_decoration-1.1.4.2-neoforge-1.21.1-zomboid-board-recipe.5.jar",
+      "sha256": "5f0cd8f3bda5ddce7b3702145167f6e3742f075759d82d933b40f007ef886e67",
+      "checks": [
+        "Beds and boards checks: 30",
+        "Correct board ID, 3 wood-tag ingredients -> 6 reinforcement boards; valid tag item predicate; original models/textures and beds/climate unchanged"
+      ]
+    },
+    "far-shots4": {
+      "jar": "tacz-tactical-1.2.4-neoforge-1.21.1-distant-shots-768.4.jar",
+      "sha256": "c184e822c41184d2616aca0d09f3f81a65c9f0b2bbf875782c4ca61e5a62d256",
+      "checks": [
+        "FAR_SHOT_CHECKS=81",
+        "NATIVE_DISTANCE_PATH_CHECKS=7",
+        "Native effects and decal replay checks: 209",
+        "IMPACT_EXPIRY_CHECKS=3607",
+        "All original .3 class files unchanged; long-shot hook installed on both client and server"
+      ]
+    }
+  },
+  "minecraft_runtime_tested": false
+}
