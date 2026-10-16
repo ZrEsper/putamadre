@@ -12,11 +12,12 @@ for kind,info in report.items():
  with zipfile.ZipFile(r/'base'/json.loads((r/'inputs.json').read_text())[kind]['file'])as old,zipfile.ZipFile(r/'output'/info['output'])as new:
   assert new.testzip()is None
   for n in old.namelist():
-   if n=='META-INF/neoforge.mods.toml':continue
+   if n=='META-INF/neoforge.mods.toml' or (kind=='aid' and n=='dev/zomboid/firstaid/UnconsciousScreen.class'):continue
    if '/textures/'in n or '/sounds/'in n or n.endswith('SpawnClaims15.class') or n.startswith('dev/zomboid/npcprobe/') or kind=='aid':assert old.read(n)==new.read(n),n
   if kind=='npc':
    es=json.loads(new.read('assets/tacznpcs/lang/es_es.json'));en=json.loads(new.read('assets/tacznpcs/lang/en_us.json'));assert set(k for k in es if k.startswith(('soc.','dialog.soc.')))<=en.keys();assert sum(k.startswith('dialog.soc.')for k in es)>=148
 asm=':'.join(str(t/(n+'.jar'))for n in ['asm','asm-tree','asm-analysis'])
 run(*ecj,'-cp',asm,'-d',r/'build/tool',r/'Inspect.java')
 checks.append(run('java','-Xverify:all','-cp',str(r/'build/tool')+':'+str(r/'build/test')+':'+cp+':'+str(r/'build/api')+':'+asm,'Inspect',str(r/'output'/report['npc']['output']),str(r/'output'/report['clan']['output'])))
+checks.append(run('python',r/'ui-test.py'))
 (r/'test-results.json').write_text(json.dumps({'checks':checks,'native_assets_and_medical_player_rules_preserved':True,'minecraft_runtime_tested':False},indent=2)+'\n')

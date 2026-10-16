@@ -1,1 +1,1 @@
-package net.minecraft.network.chat;public class Component{public static MutableComponent literal(String s){return new MutableComponent();}public static MutableComponent translatable(String key,Object... args){return new MutableComponent();}}
+package net.minecraft.network.chat;public interface Component{public static MutableComponent literal(String s){return new MutableComponent();}public static MutableComponent translatable(String key,Object... args){return new MutableComponent();}}

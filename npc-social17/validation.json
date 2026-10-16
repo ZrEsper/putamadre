@@ -1,8 +1,8 @@
 {
   "npc": {
     "input_sha256": "319b0df981d0af93a97b880fc4ee406854d9fe7cfa406260f29a6120d7cfcf17",
-    "output": "tacznpcs-2.1.0-1.21.1-tactical.17-social-companions.jar",
-    "sha256": "c902c7024563ba5a3a362cf526e9ce51d62aa805543e1bce06bebae6ea9440de",
+    "output": "tacznpcs-2.1.0-1.21.1-tactical.18-screen-linkage-fix.jar",
+    "sha256": "30154a7950fbe20f95e2d9fd31c94ab6ae6fb448b8ed6764c401eda847267c49",
     "changed": [
       "META-INF/neoforge.mods.toml",
       "assets/tacznpcs/lang/en_us.json",
@@ -50,10 +50,11 @@
   },
   "aid": {
     "input_sha256": "5a37bb8219700fd0756a7ea8e49d105dd50bed41f1aa98e19ff3fe010f751071",
-    "output": "firstaid-1.21.1-ZOMBOID-v3.6.6-npc-medical-bridge.jar",
-    "sha256": "a5495735c4bb7767ec04a5793688bdd70a688717461cacb08ddf1e2e59a934f0",
+    "output": "firstaid-1.21.1-ZOMBOID-v3.6.7-screen-linkage-fix.jar",
+    "sha256": "e621ec53f0d0c185eac6dcf82a62170d4240dc6af2ad5cc13e52e03f2f363490",
     "changed": [
-      "META-INF/neoforge.mods.toml"
+      "META-INF/neoforge.mods.toml",
+      "dev/zomboid/firstaid/UnconsciousScreen.class"
     ],
     "added": [
       "dev/zomboid/firstaid/NpcAid7.class"

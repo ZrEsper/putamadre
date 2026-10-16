@@ -1,11 +1,15 @@
+CORRECCION DEL CIERRE AL HABLAR O QUEDAR INCONSCIENTE
+Corrige IncompatibleClassChangeError de Component.translatable/literal.
+No exige empezar un mundo nuevo. Haz copia de seguridad antes de actualizar.
+
 SUPERVIVIENTES — CONVERSACIONES, COMPANEROS Y TRABAJOS
 Minecraft NeoForge 1.21.1
 
 1. INSTALAR
 Cierra Minecraft y el servidor. Sustituye estas tres versiones:
-- TacZ NPCs tactical.16 -> tactical.17-social-companions.
-- FactionFriction clans.15 -> clans.16-npc-companions.
-- First Aid v3.6.5 -> v3.6.6-npc-medical-bridge.
+- TacZ NPCs tactical.16 o .17 -> tactical.18-screen-linkage-fix.
+- FactionFriction clans.15 -> clans.16-npc-companions (si ya tienes .16, es el mismo archivo).
+- First Aid v3.6.5 o .6 -> v3.6.7-screen-linkage-fix.
 No dejes dos versiones del mismo mod en mods.
 Instala los tres JAR tanto en clientes como en el servidor.
 Conserva SmartBrainLib 1.16.11, Hordes .46 y Zombie Remains .15 que enviaste,
