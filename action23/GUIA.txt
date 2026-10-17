@@ -1,0 +1,26 @@
+GLOBAL MELEE V23 — guardia articulada, puno visible y pesado x2
+Minecraft NeoForge 1.21.1
+
+INSTALACION
+Cierra Minecraft y el servidor. Retira Global Melee v22 o cualquier version anterior y coloca el unico JAR de este ZIP. Actualiza clientes Y servidor: protocolo boxing23.
+Conserva Zombie Gore 1.0.10 y Hordes .49. No requiere Epic Fight. Entity Model Features es opcional; incluye adaptacion para la version 3.3.11 enviada.
+
+BRAZOS Y GOLPES
+La guardia de tercera persona ahora separa brazo y antebrazo, con un codo real: manos delante de la cara y codos mas recogidos. Al golpear, el antebrazo se extiende y vuelve a guardia; el otro brazo sigue protegiendo. Los golpes en tercera persona siguen la inclinacion/direccion de la cabeza.
+Primera persona usa tambien las dos piezas, con las texturas de tu skin y sus mangas, para que el punetazo tenga un recorrido visible. Admite skins normales y slim.
+Mantiene el gesto de interaccion y busqueda de puertas, trampillas, contenedores y cadaveres.
+La mano secundaria puede llevar objetos; ese brazo conserva su render normal. Al equipar un arma, melee o cura en la principal se retiran las articulaciones de combate.
+No se sustituyen los campos del modelo por otro tipo. Se mantienen las partes hijas del brazo. Los modelos especiales de armaduras deben comprobarse en el juego: no se ha convertido automaticamente toda armadura 3D en un modelo articulado.
+
+DANO PESADO
+El golpe pesado usa 2 veces el atributo de dano de ataque del jugador, en lugar del valor fijo 3 anterior. Ejemplo: normal base 1 -> pesado base 2; normal base 3,75 -> pesado base 7,5. Las habilidades y la proteccion del objetivo siguen pasando por sus reglas normales. Se compara con un golpe normal completamente cargado, sin critico.
+Cadencias conservadas: ligero 0,4 s y pesado 0,9 s. Izquierdo golpea; mantener izquierdo mina. Derecho hace pesado o pisoton sobre un zombi derribado cercano.
+
+PISOTON
+El pie se mantiene plano, con rodilla y tobillo coordinados para bajar hacia el blanco, evitando mostrar la suela hacia la cara. La compensacion de la pierna usa la inclinacion visual de la camara durante el enfoque, en vez de la inclinacion anterior del jugador.
+Se conservan la confirmacion de impacto del servidor, enfoque breve, sonidos y sacudida. Derribos temporales de 9 s e incorporacion progresiva de 1,4 s; zombis derribados sin empuje. Se conserva la correccion del cierre de v21.
+
+VALIDACION
+Compilacion Java 21, bytecode y pruebas con API simulada aprobadas. Incluyen articulacion, mangas, visibilidad, accesorios hijos, mano secundaria, retirada al equipar armas, dano pesado real, contactos diferidos y regresion del cierre.
+Se verifico ademas la funcion de render de Entity Model Features 3.3.11 contra el JAR enviado. Las vistas previas geometricas del repositorio no son capturas de Minecraft.
+No se ha ejecutado Minecraft completo aqui. Falta validar dentro del juego el aspecto final y las armaduras 3D concretas de tu pack.
