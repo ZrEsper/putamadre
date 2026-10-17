@@ -1,0 +1,27 @@
+GLOBAL MELEE V22 — cierre de v21, golpes tacticos e interacciones
+Minecraft NeoForge 1.21.1
+
+INSTALACION
+Cierra Minecraft y el servidor. Retira Global Melee v21 (o cualquier version anterior) y coloca el unico JAR de este ZIP. Actualiza CLIENTE Y SERVIDOR: protocolo boxing22. Conserva Zombie Gore 1.0.10 y Hordes .49. Epic Fight sigue retirado.
+
+CORRECCION DEL CIERRE
+El reporte indicaba Cannot send clientbound payloads on the client. El tick del cliente podia acceder a la pisada pendiente del servidor local porque ambos jugadores comparten el ID de entidad. Ahora el cliente sale antes de consultar esas acciones, y el envio de paquetes tambien rechaza llamadas desde el cliente. No se oculta la excepcion: se corrige el lado desde el que se ejecuta.
+
+GOLPES
+Mano principal vacia: izquierdo ligero; derecho pesado o pisoton sobre un zombi derribado cercano. Puedes llevar un objeto en la otra mano y el golpe usa el puno principal.
+Los ligeros tienen preparacion corta, extension rapida, giro del puno y retirada; la otra mano se mantiene en guardia. Los pesados cargan mas el brazo y cruzan el golpe. La camara tiene mas sacudida visual, especialmente en contactos confirmados; no se mueve el jugador hacia delante ni cambia su rotacion real.
+Cadencias y dano se mantienen: ligero 0,4 s, pesado 0,9 s. Mantener izquierdo permite minar. Usar un objeto, arma, cura o melee conserva las animaciones de su mod.
+
+INTERACCIONES
+Con la mano principal vacia, puertas, trampillas y contenedores reconocidos (cofres, barriles, escritorios, armarios, hornos, lavadoras y frigorificos) tienen un gesto corto de alcanzar/girar la mano. Cadaveres Corpse y Remains tambien lo activan.
+La busqueda continua al abrir inventarios de loot se conserva. El gesto no cancela clicks, abre bloques por su cuenta ni afecta al loot. No aplica al llevar un arma u otro objeto en la mano principal, para respetar su renderer.
+No interrumpe una pisada ya comprometida y no produce sacudida de impacto al abrir una puerta.
+
+SE CONSERVA DE V21
+Pisada con muslo, espinilla y pie articulados, enfoque breve hacia el zombi y contacto a los 9 ticks del servidor. El pie espera la confirmacion antes de completar la retirada. Cuerpo: 10 de dano base; cabeza: remate letal a corta distancia apuntando a ella.
+Zombis derribados sin empuje entre entidades, pero seleccionables. Vegetacion sin colision no oculta el blanco; paredes y otros objetivos siguen bloqueando correctamente.
+Derribos temporales de 9 segundos, mas incorporacion progresiva de 1,4 segundos. La IA espera el final. Los rastreros por perdida de piernas no recuperan las piernas.
+
+VALIDACION
+Compilacion Java 21, bytecode y pruebas con API simulada aprobadas. La regresion especifica reproduce la igualdad de ID entre el jugador cliente y servidor: v21 falla, v22 deja intacta la accion y aplica un unico impacto en el servidor.
+Incluye pruebas de interacciones, mano secundaria, camara, tiempos, dano protegido y cancelaciones. Minecraft completo no se ha ejecutado en este entorno: el aspecto final y la convivencia con todos tus mods siguen pendientes de prueba en el juego.
