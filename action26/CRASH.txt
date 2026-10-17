@@ -1,0 +1,13 @@
+Global Melee v21 crash, 2026-10-17
+
+Description: Ticking entity
+java.lang.IllegalStateException: sendToPlayersTrackingEntityAndSelf
+  Net20.cue -> Stomp21.tick -> Server20.tick -> PlayerTickEvent.Post
+Caused by: java.lang.IllegalStateException: Cannot send clientbound payloads on the client
+Entity being ticked: net.minecraft.client.player.LocalPlayer
+
+Root cause: PlayerTickEvent.Post is emitted for client players too. The injected Stomp21.tick ran before Server20.tick checked ServerPlayer. In an integrated server, the client/server player copies share an entity ID and compare equal, allowing the client tick to retrieve the server pending stomp from the WeakHashMap, cancel it, and broadcast an invalid clientbound packet.
+
+v22: reject non-ServerPlayer and client-side levels BEFORE reading pending state. Independently guard Net20.cue so it never broadcasts from a client. The regression fixture reproduces entity-ID equality between two separate player objects. Original v21 fails because client tick removes the server pending action; v22 preserves it and the server applies one contact after nine ticks.
+
+This is a mod logic bug. It does not establish world corruption, RAM exhaustion, or Connector as the cause.

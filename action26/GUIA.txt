@@ -1,0 +1,29 @@
+GLOBAL MELEE V26 — BODYCAM + ESCALADA + DESLIZAMIENTO
+Minecraft NeoForge 1.21.1
+
+INSTALAR
+Cierra el juego y el servidor. Quita los Global Melee anteriores (incluidos v20, v24 y v25) y coloca solamente el JAR de este ZIP. Actualiza clientes y servidor: protocolo boxing26.
+Conserva Zombie Gore 1.0.10 y Hordes .49. Epic Fight no es necesario.
+
+DESLIZARSE
+Corre hacia delante y pulsa C, o pulsa tu tecla de agacharse mientras corres.
+C aparece como «Deslizarse (corriendo)» en Opciones > Controles y se puede reasignar.
+El impulso real de la carrera se conserva durante la transición a agacharse; ya no se exige seguir corriendo en el instante exacto del paquete.
+Requiere estar en el suelo y haber avanzado corriendo. No funciona quieto, volando, en agua, montado o usando un objeto. Se frena progresivamente y termina al chocar. Mantener la tecla no repite el deslizamiento.
+
+ESCALAR HASTA DOS BLOQUES
+Acércate de frente a una repisa y salta manteniendo Espacio (o tu tecla de salto). Al estar en el aire, intentará agarrar una repisa válida. También se conserva el doble toque de salto.
+Tiene que haber espacio para el cuerpo y la cabeza arriba. No permite atravesar techos ni escalar paredes de tres bloques.
+El servidor valida el recorrido y envía al cliente el punto de llegada exacto. El cliente aplica el movimiento hacia ese punto, sin depender de volver a encontrar la repisa después del retraso de red.
+
+BODYCAM
+En primera persona hay movimiento continuo de cámara al caminar y correr, respiración tenue estando quieto e inclinación durante el deslizamiento. Al apuntar/usar un arma el movimiento se reduce.
+Se combina con la sacudida de golpes y la cámara de la pisada. No modifica la dirección real del jugador ni mueve la cámara de tercera persona. No se aplica en menús.
+
+COMBATE CONSERVADO
+Se mantienen la guardia de tercera persona aceptada, los puños y pisada de v24, pesado con doble daño base, caídas direccionales, mano secundaria e interacciones. Las poses de parkour son temporales y restauran la postura al terminar.
+
+VERIFICACIÓN
+Compilación Java 21 y comprobación de bytecode aprobadas. Pruebas con API simulada: entrada por los suscriptores reales del JAR, C y agacharse tras correr, salto mantenido, colisiones y repisa de dos bloques, destino recibido con retraso, bodycam, separación de cliente/servidor, combate y compatibilidad EMF.
+La regresión de desaceleración al agacharse falla con v25 y pasa con v26.
+No se ha ejecutado Minecraft completo aquí. El comportamiento y acabado final con el pack requieren la prueba dentro del juego.
