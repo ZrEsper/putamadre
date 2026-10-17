@@ -1,0 +1,106 @@
+AMBIENTE 47 — LOOT, POBLACION Y RUIDO
+Minecraft NeoForge 1.21.1
+
+INSTALAR
+1. Cierra Minecraft y el servidor. Guarda una copia de tu mundo.
+2. Quita Hordes .46 y Quietly .17 de mods. Copia los dos JAR de este ZIP.
+   No dejes versiones duplicadas. Hazlo en servidor y clientes.
+3. Conserva Zombie Remains .15, Mosslorn .13 y tus otros mods.
+   No hace falta cambiar el mapa ni borrar configuraciones.
+
+USAR EL PANEL
+Escribe /zhorda panel. Necesitas ser administrador o tener trucos activados.
+Elige arriba Desolado, Medio, Normal, Sobrado o Inicio.
+Elegir prepara los cambios: pulsa GUARDAR CAMBIOS para aplicarlos.
+El aviso inferior confirma la respuesta del servidor. Si falla, muestra ERROR.
+Cerrar sin guardar no aplica nada. Al reabrir ves los valores del mundo.
+
+- Arrastra cada barra horizontal con el boton izquierdo.
+- Tambien puedes escribir el numero exacto en su casilla.
+- Usa la rueda del raton para recorrer los ajustes de arriba abajo.
+- Los controles fuera de la vista quedan ocultos; no interceptan clics.
+- Guardar, Avanzado y Cerrar quedan fijos abajo.
+- Los iconos usan las texturas del juego: barril, cofre, zombi, arma,
+  municion, armadura y venda. No necesitas otro paquete de recursos.
+
+QUE CAMBIA EL MODO DE AMBIENTE
+Los modos cambian juntos el loot NUEVO de cofres/barriles y cadaveres,
+la densidad objetivo, frecuencia y ajustes de zombis del perfil.
+Puedes modificar cualquier valor despues; el nombre pasa a Personalizado.
+
+                 Desolado  Medio  Normal  Sobrado  Inicio
+Suministros          0.3      2      4        8       12
+Arma o melee (%)       2      5     7.69     15       25
+Ropa militar (%)       2      5     7.69     15       25
+Balas si hay arma (%) 10     20     35       55       80
+Medicina (%)           3     12     25       45       70
+Densidad              1.6   1.25    1        .75      .4
+
+Suministros es una MEDIA, no una cantidad fija. Cada inventario tiene
+su propia tirada, tipos de objetos y posiciones aleatorias. Dos inventarios
+pueden coincidir por azar; no se copia una plantilla identica para todos.
+Con 0.3, muchos contenedores no tendran suministros. Armas, medicina y ropa
+extra van aparte cuando hay una tirada de suministros. La municion depende
+de que haya salido un arma compatible.
+
+LO QUE SE CONSERVA
+Cambiar de modo NO borra ni regenera inventarios ya creados.
+Tus objetos y contenedores colocados por jugadores se conservan.
+Un cofre viejo con cosas no se reemplaza al buscar en el.
+Los militares conservan su equipo real y los NPC su carga real.
+La ropa propia del cadaver se conserva aparte de los suministros extra.
+Los mutantes mantienen su loot especial, ajustado por sus controles existentes.
+Quietly deja de añadir una segunda tanda independiente cuando Hordes controla
+ese loot. Un contenedor sin tabla que se registra por primera vez tambien
+puede recibir el loot del panel; no se vuelve a rellenar en cada busqueda.
+Los cofres dobles aplican los ajustes a las dos mitades.
+
+POBLACION CERCA DEL JUGADOR
+- 9 chunks = cuadrado de 3x3 centrado en el chunk donde estas.
+- Maximo repartidos: 80 por defecto, ajustable entre 1 y 80.
+- Maximo juntos al aparecer: 50 por defecto, radio de 16 bloques.
+  Nunca puede ser mayor que el total. Al bajarlo con la barra se ajusta
+  tambien el limite de grupo si hace falta.
+- Cuenta zombis vivos existentes, incluidos mutantes reconocidos por Hordes.
+- Jugadores cercanos comparten el recuento: no son 80 nuevos por cada uno.
+- La densidad fija el objetivo habitual: Normal busca unos 52 con limite 80.
+  Mucho ruido puede llevar el objetivo al limite que hayas configurado.
+- Reposicion gradual: hasta 3 por jugador y 6 por pasada cada 5 segundos,
+  con un presupuesto compartido de 48 intentos de posicion.
+- Se respetan colisiones, chunks cargados y la proteccion de facciones.
+- Las nuevas apariciones normales quedan dentro de esas zonas cercanas
+  cuando hay jugadores de supervivencia. No se cargan chunks lejanos.
+
+Estos son limites de APARICIONES. No mata ni borra zombis guardados para
+reducir un numero: si ya hay mas, deja de reponer. Los grupos existentes
+pueden juntarse al perseguirte. Los zombis de jugadores infectados no se
+bloquean al nacer, para proteger sus pertenencias, pero cuentan en el total.
+No es un limite global de todas las entidades o de toda la memoria del servidor.
+
+BARRA DE RUIDO / HEAT
+Abre tu inventario normal. La barra aparece fuera del panel, evitando sus
+botones, con ruido de 0 a 100 y el recuento cercano de zombis.
+Si no hay espacio libre, se oculta en vez de tapar controles.
+
+Disparo normal: +8. Silenciado: +2. Explosion propia detectada: +20.
+Construir o romper bloques: +1.5, limitado para evitar duplicados.
+Correr eleva el ruido mas que caminar. Agacharte no añade ruido por pasos.
+En silencio baja aproximadamente un punto por segundo.
+Con ruido alto atraes zombis al ultimo lugar donde hiciste ruido, no a
+una posicion secreta actualizada si te alejas en silencio.
+Se conserva el oido y la investigacion por sonido del mod.
+La barra no acepta valores enviados por el cliente; el servidor los calcula.
+Puedes desactivar el calor en el panel: Ruido y atraccion, 0.
+Esto desactiva el calor adicional, no elimina el sistema de oido original.
+
+RENDIMIENTO Y COMPROBACION
+Recuento local reutilizado durante un segundo y renovado al cambiar de chunk.
+No hay un bucle nuevo en cada tick de cada zombi. Reposicion y avisos limitados.
+La barra recibe un mensaje pequeno cada dos segundos. Las caches se limpian
+al cerrar el servidor. No se han eliminado texturas ni protecciones de objetos.
+
+Se verificaron guardado real de ajustes, cinco modos con 300 contenedores cada
+uno, rutas de loot y Quietly, cofres dobles, controles deslizantes y rueda,
+limites y jugadores solapados, calor y colocacion de la barra con APIs simuladas,
+ademas de bytecode y conexiones nativas. Falta probarlo dentro de Minecraft
+con el modpack completo. No se promete una mejora concreta de FPS o memoria.

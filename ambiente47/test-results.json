@@ -1,0 +1,9 @@
+{
+  "checks": [
+    "300 containers per mode: Desolado=0.32 Medio=2.08 Normal=3.77 Sobrado=7.16 Inicio=9.99 \nENVIRONMENT_LOOT_POPULATION_HEAT_UI_CHECKS=61",
+    "300 containers per mode: Desolado=0.32 Medio=2.08 Normal=3.77 Sobrado=7.16 Inicio=9.99 \nENVIRONMENT_LOOT_POPULATION_HEAT_UI_CHECKS=61\nQUIET_NATIVE_ENVIRONMENT_BRIDGE_CHECKS=4",
+    "NATIVE_ENVIRONMENT_HOOKS_ABI_CHECKS=27",
+    "UPSTREAM_ASSETS_METADATA_PLAYER_STORAGE_PRESERVED_CHECKS=2"
+  ],
+  "minecraft_runtime_tested": false
+}

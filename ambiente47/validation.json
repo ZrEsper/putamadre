@@ -1,0 +1,48 @@
+{
+  "hordes": {
+    "output": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.47-environment-heat.jar",
+    "input_sha256": "66d9213954a123ef0c63d335b6ee47ecffa915dd33c38aca705f59d23ab84554",
+    "sha256": "c62dd998bdb76dee87d11db65622418f41d3d260fc9fd119b93b5e39d8c9b830",
+    "changed": [
+      "assets/zomboid_hordes/lang/de_de.json",
+      "assets/zomboid_hordes/lang/en_us.json",
+      "assets/zomboid_hordes/lang/es_es.json",
+      "assets/zomboid_hordes/lang/es_mx.json",
+      "dev/zomboid/hordes/AdminNetwork.class",
+      "dev/zomboid/hordes/ApocalypseSettings.class",
+      "dev/zomboid/hordes/ChunkPopulation.class",
+      "dev/zomboid/hordes/HordeEvents.class",
+      "dev/zomboid/hordes/SimpleLoot.class",
+      "dev/zomboid/hordes/SimplePanel.class",
+      "dev/zomboid/hordes/WorldTuning.class",
+      "dev/zomboid/hordes/ZoneSettings.class",
+      "dev/zomboid/hordes/client/AdminScreen.class"
+    ],
+    "added": [
+      "dev/zomboid/hordes/AmbientSettings47.class",
+      "dev/zomboid/hordes/EnvironmentLoot47.class",
+      "dev/zomboid/hordes/EnvironmentStop47.class",
+      "dev/zomboid/hordes/Heat47$State.class",
+      "dev/zomboid/hordes/Heat47.class",
+      "dev/zomboid/hordes/HeatClient47.class",
+      "dev/zomboid/hordes/HeatExplosionEvents47.class",
+      "dev/zomboid/hordes/HeatScreenEvents47.class",
+      "dev/zomboid/hordes/Population47$View.class",
+      "dev/zomboid/hordes/Population47.class",
+      "dev/zomboid/hordes/PopulationEvents47.class",
+      "dev/zomboid/hordes/SimplePanel$Row.class",
+      "dev/zomboid/hordes/SimplePanel$State.class"
+    ]
+  },
+  "quiet": {
+    "output": "quietly-1_0_0-cooldown-v18-environment-loot.jar",
+    "input_sha256": "5432599b06aaaa723531c655bf49bf397f9fcb0124ae776e223c3d1f7aaf4aa8",
+    "sha256": "346c8d1b6d40aebe054496acacde12324878c264404eef21c1398458e036563e",
+    "changed": [
+      "dev/zomboid/scavenging/Loot.class"
+    ],
+    "added": [
+      "dev/zomboid/scavenging/AmbientBridge47.class"
+    ]
+  }
+}
