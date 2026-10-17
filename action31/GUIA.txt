@@ -1,0 +1,41 @@
+GLOBAL MELEE V31 — LEANING DIRECCIONAL, PASOS Y OBSTÁCULOS
+Minecraft NeoForge 1.21.1 / Java 21
+
+INSTALAR
+Cierra Minecraft y servidor. Retira Global Melee v30 o anteriores y coloca únicamente el JAR v31 de este ZIP en clientes y servidor. Protocolo boxing31.
+Conserva TaCZ .19 wall-alt-slide, Gore, Fracture Point, Carry On y los demás mods. No se reemplaza TaCZ ni se añade Tactical Movement de Forge 1.20.1.
+
+LEANING AUTOMÁTICO
+La inclinación lateral sigue la dirección real del desplazamiento, también al correr. Al avanzar o retroceder hay una inclinación frontal menor. No hace falta pulsar Z/X.
+En una esquina con un borde despejado puede aumentar la inclinación hacia ese borde. La cámara comprueba obstáculos antes del desplazamiento lateral.
+Ahora también se inclina el modelo en tercera persona con su equipo y arma. Para otros jugadores, la inclinación direccional se calcula con su movimiento recibido.
+Las teclas reasignables Z/X de v30 quedan como control opcional. Estar quieto fuera de una esquina devuelve la vista al centro.
+Se conserva una inclinación visual: no desplaza hitboxes ni el origen de disparo del servidor. No se muestra a otros jugadores el asomarse quieto con una tecla, aunque sí la inclinación por movimiento.
+
+ARMA Y BODYCAM
+Se baja la posición del arma en cadera y aumenta su inercia al girar, acelerar, frenar y cambiar de dirección.
+Al apuntar sigue habiendo un movimiento moderado, con rotaciones limitadas; se asienta al detenerse. No modifica el daño o la dispersión de TaCZ.
+El arma adopta su propia postura baja durante el deslizamiento y se aparta durante la escalada, incluso si mantienes apuntado.
+
+DESLIZAMIENTO CON ARMA
+Durante la acción, Global Melee controla la pose baja, la posición de los brazos y su recuperación. Los ganchos de carrera, cuerpo a tierra y bloqueo del arma contra paredes de TaCZ ceden durante ese intervalo para evitar la superposición.
+Se conserva el hueco físico de 0,6 bloques y la salida segura bajo techos de un bloque. No se elimina el comportamiento normal de cuerpo a tierra de TaCZ fuera de estas acciones.
+
+ESCALADA
+Se sustituyó la postura estática de ambos brazos arriba por alcanzar el borde, apoyar los brazos, empujar el cuerpo, subir una rodilla y recuperar la postura.
+La altura de apoyo cambia según el punto de llegada aprobado por el servidor. Las manos entran y salen con transición; al llevar arma se aparta y aparece la mano de apoyo.
+Se conservan la detección de slabs y la comprobación de espacio para aterrizar. Las colisiones y la trayectoria siguen autorizadas por el servidor.
+
+BRAZOS AL CORRER Y SALTAR
+Menor amplitud y frecuencia asociada a los sonidos de pasos locales reproducidos. Se excluyen sonidos de combate, pasos distantes y duplicados inmediatos.
+Se comprueban los sonidos .step del mod Sounds 2.4.22 adjuntado anteriormente. Si no se reproduce un paso, no se inventa otro ciclo de brazos.
+Al saltar se conserva el peso de la postura de carrera y se amortigua su movimiento en el aire. Al aterrizar o detenerse vuelve gradualmente a la misma guardia, sin el cambio de base de v30.
+
+COMPATIBILIDAD
+Se mantiene Carry On: no superpone puños ni acciones de parkour al cargar cofres o criaturas. Brazos y mangas slim/wide conservados.
+Se mantienen daño doble del golpe pesado, combate, pisada, mano secundaria y animación de patada a puertas.
+
+VERIFICACIÓN
+Compilación y verificación del bytecode aprobadas. Pasaron las regresiones anteriores y 25 comprobaciones funcionales nuevas con API simulada.
+18 comprobaciones estructurales contrastan los ganchos de animación contra clases reales del TaCZ .19 enviado y la conexión con el evento de sonido. No se incluyeron esas clases originales en el JAR final.
+No se ha ejecutado Minecraft completo aquí. Falta validar la apariencia y los conflictos particulares del pack dentro del juego.

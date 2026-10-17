@@ -1,0 +1,9 @@
+package dev.zomboidmelee.boxing;
+import java.util.*;import com.mojang.blaze3d.vertex.PoseStack;import com.mojang.math.Axis;
+/** Root transform includes the gun and 3D equipment; never deforms or replaces individual armor arms. */
+public final class LeanPose31{
+ static final Map<Object,double[]> REMOTE=new WeakHashMap<>();static final ThreadLocal<Deque<Boolean>> STACK=ThreadLocal.withInitial(ArrayDeque::new);
+ static double amount(Object p){if(Owned31.active(p)||Carry30.active(p))return 0;if(p==Lean30.owner)return Lean30.amount();long now=BoxingClient16.CLOCK.getAsLong();double x=R.coord(p,"X"),z=R.coord(p,"Z");double[]s=REMOTE.get(p);if(s==null){REMOTE.put(p,new double[]{x,z,now,0,0});return 0;}double dt=(now-s[2])/1e9;if(dt>.04){double yaw=Math.toRadians(R.num(R.call(p,"getYRot"))),side=((x-s[0])*Math.cos(yaw)+(z-s[1])*Math.sin(yaw))/dt;double target=Math.max(-.60,Math.min(.60,side*.14));s[3]+=(target-s[3])*(1-Math.exp(-12*Math.min(.1,dt)));double forward=(-(x-s[0])*Math.sin(yaw)+(z-s[1])*Math.cos(yaw))/dt;s[4]+=(Math.max(-1,Math.min(1,forward*.30))-s[4])*(1-Math.exp(-12*Math.min(.1,dt)));s[0]=x;s[1]=z;s[2]=now;}return s[3];}
+ public static void before(Object player,Object pose){boolean pushed=false;double lean=amount(player),forward=Owned31.active(player)?0:player==Lean30.owner?Lean30.FORWARD.value:REMOTE.containsKey(player)?REMOTE.get(player)[4]:0;if((Math.abs(lean)>.001||Math.abs(forward)>.001)&&pose instanceof PoseStack p){p.pushPose();pushed=true;float yaw=180-(float)R.num(R.call(player,"getYRot"));p.mulPose(Axis.YP.rotationDegrees(yaw));p.translate(0,.9,0);p.mulPose(Axis.ZP.rotationDegrees((float)(-lean*10)));p.mulPose(Axis.XP.rotationDegrees((float)(forward*1.3)));p.translate(0,-.9,0);p.mulPose(Axis.YP.rotationDegrees(-yaw));}STACK.get().push(pushed);}
+ public static void after(Object pose){var s=STACK.get();if(!s.isEmpty()&&s.pop())((PoseStack)pose).popPose();if(s.isEmpty())STACK.remove();}
+}

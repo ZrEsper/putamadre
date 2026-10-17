@@ -1,0 +1,2 @@
+package tschipp.carryon.common.carry;
+public class CarryOnDataManager{public static final java.util.Map<Object,Boolean> CARRY=new java.util.WeakHashMap<>();public static Data getCarryData(net.minecraft.world.entity.player.Player p){return new Data(CARRY.getOrDefault(p,false));}public record Data(boolean value){public boolean isCarrying(){return value;}public java.util.Optional<Object>getActiveScript(){return java.util.Optional.empty();}}}
