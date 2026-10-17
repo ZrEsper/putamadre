@@ -1,0 +1,30 @@
+GLOBAL MELEE V30 — ESQUINAS, CARRY ON Y BRAZOS SLIM
+NeoForge 1.21.1 / Java 21
+
+INSTALAR
+Cierra Minecraft y el servidor. Sustituye el Global Melee anterior por el JAR v30 de este ZIP en clientes y servidor (protocolo boxing30). Conserva TaCZ .19 y los otros mods del pack.
+No instales tacticalmovement-1.0.0.jar: el archivo enviado es Forge 1.20.1. Esta integración recrea su estilo de inclinación dentro de Global Melee y no lo requiere.
+Carry On debe ser su versión para NeoForge 1.21.1; es opcional, no viene incluido en el ZIP.
+
+LEANING
+Al avanzar o mantener apuntado cerca de una esquina, si la pared tapa el centro pero deja libre un solo borde, la vista se inclina hacia ese borde.
+También puedes mantener Z (izquierda) o X (derecha), modificables en Controles. La vista vuelve gradualmente al centro al soltar.
+El desplazamiento visual máximo es de 0,28 bloques y 10 grados. Se comprueba el espacio para evitar atravesar paredes. No se empuja ni teletransporta al jugador.
+Se suspende en menús, al correr, durante escalada/deslizamiento y mientras cargas objetos.
+Es una inclinación visual local: no desplaza la hitbox ni cambia el origen de los disparos del servidor.
+
+CARRY ON
+Mientras cargas cofres o criaturas, Global Melee cede el render del objeto y la postura corporal al mod Carry On. Ya no superpone puños de combate ni permite activar sus golpes pesados, escalada o deslizamiento mientras llevas la carga.
+Se añaden brazos de sujeción en primera persona con balanceo tenue al caminar. Se conservan las exclusiones de brazos de los scripts de Carry On y el control nativo para colocar/soltar el objeto.
+Al soltar la carga vuelve el combate normal. No se reemplazan inventarios ni datos de los objetos cargados.
+Compatibilidad basada en la API de Carry On 1.21.1 (rama oficial, versión 2.2.6). No se recibió tu JAR de Carry On: hace falta comprobarlo en tu pack.
+
+BRAZOS Y GOLPES
+Se mantiene la geometría de piel de 3 píxeles para slim y 4 para wide, con mangas respectivas.
+Guardia en primera persona menos simétrica. Preparación, extensión, retroceso y recuperación de los puños usan recorridos distintos. La extensión coincide con el impacto ligero y pesado; los daños y cooldowns no cambian.
+No se cambian las posiciones de guardia de tercera persona que ya funcionaban bien, ni la renderización propia de las armas.
+
+VERIFICACIÓN
+Compilación Java 21 y verificación de bytecode. Pruebas de colisión, esquinas, controles, transiciones Carry On, brazos slim, tiempos de golpe y regresiones previas aprobadas con API simulada.
+Ganchos nuevos comprobados estructuralmente; la versión anterior falla el control de ausencia de estos ganchos.
+No se ejecutó Minecraft completo en este entorno. La apariencia, Carry On real y los conflictos del pack necesitan prueba dentro del juego.

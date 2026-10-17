@@ -1,0 +1,22 @@
+{
+  "movement_reference": {
+    "file": "tacticalmovement-1.0.0.jar",
+    "sha256": "916442ff3bcfaa3a5fed6a639b34a139500f95095783ba2bdae69683877bcc38",
+    "loader": "Forge",
+    "minecraft": "[1.20.1,1.21)",
+    "bundled": false,
+    "code_copied": false
+  },
+  "carry_api": {
+    "repository": "https://github.com/Tschipp/CarryOn",
+    "branch": "1.21.1",
+    "commit": "9f1cf66c8fe4c4192f62b0b15da30b5f6e845f9a",
+    "version": "2.2.6",
+    "files": [
+      "Common/src/main/java/tschipp/carryon/common/carry/CarryOnDataManager.java",
+      "Common/src/main/java/tschipp/carryon/client/render/CarriedObjectRender.java"
+    ],
+    "actual_user_jar_provided": false
+  },
+  "minecraft_runtime_tested": false
+}

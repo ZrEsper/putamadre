@@ -1,0 +1,1 @@
+package net.minecraft.network.codec;public interface StreamCodec<B,V> extends StreamEncoder<B,V>,StreamDecoder<B,V>{static <B,V> StreamCodec<B,V> of(StreamEncoder<B,V> e,StreamDecoder<B,V>d){return null;}}
