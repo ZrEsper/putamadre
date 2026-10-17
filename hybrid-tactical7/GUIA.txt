@@ -1,0 +1,47 @@
+VISION TERMICA HIBRIDA TACTICA — FRACTUREPOINT .7
+Minecraft NeoForge 1.21.1
+
+INSTALAR
+Cierra el juego y el servidor. Sustituye el JAR anterior de FracturePoint
+(.5 o .6) por fracturepoint-1.21.1-3.0.0-PT2-hybrid-tactical.7.jar.
+Deja una sola version de FracturePoint. Instala el mismo JAR en los clientes
+y el servidor. Los otros mods no necesitan cambios para esta actualizacion.
+
+USAR
+Las gafas conservan su ID: fracturepoint:hybrid_thermal_goggles.
+Puedes probarlas con /give @s fracturepoint:hybrid_thermal_goggles
+Tambien aparecen en creativo y conservan su receta en la Ballistics Bench.
+Instalalas en un casco compatible y coloca una bateria NVG cargada.
+
+Equipar el casco NO enciende la vision. N baja el visor y activa el filtro.
+N otra vez lo levanta y apaga la vision. Si cambiaste la tecla, usa tu tecla
+asignada a bajar/subir casco. La bateria sigue durando 15 minutos de uso activo.
+
+QUE CAMBIA
+- Corrige el envio de vertices completos que dejaba las entidades sin rojo.
+- Ambiente celeste oscuro, con cuerpos visibles en rojo claro.
+- Interferencia tenue: grano fino y lineas suaves, sin flashes ni desenfoque.
+- Modelo propio de cuatro lentes en el inventario: ya no hereda un renderer
+  de armadura que el objeto no tiene.
+- Cuatro tubos sobre el casco. Se levantan con el visor y las lentes pasan de
+  oscuro a celeste cuando el visor esta abajo y la bateria tiene carga.
+- El montaje de cuatro lentes sustituye al montaje antiguo al usar estas gafas.
+- Sonidos cortos de encendido y apagado recortados del audio que enviaste.
+  No se reproducen continuamente ni al reparar el filtro tras recibir un golpe.
+- Nombre y ayuda de la nueva vision en espanol, ingles y aleman.
+
+COMPROBAR EN TU PARTIDA
+Prueba con un zombi delante, despues detras de una pared, y con otro jugador.
+Mira el casco en tercera persona al subirlo y bajarlo con N. Cambia de gafas,
+recibe un golpe y comprueba que el filtro vuelve sin repetir el sonido.
+Las gafas ya fabricadas de la version .6 conservan el mismo ID.
+
+VALIDACION Y LIMITES
+La prueba del fallo de vertices falla con .6 y pasa con .7. Se han probado
+activacion manual, bateria, cuatro lentes, colores de encendido y apagado,
+sonidos por cambio de estado, conexiones de bytecode y GLSL real con OpenGL.
+Se conservan los shaders anteriores y el algoritmo de bateria.
+No hay un segundo render del mundo ni busquedas nuevas de entidades.
+El color del cuerpo conserva la profundidad: no pretende ver a traves de paredes.
+Los modelos con renderizadores externos especiales pueden necesitar compatibilidad.
+Falta validar el resultado dentro de Minecraft con tu modpack completo.

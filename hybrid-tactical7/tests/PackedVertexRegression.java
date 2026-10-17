@@ -1,0 +1,3 @@
+package checks;
+import com.raiiiden.warborn.hybrid.HybridClient6;import com.mojang.blaze3d.vertex.*;import net.minecraft.client.renderer.*;
+public class PackedVertexRegression{public static void main(String[]a){HybridChecks.Source source=new HybridChecks.Source();MultiBufferSource wrapped=(MultiBufferSource)HybridClient6.buffers(source);VertexConsumer v=wrapped.getBuffer(new RenderType(DefaultVertexFormat.NEW_ENTITY));v.addVertex(1,2,3,0xff12ff34,.1f,.2f,0,0,0,1,0);if(source.consumer.r!=239||source.consumer.g!=1||source.consumer.b!=137)throw new AssertionError("packed native mesh escaped heat encoder: "+source.consumer.r+","+source.consumer.g+","+source.consumer.b);System.out.println("PACKED_VERTEX_REGRESSION_PASS");}}

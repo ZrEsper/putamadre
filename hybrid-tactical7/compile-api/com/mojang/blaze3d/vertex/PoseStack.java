@@ -1,0 +1,1 @@
+package com.mojang.blaze3d.vertex;public class PoseStack {public static class Pose {} public void pushPose(){}public void popPose(){}public Pose last(){return new Pose();}}
