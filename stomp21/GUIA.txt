@@ -1,0 +1,31 @@
+PISOTON ARTICULADO V21 — Minecraft NeoForge 1.21.1
+
+INSTALACION
+1. Cierra Minecraft y el servidor.
+2. Retira el Global Melee anterior (v20 u otra version). Coloca UNICAMENTE el JAR de este ZIP en mods.
+3. Actualiza tanto clientes como servidor: el protocolo de combate ahora es boxing21.
+4. Conserva Zombie Gore 1.0.10 y Hordes .49. Epic Fight sigue retirado.
+
+USO
+Mano principal vacia: izquierdo golpe ligero; derecho pesado o pisoton si apuntas a un zombi derribado cercano. Puedes sostener un objeto en la mano secundaria: se mantiene su render y el golpe usa el puno principal. El uso activo de comida, escudo o curas sigue teniendo prioridad; no golpeas mientras estas usando un objeto.
+Mantener izquierdo conserva la mineria. Equipar arma o melee en la principal cede sus animaciones al mod correspondiente.
+
+PISOTON
+- Muslo, espinilla y pie articulados; rodilla alta, talon que baja, apoyo y retirada.
+- Pantalon con textura de tu skin; pie de la skin sin botas y bota con suela marcada al llevar calzado.
+- Primera persona: la vista se centra brevemente en el zombi durante la pisada y vuelve al control normal al terminar. No traslada al jugador.
+- El dano se resuelve a los 9 ticks del servidor (0,45 s a 20 TPS); sonido de contacto y sacudida esperan la confirmacion. En lag la pierna espera esa confirmacion.
+- Sobre el cuerpo: 10 de dano base. Sobre la cabeza, apuntando de cerca: remate letal. Sin probabilidades para que el pisoton funcione.
+- Cambiar a un arma, alejarse, perder la linea de vision o cambiar de dimension cancela el contacto. El servidor vuelve a comprobar el blanco; no golpea a traves de paredes.
+- La vegetacion sin colision ya no tapa al zombi derribado en la seleccion del pisoton. Cofres, paredes y otros objetivos interactuables conservan su interaccion.
+
+DERRIBOS Y MANO SECUNDARIA
+- Derribos temporales: 9 s en el suelo (antes 4), mas una incorporacion progresiva de 1,4 s.
+- La IA espera el final de esa incorporacion antes de seguir avanzando.
+- Torso y rodillas se recuperan en tiempos distintos; no se endereza como una tabla.
+- Un zombi derribado/rastrero deja de empujar en ambos sentidos. Se conserva su caja seleccionable para poder golpearlo y pisarle la cabeza.
+- Los zombis que perdieron las piernas siguen siendo rastreros; no recuperan piernas al terminar un derribo temporal.
+
+VALIDACION
+Compilacion Java 21, verificacion de bytecode y pruebas de logica/render con API simulada aprobadas. Incluyen contactos diferidos, cancelaciones, dano protegido, cadencia, mano secundaria, colision y recuperacion.
+La vista previa geometrica del repositorio muestra las articulaciones; no es una captura de Minecraft. No se ha ejecutado Minecraft en este entorno: falta confirmar aspecto, sonido y convivencia con todos tus mods dentro del juego.

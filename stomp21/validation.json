@@ -1,0 +1,37 @@
+{
+  "file": "zomboid-global-melee-animations-2.3.1-v21-articulated-heel-stomp.jar",
+  "sha256": "cc07a52b7ff8430d87b9a2c27233133f741f230ea6b461fb2b4f8e1151caa06a",
+  "minecraft_runtime_tested": false,
+  "changed": [
+    "dev/zomboidmelee/boxing/Action19.class",
+    "dev/zomboidmelee/boxing/Boxing16.class",
+    "dev/zomboidmelee/boxing/BoxingClient16$Remote.class",
+    "dev/zomboidmelee/boxing/BoxingClient16.class",
+    "dev/zomboidmelee/boxing/Client20$State.class",
+    "dev/zomboidmelee/boxing/Client20.class",
+    "dev/zomboidmelee/boxing/Motion20.class",
+    "dev/zomboidmelee/boxing/Net20.class",
+    "dev/zomboidmelee/boxing/Render20.class",
+    "dev/zomboidmelee/boxing/Server20.class",
+    "dev/zomboidmelee/boxing/Stomp18.class",
+    "dev/zomboidmelee/mixin/BoxingHands17.class",
+    "zomboid_global_melee.mixins.json"
+  ],
+  "added": [
+    "assets/zomboid_global_melee/textures/entity/stomp_boot.png",
+    "dev/zomboidmelee/boxing/Collision21.class",
+    "dev/zomboidmelee/boxing/Hands21.class",
+    "dev/zomboidmelee/boxing/Look21.class",
+    "dev/zomboidmelee/boxing/Rise21$Fall.class",
+    "dev/zomboidmelee/boxing/Rise21.class",
+    "dev/zomboidmelee/boxing/Stomp21$Pending.class",
+    "dev/zomboidmelee/boxing/Stomp21.class",
+    "dev/zomboidmelee/boxing/StompClient21.class",
+    "dev/zomboidmelee/boxing/StompMesh21.class",
+    "dev/zomboidmelee/boxing/StompMotion21$Pose.class",
+    "dev/zomboidmelee/boxing/StompMotion21.class",
+    "dev/zomboidmelee/boxing/StompTarget21.class",
+    "dev/zomboidmelee/mixin/PronePush21.class",
+    "dev/zomboidmelee/mixin/PronePushable21.class"
+  ]
+}
