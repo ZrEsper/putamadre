@@ -1,0 +1,1 @@
+package dev.zomboid.gore;import dev.zomboidmelee.boxing.CombatChecks18.*;public class Gore{public static boolean zombie(Object v){return v instanceof Zombie;}public static int state(Object v){return ((Zombie)v).state;}static void set(Object v,int i){((Zombie)v).state=i;}}

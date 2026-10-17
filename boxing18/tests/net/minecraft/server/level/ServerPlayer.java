@@ -1,0 +1,1 @@
+package net.minecraft.server.level;public class ServerPlayer extends net.minecraft.client.player.AbstractClientPlayer{}

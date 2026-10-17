@@ -1,0 +1,1 @@
+package net.minecraft.client.model.geom;public class ModelPart{public float xRot,yRot,zRot;public void copyFrom(ModelPart o){xRot=o.xRot;yRot=o.yRot;zRot=o.zRot;}}

@@ -1,0 +1,27 @@
+{
+  "output": "zomboid-global-melee-animations-2.3.1-range-plus-one-ezweight-v18-heavy-fists-camera-stagger.jar",
+  "sha256": "02e26c8a8815f2a3e893d826d4b97bdf7c90d460710de73707d83eb9d4890433",
+  "changed": [
+    "dev/zomboidmelee/boxing/Boxing16.class",
+    "dev/zomboidmelee/boxing/BoxingClient16$Remote.class",
+    "dev/zomboidmelee/boxing/BoxingClient16.class",
+    "dev/zomboidmelee/boxing/BoxingClientEvents16.class",
+    "dev/zomboidmelee/combat/NativeStockAnimation.class",
+    "dev/zomboidmelee/combat/PushNetwork.class",
+    "dev/zomboidmelee/mixin/VanillaCombatMixin.class",
+    "dev/zomboidmelee/motion/BodyPush.class",
+    "zomboid_global_melee.mixins.json"
+  ],
+  "added": [
+    "dev/zomboidmelee/boxing/BoxingArms17.class",
+    "dev/zomboidmelee/boxing/Combat18.class",
+    "dev/zomboidmelee/boxing/CombatEvents18.class",
+    "dev/zomboidmelee/boxing/Heavy18.class",
+    "dev/zomboidmelee/boxing/Stomp18.class",
+    "dev/zomboidmelee/mixin/BoxingCamera17.class",
+    "dev/zomboidmelee/mixin/BoxingHands17.class",
+    "dev/zomboidmelee/mixin/BoxingNoLunge17.class",
+    "dev/zomboidmelee/mixin/BoxingProne18.class"
+  ],
+  "minecraft_runtime_tested": false
+}

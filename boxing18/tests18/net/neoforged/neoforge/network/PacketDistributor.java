@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.network;import net.minecraft.network.protocol.common.custom.CustomPacketPayload;public class PacketDistributor{public static CustomPacketPayload sent;public static void sendToServer(CustomPacketPayload p,CustomPacketPayload...rest){sent=p;}}

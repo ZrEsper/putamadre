@@ -1,0 +1,61 @@
+BOXEO TACTICO v18 + ZOMBIE GORE 1.0.8 — NEOFORGE 1.21.1
+
+INSTALACION
+Cierra Minecraft y el servidor. Sustituye Global Melee v16/v17 (o anteriores)
+y Zombie Gore 1.0.7 por los DOS JAR de la carpeta mods de este ZIP.
+Instala los mismos dos JAR en clientes y servidor. Una version de cada mod.
+Conserva TaCZ .18, Les Raisins .4, EZWeight, Player Animator y las dependencias
+que ya usabas. Conserva EMF y el paquete de modelos/heridas de Gore.
+El boxeo es independiente de Epic Fight: retira Epic Fight de esta instancia.
+
+CONTROLES — AMBAS MANOS VACIAS
+Clic izquierdo: golpe normal alternando manos. Cooldown: 0,4 segundos.
+Mantener clic izquierdo sobre un bloque 350 ms: minar normalmente.
+Clic derecho al aire o contra zombis: golpe pesado. Cooldown: 0,9 segundos.
+Clic derecho cerca de un zombi caido, apuntando HACIA ABAJO A SU CABEZA:
+pisoton con animacion de la pierna y remate mortal de cabeza. Cooldown: 1 s.
+Si apuntas al cuerpo en lugar de la cabeza, sera un golpe pesado normal.
+Clic derecho sobre bloques o NPC conserva su interaccion normal.
+Equipar un arma, melee, cura u otro objeto desactiva el boxeo y su camara.
+
+GOLPES Y DERRIBOS
+La camara se mueve brevemente durante el golpe y vuelve a su posicion.
+No mueve al personaje hacia delante. Puedes caminar mientras golpeas.
+Los golpes pesados hacen mas dano y tienen sonidos de barrido e impacto.
+Solo un golpe aceptado por el servidor puede aplicar dano y aturdimiento.
+Los cooldowns son compartidos: alternar los botones no evita la espera.
+El golpe normal mantiene el coste de cansancio existente; el pesado y el
+pisoton necesitan mas cansancio (100 frente a 60 del golpe normal).
+
+Los zombis reciben empuje HACIA ATRAS, sin impulso vertical de golpe.
+El aturdimiento usa la reaccion corporal del mod Gore enviado.
+Un golpe normal tiene 12% de probabilidad de derribar; uno pesado, 30%.
+El derribo dura 4 segundos y no les destruye las piernas permanentemente.
+Los zombis que ya arrastraban las piernas tambien pueden ser rematados.
+El pisoton requiere cabeza en la mira, corta distancia y camino sin pared.
+Al acertar, desaparece la cabeza mediante el sistema de Gore, salen particulas
+rojas y el zombi muere. Se respeta el dano cancelado por otros mods.
+El remate se activa con clic derecho; no hay que instalar Epic Fight.
+
+CORRECCIONES ANTERIORES INCLUIDAS
+- Brazos de jugador con skin, guardia y animacion FPS directa.
+- Clic corto y swing nativo tambien inician animacion.
+- Los huesos de armadura 3D no se confunden con los brazos normales (xRot).
+- Se bloquea la culata/camara de un arma guardada y el avance diferido de LR
+  cuando las manos estan vacias. No se borra la velocidad ni la gravedad.
+
+PRUEBA EN TU PARTIDA
+Prueba golpes normales y pesados estando quieto, andando y retrocediendo.
+Derriba un zombi; acercate y apunta a su cabeza en el suelo con clic derecho.
+Prueba despues minar, abrir un cofre, hablar con un NPC y cambiar a un arma.
+Revisa primera y tercera persona con tus armaduras 3D y modelos de zombis.
+
+VALIDACION Y LIMITES
+Compilacion, verificacion de bytecode y pruebas de logica/API completadas:
+cooldowns, camara, dano, bloqueo por paredes, empuje sin subida, derribo temporal,
+remate de cabeza, rechazo de ataques invalidos, paquetes/red y pierna con skin.
+Tambien se conservan las regresiones del render FPS y armaduras 3D.
+No se ha ejecutado Minecraft aqui. Falta comprobar aspecto y compatibilidad
+visual con tu modpack y sus paquetes EMF completos. Los derribos/remates de
+Gore afectan a zombis que heredan de Zombie, como el mod original; otras
+criaturas pueden recibir el empuje/aturdimiento si Global Melee las reconoce.

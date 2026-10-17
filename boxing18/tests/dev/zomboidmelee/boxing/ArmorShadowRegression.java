@@ -1,0 +1,3 @@
+package dev.zomboidmelee.boxing;
+import net.minecraft.client.Minecraft;import net.minecraft.server.level.ServerPlayer;import dev.zomboidmelee.boxing.Checks16.*;import net.minecraft.client.model.HumanoidModel;
+public class ArmorShadowRegression{public static void main(String[]a){ServerPlayer p=new ServerPlayer();Minecraft.INSTANCE.player=p;ShadowModel model=new ShadowModel();BoxingClient16.body(model,p);if(((HumanoidModel<?>)model).rightArm.xRot>-.5f||model.rightArm.rotX!=0)throw new AssertionError("typed vanilla arm must be selected, never shadowed GeoBone");System.out.println("GECKOLIB_SHADOWED_ARM_FIELDS_RENDER_CRASH_REGRESSION_PASS");}}

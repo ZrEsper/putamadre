@@ -1,0 +1,3 @@
+package dev.zomboidmelee.boxing;
+import net.minecraft.client.Minecraft;import net.minecraft.server.level.ServerPlayer;import dev.zomboidmelee.boxing.Checks16.*;
+public class AnimationRegression{public static void main(String[]a){Minecraft.INSTANCE.player=new ServerPlayer();Minecraft.INSTANCE.player.swing=.5f;Hand event=new Hand();BoxingClient16.hand(event);if(!event.canceled||event.pose.translations.size()!=4||Math.abs(event.pose.translations.get(2)[2]+.1)<.1)throw new AssertionError("native punch swing produces only stationary first-person guard");System.out.println("NATIVE_SWING_DRIVES_VISIBLE_FIRST_PERSON_PUNCH_PASS");}}
