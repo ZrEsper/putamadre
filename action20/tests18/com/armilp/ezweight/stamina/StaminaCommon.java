@@ -1,0 +1,1 @@
+package com.armilp.ezweight.stamina;public class StaminaCommon{public static boolean allow=true;public static int calls;public static boolean consume(net.minecraft.world.entity.player.Player p,double n){calls++;return allow;}}

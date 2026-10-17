@@ -1,0 +1,1 @@
+package dev.zomboid.hordes;import java.util.*;public class WorldTuning{public static Map<String,Double>v=new HashMap<>();public static double get(String s){return v.get(s);}public static Map<String,Double>snapshot(){return v;}}

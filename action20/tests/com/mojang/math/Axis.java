@@ -1,0 +1,1 @@
+package com.mojang.math;public interface Axis{public static final Axis XP=a->new org.joml.Quaternionf(),YP=a->new org.joml.Quaternionf(),ZP=a->new org.joml.Quaternionf();org.joml.Quaternionf rotationDegrees(float a);}

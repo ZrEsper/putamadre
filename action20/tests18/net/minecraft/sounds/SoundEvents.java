@@ -1,0 +1,1 @@
+package net.minecraft.sounds;public class SoundEvents{public static final Object PLAYER_ATTACK_KNOCKBACK=new Object(),PLAYER_ATTACK_SWEEP=new Object(),PLAYER_ATTACK_STRONG=new Object(),SLIME_SQUISH=new Object();}

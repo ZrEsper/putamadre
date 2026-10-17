@@ -1,0 +1,1 @@
+package net.minecraft.world.phys;public class Vec3{public double x,y,z;public Vec3(double x,double y,double z){this.x=x;this.y=y;this.z=z;}public Vec3 add(Vec3 v){return add(v.x,v.y,v.z);}public Vec3 add(double x,double y,double z){return new Vec3(this.x+x,this.y+y,this.z+z);}public Vec3 scale(double s){return new Vec3(x*s,y*s,z*s);}}

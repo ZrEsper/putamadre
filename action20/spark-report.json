@@ -1,0 +1,28 @@
+[
+  {
+    "file": "8We32b1F51.sparkprofile",
+    "duration_seconds": 60.37,
+    "side": "SERVER",
+    "tps_last_1m": 15.464721651441542,
+    "mspt_mean_1m": 62.14893375,
+    "mspt_p95_1m": 97.002,
+    "normal_zombies": 511,
+    "mutants": 18,
+    "dropped_items": 264,
+    "total_entities": 1225,
+    "note": "Inclusive sampled branch times overlap. Captures are before this patch; no post-change FPS/TPS measured."
+  },
+  {
+    "file": "OGEZLWrkZH.sparkprofile",
+    "duration_seconds": 60.045,
+    "side": "CLIENT",
+    "tps_last_1m": 19.98295104574155,
+    "mspt_mean_1m": 9.866633,
+    "mspt_p95_1m": 15.6638,
+    "normal_zombies": 517,
+    "mutants": 18,
+    "dropped_items": 64,
+    "total_entities": 723,
+    "note": "Inclusive sampled branch times overlap. Captures are before this patch; no post-change FPS/TPS measured."
+  }
+]

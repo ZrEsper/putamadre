@@ -1,0 +1,1 @@
+package net.minecraft.world.level.block;public class Blocks{public static final Blocks REDSTONE_BLOCK=new Blocks();public Object defaultBlockState(){return this;}}

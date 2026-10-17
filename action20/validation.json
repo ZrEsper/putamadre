@@ -1,0 +1,43 @@
+{
+  "outputs": {
+    "melee": {
+      "file": "zomboid-global-melee-animations-2.3.1-v20-impact-search-stomp.jar",
+      "sha256": "04e0ba3274f17dcecc59bec1e390994348b12eca5cabdb08f6c26caaae1b3e1b",
+      "changed": [
+        "dev/zomboidmelee/boxing/Boxing16.class",
+        "dev/zomboidmelee/boxing/BoxingClient16$Remote.class",
+        "dev/zomboidmelee/boxing/BoxingClient16.class",
+        "dev/zomboidmelee/boxing/BoxingHitEvents16.class",
+        "dev/zomboidmelee/boxing/Combat18.class",
+        "dev/zomboidmelee/boxing/R.class",
+        "dev/zomboidmelee/boxing/Stomp18.class",
+        "dev/zomboidmelee/combat/NativeStockAnimation.class",
+        "dev/zomboidmelee/combat/PushClient.class",
+        "dev/zomboidmelee/combat/ShoveCombat.class",
+        "dev/zomboidmelee/mixin/VanillaCombatMixin.class",
+        "dev/zomboidmelee/motion/BodyPush.class"
+      ]
+    },
+    "gore": {
+      "file": "zomboid-zombie-gore-1.0.10-neoforge-1.21.1-directional-momentum.jar",
+      "sha256": "7c37da895e8e7f94687f6b82a253f4445bb8b603aa06c0f13fee44e541e9029b",
+      "changed": [
+        "META-INF/neoforge.mods.toml",
+        "dev/zomboid/gore/MeleeReaction$Offset.class",
+        "dev/zomboid/gore/MeleeReaction$Reaction.class",
+        "dev/zomboid/gore/MeleeReaction.class"
+      ]
+    },
+    "hordes": {
+      "file": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.49-global-zombie-budget.jar",
+      "sha256": "5832e745d86f7495659710fc07bc83bf2d4f66a695d389ca71a861d067129e17",
+      "changed": [
+        "dev/zomboid/hordes/AmbientSettings47.class",
+        "dev/zomboid/hordes/Population47.class",
+        "dev/zomboid/hordes/SimplePanel.class",
+        "dev/zomboid/hordes/ZoneReserve.class"
+      ]
+    }
+  },
+  "minecraft_runtime_tested": false
+}

@@ -1,0 +1,101 @@
+ACCION v20 + GORE 1.0.10 + PANEL .49 — NEOFORGE 1.21.1
+
+INSTALAR
+Cierra Minecraft y el servidor. Sustituye estas tres versiones:
+- Global Melee v19 -> v20.
+- Zombie Gore 1.0.9 -> 1.0.10.
+- Zomboid Hordes panel .48 -> .49.
+Deja SOLO UN JAR de cada mod e instala los mismos en cliente y servidor.
+Conserva tus otros mods, TaCZ principal, First Aid, FracturePoint, Les Raisins,
+EZWeight, EMF y los paquetes de modelos TZP/gore. No requiere Epic Fight.
+Este ZIP no exige elegir un mundo ni contiene ajustes que borren inventarios.
+
+GOLPES: POR QUE ALGUNOS NO REGISTRABAN
+El ligero permite golpear cada 8 ticks, pero el zombi podia conservar una
+proteccion de dano de 10 ticks. Ahora el servidor prepara solamente el objetivo
+de un golpe aceptado para que esa diferencia no rechace el golpe siguiente.
+No quita la proteccion general de todos los mobs ni salta los cooldowns.
+El alcance, las paredes, la resistencia y el dano cancelado por otros mods
+siguen contando. Si falta resistencia, se avisa y se cancela la prediccion.
+Con lag del servidor todavia puede haber retraso: no convierte 15 TPS en 20.
+
+CONTROLES Y ANIMACIONES
+Con ambas manos vacias:
+- Izquierdo: jab recto y rapido. Cooldown de 0,4 s a 20 TPS.
+- Derecho contra un zombi de pie: golpe pesado lateral, con preparacion y giro
+  propios. Cooldown de 0,9 s a 20 TPS. No es el jab agrandado.
+- Derecho apuntando a un zombi tirado y cerca: SIEMPRE intenta un pisoton,
+  tanto sobre el cuerpo como sobre la cabeza. No depende de una probabilidad.
+  El cuerpo recibe 10 de dano base; apuntar a la cabeza permite el remate mortal.
+  Se conserva 1 s de cooldown y el coste de resistencia. Una pared, estar fuera
+  de alcance o no tener resistencia impide el ataque, como los otros golpes.
+- Mantener izquierdo sobre un bloque 350 ms: minar normalmente.
+- V: empujon/culata. Con las manos vacias empuja con ambos brazos; con arma
+  se conserva la animacion nativa si la tiene y se corrige el movimiento de apoyo.
+
+El pisoton levanta el pie y baja con fuerza; su recorrido principal es vertical.
+Tiene sacudida de impacto, sonido fuerte y efecto de sangre al rematar la cabeza.
+Los jabs suenan tambien al aire; el sonido de impacto exige dano real.
+El pesado sacude mas que el ligero. La camara vuelve a su posicion y no cambia
+la punteria real ni empuja al personaje hacia delante.
+
+REACCIONES DE LOS ZOMBIS
+Los golpes les dan impulso horizontal, sin lanzarlos hacia arriba.
+El cuerpo y la cabeza reaccionan con distinto retraso y recuperacion, segun
+la direccion y la intensidad: ligero, pesado, empujon o pisoton.
+Se conserva el intervalo de recuperacion entre aturdimientos de v19.
+El derribo sigue siendo temporal, sin destruir las piernas para tumbarlo.
+Se conserva una pausa entre derribos para evitar encadenarlos sin respuesta.
+Las caidas progresivas de v19 se mantienen.
+
+BUSCAR EN CONTENEDORES
+Al abrir cofres, barriles, cadaveres o almacenes reconocidos, se activa una
+animacion alternada de manos buscando. Tambien se comunica a los otros jugadores.
+Se detiene al cerrar el inventario. El menu sigue siendo interactuable.
+No se cambia el contenido, las probabilidades de loot ni los objetos guardados.
+
+LIMITE GLOBAL DE ZOMBIS
+Abre el panel de admin, en la pantalla sencilla de Ambiente y poblacion.
+Busca "Maximo global de zombis activos", con icono de huevo de zombi.
+Valor inicial: 100. Se puede arrastrar la barra o escribir un entero de 1 a 500.
+Pulsa "Guardar cambios". Afecta a la admision de todos los zombis compatibles,
+incluidos los mutantes que ya reconoce Hordes, en las dimensiones cargadas.
+No cuenta NPC, animales, jugadores ni el zombi con inventario de un jugador.
+
+El limite global y los limites anteriores por zona/jugador trabajan juntos:
+se aplica el mas restrictivo. El limite global no obliga a aparecer a 100.
+Al alcanzarlo, no entran nuevas apariciones y la reserva espera a tener espacio.
+Si ya hay mas de 100 guardados, o bajas el limite, los lejanos sin combate pasan
+gradualmente a la reserva existente. Conservan sus datos y no generan loot.
+Los que ya estan atacando o protegidos por el sistema anterior se mantienen:
+puede existir un exceso temporal hasta salir de combate. No se eliminan de golpe.
+El conteo usa los indices existentes; no escanea el mundo entero cada tick.
+Los perfiles de dificultad no reinician este limite que elegiste.
+
+QUE MUESTRAN TUS PERFILES SPARK
+8We32b1F51 (servidor, aprox. 60 s): 15,46 TPS; media 62,15 ms/tick y
+percentil 95 de 97 ms. Habia 511 zombis normales, 18 mutantes compatibles,
+264 objetos tirados y 1225 entidades en total. La IA, busqueda de objetivos,
+las rutas y los sistemas de ruido/poblacion aparecen en las ramas costosas.
+OGEZLWrkZH (cliente, aprox. 60 s): el render de entidades ocupa aprox. 27,6%
+del tiempo muestreado del hilo de render y una rama de modelos EMF, 9,4%.
+Son tiempos inclusivos: no se suman ni prueban que un wrapper sea el culpable.
+Estos datos no son una medida de FPS ni predicen el rendimiento de esta version.
+Reducir poblacion ayuda a contener trabajo; animales/modelos y objetos tirados
+tambien siguen teniendo coste. El ZIP no borra esas entidades para ocultarlo.
+
+PRUEBAS Y LIMITES
+Compilacion y pruebas de codigo/API, paquetes de red y conexiones reales del
+bytecode completadas. Se comprueba el caso de 8/10 ticks, dano, cooldown,
+pisoton de cuerpo/cabeza, sonidos, camara, busqueda, momentum direccional,
+brazos con armadura 3D y limite global con reserva y controles del panel.
+No se ha ejecutado Minecraft aqui. Falta comprobar el aspecto con tu modpack.
+
+PRUEBA RECOMENDADA EN TU PARTIDA
+1. Golpea de pie con izquierdo, derecho y V, quieto y en movimiento.
+2. Derriba uno: apunta al cuerpo y luego a la cabeza, cerca y sin una pared.
+3. Abre y cierra un cofre y un cadaver; cambia tambien a un arma y a una cura.
+4. Guarda el limite global en 100. Si ya hay una pelea masiva, dejala terminar
+   o alejate para que la reserva pueda reducir el exceso sin borrar atacantes.
+5. Repite /spark profiler start --timeout 60 y /sparkc profiler start --timeout 60
+   en una situacion comparable para medir la diferencia real.

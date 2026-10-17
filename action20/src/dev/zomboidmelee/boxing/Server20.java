@@ -1,0 +1,12 @@
+package dev.zomboidmelee.boxing;
+import java.util.*;
+public final class Server20{
+ private static final Map<Object,Boolean>SEARCH=new WeakHashMap<>();
+ public static boolean searchMenu(Object p){Object menu=R.get(p,"containerMenu");if(menu==null||menu==R.get(p,"inventoryMenu"))return false;String n=menu.getClass().getName().toLowerCase(Locale.ROOT);return n.contains("chest")||n.contains("barrel")||n.contains("corpse")||n.contains("remains")||n.contains("storage")||n.contains("loot")||n.contains("scaveng");}
+ public static void tick(Object event){Object p=R.call(event,"getEntity");if(!R.type("net.minecraft.server.level.ServerPlayer").isInstance(p))return;boolean now=searchMenu(p);Boolean old=SEARCH.put(p,now);if(now!=(old!=null&&old))Net20.cue(p,now?14:15);}
+ /** Clamp only for accepted fist contact, never on an entity tick or weapon hit. */
+ public static void prepare(Object target){if(target!=null&&Combat18.zombie(target)){int old=((Number)R.get(target,"invulnerableTime")).intValue();if(old>10)R.set(target,"invulnerableTime",10);}}
+ public static void exhausted(Object p){Net20.cue(p,19);}
+ public static boolean vanilla(Object p,Object target){if(R.yes(R.call(R.call(p,"level"),"isClientSide")))return true;if(!Boxing16.empty(p)){Object melee=R.call(R.type("me.xjqsh.lrtactical.api.item.IMeleeWeapon"),"of",R.call(p,"getMainHandItem"));return melee!=null||R.yes(R.call(R.type("com.armilp.ezweight.stamina.StaminaCommon"),"consume",p,60d));}if(Combat18.time(p)<Combat18.NEXT.getOrDefault(p,Long.MIN_VALUE))return false;if(!R.yes(R.call(R.type("com.armilp.ezweight.stamina.StaminaCommon"),"consume",p,60d))){exhausted(p);return false;}if(!Combat18.gate(p,target))return false;prepare(target);Net20.cue(p,10);return true;}
+ public static void hit(Object e){Object v=R.call(e,"getEntity");if(R.yes(R.call(R.call(v,"level"),"isClientSide"))||R.num(R.call(e,"getNewDamage"))<=0)return;Object source=R.call(e,"getSource"),p=R.call(source,"getEntity");if(p!=null&&R.type("net.minecraft.server.level.ServerPlayer").isInstance(p)&&p==R.call(source,"getDirectEntity")&&"player".equals(R.call(source,"getMsgId"))){if(Boxing16.empty(p)){Net20.cue(p,Combat18.ACTION.get()==2?18:Combat18.HEAVY.get()?17:16);if(!Combat18.HEAVY.get()&&Combat18.ACTION.get()!=2)Combat18.sound(v,"PLAYER_ATTACK_KNOCKBACK",.65f,1.05f);}else if(R.yes(R.call(R.call(p,"getPersistentData"),"getBoolean","zpush_active")))Net20.cue(p,18);}}
+}
