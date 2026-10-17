@@ -1,0 +1,45 @@
+VISION TERMICA HIBRIDA — FRACTUREPOINT .6
+Minecraft NeoForge 1.21.1
+
+INSTALAR
+Cierra Minecraft y el servidor. Guarda una copia del mundo.
+Quita FracturePoint digital-exposure.5 de mods y copia el JAR .6 de este ZIP.
+Instalalo en servidor y clientes, sin versiones duplicadas.
+Conserva FirstAid y los demas mods: no necesitan reemplazo por esta funcion.
+
+USAR
+Nueva pieza: Gafas termicas hibridas / Hybrid Thermal Goggles.
+ID: fracturepoint:hybrid_thermal_goggles
+Para probar: /give @s fracturepoint:hybrid_thermal_goggles
+Tambien aparece en la seccion general de FracturePoint y se fabrica en
+la Ballistics Bench con los mismos ingredientes de las gafas termicas normales.
+
+Instala las gafas en un casco compatible con vision y coloca una bateria NVG.
+Equipar el casco deja la vision apagada. Pulsa N para bajar el visor y activar
+el filtro. N de nuevo lo sube y lo apaga. Si cambias la tecla, usa la que hayas
+asignado a bajar/subir el casco. La bateria conserva sus 15 minutos de uso activo.
+Cuando se agota deja de funcionar. Las gafas normales conservan sus filtros.
+
+ASPECTO
+El entorno pasa a azul celeste frio y conserva diferencias de luz y relieve.
+Las entidades vivas visibles, como jugadores, NPC y zombis, se destacan en rojo.
+El arma en primera persona no se convierte en una silueta enemiga roja.
+No se desactiva la profundidad para ver cuerpos a traves de paredes.
+El resaltado es un efecto visual, no una simulacion de temperatura corporal.
+
+RENDIMIENTO Y LIMITES
+Un unico filtro de pantalla y un blit, sin blur de multiples muestras,
+sin otro render completo del mundo ni busquedas nuevas de entidades.
+Los meshes estandar de entidades usan una textura blanca minima y una firma
+de color antes de convertirlos a rojo. Textos, lineas y formatos especiales
+conservan su renderizado normal y pasan por el fondo frio.
+Modelos con pipelines propios pueden necesitar compatibilidad adicional.
+Un material externo que emita exactamente la firma cromatica podria resaltarse;
+se han comprobado rojo, ladrillo y magenta ordinarios para evitar falsos rojos.
+
+VERIFICACION
+Pruebas de activacion manual, cambio de casco, vaciado de bateria, registros,
+buffers y conexiones nativas. Los filtros anteriores, texturas y los paquetes
+originales de bateria quedan conservados. El GLSL real fue compilado y dibujado
+con OpenGL software y muestras de fondo y entidades con iluminacion variable.
+Falta probarlo dentro de Minecraft con tu modpack completo.
