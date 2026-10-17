@@ -1,0 +1,1 @@
+package com.mojang.blaze3d.systems;public class RenderSystem{public static dev.zomboidmelee.boxing.LaserChecks32.Mat model=new dev.zomboidmelee.boxing.LaserChecks32.Mat(dev.zomboidmelee.boxing.Matrix32.identity());public static Object getModelViewMatrix(){return model;}}

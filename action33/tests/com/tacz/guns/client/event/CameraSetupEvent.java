@@ -1,0 +1,1 @@
+package com.tacz.guns.client.event;public class CameraSetupEvent{public static Dyn ITEM_MODEL_FOV_DYNAMICS=new Dyn(70),WORLD_FOV_DYNAMICS=new Dyn(70);public record Dyn(double value){public double get(){return value;}}}

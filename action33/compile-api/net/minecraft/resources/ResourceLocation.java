@@ -1,0 +1,1 @@
+package net.minecraft.resources;public class ResourceLocation{public static ResourceLocation fromNamespaceAndPath(String n,String p){return null;}}

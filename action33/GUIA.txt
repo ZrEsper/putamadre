@@ -1,0 +1,31 @@
+GLOBAL MELEE V33 — LÁSER ESTABLE, LEAN Y PESO LATERAL
+Minecraft NeoForge 1.21.1 / Java 21
+
+INSTALACIÓN
+Cierra Minecraft y servidor. Sustituye Global Melee v32 o anterior por el JAR v33 de este ZIP, en clientes y servidor. No dejes dos versiones. Protocolo boxing33.
+Fracture Point .9 se incluye para conservar el color del láser en sus ocho filtros. Es el mismo .9 del paquete anterior: si ya lo tienes, consérvalo. No dupliques Fracture Point.
+Mantén TaCZ .19 wall-alt-slide, Gore, Carry On y demás mods. No añadas Epic Fight.
+
+LÁSER
+El origen y la dirección salen de la transformación real del accesorio: el haz acompaña al arma y sus brazos, también al correr y hacer lean. No se obliga a unir un arma levantada a un punto fijo de la pantalla.
+La matriz de cámara se toma del render del mundo y ya no se sobrescribe con las transformaciones de cada entidad. El haz se vacía de su buffer mientras su proyección sigue activa, evitando reutilizar geometría con otra cámara.
+Se recorta antes del plano cercano. No se dibuja un punto de impacto que queda demasiado cerca o detrás de la cámara; esto evita los polígonos rojos enormes que aparecen en los vídeos.
+Alcance visual máximo 256 bloques. Ignora hierba, flores, arbustos de bayas, hojas, enredaderas y vegetación reemplazable. Continúa el trazado después de esas plantas y se detiene en la superficie sólida siguiente. Cristal, puertas, losas y otros bloques con colisión siguen deteniéndolo. No necesita atravesar una pared para encontrar el objetivo.
+Mantiene el color seleccionado de TaCZ, también en visión nocturna, con mayor intensidad visual. No añade iluminación dinámica al mundo ni cambia las balas.
+
+LEAN
+Se ignora la vegetación al buscar cobertura. Las pequeñas variaciones laterales tienen una zona muerta y un cambio de lado automático necesita mantenerse estable, evitando alternancia continua de izquierda a derecha.
+La posición se aplica sin acumular el mismo desplazamiento cuando se repite la llamada de cámara. Sigue limitada por las paredes.
+Se conservan la inclinación automática por movimiento, el modelo de tercera persona y las teclas opcionales Z/X.
+
+BRAZOS Y ARMA
+Más recorrido hacia los costados al dar pasos, girar y cambiar de dirección. El movimiento se aplica a la misma transformación del render del arma y sus brazos, para que permanezcan juntos.
+La postura elevada también permite inercia lateral amortiguada al moverse. Al detenerse se asienta.
+Al apuntar el movimiento tiene límites menores. No modifica daño, dispersión o dirección de disparo del servidor.
+
+SE CONSERVAN
+Puñetazos, pesado, empujón V, pisotón, sacudida de impactos, deslizamiento con Alt corriendo por huecos de un bloque, escalada, Carry On y modelos slim.
+
+VALIDACIÓN
+Compilación Java 21 y verificación del bytecode; regresiones de combate, locomoción, deslizamiento y ganchos reales TaCZ. Nuevas pruebas de vegetación con pared detrás, cámara repetida, alternancia de cobertura, plano cercano y orientación del accesorio.
+No se ejecutó Minecraft con el modpack en este entorno. La prueba visual final en el juego sigue pendiente.
