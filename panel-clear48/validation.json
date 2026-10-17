@@ -1,0 +1,11 @@
+{
+  "output": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.48-clear-panel.jar",
+  "sha256": "3e91abc782a82732eae2e78a8178cc3fd412fab7ad7c8b33a44798c0dbea8271",
+  "input_sha256": "c62dd998bdb76dee87d11db65622418f41d3d260fc9fd119b93b5e39d8c9b830",
+  "changed": [
+    "dev/zomboid/hordes/client/AdminScreen.class",
+    "dev/zomboid/hordes/client/LootPreviewScreen.class"
+  ],
+  "all_settings_loot_population_network_assets_unchanged": true,
+  "minecraft_runtime_tested": false
+}

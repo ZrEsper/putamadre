@@ -1,0 +1,49 @@
+CORRECCION DE VISION HIBRIDA .8 Y PANEL DE ADMIN .48
+Minecraft NeoForge 1.21.1
+
+INSTALAR
+Cierra el juego y el servidor. Sustituye estos dos mods por los del ZIP:
+- FracturePoint anterior (.5/.6/.7) -> hybrid-entity-mask.8
+- Zomboid Hordes .47 -> admin-panel.48-clear-panel
+Deja una sola version de cada mod. Copia los mismos JAR a los clientes y servidor.
+Conserva Quietly .18 y los demas mods. Los ajustes guardados no se reinician.
+
+VISION HIBRIDA
+La captura mostraba dos fallos: la consulta del render ignoraba la activacion
+manual y las paredes podian confundirse con cuerpos por su color.
+Ahora se consulta la activacion manual real y se marca explicitamente el dibujo
+de las entidades usando un valor reservado del canal alfa, no el RGB de la pared.
+El filtro solo colorea como caliente esa marca; devuelve alfa normal al terminar.
+El escenario mantiene su tono celeste, aunque sus texturas sean rojas o violetas.
+La marca se limita al render del mundo: no colorea entidades de menus ni brazos.
+Se conserva la profundidad normal: una pared delante tapa al cuerpo.
+No se vuelve a dibujar todo el mundo ni se crean buffers extra de pantalla.
+
+Las gafas conservan el ID fracturepoint:hybrid_thermal_goggles.
+Puedes usar /give @s fracturepoint:hybrid_thermal_goggles para probarlas.
+Instalalas con bateria NVG en un casco compatible. N baja el visor y activa
+la vision; N de nuevo lo levanta y apaga. Conserva 15 minutos de bateria activa,
+los cuatro lentes, los sonidos recortados y la interferencia tenue de .7.
+
+PANEL DE ADMIN
+El desenfoque de la pantalla base se aplicaba despues de los textos y barras
+personalizados. Se desactiva ese fondo borroso solo en el panel y su vista
+previa de loot. Los botones, textos, iconos y barras deben verse nitidos.
+Conserva modos de ambiente, scroll, campos numericos y Guardar cambios.
+Esta correccion visual no cambia valores de loot, poblacion ni archivos guardados.
+
+PRUEBA EN TU PARTIDA
+Activa las gafas junto a una pared de ladrillos y un zombi o NPC visible.
+Comprueba el cuerpo en rojo y la pared celeste. Tapalo con una pared y comprueba
+que no lo resalta a traves de ella. Abre y cierra inventario para comprobar
+que la entidad de la interfaz conserva su dibujo normal.
+Abre el panel de admin: revisa las etiquetas y barras, y luego la vista previa.
+
+VALIDACION
+Se reproduce el fallo de activacion en .7 y pasa con .8. Se comprueba la
+semantica de los metodos reales del registro de shaders, no solo una simulacion.
+El shader se compila y dibuja con OpenGL; prueba framebuffer RGBA8, paredes
+y cuerpos con RGB identico y una pared que oculta parte de un cuerpo.
+La secuencia real de dibujado del panel reproduce el blur viejo en pruebas y
+pasa con las nuevas excepciones de fondo. Solo cambian sus dos clases visuales.
+Falta validar el resultado dentro de Minecraft con tu modpack completo.

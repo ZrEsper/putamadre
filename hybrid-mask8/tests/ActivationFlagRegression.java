@@ -1,0 +1,4 @@
+package checks;
+import com.raiiiden.warborn.hybrid.HybridClient6;import com.raiiiden.warborn.client.shader.ShaderRegistry;
+import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
+public class ActivationFlagRegression{public static void main(String[]a)throws Exception{ShaderRegistry.INSTANCE.enabled.put("htvg",true);try{HybridClient6.class.getMethod("stage",Object.class).invoke(null,new RenderLevelStageEvent(RenderLevelStageEvent.Stage.AFTER_SKY));}catch(NoSuchMethodException old7){}if(ShaderRegistry.INSTANCE.isShaderActive("htvg"))throw new AssertionError("fixture must use the native false activation predicate");if(!HybridClient6.active())throw new AssertionError("manual activation ignored by mesh encoder");System.out.println("MANUAL_ACTIVATION_NATIVE_SEMANTICS_REGRESSION_PASS");}}

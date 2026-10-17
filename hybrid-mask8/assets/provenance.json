@@ -1,0 +1,20 @@
+{
+  "audio_input_name": "COD MW19 - Nightvision SFX Pack HQ.ogg",
+  "audio_sha256": "2671b07ce8908db90fa8eaca06b28c31a155f9fa342b2577cce3a97f8ac8db10",
+  "on_clip": {
+    "start_seconds": 0.34,
+    "duration_seconds": 1.4,
+    "volume": 0.65
+  },
+  "off_clip": {
+    "start_seconds": 4.2,
+    "duration_seconds": 0.94,
+    "volume": 0.65
+  },
+  "image": "Generated with image_gen for this task; four-quadrant metal/rubber/dark glass/cyan glass atlas. Used as a standalone entity texture, not a stitched block-atlas sprite.",
+  "asset_sha256": {
+    "hybrid_tactical_atlas.png": "a448d2c4cc48fac045067f7d6d2891c3ee03db741ac6a3c7bb9efd133c568be1",
+    "nvg_tactical_off.ogg": "7541eaf62097c9b34d9caee171dc428d796eb8a35c07a03f68ad8ee8caf72a5a",
+    "nvg_tactical_on.ogg": "a6e0c8928edc66fb40808d51c4c2cbf8bb19b2affd9b2dff5f2ab6b9b721bb70"
+  }
+}

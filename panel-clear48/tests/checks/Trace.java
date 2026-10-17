@@ -1,0 +1,1 @@
+package checks;public class Trace{public static boolean labelsDrawn,labelsBlurred;public static int widgets;public static void reset(){labelsDrawn=false;labelsBlurred=false;widgets=0;}public static void labels(Object screen,Object gui){labelsDrawn=true;}}

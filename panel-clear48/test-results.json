@@ -1,0 +1,6 @@
+{
+  "checks": [
+    "NATIVE_ADMIN_PREVIEW_RENDER_BLUR_REGRESSION_CHECKS=16"
+  ],
+  "minecraft_runtime_tested": false
+}
