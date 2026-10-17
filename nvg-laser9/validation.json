@@ -1,0 +1,15 @@
+{
+  "output": "fracturepoint-1.21.1-3.0.0-PT2-nvg-laser-colors.9.jar",
+  "sha256": "53458eed99ee76f8eeda4a8b8c2b7178deab1834c1d118e3f3742ccd93332f1e",
+  "changed_only": [
+    "assets/fracturepoint/shaders/program/digital-green-vision.fsh",
+    "assets/fracturepoint/shaders/program/digital-white-vision.fsh",
+    "assets/fracturepoint/shaders/program/hybrid-thermal-vision.fsh",
+    "assets/fracturepoint/shaders/program/night-vision.fsh",
+    "assets/fracturepoint/shaders/program/simple-night-vision.fsh",
+    "assets/fracturepoint/shaders/program/thermal-black-vision.fsh",
+    "assets/fracturepoint/shaders/program/thermal-vision.fsh",
+    "assets/fracturepoint/shaders/program/thermal-white-vision.fsh"
+  ],
+  "minecraft_runtime_tested": false
+}

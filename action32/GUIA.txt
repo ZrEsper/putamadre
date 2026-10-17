@@ -1,0 +1,29 @@
+GLOBAL MELEE V32 + FRACTURE POINT NVG .9
+Minecraft NeoForge 1.21.1 / Java 21
+
+INSTALAR
+Cierra el juego y el servidor. Sustituye las versiones anteriores de Global Melee y Fracture Point por los DOS JAR de este ZIP. No dejes duplicados.
+Instala Global Melee v32 en clientes y servidor (protocolo boxing32). Fracture Point .9 sustituye .8; conserva sus gafas, modelos, activación manual con N y filtros anteriores.
+Conserva TaCZ .19 wall-alt-slide, Gore, Carry On y demás mods. No añadas Epic Fight ni Tactical Movement de Forge 1.20.1.
+
+LÁSER
+Se dibuja desde el accesorio real del arma hacia el objetivo de la mira y termina en el primer bloque sólido del trayecto. Alcance visual máximo 256 bloques. Las colisiones siguen ocultando el haz detrás de paredes.
+Ya no lo limita la longitud fija del modelo ni la distancia de interacción de la mano. No se desvanece antes de llegar al objetivo.
+Emite luz visual completa y conserva el color elegido en TaCZ. En visión nocturna aumenta la intensidad del haz y el punto. Los ocho filtros de Fracture Point reconocen exclusivamente los píxeles del láser y mantienen su color, sin teñir paredes por su color de textura.
+Este cambio no añade luz dinámica a bloques ni modifica la trayectoria balística.
+
+MANOS, ARMA Y CÁMARA
+Vuelve el movimiento de los brazos al caminar, correr y saltar. La cadencia usa los pasos del jugador y dispone de avance por distancia cuando esos datos no están disponibles. No depende de escuchar un sonido concreto.
+El arma queda más baja sin apuntar y reacciona más al giro, aceleración y pasos. Al apuntar conserva movimiento limitado y se estabiliza al detenerse. No cambia el daño ni la dispersión del servidor.
+Se corrige el sentido lateral del leaning y su desplazamiento de cámara. La inclinación sigue el movimiento, también en tercera persona.
+La sacudida de los impactos se aplica después del ajuste de cámara isométrica para que éste no la borre. Conserva las poses de puñetazos, golpe pesado, empujón V y pisotón.
+
+DESLIZAMIENTO Y ESCALADA
+La pose de brazos y arma se vuelve a aplicar después de las poses nativas de TaCZ que la estaban sobrescribiendo.
+Se conserva deslizamiento corriendo con Alt izquierdo, altura física de 0,6 bloques, salida segura en huecos de un bloque y escalada con detección de slabs.
+Se conservan Carry On, modelos slim y armaduras 3D. No se cambia la guardia de tercera persona aceptada.
+
+VALIDACIÓN
+Compilación Java 21, verificación de bytecode, regresiones de combate/movimiento y comprobación de puntos de inyección contra las clases TaCZ .19 e isométrica aportadas.
+Los ocho filtros GLSL se compilaron y renderizaron en OpenGL con colores rojo, verde, azul y mixto sobre una textura RGBA8. Se comprobó que las paredes siguen frías y las entidades térmicas calientes.
+No hay una instancia Minecraft con el modpack en este entorno: la prueba visual final dentro del juego sigue pendiente.
