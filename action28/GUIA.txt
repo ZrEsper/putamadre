@@ -1,0 +1,28 @@
+GLOBAL MELEE V28 — DESLIZAMIENTO BAJO Y REFERENCIA BODYCAM
+Minecraft NeoForge 1.21.1
+
+INSTALAR
+Cierra el juego y el servidor. Quita cualquier Global Melee anterior y coloca solamente el JAR de este ZIP en clientes y servidor. Protocolo boxing28.
+Conserva el TaCZ .19 wall-alt-slide enviado, Zombie Gore 1.0.10 y Hordes .49. Este ZIP reemplaza solo Global Melee.
+
+DESLIZARSE BAJO UN BLOQUE
+Corre y pulsa C o tu tecla de agacharse. La tecla Deslizarse sigue siendo configurable.
+La colisión baja inmediatamente a 0,6 bloques, permitiendo pasar por un hueco con un bloque de altura libre. No atraviesa obstáculos sólidos ni huecos de medio bloque.
+Se conserva el impulso real y la desaceleración. Si el deslizamiento termina bajo un techo, permanece bajo; al salir a una zona con espacio suficiente recupera la postura normal.
+La postura física baja no activa la animación de nadar: se representa con una animación propia de deslizamiento, torso reclinado cerca del suelo, piernas hacia delante y brazos de apoyo. El descenso y la salida se mezclan con la postura normal, y no se incorpora visualmente cuando sigue debajo del techo.
+En primera persona las manos bajan y se abren durante el deslizamiento. El arma también baja y se inclina ligeramente durante la acción.
+
+REFERENCIA DEL TERCER VIDEO
+Arma algo más baja al llevarla sin apuntar, con mayor retraso suave al girar y reacción al frenar. Al apuntar vuelve progresivamente a su posición de mira.
+El render del arma y el de la cámara comparten la misma muestra de movimiento por fotograma. La actualización del arma ya no vuelve a calcular el giro como cero inmediatamente después de haberlo calculado la cámara.
+El movimiento conserva amortiguación, sin añadir ruido aleatorio de cámara. Se mantiene la reducción del balanceo repetitivo al caminar y la eliminación de balanceos superpuestos de v27.
+La referencia orienta la postura y la inercia; el acabado final debe comprobarse dentro de Minecraft.
+
+SE CONSERVA
+Escalada desde slabs y hasta dos bloques, vínculo de C con TaCZ .19, guardia normal de tercera persona, golpes, pisada, mano secundaria, recarga y animaciones del arma.
+Las posiciones temporales del modelo se restauran antes de que la animación vanilla calcule el siguiente fotograma. Sombrero/casco, mangas, pantalones y chaqueta acompañan la postura.
+
+VALIDACIÓN
+Compilación Java 21, bytecode y pruebas simuladas aprobadas. La prueba de túnel verifica paso bajo un bloque, frenado dentro sin ponerse de pie, salida segura y rechazo de un hueco de medio bloque. El mismo control reproduce el fallo de altura con v27.
+También se comprueban la pose reclinada, restauración de partes, capas de ropa, muestra compartida de cámara/arma y reducción de la postura baja al apuntar. Continúan las regresiones de combate y compatibilidad con las clases del TaCZ .19 enviado.
+No se ha ejecutado Minecraft completo aquí. Falta validar la sensación y apariencia final con tu pack.

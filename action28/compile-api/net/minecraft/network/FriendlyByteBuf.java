@@ -1,0 +1,1 @@
+package net.minecraft.network;public class FriendlyByteBuf{public int readVarInt(){return 0;}public FriendlyByteBuf writeVarInt(int i){return this;}}
