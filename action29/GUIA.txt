@@ -1,0 +1,32 @@
+GLOBAL MELEE V29 — MANOS AL CORRER, EQUIPO BODYCAM Y PATADA A PUERTAS
+Minecraft NeoForge 1.21.1
+
+INSTALAR
+Cierra juego y servidor. Quita cualquier Global Melee anterior y coloca solo el JAR v29 de este ZIP en clientes y servidor. Protocolo boxing29.
+Conserva tu TaCZ .19 wall-alt-slide, Zombie Gore 1.0.10 y Hordes .49. Solo se reemplaza Global Melee.
+
+MANOS AL CORRER
+Al correr con la mano principal vacía, los brazos se balancean alternadamente: uno avanza mientras el otro retrocede. La transición desde la guardia y la vuelta al detenerse son suaves.
+La animación se aplica en primera persona y también al jugador visto en tercera persona o cámara isométrica. No depende de que la cámara Bodycam esté activa.
+Golpes, minería, interacción, patada y parkour tienen prioridad. Si llevas algo en la mano secundaria, se conserva su pose.
+
+ARMA Y BODYCAM
+Se corrigió el enlace de render: el método que intentaban usar las versiones anteriores era heredado y el gancho opcional no entraba en el render real del arma.
+V29 se conecta a renderFirstPersonInner, declarado por el renderer de TaCZ .19. Ahí aplica la posición baja y la inercia al girar, arrancar y frenar. La inclinación de cámara al girar es amplia y amortiguada, sin vibración aleatoria.
+Al apuntar completamente con la mira se anula el movimiento adicional para mantener alineado el arma. Disparo y recarga siguen a cargo de TaCZ.
+
+ARMA LEVANTADA
+La pose de levantar el arma o acercarla a una pared se aplica desde el wrapper exterior, antes del giro de coordenadas del modelo. El respaldo del modelo reconoce ese wrapper y no repite la transformación.
+Durante la pose levantada, una patada o el bloqueo por pared, la inercia adicional se reduce progresivamente para no competir con la animación nativa.
+
+PIE AL PATEAR PUERTAS CON MANOS VACÍAS
+El render personalizado de puños cancelaba el evento en el que TaCZ dibujaba la pierna. Ahora ese mismo render dibuja una patada frontal usando el tiempo de la patada de TaCZ.
+Se ve la pierna con la piel/pantalón del jugador y un pie que se extiende hacia la puerta. No se cambia el daño, la tecla ni la lógica de apertura de puertas.
+
+SE CONSERVA
+Deslizamiento de 0,6 bloques para huecos de un bloque y salida segura bajo techo, escalada de slabs y hasta dos bloques, combate, guardia al estar quieto, pisada y mano secundaria.
+
+VERIFICACIÓN
+Compilación Java 21, bytecode y pruebas con API simulada aprobadas. Se comprueba la ruta real del renderer con clases extraídas del TaCZ .19 enviado; el control contra v28 demuestra que su gancho estaba fuera de esa entrada.
+Pruebas adicionales: alternancia de manos, vuelta a guardia, prioridad del golpe, brazos en isométrica, render nativo/equipo equilibrados, reducción con arma levantada y pie de patada con la línea de tiempo nativa.
+No se ha ejecutado Minecraft completo aquí. Falta comprobar la apariencia y posibles conflictos del pack dentro del juego.
