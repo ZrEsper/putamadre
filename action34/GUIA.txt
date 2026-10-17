@@ -1,0 +1,23 @@
+LÁSER V34 — MIRILLA, DISTANCIA Y COMPATIBILIDAD DARKNESS
+Minecraft NeoForge 1.21.1 / Java 21
+
+INSTALAR
+Cierra juego y servidor. Sustituye Global Melee v33 o anterior por v34 en clientes y servidor, sin duplicados. Protocolo boxing34.
+En el cliente, sustituye Hardcore True Darkness .2 por el .3 de este ZIP. Conserva los archivos de configuración: el cambio no altera su ciclo de carga, reglas o paquetes de red. El servidor puede conservar Darkness .2 porque sus clases no cambian.
+Fracture Point .9 se incluye sin cambios respecto a los dos paquetes anteriores; si ya lo tienes, no añadas otra copia. Conserva TaCZ .19 y los demás mods.
+
+DARKNESS
+Su filtro final podía convertir un rojo tenue de 0,078 en 0,000078 al aplicar oscuridad máxima, perdiéndolo en una imagen de 8 bits. Se conserva ahora la emisión etiquetada del láser. No se aclara el escenario ni se desactiva la oscuridad de cuevas y noches.
+El JAR Darkness .3 sólo modifica final_darkness.fsh. Todas las clases Java, configuraciones, reglas y otros recursos son idénticos al .2 aportado.
+
+MIRILLA Y DISTANCIA EN PRIMERA PERSONA
+El punto converge hacia la retícula de la mira que se renderiza en ese mismo fotograma, en lugar de seguir únicamente el eje del modelo del arma.
+Se captura la transformación óptica actual, incluido su movimiento. El haz espera hasta que se dibujen los accesorios para no depender de si el láser se dibuja antes o después de la mira. Sin retícula óptica disponible utiliza el centro de la vista.
+Se traza primero hacia el punto visto y después desde el emisor, de modo que una pared entre el accesorio y el objetivo sigue bloqueando el láser. Máximo 256 bloques y limitado a lo que el cliente tiene cargado.
+El punto mantiene un tamaño mínimo en pantalla para no desaparecer por hacerse menor que un píxel. Su representación en primera persona queda dentro del volumen de render de las manos, aunque el impacto esté lejos; la colisión se calcula en el mundo a distancia real.
+Se conservan el color propio en visión nocturna, el filtro de vegetación, el recorte cercano y las correcciones de lean. Tercera persona conserva la orientación del accesorio.
+
+VALIDACIÓN
+Pruebas del shader real Darkness en OpenGL: emisión roja, verde y azul tenue conservada con cuatro intensidades y píxeles normales idénticos al .2. Se mantiene la etiqueta para los filtros NVG.
+Pruebas de retícula del mismo fotograma, distintas FOV, objetivos hasta 250 bloques, emisión diferida y tamaño de punto. Regresiones anteriores de combate, movimiento, vegetación y lean. Comprobados los métodos del modelo real TaCZ .19 usados por los nuevos ganchos.
+No se ejecutó Minecraft con este modpack en el entorno de desarrollo. La comprobación visual final sigue pendiente.

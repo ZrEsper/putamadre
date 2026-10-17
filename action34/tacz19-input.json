@@ -1,0 +1,11 @@
+{
+  "file": "tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.19-wall-alt-slide.jar",
+  "sha256": "f61a570582ed2d952d296056c0b285f827d6ba92b8268f1554ebdc4102111cdc",
+  "probe_classes": {
+    "dev/zomboid/tacz/MovementCompat20.class": "8d602149879f51c1c857b46922bc236d1de89933b5a5539161cb00f1b80dd3ff",
+    "com/locknar/taczammocheck/prone/ProneClient.class": "34fc5e3514f53a3ae66acef3827894d3e88f0cbe817faa65056c0c06667fa8fa",
+    "com/locknar/taczammocheck/tactical/client/TaczFirstPersonGunPoseHooks.class": "593563c6beb3b1c350653f5891075c718abae73ac3ba8a332fef64856962ec8d",
+    "com/locknar/taczammocheck/tactical/client/TaczWallObstructionClient.class": "9fe0830854c1443c44a49b55ddbf5de8d21cf50414db3ff74ed30b8e6cbca39c",
+    "com/tacz/guns/client/event/CameraSetupEvent.class": "5314db6cbf755d452de651734daf14ee68379a7a799a177c3dc8b4affb9fd6a5"
+  }
+}

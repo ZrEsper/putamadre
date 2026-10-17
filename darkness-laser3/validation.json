@@ -1,0 +1,8 @@
+{
+  "file": "hardcore_true_darkness-6.1-night-visibility.3-laser-compat.jar",
+  "sha256": "39197f95abf25840bfdcec4e665f5c493452b3041da41a0ae2191f69ba8bdf6b",
+  "only_changed": [
+    "assets/hardcore_true_darkness/shaders/program/final_darkness.fsh"
+  ],
+  "minecraft_runtime_tested": false
+}

@@ -1,0 +1,1 @@
+package com.mojang.blaze3d.vertex;public interface VertexConsumer{VertexConsumer addVertex(float x,float y,float z);VertexConsumer setColor(int r,int g,int b,int a);VertexConsumer setUv(float u,float v);VertexConsumer setUv2(int u,int v);}

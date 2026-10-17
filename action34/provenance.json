@@ -1,0 +1,43 @@
+{
+  "movement_reference": {
+    "file": "tacticalmovement-1.0.0.jar",
+    "sha256": "916442ff3bcfaa3a5fed6a639b34a139500f95095783ba2bdae69683877bcc38",
+    "loader": "Forge",
+    "minecraft": "[1.20.1,1.21)",
+    "bundled": false,
+    "code_copied": false
+  },
+  "carry_api": {
+    "repository": "https://github.com/Tschipp/CarryOn",
+    "branch": "1.21.1",
+    "commit": "9f1cf66c8fe4c4192f62b0b15da30b5f6e845f9a",
+    "version": "2.2.6",
+    "files": [
+      "Common/src/main/java/tschipp/carryon/common/carry/CarryOnDataManager.java",
+      "Common/src/main/java/tschipp/carryon/client/render/CarriedObjectRender.java"
+    ],
+    "actual_user_jar_provided": false
+  },
+  "minecraft_runtime_tested": false,
+  "parent_release": "0baeff894ecab5b5eaad08b7707d271f80c66e41",
+  "sound_event_reference": {
+    "url": "https://github.com/neoforged/NeoForge/blob/1.21.1/src/main/java/net/neoforged/neoforge/client/event/sound/PlaySoundSourceEvent.java",
+    "sha256": "03a803313286a65dce1c1c6d59ab08027a3a000402858392a09c7f9c8d6cf27f"
+  },
+  "native_pose_probes": {
+    "file": "base/locomotion19-probes.jar",
+    "sha256": "dce8090e1441a774a86d99f461b0fbe778e5b535bb935582b5e93fce1d88dac6",
+    "bundled_in_output": false
+  },
+  "laser_nvg": "../nvg-laser9/inputs.json",
+  "native_laser_and_pose_probes": "base/laser-pose-probes32.jar",
+  "video_reports": [
+    {
+      "file": "Minecraft 2026.10.17 - 17.24.38.30.mp4",
+      "sha256": "834d45ed6d4698603dd88ab41f219493d8f093e7504589b7fd193c0145ee4c2a"
+    }
+  ],
+  "user_clarification": "Brazos y arma juntos, con m\u00e1s peso",
+  "darkness_input": "../darkness-laser3/inputs.json",
+  "reticle_class_probe": "base/reticle19-probes.jar"
+}
