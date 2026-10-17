@@ -1,0 +1,8 @@
+package dev.zomboidmelee.boxing;
+import dev.zomboidmelee.boxing.CombatChecks18.*;import net.minecraft.world.phys.Vec3;import net.neoforged.neoforge.network.PacketDistributor;
+/** Minecraft entities compare by id; client and integrated-server copies share that id. */
+public class ClientTickCrashRegression21{
+ public static class ClientTwin extends net.minecraft.client.player.LocalPlayer{final Actor server;ClientTwin(Actor p){server=p;}public int hashCode(){return server.hashCode();}public boolean equals(Object p){return p==server||p==this;}public int getId(){return 50;}}
+ public static class Tick{Object p;Tick(Object p){this.p=p;}public Object getEntity(){return p;}}
+ public static void main(String[]args){Actor p=new Actor();p.look=new Vec3(0,-1.2,2).scale(1/Math.hypot(1.2,2));Zombie z=new Zombie(p.w);z.state=1<<30;p.w.entities.put(1,z);Stomp21.request(p,1);ClientTwin client=new ClientTwin(p);if(!Stomp21.PENDING.containsKey(client))throw new AssertionError("fixture must reproduce entity-id equality collision");int cues=PacketDistributor.cues.size();Stomp21.tick(new Tick(client));if(!Stomp21.PENDING.containsKey(p)||PacketDistributor.cues.size()!=cues)throw new AssertionError("client tick canceled server stomp or sent a clientbound packet");Net20.cue(client,20);if(PacketDistributor.cues.size()!=cues)throw new AssertionError("client cannot broadcast server cues");p.w.time+=9;Stomp21.tick(new Tick(p));if(z.hits!=1||Stomp21.PENDING.containsKey(p))throw new AssertionError("server must still finish pending contact exactly once");System.out.println("INTEGRATED_SERVER_ENTITY_ID_CLIENT_TICK_CRASH_REGRESSION_PASS");}
+}

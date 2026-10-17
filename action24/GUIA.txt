@@ -1,0 +1,30 @@
+GLOBAL MELEE V24 — primera persona y derribos segun el impacto
+Minecraft NeoForge 1.21.1
+
+INSTALACION
+Cierra el juego y el servidor. Retira Global Melee v23 o cualquier version anterior y coloca el unico JAR de este ZIP. Actualiza clientes Y servidor: protocolo boxing24.
+Conserva Zombie Gore 1.0.10 y Hordes .49. No requiere Epic Fight.
+
+PRIMERA PERSONA
+Guardia propia para la camara: antebrazos entrando desde abajo, codos fuera del encuadre y manos separadas del centro. El ligero sale desde esa guardia hacia el blanco; el pesado carga a un lado y cruza el golpe, con giro de muneca. La otra mano se mantiene cubriendo.
+El render utiliza la piel y las mangas del jugador, incluidas skins slim. Se conservan los gestos de interaccion y busqueda, y el uso de objetos en la mano secundaria.
+La guardia y articulacion de TERCERA PERSONA del jugador se conservan como en v23. La compilacion comprueba que esa implementacion permanezca intacta.
+
+PISOTON
+La rodilla queda hacia el lateral derecho del encuadre. El pie sube ligeramente y el talon baja casi en vertical, plano al contactar; la pierna ya no usa el mismo encuadre que el modelo de tercera persona.
+Se conserva el enfoque breve, la comprobacion de impacto en el servidor, sonido y sacudida. Cambiar de arma o perder alcance/linea de vision cancela el contacto.
+
+DERRIBOS DIRECCIONALES
+La caida se calcula desde la posicion del atacante hacia el zombi. Un impacto por delante lo manda de espaldas; uno desde atras lo hace caer de frente; uno lateral orienta la caida hacia ese lado. Los golpes posteriores no cambian la orientacion de un derribo que ya empezo.
+La orientacion se guarda en el zombi y se comunica a los observadores, incluidos jugadores que llegan despues a la zona. La cabeza usada por el pisoton sigue esa misma direccion; se puede seleccionar aunque quede fuera de la caja del torso. Las paredes siguen bloqueando.
+Derribo temporal: 9 segundos en el suelo, mas incorporacion progresiva de 1,4 segundos. Zombis derribados sin empuje. Los rastreros permanentes no recuperan piernas.
+
+CONTROLES Y DANO
+Mano principal vacia: izquierdo ligero; mantener izquierdo mina; derecho pesado o pisoton sobre un zombi derribado cercano.
+Pesado: doble del atributo de dano de un golpe normal completamente cargado. Cadencias: ligero 0,4 s, pesado 0,9 s. Los modificadores de habilidades y defensa del objetivo siguen pasando por sus reglas normales.
+Armas, melees, curas y uso activo de objetos conservan sus animaciones. La correccion del cierre de v21 se mantiene.
+
+VALIDACION
+Compilacion, bytecode, red y pruebas de logica/render con API simulada aprobadas. Incluyen caidas delanteras/traseras/laterales, direccion para nuevos observadores, posicion de cabeza, blanco separado del torso, alcance y paredes, primera persona, mano secundaria y preservacion de la tercera persona.
+La vista previa geometrica del repositorio representa los transformados de primera persona; no es una captura de Minecraft.
+No se ha ejecutado Minecraft completo en este entorno. El acabado visual y la convivencia con todos los modelos de tu pack necesitan comprobarse dentro del juego.
