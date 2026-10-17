@@ -1,0 +1,61 @@
+GLOBAL MELEE v16 — BOXEO TACTICO DE MANOS VACIAS
+Minecraft NeoForge 1.21.1
+
+INSTALAR
+1. Cierra Minecraft y el servidor.
+2. Quita epic-fight-21.17.3.1-mc1.21.1-neoforge.jar.
+3. Sustituye Global Melee v15 por el JAR v16 de este ZIP.
+4. Instala el mismo v16 en los clientes y el servidor, sin duplicados.
+Conserva TaCZ .18, Les Raisins .4, Player Animator, EZWeight y las otras
+bibliotecas que ya exigia Global Melee. No necesitas reemplazar esos mods.
+El boxeo no necesita Epic Fight, su modo de combate ni sus configuraciones.
+
+USAR
+Deja vacias la mano principal Y la secundaria: aparecen las dos manos en guardia.
+No necesitas cambiar de modo ni pulsar otra tecla.
+- Clic izquierdo: golpe. Los movimientos alternan jab izquierdo y derecho.
+- Mantener clic sobre un bloque durante 350 ms: comienza la mineria normal.
+- Soltar y volver a hacer clic: otro golpe.
+- Poner un arma, melee, cura u otro objeto en cualquiera de las manos:
+  se retira el boxeo y se conserva el funcionamiento del objeto.
+
+ASPECTO Y MOVIMIENTO
+Las manos visibles son las de tu skin, con sus mangas normales, no una textura
+fija de guantes. En primera persona quedan delante de la camara y se extienden
+al golpear. En tercera persona el jugador mantiene los brazos en guardia.
+El esqueleto de Epic Fight no se instala: se han retargeteado solo las curvas
+de brazos de sus dos golpes de puno, con retorno a la guardia.
+No se aplican sus pistas de raiz, torso, piernas, carrera, saltos o desplazamiento.
+El boxeo no empuja al jugador hacia delante ni anade sacudidas a la camara.
+Puedes moverte con los controles normales mientras golpeas.
+La animacion de subir/bajar el visor NVG tiene prioridad sobre el boxeo.
+
+DANO Y ATURDIMIENTO
+El golpe usa el ataque real de Minecraft y el gasto de estamina de Global Melee.
+No hay autoapuntado, dano por mirar, ataques en area ni golpes a traves de paredes.
+Un golpe de puno que realmente dane a un zombi lo aturde durante 8 ticks (0,4 s).
+No acorta un aturdimiento mas largo que ya tenga por un empujon.
+Las balas, armas, golpes bloqueados y objetos en la mano no reciben este bonus.
+El cooldown base de manos es de 7 ticks (0,35 s), conservando los multiplicadores
+del panel para ataques normales/otros. No convierte los punos en un arma de fuego.
+
+ARMADURAS 3D
+Se usa el modelo normal del jugador y solo se cambian las rotaciones de los brazos.
+La cabeza, torso, piernas y posicion del jugador no se transforman por el boxeo.
+Esto evita importar el esqueleto de Epic Fight sobre las armaduras normales.
+En primera persona se dibujan los brazos y mangas de la skin, sin renderizar
+el casco o toda la armadura encima de la camara.
+
+PROBAR
+Sin Epic Fight, entra con las manos vacias. Prueba golpear al aire y a un zombi,
+caminar y retroceder golpeando, un clic sobre piedra y mantenerlo para minar.
+Pasa directamente a una pistola TaCZ, bate/cuchillo Les Raisins y una cura.
+Prueba tambien un objeto en la mano secundaria, armadura 3D y modo isometrico.
+En isometrica se conserva la postura corporal, sin dibujar manos de FPS en pantalla.
+
+VALIDACION
+Pruebas de guardia, alternancia, mineria, cambio de objetos, manos nativas,
+partes que no deben moverse, cooldowns y aturdimiento de servidor aprobadas.
+Verificacion de bytecode, listeners de cliente/servidor y ausencia de clases de
+Epic Fight. Solo cambian dos clases originales de Global Melee; lo demas se conserva.
+Falta la prueba visual y de compatibilidad dentro de Minecraft con tu modpack.

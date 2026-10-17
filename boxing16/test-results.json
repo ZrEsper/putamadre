@@ -1,0 +1,7 @@
+{
+  "checks": [
+    "BOXING_GUARD_ATTACK_MINING_HANDOFF_STUN_ARMOR_CHECKS=236",
+    "NATIVE_BOXING_HOOK_SIDE_DEPENDENCY_CHECKS=183"
+  ],
+  "minecraft_runtime_tested": false
+}

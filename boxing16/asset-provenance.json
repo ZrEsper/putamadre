@@ -1,0 +1,23 @@
+{
+  "epic_input_sha256": "8b882554cf10086398340fbdc741819ee72a801a3adce516c7f4768326a39526",
+  "original_tracks_sha256": {
+    "assets/epicfight/animmodels/animations/biped/living/idle.json": "509ec1be177c7c380ee2796df1b6374e0d7e6d3a740f30b2094af57a1ab5608a",
+    "assets/epicfight/animmodels/animations/biped/combat/fist_auto1.json": "dafdb5d7cd130c8da62f921d4e198e639916bb2b1ee67050d5ea8c669f085814",
+    "assets/epicfight/animmodels/animations/biped/combat/fist_auto2.json": "120de0ca4244094975ace9bf9ee0542a96f20d39c256e9b0d3ad8a5051f9848a"
+  },
+  "kept_joints": [
+    "Shoulder_R",
+    "Arm_R",
+    "Hand_R",
+    "Elbow_R",
+    "Shoulder_L",
+    "Arm_L",
+    "Hand_L",
+    "Elbow_L"
+  ],
+  "discarded": "All root/body/leg/locomotion tracks; translations affect only hand render transforms, never entity position.",
+  "dominant": [
+    1,
+    0
+  ]
+}

@@ -1,0 +1,15 @@
+# Global Melee v16: standalone empty-hand tactical boxing
+
+Extends the uploaded v15 without requiring Epic Fight. Both hands must be empty. Native skin arms are rendered through `PlayerRenderer.renderRightHand/renderLeftHand` in a scoped `RenderHandEvent`, with guarded forward transforms and an alternating 320 ms punch. It yields immediately for either held item, item use, menus and NVG visor animation. It renders no helmet, torso, custom armor skeleton or baked glove texture.
+
+Only arm-chain animation tracks from the user-supplied Epic Fight idle and `fist_auto1/2` clips are extracted. The hand endpoint trajectories are normalized and retimed into native single-arm extension curves, with a low-amplitude guard hand and guard return. No Epic Fight code, entity patch, renderer, root translation, body/leg animation, locomotion, target lock or physics handler is linked. This is a retargeted native-arm implementation, not Epic Fight's complete joint rig or combat engine. Original asset notices and hashes are retained in `assets`/`asset-provenance.json`.
+
+The existing `HumanoidModel` pose hook is extended for third-person arm rotations and sleeve copies; head/body/legs remain untouched. The vanilla attack cooldown hook delegates unchanged for held items and uses seven ticks for fists, with the existing admin multipliers. Input cancellation delays only empty-hand block actions until 350 ms, then passes native mining through. Entity attacks keep vanilla reach, damage and server validation. One swing is sent for short block punches; canceled waiting frames do not spam swings. No movement/root packet is introduced.
+
+A server `LivingDamageEvent.Post` listener checks actual positive direct-player damage, both hands empty and the existing Global Melee zombie classifier. It extends the existing `zpush_until` stun to at least eight ticks and stops navigation. Existing stun damage suppression/tick hooks remain byte-identical. There is no new attack packet and no client-provided stun request.
+
+Original metadata, dependencies, shovel/weapon bridges, LR/TaCZ integrations, push behavior and mining helper are preserved. Only `VanillaCombatMixin` and `BodyPushMixin` change; new subscriber classes are side gated. Keep the supplied TaCZ .18 and LR .4; remove Epic Fight and replace only Global Melee .15 with .16 in clients and server.
+
+Build: `python boxing16/build.py`; tests: `python boxing16/test.py`; package: `python boxing16/package.py`. Uses verified ECJ/ASM hashes from `spas-reload18/inputs.json`. The original v15 is under `base`. Optional re-extraction: place the exact uploaded Epic Fight JAR at `base/epicfight.jar` and run `extract.py`; its hash is pinned. Otherwise the committed baked curves/assets are verified and used without that JAR.
+
+API fixtures test input timing, rendering handoff, skin-arm dispatch, animation curves, unmodified body parts, cooldown behavior and server stun. ASM checks actual hooks, listener sides and dependency references. These do not replace a Minecraft runtime/visual test: that remains pending, especially for external 3D armor renderers and camera mods. [Spanish guide](GUIA.txt).

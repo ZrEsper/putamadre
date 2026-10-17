@@ -1,0 +1,21 @@
+{
+  "output": "zomboid-global-melee-animations-2.3.1-range-plus-one-ezweight-v16-tactical-boxing.jar",
+  "sha256": "a5d56c50a87c3f4384bfe5fb86520525c6a6f0b5914da7738b17141c9445a358",
+  "changed": [
+    "dev/zomboidmelee/mixin/BodyPushMixin.class",
+    "dev/zomboidmelee/mixin/VanillaCombatMixin.class"
+  ],
+  "added": [
+    "assets/zomboid_global_melee/boxing/LICENSE-ASSETS-EpicFight.txt",
+    "assets/zomboid_global_melee/boxing/epicfight-arm-tracks.json",
+    "dev/zomboidmelee/boxing/Boxing16.class",
+    "dev/zomboidmelee/boxing/BoxingClient16$Remote.class",
+    "dev/zomboidmelee/boxing/BoxingClient16.class",
+    "dev/zomboidmelee/boxing/BoxingClientEvents16.class",
+    "dev/zomboidmelee/boxing/BoxingHitEvents16.class",
+    "dev/zomboidmelee/boxing/Motion16.class",
+    "dev/zomboidmelee/boxing/R.class"
+  ],
+  "no_epic_fight_runtime_classes": true,
+  "minecraft_runtime_tested": false
+}
