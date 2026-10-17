@@ -1,0 +1,1 @@
+package net.minecraft.client.model.geom;public class PartPose{public static final PartPose ZERO=new PartPose();}

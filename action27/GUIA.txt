@@ -1,0 +1,28 @@
+GLOBAL MELEE V27 — DESLIZAMIENTO TACZ .19, SLABS Y BODYCAM SUAVE
+Minecraft NeoForge 1.21.1
+
+INSTALACIÓN
+Conserva el TaCZ .19 wall-alt-slide que enviaste. Este ZIP contiene el reemplazo de Global Melee; no necesitas modificar ese TaCZ.
+Cierra juego y servidor. Retira las versiones anteriores de Global Melee y deja solo el JAR v27, tanto en clientes como en servidor. Protocolo boxing27.
+Conserva Zombie Gore 1.0.10 y Hordes .49. No requiere Epic Fight.
+
+DESLIZAMIENTO
+Corre hacia delante y pulsa C. También funciona tu tecla de agacharse al correr.
+«Deslizarse (corriendo)» se puede reasignar en Opciones > Controles. La tecla de tumbarse de TaCZ también se reconoce cuando estás corriendo; quieto conserva su función de tumbarse.
+V27 incorpora el enlace exacto que TaCZ .19 buscaba antes de activar su sistema de tumbarse. La dirección, velocidad y duración aceptadas por el servidor se envían al cliente; ya no dependen de que siga existiendo su medición local al llegar el paquete.
+Necesita suelo e inercia real de carrera. No se activa quieto, volando, en agua, montado o usando objetos. Se frena progresivamente, termina al chocar y restaura la postura.
+
+ESCALADA Y SLABS
+Acércate a una repisa y salta manteniendo tu tecla de salto. También se conserva el doble toque.
+La altura máxima sigue siendo dos bloques sobre el suelo desde el que saltas. Ahora se examina todo ese intervalo aunque arranques sobre una slab, y se usa la superficie real de las slabs inferiores o superiores.
+Se pueden alcanzar medias losas aunque el salto ya haya superado ligeramente su altura. Se mantienen las comprobaciones de techo, espacio del cuerpo, dimensión y bloques cargados.
+
+CÁMARA Y ARMAS
+El movimiento de cámara al caminar y girar pasa por una amortiguación calculada por fotograma. Se elimina el balanceo de marcha vanilla y el de cámara de TaCZ que se acumulaban con la bodycam. Las inclinaciones de locomoción son pequeñas, sin saltos bruscos entre ticks.
+Las armas tienen un movimiento separado: quedan algo rezagadas al girar, reaccionan al acelerar/frenar y bajan ligeramente al correr. Al apuntar, esa inercia se reduce casi por completo. El retorno se amortigua, sin oscilación repetitiva.
+Se conservan las animaciones del arma, disparo, recarga, poses ante paredes y al levantarla. La transformación adicional se limita al render del arma en primera persona. La guardia de tercera persona, combate, pisada y mano secundaria se conservan.
+
+VALIDACIÓN
+Compilación Java 21 y bytecode aprobados. Pruebas con APIs simuladas y clases reales extraídas del TaCZ .19 enviado: enlace de C, paquete de deslizamiento con retraso, movimiento cliente, slabs con altura inicial fraccionaria, límites/techo, cámara a diferentes FPS, inercia del arma y equilibrio de la pila de render.
+Los controles negativos reproducen en v26 el enlace ausente de TaCZ y el fallo al escalar desde una slab. Ambos pasan con v27.
+No se ha ejecutado Minecraft completo aquí. El aspecto final, la sensación del movimiento y posibles conflictos específicos del pack requieren prueba dentro del juego.
