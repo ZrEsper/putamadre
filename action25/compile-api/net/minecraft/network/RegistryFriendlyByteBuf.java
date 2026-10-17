@@ -1,0 +1,1 @@
+package net.minecraft.network;public class RegistryFriendlyByteBuf extends net.minecraft.network.FriendlyByteBuf{}

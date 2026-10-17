@@ -1,0 +1,27 @@
+GLOBAL MELEE V25 — combate V24 + deslizamiento y escalada
+Minecraft NeoForge 1.21.1
+
+INSTALACION
+Cierra Minecraft y el servidor. Retira cualquier Global Melee anterior, tanto la v24 como el v20 parkour enviado, y coloca UNICAMENTE el JAR de este ZIP. Actualiza CLIENTES Y SERVIDOR: protocolo boxing25.
+Conserva Zombie Gore 1.0.10 y Hordes .49. No requiere Epic Fight.
+
+DESLIZAMIENTO
+Corre y, mientras avanzas con suficiente velocidad, pulsa la tecla de agacharse (Shift por defecto). Usa tu configuracion de agacharse, no una tecla fija.
+Necesita suelo, inercia real y no estar en agua, volando, montado, dormido o usando un objeto. Se detiene al chocar o quedarse sin recorrido. La velocidad disminuye gradualmente; dura aproximadamente entre 0,4 y 1,1 segundos segun la velocidad inicial, con 1,75 segundos entre inicios.
+Mantener agacharse no repite la peticion. Si no se cumplen las condiciones, agacharse funciona normalmente.
+La postura temporal se restaura al finalizar o cancelar. Correr se conserva con la tecla de sprint que ya tengas configurada.
+
+ESCALAR HASTA 2 BLOQUES
+Acercate de frente a una pared o repisa, salta y vuelve a pulsar salto (Espacio por defecto) antes de 0,65 segundos, estando ya en el aire.
+La repisa debe quedar a un maximo de 2 bloques sobre el ultimo suelo reciente, tener anchura suficiente para apoyarte y espacio libre arriba para el jugador. No escala paredes de 3 bloques ni atraviesa techos.
+El servidor comprueba los bloques cargados y las colisiones antes y durante el movimiento. No carga chunks para buscar una repisa. Levanta al jugador y despues lo desplaza hacia el apoyo; no utiliza teletransporte.
+La accion termina al alcanzar el apoyo o se cancela si cambia la dimension, aparece un obstaculo o deja de ser valida. El intento tiene 1,5 segundos de cooldown.
+
+ANIMACIONES Y COMBATE
+Se incluyen brazos y piernas durante estas dos acciones, mangas/capas de ropa sincronizadas y una inclinacion breve de camara en primera persona. Al terminar vuelven las poses normales del combate v24.
+Se mantienen los golpes ligeros y pesados, pesado con doble dano base, pisada, cabeza seleccionable, caidas direccionales, mano secundaria y gestos de interaccion de v24. La guardia de tercera persona del jugador se conserva fuera de las acciones de parkour.
+El estado del cliente y servidor esta separado, incluso cuando ambos jugadores comparten ID en una partida local. Se conserva la correccion del cierre de v21.
+
+VALIDACION
+Compilacion Java 21, analisis de bytecode y pruebas de logica/render/red con API simulada aprobadas. Incluyen alcanzar una repisa de 2 bloques con colisiones, rechazo de techo/pared alta/chunk no cargado, friccion del deslizamiento, restauracion de postura, entradas de teclado, peticiones de red encoladas y aislamiento cliente/servidor.
+El video enviado se reviso como referencia de combate; no demuestra por si mismo estas nuevas mecanicas. No se ha ejecutado Minecraft completo aqui: falta probar el movimiento y aspecto final en tu pack.
