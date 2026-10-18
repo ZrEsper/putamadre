@@ -1,0 +1,28 @@
+{
+  "outputs": [
+    {
+      "file": "zomboid-global-melee-animations-2.3.1-v35-physical-laser.jar",
+      "sha256": "399b5a0f3e5a49f4088e1084962f9d9b055e96fe4583330cffaaa14b34cb2e00",
+      "changed": [
+        "dev/zomboidmelee/boxing/Laser32$Beam.class",
+        "dev/zomboidmelee/boxing/Laser32.class"
+      ],
+      "added": []
+    },
+    {
+      "file": "dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.32-cursor-shot-direction.jar",
+      "sha256": "48097d74649634f2739c6382ae8695ba6a9222cc3b89d4abaa61c4446ba6daae",
+      "changed": [
+        "dev/zomboid/isotacz/Bridge.class",
+        "dungeons_iso.mixins.json"
+      ],
+      "added": [
+        "com/cleannrooster/dungeons_iso/mixin/ShoulderFire32.class",
+        "com/cleannrooster/dungeons_iso/mixin/compat/tacz/CursorAuto32.class",
+        "com/cleannrooster/dungeons_iso/mixin/compat/tacz/CursorShoot32.class",
+        "dev/zomboid/isotacz/ShotAim32.class"
+      ]
+    }
+  ],
+  "minecraft_runtime_tested": false
+}

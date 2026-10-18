@@ -1,0 +1,1 @@
+package dev.zomboid.isotacz;public class AimStability{public static boolean treating;public static boolean medical(){return treating;}}

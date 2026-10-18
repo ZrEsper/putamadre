@@ -1,0 +1,15 @@
+Láser físico v35 y cámara isométrica .32 — NeoForge 1.21.1
+
+INSTALACIÓN
+Reemplaza Global Melee v34 por v35 y Dungeons Iso .31 por .32. No dejes versiones duplicadas. Conserva TaCZ, sus accesorios, Darkness .4 y Flashlight .6: este paquete no los reemplaza. Cambios de render y apuntado del cliente; no cambian protocolos ni daño.
+
+CAMBIOS
+El láser sale de la transformación del accesorio y sigue el eje del arma en primera y tercera persona. Ya no calcula el impacto buscando el cursor ni el centro de la mira. El movimiento del arma puede apartar el punto del centro: es el comportamiento físico solicitado. Conserva alcance de 256 bloques, parada ante superficies sólidas, exclusión de vegetación, color propio con visión nocturna y etiqueta compatible con Darkness. Se conserva la proyección del punto lejano para evitar el recorte del render de manos.
+
+La dirección del personaje se actualiza después del cálculo de cámara y antes del disparo y del disparo automático de TaCZ. En isométrica se bloquea el manejador externo de Third Person Shooting que copia la orientación de la cámara del hombro al jugador. La vista isométrica conserva su orientación independiente; el personaje apunta hacia el cursor. Fuera de isométrica el manejador sigue funcionando. No interviene en menús ni en tratamientos médicos.
+
+El audio .31, las animaciones, los controles y los demás recursos existentes se conservan.
+
+VALIDACIÓN
+Compilación Java 21 y verificación ASM de bytecode. Pruebas del render real del láser con matrices y vértices: independencia del cursor, giro del arma y distancias. Control negativo contra v34: reproduce el fallo de seguir la mira. Pruebas con Bridge.aim del JAR producido y cursor cambiante; ganchos cotejados con las clases de TaCZ .19 y Third Person Shooting .2. Regresiones de vegetación, armaduras 3D, leaning y movimiento aprobadas. Audio conservado byte por byte.
+No se ejecutó Minecraft en este entorno; hace falta confirmar el resultado visual con el modpack.
