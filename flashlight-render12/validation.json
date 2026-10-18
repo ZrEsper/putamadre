@@ -1,0 +1,17 @@
+{
+  "file": "flashlight-5.1-neoforge-1.21.1-iris-stage-recovery.12.jar",
+  "sha256": "a5960b606cccdfae7d329a10a1c09ac4eff01d7b34ccb2f6b4840b80f27624c3",
+  "changed": [
+    "assets/flashlight/shaders/portable6.frag",
+    "flashlight.mixins.json",
+    "net/flashlight/battery/Engine6.class",
+    "net/flashlight/battery/G6$State.class",
+    "net/flashlight/battery/Light6.class",
+    "net/flashlight/battery/Power.class"
+  ],
+  "added": [
+    "net/flashlight/battery/Iris12.class",
+    "net/flashlight/mixin/CaptureStage9.class"
+  ],
+  "minecraft_runtime_tested": false
+}

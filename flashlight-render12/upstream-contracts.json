@@ -1,0 +1,20 @@
+{
+  "iris": {
+    "upstream": "https://github.com/IrisShaders/Iris",
+    "commit": "eb7afb99f747cc8ed5ee4072119539035d33cefd",
+    "inspected_files": {
+      "common/src/main/java/net/irisshaders/iris/compat/sodium/mixin/MixinShaderChunkRenderer.java": "3b11af7e53a978f5d9bef36693f43074e83c31677f81be784a8423c5bee881fd",
+      "common/src/main/java/net/irisshaders/iris/mixin/MixinLevelRenderer.java": "700457548fef5430a479dd6ab44526cd8a5dd9009ed657c069250f685fda6482",
+      "common/src/main/java/net/irisshaders/iris/mixin/MixinGameRenderer.java": "90ec43084dfb2e63d366597056cfa82bbeea50bc566fbd2d5ebf0806e9b9cbf2",
+      "common/src/main/java/net/irisshaders/iris/vertices/sodium/terrain/FormatAnalyzer.java": "3a5dda9fdee75803e95afab4fbaf26f808f7bac1115ae1c6b74c90e2d8d5efea",
+      "common/src/main/java/net/irisshaders/iris/gl/blending/BlendModeStorage.java": "0aa1a216f102d3c46fe9e24d91eab9e91fe8a99ba02ec1136d40889c705ebb26"
+    }
+  },
+  "sodium": {
+    "upstream": "https://github.com/CaffeineMC/sodium",
+    "commit": "97f776e095e923443070d8a9d6e69f4870070d30",
+    "inspected_files": {
+      "common/src/main/java/net/caffeinemc/mods/sodium/client/render/chunk/ShaderChunkRenderer.java": "98eeaaa82929e10802205b10ac73155c24de56deb86b9d8021666ccb4cfd1e3a"
+    }
+  }
+}

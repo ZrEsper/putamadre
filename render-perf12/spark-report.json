@@ -1,0 +1,124 @@
+{
+  "scope": "Render thread only; wall-clock sample time, not server TPS or direct GPU usage",
+  "duration_seconds": 54.94,
+  "interval_microseconds": 4000,
+  "render_sample_ms": 54680.0,
+  "inclusive_without_recursive_bridge_double_count": [
+    {
+      "method": "de.odysseus.ithaka.digraph.util.fas.AbstractFeedbackArcSetProvider.getFeedbackArcSet",
+      "percent": 24.74
+    },
+    {
+      "method": "com.raiiiden.warborn.client.shader.ShaderRegistry.processShaders",
+      "percent": 15.903
+    },
+    {
+      "method": "com.raiiiden.warborn.client.shader.ShaderRegistry.processShaders_Internal",
+      "percent": 15.903
+    },
+    {
+      "method": "com.raiiiden.warborn.client.util.NvgClient2.frame",
+      "percent": 15.691
+    },
+    {
+      "method": "org.lwjgl.opengl.GL30C.nglDeleteFramebuffers",
+      "percent": 11.419
+    },
+    {
+      "method": "de.maxhenkel.corpse.entities.CorpseRenderer.render",
+      "percent": 6.679
+    },
+    {
+      "method": "mod.cdv.tnpc.client.render.AutoGunOperatorRenderer.render",
+      "percent": 4.353
+    },
+    {
+      "method": "me.ichun.mods.mobdismemberment.client.entity.EntityGib.tick",
+      "percent": 0.71
+    },
+    {
+      "method": "me.ichun.mods.mobdismemberment.client.render.RenderGib.render",
+      "percent": 0.293
+    }
+  ],
+  "top_self": [
+    {
+      "method": "org.lwjgl.opengl.GL30C.nglDeleteFramebuffers",
+      "percent": 11.419
+    },
+    {
+      "method": "java.util.HashMap.hash",
+      "percent": 6.233
+    },
+    {
+      "method": "de.odysseus.ithaka.digraph.util.fas.SimpleFeedbackArcSetProvider$$Lambda/0x000001c69c059628.compare",
+      "percent": 5.962
+    },
+    {
+      "method": "java.lang.Class.forName0",
+      "percent": 3.372
+    },
+    {
+      "method": "de.odysseus.ithaka.digraph.MapDigraph$2$1.hasNext",
+      "percent": 3.065
+    },
+    {
+      "method": "de.odysseus.ithaka.digraph.MapDigraph$2$1.next",
+      "percent": 2.231
+    },
+    {
+      "method": "de.odysseus.ithaka.digraph.MapDigraph.targets",
+      "percent": 2.034
+    },
+    {
+      "method": "org.lwjgl.system.JNI.invokePV",
+      "percent": 1.8
+    },
+    {
+      "method": "com.tacz.guns.client.model.bedrock.BedrockPart.compile",
+      "percent": 1.792
+    },
+    {
+      "method": "de.odysseus.ithaka.digraph.Digraphs.dfs",
+      "percent": 1.719
+    },
+    {
+      "method": "it.unimi.dsi.fastutil.objects.Object2IntLinkedOpenHashMap.getInt",
+      "percent": 1.587
+    },
+    {
+      "method": "org.lwjgl.system.JNI.invokeV",
+      "percent": 1.536
+    },
+    {
+      "method": "dev.kosmx.playerAnim.api.layered.modifier.AbstractFadeModifier.get3DTransform",
+      "percent": 1.456
+    },
+    {
+      "method": "java.lang.invoke.Invokers$Holder.invokeExact_MT",
+      "percent": 1.448
+    },
+    {
+      "method": "java.util.concurrent.ConcurrentHashMap.get",
+      "percent": 1.419
+    },
+    {
+      "method": "org.lwjgl.opengl.GL30C.glFramebufferTexture2D",
+      "percent": 1.412
+    },
+    {
+      "method": "org.lwjgl.opengl.GL11C.nglDrawElements",
+      "percent": 1.353
+    },
+    {
+      "method": "it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap$MapIterator.nextEntry",
+      "percent": 1.236
+    }
+  ],
+  "limits": [
+    "No server thread sampled; cannot establish server performance.",
+    "No baseline kill/idle comparison; direct dismemberment cost does not establish all its indirect effects.",
+    "OpenGL driver waits can include GPU synchronization.",
+    "warborn Java package belongs to Fracture Point; not evidence of a second installed NVG mod."
+  ]
+}

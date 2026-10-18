@@ -1,0 +1,26 @@
+Render 12 — Linterna, visión nocturna y tirones al matar zombis
+NeoForge / Minecraft 1.21.1
+
+INSTALACIÓN
+Cierra el juego. En mods, reemplaza las versiones antiguas de estos tres mods por las tres incluidas en este ZIP:
+- Flashlight .11 o anterior -> flashlight-5.1-neoforge-1.21.1-iris-stage-recovery.12.jar
+- Fracture Point .11 o anterior -> fracturepoint-1.21.1-3.0.0-PT2-nvg-cached-pass.12.jar
+- Zomboid Integration 1.7.11 o anterior -> zomboid-integration-1.7.12-neoforge-1.21.1-bounded-iris-order.jar
+No dejes dos versiones del mismo mod. Conserva Iris, Sodium, Darkness .4 y tus mods de cámaras. No requiere crear otro mundo. Reinicia el juego.
+
+QUÉ ENCONTRÉ
+Tu perfil es de cliente: Iris dedica aproximadamente 24,7 % del muestreo al orden de capas y Fracture Point 15,9 % al procesamiento de shaders. El log contiene 5980 avisos repetidos de creación del filtro híbrido. Warborn es el paquete interno de Fracture Point, no un segundo mod de visión nocturna.
+La linterna se desactivaba por una excepción al dibujar terreno después de que Iris terminase su pipeline.
+
+CAMBIOS
+Linterna: captura antes del cierre de Iris y compone después; captura aislada para no volver a ejecutar el shaderpack en sus propios buffers; restaura estado, texturas y mezclas por buffer. Reintenta fallos transitorios. Mantiene X desde inventario, baterías, un cono amplio y las tres cámaras.
+NVG: filtro propio cacheado, sin recrearlo cada frame ni reemplazar continuamente el efecto de GameRenderer. Mantiene visor manual con N, efectos, estática y sonidos.
+Iris: cálculo acotado del orden de capas cuando hay muchas. Mantiene todas las capas y entidades; puede variar el orden de transparencias superpuestas.
+
+SHADERS
+Se añadió la ruta de compatibilidad con Iris y shaderpacks activos. Las comprobaciones automáticas usan fixtures Java y OpenGL real, pero no ejecutan el modpack ni shaderpacks reales. Hay que validar la apariencia y rendimiento dentro de Minecraft.
+Además, tu log dice que ComplementaryReimagined_r5.9.3.zip no es un pack válido y no pudo cargarlo. Ese archivo debe ser un ZIP válido del shaderpack para que Iris lo active.
+
+PRUEBA EN TU JUEGO
+Con un shaderpack que Iris cargue correctamente, enciende con X llevando una linterna con batería en el inventario. Comprueba primera, tercera e isométrica, también con Darkness y el visor. Mata un grupo de zombis y compara con otro perfil de cliente de Spark. Este perfil no permite evaluar TPS del servidor.
+No se borran cadáveres, inventarios ni gore.

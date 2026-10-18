@@ -1,0 +1,1 @@
+package com.raiiiden.warborn.hybrid;public class Gpu12{public static class State implements AutoCloseable{public void close(){}}public static Object rs(){return Graphics.class;}public static class Graphics{public static void disableBlend(){}public static void disableDepthTest(){}public static void resetTextureMatrix(){}}}
