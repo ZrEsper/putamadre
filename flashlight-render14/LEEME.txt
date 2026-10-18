@@ -1,0 +1,21 @@
+NeoForge 1.21.1 — MakeUp UltraFast 9.5g — Luz .14 y láser v37
+
+INSTALACIÓN
+Cierra Minecraft. Reemplaza estos tres mods por los tres JAR del ZIP:
+- Flashlight .13 -> flashlight-5.1-neoforge-1.21.1-entity-light-sampler-safe.14.jar
+- Fracture Point .13 -> fracturepoint-1.21.1-3.0.0-PT2-nvg-sampler-safe.14.jar
+- Global Melee v36 -> zomboid-global-melee-animations-2.3.1-v37-late-world-depth-laser.jar
+Deja una versión de cada mod. Mantén tu TaCZ actual, Zomboid Integration 1.7.14 y MakeUp-UltraFast-9.5g.zip. No hace falta cambiar el shaderpack ni el mundo. Reinicia el juego.
+
+CAUSAS Y CAMBIOS
+La linterna anterior solo recuperaba albedo del terreno. Aclarar la imagen de una entidad que ya era negra no recuperaba su textura. Ahora se aporta luz de bloque al renderizador nativo de entidades y manos, incluyendo linterna en inventario. Se respeta la luz original si es mayor y se comprueba cono, distancia y paredes. No se dibujan las entidades dos veces. Su iluminación se aproxima por entidad.
+Los pases propios no aislaban los samplers de Iris ni contemplaban que una unidad de textura real pudiera diferir de la caché de Minecraft. Ahora sincronizan bindings reales/caché, aíslan y restauran samplers y el estado/bloqueo de mezcla. La captura auxiliar tampoco modifica el estado PBR del shaderpack.
+El láser se dibuja con un programa propio después del shaderpack, antes de la interfaz. Ya no se envía a los buffers de materiales de TaCZ/Iris. Usa una copia de la profundidad del mundo tomada antes del render de manos, conserva su color, sigue el transform físico del arma y no escribe profundidad. Mantiene recorte contra bloques, exclusión de vegetación en el trazado y punto circular al alcanzar un bloque. El mundo visible todavía puede ocultar el haz.
+Se conserva la apertura mayor de las linternas, batería, X, sombras .13 y los filtros/manual N de Fracture Point. El ADS rápido se mantiene en Integration 1.7.14.
+
+PRESUPUESTOS
+Iluminación de entidades: hasta 24 consultas adicionales de colisión por tick y 128 entradas cacheadas; búsqueda de fuentes una vez por tick. Láser: hasta 32 haces por frame, con prioridad del jugador local; una copia de profundidad, aproximadamente 8 MB a 1080p, cuando hay haces o un arma TaCZ en mano.
+
+VALIDACIÓN
+Pruebas de código, bytecode y OpenGL aprobadas. Se reproduce una textura negra por sampler heredado y su recuperación al aislarlo. Se utiliza la expresión de iluminación real del MakeUp 9.5g aportado para verificar color y contraste de piel. Se comprueban láser, colores, paredes y copia de profundidad con proyecciones de primera, tercera e isométrica; batería, inventario, poses y colisiones mantienen sus regresiones.
+No se ejecutó el modpack completo ni el shaderpack completo dentro de Minecraft aquí. Estas pruebas no garantizan por sí solas el resultado visual en tu equipo. Comprueba la partida con MakeUp activado; los informes del ZIP distinguen pruebas reales de GLSL y fixtures del runtime de Minecraft pendiente.

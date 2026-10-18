@@ -1,0 +1,6 @@
+{
+  "only_gpu_state_helpers_changed": true,
+  "all_filter_shader_audio_visor_assets_unchanged": true,
+  "same_tested_texture_sampler_blend_scope_as_flashlight": true,
+  "minecraft_runtime_tested": false
+}

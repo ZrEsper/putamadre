@@ -1,0 +1,25 @@
+{
+  "checks": 45,
+  "real_opengl_render": true,
+  "first_third_isometric": {
+    "first": {
+      "visible_beam_pixels": 70,
+      "wall_occludes_dot": true,
+      "color_preserved": true,
+      "main_depth_untouched": true
+    },
+    "third": {
+      "visible_beam_pixels": 32,
+      "wall_occludes_dot": true,
+      "color_preserved": true,
+      "main_depth_untouched": true
+    },
+    "isometric": {
+      "visible_beam_pixels": 44,
+      "wall_occludes_dot": true,
+      "color_preserved": true,
+      "main_depth_untouched": true
+    }
+  },
+  "minecraft_shaderpack_runtime_tested": false
+}

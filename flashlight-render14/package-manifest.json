@@ -1,0 +1,10 @@
+{
+  "target": "Minecraft NeoForge 1.21.1 / MakeUp-UltraFast-9.5g",
+  "files": {
+    "flashlight-5.1-neoforge-1.21.1-entity-light-sampler-safe.14.jar": "d2a3d48d7e3f636faa77220a479991bfaba16d2cc0e0ac06ec57c79f22962625",
+    "fracturepoint-1.21.1-3.0.0-PT2-nvg-sampler-safe.14.jar": "b8a63c3aab8fc195fca11442547bb2436024a6f003e7f6ef422fe90e55c63891",
+    "zomboid-global-melee-animations-2.3.1-v37-late-world-depth-laser.jar": "a9a5b9d7bac7c129893df3871b2c55cd3bcb9bfed9ef027fe80ad4829158ee9a"
+  },
+  "minecraft_runtime_tested": false,
+  "full_shaderpack_runtime_tested": false
+}

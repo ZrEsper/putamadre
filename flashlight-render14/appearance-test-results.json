@@ -1,0 +1,23 @@
+{
+  "checks": 8,
+  "real_glsl_render": true,
+  "results": {
+    "day_green_pixel": [
+      0.17140309512615204,
+      0.38782060146331787,
+      0.08449999243021011
+    ],
+    "third_near_ground": [
+      0.07553151994943619,
+      0.1706947684288025,
+      0.036304812878370285
+    ],
+    "isometric_near_ground": [
+      0.07442595809698105,
+      0.16817441582679749,
+      0.035756759345531464
+    ],
+    "ground_shadow_min_ratio": 1.0
+  },
+  "minecraft_runtime_tested": false
+}

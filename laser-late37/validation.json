@@ -1,0 +1,9 @@
+{
+  "file": "zomboid-global-melee-animations-2.3.1-v37-late-world-depth-laser.jar",
+  "sha256": "a9a5b9d7bac7c129893df3871b2c55cd3bcb9bfed9ef027fe80ad4829158ee9a",
+  "changed": [
+    "dev/zomboidmelee/boxing/Laser32.class",
+    "zomboid_global_melee.mixins.json"
+  ],
+  "minecraft_runtime_tested": false
+}

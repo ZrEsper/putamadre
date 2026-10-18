@@ -1,0 +1,19 @@
+{
+  "shaderpack": "MakeUp-UltraFast-9.5g",
+  "sha256": "0036da17e0c7158e1c669593e6322d53fce3f5a42fb5124b935e9e21a5719db8",
+  "real_pack_blocklight_expression": "candleColor = CANDLE_BASELIGHT * (illumination.x * sqrt(illumination.x) + sixthPow(illumination.x * 1.17));",
+  "original_dark_skin": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "new_native_light_skin": [
+    0.4328148066997528,
+    0.1826549768447876,
+    0.047206614166498184,
+    1.0
+  ],
+  "skin_texture_contrast_preserved": true,
+  "full_shaderpack_in_minecraft_tested": false
+}

@@ -1,0 +1,1 @@
+package net.irisshaders.iris.gl;import org.lwjgl.opengl.GL33;public class IrisRenderSystem{public static int[]cache=new int[16];public static void bindSamplerToUnit(int unit,int id){if(cache[unit]==id)return;GL33.glBindSampler(unit,id);cache[unit]=id;}}

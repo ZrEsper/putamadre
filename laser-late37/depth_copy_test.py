@@ -1,0 +1,9 @@
+from pathlib import Path
+import ctypes as c,json,numpy as np,moderngl
+r=Path(__file__).resolve().parent;ctx=moderngl.create_standalone_context(backend='egl',require=330);gl=c.CDLL('libGL.so.1')
+def f(name,types):a=getattr(gl,name);a.argtypes=types;return a
+bind=f('glBindTexture',[c.c_uint,c.c_uint]);gen=f('glGenTextures',[c.c_int,c.POINTER(c.c_uint)]);image=f('glTexImage2D',[c.c_uint,c.c_int,c.c_int,c.c_int,c.c_int,c.c_int,c.c_uint,c.c_uint,c.c_void_p]);copy=f('glCopyTexSubImage2D',[c.c_uint,c.c_int,c.c_int,c.c_int,c.c_int,c.c_int,c.c_int,c.c_int]);read=f('glGetTexImage',[c.c_uint,c.c_int,c.c_uint,c.c_uint,c.c_void_p]);active=f('glActiveTexture',[c.c_uint]);framebuffer=f('glBindFramebuffer',[c.c_uint,c.c_uint]);w,h=48,32
+color=ctx.texture((w,h),4);depth=ctx.depth_texture((w,h));fb=ctx.framebuffer([color],depth);fb.use();fb.clear(0,0,0,1,depth=.37)
+t=c.c_uint();gen(1,c.byref(t));active(33984);bind(3553,t.value);image(3553,0,33190,w,h,0,6402,5126,None);framebuffer(36008,fb.glo);copy(3553,0,0,0,0,0,w,h);fb.clear(0,0,0,1,depth=1)
+result=np.zeros((h,w),dtype='f4');read(3553,0,6402,5126,result.ctypes.data);assert np.max(abs(result-.37))<1e-5,result.min();assert np.min(np.frombuffer(depth.read(),dtype='f4'))>.9999;assert gl.glGetError()==0
+(r/'depth-copy-test-results.json').write_text(json.dumps({'real_opengl_depth_copy':True,'world_depth_retained_after_hand_clear':float(result.mean()),'main_depth_after_hand_clear':1.0,'minecraft_runtime_tested':False},indent=2)+'\n');print('REAL_GL_WORLD_DEPTH24_SNAPSHOT_SURVIVES_HAND_DEPTH_CLEAR=PASS')

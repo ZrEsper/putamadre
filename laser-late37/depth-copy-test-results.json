@@ -1,0 +1,6 @@
+{
+  "real_opengl_depth_copy": true,
+  "world_depth_retained_after_hand_clear": 0.37000003457069397,
+  "main_depth_after_hand_clear": 1.0,
+  "minecraft_runtime_tested": false
+}

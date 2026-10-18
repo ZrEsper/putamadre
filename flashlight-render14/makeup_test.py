@@ -1,0 +1,10 @@
+from pathlib import Path
+import zipfile,re,json,hashlib,numpy as np,moderngl
+r=Path(__file__).resolve().parent;pack=r/'base/MakeUp-UltraFast-9.5g.zip'
+with zipfile.ZipFile(pack)as z:
+ light=z.read('shaders/src/light_vertex.glsl').decode();formula=re.search(r'candleColor = [^;]+;',light).group();colors=z.read('shaders/lib/color_utils.glsl').decode();config=z.read('shaders/lib/config.glsl').decode();mode=int(re.search(r'#define BLOCKLIGHT_TEMP\s+(\d+)',config).group(1));base=re.findall(r'#define CANDLE_BASELIGHT (vec3\([^\n]+\))',colors)[mode]
+ctx=moderngl.create_standalone_context(backend='egl',require=330);p=ctx.program(vertex_shader=(r/'shaders/light.vert').read_text(),fragment_shader='#version 150\nuniform sampler2D Skin;uniform float Block;in vec2 texCoord;out vec4 fragColor;float sixthPow(float x){return x*x*x*x*x*x;}const vec3 CANDLE_BASELIGHT='+base+';void main(){vec2 illumination=vec2(Block,0.);vec3 candleColor;'+formula+'fragColor=vec4(texture(Skin,texCoord).rgb*candleColor,1.);}')
+skin=np.full((4,8,4),[.6,.4,.2,1],dtype='f4');skin[:,:4,:3]*=.5;tx=ctx.texture((8,4),4,skin.tobytes(),dtype='f4');tx.use(0);p['Skin'].value=0;target=ctx.texture((8,4),4,dtype='f4');fb=ctx.framebuffer([target]);fb.use();vao=ctx.vertex_array(p,[])
+def draw(block):p['Block'].value=block;vao.render(vertices=3);return np.frombuffer(fb.read(components=4,dtype='f4'),dtype='f4').reshape(4,8,4).copy()
+old=draw(0);new=draw((14*16+8)/256*1.0323886639676114);assert old[:,:,:3].max()==0;assert new[2,6,0]>.1,new[2,6];assert np.max(abs(new[2,6,:3]/new[2,2,:3]-2))<1e-5;assert np.all(np.isfinite(new))
+(r/'makeup-test-results.json').write_text(json.dumps({'shaderpack':'MakeUp-UltraFast-9.5g','sha256':hashlib.sha256(pack.read_bytes()).hexdigest(),'real_pack_blocklight_expression':formula,'original_dark_skin':old[2,6].tolist(),'new_native_light_skin':new[2,6].tolist(),'skin_texture_contrast_preserved':True,'full_shaderpack_in_minecraft_tested':False},indent=2)+'\n');print('REAL_MAKEUP95G_LIGHT_EXPRESSION_ENTITY_SKIN_TEXTURE_CONTRAST_CHECKS=4')

@@ -1,0 +1,17 @@
+{
+  "real_opengl_render": true,
+  "inherited_mipmap_sampler_black": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "isolated_sampler_texture": [
+    0.7686275243759155,
+    0.3137255012989044,
+    0.0784313753247261,
+    1.0
+  ],
+  "original_sampler_restored": true,
+  "minecraft_runtime_tested": false
+}
