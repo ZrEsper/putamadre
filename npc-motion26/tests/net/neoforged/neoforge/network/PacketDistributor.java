@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.network;import net.minecraft.network.protocol.common.custom.CustomPacketPayload;public class PacketDistributor {public static int sent;public static Object packet;public static void sendToPlayersTrackingEntity(Object n,CustomPacketPayload p,CustomPacketPayload...rest){sent++;packet=p;}}

@@ -1,0 +1,24 @@
+{
+  "changed": [
+    "META-INF/neoforge.mods.toml",
+    "mod/cdv/tnpc/client/render/AutoGunOperatorRenderer.class",
+    "mod/cdv/tnpc/entity/AutoGunOperator.class",
+    "mod/cdv/tnpc/network/AnimationPacket.class",
+    "mod/cdv/tnpc/tactical/CalmBrain.class",
+    "mod/cdv/tnpc/tactical/Social.class",
+    "mod/cdv/tnpc/tactical/SurvivorPatch.class",
+    "mod/cdv/tnpc/tactical/TacticalKit22.class",
+    "mod/cdv/tnpc/tactical/Tactics24.class",
+    "mod/cdv/tnpc/tactical/TeamBrain.class",
+    "tacznpcs.mixins.json"
+  ],
+  "added": [
+    "mod/cdv/tnpc/mixin/NpcMuzzle26.class",
+    "mod/cdv/tnpc/tactical/Client26.class",
+    "mod/cdv/tnpc/tactical/Combat26$Slide.class",
+    "mod/cdv/tnpc/tactical/Combat26.class"
+  ],
+  "assets_preserved": true,
+  "api_fixtures_not_packaged": true,
+  "minecraft_runtime_tested": false
+}
