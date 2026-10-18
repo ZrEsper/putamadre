@@ -1,0 +1,32 @@
+GORE VIVO + CADÁVERES DESTRUIBLES Y LOOTEABLES — NeoForge 1.21.1
+
+INSTALAR
+Reemplaza las versiones anteriores de Gore, Ragdollified, Zombie Remains Loot y Mob Dismemberment por las de este paquete; no dejes duplicados.
+Gore 1.0.13, Ragdollified gore-loot.2 y Zombie Remains Loot physical-corpse-loot.16 deben coincidir entre cliente y servidor. Hay un cambio de protocolo de red.
+Mob Dismemberment gore13-compat.3 es para el cliente. Splatter blood-budget.2 se incluye idéntico al anterior; conserva su instalación habitual.
+Se sigue necesitando EMF. La corrección se comprobó contra la clase real de EMF 3.3.11 adjuntada anteriormente.
+
+USO
+- Las heridas se dibujan en la ruta de renderizado de EMF, también con el zombi vivo.
+- Disparos y melee dañan la región impactada. Mano, codo y brazo acumulan pérdidas de tejido; las piernas pierden carne progresivamente; el torso deja costillas/columna expuestas; el cráneo presenta varios grados de rotura, cerebro y ojo desplazado. Las hachas adelantan la destrucción respecto a golpes ligeros.
+- Los cadáveres físicos siguen recibiendo golpes y balas. TaCZ se comprueba desde el servidor antes de que desaparezca la bala, con poses de los cuerpos y límites de obstáculos.
+- Las explosiones pueden separar partes enteras de cadáveres. Las heridas parciales por disparos y melee no usan el desarmado completo automático de Mob Dismemberment.
+- El sangrado de zombis vivos continúa un tiempo y puede reducir su salud; los impactos sobre cadáveres reactivan sus chorros.
+- Para saquear: clic derecho mirando al cadáver. Con un arma TaCZ en la mano, hazlo agachado para no sustituir el apuntado normal. Se conserva el inventario con páginas cuando hace falta.
+
+LOOT Y GUARDADO
+Las nuevas muertes compatibles usan el cuerpo físico como contenedor; no colocan otro bloque Remains.
+Se conservan los generadores de loot, calidad, equipo y pasos finales de la versión profession-clothes-scatter.15.
+El inventario se guarda con un ancla de entidad invisible, sin colisión, y se restaura con su estado de daño. Retirar un objeto lo quita de la misma colección que ven los otros jugadores. No se vuelve a sortear al abrirlo.
+Los bloques Remains que ya existían siguen usando su sistema anterior; no se borran sus inventarios.
+Para no acumular física ilimitada, los cuerpos looteables cargados tienen un límite que reserva espacio dentro del presupuesto de Ragdollified, con un máximo de 48. Al superar ese límite, o al cumplirse zombieDecayTicks, el cuerpo antiguo suelta su inventario al suelo antes de retirarse.
+Si una criatura no tiene ragdoll compatible activo, su loot cae directamente al suelo; no se crea un bloque ni se guarda en un cuerpo invisible.
+Los cadáveres de jugadores y zombis que transportan inventario de jugadores conservan sus protecciones anteriores.
+
+RENDIMIENTO
+Se mantiene el presupuesto anterior de manchas de Splatter y el presupuesto compartido de sangre. Los trozos pequeños adicionales son solo visuales: máximo 32 y duración limitada. Las escrituras de poses se distribuyen; no se reserializan todos los inventarios cada tick.
+La variante de textura capturada puede ser comunicada por el dueño de la simulación y guardarse para restaurar el cuerpo. Las texturas dinámicas que dependan de otros mods siguen dependiendo de esos mods y requieren comprobación visual.
+
+VALIDADO
+Compilación Java; verificación ASM; coincidencia del método de render de EMF; rutas de red y campos de paquetes; geometría regional finita y acotada; destrucción sin regenerar tejido; intersecciones de balas; inventario de 81 casillas con componentes; dos usuarios compartiendo inventario; extracción única; límites de distancia; recarga con un ID de entidad diferente.
+Estas son pruebas de código y simulaciones de API. No se inició el cliente gráfico de Minecraft ni un servidor completo con todo el modpack.
