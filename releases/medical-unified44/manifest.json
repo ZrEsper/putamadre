@@ -1,0 +1,58 @@
+[
+  {
+    "input": "attachments/3d7f01ba-d3d0-4ec7-b5ff-a9a4903f65b4/firstaid-1.21.1-ZOMBOID-v3.6.13-alcohol-15-uses.jar",
+    "file": "firstaid-1.21.1-ZOMBOID-v3.6.14-unified-medical-care.jar",
+    "sha256": "2dd2f91cbccdb7f94d20d72ce9ea9f08c0a537f84c943de198d60dd090e5c4eb",
+    "changed_classes": [
+      "dev/zomboid/firstaid/MedicalView40$Part.class",
+      "dev/zomboid/firstaid/MedicalActions40.class",
+      "dev/zomboid/firstaid/MedicalHud40.class",
+      "dev/zomboid/firstaid/MedicalView40$Snapshot.class",
+      "dev/zomboid/firstaid/BodyTreatmentScreen20.class",
+      "dev/zomboid/firstaid/Clinical44.class",
+      "dev/zomboid/firstaid/Marks42.class",
+      "dev/zomboid/firstaid/Remote44$Row.class",
+      "dev/zomboid/firstaid/Care44.class",
+      "dev/zomboid/firstaid/MedicalActions40$Pending.class",
+      "dev/zomboid/firstaid/MedicalView40.class",
+      "dev/zomboid/firstaid/MedicalActions40$Action.class",
+      "dev/zomboid/firstaid/HealthTab40.class",
+      "dev/zomboid/firstaid/MedicalHud40$Rect.class",
+      "dev/zomboid/firstaid/Marks42$1.class",
+      "dev/zomboid/firstaid/HealthTab40$Row.class",
+      "dev/zomboid/firstaid/Remote44$Wound.class",
+      "dev/zomboid/firstaid/HealthTab40$Layout.class",
+      "dev/zomboid/firstaid/HealthTab40$State.class",
+      "dev/zomboid/firstaid/Remote44.class",
+      "dev/zomboid/firstaid/Hygiene42.class",
+      "dev/zomboid/firstaid/Remote44$State.class",
+      "dev/zomboid/firstaid/mixin/CareActions44.class",
+      "dev/zomboid/firstaid/mixin/CareRows44.class",
+      "dev/zomboid/firstaid/mixin/CareScreen44.class",
+      "ichttt/mods/firstaid/survival/ClinicalData.class",
+      "ichttt/mods/firstaid/survival/ClinicalState$Wound.class",
+      "ichttt/mods/firstaid/survival/ClinicalHooks.class",
+      "ichttt/mods/firstaid/compat/lrtactical/TreatmentV33.class"
+    ]
+  },
+  {
+    "input": "attachments/decdddd5-9ef2-4989-acf3-a2e27482b46a/tacz-firstaid-compat-1.0.1.jar",
+    "file": "tacz-firstaid-compat-1.0.2-localized-wound-sync.jar",
+    "sha256": "5f137e3f7a209f9291513fa6042c7ab6f055321edfe2c9481ef23550beb33cda",
+    "changed_classes": [
+      "ru/ranazy/tacz_firstaid_compat/compat/firstaid/TacZDamageDistribution.class"
+    ]
+  },
+  {
+    "input": "attachments/e2e3cb98-50b5-414d-9c0f-30cb508bc048/tacznpcs-2.1.0-1.21.1-tactical.27-threat-cover-armor.jar",
+    "file": "tacznpcs-2.1.0-1.21.1-tactical.28-unified-medical-care.jar",
+    "sha256": "24c4e8c96c1705b77342ad34d65c0c846226df8ee9bca16d35f1edbcf6cb296f",
+    "changed_classes": [
+      "mod/cdv/tnpc/tactical/Clinic28$Job.class",
+      "mod/cdv/tnpc/tactical/Threat27.class",
+      "mod/cdv/tnpc/tactical/NpcClinic20.class",
+      "mod/cdv/tnpc/tactical/NpcMedicine.class",
+      "mod/cdv/tnpc/tactical/Clinic28.class"
+    ]
+  }
+]
