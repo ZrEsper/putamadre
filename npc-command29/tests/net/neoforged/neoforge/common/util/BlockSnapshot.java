@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.common.util;public class BlockSnapshot{fixture.World w;Object p,s;public static BlockSnapshot create(Object d,fixture.World w,Object p){BlockSnapshot b=new BlockSnapshot();b.w=w;b.p=p;b.s=w.getBlockState(p);return b;}public boolean restore(int flags){return w.setBlock(p,s,flags);}}

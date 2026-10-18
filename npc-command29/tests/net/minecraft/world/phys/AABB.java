@@ -1,0 +1,1 @@
+package net.minecraft.world.phys;public record AABB(double x1,double y1,double z1,double x2,double y2,double z2){public boolean contains(double x,double y,double z){return x>=x1&&x<=x2&&y>=y1&&y<=y2&&z>=z1&&z<=z2;}}
