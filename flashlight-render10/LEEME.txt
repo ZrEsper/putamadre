@@ -1,0 +1,15 @@
+Linterna .10 — Texturas y luz cercana — NeoForge 1.21.1
+
+INSTALACIÓN
+Quita tu Flashlight .9 (o anterior) y coloca flashlight-5.1-neoforge-1.21.1-near-texture-light.10.jar. Conserva una sola versión de Flashlight y Zomboid Integration 1.7.11, incluido sin cambios. No instales dos Integration. Mantén Third Person Shooting shoulder-clearance .4, Dungeons Iso .32 y Darkness .4.
+
+CAMBIOS
+El terreno usa su textura capturada sin blanquearla con una amplificación por canal. Los modelos dinámicos conservan sus propios colores con recuperación de exposición uniforme. No se vuelven a dibujar entidades ni muebles en el pase secundario.
+En tercera persona e isométrica se agrega una iluminación suave cerca del jugador, que desaparece progresivamente hasta los cinco bloques, manteniendo el haz principal de largo alcance. El origen físico sigue en el jugador. Se detectan cámaras externas tanto por el estado de cámara como por su separación real respecto al emisor.
+El mapa de sombras compara muestras sobre el mismo plano de la superficie para evitar franjas de autosombra sobre suelo continuo. Las paredes siguen bloqueando la luz.
+Se conserva X desde inventario, consumo de batería, recarga y compatibilidad de las marcas de luz con Darkness, láser y visión térmica.
+
+VALIDACIÓN
+Pruebas aprobadas de baterías, inventario, controles y sombras; shaders compilados y renderizados en OpenGL; casos con primera persona, perspectiva trasera e isométrica; textura diurna, iluminación cercana y autosombra del suelo. La prueba de textura diurna falla con .9 y pasa con .10.
+No se ejecutó Minecraft en este entorno. Estas pruebas no sustituyen la comprobación visual dentro del modpack.
+El registro aportado confirma el render de .9 y además contiene errores independientes de modelos EMF/ETF y recursos ausentes; este cambio no corrige esos otros mods.
