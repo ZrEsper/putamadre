@@ -1,0 +1,8 @@
+{
+  "file": "hardcore_true_darkness-6.1-night-visibility.4-flashlight-cone.jar",
+  "sha256": "0838d8e374a1e521e3a59a52885fcca823d7d7d069817874e41959f408acbd86",
+  "only_changed": [
+    "assets/hardcore_true_darkness/shaders/program/final_darkness.fsh"
+  ],
+  "minecraft_runtime_tested": false
+}

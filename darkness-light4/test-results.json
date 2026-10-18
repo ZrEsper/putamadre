@@ -1,0 +1,19 @@
+{
+  "checks": 29,
+  "actual_glsl_compiled_rendered": true,
+  "old_faint_red_laser": [
+    7.843226194381714e-05,
+    0.0,
+    0.0,
+    0.9803922176361084
+  ],
+  "new_faint_red_laser": [
+    0.0784313753247261,
+    0.0,
+    0.0,
+    0.9803922176361084
+  ],
+  "ordinary_scene_pixels_unchanged": true,
+  "minecraft_runtime_tested": false,
+  "renderer": "llvmpipe (LLVM 19.1.7, 256 bits)"
+}

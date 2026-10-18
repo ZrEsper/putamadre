@@ -1,0 +1,25 @@
+Linternas 6: iluminación, baterías y Darkness — NeoForge 1.21.1
+
+Instalación
+Reemplaza flashlight .5 por flashlight .6 y Darkness anterior por Darkness .4.
+No dejes dos versiones del mismo mod. Conserva tctcore y tu configuración.
+Flashlight .6 debe estar en cliente y servidor; Darkness es del cliente.
+No instales Flashier Flashlights 1.2.0: el archivo suministrado es para Forge 1.20.1.
+
+Baterías
+- Con la batería en el cursor, clic derecho sobre la linterna en el inventario.
+- También puedes sostener una batería y hacer clic derecho al aire: busca una linterna que necesite carga, primero en las manos y después en el inventario.
+- Se conserva Shift + clic derecho con la linterna para recargar desde el inventario.
+- No consume baterías si ya está llena. Una batería recarga completamente el modelo correspondiente.
+Duración encendida: normal 10 minutos, expedición 20, eco 30 y táctica 10.
+Alcances: normal/expedición 25, eco 12, táctica 40 bloques.
+Se conserva el encendido automático inicial y al revivir.
+
+Iluminación
+Nuevo render de cono con bordes suaves, recuperación del color de las superficies y sombras por colisión. Implementación propia adaptada al mod de NeoForge a partir de los conceptos de iluminación del archivo de referencia; no incluye los binarios Forge ni todas sus funciones.
+Darkness conserva las superficies iluminadas por el haz y sigue oscureciendo el exterior. Mantiene la compatibilidad anterior del láser.
+Presupuesto: dos luces cercanas, máximo 48 rayos por tick del cliente, captura a media resolución, hasta 32 entidades y 32 bloques con render especial por captura. Caché de bloques limitada a 128; no fuerza carga de chunks. Se conserva luz cercana de respaldo de dos bloques.
+
+Verificación
+Java 21 y bytecode ASM verificados. Pruebas de baterías, recarga, autoridad cliente/servidor, encendido al revivir, sombras y límites de trabajo. Pruebas reales de shaders OpenGL para cono, textura, alcance, oclusión y Darkness.
+No se ejecutó un cliente Minecraft en este entorno: apariencia final, Sodium y posibles shaderpacks requieren prueba en el juego. Si falla el render, se desactiva el cono y queda la luz cercana de respaldo; el error se registra en latest.log.

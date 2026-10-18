@@ -1,0 +1,28 @@
+{
+  "file": "flashlight-5.1-neoforge-1.21.1-cone-light-battery.6.jar",
+  "sha256": "9be68da30f956fd8bcb72d6333bff2ebb60d18a4fbf4800f33360c19c8777331",
+  "changed": [
+    "assets/flashlight/lang/en_us.json",
+    "assets/flashlight/lang/es_es.json",
+    "assets/flashlight/lang/es_mx.json",
+    "flashlight.mixins.json",
+    "net/flashlight/battery/Power.class",
+    "net/flashlight/item/BatteryItem.class",
+    "net/flashlight/item/FlashlightItem.class",
+    "net/flashlight/item/FlashlightOFFItem.class"
+  ],
+  "added": [
+    "assets/flashlight/shaders/portable6.frag",
+    "assets/flashlight/shaders/portable6.vert",
+    "net/flashlight/battery/Engine6.class",
+    "net/flashlight/battery/Events6.class",
+    "net/flashlight/battery/G6$State.class",
+    "net/flashlight/battery/G6.class",
+    "net/flashlight/battery/Light6$Lamp.class",
+    "net/flashlight/battery/Light6.class",
+    "net/flashlight/battery/Matrix6.class",
+    "net/flashlight/mixin/AlbedoTarget6.class",
+    "net/flashlight/mixin/WhiteLightmap6.class"
+  ],
+  "minecraft_runtime_tested": false
+}
