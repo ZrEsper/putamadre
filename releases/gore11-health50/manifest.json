@@ -1,0 +1,41 @@
+[
+  {
+    "input": "attachments/24f25a90-7dec-4dc2-8795-ccccffa4def4/zomboid-zombie-gore-1.0.10-neoforge-1.21.1-directional-momentum.jar",
+    "input_sha256": "7c37da895e8e7f94687f6b82a253f4445bb8b603aa06c0f13fee44e541e9029b",
+    "file": "zomboid-zombie-gore-1.0.11-neoforge-1.21.1-localized-ballistics.jar",
+    "sha256": "bea74446317d5fffb0e1919d953ac51589af6c7261fb012dd301adf41171a9e7",
+    "classes": [
+      "dev/zomboid/gore/Rules$Weapon.class",
+      "dev/zomboid/gore/MeleeReaction.class",
+      "dev/zomboid/gore/Ballistics11.class",
+      "dev/zomboid/gore/Gore.class",
+      "dev/zomboid/gore/Rules.class",
+      "dev/zomboid/gore/Visual11.class"
+    ]
+  },
+  {
+    "input": "attachments/322635eb-fd8f-4cf8-aacd-1d4d27b1d466/zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.49-global-zombie-budget.jar",
+    "input_sha256": "5832e745d86f7495659710fc07bc83bf2d4f66a695d389ca71a861d067129e17",
+    "file": "zomboid-hordes-1.8.3-neoforge-1.21.1-admin-panel.50-zombie-health.jar",
+    "sha256": "50224fec74f1b72cf701f3070fd0a040f0c92bf291bf269811bfc2ef56666473",
+    "classes": [
+      "dev/zomboid/hordes/ZoneSettings.class",
+      "dev/zomboid/hordes/Health50.class",
+      "dev/zomboid/hordes/SpawnPoolUi.class",
+      "dev/zomboid/hordes/SimplePanel.class",
+      "dev/zomboid/hordes/ZombieIndividual.class"
+    ]
+  },
+  {
+    "input": "attachments/8fe2f04f-68a7-48d0-8495-edda185969e5/splatter-1.21.1-0.3.0-neoforge-light-budget.1.jar",
+    "input_sha256": "d2f8572907ab266fcf1525d521c2c856ed99c6aa02b67d55d49f9df61ecdfa60",
+    "file": "splatter-1.21.1-0.3.0-neoforge-blood-budget.2.jar",
+    "sha256": "3088c823183190d9ed716916b420bd375340b1049e19cd18e4f56a32c6965754",
+    "classes": [
+      "dev/zomboid/splatterbudget/Projection2.class",
+      "net/mehvahdjukaar/splatter/client/particles/BloodFleckParticle.class",
+      "net/mehvahdjukaar/splatter/client/decal/DecalSystem.class",
+      "net/mehvahdjukaar/splatter/client/blood/BloodEmitter.class"
+    ]
+  }
+]
