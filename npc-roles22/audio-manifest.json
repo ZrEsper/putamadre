@@ -1,0 +1,122 @@
+{
+  "source": "hecu-radio.ogg",
+  "source_sha256": "3bab9818224640db1f14b71f1228f3b9dbc18291cc74f72875ef093ef2bf01b0",
+  "clips": [
+    {
+      "name": "detect_1",
+      "state": "detect",
+      "source_cuts": [
+        [
+          65.65,
+          66.65
+        ]
+      ],
+      "joined_radio_words": false,
+      "duration": 1.0,
+      "channels": 1,
+      "sha256": "6d811c9307bf5025052529e725bbebd256b1b0cf4786b5d23cf331ec6c5b42e1"
+    },
+    {
+      "name": "detect_2",
+      "state": "detect",
+      "source_cuts": [
+        [
+          66.76,
+          68.04
+        ]
+      ],
+      "joined_radio_words": false,
+      "duration": 1.28,
+      "channels": 1,
+      "sha256": "54bee8206d99327a9a7e96c37aa19fbd60e0aeaf0d5b29473b7ee0c724e02d1d"
+    },
+    {
+      "name": "search_1",
+      "state": "search",
+      "source_cuts": [
+        [
+          264.04,
+          264.94
+        ],
+        [
+          269.74,
+          270.53
+        ]
+      ],
+      "joined_radio_words": true,
+      "duration": 1.753673,
+      "channels": 1,
+      "sha256": "d7b9fbe756360c89a83a19f3e8ef89f7eeee7d7935174557b43901e9f3ab01ca"
+    },
+    {
+      "name": "search_2",
+      "state": "search",
+      "source_cuts": [
+        [
+          265.03,
+          265.84
+        ],
+        [
+          270.7,
+          271.43
+        ]
+      ],
+      "joined_radio_words": true,
+      "duration": 1.605011,
+      "channels": 1,
+      "sha256": "e9e4407ff2f32fdff2dee3f7ef8d7a500154e89ebdd4e349e9205cf3b53e8f91"
+    },
+    {
+      "name": "patrol_1",
+      "state": "patrol",
+      "source_cuts": [
+        [
+          268.14,
+          268.91
+        ],
+        [
+          269.74,
+          270.53
+        ],
+        [
+          271.68,
+          272.26
+        ]
+      ],
+      "joined_radio_words": true,
+      "duration": 2.268685,
+      "channels": 1,
+      "sha256": "582061a060d70c73fa1eb23ec2e2a77f4b0379eefae488a58ffd9b2752b87431"
+    },
+    {
+      "name": "patrol_2",
+      "state": "patrol",
+      "source_cuts": [
+        [
+          190.1,
+          192.23
+        ]
+      ],
+      "joined_radio_words": false,
+      "duration": 2.13,
+      "channels": 1,
+      "sha256": "f6d7b82f4ba3d77ffd61d0c5a8a2fb55220fcdb236b35e153cfa3f5c5dcd48f8"
+    },
+    {
+      "name": "patrol_3",
+      "state": "patrol",
+      "source_cuts": [
+        [
+          194.4,
+          196.52
+        ]
+      ],
+      "joined_radio_words": false,
+      "duration": 2.12,
+      "channels": 1,
+      "sha256": "066185b4ae529d5180a001ad15e244d15b0c1a568aaae107347bf34b9ff09ee9"
+    }
+  ],
+  "automatic_transcription_review_only": true,
+  "human_listening_verified": false
+}

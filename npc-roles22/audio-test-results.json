@@ -1,0 +1,51 @@
+{
+  "checks": 46,
+  "mono_positional_audio": true,
+  "source_hash_verified": true,
+  "results": [
+    {
+      "clip": "detect_1.ogg",
+      "duration": 1.0,
+      "rms": 0.08250752836465836,
+      "peak": 0.4481504559516907
+    },
+    {
+      "clip": "detect_2.ogg",
+      "duration": 1.28,
+      "rms": 0.08442321419715881,
+      "peak": 0.3661768436431885
+    },
+    {
+      "clip": "search_1.ogg",
+      "duration": 1.753673,
+      "rms": 0.0899847149848938,
+      "peak": 0.25208449363708496
+    },
+    {
+      "clip": "search_2.ogg",
+      "duration": 1.605011,
+      "rms": 0.09173156321048737,
+      "peak": 0.2930421233177185
+    },
+    {
+      "clip": "patrol_1.ogg",
+      "duration": 2.268685,
+      "rms": 0.08803132176399231,
+      "peak": 0.2500855624675751
+    },
+    {
+      "clip": "patrol_2.ogg",
+      "duration": 2.13,
+      "rms": 0.08832968026399612,
+      "peak": 0.385566771030426
+    },
+    {
+      "clip": "patrol_3.ogg",
+      "duration": 2.12,
+      "rms": 0.09490396082401276,
+      "peak": 0.4276806116104126
+    }
+  ],
+  "human_listening_verified": false,
+  "minecraft_runtime_tested": false
+}

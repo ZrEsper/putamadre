@@ -14,6 +14,14 @@ eggs=['bandit_passive_spawn_egg','bandit_neutral_spawn_egg','bandit_spawn_egg','
 for egg in eggs:e['assets/tacznpcs/models/item/'+egg+'.json']=json.dumps({'parent':'minecraft:item/template_spawn_egg'}).encode()
 for loc,labels in [('en_us',['Passive Survivor Spawn Egg','Neutral Survivor Spawn Egg','Hostile Bandit Spawn Egg','Hostile Military Spawn Egg']),('es_es',['Huevo de superviviente pasivo','Huevo de superviviente neutral','Huevo de bandido hostil','Huevo de militar hostil']),('es_mx',['Huevo de superviviente pasivo','Huevo de superviviente neutral','Huevo de bandido hostil','Huevo de militar hostil'])]:
  key='assets/tacznpcs/lang/'+loc+'.json';d=json.loads(e.get(key,b'{}'));d.update({'item.tacznpcs.'+egg:label for egg,label in zip(eggs,labels)});e[key]=json.dumps(d,ensure_ascii=False,indent=2).encode()
+audio=json.loads((r/'audio-manifest.json').read_text());sounds=json.loads(e['assets/tacznpcs/sounds.json'])
+for state in ['detect','search','patrol']:
+ sounds['military_radio_'+state]={'subtitle':'subtitles.tacznpcs.military_radio_'+state,'sounds':[{'name':'tacznpcs:military22/'+clip['name'],'weight':1}for clip in audio['clips']if clip['state']==state]}
+for clip in audio['clips']:
+ data=(r/'audio'/(clip['name']+'.ogg')).read_bytes();assert hashlib.sha256(data).hexdigest()==clip['sha256'];e['assets/tacznpcs/sounds/military22/'+clip['name']+'.ogg']=data
+e['assets/tacznpcs/sounds.json']=json.dumps(sounds,indent=2).encode()
+for loc,labels in [('en_us',['Military radio: contact','Military radio: searching','Military radio: patrol']),('es_es',['Radio militar: contacto','Radio militar: buscando','Radio militar: patrulla']),('es_mx',['Radio militar: contacto','Radio militar: buscando','Radio militar: patrulla'])]:
+ key='assets/tacznpcs/lang/'+loc+'.json';d=json.loads(e[key]);d.update({'subtitles.tacznpcs.military_radio_'+state:label for state,label in zip(['detect','search','patrol'],labels)});e[key]=json.dumps(d,ensure_ascii=False,indent=2).encode()
 e['META-INF/neoforge.mods.toml']=re.sub(r'(?m)^version\s*=\s*"[^"\n]*"','version="2.1.0-tactical.22-roles"',e['META-INF/neoforge.mods.toml'].decode(),count=1).encode()
 with zipfile.ZipFile(out,'w',zipfile.ZIP_DEFLATED)as z:
  for n,b in sorted(e.items()):i=zipfile.ZipInfo(n,(1980,1,1,0,0,0));i.compress_type=zipfile.ZIP_DEFLATED;z.writestr(i,b)
