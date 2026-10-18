@@ -1,0 +1,4 @@
+Reemplaza el JAR de dungeons_iso .32 por .33. No instales ambos.
+Fondo negro constante mientras la cámara isométrica está activa, sin depender de interiores ni transiciones. Las otras cámaras recuperan el fondo normal.
+Conserva todos los demás archivos de .32, incluidos apuntado y dirección del disparo.
+Validado con compilación, pruebas de estados y comparación del JAR; pendiente prueba visual dentro de Minecraft.
