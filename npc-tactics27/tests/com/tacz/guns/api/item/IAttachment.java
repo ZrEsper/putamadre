@@ -1,0 +1,1 @@
+package com.tacz.guns.api.item;public class IAttachment {public static IAttachment getIAttachmentOrNull(Object stack){return new IAttachment();}public Object getAttachmentId(Object stack){return "tacz:suppressor";}}

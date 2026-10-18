@@ -1,0 +1,26 @@
+{
+  "file": "tacznpcs-2.1.0-1.21.1-tactical.27-threat-cover-armor.jar",
+  "sha256": "b83af8271499352eaff4cdaad41203799067b3713ce6d599af87cedbd1544ba4",
+  "changed": [
+    "META-INF/neoforge.mods.toml",
+    "mod/cdv/tnpc/entity/AutoGunOperator.class",
+    "mod/cdv/tnpc/tactical/Client26.class",
+    "mod/cdv/tnpc/tactical/Combat26.class",
+    "mod/cdv/tnpc/tactical/Expression20.class",
+    "mod/cdv/tnpc/tactical/NpcMedicine.class",
+    "mod/cdv/tnpc/tactical/Radio22.class",
+    "mod/cdv/tnpc/tactical/Roles22.class",
+    "mod/cdv/tnpc/tactical/Social.class",
+    "mod/cdv/tnpc/tactical/SpeechSounds20.class",
+    "mod/cdv/tnpc/tactical/Tactics24.class"
+  ],
+  "added": [
+    "mod/cdv/tnpc/tactical/Motion27$Motion.class",
+    "mod/cdv/tnpc/tactical/Motion27.class",
+    "mod/cdv/tnpc/tactical/Tactical27$State.class",
+    "mod/cdv/tnpc/tactical/Tactical27.class",
+    "mod/cdv/tnpc/tactical/Threat27.class"
+  ],
+  "assets_unchanged": 93,
+  "minecraft_runtime_tested": false
+}
