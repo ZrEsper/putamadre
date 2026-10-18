@@ -1,0 +1,1 @@
+package mod.cdv.tnpc.client;public class FakePlayer extends mod.cdv.tnpc.tactical.MotionChecks26.Soldier {public final Object link;public FakePlayer(mod.cdv.tnpc.tactical.MotionChecks26.World w,Object source){super(w);link=source;}}

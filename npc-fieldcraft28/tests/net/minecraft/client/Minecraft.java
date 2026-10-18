@@ -1,0 +1,2 @@
+package net.minecraft.client;
+public class Minecraft {static final Minecraft INSTANCE=new Minecraft();public Object level,screen,player,hitResult;public Options options=new Options();public Mode gameMode=new Mode();public static Minecraft getInstance(){return INSTANCE;}public static class Options{public Key keyUse=new Key();}public static class Key{public int button=1;public boolean matchesMouse(int b){return b==button;}}public static class Mode{public int uses;public void interact(Object p,Object n,Object h){uses++;mod.cdv.tnpc.tactical.Conversation.interact(n,p,h);}}}

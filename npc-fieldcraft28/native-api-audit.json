@@ -1,0 +1,31 @@
+{
+  "neoforge_source_checks": [
+    {
+      "url": "https://raw.githubusercontent.com/neoforged/NeoForge/1.21.1/src/main/java/net/neoforged/neoforge/event/EventHooks.java",
+      "sha256": "1c537e46d8f486f398293423e89342acbc4f96f94b0d6fcd5fff007440ebb15b",
+      "used_signatures": [
+        "canEntityGrief(Level level",
+        "onEntityDestroyBlock(LivingEntity entity",
+        "onBlockPlace(@Nullable Entity entity"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/neoforged/NeoForge/1.21.1/src/main/java/net/neoforged/neoforge/common/util/BlockSnapshot.java",
+      "sha256": "797154940f739aa21a074636e75fb78223e676c7d3414358e9dc0928a8bc7486",
+      "used_signatures": [
+        "static BlockSnapshot create(ResourceKey<Level> dim, LevelAccessor level, BlockPos pos)",
+        "boolean restore(int flags)"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/neoforged/NeoForge/1.21.1/src/main/java/net/neoforged/neoforge/event/PlayLevelSoundEvent.java",
+      "sha256": "0bd40cc961ece5246f10742005d3ddbe5b2ec90b02de7cd3d7458825aa768bfa",
+      "used_signatures": [
+        "Vec3 getPosition()",
+        "Entity getEntity()",
+        "float getNewVolume()"
+      ]
+    }
+  ],
+  "minecraft_runtime_tested": false
+}

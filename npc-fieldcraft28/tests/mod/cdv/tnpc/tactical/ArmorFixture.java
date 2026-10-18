@@ -1,0 +1,1 @@
+package mod.cdv.tnpc.tactical;import net.minecraft.world.item.ItemStack;import com.raiiiden.warborn.common.util.StackData;public class ArmorFixture extends com.raiiiden.warborn.common.item.WBArmorItem{public static final ArmorFixture ITEM=new ArmorFixture();public void setTopOpen(ItemStack s,boolean open){StackData.get(s).putBoolean("helmet_top_open",open);}}

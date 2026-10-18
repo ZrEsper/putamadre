@@ -1,0 +1,1 @@
+package net.minecraft.world.phys.shapes;public class CollisionContext{public static Object empty(){return new Object();}}

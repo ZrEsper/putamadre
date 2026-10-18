@@ -1,0 +1,1 @@
+package net.minecraft.world.item;public class BlockItem{String id;public BlockItem(String id){this.id=id;}public String toString(){return id;}public Block getBlock(){return new Block(id);}public record Block(String id){public fixture.BlockState defaultBlockState(){return new fixture.BlockState(id);}}}

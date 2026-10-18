@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.event;public class EventHooks{public static boolean grief=true,destroy=true,placeCancelled;public static boolean canEntityGrief(Object w,Object n){return grief;}public static boolean onEntityDestroyBlock(Object n,Object p,Object s){return destroy;}public static boolean onBlockPlace(Object n,Object snapshot,Object direction){return placeCancelled;}}

@@ -1,0 +1,36 @@
+package mod.cdv.tnpc.tactical;
+import java.util.*;
+/** Bounded local cover/peek, corner checks and real inventory consumption. */
+public final class Tactical27 {
+ static final Map<Object,State> STATES=new WeakHashMap<>();
+ static final class State {long hit=-1000,retreat,retreatNext,assess,aid=-1,serviceAt,until,scanUntil,cell=Long.MIN_VALUE;int threats;String item="",kind="";double recoilSide=1;final LinkedHashSet<Long> visited=new LinkedHashSet<>();}
+ static State state(Object n){return STATES.computeIfAbsent(n,k->new State());}
+ static Object c(Object o,String m,Object...a)throws Exception{return Reflect.call(o,m,a);}static double v(Object n,String axis)throws Exception{return Social.num(c(n,"get"+axis));}
+ static double smooth(double t){t=Math.max(0,Math.min(1,t));return t*t*(3-2*t);}
+ static boolean attention(double dot,double distance,long sinceShot){return dot>.65&&distance<400&&sinceShot>=0&&sinceShot<16;}
+ public static void impact(Object n,long now,Object attacker)throws Exception{State s=state(n);c(Social.tag(n),"putString","soc_reaction20",injured(n)?"afraid":"angry");c(Social.tag(n),"putLong","soc_reaction_until20",now+60);s.hit=now;s.aid=-1;s.until=0;s.retreatNext=Math.min(s.retreatNext,now);if(attacker!=null)s.recoilSide=(v(attacker,"X")-v(n,"X"))*Math.cos(Math.toRadians(Social.num(c(n,"getYRot"))))>=0?1:-1;}
+ static boolean watched(Object n,Object target,long now)throws Exception{if(!Threat27.player(target))return false;Object look=c(target,"getViewVector",1f);double dx=v(n,"X")-v(target,"X"),dz=v(n,"Z")-v(target,"Z"),dy=Social.num(c(n,"getEyeY"))-Social.num(c(target,"getEyeY")),len=Math.max(.01,Math.sqrt(dx*dx+dy*dy+dz*dz));double dot=(Social.num(Reflect.field(look,"x"))*dx+Social.num(Reflect.field(look,"y"))*dy+Social.num(Reflect.field(look,"z"))*dz)/len;return attention(dot,len*len,now-Tactics24.state(n).lastShot);}
+ static boolean injured(Object n)throws Exception{return Social.num(c(n,"getHealth"))<Social.num(c(n,"getMaxHealth"))*.68;}
+ static void stop(Object n)throws Exception{c(c(n,"getNavigation"),"stop");c(n,"aim",false);Tactics24.stance(n,true,false,false);}
+ public static boolean handle(Object n,Object target,boolean reload,long now)throws Exception{State s=state(n);if(now>=s.assess){s.assess=now+30;s.threats=0;int count=0;for(Object p:Social.nearby(n,Social.PLAYER,20)){if(++count>24)break;if(CalmBrain.alive(p)&&!Social.member(n,p)&&Social.visible(n,p))s.threats++;}}
+ boolean danger=injured(n)||s.threats>1||now-s.hit<35||watched(n,target,now);Tactics24.State tactics=Tactics24.state(n);
+ if((danger||reload)&&now>=s.retreatNext){s.retreat=now+60;s.retreatNext=now+160;tactics.coverAt=0;}
+ if(now<s.retreat||reload){double[]p=Tactics24.spot(n,target,tactics,now);if(p==null)return false;if(Tactics24.dist(n,p)>1.6){s.aid=-1;s.until=0;Tactics24.stance(n,false,true,false);c(n,"aim",false);if(now>=tactics.decision){tactics.decision=now+12;Tactics24.move(n,p,1.15);}return true;}
+ // Never stop to treat/eat in a point which does not actually occlude the opponent.
+ if(!tactics.covered)return false;stop(n);if(now-s.hit<12){s.aid=-1;s.until=0;return true;}
+ if(injured(n)&&NpcMedicine.supply(n,false)!=null){if(s.aid<0){s.aid=now;s.retreat=Math.max(s.retreat,now+65);Combat26.packet(n,9);}if(now-s.aid>=60){if(NpcMedicine.healNpc(n,5f))NpcMedicine.consume(n,false);s.aid=-1;s.retreat=now+12;}return true;}
+ service(n,s,now,true);if(s.until>0)s.retreat=Math.max(s.retreat,s.until+5);return true;}
+ s.aid=-1;s.until=0;return false;
+ }
+ public static boolean scanning(Object n){return Sense28.active(n);}
+ public static boolean takingCover(Object n){State s=STATES.get(n);return s!=null&&(Social.time(n)<s.retreat||s.until>Social.time(n));}
+ static boolean corners(Object n,long now)throws Exception{return Sense28.corner(n,now);}
+ static String kind(Object item)throws Exception{if(CalmLoot.empty(item))return "";Object food=c(item,"get",Reflect.field(Reflect.type("net.minecraft.core.component.DataComponents"),"FOOD"));if(food!=null&&Social.num(c(food,"nutrition"))>0)return "food";if(CalmLoot.id(item).equals("minecraft:potion")){Object contents=c(item,"get",Reflect.field(Reflect.type("net.minecraft.core.component.DataComponents"),"POTION_CONTENTS"));if(contents!=null&&Reflect.yes(c(contents,"is",Reflect.field(Reflect.type("net.minecraft.world.item.alchemy.Potions"),"WATER"))))return "water";}return "";}
+ static void sound(Object n,String key)throws Exception{Object sound=Reflect.field(Reflect.type("net.minecraft.sounds.SoundEvents"),key);c(n,"playSound",sound,.45f,1f);}
+ static void service(Object n,State s,long now,boolean safe)throws Exception{if(!safe){s.until=0;return;}Object tag=Social.tag(n);if(!Reflect.yes(c(tag,"getBoolean","npc27_needs"))){c(tag,"putBoolean","npc27_needs",true);c(tag,"putLong","npc27_food_at",now+6000);c(tag,"putLong","npc27_water_at",now+3600);return;}
+ if(s.until>0){stop(n);if(now<s.until){if(now%10==0)sound(n,s.kind.equals("food")?"GENERIC_EAT":"GENERIC_DRINK");return;}List<Object> bag=CalmLoot.bag(n);for(Object item:bag){if(!CalmLoot.id(item).equals(s.item)||!kind(item).equals(s.kind))continue;c(item,"shrink",1);if(s.kind.equals("water"))bag.add(CalmLoot.stack("minecraft:glass_bottle"));c(tag,"putLong",s.kind.equals("food")?"npc27_food_at":"npc27_water_at",now+(s.kind.equals("food")?6000:3600));for(int i=bag.size()-1;i>=0;i--)if(CalmLoot.empty(bag.get(i)))bag.remove(i);CalmLoot.saveBag(n,bag);break;}s.until=0;return;}
+ if(now<s.serviceAt)return;s.serviceAt=now+80;boolean food=Social.l(tag,"npc27_food_at")<=now,water=Social.l(tag,"npc27_water_at")<=now;if(!food&&!water)return;for(Object item:CalmLoot.bag(n)){String k=kind(item);if((food&&k.equals("food"))||(water&&k.equals("water"))){s.kind=k;s.item=CalmLoot.id(item);s.until=now+40;Combat26.packet(n,k.equals("food")?7:8);stop(n);break;}}
+ }
+ public static void afterSearch(Object n){try{if(!Social.client(n)&&Radio22.searching(n))corners(n,Social.time(n));}catch(Exception e){CalmBrain.error("tactics27 search corners",e);}}
+ public static void idle(Object n){try{if(Social.client(n)||!Social.actor(n)||!Social.alive(n)||Downed20.down(n)||Social.pause(n))return;long now=Social.time(n);State s=state(n);Object target=CalmBrain.state(n).target;if(target==null){service(n,s,now,now-s.hit>120);if(s.until==0&&Radio22.searching(n))corners(n,now);}else if(!Social.visible(n,target))corners(n,now);}catch(Exception e){CalmBrain.error("tactics27 supplies/corners",e);}}
+}
