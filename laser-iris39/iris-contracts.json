@@ -1,0 +1,12 @@
+{
+  "iris_source_commit": "eb7afb99f747cc8ed5ee4072119539035d33cefd",
+  "branch": "1.21.1",
+  "methods": [
+    "PipelineManager.getPipeline",
+    "RenderTargets.getDepthTextureNoHand",
+    "DepthTexture.getTextureId"
+  ],
+  "field": "IrisRenderingPipeline.renderTargets",
+  "no_iris_depth_ownership_transfer": true,
+  "minecraft_runtime_tested": false
+}

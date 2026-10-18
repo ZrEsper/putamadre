@@ -1,0 +1,18 @@
+{
+  "profile": "iG1IbFSr0X",
+  "duration_seconds": 59.367,
+  "thread": "Render thread",
+  "total_sample_ms": 58928,
+  "tree_union_percent": {
+    "laser": 19.8,
+    "playeranimator": 14.261,
+    "tacz": 19.135,
+    "flashlight": 2.987,
+    "nvg": 4.758,
+    "npc_render": 0.17
+  },
+  "laser_copy_self_percent": 18.884,
+  "server_profile_available": false,
+  "post_patch_benchmark_available": false,
+  "note": "Inclusive trees overlap; do not add percentages. Animation samples include CorpseRenderer dummy players."
+}

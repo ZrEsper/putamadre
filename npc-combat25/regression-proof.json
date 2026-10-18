@@ -1,0 +1,6 @@
+{
+  "old_npc24_fails_new_test": true,
+  "reason": "NoSuchMethodException: ShooterDataHolder.reloadStateType is a field",
+  "new_npc25_checks_passed": 37,
+  "minecraft_runtime_tested": false
+}
