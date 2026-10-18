@@ -1,0 +1,9 @@
+Fracture Point .11 — Estática permanente en todos los filtros
+
+Reemplaza fracturepoint .10 por fracturepoint-1.21.1-3.0.0-PT2-nvg-persistent-static.11.jar. No dejes dos versiones de Fracture Point en mods. Cierra y vuelve a iniciar el juego para cargar los nuevos shaders.
+
+El grano animado se aplica a cada fotograma durante toda la visión activa, sin depender de oscuridad, movimiento ni daño. La amplitud del grano pasa de .010 a .070; las líneas y bandas siguen siendo suaves para permitir leer el entorno. Se aplica a los ocho filtros, incluido el térmico híbrido. No se añade estática fuera del visor ni se cubren los menús con una superposición.
+
+Los píxeles marcados como láser conservan su color original. El tinte rojo y las texturas térmicas se conservan. Los sonidos inmediatos de encendido y apagado, control manual con N, energía y modelos son idénticos a .10: solo cambian ocho shaders de visión.
+
+Validado: 139 comprobaciones con shaders compilados y renderizados en OpenGL, incluidas presencia constante, variación entre fotogramas, contraste de entidades y color de láser; 11 comprobaciones del sonido y 3 de texturas. La prueba de intensidad mínima falla con .10. No se ejecutó Minecraft ni se comprobó visualmente el modpack en este entorno.
