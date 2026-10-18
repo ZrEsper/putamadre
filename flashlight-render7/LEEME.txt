@@ -1,0 +1,22 @@
+Linterna .7 y control compatible de Zomboid Integration — NeoForge 1.21.1
+
+INSTALACIÓN
+Reemplaza flashlight .6 por flashlight .7 y Zomboid Integration 1.7.9 por el archivo 1.7.10 de este paquete. No dejes dos versiones de ninguno. Instala ambos en cliente y servidor. Conserva Darkness .4 y tctcore. No hace falta empezar otro mundo.
+
+CAUSAS OBSERVADAS
+El video muestra que la expedición no ilumina y el aviso de que no llevas una linterna. latest.log confirma flashlight .6 cargado y errores OpenGL GL_INVALID_OPERATION: Array object is not active repetidos desde 20:49:12.
+El manejador de Zomboid Integration reconocía únicamente las dos linternas básicas, cambiaba el objeto mediante su propio sistema y consultaba una batería antigua. No reconocía expedición, eco ni táctica.
+El pase gráfico .6 enlazaba texturas directamente sin actualizar la caché de Minecraft y no invalidaba la caché de vértices al restaurar el VAO. Esto dejaba un estado incoherente al volver al render nativo.
+
+CAMBIOS
+El enlace de texturas utiliza GlStateManager; se invalida BufferUploader antes de la captura y al restaurar el estado. Se comprueban errores OpenGL al terminar el pase: si falla, se registra el error y se desactiva el cono para no repetirlo cada fotograma. La iluminación por bloques de Integration sigue como respaldo.
+Integration delega reconocimiento, encendido y cambio de modelos al sistema Power de la linterna. La tecla existente admite los cuatro modelos, con su carga real y sin convertirlos en el básico. El clic derecho sigue usando Power directamente y evita el procedimiento antiguo que Integration cancelaba.
+Se conservan las recetas, baterías, encendido al revivir y la compatibilidad de Darkness.
+
+USO
+Encender/apagar: clic derecho con la linterna o la tecla de linterna que ya tienes asignada en Zomboid Integration.
+Recargar: batería en el cursor y clic derecho sobre la linterna en el inventario; también Shift + clic derecho con la linterna.
+
+VALIDACIÓN
+Bytecode ASM verificado. Regresión de caché de texturas reproducida contra .6 y aprobada con .7. Pruebas de encendido por tecla de los cuatro modelos, consumo de batería, recarga, encendido al revivir, sombras y límite de rayos aprobadas. Pruebas existentes de shaders del cono y Darkness aprobadas.
+No se ejecutó Minecraft: falta confirmar el resultado visual y la ausencia del error en el modpack real. Si vuelve a fallar, latest.log incluirá [Flashlight6] con el fallo o [Flashlight7] Cone rendered successfully al completar el primer pase.

@@ -1,0 +1,24 @@
+{
+  "outputs": [
+    {
+      "file": "flashlight-5.1-neoforge-1.21.1-cone-state-controls.7.jar",
+      "sha256": "97240bba7118fa588bf8dc15ced1f5466b45c237f41ad93f27e64200a4b764a7",
+      "changed": [
+        "net/flashlight/battery/Engine6.class",
+        "net/flashlight/battery/G6$State.class",
+        "net/flashlight/battery/G6.class",
+        "net/flashlight/battery/Power.class"
+      ],
+      "added": []
+    },
+    {
+      "file": "zomboid-integration-1.7.10-neoforge-1.21.1-flashlight-controls.jar",
+      "sha256": "f6690f2065320a2401b81af34ec8e2f422e2ad7e5d2b9b425ff849cfc07a74af",
+      "changed": [
+        "dev/zomboid/integration/Lamps.class"
+      ],
+      "added": []
+    }
+  ],
+  "minecraft_runtime_tested": false
+}

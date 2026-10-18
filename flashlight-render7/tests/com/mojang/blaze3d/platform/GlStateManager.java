@@ -1,0 +1,1 @@
+package com.mojang.blaze3d.platform;import org.lwjgl.opengl.*;public class GlStateManager{public static int active=33984;public static int[]textures=new int[16];public static void _activeTexture(int n){if(active!=n){active=n;GL13.glActiveTexture(n);}}public static void _bindTexture(int t){int i=active-33984;if(textures[i]!=t){textures[i]=t;GL11.glBindTexture(3553,t);}}}
