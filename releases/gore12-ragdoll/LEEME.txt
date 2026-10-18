@@ -1,0 +1,26 @@
+GORE + RAGDOLLIFIED — NeoForge 1.21.1
+
+INSTALACIÓN
+Reemplaza las versiones anteriores de Gore, Ragdollified y Mob Dismemberment por los tres JAR de este paquete. No dejes duplicados.
+Gore y Ragdollified: misma versión en cliente y servidor. Cambió el paquete de sincronización de cadáveres.
+Mob Dismemberment: solo cliente. Splatter: conserva su instalación habitual; el JAR blood-budget.2 incluido es idéntico al adjuntado.
+
+CAMBIOS
+- Solo las explosiones separan miembros completos. Las muertes normales no desarman el cuerpo.
+- Los disparos mantienen daño localizado: mano destrozada, roturas en codo y brazo, heridas de pierna, cráneo abierto y ojo desplazado con tejido de unión.
+- Los daños de mano/codo/brazo se acumulan; un impacto posterior no reconstruye una parte ya dañada.
+- Mantiene la muerte rápida por disparos de cabeza de la versión 1.0.11. Esto solo afecta zombis; no altera la salud por partes de los jugadores.
+- El ragdoll conserva el estado de las heridas y los miembros ausentes; el estado viaja con el cadáver, también para jugadores que se acercan después de su muerte.
+- Con Ragdollified activo, los fragmentos de explosiones de zombis corresponden a partes separadas, sin duplicar el torso. Los otros mobs desmembrados no dejan un segundo cuerpo intacto de Ragdollified.
+- Chorros breves desde heridas y cadáveres cercanos. Presupuesto compartido de hasta 48 partículas adicionales por tick, alcance de 32 bloques, duración aproximada de cuatro segundos. Las manchas conservan el límite anterior de Splatter.
+- Conserva 128 fragmentos máximos y su retirada tras 10 segundos; acorta las partículas nativas de explosiones a un máximo de 40 ticks.
+
+VALIDACIÓN
+Compilación Java; verificación ASM de 36 clases; pruebas de daño regional, separación exclusiva por explosiones, acumulación, guardado de heridas, máscaras de miembros, copias a cadáveres y geometría; revisión de las rutas de muerte local/servidor, campos de red y presupuesto de partículas.
+No se ejecutó el cliente gráfico de Minecraft. Debe comprobarse visualmente con el pack completo. Los modelos humanoides usan sus cubos y UV originales cuando son accesibles; si un modelo externo no expone esos cubos, la zona herida utiliza geometría humanoide de respaldo. No se promete adaptación exacta a todos los modelos o armaduras externos.
+
+PRUEBA RÁPIDA EN UN MUNDO DE PRUEBA
+1. Mata un zombi con melee: no debe explotar en miembros.
+2. Impacta mano, codo y cabeza: comprueba las heridas antes y después de caer.
+3. Mata varios zombis con TNT: comprueba los fragmentos y que las partes ausentes no reaparezcan en el cadáver.
+4. Otro jugador debe ver las mismas heridas al acercarse después.

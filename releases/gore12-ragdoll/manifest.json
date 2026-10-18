@@ -1,0 +1,72 @@
+[
+  {
+    "input": "attachments/258f1de9-de84-416f-b7f2-4a351cd758c4/zomboid-zombie-gore-1.0.11-neoforge-1.21.1-localized-ballistics.jar",
+    "input_sha256": "bea74446317d5fffb0e1919d953ac51589af6c7261fb012dd301adf41171a9e7",
+    "file": "zomboid-zombie-gore-1.0.12-neoforge-1.21.1-ragdoll-trauma.jar",
+    "sha256": "742893d39afe01d2b4dcb3104aa0a5d855a2a54f95bc2f294ab2ef7f6fdcc12e",
+    "modified": [
+      "META-INF/neoforge.mods.toml",
+      "dev/zomboid/gore/Events.class",
+      "dev/zomboid/gore/Gore.class",
+      "zomboid_gore.mixins.json",
+      "dev/zomboid/gore/Ballistics11.class",
+      "dev/zomboid/gore/Visual11.class"
+    ],
+    "added": [
+      "dev/zomboid/gore/Skin12$Context.class",
+      "dev/zomboid/gore/Skin12.class",
+      "dev/zomboid/gore/Mesh12$Face.class",
+      "dev/zomboid/gore/Mesh12$Quad.class",
+      "dev/zomboid/gore/Mesh12$Vertex.class",
+      "dev/zomboid/gore/Mesh12.class",
+      "dev/zomboid/gore/Mesh12$Cube.class",
+      "dev/zomboid/gore/Mesh12$1.class",
+      "dev/zomboid/gore/Trauma12.class",
+      "dev/zomboid/gore/Blood12.class",
+      "dev/zomboid/gore/Rag12.class",
+      "dev/zomboid/gore/Mesh12$Box.class",
+      "dev/zomboid/gore/mixin/WoundModel12.class",
+      "dev/zomboid/gore/mixin/LivingWound12.class",
+      "dev/zomboid/gore/mixin/ExplosionEvent12.class",
+      "assets/zomboid_gore/textures/entity/trauma12.png"
+    ]
+  },
+  {
+    "input": "attachments/c6625f9d-c74f-4427-a61d-d6e94911b74f/ragdollified-1.21.1-1.1.5.jar",
+    "input_sha256": "3a4919fe988d27377a917fdd1d88965621b1d4f81d36b04625d9bae30cbbc7c6",
+    "file": "ragdollified-1.21.1-1.1.5-gore-preservation.1.jar",
+    "sha256": "dc128dcb0ccdc61ffa3a6974c3713f84b85efbaaca87a15f465f9f1fea022b6e",
+    "modified": [
+      "com/raiiiden/ragdollified/client/ClientRagdoll$SpawnData.class",
+      "com/raiiiden/ragdollified/client/ClientRagdoll.class",
+      "com/raiiiden/ragdollified/client/ClientRagdollManager.class",
+      "com/raiiiden/ragdollified/client/ClientRagdollRenderer.class",
+      "com/raiiiden/ragdollified/network/ModNetwork.class",
+      "com/raiiiden/ragdollified/network/RagdollSpawnPacket.class",
+      "com/raiiiden/ragdollified/PhysicsHooks.class",
+      "com/raiiiden/ragdollified/server/ServerRagdollSyncManager.class",
+      "META-INF/neoforge.mods.toml"
+    ],
+    "added": []
+  },
+  {
+    "input": "attachments/0e9297d0-5a7c-43a5-962f-6181858d3f04/mobdismembermentneoforge-1.21.1-1.4.0-bounded-gibs.1.jar",
+    "input_sha256": "c5c3dd7885d1cde844af0bf79049519a3bb19364426276e40b1ae31796f7ec1c",
+    "file": "mobdismembermentneoforge-1.21.1-1.4.0-explosions-only.2.jar",
+    "sha256": "95a5c32f0fb547fede9c7fdad284cc6b2b2775bd56685083100443e52d1de482",
+    "modified": [
+      "me/ichun/mods/mobdismemberment/client/core/EventHandlerClient.class",
+      "me/ichun/mods/mobdismemberment/client/particle/ParticleBlood.class",
+      "META-INF/neoforge.mods.toml"
+    ],
+    "added": []
+  },
+  {
+    "input": "attachments/2aa218b1-7b0f-4032-aca6-23fe6d32e10a/splatter-1.21.1-0.3.0-neoforge-blood-budget.2.jar",
+    "input_sha256": "3088c823183190d9ed716916b420bd375340b1049e19cd18e4f56a32c6965754",
+    "file": "splatter-1.21.1-0.3.0-neoforge-blood-budget.2.jar",
+    "sha256": "3088c823183190d9ed716916b420bd375340b1049e19cd18e4f56a32c6965754",
+    "modified": [],
+    "added": []
+  }
+]
