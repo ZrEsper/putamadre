@@ -1,0 +1,20 @@
+Correcciones visuales y apuntado rápido — NeoForge 1.21.1
+
+INSTALACIÓN
+Cierra el juego. Reemplaza las versiones anteriores de estos cuatro mods por las cuatro incluidas:
+- Flashlight .12 -> Flashlight .13 soft-current-shadow
+- Fracture Point .12 -> Fracture Point .13 nvg-hands-final-pass
+- Global Melee v35 -> Global Melee v36 laser-color-only
+- Zomboid Integration 1.7.13 -> Zomboid Integration 1.7.14 fast-player-ads
+Deja una sola versión de cada mod. Conserva tu JAR actual de TaCZ, Iris, Sodium, Darkness y las cámaras. No necesitas un mundo nuevo.
+En servidor multijugador, actualiza también Integration para que el tiempo de apuntado del jugador coincida en cliente y servidor.
+
+CAMBIOS
+Visión nocturna: el filtro se aplica después de dibujar las manos y el arma, antes de la interfaz. Conserva N manual, efectos, estática, texturas y sonido.
+Linternas: radio de las cuatro variantes un 24 % mayor a igual distancia. Un solo cono. Las sombras visibles usan la profundidad del frame actual en vez de la proyección cuadriculada atrasada; el mapa de colisiones queda como respaldo para tramos fuera de pantalla. Se suaviza la transición y se limita el espesor para evitar falsas sombras lejanas. Se conserva la captura aislada para Iris.
+Láser: el tipo de render anterior escribía profundidad y podía actuar como un obstáculo para la linterna. El nuevo haz solo escribe color; conserva prueba de profundidad, color aditivo y colisión contra paredes. No cambia su eje físico ni lo dirige al cursor.
+TaCZ: tiempo base de apuntado del jugador limitado a 50 ms en cliente y servidor, conservando la interpolación nativa y las restricciones de desenfundado/recarga. Los tiempos más rápidos no se ralentizan y los NPC no reciben este cambio.
+
+PRUEBAS Y LÍMITES
+Pruebas de código, bytecode, construcción de estados y GLSL con OpenGL real aprobadas. Se reproducen los saltos del mapa anterior, la profundidad falsa del láser y el caso del filtro antes de las manos. Se comprueban batería, inventario, cámaras, oclusión, vegetación, texturas, audio y el cambio de ADS.
+No se ejecutó aquí el modpack completo ni un shaderpack real. Hay que comprobar el aspecto en tu partida. Las sombras de pantalla conservan limitaciones con geometría muy fina u oculta; no se garantiza la apariencia de todos los shaderpacks existentes.

@@ -1,0 +1,24 @@
+{
+  "real_opengl_render": true,
+  "native_depth_write_makes_beam_solid": true,
+  "new_color_only_preserves_depth_and_wall_occlusion": true,
+  "cases": {
+    "True_behind_False": {
+      "depth_pixels_changed": 88,
+      "added_red": 0.9843137264251709
+    },
+    "True_behind_True": {
+      "depth_pixels_changed": 0,
+      "added_red": 0.0
+    },
+    "False_behind_False": {
+      "depth_pixels_changed": 0,
+      "added_red": 0.9843137264251709
+    },
+    "False_behind_True": {
+      "depth_pixels_changed": 0,
+      "added_red": 0.0
+    }
+  },
+  "minecraft_runtime_tested": false
+}

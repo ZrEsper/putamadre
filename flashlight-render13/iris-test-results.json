@@ -1,0 +1,8 @@
+{
+  "checks": [
+    "IRIS_ACTIVE_PACK_SCOPE_RESTORE_CHECKS=18003",
+    "CAPTURE_BEFORE_FINALIZE_COMPOSITE_AFTER_FINALIZE",
+    "NO_PERMANENT_DISABLE_ON_FRAME_FAILURE"
+  ],
+  "minecraft_shaderpack_runtime_tested": false
+}

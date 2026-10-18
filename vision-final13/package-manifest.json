@@ -1,0 +1,10 @@
+{
+  "files": {
+    "flashlight-5.1-neoforge-1.21.1-soft-current-shadow.13.jar": "346a1221a3d9f0be91752ae46ecdcd1c9d7e4ce4263192ddee2d3e3232e34608",
+    "fracturepoint-1.21.1-3.0.0-PT2-nvg-hands-final-pass.13.jar": "412b48a442e98a30ac38e32f7f30eb1ccf75ed06b4ca5ff9d653bf00383e1b89",
+    "zomboid-global-melee-animations-2.3.1-v36-laser-color-only.jar": "30de4026b9f338bd7ce629cb183aa270e7c6edfc75a82cfc7e8aa2113db5ca40",
+    "zomboid-integration-1.7.14-neoforge-1.21.1-fast-player-ads.jar": "d661d125550af14cd4214b6ff4a6eab8ac0bff04039d987e3a9dd5e9fd0af4fb"
+  },
+  "minecraft_runtime_tested": false,
+  "shaderpack_runtime_tested": false
+}

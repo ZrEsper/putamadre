@@ -1,0 +1,15 @@
+{
+  "hybrid_hands_tinted": [
+    0.1631234884262085,
+    0.3636954426765442,
+    0.44752955436706543
+  ],
+  "hybrid_weapon_tinted": [
+    0.06996690481901169,
+    0.16768239438533783,
+    0.2153567522764206
+  ],
+  "texture_contrast_preserved": true,
+  "real_glsl_render": true,
+  "minecraft_runtime_tested": false
+}

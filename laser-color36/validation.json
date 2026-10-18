@@ -1,0 +1,8 @@
+{
+  "file": "zomboid-global-melee-animations-2.3.1-v36-laser-color-only.jar",
+  "sha256": "30de4026b9f338bd7ce629cb183aa270e7c6edfc75a82cfc7e8aa2113db5ca40",
+  "only_existing_class_changed": [
+    "dev/zomboidmelee/boxing/Laser32.class"
+  ],
+  "minecraft_runtime_tested": false
+}

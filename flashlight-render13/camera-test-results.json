@@ -1,0 +1,46 @@
+{
+  "checks": 12,
+  "real_glsl_render": true,
+  "cases": {
+    "first": {
+      "entity_original_texture": [
+        0.027750318869948387,
+        0.13468240201473236,
+        0.03309395909309387
+      ],
+      "wall_in_cone": [
+        0.4943462908267975,
+        0.09586227685213089,
+        0.05032876878976822
+      ],
+      "projection": "perspective"
+    },
+    "third": {
+      "entity_original_texture": [
+        0.027744246646761894,
+        0.13465262949466705,
+        0.03308643028140068
+      ],
+      "wall_in_cone": [
+        0.4940677881240845,
+        0.09580772370100021,
+        0.050299398601055145
+      ],
+      "projection": "perspective"
+    },
+    "isometric": {
+      "entity_original_texture": [
+        0.02774416282773018,
+        0.13465221226215363,
+        0.03308632969856262
+      ],
+      "wall_in_cone": [
+        0.4951273500919342,
+        0.09601523727178574,
+        0.05041113868355751
+      ],
+      "projection": "orthographic"
+    }
+  },
+  "minecraft_runtime_tested": false
+}

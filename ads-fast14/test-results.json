@@ -1,0 +1,7 @@
+{
+  "checks": [
+    "REAL_GENERATED_ADS_HOOK_50MS_PLAYER_ONLY_NATIVE_TARGET_CHECKS=39",
+    "NO_RUNTIME_HELPERS_INSIDE_RESERVED_MIXIN_PACKAGES"
+  ],
+  "minecraft_runtime_tested": false
+}

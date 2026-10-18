@@ -1,0 +1,17 @@
+{
+  "file": "flashlight-5.1-neoforge-1.21.1-soft-current-shadow.13.jar",
+  "sha256": "346a1221a3d9f0be91752ae46ecdcd1c9d7e4ce4263192ddee2d3e3232e34608",
+  "changed": [
+    "assets/flashlight/shaders/portable6.frag",
+    "flashlight.mixins.json",
+    "net/flashlight/battery/Engine6.class",
+    "net/flashlight/battery/G6$State.class",
+    "net/flashlight/battery/Light6.class",
+    "net/flashlight/battery/Power.class"
+  ],
+  "added": [
+    "net/flashlight/battery/Iris12.class",
+    "net/flashlight/mixin/CaptureStage9.class"
+  ],
+  "minecraft_runtime_tested": false
+}
