@@ -1,0 +1,15 @@
+Fracture Point .10 — interferencia, audio inmediato y textura térmica
+
+INSTALAR
+Reemplaza fracturepoint ... nvg-laser-colors.9.jar por el .10 de este paquete. No dejes los dos. Conserva los demás mods y sus configuraciones. El formato de red, las baterías, las recetas y el modelo de cuatro lentes se conservan.
+
+CAMBIOS
+Los ocho filtros (nocturna, simple, digital verde/blanca, térmica, blanca/caliente, negra/caliente e híbrida) reciben grano fino, líneas de barrido e interferencia móvil muy tenue. Cada modo conserva su paleta. El láser sigue conservando su color.
+
+El sonido ON/OFF se reproduce localmente al aceptarse la pulsación de N que inicia el movimiento del visor. Ya no espera a que la animación termine y llegue el cambio de estado. La confirmación posterior no repite el sonido. Al apagar se usa la grabación OFF, distinta de ON. Los intentos ignorados durante otra animación no suenan; sin batería no se reproduce un encendido falso. Se conserva la activación manual por N y visor abajo.
+
+El render de entidades de la térmica híbrida conserva su textura original en lugar de cambiarla por una textura blanca. Mantiene el marcado térmico y la iluminación de las entidades, pero mezcla la textura con un rojo cálido menos plano: se distinguen piel, ropa y dibujo del personaje. Las térmicas blanca/negra mantienen sus colores propios.
+
+PRUEBAS
+59 comprobaciones reales OpenGL/EGL: ocho filtros compilados y dibujados, interferencia tenue, contraste de textura, rojo híbrido y colores del láser. Prueba del método NvgClient2.key del JAR producido: ON/OFF inmediato antes del cambio del visor, sin duplicado tras la animación. Pruebas del buffer real HybridClient6 con textura y marcado alpha. Controles negativos contra .9 reproducen el retraso de sonido y el reemplazo de textura por blanco.
+No se ejecutó Minecraft en este entorno; falta confirmar la apariencia y sincronización con el modpack.

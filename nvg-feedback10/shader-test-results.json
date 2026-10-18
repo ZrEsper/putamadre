@@ -1,0 +1,42 @@
+{
+  "checks": 59,
+  "eight_filters_compiled_and_rendered": true,
+  "renderer": "llvmpipe (LLVM 19.1.7, 256 bits)",
+  "results": {
+    "assets/fracturepoint/shaders/program/digital-green-vision.fsh": {
+      "interference_peak": 0.00660039484500885
+    },
+    "assets/fracturepoint/shaders/program/digital-white-vision.fsh": {
+      "interference_peak": 0.00660039484500885
+    },
+    "hybrid_dark_texture": [
+      0.3149164915084839,
+      0.06583172082901001,
+      0.05463690683245659
+    ],
+    "hybrid_bright_texture": [
+      0.8672184348106384,
+      0.3620225191116333,
+      0.33931708335876465
+    ],
+    "assets/fracturepoint/shaders/program/hybrid-thermal-vision.fsh": {
+      "interference_peak": 0.006600391119718552
+    },
+    "assets/fracturepoint/shaders/program/night-vision.fsh": {
+      "interference_peak": 0.00660039484500885
+    },
+    "assets/fracturepoint/shaders/program/simple-night-vision.fsh": {
+      "interference_peak": 0.00660039484500885
+    },
+    "assets/fracturepoint/shaders/program/thermal-black-vision.fsh": {
+      "interference_peak": 0.006600402295589447
+    },
+    "assets/fracturepoint/shaders/program/thermal-vision.fsh": {
+      "interference_peak": 0.006600402295589447
+    },
+    "assets/fracturepoint/shaders/program/thermal-white-vision.fsh": {
+      "interference_peak": 0.006600391119718552
+    }
+  },
+  "minecraft_runtime_tested": false
+}

@@ -1,0 +1,1 @@
+package net.minecraft.client.resources.sounds;public record SimpleSoundInstance(net.minecraft.sounds.SoundEvent event){public static SimpleSoundInstance forUI(net.minecraft.sounds.SoundEvent s,float p,float v){return new SimpleSoundInstance(s);}}

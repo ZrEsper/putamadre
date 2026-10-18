@@ -1,0 +1,31 @@
+{
+  "file": "fracturepoint-1.21.1-3.0.0-PT2-nvg-interference-audio-textures.10.jar",
+  "sha256": "b88e404e65db569576b39d19b1d995b9ad5ea2dcc38e73f2db14a39ce5d6d292",
+  "filters": [
+    "assets/fracturepoint/shaders/program/digital-green-vision.fsh",
+    "assets/fracturepoint/shaders/program/digital-white-vision.fsh",
+    "assets/fracturepoint/shaders/program/hybrid-thermal-vision.fsh",
+    "assets/fracturepoint/shaders/program/night-vision.fsh",
+    "assets/fracturepoint/shaders/program/simple-night-vision.fsh",
+    "assets/fracturepoint/shaders/program/thermal-black-vision.fsh",
+    "assets/fracturepoint/shaders/program/thermal-vision.fsh",
+    "assets/fracturepoint/shaders/program/thermal-white-vision.fsh"
+  ],
+  "changed": [
+    "assets/fracturepoint/shaders/program/digital-green-vision.fsh",
+    "assets/fracturepoint/shaders/program/digital-white-vision.fsh",
+    "assets/fracturepoint/shaders/program/hybrid-thermal-vision.fsh",
+    "assets/fracturepoint/shaders/program/night-vision.fsh",
+    "assets/fracturepoint/shaders/program/simple-night-vision.fsh",
+    "assets/fracturepoint/shaders/program/thermal-black-vision.fsh",
+    "assets/fracturepoint/shaders/program/thermal-vision.fsh",
+    "assets/fracturepoint/shaders/program/thermal-white-vision.fsh",
+    "com/raiiiden/warborn/client/util/NvgClient2.class",
+    "com/raiiiden/warborn/hybrid/HybridClient6$MeshSource.class",
+    "com/raiiiden/warborn/hybrid/Tactical7.class"
+  ],
+  "added": [
+    "com/raiiiden/warborn/hybrid/Sound10.class"
+  ],
+  "minecraft_runtime_tested": false
+}
