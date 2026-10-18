@@ -1,0 +1,14 @@
+#version 150
+uniform sampler2D Scene,Depth,Albedo,Shadow;
+uniform mat4 InverseViewProjection,ViewProjection;
+uniform int Count;uniform vec2 FogDistance;
+uniform vec3 Origin[2],Forward[2],Right[2],Up[2];
+uniform vec3 ShadowOrigin[2],ShadowForward[2],ShadowRight[2],ShadowUp[2];
+uniform float Range[2],HalfTan[2];
+in vec2 texCoord;out vec4 fragColor;
+// Current-frame depth resolves contact shadows; old ray-map edges never cut off a newly turned beam.
+float screenShadow(vec3 origin,vec3 p){float visibility=1.;for(int step=1;step<=8;step++){vec3 q=mix(origin,p,float(step)/9.);vec4 clip=ViewProjection*vec4(q,1.);if(clip.w<=.001)continue;vec3 ndc=clip.xyz/clip.w;vec2 uv=ndc.xy*.5+.5;if(any(lessThan(uv,vec2(.002)))||any(greaterThan(uv,vec2(.998))))continue;float d=texture(Depth,uv).r;if(d>=.999999)continue;vec4 h=InverseViewProjection*vec4(ndc.xy,d*2.-1.,1.);vec3 surface=h.xyz/h.w;float delta=length(q)-length(surface);visibility=min(visibility,1.-smoothstep(.08,.20,delta));}return visibility;}
+float shadow(int i,vec3 p){float current=screenShadow(Origin[i],p);vec3 d=p-ShadowOrigin[i];float z=dot(d,ShadowForward[i]);vec2 uv=vec2(dot(d,ShadowRight[i]),dot(d,ShadowUp[i]))/(max(.01,z)*HalfTan[i]*1.4)*.5+.5;if(z<=0.0||any(lessThan(uv,vec2(0)))||any(greaterThan(uv,vec2(1))))return current;float sum=0.;for(int y=-1;y<=1;y++)for(int x=-1;x<=1;x++){vec2 q=clamp(uv+vec2(x,y)/12.,vec2(.5/12.),vec2(11.5/12.));q.y=(q.y+float(i))/2.;float limit=texture(Shadow,q).r;sum+=1.-smoothstep(limit+.10,limit+.35,z);}float edge=min(min(uv.x,uv.y),min(1.-uv.x,1.-uv.y));float mapped=mix(1.,sum/9.,smoothstep(0.,.12,edge));return min(current,mapped);}
+
+void main(){vec4 base=texture(Scene,texCoord);float depth=texture(Depth,texCoord).r;if(depth>=.999999||abs(base.a-251./255.)<.0015){fragColor=base;return;}vec4 h=InverseViewProjection*vec4(texCoord*2.-1.,depth*2.-1.,1);vec3 p=h.xyz/h.w;vec3 gradient=cross(dFdx(p),dFdy(p));float gradientLength=length(gradient);vec3 normal=gradientLength>.000001?gradient/gradientLength:normalize(-p);if(dot(normal,p)>0.)normal=-normal;float fog=FogDistance.y>FogDistance.x+.1?1.-smoothstep(FogDistance.x,FogDistance.y,length(p)):1.;vec4 albedo=texture(Albedo,texCoord);if(albedo.a<.01){fragColor=base;return;}vec3 light=vec3(0);float coverage=0.;for(int i=0;i<Count;i++){vec3 v=p-Origin[i];float distance=length(v);float c=dot(v/max(.001,distance),Forward[i]);float outer=inversesqrt(1.+HalfTan[i]*HalfTan[i]),inner=inversesqrt(1.+HalfTan[i]*HalfTan[i]*.40);float spot=smoothstep(outer,inner,c);float fade=pow(clamp(1.-distance/Range[i],0.,1.),1.3);if(spot<.0001||fade<.0001)continue;float incidence=.25+.75*max(0.,dot(normal,-v/max(.001,distance)));float power=spot*fade*shadow(i,p)*incidence*fog;light+=vec3(1.,.96,.86)*power*1.35;coverage=max(coverage,power);}
+vec3 response=light/(vec3(1.)+light*.35);vec3 lit=max(base.rgb,albedo.rgb*response);float a=coverage>.002&&abs(base.a-253./255.)>.0015?250./255.:base.a;fragColor=vec4(lit,a);}

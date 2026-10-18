@@ -1,0 +1,20 @@
+Linterna .8: un solo haz y corrección del recorte al girar — NeoForge 1.21.1
+
+REEMPLAZAR AMBOS
+- Flashlight .7 por flashlight .8.
+- Zomboid Integration 1.7.10 por el archivo 1.7.11.
+No dejar duplicados. Instalar ambos en cliente y servidor; conservar Darkness .4, tctcore y el mundo existente.
+
+QUÉ ESTABA MAL
+El mensaje del registro confirmaba que se ejecutaba el shader, no su calidad visual. El sistema de Integration también seguía colocando bloques de luz junto al jugador y a lo largo de su mirada cada dos ticks. Estos iluminaban alrededor y permanecían hasta caducar, además del cono nuevo: al mover la mirada aparecían parches/halo y luz que quedaba atrás.
+El mapa de sombras se actualiza por partes. Al girar fuera del mapa anterior, el shader anterior trataba esa zona como totalmente tapada y cortaba el haz nuevo.
+
+CORRECCIÓN
+Integration deja de colocar luz por bloques para jugadores. La linterna en mano principal o secundaria utiliza únicamente el cono de render. La ruta de luces arrojadas al suelo se conserva. Los bloques luminosos que ya existan desaparecen con su caducidad normal tras unos segundos.
+Las sombras cercanas se comprueban contra la profundidad del fotograma actual. Fuera del mapa anterior no se elimina el cono nuevo; sus bordes se mezclan y el filtrado de sombras pasa a nueve muestras. El arranque tampoco utiliza la distancia de un solo rayo para recortar todo el cono.
+No se aumentan los rayos de colisión ni se cargan chunks nuevos: siguen siendo máximo 48 rayos por tick y dos fuentes. Las muestras nuevas son lecturas de profundidad en GPU y se omiten fuera del alcance del cono.
+Los controles por tecla y clic derecho, carga de batería, recetas y colores con Darkness se conservan. Llevar la linterna en una de las manos para que ilumine; una linterna guardada no coloca luces ambientales en el mundo.
+
+PRUEBAS
+Compilación Java 21 y verificación de bytecode. Shader real en OpenGL/EGL: textura, alcance, oscuridad exterior, giro fuera del mapa viejo y bloqueo por geometría visible en el fotograma actual. Control negativo contra .7 reproduce el corte del haz al girar. Comprobación de que la ruta nativa de jugadores retorna antes de acceder al mundo y la ruta de objetos arrojados conserva el código original. Pruebas anteriores de controles, batería, recarga, caché gráfica y límites de rayos aprobadas.
+No se ejecutó Minecraft en este entorno: estas pruebas no sustituyen la comprobación visual con tu modpack.

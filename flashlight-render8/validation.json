@@ -1,0 +1,23 @@
+{
+  "outputs": [
+    {
+      "file": "flashlight-5.1-neoforge-1.21.1-single-cone-shadows.8.jar",
+      "sha256": "909aba700fbb46ed6e2c3b145de8382505da4cbf13279dedeadeb1f80cbdd636",
+      "changed": [
+        "assets/flashlight/shaders/portable6.frag",
+        "net/flashlight/battery/Engine6.class",
+        "net/flashlight/battery/Light6.class"
+      ],
+      "added": []
+    },
+    {
+      "file": "zomboid-integration-1.7.11-neoforge-1.21.1-single-cone.jar",
+      "sha256": "c856d395ea6a9df8a50bc578a2431441be6120f94908711841aaae9323e020bb",
+      "changed": [
+        "dev/zomboid/integration/Lamps.class"
+      ],
+      "added": []
+    }
+  ],
+  "minecraft_runtime_tested": false
+}
