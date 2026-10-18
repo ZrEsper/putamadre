@@ -1,0 +1,1 @@
+package mod.cdv.tnpc.tactical;import java.util.*;import net.minecraft.world.item.ItemStack;public class NightCombat{static Object data(Object s){return new GunFixture.Data();}static void supply(Object n,Object s,List<Object> bag,boolean army){((ItemStack)s).ammo=30;bag.add(new ItemStack("tacz:ammo",army?64:16));}}

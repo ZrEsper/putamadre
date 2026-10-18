@@ -1,0 +1,25 @@
+{
+  "tacz_api": {
+    "file": "tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.12-instant-door-kick.jar",
+    "class": "com/tacz/guns/api/item/IGun.class",
+    "class_sha256": "7f9c74885dcbf8141fa6b57f266f371f767c90bece8fe0e521059d6475ebfd4e",
+    "methods_inspected": [
+      "allowAttachment",
+      "installAttachment",
+      "getAttachmentId",
+      "setLaserColor"
+    ]
+  },
+  "fracture_api": {
+    "file": "fracturepoint-1.21.1-3.0.0-PT2-nvg-persistent-static.11.jar",
+    "class": "com/raiiiden/warborn/common/item/WBArmorItem.class",
+    "class_sha256": "31c925e438f47c06924c999cbb8b9cc16170c846aaa6a64c261840855111966e",
+    "methods_inspected": [
+      "setInsertedGoggles",
+      "setInsertedBattery",
+      "getInsertedBattery",
+      "getInsertedGoggles",
+      "setTopOpen"
+    ]
+  }
+}

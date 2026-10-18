@@ -1,0 +1,6 @@
+{
+  "checks": 88,
+  "native_skins_sounds_dialogue_preserved": true,
+  "no_game_api_stubs_shipped": true,
+  "minecraft_runtime_tested": false
+}

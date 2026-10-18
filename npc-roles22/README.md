@@ -1,0 +1,15 @@
+# TacZ NPCs .22: perfiles de aparición y militar
+
+Base .21 subida por el usuario, fijada por SHA en inputs.json. `python npc-roles22/build.py` requiere Java 21, ECJ/ASM de hordes-melee-interiors-patch y las API de compilación de npc-social17. El entorno ya las contiene; no se cambia su configuración. Las API/fixtures no se empaquetan.
+
+`python npc-roles22/test.py` reutiliza las fixtures de npc-social17 y añade dobles de registro, armas y componentes del casco. Ejecuta EggRegistration, Roles22, TacticalKit22, Social y StarterGear del JAR producido. Las clases de apoyo y el mundo son fixtures, no un servidor Minecraft. También ejecuta las comprobaciones anteriores Social21Checks y Conversation19Checks. `python npc-roles22/verify_assets.py` compara recursos, traducciones y modelos con la base y rechaza clases de API incluidas.
+
+Patch.java añade 15 enganches controlados; conserva los stack maps originales y añade F_SAME en los nuevos guardas, usando COMPUTE_MAXS, sin inferir jerarquías de Minecraft ausentes. BasicVerifier revisa el bytecode modificado y las pruebas Java usan -Xverify:all. La clase real AutoGunOperator no se instancia sin Minecraft: la persistencia se verifica con dobles y sus enganches se validan estructuralmente.
+
+Los cuatro huevos siguen usando la entidad nativa tacznpcs:npc y componentes ENTITY_DATA. El rol se captura antes de resolver el template y se conserva además en el guardado raíz. El ID bandit_spawn_egg y el sentinel __tactical_bandit son compatibles. Un NPC sin marca no cambia de disposición.
+
+Los militares conservan la ruta nativa de combate TeamBrain.gunTick, draw/shoot/bolt, reposición con línea bloqueada y combate cercano. Roles22 añade decisiones de movimiento como máximo una vez por segundo y no carga chunks. La selección sigue el radio nativo de 24 bloques y el intervalo de adquisición de 10 ticks. La precisión militar evita el sesgo deliberado contra jugadores de TeamBrain.playerAim. Los cargadores usan una recarga con reservas ilimitadas, sin generar nuevos stacks.
+
+TacticalKit22 usa IGun.allowAttachment/installAttachment/getAttachmentId/setLaserColor y los slots WBArmorItem.setInsertedGoggles/setInsertedBattery. Las firmas se inspeccionaron en los binarios locales; api-evidence.json identifica esas clases. El casco se actualiza como máximo una vez por segundo y consume energía con el visor activo; el efecto se aplica al NPC, nunca al cliente del jugador. No se modifica TacZ ni Fracture Point.
+
+Los resultados son pruebas de código y API simulada. No hay validación visual ni una ejecución de Minecraft/SmartBrainLib/TacZ en conjunto. Véase LEEME.txt para instalación y comportamiento concreto.

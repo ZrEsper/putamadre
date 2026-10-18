@@ -1,0 +1,25 @@
+TacZ NPCs tactical .22 — Cuatro huevos y militar con láser/NVG — NeoForge 1.21.1
+
+INSTALACIÓN
+Quita tacznpcs tactical .21 y coloca tacznpcs-2.1.0-1.21.1-tactical.22-four-eggs-military.jar. Deja una sola versión de TacZ NPCs. Conserva tus otros mods y sus versiones actuales, incluido TacZ, Fracture Point, First Aid y la integración de facciones. Este ZIP no reemplaza ninguno de ellos. Los supervivientes existentes o generados naturalmente conservan su comportamiento anterior.
+
+CUATRO HUEVOS
+Los encontrarás en Huevos de aparición y en la búsqueda del inventario creativo. Cada uno tiene colores diferentes y nombres en español e inglés.
+Pasivo: /give @s tacznpcs:bandit_passive_spawn_egg
+Neutral: /give @s tacznpcs:bandit_neutral_spawn_egg
+Hostil: /give @s tacznpcs:bandit_spawn_egg
+Militar hostil: /give @s tacznpcs:military_hostile_spawn_egg
+
+El huevo antiguo bandit_spawn_egg se conserva como hostil. El pasivo no inicia combates contra jugadores; mantiene la defensa propia existente. El neutral mantiene las reacciones sociales y la defensa propia. El hostil sale armado y busca jugadores, respetando la inspección de cinco segundos y la línea de visión. Los huevos fijan su disposición, en lugar de elegirla al azar. El tipo se conserva al guardar y volver a cargar.
+
+MILITAR
+Rifle M4A1 (AK-47 como alternativa del pack), armadura completa Ratnik con alternativas FSB y armadura de hierro si falta alguna pieza del mod, suministros médicos y comida. Recibe un láser compatible instalado en el rifle, preferentemente PEQ-15, de color rojo. Las gafas de visión nocturna y su batería cargada se insertan físicamente en el casco de Fracture Point.
+En oscuridad o de noche baja el visor y activa visión nocturna en el propio NPC; con luz lo sube. La batería se consume: solo la munición tiene reservas infinitas. No se fuerza ningún filtro en la pantalla del jugador.
+
+Usa el combate nativo de TacZ NPCs: desenfundar, apuntar, disparar, accionar cerrojo, evitar aliados en la línea de fuego, reposicionarse ante un tiro bloqueado, golpear a amenazas cercanas y retroceder. Añade movimientos laterales y control de distancia. Se elimina para el militar la desviación deliberada de los disparos contra jugadores que existía en la IA anterior. Sigue habiendo dispersión y los límites del arma.
+Busca jugadores visibles fuera de su facción y se defiende de zombis, priorizando amenazas cercanas. No dispara a jugadores creativos/espectadores ni a través de paredes. Los aliados reclutados conservan las órdenes de facción.
+Las reservas de munición son infinitas; el cargador se vacía y tarda dos segundos en recargarse, sin gastar ni crear pilas de munición en el inventario. El resto de NPC conserva sus reglas de munición.
+
+VALIDACIÓN
+Se verificaron los 15 puntos de integración del bytecode, registro/colores/componentes de los cuatro huevos, persistencia de roles, selección de objetivos, línea de visión, recargas repetidas, cambio de arma, instalación de láser y NVG, oscuridad/batería, diálogo y defensa anteriores. Las pruebas usan fixtures para las API de Minecraft/TacZ/Fracture; no ejecutan un combate real. Se conservaron las skins, sonidos y traducciones anteriores salvo los nombres de los huevos.
+No se ejecutó Minecraft en este entorno. Falta comprobar visualmente los accesorios y el comportamiento completo en el modpack.

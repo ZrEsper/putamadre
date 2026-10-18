@@ -1,0 +1,1 @@
+package net.neoforged.neoforge.event;import java.util.*;public class BuildCreativeModeTabContentsEvent{public List<Object> entries=new ArrayList<>();public Object getTabKey(){return net.minecraft.world.item.CreativeModeTabs.SPAWN_EGGS;}public void accept(Object stack,Object visibility){entries.add(stack);}}

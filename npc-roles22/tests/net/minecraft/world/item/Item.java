@@ -1,0 +1,1 @@
+package net.minecraft.world.item;import java.util.*;public class Item{public static class Properties{public Map<Object,Object> components=new HashMap<>();public Properties component(Object key,Object value){components.put(key,value);return this;}}}

@@ -1,0 +1,1 @@
+package com.raiiiden.warborn.common.util;import net.minecraft.nbt.CompoundTag;import net.minecraft.world.item.ItemStack;public class StackData{public static CompoundTag get(ItemStack s){return (CompoundTag)s.components.computeIfAbsent("wb",k->new CompoundTag());}public static void set(ItemStack s,CompoundTag t){s.components.put("wb",t);}}

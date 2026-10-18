@@ -1,0 +1,1 @@
+package mod.cdv.tnpc.tactical;import net.minecraft.world.item.ItemStack;public class AttachmentFixture{public static final AttachmentFixture ITEM=new AttachmentFixture();public void setAttachmentId(ItemStack s,Object id){s.components.put("attachment",id);}}
