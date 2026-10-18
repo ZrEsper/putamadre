@@ -1,0 +1,9 @@
+Linterna .9: inventario, X y profundidad por cámara — NeoForge 1.21.1
+
+Reemplaza Flashlight .8 por .9 y conserva Zomboid Integration 1.7.11. Mantén las versiones de cámara suministradas: Third Person Shooting shoulder-clearance .4 y Dungeons Iso .32. No dejes versiones duplicadas de Flashlight.
+
+La linterna puede estar en cualquiera de los 36 espacios del inventario y se enciende/apaga con la tecla X de Integration. Consume batería también mientras está guardada, se apaga al agotarse y no consume dos veces si el objeto en la mano comparte su espacio con el inventario.
+
+Se elimina el segundo render de entidades y muebles. El pase adicional solo captura terreno y no vuelve a emitir eventos de render de otros mods. La profundidad de la captura se compara con la del fotograma principal para impedir que la textura de una pared se pinte sobre una entidad o un bloque con modelo propio. La luz conserva su origen en el jugador y utiliza las matrices reales de la cámara, tanto con perspectiva como con proyección isométrica. Se descartan las sombras cercanas del propio cuerpo.
+
+Pruebas aprobadas: batería y tecla desde inventario; sombras y límite de 48 rayos; 16 comprobaciones de shaders; 12 casos OpenGL de color de entidad y terreno iluminado en primera, tercera e isométrica. Son pruebas de código y de proyección en OpenGL: no se ejecutó Minecraft en este entorno y falta confirmar la apariencia dentro del modpack.

@@ -1,0 +1,16 @@
+{
+  "file": "flashlight-5.1-neoforge-1.21.1-inventory-depth-safe.9.jar",
+  "sha256": "534357165ea9f828f412a26009a10f30d73b1630744af786a475082901c32d4b",
+  "changed": [
+    "assets/flashlight/shaders/portable6.frag",
+    "flashlight.mixins.json",
+    "net/flashlight/battery/Engine6.class",
+    "net/flashlight/battery/G6$State.class",
+    "net/flashlight/battery/Light6.class",
+    "net/flashlight/battery/Power.class"
+  ],
+  "minecraft_runtime_tested": false,
+  "added": [
+    "net/flashlight/mixin/CaptureStage9.class"
+  ]
+}
