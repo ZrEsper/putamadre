@@ -1,0 +1,9 @@
+{
+  "old_1_7_12_reproduces_package_violation": true,
+  "reserved_package": "dev.zomboid.perf12.mixin",
+  "only_registered_mixins_in_reserved_package": true,
+  "helper_and_nested_classes_outside_reserved_package": true,
+  "injected_call_targets_normal_helper": true,
+  "old_mixin_class_absent": true,
+  "minecraft_runtime_tested": false
+}

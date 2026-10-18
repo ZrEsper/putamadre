@@ -1,0 +1,6 @@
+{
+  "file": "zomboid-integration-1.7.13-neoforge-1.21.1-iris-mixin-package-fix.jar",
+  "sha256": "e4cddf2a1c07e3b4969db34c733c40f7602a5de848be6f85ebba37811529c46d",
+  "replaces": "zomboid-integration-1.7.12-neoforge-1.21.1-bounded-iris-order.jar",
+  "minecraft_runtime_tested": false
+}

@@ -1,0 +1,11 @@
+Corrección del crasheo de Zomboid Integration 1.7.12 — NeoForge 1.21.1
+
+Cierra el juego. Quita zomboid-integration-1.7.12-neoforge-1.21.1-bounded-iris-order.jar y coloca el JAR 1.7.13 incluido. Conserva una sola versión de Zomboid Integration.
+Mantén Flashlight .12, Fracture Point .12, Iris, Sodium y los demás mods.
+
+Causa confirmada por crash-2026-10-18_10.10.45-client.txt:
+IllegalClassLoadError: GraphOrder12 estaba dentro del paquete reservado para Mixins y no podía cargarse como una clase normal. Era un error de mi parche 1.7.12.
+
+La 1.7.13 separa el Mixin en dev.zomboid.perf12.mixin y conserva las clases auxiliares fuera. Mantiene la optimización de orden de capas. No modifica mundos ni requiere otro shaderpack para corregir este error.
+
+Validación: prueba de regresión del JAR anterior, separación de clases en el JAR final, verificación ASM y pruebas del algoritmo de orden y NVG aprobadas. No se ejecutó el modpack completo en Minecraft aquí.

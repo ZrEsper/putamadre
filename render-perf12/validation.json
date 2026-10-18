@@ -18,8 +18,8 @@
     "minecraft_runtime_tested": false
   },
   "integration": {
-    "file": "zomboid-integration-1.7.12-neoforge-1.21.1-bounded-iris-order.jar",
-    "sha256": "08f43c11044a20d07cdde75af32638a51e9fddc44c3a171e0fd0b1b16f72e89f",
+    "file": "zomboid-integration-1.7.13-neoforge-1.21.1-iris-mixin-package-fix.jar",
+    "sha256": "e4cddf2a1c07e3b4969db34c733c40f7602a5de848be6f85ebba37811529c46d",
     "changed": [
       "META-INF/neoforge.mods.toml"
     ],
@@ -27,7 +27,7 @@
       "dev/zomboid/perf12/GraphOrder12$Access.class",
       "dev/zomboid/perf12/GraphOrder12$Edge.class",
       "dev/zomboid/perf12/GraphOrder12.class",
-      "dev/zomboid/perf12/IrisGraphMixin12.class",
+      "dev/zomboid/perf12/mixin/IrisGraphMixin12.class",
       "renderperf12.mixins.json"
     ],
     "minecraft_runtime_tested": false
