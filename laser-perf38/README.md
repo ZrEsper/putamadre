@@ -1,0 +1,11 @@
+# Melee .38: copia de profundidad GPU y cadáveres sin cadenas de fade
+
+`python laser-perf38/build.py`, `python laser-perf38/test.py` y `python laser-perf38/copy_image_test.py`. Reutiliza Java21/ECJ/ASM; el último usa el contexto OpenGL EGL disponible, numpy y moderngl.
+
+El perfil iG1IbFSr0X es de cliente, Render thread, 59.367s. Las copias GL del láser ocupan18.884% de muestras y LaserLate37 en conjunto19.8%. PlayerAnimator ocupa14.261% como unión de árboles y sus transformaciones costosas se ven bajo CorpseRenderer. No sumar estos porcentajes a sus métodos anidados. No hay perfil Server thread para diagnosticar TPS/IA.
+
+La copia de profundidad ahora usa glCopyImageSubData en OpenGL4.3+ con el mismo formato de textura origen/destino, sin convertir profundidad a24 bits mediante lectura del framebuffer. Preserva el snapshot anterior a borrar profundidad de manos. Conserva fallback antiguo para hardware/formato no compatible. Una pistola sin accesorio láser ya no hace esta copia a cada frame. El log del usuario identifica RTX3060 y OpenGL4.6, que admiten la ruta nueva. Falta medir la mejora real con otro Spark.
+
+DummyPlayer de Corpse no ejecuta ticks de animación. Se cancelan las operaciones de animación TaCZ exclusivamente para ese tipo y se sueltan una sola vez sus cuatro capas/transiciones antiguas. No afecta jugadores vivos, los FakePlayer de NPC ni equipo/inventario/texturas del cadáver. La implementación usa PlayerAnimator ModifierLayer.setAnimation/removeModifier, comprobados en el fuente1.21 de https://github.com/KosmX/minecraftPlayerAnimator/blob/1.21/coreLib/src/main/java/dev/kosmx/playerAnim/api/layered/ModifierLayer.java. Se guardó solo AnimationManager.class de TaCZ1.1.8 para verificar los seis descriptores del Mixin. Los helpers quedan fuera del paquete reservado de Mixin.
+
+Pasan regresiones de láser, ejes físicos, oclusión/vegetación, colas, movimiento y cache GPU. La prueba de cadáver simula 4000 modificadores y1000 llamadas y comprueba una sola limpieza. Seis firmas coinciden con bytecode nativo y el Mixin pasa BasicVerifier. La prueba OpenGL copia profundidad entre texturas del mismo formato y comprueba que sobrevive al borrado del buffer de manos. No se ejecutó el modpack real ni se verificó rendimiento posterior.

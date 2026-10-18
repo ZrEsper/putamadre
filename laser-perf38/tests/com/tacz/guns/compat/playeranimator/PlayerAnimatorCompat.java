@@ -1,0 +1,1 @@
+package com.tacz.guns.compat.playeranimator;public class PlayerAnimatorCompat {public static final Object LOWER_ANIMATION="lower",LOOP_UPPER_ANIMATION="loop",ONCE_UPPER_ANIMATION="once",ROTATION_ANIMATION="rotation";}
