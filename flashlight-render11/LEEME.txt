@@ -1,0 +1,15 @@
+Linterna .11 — Un solo haz más amplio y sombras suaves — NeoForge 1.21.1
+
+INSTALACIÓN
+Reemplaza Flashlight .10 (o anterior) por flashlight-5.1-neoforge-1.21.1-wide-unified-beam.11.jar. Conserva una sola versión de Flashlight y de Zomboid Integration 1.7.11. El ZIP incluye Integration 1.7.11 sin cambios: si ya lo tienes, no lo dupliques. Mantén tus mods de cámara y Darkness .4. Cierra y vuelve a abrir el juego.
+
+CAMBIOS
+Las cuatro variantes tienen un radio del haz un 25 % mayor a la misma distancia. No cambia la duración de la batería ni el alcance máximo.
+Se elimina el segundo lóbulo de iluminación cercana de .10. Cada linterna proyecta un único cono. En tercera persona e isométrica ese mismo cono se abre y orienta ligeramente hacia el suelo para alumbrar cerca sin dibujar un segundo círculo.
+La sombra del mapa de rayos usa interpolación continua entre muestras en lugar de saltos por celdas. Se conserva la corrección de autosombra sobre planos del suelo.
+El cuerpo y el arma cercanos al emisor, detectados por su profundidad distinta del terreno, se excluyen de la sombra de pantalla. Las paredes cercanas conservan la oclusión.
+Se conserva el control X desde inventario, recarga y consumo, detalle de texturas, luz desde el jugador y las marcas de compatibilidad con Darkness, láser y visión térmica.
+
+PRUEBAS
+Aprobadas las pruebas existentes de batería, tecla, inventario, sombras y presupuesto de rayos. Se comprueban las aperturas reales de las cuatro variantes; un único máximo del cono y transición continua de sombra con GLSL en OpenGL; también terreno diurno, luz cercana y proyecciones de primera, tercera e isométrica. El control de comparación con .10 reproduce los saltos de sombra de 0.333; .11 reduce el salto máximo a 0.0036 en ese caso.
+No se ejecutó Minecraft ni el modpack aquí. Las pruebas de código y renderizado no confirman por sí solas la apariencia en el juego.

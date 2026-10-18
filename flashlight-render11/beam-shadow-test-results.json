@@ -1,0 +1,11 @@
+{
+  "checks": 11,
+  "production_glsl_expressions": true,
+  "results": {
+    "16_wide_half_angle": 19.5556640625,
+    "20_wide_half_angle": 24.2431640625,
+    "25_wide_half_angle": 29.9560546875,
+    "max_shadow_pixel_step": 0.0035905838012695312
+  },
+  "minecraft_runtime_tested": false
+}
