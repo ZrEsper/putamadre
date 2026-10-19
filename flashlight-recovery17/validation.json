@@ -1,0 +1,22 @@
+{
+  "file": "flashlight-5.1-neoforge-1.21.1-native-capture-recovery.17.jar",
+  "sha256": "44202d6398edd22cb872b02af14a89086c15d4feca2500267e39c0985aba5f7c",
+  "changed": [
+    "assets/flashlight/shaders/portable6.frag",
+    "flashlight.mixins.json",
+    "net/flashlight/battery/Engine6.class",
+    "net/flashlight/battery/G6$State.class",
+    "net/flashlight/battery/G6.class",
+    "net/flashlight/battery/Light6.class",
+    "net/flashlight/battery/Power.class"
+  ],
+  "added": [
+    "net/flashlight/battery/EntityLight14$Hit.class",
+    "net/flashlight/battery/EntityLight14.class",
+    "net/flashlight/battery/Iris12.class",
+    "net/flashlight/battery/Recovery17.class",
+    "net/flashlight/mixin/CaptureStage9.class",
+    "net/flashlight/mixin/EntityLight14.class"
+  ],
+  "minecraft_runtime_tested": false
+}

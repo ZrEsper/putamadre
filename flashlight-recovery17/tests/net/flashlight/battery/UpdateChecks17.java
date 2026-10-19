@@ -1,0 +1,7 @@
+package net.flashlight.battery;
+import net.minecraft.client.Minecraft;
+public class UpdateChecks17{
+ public static class TransientActor extends EntityChecks14.Actor{public boolean broken=true;public int attempts;@Override public net.minecraft.world.phys.Vec3 getEyePosition(){attempts++;if(broken)throw new IllegalStateException("fixture transient pose failure");return super.getEyePosition();}}
+ public static void main(String[]args){var mc=Minecraft.INSTANCE;var w=new EntityChecks14.World();var p=new TransientActor();p.world=w;p.inv.stacks[4]=EntityChecks14.item("flashlight:flashlight");Power.charge(p.inv.stacks[4],100);w.players.add(p);mc.level=w;mc.player=p;Engine6.failed=false;Recovery17.UPDATE.after=0;
+ var original=System.err;var bytes=new java.io.ByteArrayOutputStream();try{System.setErr(new java.io.PrintStream(bytes));Light6.safeTick();if(Engine6.failed)throw new AssertionError("one failure must not disable world lighting permanently");int attempts=p.attempts;Light6.safeTick();if(p.attempts!=attempts)throw new AssertionError("retry backoff prevents a failure loop");p.broken=false;Recovery17.UPDATE.after=0;Light6.safeTick();if(Engine6.failed||!Light6.cache.containsKey(p)||Recovery17.UPDATE.failures!=0)throw new AssertionError("production tick did not recover a real light source");}finally{System.setErr(original);}if(!bytes.toString().contains("retrying"))throw new AssertionError("failure remains diagnosable");System.out.println("PRODUCTION_TRANSIENT_UPDATE_RECOVERY_CHECKS=4");}
+}

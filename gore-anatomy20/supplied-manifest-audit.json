@@ -1,0 +1,27 @@
+[
+  {
+    "file": "zomboid-zombie-gore-1.0.13-neoforge-1.21.1-live-corpse-trauma.jar",
+    "sha256": "11893af65238c479dab088c8cde4fe92c79dd58ba1e3c8ed652bcafc0257d2c3",
+    "matches_supplied_manifest": true
+  },
+  {
+    "file": "ragdollified-1.21.1-1.1.5-gore-loot.2.jar",
+    "sha256": "4cde53bbf35acd44f254b7d9cbfb35451145365717a10e5ca59d5f65e1577297",
+    "matches_supplied_manifest": true
+  },
+  {
+    "file": "zombie-remains-loot-1.6.1-neoforge-1.21.1-physical-corpse-loot.16.jar",
+    "sha256": "1166b398b856226768eda77f2877999e6e8c32784ee9202608abb36c144a587a",
+    "matches_supplied_manifest": true
+  },
+  {
+    "file": "mobdismembermentneoforge-1.21.1-1.4.0-gore13-compat.3.jar",
+    "sha256": "1ba80372334b4898f889cd2b071d8443978ed133687643f08d7858dfd964a3e6",
+    "matches_supplied_manifest": true
+  },
+  {
+    "file": "splatter-1.21.1-0.3.0-neoforge-blood-budget.2.jar",
+    "sha256": "3088c823183190d9ed716916b420bd375340b1049e19cd18e4f56a32c6965754",
+    "matches_supplied_manifest": true
+  }
+]
