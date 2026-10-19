@@ -1,0 +1,39 @@
+{
+  "mobdismembermentneoforge-1.21.1-1.4.0-gore16-compat.6.jar": {
+    "metadata_only": true,
+    "sha256": "1b57fbf5e4bb0b579f8ce7ed44b2f4f976c53f2620156cef5429ad95a2ae6c60",
+    "gore_dependency": {
+      "modId": "zomboid_gore",
+      "type": "required",
+      "versionRange": "[1.0.16,1.0.17)",
+      "ordering": "AFTER",
+      "side": "CLIENT"
+    }
+  },
+  "zombie-remains-loot-1.6.1-neoforge-1.21.1-physical-corpse-loot.19-gore16.jar": {
+    "metadata_only": true,
+    "sha256": "8d237cb915878a82af563656b0fee4f8e33c4b20bc21f175f6e63b702b206489",
+    "gore_dependency": {
+      "modId": "zomboid_gore",
+      "type": "required",
+      "versionRange": "[1.0.16,1.0.17)",
+      "ordering": "AFTER",
+      "side": "BOTH"
+    }
+  },
+  "ragdollified-1.21.1-1.1.5-gore-light.8-physics-compat.jar": {
+    "metadata_only": true,
+    "sha256": "743edd8b391b641bdb687d8e9e225e50caec0c45b85e7566949c0722a17e22e0",
+    "gore_dependency": {
+      "modId": "zomboid_gore",
+      "type": "required",
+      "versionRange": "[1.0.16,1.0.17)",
+      "ordering": "AFTER",
+      "side": "BOTH"
+    }
+  },
+  "zomboid-zombie-gore-1.0.16-neoforge-1.21.1-organ-physics.jar": {
+    "version": "1.0.16",
+    "sha256": "841b9bb5966f4ae56165d5737d1d8771b99cf289817a2215e3356d9ff4f0c964"
+  }
+}
