@@ -1,0 +1,9 @@
+{
+  "log_sha256": "556183ead4489cae516cf11e8e23c0d862f2771a4bea1a5592e7af27cb70ad6b",
+  "depth_format_errors": 2462,
+  "shaders_enabled": false,
+  "loaded_melee": "39",
+  "loaded_flashlight": "17",
+  "gore": "20",
+  "minecraft_runtime_tested": false
+}

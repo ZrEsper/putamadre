@@ -1,0 +1,1 @@
+package net.irisshaders.iris;import java.util.*;public class Iris {public static final Manager MANAGER=new Manager();public static Manager getPipelineManager(){return MANAGER;}public static class Manager {public Object pipeline;public Optional<Object> getPipeline(){return Optional.ofNullable(pipeline);}}}

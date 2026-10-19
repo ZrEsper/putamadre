@@ -1,0 +1,2 @@
+package dev.zomboidmelee.boxing;
+public class DepthFormatChecks40 {public static void main(String[]a){for(int f:new int[]{6402,33189,33190,33191,36012,35056,36013}){if(!LaserLate37.depthFormatSupported(f))throw new AssertionError(f);boolean packed=f==35056||f==36013;if(LaserLate37.depthExternal(f)!=(packed?34041:6402)||LaserLate37.depthType(f)!=(f==36013?36269:f==35056?34042:5126))throw new AssertionError(f);}if(LaserLate37.depthFormatSupported(32856))throw new AssertionError("color accepted as depth");System.out.println("NATIVE_DEPTH_FORMAT_SELECTION_CHECKS=22");}}
