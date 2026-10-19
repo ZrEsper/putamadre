@@ -41,3 +41,11 @@ El log no muestra una excepción de Gore durante la sesión. Sí advierte de mod
 199 comprobaciones: conectividad y límites de malla en42combinaciones de región/daño, vertices finitos, presupuesto geométrico, mandíbula/órganos presentes, ensamblaje humanoide, clasificación arterial, sonido con límites, presión direccional y drenaje muerto, luz ambiental de segmentos y llamada al presupuesto existente de Flashlight. Java `-Xverify:all` y ASM BasicVerifier para las clases de Gore y el renderizador de Ragdollified modificado. Los recursos previos y Mixin configs se conservan; se añaden dos sonidos. Las fixtures no se empaquetan.
 
 No se inició Minecraft ni un servidor completo. No se ha medido FPS/TPS ni se ha verificado visualmente el resultado con el modpack. Las pruebas de API no garantizan el aspecto final ni las juntas de toda simulación física.
+
+## Dependency loading hotfix
+
+After `python gore-anatomy14/build.py` and `python gore-anatomy14/test.py`, run
+`python gore-anatomy14/compat.py`. This pins the three consumers to Gore
+`[1.0.14,1.0.15)`, checks the real packaged TOML version and preserves every
+non-metadata entry. It produces the complete four-mod compatibility ZIP.
+Mob Dismemberment is client-only. Keep Splatter unchanged.

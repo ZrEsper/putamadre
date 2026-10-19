@@ -1,0 +1,39 @@
+{
+  "mobdismembermentneoforge-1.21.1-1.4.0-gore14-compat.4.jar": {
+    "metadata_only": true,
+    "sha256": "8a1b458f8ef32fc4dfc766c162b2563e4c9f0365506e8c537cc9957929c4c862",
+    "gore_dependency": {
+      "modId": "zomboid_gore",
+      "type": "required",
+      "versionRange": "[1.0.14,1.0.15)",
+      "ordering": "AFTER",
+      "side": "CLIENT"
+    }
+  },
+  "zombie-remains-loot-1.6.1-neoforge-1.21.1-physical-corpse-loot.17-gore14.jar": {
+    "metadata_only": true,
+    "sha256": "64931c7bdadd730eb2f502ed8287723c2cc7d25058926de2c51ae6640008f1f6",
+    "gore_dependency": {
+      "modId": "zomboid_gore",
+      "type": "required",
+      "versionRange": "[1.0.14,1.0.15)",
+      "ordering": "AFTER",
+      "side": "BOTH"
+    }
+  },
+  "ragdollified-1.21.1-1.1.5-gore-light.4-compat.jar": {
+    "metadata_only": true,
+    "sha256": "1670e6fcf8f338a4c7853dd965a57be2bf59d2c221e7e0574cd0326ffb7064ff",
+    "gore_dependency": {
+      "modId": "zomboid_gore",
+      "type": "required",
+      "versionRange": "[1.0.14,1.0.15)",
+      "ordering": "AFTER",
+      "side": "BOTH"
+    }
+  },
+  "zomboid-zombie-gore-1.0.14-neoforge-1.21.1-connected-anatomy.jar": {
+    "version": "1.0.14",
+    "sha256": "5373c5f89c784d54cde439fa083f218bd2555364ebc2220763fa19fea3a39730"
+  }
+}
