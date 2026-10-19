@@ -1,0 +1,6 @@
+package dev.zomboid.gore;
+public final class Cut48 {
+ /** Same authoritative world impact as the hit packet, converted into this rotated limb. */
+ public static void dead(Object level,Object sender,int id,int part,Object point,float damage){Object body=Corpse13.retained(id);if(body==null||point==null||part<0||part>5)return;Object packet=R.get(body,"spawnPacket"),pose=Corpse13.pose(body,part);if(pose==null)return;double[] q=coordinates(point,pose,part,packet);int region=Damage13.region(part);int kind=sender==null?3:Damage13.kindOf(R.call(sender,"getMainHandItem"));Cuts24.Cut cut=new Cuts24.Cut(region,q[0],q[1],q[2],Cuts24.radius(damage,kind,Rules.Weapon.OTHER),sender==null?0:kind>0?1:2,sender==null||kind==0?0:Slice28.angleSender(sender,packet,kind));R.set(packet,"goreCuts24",Damage25.finish(Cuts24.add(Cuts24.field(packet),cut),region));}
+ public static double[] coordinates(Object point,Object pose,int part,Object packet){double[] local=Bullet13.local(point,pose);double scale=Ray48.scale(packet,part);int region=Damage13.region(part);double width=(part==4||part==5)&&R.get(packet,"medical45") instanceof String text&&text.startsWith("-")?3:Cuts24.width(region);return new double[]{Cuts24.clamp(.5-local[0]*16/(width*scale)),Cuts24.clamp(.5-local[1]*16/(Cuts24.height(region)*scale)),Cuts24.clamp(.5+local[2]*16/(Cuts24.depth(region)*scale))};}
+}

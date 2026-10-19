@@ -1,0 +1,1 @@
+package com.raiiiden.ragdollified.network;public class ModNetwork{public static int removed;public static void sendToPlayersNear(Object level,double x,double y,double z,double range,Object packet){removed++;}}

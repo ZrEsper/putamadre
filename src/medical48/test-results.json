@@ -1,0 +1,8 @@
+{
+  "minecraft_runtime_tested": false,
+  "boundary": "World, registry, render buffer and native value objects are simulated. Tests execute the new production helpers and actual reflection implementation. ASM analyzes every method in the three output jars.",
+  "behavior": "REMAINS_POSE_RAY_CONNECTIVITY_BITE_BANDAGE_CHECKS=430",
+  "bytecode": "ASM_BASIC_VERIFIER_CLASSES=1412 METHODS=13612",
+  "previous_medical_persistence": "MEDICAL_POSTURE_PERSISTENCE_HEALING_CORPSE_AND_COLLISION_CHECKS=4030",
+  "previous_bullet_crash": "ACTUAL_BULLET_TICK_REFLECTION_CORPSE_HIT=PASS"
+}

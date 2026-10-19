@@ -1,0 +1,25 @@
+{
+  "minecraft": "1.21.1",
+  "loader": "NeoForge",
+  "minecraft_runtime_tested": false,
+  "artifacts": [
+    {
+      "file": "zomboid-zombie-gore-1.0.20-neoforge-1.21.1-remains-local-cuts.32.jar",
+      "mod_id": "zomboid_gore",
+      "version": "1.0.20.48",
+      "sha256": "70afd6d4735079ab80d8e51b29cca99ec771825003e1fbbd8e8efb978457aa5a"
+    },
+    {
+      "file": "ragdollified-1.21.1-1.1.5-stable-impacts-remains.25.jar",
+      "mod_id": "ragdollified",
+      "version": "1.1.5-gore20-medical48",
+      "sha256": "89fcfa423dc8599d520649e1958b1b38f65c97597d8e147ff3f4d8233a0fe701"
+    },
+    {
+      "file": "tacznpcs-2.1.0-1.21.1-tactical.32-corpse-guard.jar",
+      "mod_id": "tacznpcs",
+      "version": "2.1.0-tactical.32-corpse-guard",
+      "sha256": "5eac15076db66d10a4ed1d2689a910ee00eb4e2ba440c1db57cc50aa11dfc29d"
+    }
+  ]
+}
