@@ -1,0 +1,1 @@
+package net.minecraft.world.phys;public class Vec3{public final double x,y,z;public Vec3(double X,double Y,double Z){x=X;y=Y;z=Z;}public double x(){return x;}public double y(){return y;}public double z(){return z;}}

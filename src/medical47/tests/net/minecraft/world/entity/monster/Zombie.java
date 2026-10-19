@@ -1,0 +1,1 @@
+package net.minecraft.world.entity.monster;public class Zombie{public Object getEyePosition(){return new net.minecraft.world.phys.Vec3(.1,1.6,.2);}}

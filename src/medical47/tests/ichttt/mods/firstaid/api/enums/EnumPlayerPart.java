@@ -1,0 +1,1 @@
+package ichttt.mods.firstaid.api.enums;public enum EnumPlayerPart{HEAD,LEFT_ARM,LEFT_LEG,LEFT_FOOT,BODY,RIGHT_ARM,RIGHT_LEG,RIGHT_FOOT}

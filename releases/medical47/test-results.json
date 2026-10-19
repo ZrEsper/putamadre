@@ -1,0 +1,52 @@
+{
+  "minecraft_runtime_tested": false,
+  "before": {
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Exception in thread \"main\" java.lang.IllegalStateException: ichttt.mods.firstaid.survival.TreatmentV33\n\tat dev.zomboid.firstaid.R.type(R.java:7)\n\tat dev.zomboid.firstaid.Wounds45.bite(Wounds45.java:34)\n\tat dev.zomboid.firstaid.BiteRegression47.main(BiteRegression47.java:11)\nCaused by: java.lang.ClassNotFoundException: ichttt.mods.firstaid.survival.TreatmentV33\n\tat java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)\n\tat java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)\n\tat java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)\n\tat java.base/java.lang.Class.forName0(Native Method)\n\tat java.base/java.lang.Class.forName(Class.java:423)\n\tat java.base/java.lang.Class.forName(Class.java:414)\n\t... 3 more\n"
+  },
+  "after": {
+    "exit_code": 0,
+    "stdout": "REAL_WOUNDS45_AND_REAL_TREATMENTV33_NULL_SOURCE_ZOMBIE_BITE_AND_REGION=PASS\n",
+    "stderr": ""
+  },
+  "firstaid-1.21.1-ZOMBOID-v3.6.16-bite-class-fix.jar": {
+    "sha256": "f3c0cc16cfd9d2156313c4ca66c6cd230b2d405722c1a3e08b3f87081d3993fa",
+    "changed_entries": [
+      "META-INF/neoforge.mods.toml",
+      "dev/zomboid/firstaid/Wounds45.class"
+    ]
+  },
+  "tacz-firstaid-compat-1.0.4-firstaid-3.6.16.jar": {
+    "sha256": "ca1cb4b62ec7ec190d7cc720f5b64bc0087bc836c4674908d53d856db0a84b6f",
+    "changed_entries": [
+      "META-INF/neoforge.mods.toml"
+    ]
+  },
+  "owned_reflective_class_names_checked": [
+    "com.raiiiden.ragdollified.MobModelHelper$ModelType",
+    "com.raiiiden.ragdollified.PhysicsHooks",
+    "com.raiiiden.ragdollified.client.ClientRagdollManager",
+    "com.raiiiden.ragdollified.client.ClientRagdollRenderer",
+    "com.raiiiden.ragdollified.network.RagdollImpulsePacket",
+    "com.raiiiden.ragdollified.network.RagdollSpawnPacket",
+    "com.raiiiden.ragdollified.server.ServerRagdollSyncManager",
+    "com.tacz.guns.api.entity.IGunOperator",
+    "com.tacz.guns.entity.EntityKineticBullet",
+    "com.tacz.guns.util.EntityUtil",
+    "com.tacz.guns.util.ExplodeUtil",
+    "de.maxhenkel.corpse.entities.CorpseEntity",
+    "dev.zomboid.firstaid.Wounds45",
+    "dev.zomboid.gore.Linked45",
+    "ichttt.mods.firstaid.api.enums.EnumPlayerPart",
+    "ichttt.mods.firstaid.common.util.CommonUtils",
+    "ichttt.mods.firstaid.compat.lrtactical.TreatmentV33",
+    "ichttt.mods.firstaid.survival.ClinicalData",
+    "mod.cdv.tnpc.entity.AutoGunOperator",
+    "ru.ranazy.tacz_firstaid_compat.compat.firstaid.BodypartHitbox",
+    "ru.ranazy.tacz_firstaid_compat.compat.firstaid.BodypartHitbox$BodypartSlot"
+  ],
+  "tacz_namespace_audit_baseline": "pz.10; no TaCZ classes modified",
+  "asm_verification": "ASM_BASIC_VERIFIER_CLASSES=302 METHODS=2711",
+  "module_verification": "JVM_MODULE_LAYER_RESOLVED=6"
+}

@@ -1,0 +1,1 @@
+package ichttt.mods.firstaid.survival; public class ClinicalData {public static Object current;public static Object state(Object m){return current;}}
