@@ -1,0 +1,20 @@
+{
+  "minecraft_runtime_tested": false,
+  "gpu_tested": false,
+  "boundary": "Production helpers execute with simulated game, medical and OpenGL APIs. Native bytecode and API descriptors are checked separately.",
+  "new_checks": {
+    "six_depth_formats_stencil_resolutions_state": 55,
+    "five_self_revives_charges_bleeding_attacks": 36,
+    "downed_slim_hiding_follow_revive_idempotency": 12,
+    "bounded_root_and_armor_cache": 10007
+  },
+  "previous_checks": {
+    "geometry48": 430,
+    "armor_clipping_cuts49": 304,
+    "medical_persistence": 4030,
+    "actual_Bullet13_tick": "PASS, including inventory container and posed body"
+  },
+  "native_lifecycle_contracts": "PASS",
+  "asm_analyzed_classes": 1586,
+  "measured_fps_improvement": null
+}

@@ -1,0 +1,7 @@
+00d95dba5ac494bfa67e7d2a9f7e46864b32e162b47469bab36d779e8970c71f  mods/zomboid-zombie-gore-1.0.20-neoforge-1.21.1-survivor-loot-depth.34.jar
+18951dc3a7860f9923e68736465dff0f5806155e44ce823329b800e64d223c11  mods/ragdollified-1.21.1-1.1.5-live-survivor-impacts.27.jar
+39ceffc91a6baf84dbc0510fe5a168ad909ecb4a1bb6fc116a1a7e208f33b89a  mods/tacznpcs-2.1.0-1.21.1-tactical.33-live-downed.jar
+fe3d0e2174d6af6c473db3ef55d061c5a7399264ba1e008e3708c4b904d4d3b1  mods/firstaid-1.21.1-ZOMBOID-v3.6.17-revive-rearm.jar
+56700f1fc5598de43b01059febcf4d202d9f2504bde535068419412bcbcbf382  mods/zombie-remains-loot-1.6.1-neoforge-1.21.1-loot-recovery.24.jar
+e8f18ea73fbb155e49219c81e07949da672e5f9f46babd23aedb73ccaca32279  mods/petrichor-neoforge-1.21.1-1.4.0-depth-copy.1.jar
+b7c331a89785857fe3a46857819951cd8e8a232addda88aaecc442f64f497af5  mods/tacz-firstaid-compat-1.0.5-firstaid-3.6.17.jar

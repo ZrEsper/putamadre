@@ -1,0 +1,52 @@
+{
+  "minecraft": "1.21.1",
+  "loader": "NeoForge",
+  "runtime_tested": false,
+  "base_repository": "https://github.com/baconwithd/Steph",
+  "base_branch": "codex/medical49-armor-entry-643629d8",
+  "base_commit": "af11cf3b584927f0eb958bf64043b1f6421d0356",
+  "artifacts": [
+    {
+      "file": "zomboid-zombie-gore-1.0.20-neoforge-1.21.1-survivor-loot-depth.34.jar",
+      "mod_id": "zomboid_gore",
+      "version": "1.0.20.50",
+      "sha256": "00d95dba5ac494bfa67e7d2a9f7e46864b32e162b47469bab36d779e8970c71f"
+    },
+    {
+      "file": "ragdollified-1.21.1-1.1.5-live-survivor-impacts.27.jar",
+      "mod_id": "ragdollified",
+      "version": "1.1.5-gore20-medical50",
+      "sha256": "18951dc3a7860f9923e68736465dff0f5806155e44ce823329b800e64d223c11"
+    },
+    {
+      "file": "tacznpcs-2.1.0-1.21.1-tactical.33-live-downed.jar",
+      "mod_id": "tacznpcs",
+      "version": "2.1.0-tactical.33-live-downed",
+      "sha256": "39ceffc91a6baf84dbc0510fe5a168ad909ecb4a1bb6fc116a1a7e208f33b89a"
+    },
+    {
+      "file": "firstaid-1.21.1-ZOMBOID-v3.6.17-revive-rearm.jar",
+      "mod_id": "firstaid",
+      "version": "1.3.3+neoforge1.21.1-zomboid-v3.6.17-revive-rearm",
+      "sha256": "fe3d0e2174d6af6c473db3ef55d061c5a7399264ba1e008e3708c4b904d4d3b1"
+    },
+    {
+      "file": "zombie-remains-loot-1.6.1-neoforge-1.21.1-loot-recovery.24.jar",
+      "mod_id": "zombie_remains_loot",
+      "version": "1.6.1-physical-loot24-medical50",
+      "sha256": "56700f1fc5598de43b01059febcf4d202d9f2504bde535068419412bcbcbf382"
+    },
+    {
+      "file": "petrichor-neoforge-1.21.1-1.4.0-depth-copy.1.jar",
+      "mod_id": "petrichor",
+      "version": "1.4.0-depth-copy1",
+      "sha256": "e8f18ea73fbb155e49219c81e07949da672e5f9f46babd23aedb73ccaca32279"
+    },
+    {
+      "file": "tacz-firstaid-compat-1.0.5-firstaid-3.6.17.jar",
+      "mod_id": "tacz_firstaid_compat",
+      "version": "1.0.5",
+      "sha256": "b7c331a89785857fe3a46857819951cd8e8a232addda88aaecc442f64f497af5"
+    }
+  ]
+}

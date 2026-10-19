@@ -1,0 +1,212 @@
+{
+  "thread": "Render thread",
+  "duration_seconds": 318.188,
+  "sampling_interval_us": 4000,
+  "server_tps_measured": false,
+  "inclusive_times_overlap": true,
+  "top_self": [
+    {
+      "method": "org.lwjgl.system.JNI.invokeV",
+      "ms": 30412.0,
+      "percent": 9.56
+    },
+    {
+      "method": "java.util.WeakHashMap.getTable",
+      "ms": 29488.0,
+      "percent": 9.27
+    },
+    {
+      "method": "dev.zomboid.gore.Skin12.renderSurface19",
+      "ms": 24708.0,
+      "percent": 7.77
+    },
+    {
+      "method": "org.lwjgl.opengl.GL15C.nglBufferSubData",
+      "ms": 13652.0,
+      "percent": 4.29
+    },
+    {
+      "method": "java.lang.Class.forName0",
+      "ms": 11784.0,
+      "percent": 3.71
+    },
+    {
+      "method": "org.lwjgl.system.JNI.invokePV",
+      "ms": 7700.0,
+      "percent": 2.42
+    },
+    {
+      "method": "java.lang.invoke.Invokers$Holder.invokeExact_MT",
+      "ms": 7248.0,
+      "percent": 2.28
+    },
+    {
+      "method": "dev.zomboid.gore.CSG24.surface",
+      "ms": 6804.0,
+      "percent": 2.14
+    },
+    {
+      "method": "java.util.concurrent.ConcurrentHashMap.computeIfAbsent",
+      "ms": 6504.0,
+      "percent": 2.05
+    },
+    {
+      "method": "org.lwjgl.opengl.GL11C.nglDrawElements",
+      "ms": 5324.0,
+      "percent": 1.67
+    },
+    {
+      "method": "dev.zomboid.gore.Surface19.subtract",
+      "ms": 5264.0,
+      "percent": 1.66
+    },
+    {
+      "method": "java.lang.reflect.Method.invoke",
+      "ms": 5148.0,
+      "percent": 1.62
+    },
+    {
+      "method": "java.util.concurrent.ConcurrentHashMap.get",
+      "ms": 4444.0,
+      "percent": 1.4
+    },
+    {
+      "method": "net.minecraft.world.level.LevelReader.getMinBuildHeight",
+      "ms": 3824.0,
+      "percent": 1.2
+    },
+    {
+      "method": "dev.zomboid.gore.fast.FastReflection.call",
+      "ms": 3508.0,
+      "percent": 1.1
+    }
+  ],
+  "relevant_inclusive": [
+    {
+      "method": "com.raiiiden.ragdollified.client.ClientRagdollRenderer.renderHumanoidMob",
+      "ms": 112320.0,
+      "percent": 35.32
+    },
+    {
+      "method": "com.raiiiden.ragdollified.client.ClientRagdollRenderer.onRenderLevel",
+      "ms": 106996.0,
+      "percent": 33.64
+    },
+    {
+      "method": "com.raiiiden.ragdollified.client.ClientRagdollRenderer$Drawable.draw",
+      "ms": 104560.0,
+      "percent": 32.88
+    },
+    {
+      "method": "com.raiiiden.ragdollified.client.ClientRagdollRenderer.renderMobRagdoll",
+      "ms": 104416.0,
+      "percent": 32.83
+    },
+    {
+      "method": "dev.zomboid.gore.R.call",
+      "ms": 91592.0,
+      "percent": 28.8
+    },
+    {
+      "method": "dev.zomboid.gore.fast.FastReflection.call",
+      "ms": 91492.0,
+      "percent": 28.77
+    },
+    {
+      "method": "dev.zomboid.gore.Skin12.render",
+      "ms": 90376.0,
+      "percent": 28.42
+    },
+    {
+      "method": "net.minecraft.client.model.geom.ModelPart.handler$fjj000$zomboid_gore$zg$wound12",
+      "ms": 69992.0,
+      "percent": 22.01
+    },
+    {
+      "method": "dev.zomboid.gore.Surface19.render",
+      "ms": 62572.0,
+      "percent": 19.67
+    },
+    {
+      "method": "dev.zomboid.gore.Model25.render",
+      "ms": 62556.0,
+      "percent": 19.67
+    },
+    {
+      "method": "dev.zomboid.gore.Skin12.renderSurface19",
+      "ms": 59412.0,
+      "percent": 18.68
+    },
+    {
+      "method": "com.raiiiden.ragdollified.client.ClientRagdollRenderer.renderHumanoidPartPhysics",
+      "ms": 59032.0,
+      "percent": 18.56
+    },
+    {
+      "method": "com.raiiiden.ragdollified.client.ClientRagdollRenderer.renderMobVanillaArmor",
+      "ms": 30064.0,
+      "percent": 9.45
+    },
+    {
+      "method": "com.raiiiden.ragdollified.client.ClientRagdollRenderer.renderVanillaArmorSlot",
+      "ms": 30048.0,
+      "percent": 9.45
+    },
+    {
+      "method": "com.raiiiden.ragdollified.client.ClientRagdollRenderer.renderArmorSlotParts",
+      "ms": 28704.0,
+      "percent": 9.03
+    },
+    {
+      "method": "dev.zomboid.gore.Model14.children",
+      "ms": 28152.0,
+      "percent": 8.85
+    },
+    {
+      "method": "com.raiiiden.ragdollified.client.ClientRagdollRenderer.renderHumanoidPartPhysicsTinted",
+      "ms": 28084.0,
+      "percent": 8.83
+    },
+    {
+      "method": "dev.zomboid.gore.Armor48.render",
+      "ms": 27456.0,
+      "percent": 8.63
+    },
+    {
+      "method": "traben.entity_model_features.models.parts.EMFModelPart.handler$fjk000$zomboid_gore$zg$emf13",
+      "ms": 20388.0,
+      "percent": 6.41
+    },
+    {
+      "method": "dev.zomboid.gore.Armor48.mesh",
+      "ms": 17976.0,
+      "percent": 5.65
+    },
+    {
+      "method": "dev.zomboid.gore.CSG24.surface",
+      "ms": 17448.0,
+      "percent": 5.49
+    },
+    {
+      "method": "dev.zomboid.gore.Skin12.end",
+      "ms": 15120.0,
+      "percent": 4.75
+    },
+    {
+      "method": "dev.zomboid.gore.Surface19.subtract",
+      "ms": 8764.0,
+      "percent": 2.76
+    },
+    {
+      "method": "dev.zomboid.gore.CorpseLight14.transform",
+      "ms": 6660.0,
+      "percent": 2.09
+    },
+    {
+      "method": "dev.zomboid.gore.fast.FastReflection.get",
+      "ms": 4572.0,
+      "percent": 1.44
+    }
+  ],
+  "depth_format_errors_in_log": 24446
+}
