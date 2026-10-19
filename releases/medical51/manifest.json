@@ -1,0 +1,20 @@
+{
+  "base_commit": "ab7aa8bb62107b75a191ab6e6e577715e04719e0",
+  "minecraft": "1.21.1",
+  "loader": "NeoForge",
+  "minecraft_runtime_tested": false,
+  "artifacts": [
+    {
+      "file": "zomboid-zombie-gore-1.0.20-neoforge-1.21.1-medical-buffer-torso.35.jar",
+      "mod_id": "zomboid_gore",
+      "version": "1.0.20.51",
+      "sha256": "0d29dc64ab9c5858932d9282b9c7f6bc33d75344ce66b4770b7b8dca12ab5640"
+    },
+    {
+      "file": "ragdollified-1.21.1-1.1.5-single-player-zombie-corpse.28.jar",
+      "mod_id": "ragdollified",
+      "version": "1.1.5-gore20-medical51",
+      "sha256": "fa13a276fa8087900623033bd2402526307b32f7824b3ffe0364dde5868ac0f2"
+    }
+  ]
+}

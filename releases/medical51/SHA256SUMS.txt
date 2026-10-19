@@ -1,0 +1,2 @@
+0d29dc64ab9c5858932d9282b9c7f6bc33d75344ce66b4770b7b8dca12ab5640  mods/zomboid-zombie-gore-1.0.20-neoforge-1.21.1-medical-buffer-torso.35.jar
+fa13a276fa8087900623033bd2402526307b32f7824b3ffe0364dde5868ac0f2  mods/ragdollified-1.21.1-1.1.5-single-player-zombie-corpse.28.jar

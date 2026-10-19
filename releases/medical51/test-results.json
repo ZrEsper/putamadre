@@ -1,0 +1,13 @@
+{
+  "minecraft_runtime_tested": false,
+  "boundary": "Production Player45.draw and Bite48.render with immediate BufferSource lifecycle simulation; real reflection implementation and native geometry helpers. No GPU/Minecraft instance.",
+  "results": [
+    "OLD_MEDICAL50_CRASH_AND_SHRUNK_TORSO=REPRODUCED",
+    "MEDICAL_BATCH_LIFETIME_FULL_SIZE_TORSO_AND_SINGLE_OWNER_CHECKS=14"
+  ],
+  "bytecode_classes": 998,
+  "native_hooks": "PASS: Skin12 end, server factory and both client factories",
+  "medical_persistence_regressions": 4030,
+  "actual_bullet_tick_regression": "PASS: inventory collider and posed body",
+  "survivor_downed_revive_regressions": 12
+}
