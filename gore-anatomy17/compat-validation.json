@@ -1,0 +1,39 @@
+{
+  "mobdismembermentneoforge-1.21.1-1.4.0-gore17-compat.7.jar": {
+    "metadata_only": true,
+    "sha256": "e2f0394b1bec6e68812fd76ffcee8154ad8e45444fe671e523db08bce73f901c",
+    "gore_dependency": {
+      "modId": "zomboid_gore",
+      "type": "required",
+      "versionRange": "[1.0.17,1.0.18)",
+      "ordering": "AFTER",
+      "side": "CLIENT"
+    }
+  },
+  "zombie-remains-loot-1.6.1-neoforge-1.21.1-physical-corpse-loot.20-gore17.jar": {
+    "metadata_only": true,
+    "sha256": "a51d41658150fe3ca2c32351524335aab7c8078c98e5c406b65eb3571bf0cd82",
+    "gore_dependency": {
+      "modId": "zomboid_gore",
+      "type": "required",
+      "versionRange": "[1.0.17,1.0.18)",
+      "ordering": "AFTER",
+      "side": "BOTH"
+    }
+  },
+  "ragdollified-1.21.1-1.1.5-gore-light.10-skeleton-compat.jar": {
+    "metadata_only": true,
+    "sha256": "fe61f626e6188bf856f4ac3fb702f597f73de81f9655df8be9776910c91148eb",
+    "gore_dependency": {
+      "modId": "zomboid_gore",
+      "type": "required",
+      "versionRange": "[1.0.17,1.0.18)",
+      "ordering": "AFTER",
+      "side": "BOTH"
+    }
+  },
+  "zomboid-zombie-gore-1.0.17-neoforge-1.21.1-reference-skeleton.jar": {
+    "version": "1.0.17",
+    "sha256": "947b9ecf1bd8d06c917a385990b4ebc42410c40172c0bcaf092ca54c26b08de7"
+  }
+}
