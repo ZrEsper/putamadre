@@ -1,0 +1,1 @@
+package net.minecraft.world.phys;public record AABB(double x0,double y0,double z0,double x1,double y1,double z1){public V getCenter(){return new V((x0+x1)/2,(y0+y1)/2,(z0+z1)/2);}public record V(double x,double y,double z){}}

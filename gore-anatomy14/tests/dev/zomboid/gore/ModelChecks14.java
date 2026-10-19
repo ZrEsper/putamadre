@@ -1,0 +1,9 @@
+package dev.zomboid.gore;
+import java.util.*;
+public class ModelChecks14{
+ static int checks;static void ok(boolean b,String why){checks++;if(!b)throw new AssertionError(why);}
+ public static class Part{public List<Object>cubes=new ArrayList<>();public Map<String,Part>children=new HashMap<>();public int drawn;public void translateAndRotate(Object p){}public void render(Object pose,Object vertex,int light,int overlay,int color){drawn++;}}
+ public static class Model{public Part head=new Part(),body=new Part(),leftArm=new Part(),rightArm=new Part(),leftLeg=new Part(),rightLeg=new Part();}
+ public static class Pose{int depth;public void pushPose(){depth++;}public void popPose(){depth--;}}
+ public static void main(String[]args){var model=new Model();Part child=new Part();child.cubes.add(new Object());model.head.children.put("variant",child);Model14.bind(model);Model14.part(model.head);ok(Model14.internal()&&!Model14.skin(),"empty EMF root renders internal anatomy without inventing a replacement skin cube");var input=List.of(new Mesh12.Cube(Mesh12.canonical(0),List.of()));var rootMesh=Anatomy14.build(input,0,3);ok(rootMesh.stream().noneMatch(q->q.material()==0),"empty root has no synthetic original-skin faces");Model14.part(child);ok(!Model14.internal()&&Model14.skin(),"decorative child keeps its skin but does not duplicate skull and organs");var childMesh=Anatomy14.build(input,0,3);ok(childMesh.stream().noneMatch(q->q.material()>1),"decorative descendants cannot produce floating bones eyes or teeth");var pose=new Pose();Model14.children(model.head,pose,new Object(),32,0,-1);ok(child.drawn==1&&pose.depth==0,"child model is rendered once and pose stack restored");Model14.end();ok(Model14.PART.get()==null,"hierarchy context cleared after entity render");System.out.println("EMF_ROOT_DESCENDANT_AND_NO_DUPLICATE_ANATOMY_CHECKS="+checks);}
+}

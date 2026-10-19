@@ -1,0 +1,18 @@
+[
+  {
+    "source": "Sangre brotando de arteria - efecto de sonido de terror.ogg",
+    "source_sha256": "b62598dbd3b54c8d89034f3dae619bf545f94ea3a9d86a8a52a4bd343ad69e70",
+    "output": "artery_pulse14.ogg",
+    "offset_seconds": 1,
+    "duration_seconds": 1.1,
+    "output_sha256": "f06cd2f9e3d1b86c1ffc581a2249bd95693ca4a116c56ff501523e7d149c300c"
+  },
+  {
+    "source": "gorebox all gore sounds.ogg",
+    "source_sha256": "2de45743f62c0beb9355c32f717e5ba5684cf18ac540877d7d1b565b451c7317",
+    "output": "wet_impact14.ogg",
+    "offset_seconds": 0.1,
+    "duration_seconds": 0.5,
+    "output_sha256": "8b519528119a36a8ee55cf39b46a00bc580daec0d5ea5c692cb0dedafd9ea102"
+  }
+]

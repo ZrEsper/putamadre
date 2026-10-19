@@ -1,0 +1,1 @@
+package net.minecraft.client.renderer;public class LevelRenderer{public static int getLightColor(Object level,net.minecraft.core.BlockPos pos){return pos.x()<0?32:160;}}

@@ -1,0 +1,1 @@
+package net.flashlight.battery;public class EntityLight14{public static Object last;public static int lastOriginal;public static int light(Object n,float partial,int original){last=n;lastOriginal=original;return original|96;}}

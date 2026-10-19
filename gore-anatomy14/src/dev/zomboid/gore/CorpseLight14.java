@@ -1,0 +1,9 @@
+package dev.zomboid.gore;
+import java.util.*;
+/** Adapts physical body samples to the existing shared flashlight entity-light budget. */
+public final class CorpseLight14 {
+ static final Map<Long,Point> POINTS=new LinkedHashMap<>();static boolean reported;
+ public static final class Point {double x,y,z;public Object getBoundingBox(){return R.make("net.minecraft.world.phys.AABB",x-.18,y-.18,z-.18,x+.18,y+.18,z+.18);}public float getBbWidth(){return .36f;}}
+ public static int point(Object position,int original){try{double x=R.num(R.get(position,"x")),y=R.num(R.get(position,"y")),z=R.num(R.get(position,"z"));long key=((long)Math.floor(x*4)*73428767)^((long)Math.floor(y*4)*912931)^((long)Math.floor(z*4)*19349663);Point sample=POINTS.get(key);if(sample==null){sample=new Point();POINTS.put(key,sample);while(POINTS.size()>64)POINTS.remove(POINTS.keySet().iterator().next());}sample.x=x;sample.y=y;sample.z=z;return ((Number)R.call(R.type("net.flashlight.battery.EntityLight14"),"light",sample,1f,original)).intValue();}catch(RuntimeException e){if(!reported){reported=true;System.err.println("[Gore14] Optional corpse flashlight bridge unavailable: "+e);}return original;}}
+ public static int transform(Object transform,int original){if(transform==null)return original;Object p=R.get(transform,"position");try{Object world=R.get(R.call(R.type("net.minecraft.client.Minecraft"),"getInstance"),"level");Object pos=R.make("net.minecraft.core.BlockPos",(int)Math.floor(R.num(R.get(p,"x"))),(int)Math.floor(R.num(R.get(p,"y"))+.15),(int)Math.floor(R.num(R.get(p,"z"))));if(world!=null&&R.yes(R.call(world,"hasChunkAt",pos))){if(R.yes(R.call(R.call(world,"getBlockState",pos),"isSolidRender",world,pos)))pos=R.call(pos,"above");original=((Number)R.call(R.type("net.minecraft.client.renderer.LevelRenderer"),"getLightColor",world,pos)).intValue();}}catch(RuntimeException unavailable){}return point(p,original);}
+}

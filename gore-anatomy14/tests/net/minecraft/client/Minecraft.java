@@ -1,0 +1,1 @@
+package net.minecraft.client;public class Minecraft{public Object level;public static final Minecraft INSTANCE=new Minecraft();public static Minecraft getInstance(){return INSTANCE;}}
