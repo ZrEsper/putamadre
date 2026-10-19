@@ -1,0 +1,27 @@
+ANATOMÍA PROCEDURAL .24 — Minecraft NeoForge 1.21.1
+
+INSTALACIÓN
+1. En mods, reemplaza Gore visible-tissue-debris.23 y Ragdollified low-impact.19 por los dos JAR incluidos. Instala ambos en todos los clientes y también en el servidor. No dejes versiones duplicadas.
+2. En resourcepacks, reemplaza TZP_1.20.1_2.7.zip por TZP-1.21.1-Procedural-Anatomy.24.zip, y Zomboid_Poldos.zip por Zomboid-Poldos-ETF-Fix.24.zip.
+3. Mantén TZP por encima de Poldos y de Fresh Animations. Conserva Splatter blood-budget.2, Global Melee v40 y los demás mods que usas.
+
+CAMBIOS
+- Heridas por posición y tamaño de impacto, en lugar de la abertura central prefijada. Las balas y los golpes melee utilizan la misma ruta de anatomía.
+- Piel, tejido y huesos se recortan a distintas profundidades. Los impactos repetidos amplían la zona arrancada. El daño alcanza ojos y mandíbula de forma localizada.
+- Lengua, vasos del cuello, tráquea, cráneo, dientes, costillas, columna, pelvis, pulmones, corazón, hígado, estómago, intestinos, riñones, arterias y huesos de brazos, manos, piernas y pies.
+- La piel conserva las imágenes originales del pack. Las nuevas piezas internas usan geometría cúbica con la paleta de Gore.
+- Cojera en las piernas alcanzadas. El registro de lesiones acompaña al cadáver y a sus datos guardados; se puede seguir dañando el cuerpo mediante la ruta de Ragdollified ya existente.
+- Torso centrado según su geometría real, incluidos hijos del modelo, para evitar el desplazamiento fijo vanilla.
+- Caídas y arrastre con sonidos originales de golpe sordo y roce, inspirados en la sensación de los ragdolls de Source. No contienen audio extraído de juegos. Máximo cuatro contactos por segundo a 24 bloques.
+- Caché limitada por modelo, zona y heridas; presupuesto de 32 recortes por cuerpo. Al llenarse, se fusionan recortes antiguos para admitir impactos nuevos.
+- Eliminadas las capas de heridas antiguas de TZP y corregida la variante de piel 0 de Poldos; todos los PNG originales se conservan byte por byte.
+
+COMPATIBILIDAD
+El nombre del archivo identifica la revisión .24. La versión declarada de Gore se mantiene en 1.0.20 para conservar los consumidores del pack que exigen ese intervalo exacto. El protocolo de Ragdollified cambia a 16-procedural24: ambos lados deben usar estos JAR.
+Los cadáveres anteriores sin el nuevo registro siguen cargándose mediante el formato anterior; no se pueden reconstruir coordenadas de heridas que nunca se guardaron.
+La posición en zombis vivos se estima en el espacio local del cuerpo y su orientación. Animaciones que doblen mucho una extremidad o modelos muy distintos necesitan validación en partida. El impacto sobre el cadáver utiliza su transformación física.
+
+VALIDACIÓN
+Compilación Java 21, verificación de bytecode, geometría/UV, presupuesto y acumulación de recortes, códec, conservación de datos entre paquetes, caché compartida, clasificación del contacto sonoro y centrado del torso: aprobados.
+No se ha ejecutado Minecraft con el modpack completo. Aspecto, audio y comportamiento multijugador real pendientes de verificar en partida.
+La imagen geometry-preview.png muestra geometría calculada; NO es una captura del juego.

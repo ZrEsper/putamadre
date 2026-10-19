@@ -1,0 +1,27 @@
+{
+  "files": {
+    "LEEME.txt": {
+      "bytes": 3229,
+      "sha256": "120674e0783df801289957980d6a36ed50bbb63dd17b771ad2ab73e2e2bb2001"
+    },
+    "ragdollified-1.21.1-1.1.5-procedural-anatomy.20.jar": {
+      "bytes": 9534957,
+      "sha256": "05a8bb9128ecbfcd84835e030628381d51d936d4ea334ea5d1da38357425afd1"
+    },
+    "Zomboid-Poldos-ETF-Fix.24.zip": {
+      "bytes": 16035737,
+      "sha256": "364c604d6ce3a7967cb6ff99ac82af01f89fe0da4b9c3e7e73220b99317296b5"
+    },
+    "zomboid-zombie-gore-1.0.20-neoforge-1.21.1-procedural-anatomy.24.jar": {
+      "bytes": 203382,
+      "sha256": "8f099ef1eff49deb187a29b9d42848c915c539ade73468107a9fe04549cb992f"
+    },
+    "TZP-1.21.1-Procedural-Anatomy.24.zip": {
+      "bytes": 14078710,
+      "sha256": "47ef21118091b0f8b1487343619c408fafa7fe45c17e4f981f3aa13f4794ad4d"
+    }
+  },
+  "minecraft_runtime_tested": false,
+  "source_repository": "https://github.com/ZrEsper/putamadre",
+  "base": "gore-impact23"
+}
