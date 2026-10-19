@@ -1,0 +1,16 @@
+# Gore .19: replace cuboid skin reconstruction with original polygon clipping
+
+Build and test: `python gore-anatomy19/build.py`, `python gore-anatomy19/test.py`.
+Package: `python gore-anatomy19/compat.py`.
+
+Evidence: three user videos show hollow-looking cuboids, large missing faces and striped overlapping surfaces. The .18 renderer regenerated six faces for every solid skin fragment after subtraction, including new internal faces; it also used nominal cube bounds instead of inflated original polygon positions. Inherited region mapping applied that reconstruction to decorative child nodes. Those are confirmed defects in the implementation; their exact interaction with the user's shaders is not reproducible here.
+
+Surface19 clips original skin polygons with interpolated original UVs. Untouched faces retain their exact vertex/UV data and order. Minor injuries preserve all six skin faces and add only a small offset pixel-shaped blood mark. Through-wounds use five stepped bands instead of large rectangular sheets. No invented internal skin walls or guessed canonical texture UVs are emitted. Bounds are derived from actual original vertices. Triangle fans use degenerate fourth vertices for the existing quad renderer. Existing internal anatomy is clipped and its covered/coplanar faces culled to avoid duplicate surfaces between neighboring bone/tissue boxes.
+
+The render wrapper only handles recognized anatomical roots with readable original cube/polygon/vertex data. Decorative descendants and clothing layers keep native rendering, except physically severed parts remain hidden. Empty or unsupported custom roots keep native appearance, which means those unsupported models do not receive the new detailed wound geometry. This trades missing custom-model wounds for preserving their original mesh rather than corrupting it. Damage bookkeeping, .17 skeleton, .16 organ physics and .18 collateral attenuation are retained. Wounds remain coarse region templates, not exact bullet coordinate decals. No packet or inventory schema changes.
+
+SurfaceChecks19 validates original UV/vertex identity for a minor hit, skin area, exact stepped entry/exit area, absence of invented internal planes, UV island bounds, complete destruction, shared-face removal and duplicate-bone face ownership. It deliberately supplies nominal bounds that differ from original polygon vertices to catch the old deformation path. The old cuboid skinCut helper and its tests are replaced by these polygon-based checks, rather than retaining passing tests for unused code. Existing damage/physics/skeleton/hierarchy checks also run. ASM verifies changed bytecode and dependency TOML is parsed for all companions.
+
+Minecraft, EMF's live render hierarchy and the user's shaderpack are not run here. Passing mesh tests is not visual confirmation in the game. The release omits the earlier skinless skeleton illustration, which did not validate the wound appearance. This release corrects identified mesh defects; it does not claim that all video artifacts have been reproduced and eliminated in the full modpack.
+
+Install the four JARs, one version each. Mob Dismemberment client-only; Gore, Ragdollified and Remains client/server. Keep Splatter blood-budget.2. Existing injuries are not healed; compare on newly spawned zombies.
