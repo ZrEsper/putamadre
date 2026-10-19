@@ -1,0 +1,21 @@
+{
+  "before": {
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Exception in thread \"main\" java.lang.IllegalStateException: scale\n\tat dev.zomboid.gore.fast.FastReflection.call(FastReflection.java:12)\n\tat dev.zomboid.gore.R.call(R.java)\n\tat dev.zomboid.gore.Bullet13.tick(Bullet13.java:136)\n\tat dev.zomboid.gore.BulletRegression46.main(BulletRegression46.java:9)\nCaused by: java.lang.NoSuchMethodException: scale\n\t... 4 more\n"
+  },
+  "after": {
+    "exit_code": 0,
+    "stdout": "ACTUAL_BULLET_TICK_REFLECTION_CORPSE_HIT=PASS\n",
+    "stderr": ""
+  },
+  "changed_entries": [
+    "META-INF/neoforge.mods.toml",
+    "dev/zomboid/gore/Bullet13.class"
+  ],
+  "input_sha256": "e4f073400b8df42706a95fe4d6db73c640895654d4732dbcde835c335174f769",
+  "output_sha256": "5ef734db4d968215e2873f8c857d99a168601e93ef4c4637a1207cf5a1530810",
+  "minecraft_runtime_tested": false,
+  "asm_verification": "ASM_BASIC_VERIFIER_CLASSES=131 METHODS=892",
+  "module_verification": "JVM_MODULE_LAYER_RESOLVED=6"
+}

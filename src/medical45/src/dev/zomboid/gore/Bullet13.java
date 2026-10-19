@@ -133,7 +133,7 @@ public final class Bullet13 {
         set.add(n);
         object4 = R.call(object8, "normalize", new Object[0]);
         float f = (float)Math.min(16.0, Math.max(3.0, d * 2.0));
-        object3 = R.call(object4, "scale", f);
+        object3 = R.call(object4, "scale", (double)f);
         R.call(R.type("com.raiiiden.ragdollified.network.RagdollImpulsePacket"), "broadcastOrdered", object7, null, n, n2, object3, object5, Float.valueOf(Collateral18.corpseDamage(object2, n, object5)));
         if (R.yes(R.get(object2, "explosion"))) {
             R.call(object2, "setPos", object5);
@@ -150,4 +150,3 @@ public final class Bullet13 {
         return false;
     }
 }
-
