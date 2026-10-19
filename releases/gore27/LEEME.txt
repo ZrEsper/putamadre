@@ -1,0 +1,22 @@
+GORE .27 + RAGDOLLIFIED .22 — anatomía y caídas
+
+INSTALACIÓN
+Cierra Minecraft y el servidor. Sustituye zomboid-zombie-gore .26 (o .25) por el .27 y ragdollified stable-anatomy.21 por grounded-falls.22. No dejes duplicados de esos mods. Usa estas mismas versiones en todos los clientes y servidor.
+Conserva Splatter y tus paquetes TZP/Zomboid Poldos. No necesitas reemplazar los packs de texturas. El protocolo de red sigue siendo 17-procedural25.
+
+ANATOMÍA
+Cerebro rosado de mayor tamaño con dos hemisferios, pliegues, cerebelo y tronco cerebral. Ojos con iris, pupilas, reflejo y nervio óptico. Lengua, músculos de mejillas y sienes, mandíbula, dientes y vasos del cuello.
+Pulmones más grandes rodeando el corazón. Hígado y estómago debajo del diafragma; intestinos y colon más abajo, con riñones posteriores, páncreas y otros elementos internos. Vértebras segmentadas con continuidad cervical y columna del torso.
+Cráneo y costillas más finos para dejar espacio a los órganos. Veinte materiales con paleta apagada, burdeos e ivory cálido a resolución baja compatible visualmente con el estilo TZP. El cerebro y los pulmones ya no usan el material marfil de antes.
+Los cortes locales abren y consumen esas estructuras. Los órganos intactos permanecen dentro hasta que se abre la zona; no son una capa que deba verse atravesando la piel sana.
+La vista previa incluida está renderizada a partir de la malla del parche, retirando capas externas para mostrar el interior. No es una captura de Minecraft.
+
+RESISTENCIA Y CAÍDAS
+Daño de balas TaCZ a zombis: 55 % del daño que habría aplicado la versión anterior después de sus modificadores. No se cambia el daño a jugadores, el de explosiones ni el de melee.
+Radio de destrucción de tejido por balas: 68 % del anterior, conservando los multiplicadores de arma. El daño se acumula y las partes duran más impactos. La destrucción cerebral fatal requiere mayor cobertura.
+Los cadáveres zombis tienen su velocidad horizontal inicial limitada y no reciben elevación inicial añadida. Los impactos ordinarios no añaden impulso de ragdoll; los fuertes solo un pequeño empujón horizontal, con presupuesto compartido para evitar que los perdigones se acumulen y los lancen. La gravedad y las caídas descendentes se conservan. Las explosiones siguen su ruta propia.
+
+VALIDACIÓN Y LÍMITES
+Pruebas de malla, UV de cada material, disposición y tamaños de órganos, continuidad de columna, daño de balas y física de caída mediante interfaces simuladas. Se conserva y pasa la regresión del crash al disparar a cadáveres y la de los sonidos de contacto de .26.
+No se ha ejecutado Minecraft ni validado visualmente con el motor real y el modpack completo. Los impactos exactos necesarios dependen del arma, zona, daño y configuración de salud; los recuentos de las pruebas son sintéticos.
+No cambia el problema OpenGL de formatos de profundidad incompatibles registrado anteriormente.

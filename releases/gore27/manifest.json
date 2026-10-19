@@ -1,0 +1,13 @@
+{
+  "patch": 27,
+  "files": {
+    "zomboid-zombie-gore-1.0.20-neoforge-1.21.1-tzp-organ-anatomy.27.jar": "23f6778f6346d854356b53cb5ed284febd72528618937837db82746116a53d3a",
+    "ragdollified-1.21.1-1.1.5-grounded-falls.22.jar": "33334fad5a9dbec4fc6e071f6bb0dcb04aafe4840463e91b71b37ed349d4dac9"
+  },
+  "parent_release": 26,
+  "protocol": "17-procedural25",
+  "minecraft_runtime_tested": false,
+  "ballistic_damage_multiplier": 0.55,
+  "ballistic_cut_radius_multiplier": 0.68,
+  "textures": "20 material tiles, original external skin packs unchanged"
+}
