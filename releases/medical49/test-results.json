@@ -1,0 +1,8 @@
+{
+  "minecraft_runtime_tested": false,
+  "boundary": "Production helpers and extracted native cleanup execute against simulated Minecraft APIs.",
+  "results": [
+    "REMAINS_POSE_RAY_CONNECTIVITY_BITE_BANDAGE_CHECKS=430",
+    "ARMOR_AREA=0.5459091351446567 QUADS=15\nLOCAL_ARMOR_SURFACE_CLIPPING_DEEP_CUTS_AND_GHOST_EXPIRY=304"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "minecraft_runtime_tested": false,
+  "base_branch": "codex/medical48-remains-impacts-bandages",
+  "base_commit": "2a0d3cfcfa0f78dc49f5c136b520b4d1e4acf0f9",
+  "bytecode_classes": 986,
+  "checks": {
+    "previous48": 430,
+    "geometry_and_visual_helpers": 304,
+    "moving_entry_coordinates": 217,
+    "medical_persistence": 4030,
+    "production_bullet_tick": "PASS"
+  },
+  "sha256": {
+    "ragdollified-1.21.1-1.1.5-authoritative-corpses.26.jar": "026cd135e26945985f7aa558f7250731495786aa3d485e5625e812e1544aef4e",
+    "zomboid-zombie-gore-1.0.20-neoforge-1.21.1-entry-wounds-armor.33.jar": "bb84f22d488bb2d76b8a4f49cd0346933a8b1915f338f0391ef917f915b1d5af"
+  }
+}
