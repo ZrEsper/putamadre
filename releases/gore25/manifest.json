@@ -1,0 +1,15 @@
+{
+  "files": {
+    "zomboid-zombie-gore-1.0.20-neoforge-1.21.1-head-blood-destruction.25.jar": {
+      "bytes": 235381,
+      "sha256": "5e24ffb91d38728e4c9cbc1d6705b8dacf797320b63388aba656f310bd30a0c2"
+    },
+    "ragdollified-1.21.1-1.1.5-stable-anatomy.21.jar": {
+      "bytes": 9534959,
+      "sha256": "62d5089599ed6e668500c59bd1f4e95d43960f20a024d593b1fd6d21b0a8cc8f"
+    }
+  },
+  "unchanged_splatter_sha256": "3088c823183190d9ed716916b420bd375340b1049e19cd18e4f56a32c6965754",
+  "protocol": "17-procedural25",
+  "minecraft_runtime_tested": false
+}

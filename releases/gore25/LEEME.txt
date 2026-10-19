@@ -1,0 +1,29 @@
+GORE .25 — CABEZA TZP, TORSO Y DESTRUCCIÓN COMPLETA
+Minecraft NeoForge 1.21.1
+
+INSTALAR
+Reemplaza todas las versiones anteriores de Zomboid Zombie Gore y Ragdollified por los dos JAR incluidos. Un solo JAR de cada mod en clientes y servidor; ambos lados deben actualizarse.
+Conserva Splatter blood-budget.2 y los packs de texturas actuales. No hace falta volver a instalar los packs .24.
+
+CORRECCIONES
+- Cabeza: se respeta skipDraw de EMF. El cubo vanilla oculto ya no se toma por la cabeza visible. La cabeza real de TZP en headwear/hat se recorta junto con sus ojos y capas, sin que una segunda piel tape el gore.
+- Torso y pose del cadáver: se recoge la geometría neutral con sus desplazamientos reales; se excluyen los cubos ocultos y las capas antiguas de heridas. La pose física se reafirma DESPUÉS de que EMF ejecute sus animaciones, para que no vuelva a desplazar, rotar o escalar el cuerpo al renderizar.
+- Cabeza, ambos brazos, ambas piernas y torso se pueden consumir por completo, incluyendo piel, tejido y huesos. Un daño terminal no puede hacer reaparecer la parte.
+- Los impactos repetidos siguen produciendo sangre aunque el antiguo nivel de lesión ya haya llegado a su máximo.
+- Heridas profundas: chorros pulsados desde la herida o el muñón, también en cadáveres; gotas más grandes y charcos de sangre en el suelo.
+- Destrucción: sonido húmedo propio y fragmentos de carne y hueso con gravedad, colisión y reposo en el suelo.
+- Las balas pasan a ignorar las partes del cadáver que ya fueron destruidas por completo.
+- Se conservan las texturas y el estilo cúbico del pack.
+
+LÍMITES DE EFECTOS
+48 nuevas partículas de sangre por tick compartidas por las nuevas ráfagas y chorros; 48 fragmentos activos, con reemplazo de los antiguos. Los fragmentos se asientan y caducan, y los charcos son partículas planas sin proyección de geometría del mundo. Sonidos y charcos tienen un límite global adicional para no saturar una zona con muchos cuerpos.
+
+PRUEBAS
+Compilación y verificación de bytecode: aprobadas.
+Regresiones de la ruta Skin12 entregada, usando APIs simuladas: cabeza vanilla oculta frente a cabeza TZP visible, capas antiguas, cambio de variante EMF, desplazamientos y animación tardía del torso: aprobadas.
+Destrucción completa por zona, no reaparición, máscara de proyectiles, sangre, sonido, límite de fragmentos y reposo de fragmentos en el suelo: aprobados.
+No se ha ejecutado Minecraft con tu modpack completo. El resultado visual, el audio y la integración multijugador necesitan comprobarse en partida.
+
+COMPATIBILIDAD
+Se conserva la versión declarada 1.0.20 de Gore por los mods del pack que exigen ese intervalo; el archivo y el nombre en Mods identifican la revisión .25.
+Protocolo de Ragdollified: 17-procedural25. Los datos de heridas guardados de .24 siguen siendo compatibles.
