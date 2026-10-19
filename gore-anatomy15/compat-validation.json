@@ -1,0 +1,39 @@
+{
+  "mobdismembermentneoforge-1.21.1-1.4.0-gore15-compat.5.jar": {
+    "metadata_only": true,
+    "sha256": "0934acfabb4eb2a056302e3cf35691e0f1f4cb5b01d9d8dd5f2c208a47d3f7e7",
+    "gore_dependency": {
+      "modId": "zomboid_gore",
+      "type": "required",
+      "versionRange": "[1.0.15,1.0.16)",
+      "ordering": "AFTER",
+      "side": "CLIENT"
+    }
+  },
+  "zombie-remains-loot-1.6.1-neoforge-1.21.1-physical-corpse-loot.18-gore15.jar": {
+    "metadata_only": true,
+    "sha256": "656cc093fb14d9fd3efe5695ef849fe95dc0bbcde5ca9bcb1bc12cda14a754eb",
+    "gore_dependency": {
+      "modId": "zomboid_gore",
+      "type": "required",
+      "versionRange": "[1.0.15,1.0.16)",
+      "ordering": "AFTER",
+      "side": "BOTH"
+    }
+  },
+  "ragdollified-1.21.1-1.1.5-gore-light.6-layers-compat.jar": {
+    "metadata_only": true,
+    "sha256": "e981dea81ba4665f54c19f0dd677cbb89b2bbd2be9acc4532d1b52f81f19683e",
+    "gore_dependency": {
+      "modId": "zomboid_gore",
+      "type": "required",
+      "versionRange": "[1.0.15,1.0.16)",
+      "ordering": "AFTER",
+      "side": "BOTH"
+    }
+  },
+  "zomboid-zombie-gore-1.0.15-neoforge-1.21.1-layered-destruction.jar": {
+    "version": "1.0.15",
+    "sha256": "11e9d8bd742b9f304cda9aef09511332f7281c3367993eda387ae0876b122995"
+  }
+}
