@@ -1,0 +1,19 @@
+import java.nio.file.*;import java.util.*;import java.util.zip.*;import org.objectweb.asm.*;import org.objectweb.asm.tree.*;import org.objectweb.asm.tree.analysis.*;
+public class Patch implements Opcodes {
+ static String G="dev/zomboid/gore/";static Map<String,byte[]>read(String p)throws Exception{Map<String,byte[]>e=new TreeMap<>();try(var z=new ZipFile(p)){for(var n:Collections.list(z.entries()))e.put(n.getName(),z.getInputStream(n).readAllBytes());}return e;}
+ static void write(String p,Map<String,byte[]>e)throws Exception{try(var z=new ZipOutputStream(Files.newOutputStream(Path.of(p)))){for(var row:e.entrySet()){var n=new ZipEntry(row.getKey());n.setTime(0);z.putNextEntry(n);z.write(row.getValue());z.closeEntry();}}}
+ static MethodInsnNode call(String c,String n,String d){return new MethodInsnNode(INVOKESTATIC,G+c,n,d,false);}
+ public static void main(String[]a)throws Exception{var gore=read(a[0]);var rag=read(a[1]);int hits=0;
+ for(String name:List.of("Shards13","Trauma13","Rules","Skin12")){String path=G+name+".class";ClassNode c=new ClassNode();new ClassReader(gore.get(path)).accept(c,0);for(MethodNode m:c.methods){
+ if(name.equals("Shards13")&&m.name.equals("burst")){m.instructions.clear();m.tryCatchBlocks.clear();m.localVariables=null;for(int slot:new int[]{0,1,3,5,7,8})m.instructions.add(new VarInsnNode(slot==0?ALOAD:slot>=7?ILOAD:DLOAD,slot));m.instructions.add(call("Debris23","burst",m.desc));m.instructions.add(new InsnNode(RETURN));hits++;}
+ if(name.equals("Trauma13")&&m.name.equals("tick")){InsnList start=new InsnList();start.add(new VarInsnNode(ALOAD,0));start.add(call("Debris23","enter","(Ljava/lang/Object;)V"));m.instructions.insert(start);for(var n:m.instructions.toArray())if(n.getOpcode()==RETURN)m.instructions.insertBefore(n,call("Debris23","end","()V"));hits++;}
+ if(name.equals("Skin12")&&m.name.equals("ragdoll")){InsnList start=new InsnList();start.add(new VarInsnNode(ALOAD,0));start.add(call("Debris23","ragdoll","(Ljava/lang/Object;)V"));m.instructions.insert(start);hits++;}
+ if(name.equals("Rules")&&m.name.equals("push")){for(var n:m.instructions.toArray())if(n.getOpcode()==DRETURN){InsnList scale=new InsnList();scale.add(new LdcInsnNode(.1));scale.add(new InsnNode(DMUL));m.instructions.insertBefore(n,scale);}hits++;}
+ }ClassWriter w=new ClassWriter(ClassWriter.COMPUTE_MAXS);c.accept(w);gore.put(path,w.toByteArray());}
+ String path="com/raiiiden/ragdollified/client/ClientRagdoll.class";ClassNode c=new ClassNode();new ClassReader(rag.get(path)).accept(c,0);for(MethodNode m:c.methods)if(m.name.equals("applyHit")&&m.desc.equals("(ILjavax/vecmath/Vector3f;Ljavax/vecmath/Vector3f;Z)V")){InsnList l=new InsnList();l.add(new VarInsnNode(ALOAD,0));l.add(new VarInsnNode(ALOAD,2));l.add(new MethodInsnNode(INVOKESTATIC,"com/raiiiden/ragdollified/client/repair/Impulse23","apply","(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",false));l.add(new TypeInsnNode(CHECKCAST,"javax/vecmath/Vector3f"));l.add(new VarInsnNode(ASTORE,2));m.instructions.insert(l);hits++;}ClassWriter w=new ClassWriter(ClassWriter.COMPUTE_MAXS);c.accept(w);rag.put(path,w.toByteArray());
+ if(hits!=5)throw new AssertionError(hits);
+ try(var walk=Files.walk(Path.of(a[2]))){for(var p:walk.filter(p->p.toString().endsWith(".class")).toList()){String n=Path.of(a[2]).relativize(p).toString();if(n.startsWith(G))gore.put(n,Files.readAllBytes(p));if(n.startsWith("com/raiiiden/"))rag.put(n,Files.readAllBytes(p));}}
+ for(var e:gore.entrySet())if(e.getKey().startsWith(G)&&e.getKey().endsWith(".class")){ClassNode k=new ClassNode();new ClassReader(e.getValue()).accept(k,0);for(var m:k.methods)if((m.access&(ACC_ABSTRACT|ACC_NATIVE))==0)new Analyzer<BasicValue>(new BasicVerifier()).analyze(k.name,m);}
+ write(a[3],gore);write(a[4],rag);System.out.println("IMPACT_BURST_SOUND_LAYERS_AND_LOW_IMPULSE_PATCHES="+hits);
+ }
+}

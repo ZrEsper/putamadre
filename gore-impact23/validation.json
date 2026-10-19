@@ -1,0 +1,11 @@
+{
+  "inputs": {
+    "render-repair21/output/zomboid-zombie-gore-1.0.20-neoforge-1.21.1-layer-capture-fix.21.jar": "4e2d536e2c592dc375494c5d8e3aed22e8e571e0543b2fdba5faec1749040999",
+    "render-repair21/output/ragdollified-1.21.1-1.1.5-module-capture-fix.18.jar": "031163a5112612d2a2739b641cba3c4596e42469822ea9f4a2545cccb768c96e"
+  },
+  "outputs": {
+    "ragdollified-1.21.1-1.1.5-low-impact.19.jar": "26ab083ab2945c2c1ffff953391bfb5348ea45ab2784e52e12c09b464e857160",
+    "zomboid-zombie-gore-1.0.20-neoforge-1.21.1-visible-tissue-debris.23.jar": "b6885740090b4d9a65b328c0fff8c091ba1ba02e561070c365de205864db5e27"
+  },
+  "minecraft_runtime_tested": false
+}
