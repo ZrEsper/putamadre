@@ -18,5 +18,5 @@ def merge(key,name,prefix):
   for n,b in sorted(e.items()):i=zipfile.ZipInfo(n,(1980,1,1,0,0,0));i.compress_type=zipfile.ZIP_DEFLATED;z.writestr(i,b)
 merge('gore','zomboid-zombie-gore-1.0.20-neoforge-1.21.1-layer-capture-fix.21.jar','dev/zomboid/gore')
 merge('flash','flashlight-5.1-neoforge-1.21.1-gl-error-isolation.18.jar','net/flashlight/battery')
-subprocess.run(['java','-cp',str(r/'build/classes')+':'+asm,'Patch',str(inputs['rag'][0]),str(r/'build/classes/dev/zomboid/gore/Capture21.class'),str(r/'output/ragdollified-1.21.1-1.1.5-humanoid-texture-cache.17.jar')],check=True)
+subprocess.run(['java','-cp',str(r/'build/classes')+':'+asm,'Patch',str(inputs['rag'][0]),str(r/'build/classes/com/raiiiden/ragdollified/client/repair/Capture21.class'),str(r/'output/ragdollified-1.21.1-1.1.5-module-capture-fix.18.jar')],check=True)
 (r/'validation.json').write_text(json.dumps({'inputs':{k:{'path':str(p.relative_to(root)),'sha256':h}for k,(p,h)in inputs.items()},'outputs':{p.name:hashlib.sha256(p.read_bytes()).hexdigest()for p in(r/'output').glob('*.jar')},'minecraft_runtime_tested':False},indent=2)+'\n')

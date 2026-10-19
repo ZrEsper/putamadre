@@ -1,0 +1,2 @@
+import java.lang.module.*;import java.nio.file.*;import java.util.*;
+public class ModuleChecks22 {public static void main(String[]args){Path[]paths=Arrays.stream(args).map(Path::of).toArray(Path[]::new);ModuleFinder finder=ModuleFinder.of(paths);Set<String>roots=new HashSet<>();for(var m:finder.findAll())roots.add(m.descriptor().name());var config=ModuleLayer.boot().configuration().resolveAndBind(finder,ModuleFinder.of(),roots);System.out.println("REAL_JVM_MODULE_RESOLUTION_PASS="+config.modules().size());}}

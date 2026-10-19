@@ -1,4 +1,5 @@
 package dev.zomboid.gore;
+import com.raiiiden.ragdollified.client.repair.Capture21;
 import java.util.*;
 public class RepairChecks21 {
  static int n;static void ok(boolean b,String m){n++;if(!b)throw new AssertionError(m);}

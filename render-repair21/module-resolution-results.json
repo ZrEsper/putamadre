@@ -1,0 +1,11 @@
+{
+  "previous": {
+    "exit": 1,
+    "stderr": "Exception in thread \"main\" java.lang.module.ResolutionException: Modules ragdollified and zomboid.zombie.gore export package dev.zomboid.gore to module flashlight\n\tat java.base/java.lang.module.Resolver.resolveFail(Resolver.java:900)\n\tat java.base/java.lang.module.Resolver.failTwoSuppliers(Resolver.java:814)\n\tat java.base/java.lang.module.Resolver.checkExportSuppliers(Resolver.java:735)\n\tat java.base/java.lang.module.Resolver.finish(Resolver.java:380)\n\tat java.base/java.lang.module.Configuration.<init>(Configuration.java:139)\n\tat java.base/java.lang.module.Configuration.resolveAndBind(Configuration.java:493)\n\tat java.base/java.lang.module.Configuration.resolveAndBind(Configuration.java:297)\n\tat ModuleChecks22.main(ModuleChecks22.java:2)\n"
+  },
+  "fixed": {
+    "exit": 0,
+    "stdout": "REAL_JVM_MODULE_RESOLUTION_PASS=4\n"
+  },
+  "minecraft_runtime_tested": false
+}

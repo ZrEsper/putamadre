@@ -34,3 +34,11 @@ python render-repair21/regression_flash.py
 Pruebas de captura para humanoides fuera de Guard Villagers, exclusión de geometría no humanoide, preservación de 200 entradas al superar el límite, capas heridas sin duplicar anatomía y registro tardío de geometría. Inspección de las clases finales de Ragdollified, regresiones de superficies/UV, daño, destrucción, órganos y luces. Prueba de errores GL previos frente a propios. Regresiones de batería, inventario/X, reanimación, NPC y restauración de enlaces GPU.
 
 No se ejecutó Minecraft ni el conjunto de mods en NVIDIA. Estas correcciones reparan las rutas indicadas; no se afirma validación visual de los vídeos ni compatibilidad de cualquier modelo no humanoide. Los shaders de iluminación y el diseño del esqueleto no se han rediseñado en este parche.
+
+## Hotfix de arranque: Ragdollified .18
+
+El primer JAR .17 de esta reparación incluía Capture21 dentro del paquete dev.zomboid.gore. Ese paquete pertenece al módulo Gore: NeoForge rechaza los dos proveedores con ResolutionException antes de cargar el mundo. La prueba de clases en classpath no detectaba esa colisión de módulos.
+
+La clase ahora está en com.raiiiden.ragdollified.client.repair, dentro del módulo Ragdollified. Los puntos de llamada usan su nueva ruta; Gore sigue siendo una dependencia, sin copiar sus clases a Ragdollified. Se añadió una regresión con ModuleFinder y Configuration.resolveAndBind de la JVM: el JAR anterior reproduce el fallo y los cuatro artefactos corregidos resuelven correctamente. Esto comprueba la resolución de módulos; no equivale a ejecutar Minecraft.
+
+Paquete de sustitución: Ragdollified18-Module-Fix.zip. Reemplazar solamente ragdollified-1.21.1-1.1.5-humanoid-texture-cache.17.jar por ragdollified-1.21.1-1.1.5-module-capture-fix.18.jar. El último log también incluye las dos Flashlight .17 y .18: retirar Flashlight native-capture-recovery.17 y conservar gl-error-isolation.18. Mantener Gore layer-capture-fix.21 y Global Melee v40.

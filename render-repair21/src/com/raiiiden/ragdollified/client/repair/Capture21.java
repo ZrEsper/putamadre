@@ -1,4 +1,5 @@
-package dev.zomboid.gore;
+package com.raiiiden.ragdollified.client.repair;
+import dev.zomboid.gore.R;
 /** Preserve compatible humanoid model and texture caches without clearing all corpses. */
 public final class Capture21 {
  static boolean warned;

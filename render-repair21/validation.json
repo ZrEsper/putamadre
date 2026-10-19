@@ -14,9 +14,9 @@
     }
   },
   "outputs": {
+    "ragdollified-1.21.1-1.1.5-module-capture-fix.18.jar": "031163a5112612d2a2739b641cba3c4596e42469822ea9f4a2545cccb768c96e",
     "zomboid-zombie-gore-1.0.20-neoforge-1.21.1-layer-capture-fix.21.jar": "4e2d536e2c592dc375494c5d8e3aed22e8e571e0543b2fdba5faec1749040999",
-    "flashlight-5.1-neoforge-1.21.1-gl-error-isolation.18.jar": "40637749c5db7297cf132dfc54dcac18e26599247bc94339fc51a448d01af51b",
-    "ragdollified-1.21.1-1.1.5-humanoid-texture-cache.17.jar": "c8bfd23fd911b3ea5abd0bc0ebc83ed495855eb5d74931fcd5d2330583bbbafa"
+    "flashlight-5.1-neoforge-1.21.1-gl-error-isolation.18.jar": "40637749c5db7297cf132dfc54dcac18e26599247bc94339fc51a448d01af51b"
   },
   "minecraft_runtime_tested": false
 }
