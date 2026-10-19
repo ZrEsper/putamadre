@@ -1,0 +1,12 @@
+{
+  "patch": 28,
+  "parent_release": 27,
+  "files": {
+    "zomboid-zombie-gore-1.0.20-neoforge-1.21.1-bleeding-limbs-slashes.28.jar": "6ee589bbef7e81796b1af7b5a0d2d359edb77126588760a99243fdfbd6f3498a",
+    "ragdollified-1.21.1-1.1.5-corpse-no-shot-push.23.jar": "6168e706e01761036a5a7739c3bd6901b0513659fd83cd7a82c42ab642f1f544"
+  },
+  "requires_same_client_server_versions": true,
+  "protocol": "18-trauma28",
+  "splatter_unchanged": "3088c823183190d9ed716916b420bd375340b1049e19cd18e4f56a32c6965754",
+  "minecraft_runtime_tested": false
+}

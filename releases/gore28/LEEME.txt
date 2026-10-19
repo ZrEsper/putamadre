@@ -1,0 +1,26 @@
+GORE .28 + RAGDOLLIFIED .23
+
+INSTALAR
+Cierra el juego y el servidor. Reemplaza el JAR de zomboid-zombie-gore .27 por el .28, y ragdollified .22 por el .23. No dejes versiones duplicadas. Todos los clientes y el servidor deben usar las dos versiones nuevas: el protocolo ahora es 18-trauma28 porque los cortes contienen información adicional de forma y orientación.
+Conserva splatter blood-budget.2, los packs TZP/Zomboid Poldos y el resto de mods.
+Para comprobar la localización de los impactos, prueba con zombis nuevos: las heridas antiguas ya están guardadas con la localización de la versión anterior.
+
+SANGRADO
+Chorros finos de geometría curva, afectados por gravedad, con gotas más pequeñas. Presión pulsante que decae; tras morir decae más rápido y da paso al goteo. Sonidos originales de salida a presión, flujo/goteo e impacto líquido. No son grabaciones de juegos comerciales.
+Límites globales: 16 chorros guardados, hasta 12 visibles, 12 consultas de colisión por tick para sus trayectorias; presupuesto compartido para gotas y sonidos. Los cortes por melee no expulsan fragmentos redondos con cada golpe.
+
+PIERNAS Y BRAZOS
+Las lesiones estructurales y pérdidas de extremidades alimentan un estado común para velocidad, apoyo de piernas y pose. Una pierna inutilizada arrastra el paso y provoca balanceo. Con ambas piernas inutilizadas se reduce más la velocidad y se adopta una postura baja. La corrección visual se aplica al final del render de cada parte para evitar que EMF/TZP la sustituya.
+Brazos inutilizados quedan caídos. Con ambos brazos inutilizados y cabeza presente, el zombi conserva un ataque de cabeza con balanceo del torso; se sincroniza la animación del ataque acertado con el servidor. Sin cabeza no puede ejecutar ese ataque.
+
+IMPACTOS Y MELEE
+Corregida la inversión horizontal entre el punto del impacto y el modelo. La clasificación distingue ambos brazos, ambas piernas, torso y cabeza con distintos giros. Se usa también el giro de la cabeza al colocar la herida en ella. Un indicador de headshot incoherente con la altura del impacto no redirige un tiro de pierna a la cabeza.
+Cuchillos, espadas y hachas dejan canales estrechos y orientados en lugar del hueco esférico de una bala. Su orientación se calcula con la dirección e inclinación del atacante relativas al objetivo; las hachas reciben una inclinación más vertical. Es una aproximación al plano del swing, no una simulación de colisión de la hoja durante cada fotograma de la animación.
+Puñetazos: 35 % del daño anterior a zombis, moretones y sin eliminación de volumen de tejido. Incluso los moretones acumulados no activan por sí solos la destrucción de una parte. Se conserva el daño de las armas con objeto equipado.
+
+CADÁVERES
+Los impactos posteriores sobre un cadáver zombi no añaden impulso. El impacto al morir conserva un empujón horizontal muy pequeño en su dirección, sin elevación artificial. Las explosiones mantienen su ruta propia y la gravedad se conserva.
+
+VALIDACIÓN
+Pasan pruebas de servidor simulado, estado de extremidades, eventos de ataque, poses, coordenadas con cinco giros, sincronización del tipo y orientación de heridas, canales de corte y moretones, dibujo del chorro, sonidos y presupuesto de colisiones. También pasan las regresiones de anatomía, cabeza/torso, partículas, fragmentos y crash de disparos a cadáveres.
+No se ha ejecutado Minecraft ni probado con el modpack completo. Deben comprobarse dentro del juego la mezcla visual con las animaciones de TZP y el balance de volumen de sonido.
