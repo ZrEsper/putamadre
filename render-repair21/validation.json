@@ -1,0 +1,22 @@
+{
+  "inputs": {
+    "gore": {
+      "path": "gore-anatomy20/output/zomboid-zombie-gore-1.0.20-neoforge-1.21.1-emf-wounds.jar",
+      "sha256": "a2d6c415d213d248a31fc3e069c79e49a147b984f71d4f0b38dc954610d19be6"
+    },
+    "rag": {
+      "path": "gore-anatomy20/output/ragdollified-1.21.1-1.1.5-gore-light.16-emf-compat.jar",
+      "sha256": "0c9f15a9b1e51efd07e4f608cf2689a8ff0a42c4a8a250b965d44319dcb67551"
+    },
+    "flash": {
+      "path": "flashlight-recovery17/output/flashlight-5.1-neoforge-1.21.1-native-capture-recovery.17.jar",
+      "sha256": "44202d6398edd22cb872b02af14a89086c15d4feca2500267e39c0985aba5f7c"
+    }
+  },
+  "outputs": {
+    "zomboid-zombie-gore-1.0.20-neoforge-1.21.1-layer-capture-fix.21.jar": "4e2d536e2c592dc375494c5d8e3aed22e8e571e0543b2fdba5faec1749040999",
+    "flashlight-5.1-neoforge-1.21.1-gl-error-isolation.18.jar": "40637749c5db7297cf132dfc54dcac18e26599247bc94339fc51a448d01af51b",
+    "ragdollified-1.21.1-1.1.5-humanoid-texture-cache.17.jar": "c8bfd23fd911b3ea5abd0bc0ebc83ed495855eb5d74931fcd5d2330583bbbafa"
+  },
+  "minecraft_runtime_tested": false
+}

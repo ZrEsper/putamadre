@@ -1,0 +1,1 @@
+package com.raiiiden.ragdollified.client;public class ClientMobModelCache{public static String key;public static Object model;public static void cacheModel(String k,net.minecraft.client.model.HumanoidModel m){key=k;model=m;}}
