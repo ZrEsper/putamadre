@@ -1,0 +1,1 @@
+package de.maxhenkel.corpse.entities; import net.minecraft.nbt.CompoundTag;import net.minecraft.world.entity.player.Player; public class CorpseEntity extends Player {public CompoundTag tag=new CompoundTag();public CorpseEntity(int i){super(i);}public CompoundTag getPersistentData(){return tag;}public Object registryAccess(){return this;}}

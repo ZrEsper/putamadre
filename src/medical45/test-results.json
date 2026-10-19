@@ -1,0 +1,11 @@
+{
+  "minecraft_runtime_tested": false,
+  "boundary_objects": "Minecraft, native packet IO and retained-body registration simulated in behavioral tests; ASM checks use actual patched classfiles",
+  "results": [
+    "MEDICAL_POSTURE_PERSISTENCE_HEALING_CORPSE_AND_COLLISION_CHECKS=4030",
+    "WIDE_SLIM_DRESSING_RENDER_SCOPE_CHECKS=20",
+    "ASM_BASIC_VERIFIER_CLASSES=1834 METHODS=17022",
+    "UNCHANGED_ORIGINAL_RESOURCES_BEFORE_METADATA_PACKAGING=1389",
+    "JVM_MODULE_LAYER_RESOLVED=6"
+  ]
+}

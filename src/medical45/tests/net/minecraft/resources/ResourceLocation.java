@@ -1,0 +1,1 @@
+package net.minecraft.resources; public record ResourceLocation(String value){public static Object fromNamespaceAndPath(String a,String b){return new ResourceLocation(a+":"+b);}}

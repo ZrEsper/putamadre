@@ -1,0 +1,6 @@
+60fc5eced08e59bcec87cec599661cbe12270eb11af44d393d0fc443cdf91c5c  mods/firstaid-1.21.1-ZOMBOID-v3.6.15-procedural-visible-wounds.jar
+a16bd5eec37ad8b867b8ab9ae533e27fb0bd882fed1596038fdf2620061c15c0  mods/tacz-firstaid-compat-1.0.3-impact-coordinates.jar
+e4f073400b8df42706a95fe4d6db73c640895654d4732dbcde835c335174f769  mods/zomboid-zombie-gore-1.0.20-neoforge-1.21.1-medical-corpse.30.jar
+4161514e89165f9443d3650d92e3ae34579f7ea7f980173e4740e9ed66cfbca2  mods/ragdollified-1.21.1-1.1.5-single-corpse.24.jar
+a7c0abc33e3520050c1f93854dbed035a33d9998e183c2745f6f266033a0ecb7  mods/corpse-neoforge-1.21.1-1.1.13-ragdoll-injuries.5.jar
+63386626f336211cf2a4e065958994392be743e1a57921b52eb4ebd2e5bf6f38  mods/tacznpcs-2.1.0-1.21.1-tactical.31-single-corpse.jar

@@ -1,0 +1,1 @@
+package io.netty.buffer; public class Unpooled {public static Object buffer(){return new byte[0];}public static Object wrappedBuffer(byte[]b){return b;}}

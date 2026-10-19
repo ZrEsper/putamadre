@@ -1,0 +1,1 @@
+package com.raiiiden.ragdollified;public class MobModelHelper{public enum ModelType{HUMANOID_STANDARD}}

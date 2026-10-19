@@ -1,0 +1,1 @@
+package dev.zomboid.gore;public class Trauma12{public static void packet(Object a,Object b){}}

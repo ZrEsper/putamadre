@@ -1,0 +1,1 @@
+package net.minecraft.client.renderer;public class RenderType{public static Object entityCutoutNoCull(Object texture){return texture;}}

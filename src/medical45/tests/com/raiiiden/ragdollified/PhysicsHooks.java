@@ -1,0 +1,1 @@
+package com.raiiiden.ragdollified;public class PhysicsHooks {public static void spawnRagdoll(Object source,Object damage){if(dev.zomboid.gore.Linked45.skipDeath(source))return;dev.zomboid.gore.Linked45.register(source,new com.raiiiden.ragdollified.network.RagdollSpawnPacket());}}

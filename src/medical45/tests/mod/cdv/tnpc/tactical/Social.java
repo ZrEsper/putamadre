@@ -1,0 +1,1 @@
+package mod.cdv.tnpc.tactical;public class Social{public static Object c(Object o,String m,Object...a){return dev.zomboid.gore.R.call(o,m,a);}public static Class<?>t(String name){return dev.zomboid.gore.R.type(name);}}

@@ -1,0 +1,1 @@
+package mod.cdv.tnpc.entity;public class AutoGunOperator extends net.minecraft.world.entity.player.Player{public AutoGunOperator(int i){super(i);}public boolean isSlim(){return true;}public String getPlayerSkin(){return "tacznpcs:textures/test.png";}}
