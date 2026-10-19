@@ -1,0 +1,12 @@
+GORE .26 - corrección del crash al disparar a cadáveres
+
+Cierra Minecraft y el servidor. Quita el JAR de zomboid-zombie-gore .25 y coloca el .26 de este ZIP. No dejes ambas versiones. Instala el mismo JAR en los clientes y servidor.
+Conserva ragdollified stable-anatomy.21, Splatter y los paquetes de texturas actuales. El protocolo no cambia.
+
+Corregido: Bullet13.tick enviaba Float a Vec3.scale(double), provocando IllegalStateException: scale / NoSuchMethodException: scale y Ticking entity.
+Corregido también: Foley24 intentaba usar add(double,double,double) sobre una posición física Vector3f. Ahora crea una Vec3 separada para comprobar el suelo sin modificar la posición física. Esto recupera la comprobación de contactos que usa el sonido de arrastre/impacto.
+
+Pruebas: se reprodujeron ambos fallos con .25 y se ejecutaron las mismas rutas con .26 usando interfaces simuladas estrictas. Pasan pruebas de impactos, impulso, perforación, contacto del cadáver y regresiones existentes de geometría, cabeza, torso, sangre y fragmentos.
+No se ha ejecutado Minecraft ni comprobado visualmente en el juego.
+
+Pendiente independiente observado: latest.log registra 986 mensajes OpenGL de formatos de profundidad incompatibles. Este parche corrige el crash del servidor y el fallo de sonidos indicado; no corrige ese problema gráfico ni los avisos de recursos de otros mods.

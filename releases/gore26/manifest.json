@@ -1,0 +1,9 @@
+{
+  "patch": 26,
+  "file": "zomboid-zombie-gore-1.0.20-neoforge-1.21.1-corpse-bullet-crash-fix.26.jar",
+  "sha256": "34db58f8bb6d6df085f5521c146846f21c4bd6601d6569a1f9fd88b7285b9264",
+  "replaces": "Gore .25",
+  "requires_existing_ragdoll": "stable-anatomy.21",
+  "protocol": "17-procedural25",
+  "minecraft_runtime_tested": false
+}
