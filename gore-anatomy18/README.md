@@ -1,0 +1,15 @@
+# Gore .18: damage-scaled ballistic wounds
+
+Run build.py, test.py, preview.py, compat.py in this directory (from the repository root: `python gore-anatomy18/<script>`). Uses pinned .13 bases, .17 skeleton and .16 organ physics.
+
+Living ballistic wounds use LivingDamageEvent.Post's actual received damage. Wounds18 replaces the bullet branch of Trauma13.injure; melee routes to the retained original method. Damage credits persist in the entity's existing persistent NBT tag. Thresholds for torso injury are >0, 4, 12, 28, 44, 64 and 92 cumulative health points; head uses 0.55 and limbs 0.75 multipliers. Old injury stages provide a minimum credit on upgrade, so wounds never heal from this change. The former automatic head destruction based on weapon name/two impacts is removed for bullets; health damage still kills normally. Existing global health balancing is retained.
+
+Skin cuts: first tier opens a roughly 0.11x0.11 shallow mark, backed with blood-dark tissue; second tier cuts a narrow through-channel (~2.55% cross-section); third tier expands a localized wound (~12.92% cross-section) rather than removing a full skin sheet. Successive destructive tiers widen the lesion and the final tier still consumes the entire part. Internal meshes are also cut by through-channels. Existing synchronized region/tier fields are retained: positions are coarse per-region templates, not new exact per-pixel impact coordinates. The skeleton preview is explicitly a skinless technical view, not an in-game wound screenshot.
+
+Collateral18 runs after existing incoming-damage balancing, before armor processing. A piercing TaCZ projectile retains 65% damage after each distinct body: 100%, 65%, 42.25%, etc. Same-target armor-piercing/non-armor-piercing components reuse the same multiplier. Living-to-corpse impacts reuse entity IDs, so a corpse does not count the same body again. Explosive projectiles' area damage is excluded. Weak projectile tracking has at most 64 target IDs per projectile. It does not create extra penetration; native TaCZ pierce limits remain.
+
+Corpse bullet impacts now use EntityKineticBullet.getDamage(actualHitPoint), including native distance/modifier/shotgun pellet scaling, instead of hardcoded 8. Corpse injury accumulates received damage on a weak packet-keyed profile (not saved across unloads), initialized from the existing injury stage. Player-initiated melee on corpses and blast damage preserve their prior routes. No inventory/network schema change; corpse loot remains accessible.
+
+Tests cover shallow skin retention, narrow through-perforation, damage-dependent tiers, positive/zero/invalid damage, corpse damage accumulation, native damage use, per-target attenuation and armor component deduplication, plus skeleton, hierarchy, physics and effects regressions. ASM verifies modified bodies. Consumer dependency TOML is checked against Gore 1.0.18. Minecraft and full modpack rendering were not run here.
+
+Install the four packaged JARs with one version each. Mob Dismemberment client-only, the other three client/server. Keep Splatter blood-budget.2.

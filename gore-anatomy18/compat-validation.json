@@ -1,0 +1,39 @@
+{
+  "mobdismembermentneoforge-1.21.1-1.4.0-gore18-compat.8.jar": {
+    "metadata_only": true,
+    "sha256": "76118c4e7cd970595983222ff80a779291ca7cbba857d0d4d8eeb2985363a5fc",
+    "gore_dependency": {
+      "modId": "zomboid_gore",
+      "type": "required",
+      "versionRange": "[1.0.18,1.0.19)",
+      "ordering": "AFTER",
+      "side": "CLIENT"
+    }
+  },
+  "zombie-remains-loot-1.6.1-neoforge-1.21.1-physical-corpse-loot.21-gore18.jar": {
+    "metadata_only": true,
+    "sha256": "5b2ce0ac526a2bb5115f3d7b44a35290fe688c9c4973d75d63c0804d32152892",
+    "gore_dependency": {
+      "modId": "zomboid_gore",
+      "type": "required",
+      "versionRange": "[1.0.18,1.0.19)",
+      "ordering": "AFTER",
+      "side": "BOTH"
+    }
+  },
+  "ragdollified-1.21.1-1.1.5-gore-light.12-wounds-compat.jar": {
+    "metadata_only": true,
+    "sha256": "6a9fdbfbc71d829ce2d52ca493b01eebb348d86851acfc7f6cb2519f22157254",
+    "gore_dependency": {
+      "modId": "zomboid_gore",
+      "type": "required",
+      "versionRange": "[1.0.18,1.0.19)",
+      "ordering": "AFTER",
+      "side": "BOTH"
+    }
+  },
+  "zomboid-zombie-gore-1.0.18-neoforge-1.21.1-damage-scaled-wounds.jar": {
+    "version": "1.0.18",
+    "sha256": "9b4183c0aa50e49a51ac3fd2529a3c102493f4f061000a51c8a1837be0ce5e15"
+  }
+}
