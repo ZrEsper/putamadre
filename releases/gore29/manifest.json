@@ -1,0 +1,28 @@
+{
+  "patch": 29,
+  "parent_release": 28,
+  "files": [
+    {
+      "file": "zomboid-zombie-gore-1.0.20-neoforge-1.21.1-anatomy-npcs-burns.29.jar",
+      "sha256": "98c60bc9e0e2c7b609a94278b8794234d3c085c59a35460fcf13e85c578e7506",
+      "size": 339322
+    },
+    {
+      "file": "tacznpcs-2.1.0-1.21.1-tactical.30-visible-injuries-burns.jar",
+      "sha256": "ebb0ecab249729e71e2e26b6366f4d5c468268ed9ecb3cb9fa3daadc38f38cb9",
+      "size": 629520
+    }
+  ],
+  "ragdoll_unchanged": "corpse-no-shot-push.23",
+  "splatter_unchanged": "blood-budget.2",
+  "protocol": "18-trauma28",
+  "matching_client_server_jars_required": true,
+  "minecraft_runtime_tested": false,
+  "changes": [
+    "TZP tonal tissue textures and wider UV sampling",
+    "recessed eyes including legacy wounds",
+    "exposed tissue movement and severable organs",
+    "four persistent burn grades",
+    "optional synchronized TaCZ NPC anatomy with save/reload and death snapshot"
+  ]
+}

@@ -1,0 +1,24 @@
+GORE .29 + TACZ NPCs .30 — anatomía, texturas TZP y quemaduras
+Minecraft NeoForge 1.21.1
+
+INSTALACIÓN
+Cierra el juego y el servidor. Reemplaza el JAR de zomboid-zombie-gore por el .29 de este ZIP y el JAR de tacznpcs tactical.29 por tactical.30 de este ZIP. Instala ambos archivos nuevos en todos los clientes y en el servidor. Retira las versiones anteriores; no dejes duplicados.
+Conserva ragdollified corpse-no-shot-push.23, Splatter blood-budget.2 y tus packs de texturas. Este ZIP contiene dos JARs; no es un datapack ni un resource pack.
+
+TEXTURAS Y OJOS
+Veinte materiales internos con sombras, tonos medios y luces de la misma familia de color. Fibras musculares, pliegues del cerebro y matices de hueso y órganos; atlas de 64x80. Las caras pequeñas usan una zona mayor del atlas para que el detalle no se reduzca a uno o dos texeles. Paleta comparada con las skins del TZP enviado.
+Los ojos, iris, pupilas y reflejos retroceden 1,44 píxeles de modelo. Se elimina también la salida de los ojos en los estados antiguos de lesión. Un ojo sano permanece dentro de la skin.
+
+MOVIMIENTO Y DESPRENDIMIENTO
+El tejido expuesto puede moverse suavemente con la actividad y asentarse al morir. Ojos, lengua, cerebro, pulmones, corazón, hígado, estómago e intestinos pueden soltarse al destruir su soporte. La malla unida deja de dibujar el órgano desprendido; las piezas usan el límite compartido de 48 restos físicos. El balanceo y desplazamiento son secundarios y acotados, no una simulación médica de tejidos blandos.
+
+QUEMADURAS
+La exposición acumulada al fuego progresa por cuatro grados: enrojecimiento desde 1 segundo, ampollas desde 5 segundos, ennegrecimiento desde 11 segundos y carbonización profunda desde 18 segundos. Los grados se conservan al apagar el fuego y pasan al cadáver. Se aplica sobre la textura original y la anatomía; el daño de fuego sigue perteneciendo a Minecraft y a los mods de salud. No simula combustión adicional de un ragdoll ya creado.
+
+TACZ NPCs
+TaCZ NPCs .30 incorpora un puente opcional a Gore .29. Las heridas de bala, incisiones, contusiones y quemaduras tienen datos propios del NPC, sincronizados con los clientes y guardados al recargar. Su modelo de jugador se vincula al NPC real para mostrar las lesiones. El paquete de muerte conserva heridas y quemaduras cuando Ragdollified crea su cuerpo. Las piernas dañadas reducen la movilidad; los daños anatómicos extremos en cabeza o torso pueden ser letales.
+Se conservan el código original de decisiones, coberturas y armas, y el balance de daño entrante de TaCZ NPCs/First Aid. Los NPCs no reciben la resistencia extra de los zombis. El puente no depende obligatoriamente de Gore y se comprueba también su carga sin ese mod. Esto amplía el gore visible de los NPCs; no reemplaza el menú médico de First Aid.
+
+VALIDACIÓN Y LÍMITES
+Pasan las regresiones de geometría, torso, impactos, sangre, cadáveres y protocolo; también las pruebas nuevas de ojos retraídos, movimiento/desprendimiento, tintado de quemaduras, sincronización y guardado de NPCs, y el puente opcional sin Gore. La comparación de bytecode confirma que la IA y las armas del NPC permanecen intactas. Los identificadores de sincronización se registran en la inicialización estática, antes de crear el array de datos de cada NPC.
+No se ha ejecutado Minecraft en este entorno. Las imágenes incluidas son vistas técnicas de las mallas/UV exportadas del JAR, no capturas del juego; falta verificar visualmente iluminación, shaders y animaciones reales del modpack.
