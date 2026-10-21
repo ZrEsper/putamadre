@@ -1,0 +1,26 @@
+{
+  "base_commit": "1933ebb4b5888f616732407d35e9235590f674fd",
+  "minecraft": "1.21.1",
+  "loader": "NeoForge",
+  "artifacts": [
+    {
+      "file": "flashlight-5.1-neoforge-1.21.1-iso-capture-matrices.24.jar",
+      "mod_id": "flashlight",
+      "version": "5.1.24",
+      "sha256": "5f3504fd85034428a14ee9e8a4cb4b33aba88e83a1781dab182d646004e3f394"
+    },
+    {
+      "file": "zomboid-zombie-gore-1.0.20-neoforge-1.21.1-linked-local-body.40.jar",
+      "mod_id": "zomboid_gore",
+      "version": "1.0.20.58",
+      "sha256": "9e6539ad2a545c56a6df71a75f4d9e08058854bb3f0a88051d4de071fee7431b"
+    },
+    {
+      "file": "ragdollified-1.21.1-1.1.5-view-culling.32.jar",
+      "mod_id": "ragdollified",
+      "version": "1.1.5-gore20-perf57",
+      "sha256": "039aa8b6d762c3648d60c14e76d23eed1eed3f21580022693c81e6867f1ca842"
+    }
+  ],
+  "minecraft_runtime_tested": false
+}

@@ -1,0 +1,11 @@
+{
+  "minecraft_runtime_tested": false,
+  "results": [
+    "CAPTURE_PROJECTION_VIEW_ZOOM_WORLD_AND_PERSPECTIVE_CHECKS=8",
+    "OLD_SECOND_LOCAL_PLAYER_FACTORY_GAP=REPRODUCED",
+    "LINKED_PLAYER_BOTH_LOCAL_FACTORIES_DEAD_SKIP_LIVE_ALLOW=PASS"
+  ],
+  "limits": "Production helpers with simulated matrix/event and linked-player fixtures. No OpenGL or complete modpack run. Log alone does not identify the exact duplicated corpse.",
+  "inherited57_geometry_metadata_frustum_checks": 2017,
+  "modified_bytecode_verification": "PASS: Flashlight and Gore classes, one capture hook and eleven composite reflection routes"
+}
