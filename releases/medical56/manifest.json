@@ -1,0 +1,15 @@
+{
+  "release": 56,
+  "files": [
+    {
+      "name": "flashlight-5.1-neoforge-1.21.1-iso-gpu-blit.23.jar",
+      "bytes": 3724611,
+      "sha256": "f8f4562671d532b10e471157dce32cddc993f5046fc37035f5002139ea0fe7c2"
+    },
+    {
+      "name": "tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.20-wall-low-ready.jar",
+      "bytes": 58705754,
+      "sha256": "a3dc69cdffaeb50495b4edde185a4d664c3c4337a3c846fbd0fe02798c3a9cf8"
+    }
+  ]
+}

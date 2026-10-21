@@ -1,0 +1,17 @@
+{
+  "java_asm": "Note: /workspace/work/medical56/flash-src/net/flashlight/battery/Capture53.java uses unchecked or unsafe operations.\nNote: Recompile with -Xlint:unchecked for details.\n/workspace/work/medical56/output/tacz-neoforge-1.21.1-1.1.8-hotfix-r7-third-person-pz.20-wall-low-ready.jar verified 1072 classes\n/workspace/work/medical56/output/flashlight-5.1-neoforge-1.21.1-iso-gpu-blit.23.jar verified 61 classes\n",
+  "wall_pose_alt_priority_and_config": "PASS fixture",
+  "lamp_finite_ground_direction": "PASS fixture",
+  "production_copy_helper_format_cache_half_resolution": "PASS fixture",
+  "actual_gl_half_resolution_blit": [
+    "D24 PASS",
+    "D32F PASS",
+    "D24S8 PASS",
+    "D32FS8 PASS"
+  ],
+  "glsl_compile_link_and_controlled_plane_draw": "PASS Mesa llvmpipe",
+  "profile_seconds": 326.121,
+  "render_copy_exclusive_fraction": 0.17577170911322493,
+  "full_modpack_run": false,
+  "post_patch_fps_measured": false
+}
