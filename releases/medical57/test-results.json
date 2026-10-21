@@ -1,0 +1,21 @@
+{
+  "minecraft_runtime_tested": false,
+  "results": [
+    {
+      "label": "before",
+      "result": "MESH_CACHE_HIT_ALLOCATED_BYTES=25600000 QUERIES=200000\nCACHE_INVALIDATION_REGION_FILTER_AND_24_ENTRY_BOUND=PASS"
+    },
+    {
+      "label": "after",
+      "result": "MESH_CACHE_HIT_ALLOCATED_BYTES=88 QUERIES=200000\nCACHE_INVALIDATION_REGION_FILTER_AND_24_ENTRY_BOUND=PASS"
+    },
+    {
+      "label": "geometry",
+      "result": "GEOMETRY_METADATA_INVALIDATION_BOUNDS_FRUSTUM_CHECKS=2017"
+    }
+  ],
+  "limits": "Geometry and allocation microbenchmarks with production helpers; simulated frustum and metadata objects. No FPS, GPU or full modpack run.",
+  "native_contracts": "PASS: only targeted classes changed, two culling routes, cleanup at every native return",
+  "gore_bytecode_verified_classes": 185,
+  "rag_renderer_bytecode_verified": true
+}

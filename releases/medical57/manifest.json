@@ -1,0 +1,25 @@
+{
+  "reference_repository": "baconwithd/Steph",
+  "reference_commit": "811f1efdf561bccc7385268d110bfedbb506083e",
+  "minecraft": "1.21.1",
+  "loader": "NeoForge",
+  "minecraft_runtime_tested": false,
+  "artifacts": [
+    {
+      "file": "zomboid-zombie-gore-1.0.20-neoforge-1.21.1-render-cache.39.jar",
+      "mod_id": "zomboid_gore",
+      "version": "1.0.20.57",
+      "sha256": "610553fc9c7805590325acc1dcf4e282402c140216d5f9e4ce776e6159c844f1",
+      "input_file": "zomboid-zombie-gore-1.0.20-neoforge-1.21.1-live-body-hits-bandages.38.jar",
+      "input_sha256": "668448dd5e862252cf8085736d4eda92c236dfb0300d588fa9585f12492106a5"
+    },
+    {
+      "file": "ragdollified-1.21.1-1.1.5-view-culling.32.jar",
+      "mod_id": "ragdollified",
+      "version": "1.1.5-gore20-perf57",
+      "sha256": "039aa8b6d762c3648d60c14e76d23eed1eed3f21580022693c81e6867f1ca842",
+      "input_file": "ragdollified-1.21.1-1.1.5-armor-provider-ref.31.jar",
+      "input_sha256": "08f736aec84427ce66471ed89e92fa7c81faa06cf4733ad2a2f9a740aa3cf13e"
+    }
+  ]
+}
