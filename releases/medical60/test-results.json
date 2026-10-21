@@ -1,0 +1,25 @@
+{
+  "minecraft_runtime_tested": false,
+  "results": [
+    {
+      "case": "slots-old",
+      "result": "OLD_CAR_SLOT_DROPS_PLAYER_LIGHT=REPRODUCED"
+    },
+    {
+      "case": "slots-new",
+      "result": "PLAYER_CAR_NPC_PRIORITY_GAIN_FILL_AND_BUDGET=9"
+    },
+    {
+      "case": "copy-old",
+      "result": "OLD_RECYCLED_TEXTURE_ID_DEPTH_FORMAT_MISMATCH=REPRODUCED"
+    },
+    {
+      "case": "copy-new",
+      "result": "DEPTH_STORAGE_REUSE_STABLE_ALLOCATION_BOUNDED_RETRY_RECOVERY=PASS"
+    }
+  ],
+  "limits": "Production helpers with simulated world, lamp states, GL texture storage and clock. Actual MTS geometry classes for vehicle registration; no complete modpack/camera validation.",
+  "real_gpu_depth_test": "OFFSCREEN_RENDERER llvmpipe (LLVM 19.1.7, 256 bits)\nMATCHING_COLOR_DEPTH_HALF_RES_BLIT 0x81a6 PASS\nMATCHING_COLOR_DEPTH_HALF_RES_BLIT 0x8cac PASS\nMATCHING_COLOR_DEPTH_HALF_RES_BLIT 0x88f0 PASS\nMATCHING_COLOR_DEPTH_HALF_RES_BLIT 0x8cad PASS\nREAL_GL_SAME_TEXTURE_ID_REINITIALIZED_DEPTH_MISMATCH=REPRODUCED\nREAL_GL_MATCHING_STORAGE_REINITIALIZATION_RECOVERS=PASS",
+  "verified_class_count": 66,
+  "native_hooks": "one storage invalidation after resize depth assignment; one bounded-recovery hook before scene copy"
+}

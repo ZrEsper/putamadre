@@ -1,0 +1,10 @@
+{
+  "base_commit": "ec632750923393e4c073280766a49243b5a89bf4",
+  "minecraft": "1.21.1",
+  "loader": "NeoForge",
+  "minecraft_runtime_tested": false,
+  "file": "flashlight-5.1-neoforge-1.21.1-player-priority-depth-recovery.26.jar",
+  "version": "5.1.26",
+  "sha256": "927c7378a583eff5494accb6332b6f703ec0480c1de1e0225d921e73c2bcae58",
+  "input_sha256": "f1ecafab7c48d2347c8bf2e72ac9498c77e43faa104560a47892c3c3bbf3f3c5"
+}
