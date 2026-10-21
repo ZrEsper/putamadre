@@ -1,0 +1,18 @@
+{
+  "sampled_thread": "Render thread",
+  "profile_duration_seconds": 76.192,
+  "sampled_ms": 75900,
+  "server_tps_short_window": 19.9989,
+  "server_tps_medium_window": 19.9931,
+  "route_sample_percent_overlapping": {
+    "gore": 27.51,
+    "ragdollified": 26.52,
+    "tacz": 15.66,
+    "flashlight": 5.22,
+    "mts": 1.88
+  },
+  "do_not_sum_routes": true,
+  "iris_extended_vertex_ms_exclusive": 6008,
+  "iris_extended_vertex_ms_under_organ29": 4744,
+  "performance_after_patch_measured": false
+}

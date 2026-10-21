@@ -1,0 +1,50 @@
+{
+  "base_commit": "355244b343a50a972cd24eb498d2d8d936cf1c4e",
+  "minecraft": "1.21.1",
+  "loader": "NeoForge",
+  "minecraft_runtime_tested": false,
+  "artifacts": [
+    {
+      "file": "flashlight-5.1-neoforge-1.21.1-mts-headlight-cones.25.jar",
+      "mod_id": "flashlight",
+      "version": "5.1.25",
+      "sha256": "f1ecafab7c48d2347c8bf2e72ac9498c77e43faa104560a47892c3c3bbf3f3c5",
+      "base_sha256": "5f3504fd85034428a14ee9e8a4cb4b33aba88e83a1781dab182d646004e3f394"
+    },
+    {
+      "file": "Immersive-Vehicles-1.21.1-24.0.0-zomboid-mechanics.17-headlight-cones.jar",
+      "mod_id": "mts",
+      "version": "24.0.0.17",
+      "sha256": "a24423ac5d70cdc71010aa69c9e5c4cbb1a9c38efb9d9db65ea7038df26903fe",
+      "base_sha256": "29c2eee4f62f2f30f2eb91904ec3a9ddd84f242527fbf08cb03e21b4e959f109"
+    },
+    {
+      "file": "hardcore_true_darkness-6.1-night-visibility.7-light-beam-preserve.jar",
+      "mod_id": "hardcore_true_darkness",
+      "version": "6.1.7",
+      "sha256": "2678362f08f62004b21d0003edd1e892f2419b8b41837755ec86fc4c2441fe46",
+      "base_sha256": "f46e80671d99f610688d5fb04f2b9ab4220a814b7fe92b1a1b0e6097b5320d33"
+    },
+    {
+      "file": "zomboid-zombie-gore-1.0.20-neoforge-1.21.1-remains-cargo.41.jar",
+      "mod_id": "zomboid_gore",
+      "version": "1.0.20.59",
+      "sha256": "ee571da0d677370d8a308bb1a9869d508ba61005339d3fb7e78446599f2557b7",
+      "base_sha256": "9e6539ad2a545c56a6df71a75f4d9e08058854bb3f0a88051d4de071fee7431b"
+    },
+    {
+      "file": "zombie-remains-loot-1.6.1-neoforge-1.21.1-remains-cargo.26.jar",
+      "mod_id": "zombie_remains_loot",
+      "version": "1.6.1-physical-loot26-medical59",
+      "sha256": "a3e55bb16aec4a0730f14d92e083d928cde360b2e7d8d4a3e86abb690a19fbf4",
+      "base_sha256": "1fc56149809d7b9ea9123ec0c4c7dd9e263af67202d8aefc9cbde040b099b393"
+    },
+    {
+      "file": "quietly-1_0_0-cooldown-v20-remains-records.jar",
+      "mod_id": "quietly",
+      "version": "1.0.0+cooldown-v20",
+      "sha256": "9c1231d4cde3a627b2ac5ed8ba9e89d118335ab231b6f9785f1f0c60181a3082",
+      "base_sha256": "9de803e8d1f746dfcdc988a5beab5dc1d43cfd972220deaacaa4f2fe7eee92d9"
+    }
+  ]
+}

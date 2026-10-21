@@ -1,0 +1,6 @@
+f1ecafab7c48d2347c8bf2e72ac9498c77e43faa104560a47892c3c3bbf3f3c5  mods/flashlight-5.1-neoforge-1.21.1-mts-headlight-cones.25.jar
+a24423ac5d70cdc71010aa69c9e5c4cbb1a9c38efb9d9db65ea7038df26903fe  mods/Immersive-Vehicles-1.21.1-24.0.0-zomboid-mechanics.17-headlight-cones.jar
+2678362f08f62004b21d0003edd1e892f2419b8b41837755ec86fc4c2441fe46  mods/hardcore_true_darkness-6.1-night-visibility.7-light-beam-preserve.jar
+ee571da0d677370d8a308bb1a9869d508ba61005339d3fb7e78446599f2557b7  mods/zomboid-zombie-gore-1.0.20-neoforge-1.21.1-remains-cargo.41.jar
+a3e55bb16aec4a0730f14d92e083d928cde360b2e7d8d4a3e86abb690a19fbf4  mods/zombie-remains-loot-1.6.1-neoforge-1.21.1-remains-cargo.26.jar
+9c1231d4cde3a627b2ac5ed8ba9e89d118335ab231b6f9785f1f0c60181a3082  mods/quietly-1_0_0-cooldown-v20-remains-records.jar

@@ -1,0 +1,17 @@
+{
+  "minecraft_runtime_tested": false,
+  "results": [
+    "MTS_TRANSFORM_BEAM_BRIGHTNESS_BUDGET_OFF_AND_WORLD_CHECKS=13",
+    "OFFSCREEN_RENDERER llvmpipe (LLVM 19.1.7, 256 bits)\nDARKNESS_GLSL150_COMPILE_AND_LINK=PASS\nBEAM_AMBIENT_LASER_WEAK_BEAM_RED= [0.013261, 0.013261, 0.078431, 0.001968]\nOLD_DARKNESS_CRUSHES_STAMPED_FLASHLIGHT_BEAM=REPRODUCED",
+    "OFFSCREEN_RENDERER llvmpipe (LLVM 19.1.7, 256 bits)\nDARKNESS_GLSL150_COMPILE_AND_LINK=PASS\nBEAM_AMBIENT_LASER_WEAK_BEAM_RED= [0.078431, 0.013261, 0.078431, 0.019608]\nNEW_FLASHLIGHT_PRESERVED_AMBIENT_DARK_LASER_PRESERVED=PASS"
+  ],
+  "limits": "Real Mesa OpenGL draws of production Darkness shaders; production vehicle helper with actual MTS Point3D/TransformationMatrix/JSONLight and simulated world/lamp ray sampler. No complete modpack or visual validation of all cameras.",
+  "native_patch_contract": "PASS: only expected two Flashlight classes, one MTS renderer class and Darkness fragment changed; one native beam hook; other original entries identical",
+  "asm_verified_class_counts": {
+    "flashlight": 65,
+    "mts": 873,
+    "darkness": 29
+  },
+  "remains_transfer_simulation": "REMAINS_REPAIR_REAL_CARGO_TRANSFER_ROLLBACK_AND_IDEMPOTENCE=12",
+  "remains_limit": "Production transfer/repair helper with saved-inventory and placement simulation. Native open/search hooks verified by patched bytecode; no complete Minecraft menu runtime."
+}
