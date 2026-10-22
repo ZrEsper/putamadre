@@ -1,0 +1,15 @@
+Archivos existentes cambiados respecto a .34:
+- Conversation.class: intercepta send para chat; protege acciones antiguas; registra comandos; invalida al cerrar.
+- Conversation$Session.class: añade campo chat71 para los datos de la lista ofrecida en la sesión existente.
+- Authority70.class: invalida opciones al interrumpir; mensajes de estado pasan a JSON.
+- TalkNetwork.class: reconoce C71 en cliente; conserva M20 y la ruta de respaldo.
+- META-INF/neoforge.mods.toml: versión .35-clickable-chat.
+
+Añadidos:
+- Chat71.class y clases internas State/Handler: opciones, tokens, comandos y consecuencias.
+- DialogueData71.class: JSON validado, selección y tonos.
+- ClientChat71.class: mensajes vanilla, retirada de clics, caducidad y hover subrayado.
+- data/tacznpcs/dialogue/dialogue-phase2.json: todos los textos del nuevo diálogo y dos perfiles.
+
+Sin cambios en texturas, modelos, sounds ni ejecutores TaCZ. No se añade controlador de IA.
+Fuentes exactas del parche y pruebas: fuentes-pruebas.zip.

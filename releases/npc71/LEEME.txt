@@ -1,0 +1,78 @@
+FASE 2 — CHAT CLICABLE / TaCZ NPCs .35 / NeoForge 1.21.1
+
+INSTALAR
+Reemplaza TaCZ NPCs .34 por .35 en cliente Y servidor. No pongas los dos JAR.
+Mantén TaCZ, zomboid_gore y el resto de dependencias que ya funcionaban en fase 1.
+Esta entrega incluye la fase 1. No requiere IA externa ni SmartBrainLib nuevo.
+
+INTERFAZ
+La conversación normal por clic derecho usa el chat, sin la ventana anterior.
+Nombre gris claro, texto blanco; cada opción tiene una línea con ▸ y hasta cuatro opciones.
+Tonos: 1 #FFFFFF, 2 #CCCCCC, 3 #999999, 4 #B07070, 5 #A04040;
+engaño #8899AA. Hover: subrayado y nombre del tono, sin revelar consecuencias.
+Al responder, se muestra tu frase y la contestación. Las opciones anteriores quedan
+apagadas en gris y sin clic ni tooltip. El historial no se borra.
+El nombre es ??? hasta presentarse; esa presentación se guarda por NPC y jugador.
+
+COMANDOS
+/npcreply — vuelve a mostrar las opciones activas, sin reiniciar el silencio.
+/superviviente — alias sin parámetros.
+Los clics usan /npcreply <conversación> <opción> <token>.
+No necesitas copiar ni escribir tokens.
+
+PROBAR EN JUEGO
+1. Acércate a un NPC aislado sin arma y sin correr; clic derecho. Abre el chat con T.
+2. Comprueba nombre ???, tonos, tooltip y subrayado al pasar el ratón por las opciones.
+3. Elige presentarte: se muestra tu frase, el NPC revela su nombre y los enlaces viejos
+   quedan grises. Intenta pulsarlos: no deben producir consecuencias.
+4. Escribe /npcreply. Debe mostrar opciones nuevas sin prolongar los 12 segundos.
+5. Espera 12 segundos sin responder. Prueba también sacar un arma, correr, disparar o
+   recibir daño: debe terminar la conversación y retirar los clics, como en fase 1.
+6. Con permisos de operador, durante una conversación activa usa:
+   /npcexample cauto encuentro
+   /npcexample cauto tension
+   /npcexample cauto necesidad
+   /npcexample agotado encuentro
+   /npcexample agotado tension
+   /npcexample agotado necesidad
+   Este comando de prueba cambia solo el ejemplo actual; no la personalidad guardada.
+7. Prueba una opción agresiva: baja la confianza, rompe la charla y registra enemistad
+   usando Social. En creativo no podrás comprobar los ataques: usa supervivencia.
+8. Con dos jugadores, verifica que las opciones de uno no funcionen para el otro.
+9. Verifica atención médica de NPC derribado: el canal médico M20 se conserva.
+
+TEXTOS Y PERSONALIDADES
+Se copian al primer uso en config/tacznpcs/dialogue-phase2.json, en el servidor.
+Cambia textos, tono, respuesta y transición next; reinicia para cargar los cambios.
+Los dos perfiles son cauto y agotado. Cada uno incluye encuentro, tension y necesidad.
+Selección inicial: hostil/enemigo => tensión; herido => necesidad; resto => encuentro.
+La personalidad se elige de forma estable por UUID y queda guardada en el NPC.
+Los JSON inválidos se avisan en el registro y se usa el JSON incluido como respaldo.
+No metas comandos en el JSON: los efectos permitidos son none, identify, close, hostile.
+La confianza positiva de la misma opción tiene una espera de un día de juego para
+impedir subirla repitiendo la frase sin límite.
+
+SEGURIDAD Y CONTINUIDAD
+Reutiliza Conversation.SESSIONS y Authority70/Social. No hay otro controlador de goals.
+Cada lista lleva token aleatorio de 128 bits, ID de conversación y opciones del servidor.
+Se valida interlocutor, sesión vigente, estado seguro y plazo. El token se retira ANTES
+ de aplicar efectos. Repetir el clic o copiar el comando a otro jugador no sirve.
+Los comandos antiguos de la ventana no pueden fabricar respuestas mientras el chat
+esté activo. Cerrar tu propia charla sigue permitido.
+Rupturas y bloqueo de ataque de fase 1 permanecen; silencio usa la configuración ya
+existente (240 ticks = 12 segundos por defecto). Reabrir opciones no extiende ese plazo.
+
+ARCHIVOS Y VALIDACIÓN
+Ver CAMBIOS.txt y PRUEBAS.txt. Se incluyen fuentes, datos y fixtures reproducibles.
+140 clases verificadas con ASM y 573 comprobaciones JVM (277 fase 1 + 296 fase 2).
+NO se ha lanzado Minecraft ni validado visualmente dentro de tu modpack.
+
+LÍMITES
+Inicio por interacción cercana, igual que fase 1; saludo autónomo a distancia y voz
+susurro/normal/grito quedan para fases posteriores. Una conversación por jugador.
+Las frases son locales, con consecuencias sencillas de confianza/enemistad/cierre;
+no implementa todavía el trueque, biografías completas ni memoria social de fase 3.
+El chat se envía al interlocutor, no se retransmite a todos los jugadores del servidor.
+Solo sustituye el diálogo normal: el tratamiento médico conserva su interfaz.
+Si desactivas la autoridad de fase 1 por configuración/NPC, se conserva el fallback
+original, incluida su ventana antigua. Los relojes se miden en ticks del juego.

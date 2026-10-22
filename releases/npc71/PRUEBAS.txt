@@ -1,0 +1,18 @@
+Validación automatizada, NO prueba en Minecraft:
+- ASM BasicVerifier: 140 clases; 11 enganches exactos sobre la fase 1.
+- JVM -Xverify:all: 277 controles de regresión de fase 1.
+- JVM -Xverify:all: 296 controles de fase 2.
+- Los seis ejemplos y todas sus opciones recorren sus respuestas y efectos.
+- Falsificación de token, reutilización, otro jugador, opción no ofrecida, nueva sesión,
+  caducidad, repetición de confianza, cierre e interrupciones.
+- Se ejecutan copias del bytecode REAL parcheado de send/action/register y el despachador
+  cliente de TalkNetwork, con APIs del juego simuladas.
+- Brigadier real (fuentes Mojang) comprueba registro, alias, comandos clicables y permisos.
+- El método shoot real trasplantado confirma que el bloqueo de fase 1 continúa funcionando.
+- Fixtures cliente verifican líneas independientes, hover, historial, retirada de clics,
+  caducidad local, cambio de jugador y registro único de eventos.
+- La ruta M20 sigue llegando al tratamiento médico; C71 no abre ConversationScreen.
+- Todas las entradas originales assets/ son idénticas respecto a .34.
+
+Límite: no hay Minecraft/GPU/modpack ejecutándose. Los fixtures no validan el aspecto real,
+la sincronización bajo latencia ni conflictos con mods que sustituyan el chat.

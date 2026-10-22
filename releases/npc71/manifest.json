@@ -1,0 +1,8 @@
+{
+  "base_sha256": "4dec9cc063dc8556e80978d662e1c308d06a36fe08b26633f7a71e3b329b5288",
+  "jar_sha256": "08bce585892ba7ac195a6b0b63f82307538293ddc6f154649ce0213a055743d0",
+  "asm_classes": 140,
+  "phase1_checks": 277,
+  "phase2_checks": 296,
+  "minecraft_run": false
+}
