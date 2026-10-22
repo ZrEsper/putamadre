@@ -1,0 +1,16 @@
+{
+  "minecraft_runtime_tested": false,
+  "lifecycle": "CLIENT_LIFECYCLE_INVENTORY_CAMERA_STATS_LAYOUT=48",
+  "scope": "Production FirstAid screens and cinematic controller with simulated Minecraft, inventory/model and isometric config. Java verification enabled. No full modpack runtime.",
+  "runtime_contracts": "ACTUAL_PATCHED_GIVE_UP_METHOD_HEALTHY_FALSE_DOWNED_TRUE=PASS COMPONENT_LITERAL_RUNTIME_DESCRIPTOR=PASS",
+  "class_verification": {
+    "firstaid": 290,
+    "survivorcreator": 120,
+    "dungeons_iso": 151
+  },
+  "hooks": {
+    "firstaid": 2,
+    "survivorcreator": 7,
+    "dungeons_iso": 3
+  }
+}

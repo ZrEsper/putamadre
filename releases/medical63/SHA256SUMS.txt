@@ -1,0 +1,3 @@
+ea04bc8adf47cec35805e2875dd5d1acb53cbe541e92ba7672b62fd255a0e021  mods/firstaid-1.21.1-ZOMBOID-v3.6.19-isometric-survival-decisions.jar
+ee2707d2336c7734bd56ed3b4b7b3b9c6b560c105bfbafbd5479d1c32b2a42aa  mods/survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v36-world-death-summary.jar
+ed613ad0ccf32ff7282d3482b0b9a790b20c3721fe23e2765592fbf81059868c  mods/dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.35-revival-camera.jar

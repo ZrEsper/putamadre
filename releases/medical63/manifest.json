@@ -1,0 +1,29 @@
+{
+  "base_commit": "04c9f65b3f4f26c9d0ee87c69723bd291c860155",
+  "minecraft": "1.21.1",
+  "loader": "NeoForge",
+  "minecraft_runtime_tested": false,
+  "files": [
+    {
+      "name": "firstaid-1.21.1-ZOMBOID-v3.6.19-isometric-survival-decisions.jar",
+      "version": "1.3.3+neoforge1.21.1-zomboid-v3.6.19-isometric-decisions",
+      "sha256": "ea04bc8adf47cec35805e2875dd5d1acb53cbe541e92ba7672b62fd255a0e021",
+      "base_sha256": "e2cca3ff9f6b987d12545149324c91487cd6dce67d23c08829b1faf420eb6fda",
+      "base_name": "firstaid-1.21.1-ZOMBOID-v3.6.18-visible-bandage-marks.jar"
+    },
+    {
+      "name": "survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v36-world-death-summary.jar",
+      "version": "1.0.9+zomboid-v36",
+      "sha256": "ee2707d2336c7734bd56ed3b4b7b3b9c6b560c105bfbafbd5479d1c32b2a42aa",
+      "base_sha256": "a1c042fde90ff1cf9394de435c245edc328cc98505e79102597af5cf2e929ac5",
+      "base_name": "survivorcreator-neoforge-1.21.1-1.0.9-zomboid-v35-adaptive-world-spawn.jar"
+    },
+    {
+      "name": "dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.35-revival-camera.jar",
+      "version": "3.6.2+zomboid.35",
+      "sha256": "ed613ad0ccf32ff7282d3482b0b9a790b20c3721fe23e2765592fbf81059868c",
+      "base_sha256": "d63600ff08a75de906e63a114d4ffe93788b5b0d96fc23d61bb7f020a0d11449",
+      "base_name": "dungeons_iso-neoforge-3.6.2+1.21.1-zomboid-tacz.34-finite-aim.jar"
+    }
+  ]
+}
