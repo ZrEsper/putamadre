@@ -1,0 +1,12 @@
+{
+  "asm_classes": 152,
+  "hooks": 4,
+  "runtime_fixture_checks": 30,
+  "changed_existing_entries": [
+    "META-INF/neoforge.mods.toml",
+    "dev/zomboid/isotacz/AimStability.class",
+    "dev/zomboid/isotacz/MedicalInput30.class",
+    "dev/zomboid/isotacz/ShotAim32.class"
+  ],
+  "minecraft_runtime_tested": false
+}

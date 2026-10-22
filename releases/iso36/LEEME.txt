@@ -1,0 +1,10 @@
+Cámara isométrica .36 — consumibles y movimiento
+
+Reemplaza dungeons_iso .35 por .36. No dejes ambas versiones en mods.
+Conserva los demás mods. No incluye las animaciones de curación canceladas.
+
+Corrige la ruta de consumibles para actualizar la orientación al cursor sin perder el clic derecho nativo. Restaura la transformación de WASD al espacio de la cámara también durante la curación. Protege el cruce de +/-180 grados; no modifica velocidad, duración de consumición ni inventario. La cámara isométrica no gira con el personaje.
+
+Pruebas: ASM BasicVerifier en 152 clases; 30 comprobaciones JVM con clases de prueba usando MedicalInput30/AimStability parcheados y el helper de producción; cambios limitados a tres clases y metadatos más un helper nuevo. Clases y mixins de recuperación de cámara de .35 conservados byte a byte. No es una prueba dentro de Minecraft ni con todos los mods.
+
+Prueba en el juego: sostener una venda o férula sin usarla, mover el cursor alrededor del personaje, caminar con WASD; repetir mientras se consume o se cura. Cambiar a arma, comprobar primera persona y entrar/salir de un vehículo.
