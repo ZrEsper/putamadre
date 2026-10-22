@@ -1,0 +1,21 @@
+{
+  "base_commit": "e1bb0ff7dbd5b744fcdd81b67450b35b089e421f",
+  "minecraft_runtime_tested": false,
+  "compatibility_fix": "Dependency range now accepts the FirstAid 3.6 branch from .17, including deployed .19. No compat class changed.",
+  "visual_status": "DRAFT AWAITING USER REVIEW; visual changes not in the compatibility JAR.",
+  "tests": "VERSION_RANGE_17_19_20_ACCEPTED_NEXT_MINOR_REJECTED=PASS FIRSTAID_API_CALLS=46 MIXIN_TARGETS=4 MOTION_MAX_STEP=0.021861613",
+  "files": [
+    {
+      "name": "preview-primera-persona.gif",
+      "sha256": "a4104e1d546d899919c884ed0c68a6e8345b6707477b071d29c27c91285d3d50"
+    },
+    {
+      "name": "preview-tercera-persona.gif",
+      "sha256": "3bc80b584a4d0b22251f7e46c11b10fae2ccb11cc95ecc38a0a1aa49e685c96a"
+    },
+    {
+      "name": "tacz-firstaid-compat-1.0.6-firstaid-3.6.19-range-fix.jar",
+      "sha256": "f791b451c01512fea119e4b1503a837a337d978861f4ba729f8fcbbe712cd351"
+    }
+  ]
+}
