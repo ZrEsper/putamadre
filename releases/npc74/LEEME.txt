@@ -1,0 +1,68 @@
+TaCZ NPCs .38 — Fase 3 y correcciones 2.6.1
+Minecraft 1.21.1 / NeoForge. Reemplaza .37 por este JAR tanto en cliente como servidor.
+No instales ambas versiones a la vez. Haz copia del mundo y de config/tacznpcs antes.
+Conserva las dependencias actuales del modpack. No necesitas un servicio externo de IA.
+
+Incluye memoria/relaciones persistentes, reconocimiento, siete estados calculados,
+comandos de memoria, antispam, robo de objetos reales y más tiempo para responder.
+Mantiene identidad aleatoria, emboscadas con dos actores reales, autoridad única,
+chat celeste, tokens de un uso, opciones caducables y rupturas anteriores.
+
+CONFIGURACIÓN
+Archivo: config/tacznpcs/dialogue-phase2.json, schema 3 compatible.
+El original exacto .37 se respalda como dialogue-phase2.pre38.bak.json y se actualiza.
+Un JSON personalizado conserva sus textos/valores: los campos nuevos ausentes se
+completan por defecto. También se admiten los importadores anteriores de schema 1/2.
+En un archivo personalizado, pausa_lineas_ticks conserva tu valor anterior; puedes
+cambiarlo a 50 para el nuevo ritmo. respuesta_ticks=600 da 30 segundos para elegir,
+contados desde el último mensaje del turno. Ambos valores admiten /npcreload.
+Se conserva la reacción al silencio y su cierre; cambia el plazo por la petición de
+más tiempo para pensar. El cálculo de decisiones conserva su intervalo de 6 ticks.
+
+MENSAJES REPETIDOS
+mensajes_cooldown_ticks=200: 10 segundos desde el último intento del mismo mensaje.
+Clics continuos mantienen el aviso silenciado. Si cambia el motivo, aparece el aviso
+correspondiente, sujeto al mismo enfriamiento por jugador y mensaje. El límite se
+comparte entre NPCs. No afecta al texto normal del NPC, las opciones, los tokens ni
+las interrupciones. /npcdebug muestra los avisos actualmente bloqueados y su plazo.
+Las salidas solicitadas por comandos de diagnóstico se muestran para poder revisarlas.
+
+ROBO
+Acércate a un máximo de 10 bloques con un arma TaCZ en la mano y habla con el NPC.
+Sostenerla inicia intimidación; apuntar con la mira, disparar, correr o recibir daño
+rompe la conversación. Sacarla durante una conversación normal sigue rompiéndola.
+No permite negociar mientras hay otra amenaza real, disparos recientes o reintento
+bloqueado. El NPC puede negarse: insistir acaba en combate de la IA nativa.
+Si cede, transfiere UNA unidad de un objeto que ya tenga en su bolsa. No se crean
+objetos, no se duplica botín, no se extrae el arma equipada y no se fuerza la rendición.
+Si no tiene nada en la bolsa, lo dice. Inventario del jugador lleno: no ofrece una
+transferencia imposible. El umbral de rendición está en el encuentro robo_armado.
+
+OPERADOR
+/npcdebug — mirando a un NPC hasta 12 bloques: identidad, voz, encuentro/nodo, bases,
+actuales, relación contigo, efectivos, estado, últimos cinco recuerdos y enfriamientos.
+/npcmemory ver — todos sus recuerdos sobre ti.
+/npcmemory borrar — genera una orden de confirmación válida 10 segundos.
+Pega la orden indicada sin cambiar de NPC. Borra SOLO sus recuerdos sobre tu UUID;
+no reinicia sus medidores ni borra las relaciones con otros jugadores.
+/npcvalidate — validación de JSON y reporte config/tacznpcs/dialogue-validation.txt.
+/npcreload — recarga sin borrar identidades o memoria; cierra sesiones y anula tokens.
+/npcreply — muestra opciones aún vigentes, sin ampliar su plazo.
+/npcexample cansado familiar_enfermo
+/npcexample seco familiar_herido_companeros
+/npcexample seco robo_armado (para probar el modo armado, inicia llevando el arma).
+
+DATOS Y MIGRACIÓN
+El perfil .37 y su semilla no cambian. npc72_events se convierte una sola vez al nuevo
+formato por UUID, dejando aviso en el log. Los datos sociales viven en npc74_social
+(NBT de entidad): bases, actuales, relaciones, medidores, estado y recuerdos.
+La muerte definitiva del NPC borra sus recuerdos. La muerte del jugador no los borra.
+No se ejecuta el borrado cuando Downed20 evita una muerte y deja al NPC derribado.
+Campos grupo_id/faccion_id quedan nulos. SavedData tacznpcs_social_phase3 reserva
+version=1 y mapas vacíos grupos/facciones en cada dimensión del mundo; no ejecuta
+comportamientos de grupos, rumores ni facciones. La memoria NO depende de esos mapas.
+Los únicos aliados reconocidos para mato_aliado son los compañeros ya vinculados por
+la emboscada .37; no se inventan grupos nuevos para los demás NPCs.
+
+Ver ESQUEMA.md para fórmulas, decaimiento, pesos, estados y condiciones editables.
+Ver PRUEBAS.md para resultados automáticos y la tabla PENDIENTE en Minecraft real.

@@ -1,0 +1,37 @@
+{
+  "base_sha256": "38e43bace206e11e241e2407ae053a7e9652574f32b95d6339e4bbe0b25ae985",
+  "jar_sha256": "c8995fed0b56579bb4de67c5f8e5b367f876feaa5b8bbd5ecaa151c73f54efdc",
+  "minecraft_run": false,
+  "asm_classes": 160,
+  "regression_checks": 277,
+  "phase26_checks": 15126,
+  "phase3_checks": 124,
+  "config_cases": 10,
+  "changed": [
+    "META-INF/neoforge.mods.toml",
+    "data/tacznpcs/dialogue/dialogue-phase2.json",
+    "mod/cdv/tnpc/entity/AutoGunOperator.class",
+    "mod/cdv/tnpc/tactical/Admin73.class",
+    "mod/cdv/tnpc/tactical/Authority70.class",
+    "mod/cdv/tnpc/tactical/Chat71$State.class",
+    "mod/cdv/tnpc/tactical/Chat71.class",
+    "mod/cdv/tnpc/tactical/Data73.class",
+    "mod/cdv/tnpc/tactical/Diagnostics73.class",
+    "mod/cdv/tnpc/tactical/DialogueData71.class",
+    "mod/cdv/tnpc/tactical/DialogueRules72.class",
+    "mod/cdv/tnpc/tactical/Threat27.class"
+  ],
+  "added": [
+    "data/tacznpcs/dialogue/phase26-original.json",
+    "mod/cdv/tnpc/tactical/Config74.class",
+    "mod/cdv/tnpc/tactical/Gate74$Pending.class",
+    "mod/cdv/tnpc/tactical/Gate74.class",
+    "mod/cdv/tnpc/tactical/Notice74$Entry.class",
+    "mod/cdv/tnpc/tactical/Notice74.class",
+    "mod/cdv/tnpc/tactical/Ops74$Confirm.class",
+    "mod/cdv/tnpc/tactical/Ops74.class",
+    "mod/cdv/tnpc/tactical/Social74$Cache.class",
+    "mod/cdv/tnpc/tactical/Social74.class",
+    "mod/cdv/tnpc/tactical/WorldSocial74.class"
+  ]
+}

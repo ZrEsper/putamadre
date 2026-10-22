@@ -1,0 +1,27 @@
+Base exacta: .37-random-identities.
+Creados:
+- Social74: NBT por NPC/UUID, migración, medidores, decaimiento, memoria, estados,
+  reconocimiento, ataque y muerte; fallback por NPC si falla.
+- WorldSocial74: SavedData reservado, sin lógica de grupos/facciones.
+- Config74: defaults opcionales y validación de social/reconocimiento/condiciones.
+- Notice74: antispam central por jugador/texto, pausa desde último intento.
+- Gate74: rechazos separados, modo armado explícito, robo finito y reconocimiento.
+- Ops74: memoria de operador, confirmación con nonce y debug ampliado.
+Modificados:
+- Chat71 y State: plazo y ritmo configurables, reconocimiento, modo intimidación,
+  memoria semántica y opción de recuerdo. Conserva protocolo C71 y sesión existente.
+- DialogueRules72: medidores persistentes, condiciones de memoria/estado, eventos
+  tipados, selección exacta de un encuentro por ID sin sortear el respaldo genérico.
+- DialogueData71: schema 3 extendido, validación estricta y eventos compatibles.
+- Data73: defaults nuevos, copia .pre38 y reconocimiento del original .37.
+- Diagnostics73, Admin73: validación y diagnóstico extendidos.
+Enganches de bytecode sobre clases nativas, sin reemplazar sus ejecutores:
+- Authority70: tell/reject delegados, plazo configurable y arma en modo intimidación;
+  tick social antes de sus comprobaciones anteriores. Conserva bloqueo de disparo,
+  melee, daño, carrera y arbitraje nativo.
+- Threat27.hit: registro social de daño aplicado.
+- AutoGunOperator.die: memoria definitiva solo después de superar Downed20/Probe y
+  ejecutar super.die; no se borra por un simple derribo.
+Datos: dialogue-phase2.json completo; copia phase26-original.json para migración.
+Metadatos: 2.1.0-tactical.38-persistent-memory.
+Assets de modelos/texturas/sonidos idénticos a .37. No añade segundo controlador de IA.
