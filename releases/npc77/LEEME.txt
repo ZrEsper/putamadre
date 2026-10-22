@@ -1,0 +1,85 @@
+TaCZ NPCs .41 — Chat por turnos, reacciones y refugios provisionales
+Minecraft 1.21.1 / NeoForge. Reemplaza .40 en cliente y servidor. No mantengas ambos.
+
+CHAT
+Cada turno abre una línea horizontal, envía el mensaje del NPC y sus opciones,
+muestra tu respuesta elegida y cierra la línea. Las opciones viejas siguen retirándose.
+El siguiente bloque empieza tras la pausa. También se cierran los bloques al terminar,
+interrumpir o suspender la conversación. Conversaciones y mensajes normales se conservan.
+Hay una pausa mínima de 30 ticks (1,5 s a 20 TPS) entre líneas, después de la última
+línea antes de habilitar opciones y después de tu respuesta antes de contestar el NPC.
+El tiempo disponible para elegir empieza después de esa espera, no se pierde leyendo.
+Default pausa_lineas_ticks=30. Un JSON personalizado puede conservar una pausa mayor.
+
+Todas las opciones están en negrita. Colores por utilidad, independientes de tono:
+robar rojo, entregar verde, pedir celeste, conversar gris, trueque dorado, engaño azul gris.
+Campo opcional utilidad en cada opción: normal/dar/pedir/robo/amenaza/trueque/engaño.
+El tono y sus efectos se mantienen: el color informa de la acción, no garantiza éxito.
+Cuando aumenta la confianza: MEJORÓ TU RELACIÓN CON [nombre conocido o ???], negrita,
+verde y sonido local de recoger XP. No da experiencia real ni revela nombres ocultos.
+Límite de aviso para no superponer sonidos de varios efectos en el mismo instante.
+
+REACCIONES
+Bancos JSON para las ocho voces: traición, cariño, confusión y ataque.
+Confianza alta habilita saludos/respuestas de afecto. Señales contradictorias generan
+confusión. Un ataque de alguien en quien confiaba provoca una reacción de traición y
+penalización adicional; un golpe leve con confianza intermedia puede causar confusión.
+Esto no elimina la defensa ni el registro normal de ataques; no convierte los golpes
+en un método gratuito de conversación. Memoria emocional temporal, persistida por
+jugador. /npcdebug muestra emoción y estado de construcción. Las respuestas adicionales
+respetan la cola, pausas, límite de líneas y no repetición del encuentro.
+
+REFUGIOS: PRIMERA RUTINA FUNCIONAL
+NPCs libres, sin propietario/orden de acompañamiento, sin combate, amenazas, cuidados
+ni conversación, detectan exposición a frío, calor, lluvia o noche. Buscan suelo plano,
+cargado y permitido. Un NPC dispone de interior 2x2; un grupo cercano compatible
+(hasta cuatro, mismo tipo, sin enemistad registrada) comparte interior 4x4.
+La huella exterior es mayor: paredes perimetrales, entrada abierta de dos bloques y
+techo con alero. Roof 6x6/8x8 para cubrir el área 5x5 comprobada por Homeostatic en
+cada casilla interior. Hay una sola mesa de crafteo; se coloca antes de levantar paredes.
+
+Recoge troncos naturales vanilla accesibles, identificados por base de tierra y hojas;
+no arrasa edificios. Balancea la mano al trabajar. Cada bloque retirado se convierte en
+una unidad real en la bolsa, sin crear además un drop duplicado. Usa recetas reales
+para troncos -> tablones y cuatro tablones -> mesa. Construye una pieza por acción,
+consumiendo un tablón real por bloque. Los compañeros aportan madera que ya llevan.
+No inventa materiales ni teletransporta al constructor. El progreso se guarda en NBT.
+La navegación, alcance y línea de visión determinan si puede llegar a cada tarea.
+
+Respeta mobGriefing, permisos de facciones existentes y eventos NeoForge de rotura y
+colocación. Colocaciones canceladas restauran el bloque y conservan el objeto. No
+reemplaza estructuras ni coloca bloques ocupados por entidades. Escaneos escalonados,
+radio limitado, sitios reservados para evitar obras superpuestas y reintento con espera
+si faltan madera, permisos o ruta. No carga chunks ni añade otro selector de objetivos.
+Combate, conversación y órdenes del jugador tienen prioridad. Tras descansar vuelve
+a sus rutinas; puede volver a usar el mismo refugio si se expone de nuevo al clima.
+Las construcciones son bloques persistentes: no se borran automáticamente.
+
+CLIMA Y LÍMITES
+SereneSeasons: consulta su temperatura de bioma estacional si está instalado; sin él,
+usa la temperatura del bioma vanilla. Umbrales editables en unidades de bioma, no °C.
+Homeostatic adjunto fue revisado: su evaluación térmica principal requiere ServerPlayer.
+No se llama con un NPC ni se le asigna una temperatura corporal ficticia. El techo real
+busca cumplir su comprobación de cobertura; NO hay inmunidad al calor/frío, calefacción
+ni aire acondicionado automáticos. No se han ejecutado ambos mods en Minecraft aquí.
+
+Rutina inicial: casa fija sencilla de madera con entrada abierta, sin puerta automática,
+cama, fuego, decoración, reparación, planos libres ni sociedad completa. Solo maderas
+vanilla con logs/planks, terreno plano y árboles accesibles. No todos los NPCs construirán
+inmediatamente. En terreno irregular o protegido pueden no encontrar sitio. NPCs
+reclutados conservan sus órdenes. Los compañeros ayudan con recursos, el líder construye.
+
+CONFIGURACIÓN
+config/tacznpcs/dialogue-phase2.json. Original .40 migra con respaldo pre41.bak.json;
+personalizados conservan textos y reciben secciones opcionales. /npcreload /npcvalidate.
+Nuevas secciones: presentacion, emociones y refugios. refugios.activos=false desactiva
+la rutina sin eliminar bloques ya construidos. /npcdebug muestra plan, avance y motivo
+(por ejemplo sin_madera_cercana, ruta_no_disponible o mobGriefing/proteccion).
+
+VERIFICACIÓN
+176 clases verificadas ASM. JVM con APIs simuladas: 277 regresión, 15126 identidad y
+emboscada, 124 memoria, 2249 charla abierta, 20368 .40 y 797 pruebas nuevas; 14 casos
+independientes de configuración. Incluye prueba de NPC sin materiales que recoge,
+craftea y completa el refugio, con navegación simulada. No es una prueba de Minecraft.
+NO se ejecutó Minecraft real, GPU, NeoForge ni el modpack completo. PRUEBAS.md contiene
+la lista pendiente. Fuentes y resultados reproducibles en fuentes-pruebas.zip.

@@ -1,0 +1,37 @@
+{
+  "base_sha256": "e5977ab688aedba9db3628c7630b17ab1cdebae2558d6c58394e530d265dea62",
+  "jar_sha256": "fc2e24b6112482efd4fe4d526d2ac65cefc280ec2fd8cea9cca1fa9ae4fa745c",
+  "minecraft_run": false,
+  "asm_classes": 176,
+  "regression_checks": 277,
+  "phase26_checks": 15126,
+  "phase3_checks": 124,
+  "open_checks": 2249,
+  "npc40_checks": 20368,
+  "new_checks": 797,
+  "config_cases": 14,
+  "changed": [
+    "META-INF/neoforge.mods.toml",
+    "data/tacznpcs/dialogue/dialogue-phase2.json",
+    "mod/cdv/tnpc/tactical/Chat71$State.class",
+    "mod/cdv/tnpc/tactical/Chat71.class",
+    "mod/cdv/tnpc/tactical/ClientChat71.class",
+    "mod/cdv/tnpc/tactical/Config74.class",
+    "mod/cdv/tnpc/tactical/Data73.class",
+    "mod/cdv/tnpc/tactical/DialogueData71.class",
+    "mod/cdv/tnpc/tactical/Events76.class",
+    "mod/cdv/tnpc/tactical/Free75.class",
+    "mod/cdv/tnpc/tactical/Motion76.class",
+    "mod/cdv/tnpc/tactical/Ops74.class",
+    "mod/cdv/tnpc/tactical/Reputation76.class",
+    "mod/cdv/tnpc/tactical/Social74.class"
+  ],
+  "added": [
+    "data/tacznpcs/dialogue/trust-original.json",
+    "mod/cdv/tnpc/tactical/Emotion77.class",
+    "mod/cdv/tnpc/tactical/Feedback77.class",
+    "mod/cdv/tnpc/tactical/Shelter77$Camp.class",
+    "mod/cdv/tnpc/tactical/Shelter77$Cell.class",
+    "mod/cdv/tnpc/tactical/Shelter77.class"
+  ]
+}

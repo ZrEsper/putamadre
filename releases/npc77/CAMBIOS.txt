@@ -1,0 +1,26 @@
+Base .40.
+Añadidos: Feedback77, Emotion77, Shelter77 y sus clases internas.
+Modificados: Chat71 (colas, separadores, lectura y utilidad); ClientChat71 (sonido XP); Social74 (aviso al subir confianza, reacción ante daño); Reputation76 (evita avisos duplicados); Events76 (integración de trabajo en orders existente); Motion76 (evita expresiones competidoras durante trabajo); Free75 (limpia cachés al recargar); Ops74 (diagnóstico); DialogueData71/Config74/Data73 (validación/defaults/migración); JSON y metadatos.
+No se sustituyen los JAR de Homeostatic ni SereneSeasons. Assets intactos.
+Archivos del JAR cambiados:
+META-INF/neoforge.mods.toml
+data/tacznpcs/dialogue/dialogue-phase2.json
+mod/cdv/tnpc/tactical/Chat71$State.class
+mod/cdv/tnpc/tactical/Chat71.class
+mod/cdv/tnpc/tactical/ClientChat71.class
+mod/cdv/tnpc/tactical/Config74.class
+mod/cdv/tnpc/tactical/Data73.class
+mod/cdv/tnpc/tactical/DialogueData71.class
+mod/cdv/tnpc/tactical/Events76.class
+mod/cdv/tnpc/tactical/Free75.class
+mod/cdv/tnpc/tactical/Motion76.class
+mod/cdv/tnpc/tactical/Ops74.class
+mod/cdv/tnpc/tactical/Reputation76.class
+mod/cdv/tnpc/tactical/Social74.class
+Añadidos:
+data/tacznpcs/dialogue/trust-original.json
+mod/cdv/tnpc/tactical/Emotion77.class
+mod/cdv/tnpc/tactical/Feedback77.class
+mod/cdv/tnpc/tactical/Shelter77$Camp.class
+mod/cdv/tnpc/tactical/Shelter77$Cell.class
+mod/cdv/tnpc/tactical/Shelter77.class
