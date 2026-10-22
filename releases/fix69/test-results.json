@@ -1,0 +1,10 @@
+{
+  "asm_classes": 152,
+  "fixture_checks": 4533,
+  "changed_entries": [
+    "META-INF/neoforge.mods.toml",
+    "dev/zomboid/isotacz/ConsumableFree36.class"
+  ],
+  "minecraft_runtime_tested": false,
+  "sha256": "f3420578bf95001707c6f054e19201002738fd3fa633506db2c1903f51c2d4e4"
+}

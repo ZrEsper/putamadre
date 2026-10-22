@@ -1,0 +1,5 @@
+Reemplaza solo dungeons_iso .37 por .38 en el cliente. Conserva Gore .43 y los demás mods.
+
+El giro del avatar con consumibles se interpola por el camino más corto. La cabeza puede adelantarse moderadamente al cuerpo y su inclinación se centra progresivamente, sincronizada con la restauración del render isométrico. Un cursor a menos de 0,8 bloques mantiene la dirección anterior para evitar inversiones bruscas al pasar por el personaje. Se conservan el cálculo ligero sin búsquedas de entidades, el movimiento isométrico y el uso de consumibles.
+
+Verificación: 152 clases ASM y 4.533 comprobaciones con APIs de prueba. No ejecutado en Minecraft con el modpack.
