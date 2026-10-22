@@ -1,0 +1,48 @@
+{
+  "base_sha256": "d9f43277b8b5d675a2ba8b8903819d9b43975dc30ce827624c2a00207212e668",
+  "jar_sha256": "9d666fbf657c7c1159eb40818ae4c2f61fc4302e8ecbf41c973aa5601b178349",
+  "asm_classes": 305,
+  "hooks": 11,
+  "runtime_fixture_checks": 2305,
+  "changed_entries": [
+    "META-INF/neoforge.mods.toml",
+    "dev/zomboid/firstaid/BodyTreatmentScreen20.class",
+    "dev/zomboid/firstaid/HealthTab40.class",
+    "dev/zomboid/firstaid/MedicalActions40.class",
+    "ichttt/mods/firstaid/client/gui/GuiHealthScreen.class",
+    "ichttt/mods/firstaid/common/network/SimpleFirstAidChannel.class",
+    "ichttt/mods/firstaid/fracture/SplintItem.class"
+  ],
+  "added_entries": [
+    "dev/zomboid/firstaid/SplintNet67.class",
+    "dev/zomboid/firstaid/SplintPacket67.class",
+    "dev/zomboid/firstaid/SplintRules67.class",
+    "dev/zomboid/firstaid/SplintServer67$Session.class",
+    "dev/zomboid/firstaid/SplintServer67.class",
+    "dev/zomboid/firstaid/Unified67$Game.class",
+    "dev/zomboid/firstaid/Unified67.class"
+  ],
+  "assets_preserved_byte_for_byte": true,
+  "minecraft_runtime_tested": false,
+  "neoforge_api_reference": "https://raw.githubusercontent.com/neoforged/NeoForge/1.21.1/src/main/java/net/neoforged/neoforge/network/registration/PayloadRegistrar.java",
+  "small_window_layouts_tested": [
+    [
+      500,
+      340
+    ],
+    [
+      340,
+      220
+    ],
+    [
+      240,
+      160
+    ],
+    [
+      190,
+      136
+    ]
+  ],
+  "reference_branch": "baconwithd/Steph codex/medical60-leg-contact-74f17862",
+  "base_matches_reference_manifest": true
+}
