@@ -1,0 +1,2 @@
+db4a8d631a261ae2cc83edd164bfa84d9c8d5bf227756fc8e0bb9a93f7c9f63c  tacznpcs-2.1.0-1.21.1-tactical.45-doors-social-escort.jar
+d73dda296e72d5e849c48af28c2e53cb665b2159e2137b0a74ee545ddec9bd9c  NPCs-45-Puertas-Charla-Seguimiento.zip
