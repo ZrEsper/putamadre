@@ -1,0 +1,3 @@
+Reemplaza Survivor Creator v36 por v37. Conserva Zomboid Survival, First Aid 19 y compat 1.0.6.
+Se reubican dos helpers y todas sus referencias para evitar el paquete compartido dev.zomboid.survival.
+Validación: 120 clases leídas por ASM, sin referencias antiguas, resolución JPMS con módulo de prueba que exporta dev.zomboid.survival. No probado dentro de Minecraft.
