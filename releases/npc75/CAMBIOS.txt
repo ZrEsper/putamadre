@@ -1,0 +1,19 @@
+Base exacta: .38-persistent-memory.
+Añadidos: Free75 (contexto, selección libre, pausa/reanudación y causas de cierre),
+Free75$Pause, FreeData75 (defaults/validación) y phase3-original.json.
+Modificados:
+- Chat71: selección de charlas abiertas, navegación sin tope, agotamiento sin cierre,
+  reanudación segura y pausa neutral. Mantiene el protocolo C71.
+- DialogueRules72: filtro entorno para condiciones de respuesta.
+- DialogueData71: modo_libre, cinco opciones solo en ese modo y variantes opcionales.
+- Config74/Data73: importación de los nuevos defaults, respaldo .pre39 y limpieza de pausas.
+- Gate74: no inyecta una sexta opción de memoria sobre el menú libre.
+- Flow73: evita reiniciar automáticamente una charla con ese NPC que el jugador dejó en pausa.
+- Ops74: último motivo de cierre en /npcdebug.
+- ClientChat71: respeta el plazo configurable hasta 2400 ticks.
+- Authority70.end: un enganche de diagnóstico antes de borrar la sesión.
+- Conversation.end: un enganche que identifica cierres nativos externos.
+- JSON completo: ocho voces ampliadas y contenido contextual.
+- Metadatos: 2.1.0-tactical.39-open-conversations.
+Assets de modelos/texturas/sonidos idénticos a .38. No instala otro controlador de IA.
+Las implementaciones nativas de construcción, seguimiento y facciones no se sustituyen.

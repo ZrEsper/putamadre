@@ -1,0 +1,68 @@
+TaCZ NPCs .39 — Primera etapa: conversación abierta
+Minecraft 1.21.1 / NeoForge. Sustituye .38 por este JAR en cliente y servidor.
+No dejes ambos. Respalda el mundo y config/tacznpcs antes de actualizar.
+
+QUÉ CAMBIA
+Charlas normales de las ocho voces: menú de cinco opciones; salud, suministros,
+objetivos, pasado/origen/familia y entorno. Puedes navegar sin máximo de turnos.
+Agotar frases nuevas no termina la conversación. Se indica (ya tratado), se conserva
+el menú y no se vuelven a aplicar sus efectos al pulsar una respuesta agotada.
+Hay 8 encuentros abiertos nuevos, 6 menús por voz, y 374 líneas distintas en el conjunto
+nuevo (no son horas garantizadas de texto por NPC). Todos los textos están en el JSON.
+
+Las preguntas de heridas consultan la salud real; suministros consulta la bolsa;
+clima consulta precipitación en su posición; día/noche consulta la hora del mundo;
+techo consulta exposición al cielo. Dar comida/medicina transfiere una unidad real
+con los controles de inventario existentes; no cura automáticamente ni inventa hambre.
+Identidad aleatoria y privacidad por confianza se mantienen.
+
+La negociación de conflictos, robo y emboscada siguen usando sus encuentros estructurados.
+No se convierten en una charla infinita que anule sus consecuencias. Los comandos de
+operador anteriores, memoria, medidores, antispam y bloqueo de ataque se conservan.
+
+PAUSA Y CONTINUIDAD
+Tras 30 segundos sin elegir, solo la charla abierta queda en pausa. Las opciones se
+anulan y el NPC recupera su IA nativa: no queda congelado esperando indefinidamente.
+Con manos sin arma, cerca y a su vista: /npcreply para retomar durante 10 minutos.
+También sirve volver a interactuar. Se conserva el tema y las frases ya dichas.
+Reanudar rota el token; un clic antiguo no puede ejecutar la opción anterior.
+No se reanuda con peligro, corriendo, apuntando, NPC derribado ni muerto.
+Si empiezas una interacción manual con arma, es un robo nuevo, no la charla pausada.
+
+Solo se retiene una charla pausada por jugador. El estado de pausa/frases es temporal;
+recargar configuración lo elimina. El último menú se guarda en NBT por UUID, de modo
+que al volver tras reiniciar o recargar el NPC pueda conservar el tema. Eso es un
+encuentro nuevo: no conserva todo el historial textual tras un reinicio del servidor.
+
+CIERRES EXPLICADOS
+Un cierre por arma, carrera, peligro, distancia o estado ahora tiene un aviso específico.
+El log incluye [TacZ NPC dialogue] reason=..., NPC, jugador, nodo, tick y plazos.
+/npcdebug añade ultimo_cierre. Los cierres nativos externos también se registran.
+Esto permite diagnosticar el cierre de unos 10 segundos del log recibido; no se pudo
+reproducir su causa exacta dentro del modpack desde este entorno.
+
+CONFIGURACIÓN
+config/tacznpcs/dialogue-phase2.json, schema 3 compatible.
+Original .38: copia dialogue-phase2.pre39.bak.json y migración al nuevo contenido.
+JSON personalizado: conserva sus textos; añade los campos opcionales y encuentros libres.
+config.conversacion_abierta=false recupera la selección anterior de charlas normales.
+config.registrar_cierres=true activa diagnósticos de cierre de la autoridad.
+config.reanudar_ticks=12000 controla los 10 minutos de reanudación temporal.
+respuesta_ticks=600 y pausa_lineas_ticks=50 conservan 30 s / 2,5 s. El cliente admite
+el plazo configurable completo hasta 2400 ticks, sin recortarlo a 600.
+/npcreload sigue recargando sin borrar identidad ni memoria; invalida sesiones y pausas.
+/npcvalidate valida modo libre, cinco opciones, entorno y variantes de respuestas.
+/npcexample cansado libre_cansado permite probar un encuentro libre desarmado.
+
+ALCANCE DE ESTA ENTREGA
+Es la primera etapa de la expansión conversada. NO construye sociedades, edificios,
+perímetros, rutas de viaje ni economía nueva. No genera profesiones activas ni hambre
+simulada. Esas funciones corresponden a las siguientes etapas de necesidades, rutinas
+y asentamientos. Preguntar por compartir camino no recluta ni crea un grupo nuevo.
+No se puede prometer que una biblioteca finita de diálogos dure horas sin repetirse;
+esta versión elimina cierres artificiales y da la base para ampliar contenido y contexto.
+
+PRUEBAS
+Pruebas JVM con APIs simuladas: 277 regresión, 15126 identidad/chat/emboscada, 124 memoria,
+2249 modo abierto. 12 casos de configuración en JVMs separadas; 163 clases ASM verificadas.
+NO se ejecutó Minecraft real, NeoForge, GPU ni servidor dedicado. Ver PRUEBAS.md.
