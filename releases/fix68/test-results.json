@@ -1,0 +1,30 @@
+{
+  "gore": {
+    "changed_entries": [
+      "META-INF/neoforge.mods.toml",
+      "dev/zomboid/gore/Ballistics11.class"
+    ],
+    "added_entries": [
+      "dev/zomboid/gore/Damage68.class"
+    ],
+    "sha256": "4f403b7639165ac9de31674e1672ed6169950041c363a864bed82c3af4e9493f",
+    "version_metadata": "\"1.0.20.68\"\ndisplayName=\"Zomboid Zombie Injuries -"
+  },
+  "iso": {
+    "changed_entries": [
+      "META-INF/neoforge.mods.toml",
+      "dev/zomboid/isotacz/ConsumableFree36.class"
+    ],
+    "added_entries": [],
+    "sha256": "81f6fafbf5d8f2abd7bc7646bdc909b8ac19c7bf01998c0d775050e0afbc2c28",
+    "version_metadata": "3.6.2+zomboid.37"
+  },
+  "gore_baseline_cases": 33,
+  "gore_fixed_cases": 33,
+  "isometric_fixture_checks": 32,
+  "asm_classes": {
+    "gore": 193,
+    "iso": 152
+  },
+  "minecraft_runtime_tested": false
+}
