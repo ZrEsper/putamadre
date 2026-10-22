@@ -1,0 +1,108 @@
+TaCZ NPCs .42 — Seguimiento, continuidad, objetivos y caza local
+Minecraft 1.21.1 / NeoForge. Sustituye .41 por este JAR en cliente y servidor.
+No mantengas ambos. El protocolo C71 y los diálogos/medidores anteriores se conservan.
+
+CAUSA CONFIRMADA DEL REFUGIO INACTIVO
+El log recibido muestra IllegalStateException: BlockPos.containing. La .41 pasaba tres
+Integer a una variante que Minecraft no tiene: containing recibe doubles. Se usa ahora
+el constructor real BlockPos(int,int,int). La misma llamada inválida estaba en Tasks.pos,
+por lo que también se corrigió para las tareas nativas de suministros y crafteo.
+La prueba simula el contrato real (sin containing(int,int,int)) y ejecuta además el
+método Tasks.pos extraído del JAR final. Esto corrige el fallo identificado; no demuestra
+que todo terreno del modpack sea navegable. La .41 no debió darse como validada en juego.
+
+SEGUIR Y EQUIPO PERSONAL
+Conversación -> Objetivos -> compartir camino. Con confianza >=25, hostilidad <=45,
+sin violencia reciente/grave y sin propietario ajeno: aparece Ven conmigo.
+Después: Deja de seguirme / Quédate aquí, volver a seguir o seguir por su cuenta.
+Son órdenes reales, persistidas por UUID. No requieren crear una facción primero.
+El seguimiento se integra con la comprobación nativa de aliados y las órdenes sociales.
+Histeresis: empieza a acercarse a más de 6 bloques y se detiene dentro de 2,5; recalcula
+cada 20 ticks. No teletransporta ni carga chunks para alcanzarte. Si no estás conectado,
+espera. Correr o sacar el arma siguen rompiendo la charla, no la orden ya aceptada.
+Otro jugador no puede secuestrar el control. Atacar a tu compañero cancela esta escolta.
+Se trata de equipo personal, no de una nueva sociedad o afiliación formal a FactionFriction.
+Los aliados formales previos conservan su afiliación; liberarlos de esta escolta no borra
+su pertenencia a la facción externa.
+
+CONTINUIDAD Y OBJETIVOS
+Al revelar nombre, origen, familia o profesión, se retira la pregunta correspondiente
+para ese jugador. Las preguntas rechazadas por baja confianza siguen disponibles.
+Se conserva un historial limitado de líneas oídas entre sesiones, en NBT por jugador,
+para no repetir la presentación y las mismas respuestas al abrir otro encuentro.
+Cada sesión usa una copia del encuentro: los menús dinámicos no alteran el JSON global.
+Necesidad y destino consultan tarea/inventario/salud/cobertura/seguimiento reales: comida,
+medicina, buscar cobertura, madera, construcción, depósito, cazar, botín o regreso.
+Equipo distingue si está armado. Hay variantes de redacción sin inventar objetivos nuevos.
+Contenido finito: agotar frases no genera texto ilimitado ni inventa familiares físicos.
+
+CONVERSACIONES ENTRE NPCS
+NPCs próximos compatibles pueden acercarse, detenerse y hablar por turnos. Jugadores
+cercanos con visión los leen como ENTRE SUPERVIVIENTES, separados del TE HABLAN directo.
+Los desconocidos se distinguen como ??? 1 y ??? 2 sin revelar sus identidades.
+Son cuatro intervenciones pausadas, con enfriamiento y memoria del compañero.
+Hablan de cobertura, suministros, heridas y zona. Si uno lleva comida sobrante y al otro
+le falta, puede transferirle una ración real; no crea objetos. La conversación termina
+si aparece combate, daño, conversación con jugador, distancia o tiempo agotado.
+No se muestran opciones clicables al jugador para una charla ajena. Solo NPCs cargados.
+
+REFUGIO Y TRABAJO
+Primero comprueba cobertura existente próxima, accesible y permitida. Si la encuentra,
+va allí; si no, puede iniciar el refugio de madera 2x2/4x4 ya incluido. Ahora la rutina
+ya no falla en la creación de coordenadas. Conserva mesa única, recursos reales,
+progreso persistente, permisos, mobGriefing y prioridad de defensa/conversación.
+No todos construyen: si ya tienen techo o están siguiendo/esperando una orden, no hace
+falta levantar otro. Las rutas y materiales disponibles pueden impedir la tarea.
+Se mantienen las limitaciones de Homeostatic: cobertura real, sin calefacción/AC ni
+fisiología completa de ServerPlayer aplicada ficticiamente a un NPC.
+
+CAZAR -> RECOGER -> LLEVAR A BASE
+NPCs libres, armados, con al menos 70% de salud y una base/cobertura registrada pueden
+preparar un depósito y salir a cazar zombis próximos. Radio de selección 16 bloques,
+referencia de base 32 y máximo de tres zombis visibles para iniciar una salida.
+El cofre se busca en un contenedor permitido no marcado como colocado por jugador,
+o se fabrica con ocho tablones reales y se coloca en un espacio libre de la base.
+No genera botín: recoge ItemEntity reales y usa el adaptador de cadáveres existente.
+Incluye la llamada de saqueo para militares; deja libre la bandera de trabajo para no
+bloquear ese adaptador ni permitir que la rutina de descansar sustituya el saqueo.
+Al volver, guarda materiales y excedentes en el contenedor, conservando provisiones
+mínimas. Los objetos conservan sus componentes. Sin espacio, conserva lo que no cabe.
+Permisos y recursos insuficientes pueden impedir el depósito. La defensa normal nativa
+sigue activa; la elección voluntaria de cazar no cambia a un pasivo en enemigo del jugador.
+La caza es local y utiliza el combate existente; no garantiza matar cada zombi ni añade
+una IA de expediciones lejanas. No se añadió minería subterránea autónoma.
+
+NAVEGACIÓN Y GIROS
+Habilita apertura/paso de puertas y añade una sola meta vanilla para abrir puertas.
+Las rutas de trabajo/seguimiento se validan por canReach; rutas parciales hacia cristales
+no provocan intentos continuos de empujar contra el mismo objetivo. Se espacian los
+reintentos y se reinicia la orientación del recorrido civil al detectar atasco.
+Escaneo táctico y cobertura residual no interrumpen la actividad tranquila por cualquier
+esquina o paso cercano. Con enemigo, daño reciente o ruido de alta prioridad mantienen
+su reacción táctica. En calma se elimina strafe/sprint/aim residual. El torso acompaña
+antes a la dirección del movimiento, evitando el desfase visual de girar demasiado lento.
+No se permite atravesar cristales, paredes o huecos de ventana de un bloque. No se
+sustituye el motor de pathfinding de Minecraft; las puertas modificadas/terrenos complejos
+requieren comprobación real en el modpack.
+
+CONFIG Y DIAGNÓSTICO
+Original .41: migración con respaldo dialogue-phase2.pre42.bak.json. Personalizados:
+conserva textos y añade sección vida. /npcreload /npcvalidate se mantienen.
+/npcdebug añade objetivo, seguimiento y navegacion, además del plan de refugio.
+vida.confianza_seguir, seguir_inicio/parar, ruta_ticks, charlas, historial y caza editables.
+vida.caza.activa=false desactiva la salida voluntaria, no la defensa nativa.
+El tick rate 10000 acelera también los plazos y el movimiento del juego. Para evaluar
+la lectura de los mensajes y la suavidad normal, usar 20 TPS. El fallo confirmado del
+refugio existía a cualquier tick rate; esta recomendación no lo explica ni lo excusa.
+
+VALIDACIÓN Y LÍMITES
+187 clases ASM verificadas y 15 casos independientes de configuración. Pruebas JVM
+con APIs simuladas: 277 regresión, 15126 identidad/emboscada, 124 memoria, 2249 charla,
+20368 .40, 797 .41 y 90 nuevas .42. Incluye seguimiento físico con navegación simulada,
+presentaciones, historial, rutas incompletas, puerta, conversación NPC/NPC, recogida,
+cofre, depósito, conservación de componentes y activación del adaptador de cadáveres.
+NO se ejecutó Minecraft real, NeoForge, GPU, servidor dedicado ni el modpack. No se
+verificó visualmente la animación nueva ni el combate/pathfinding real de la .42.
+Se revisaron el log y los videos transferibles; el video 13.16.54.09 excedió el límite
+de transferencia de 32 MiB y no pudo inspeccionarse en este entorno.
+Fuentes, SHA256 y tabla de comprobación en juego incluidos.
