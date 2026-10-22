@@ -1,0 +1,64 @@
+{
+  "minecraft_runtime_tested": false,
+  "results": [
+    {
+      "case": "entity-old",
+      "result": "OLD_MOVING_NPC_LIGHT_DROPS_ON_BUDGET_EXHAUSTION=REPRODUCED"
+    },
+    {
+      "case": "entity-new",
+      "result": "ENTITY_TEMPORAL_LAYERS_VISIBILITY_BUDGET_WORLD_CHECKS=68"
+    },
+    {
+      "case": "slots",
+      "result": "PLAYER_CAR_NPC_PRIORITY_GAIN_FILL_AND_BUDGET=24"
+    },
+    {
+      "case": "bridge",
+      "result": "VEHICLE_UNIFIED_RENDER_HANDOFF_AND_FALLBACK=5"
+    }
+  ],
+  "real_opengl_tests": [
+    {
+      "test": "character_gpu_test.py",
+      "input": [
+        "/workspace/light61/portable6.frag"
+      ],
+      "result": "OFFSCREEN_RENDERER llvmpipe (LLVM 19.1.7, 256 bits)\nPORTABLE_FLASHLIGHT_GLSL150_COMPILE_AND_LINK=PASS\nFIXED_VISIBLE_CHARACTER_VARYING_CAPTURE_BRIGHTNESS_DELTA 0.4919815808534622\nOLD_CHARACTER_CAPTURE_BRIGHTNESS_SWITCH=REPRODUCED"
+    },
+    {
+      "test": "character_gpu_test.py",
+      "input": [
+        "/workspace/light62/portable6.frag"
+      ],
+      "result": "OFFSCREEN_RENDERER llvmpipe (LLVM 19.1.7, 256 bits)\nPORTABLE_FLASHLIGHT_GLSL150_COMPILE_AND_LINK=PASS\nFIXED_VISIBLE_CHARACTER_VARYING_CAPTURE_BRIGHTNESS_DELTA 0.0\nIRIS_CHARACTER_COLOR_DOES_NOT_SWITCH_WITH_CAPTURE=PASS"
+    },
+    {
+      "test": "stripes_gpu_test.py",
+      "input": [
+        "/workspace/light62/portable6.frag"
+      ],
+      "result": "OFFSCREEN_RENDERER llvmpipe (LLVM 19.1.7, 256 bits)\nPORTABLE_FLASHLIGHT_GLSL150_COMPILE_AND_LINK=PASS\nSTRIPE_MEAN_ADJACENT_ROW_CHANGE 0.0011209649226022146 CONTRAST 0.07062079012393951\nHALF_RESOLUTION_SLOPED_PLANE_NO_DISCARDED_ROWS=PASS"
+    },
+    {
+      "test": "render_test.py",
+      "input": [],
+      "result": "OFFSCREEN_RENDERER llvmpipe (LLVM 19.1.7, 256 bits)\nPORTABLE_FLASHLIGHT_GLSL150_COMPILE_AND_LINK=PASS\nPRODUCTION_FRAGMENT_REAL_GL_DRAW_FINITE_SOFT_FALLOFF=PASS"
+    },
+    {
+      "test": "three_gpu_test.py",
+      "input": [],
+      "result": "OFFSCREEN_RENDERER llvmpipe (LLVM 19.1.7, 256 bits)\nPORTABLE_FLASHLIGHT_GLSL150_COMPILE_AND_LINK=PASS\nTHIRD_LAMP_ATLAS_REAL_GL_DRAW_FINITE_SOFT_FALLOFF=PASS"
+    },
+    {
+      "test": "depth_gpu_test.py",
+      "input": [],
+      "result": "OFFSCREEN_RENDERER llvmpipe (LLVM 19.1.7, 256 bits)\nMATCHING_COLOR_DEPTH_HALF_RES_BLIT 0x81a6 PASS\nMATCHING_COLOR_DEPTH_HALF_RES_BLIT 0x8cac PASS\nMATCHING_COLOR_DEPTH_HALF_RES_BLIT 0x88f0 PASS\nMATCHING_COLOR_DEPTH_HALF_RES_BLIT 0x8cad PASS\nREAL_GL_SAME_TEXTURE_ID_REINITIALIZED_DEPTH_MISMATCH=REPRODUCED\nREAL_GL_MATCHING_STORAGE_REINITIALIZATION_RECOVERS=PASS"
+    }
+  ],
+  "verified_classes": {
+    "flashlight": 67,
+    "mts": 873
+  },
+  "native_beam_replacements": 1
+}

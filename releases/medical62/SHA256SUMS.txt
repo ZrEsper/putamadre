@@ -1,0 +1,2 @@
+e0f305ba215d14648b024f7344108687521ff31565bcf8d2a5b5898852c8c622  mods/flashlight-5.1-neoforge-1.21.1-unified-vehicle-character-light.28.jar
+b07bbb0a75fb253ce6175928ae3cc5ab6fe3a3d6c62ceefac192ec1e1bc71b2b  mods/Immersive-Vehicles-1.21.1-24.0.0-zomboid-mechanics.18-unified-headlights.jar

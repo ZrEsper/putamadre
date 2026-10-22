@@ -1,0 +1,18 @@
+{
+  "base_commit": "96a7b91767f7209d8f892181c77e2d4461886f53",
+  "minecraft": "1.21.1",
+  "loader": "NeoForge",
+  "minecraft_runtime_tested": false,
+  "files": [
+    {
+      "name": "flashlight-5.1-neoforge-1.21.1-unified-vehicle-character-light.28.jar",
+      "version": "5.1.28",
+      "sha256": "e0f305ba215d14648b024f7344108687521ff31565bcf8d2a5b5898852c8c622"
+    },
+    {
+      "name": "Immersive-Vehicles-1.21.1-24.0.0-zomboid-mechanics.18-unified-headlights.jar",
+      "version": "24.0.0.18",
+      "sha256": "b07bbb0a75fb253ce6175928ae3cc5ab6fe3a3d6c62ceefac192ec1e1bc71b2b"
+    }
+  ]
+}
