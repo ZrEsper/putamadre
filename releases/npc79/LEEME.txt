@@ -1,0 +1,50 @@
+TaCZ NPCs .43 — rutinas sencillas de supervivencia
+NeoForge / Minecraft 1.21.1. Sustituir únicamente TaCZ NPCs .42 por este JAR,
+en cliente y servidor. No instalar ambas versiones. Conservar los otros mods.
+Se conservan las identidades, relaciones, diálogos, tokens y configuración existentes.
+
+CAUSAS Y CAMBIOS
+1. El log de la .42 muestra Cannot encode empty ItemStack en CalmLoot.saveBag,
+   después de colocar el cofre. El guardado central ahora filtra pilas vacías/nulas
+   sin modificar la lista de la transacción. Afecta también gasto de madera y reparto.
+2. Tasks.trim descartaba linternas, mesas, cofres y agua, y herramientas repetidas.
+   Ya no genera objetos en el suelo por mantenimiento del inventario. Solo limpia
+   pilas vacías. Tasks.useful reconoce suministros de supervivencia y equipo.
+3. Un único coordinador tranquilo ejecuta: necesidades de comida/agua; seguimiento;
+   charla entre NPCs; terminar refugio/ayudar; cadáveres; caza/depósito; minería;
+   resguardarse; suministros; compañía/exploración. Las rutas antiguas de paseo,
+   plan nocturno y actividad no pisan una tarea que ya tiene dueño. Un enemigo o
+   conversación con jugador interrumpe las tareas tranquilas.
+4. El hambre/sed usa el servicio original de Tactical27, que antes podía quedar
+   bloqueado por el indicador de trabajo. Consume comida y pociones de agua REALES
+   del inventario; no inventa agua ni comida. Mantiene animaciones/sonidos originales.
+5. Después de 600 ticks sin hogar también busca establecerse de día. Primero busca
+   techo existente; si no encuentra uno válido, intenta construir. El escaneo de
+   techo avanza cada 20 ticks, en vez de esperar intervalos largos entre fragmentos.
+   Los ayudantes sin madera ahora intentan talar y entregan material estando cerca.
+6. Las charlas ya no quedan excluidas por fabricar el depósito ni por una antigua
+   marca de enemigo caducada. Radio de encuentro 12 bloques, líneas y cooldown
+   configurados en vida. Conservan memoria del interlocutor y comparten comida real.
+   Dos charlas terminadas guardan amistad; en ratos libres buscan compañía cercana.
+7. El depósito conserva equipo y no se vuelve a saquear como un cofre ajeno.
+   La búsqueda de cadáveres se ejecuta por el adaptador existente con el trabajo
+   liberado, antes de descansar. La caza sigue siendo local y limitada por peligro.
+8. Minería oportunista de carbón/hierro expuestos cerca del hogar, con pico correcto,
+   visibilidad, ruta, permisos, mobGriefing y tabla de botín de Minecraft. Un bloque
+   solo entrega su botín una vez. No rompe paredes comunes para conseguir materiales.
+9. /npcdebug incluye tarea actual y vencimiento del dueño de movimiento.
+
+PRUEBAS Y LÍMITES
+Ver PRUEBAS.md. NO se ejecutó Minecraft real ni el modpack gráfico del usuario.
+No se afirma que los cinco videos hayan sido reproducidos en un cliente corregido.
+Las pruebas JVM usan APIs simuladas; para serialización ejecutan además el método
+real extraído de los JAR anterior y nuevo, reproduciendo el fallo en el anterior.
+No implementa sociedades completas, generación de diálogos nuevos, extracción de
+cadáveres como objetos transportables, túneles ni búsqueda infinita de recursos.
+Recolectar cadáver significa saquear su inventario mediante el adaptador existente.
+Un NPC sin comida/agua, herramientas, árboles naturales o ruta no puede fabricarlos
+por magia. Reutilizar un edificio es válido: no construye otra casa si ya tiene techo.
+La minería no modela todavía desgaste del pico. La amistad es memoria/compañía e
+intercambio básico; no es una facción nueva. Integración con claims/mods y navegación
+urbana necesitan prueba en el mundo real. Usar 20 TPS para medir el comportamiento:
+10000 TPS comprime todos los intervalos y no sirve para valorar ritmo/animaciones.

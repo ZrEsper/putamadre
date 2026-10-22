@@ -1,0 +1,2 @@
+ba9efae36d9994f3ebaa8fdb8025c663806741df31025eb3e4aec5fe7040df1c  tacznpcs-2.1.0-1.21.1-tactical.43-simple-survival.jar
+b7c8b4a794cf68e3186b6e6a9743253620c29eb78bbb9b93b93d43bcbc20e466  NPCs-43-Supervivencia-Fuentes.zip
