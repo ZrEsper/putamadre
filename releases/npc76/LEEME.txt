@@ -1,0 +1,55 @@
+TaCZ NPCs .40 — Confianza, regalos, movimiento y encuentros
+Minecraft 1.21.1 / NeoForge. Reemplaza .39 en cliente y servidor; no mantengas ambas.
+
+CONFIANZA
+Escuchar un tema nuevo de una charla normal suma 2 de confianza, máximo 12 por día
+(24000 ticks de juego), por NPC y jugador. Navegar, repetir temas o interrumpir antes
+de escuchar no suma. Tras una tregua o confianza >=25 y hostilidad <=45, los antiguos
+hostiles pueden usar la conversación abierta si no hay violencia reciente/grave.
+Regalos: Estado -> ayuda/apoyo -> regalar desde inventario. Menú paginado de objetos
+reales, una unidad por elección, conserva componentes. Comida +3, medicina +6,
+munición +4; otros valores editables. Repetir un mismo objeto da valor completo,
+luego mitad, después cero; máximo 18 por día. Una agresión reciente impide regalos.
+No borra recuerdos negativos. Las ayudas de misiones y donaciones anteriores conservan
+sus efectos: estos límites corresponden a los regalos nuevos y temas de charla.
+
+REGISTRAR DURANTE UN ROBO
+Con arma en mano, sin apuntar/disparar, inicia intimidación. Si cede (miedo >=50),
+aparece revisar la bolsa. Verás nombres y cantidades reales, dos objetos por página;
+cada clic toma una unidad. Requiere visión, distancia <=8 bloques y sesión vigente.
+Las opciones viejas no sirven; cambios de objetos y falta de espacio cancelan la operación.
+El registro es un menú de chat, no una ventana de cofre. Solo expone la bolsa:
+no permite quitar el arma equipada ni la armadura por esta vía. El NPC recuerda el robo.
+
+EVENTOS OCASIONALES
+NPCs existentes neutrales/pasivos con comida o medicina sobrante pueden acercarse,
+por navegación normal, y ofrecer intercambiar una unidad por una de la otra categoría.
+No aparecen suministros gratuitos: ambas partes entregan objetos reales.
+Por defecto: búsqueda 32 bloques; comprobación escalonada cada 200 ticks, probabilidad
+20% al habilitarse, espera de un día por NPC y 10 minutos por jugador; acercamiento
+máximo 20 segundos. Una sola visita reservada por jugador. Sin generar NPCs, teletransportar
+ni cargar chunks. Se cancela con combate, amenazas, arma, distancia o plazo agotado.
+La emboscada de compañeros ocultos mantiene sus dos NPCs reales: corregida su visión
+contra jugadores (antes intentaba usar getSensing de criaturas sobre Player).
+Los casos antiguos sin_cobertura pueden reintentarse una vez, sin duplicar actores.
+No hay una nueva IA para perseguirte fuera de chunks cargados ni sociedades nuevas.
+
+MOVIMIENTO
+Cuello limitado a 65 grados respecto al torso y pitch a 45; giros por el camino angular
+más corto, cuerpo acompañando al mirar detrás durante conversación. Suavizado visual
+sin alterar posiciones/velocidades ni el cálculo de disparo. Se suprime la rutina de
+expresión que competía con estos giros y alternaba agacharse durante la charla/visita.
+La puntería de combate conserva su orientación nativa en servidor, con límites del cuello.
+
+CONFIGURACIÓN
+config/tacznpcs/dialogue-phase2.json: nuevas secciones interaccion, movimiento y eventos.
+JSON .39 original migra con copia dialogue-phase2.pre40.bak.json. Los personalizados
+conservan su contenido y reciben valores opcionales. /npcreload y /npcvalidate siguen.
+/npcdebug muestra también contadores de confianza diaria.
+
+VERIFICACIÓN Y LÍMITES
+171 clases verificadas por ASM. Pruebas JVM con APIs simuladas: 277 regresión,
+15126 identidad/chat/emboscada, 124 memoria, 2249 conversación abierta y 20368 nuevas
+comprobaciones de confianza, regalos, ángulos, registro y visitas; 13 casos de configuración.
+NO se ejecutó Minecraft real, NeoForge, GPU, servidor dedicado ni el modpack completo.
+Los videos/logs recibidos sí se revisaron; no prueban la nueva .40. Ver PRUEBAS.md.

@@ -1,0 +1,32 @@
+Base exacta .39. Clases y datos cambiados en el JAR:
+META-INF/neoforge.mods.toml
+data/tacznpcs/dialogue/dialogue-phase2.json
+mod/cdv/tnpc/entity/AutoGunOperator.class
+mod/cdv/tnpc/tactical/Ambush73.class
+mod/cdv/tnpc/tactical/Authority70.class
+mod/cdv/tnpc/tactical/Chat71$State.class
+mod/cdv/tnpc/tactical/Chat71.class
+mod/cdv/tnpc/tactical/Client26.class
+mod/cdv/tnpc/tactical/Config74.class
+mod/cdv/tnpc/tactical/Data73.class
+mod/cdv/tnpc/tactical/DialogueData71.class
+mod/cdv/tnpc/tactical/DialogueRules72$Plan.class
+mod/cdv/tnpc/tactical/DialogueRules72.class
+mod/cdv/tnpc/tactical/Expression20.class
+mod/cdv/tnpc/tactical/Flow73.class
+mod/cdv/tnpc/tactical/Free75.class
+mod/cdv/tnpc/tactical/FreeData75.class
+mod/cdv/tnpc/tactical/Gate74.class
+mod/cdv/tnpc/tactical/Ops74.class
+mod/cdv/tnpc/tactical/Social.class
+Añadidos:
+data/tacznpcs/dialogue/open-original.json
+mod/cdv/tnpc/tactical/Config76.class
+mod/cdv/tnpc/tactical/Events76$Approach.class
+mod/cdv/tnpc/tactical/Events76.class
+mod/cdv/tnpc/tactical/Gifts76.class
+mod/cdv/tnpc/tactical/Motion76$Frame.class
+mod/cdv/tnpc/tactical/Motion76.class
+mod/cdv/tnpc/tactical/Reputation76.class
+mod/cdv/tnpc/tactical/Search76.class
+Fuentes correspondientes en fuentes-pruebas.zip, src/mod/cdv/tnpc/tactical/. Assets intactos.
