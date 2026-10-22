@@ -1,0 +1,8 @@
+Respecto a .36:
+Modificados: Chat71, ClientChat71, DialogueData71, DialogueRules72; Identity20.name;
+Authority70.busy/reject/tick; Threat27.hit/chat; metadatos NeoForge y JSON de diálogo.
+Añadidos: Identity73, IdentityData73, Data73, Diagnostics73, Admin73, Ambush73, Flow73;
+recurso phase25-original.json para migración exacta.
+No se modifican assets de modelos, texturas ni sonidos. Se reutilizan Conversation,
+Social, protocolo C71, ataque bloqueado y rupturas de las fases anteriores.
+Los fuentes exactos, generador JSON, parche ASM y pruebas están en fuentes-pruebas.zip.

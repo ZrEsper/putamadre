@@ -1,0 +1,31 @@
+{
+  "jar_sha256": "38e43bace206e11e241e2407ae053a7e9652574f32b95d6339e4bbe0b25ae985",
+  "minecraft_run": false,
+  "asm_classes": 150,
+  "regression_checks": 277,
+  "phase26_checks": 15126,
+  "config_cases": 7,
+  "changed": [
+    "META-INF/neoforge.mods.toml",
+    "data/tacznpcs/dialogue/dialogue-phase2.json",
+    "mod/cdv/tnpc/tactical/Authority70.class",
+    "mod/cdv/tnpc/tactical/Chat71$State.class",
+    "mod/cdv/tnpc/tactical/Chat71.class",
+    "mod/cdv/tnpc/tactical/ClientChat71.class",
+    "mod/cdv/tnpc/tactical/DialogueData71.class",
+    "mod/cdv/tnpc/tactical/DialogueRules72.class",
+    "mod/cdv/tnpc/tactical/Identity20.class",
+    "mod/cdv/tnpc/tactical/Threat27.class"
+  ],
+  "added": [
+    "data/tacznpcs/dialogue/phase25-original.json",
+    "mod/cdv/tnpc/tactical/Admin73.class",
+    "mod/cdv/tnpc/tactical/Ambush73.class",
+    "mod/cdv/tnpc/tactical/Data73.class",
+    "mod/cdv/tnpc/tactical/Diagnostics73$Test.class",
+    "mod/cdv/tnpc/tactical/Diagnostics73.class",
+    "mod/cdv/tnpc/tactical/Flow73.class",
+    "mod/cdv/tnpc/tactical/Identity73.class",
+    "mod/cdv/tnpc/tactical/IdentityData73.class"
+  ]
+}

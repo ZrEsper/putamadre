@@ -1,0 +1,44 @@
+TaCZ NPCs .37 — Fase 2.6 + chat claro
+Minecraft 1.21.1 / NeoForge. Sustituye .36 por el JAR incluido en cliente y servidor.
+No dejes ambas versiones. Conserva las dependencias del modpack y respalda tu mundo.
+
+Chat: TE HABLAN en celeste; (RESPONDER- CLICKEA TU RESPUESTA) en celeste y negrita.
+Se eliminan las opciones anteriores; el historial de mensajes normales se conserva.
+Repetir clic no reinicia el texto. Se suprimen los mensajes del antiguo canal nativo.
+Saludos automáticos entre 4 y 18 bloques, con línea de visión, manos sin arma y sin
+carrera/disparos recientes. En peligro no inician diálogo. Pausa entre encuentros.
+Susurro hasta 6 bloques, normal hasta 16 y grito hasta 32; los oyentes reciben solo
+el texto, nunca las opciones. Las paredes reducen alcance. Gritar puede atraer zombis
+si está instalado el sistema reactivo de la horda. No añade voces grabadas nuevas.
+
+JSON editable: config/tacznpcs/dialogue-phase2.json (schema 3).
+Se migra el original .36 con copia dialogue-phase2.pre26.bak.json. El JSON personalizado
+schema 1/2 se interpreta manteniendo textos y descartando las identidades fijas antiguas.
+JSON inválido al iniciar: respaldo incluido, sin borrar tu archivo. Recarga inválida:
+conserva la última configuración válida. Recarga válida cierra conversaciones activas.
+
+Operador:
+/npcreload — recarga sin reiniciar.
+/npcvalidate — errores por archivo/campo y config/tacznpcs/dialogue-validation.txt.
+/npcdebug — mirando al NPC, hasta 12 bloques: identidad, voz, encuentro, nodo y medidores.
+/npcexample cansado familiar_enfermo
+/npcexample seco familiar_herido_companeros
+/npcreply — vuelve a mostrar opciones vigentes; no extiende su caducidad.
+
+Identidad: semilla y perfil guardados en NBT por UUID. 60 nombres de NPC, 60 de
+compañeros, 40 apellidos, 12 roles familiares con nombres concordantes, 20 objetos,
+12 hogares y 20 profesiones. Los bancos son finitos: un nombre puede repetirse.
+Las voces no fijan la necesidad. Se conserva privacidad por confianza/revelación.
+Los cuatro encuentros completos restantes y seis respaldos conservan sus textos.
+
+Emboscada: dos NPCs reales con equipo/AI nativos, reservados tras cobertura física.
+Necesita espacio con suelo y cobertura no visible. Nunca fuerza carga de chunks.
+Si no caben dos, el saludo normal usa la necesidad alternativa; el comando de prueba
+informa el fallo. No vuelve a generar compañeros en un encuentro consumido/fallido.
+La aproximación tras la advertencia activa la traición; acusar revela la mentira sin
+penalizar confianza. Acordar retirada libera a los compañeros con tregua.
+
+LIMITACIONES: no se ejecutó Minecraft real, servidor NeoForge ni GPU. No se verificaron
+aspecto visual, rutas/tiros reales, sincronización multijugador ni compatibilidad con
+otros mods de chat. La cobertura/combate se verificó solo con APIs simuladas. El
+familiar enfermo es parte de la historia: no se genera como entidad en esta fase.
