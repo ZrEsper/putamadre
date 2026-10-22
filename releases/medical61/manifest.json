@@ -1,0 +1,10 @@
+{
+  "base_commit": "f2fb69b9e8a7929fe8c6eeebfc44cd934ac82950",
+  "minecraft": "1.21.1",
+  "loader": "NeoForge",
+  "minecraft_runtime_tested": false,
+  "file": "flashlight-5.1-neoforge-1.21.1-surface-depth-vehicle-npc.27.jar",
+  "version": "5.1.27",
+  "sha256": "8a3f70e38a15df1098e64a7c59e457d040e6cbdb14f7c71a5de077052309f604",
+  "input_sha256": "927c7378a583eff5494accb6332b6f703ec0480c1de1e0225d921e73c2bcae58"
+}
