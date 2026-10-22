@@ -1,0 +1,2 @@
+79927c856e8fb8b4b571562f7d24e425d07103b7a211a260720d50232020805d  tacznpcs-2.1.0-1.21.1-tactical.44-context-null-guard.jar
+698aed1eace19cfae89d36104f7ad230dec431afb5bd7b6b844cb94fef40dbd8  NPCs-44-Contexto-Fuentes.zip
