@@ -1,0 +1,4 @@
+2f70b557c1604c1ebd85dac431b08d1412c6c87cdc58d5efe0587ec7b0ed66e3  AUDITORIA.txt
+f6d555a2a3c28985e7df8f35f34188dd31e455bc53bd92e2e5644db3288516b1  LEEME.txt
+d8c074751e570eec4a1fa48a2fe53287572ee3cddd496bf7cca5598ff4abf602  fuentes-pruebas.zip
+4dec9cc063dc8556e80978d662e1c308d06a36fe08b26633f7a71e3b329b5288  tacznpcs-2.1.0-1.21.1-tactical.34-decision-authority.jar

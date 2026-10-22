@@ -1,0 +1,42 @@
+FASE 1 — TaCZ NPCs .34 / NeoForge 1.21.1
+
+INSTALACIÓN
+Reemplaza TaCZ NPCs .33 por .34 en cliente y servidor. No instales ambas versiones.
+Conserva las dependencias TaCZ y zomboid_gore compatibles con tu instalación.
+No añade SmartBrainLib como dependencia ni instala otro controlador de goals.
+
+CAMBIOS
+Reutiliza Conversation.SESSIONS, Social, CalmBrain y los ejecutores originales TaCZ.
+Una negociación válida bloquea ambos métodos de disparo, melee y doHurtTarget.
+Pausa navegación y orienta al interlocutor. Puede intentarse con cualquier rol.
+Se rechaza iniciar con arma en mano, corriendo, con otro interlocutor o peligro activo.
+Salir de rango, morir, cambiar de mundo, agotar 12 segundos sin respuesta, recibir daño
+aplicado, disparar, correr o sacar un arma termina la negociación. Una ruptura por
+arma/carrera reduce confianza y aplica espera de 30 segundos para volver a intentarlo.
+Añade puntuaciones e histéresis para el núcleo de decisión; la ejecución de combate,
+cobertura, recarga y rutinas sigue siendo la original. No es una reescritura completa
+como utility AI: en esta fase la nueva autoridad controla negociación frente a combate.
+Decisión/adquisición cada 6 ticks por defecto. Sin nuevos escaneos por fotograma.
+Si la capa falla, se desactiva para ese NPC y recupera la lógica original.
+
+CONFIGURACIÓN
+config/tacznpcs-decision-phase1.properties se crea al iniciar. Reinicia para recargar.
+enabled=true; dialogueRange=25; silenceTicks=240; decisionIntervalTicks=6;
+brokenRetryTicks=600; hysteresisMargin=20; minimumModeTicks=20.
+El rango de 25 regula la continuidad: iniciar por clic conserva alcance vanilla.
+
+PRUEBA EN JUEGO
+1. Con una copia del mundo, crea un NPC aislado, sin amenazas cercanas.
+2. Acércate sin armas en ninguna mano ni correr e inicia la conversación por clic.
+3. Comprueba que no dispara ni golpea durante la conversación. Prueba también hostil.
+4. Contesta antes de 12 s; luego espera sin contestar y verifica el cierre.
+5. Repite sacando arma, corriendo, recibiendo daño y disparando. Debe interrumpirse.
+6. Repite con dos jugadores: el segundo no debe ocupar la negociación del primero.
+7. Comprueba que fuera de conversación siguen funcionando combate y recarga nativos.
+
+VALIDACIÓN Y LÍMITES
+135 clases verificadas con ASM BasicVerifier; 16 enganches. 277 comprobaciones JVM
+con APIs simuladas, incluyendo el bytecode real parcheado de shoot y -Xverify:all.
+No se ha ejecutado Minecraft ni el modpack: estas pruebas no demuestran resultado en juego.
+La interfaz antigua permanece en esta fase. Chat clicable, personalidades, trueque,
+historias, población y bases corresponden a las fases siguientes; no están implementados.

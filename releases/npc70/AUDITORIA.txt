@@ -1,0 +1,25 @@
+AUDITORÍA DE ENGANCHES — FASE 1
+Conversation: sesiones existentes, GUI y respuestas; conservadas. Se añaden validación,
+seguimiento y arbitraje; busy/focus originales se conservan para fallback.
+Social: percepción, memoria, confianza, órdenes y pausa existentes; reutilizados.
+CalmBrain/BanditBrain: controlador instalado y goals existentes; no se añade otro.
+TeamBrain: ya consulta Conversation.busy; conserva tácticas, cobertura y recarga.
+AutoGunOperator: ejecutor TaCZ; se bloquean shoot (dos sobrecargas), melee y doHurtTarget.
+Threat27: memoria de amenazas/ruido existente; conecta disparos o daño con ruptura.
+TalkNetwork: conserva GUI normal y canal médico M20 sin sustituirlos.
+Identity20: identidad por UUID existente, reutilizable para historias futuras.
+CalmLoot/GroundStash: inventario real persistente, reutilizable para trueque finito.
+CraftPlanner: recetas e ingredientes reales existentes; no se duplica.
+Tasks: tareas y comprobaciones de chunk/propiedad existentes. No demuestra protección
+absoluta de todos los bloques del jugador; debe resolverse antes de construir/minar.
+NpcMedicine/Downed20: medicina y derribo conservados; no intercepta pacientes derribados.
+StructureTemplate: localizado; no se afirma que ya implemente el gestor de población.
+Citizens Aware: referencia Bukkit/Citizens con servicio externo, no mod NeoForge instalable.
+No se importaron servicios de IA ni un segundo cerebro SmartBrainLib.
+
+Archivos existentes modificados:
+mod/cdv/tnpc/tactical/{Conversation,CalmBrain,Social,Threat27}.class
+mod/cdv/tnpc/entity/AutoGunOperator.class
+META-INF/neoforge.mods.toml
+Añadidos: Authority70 y DecisionRules70 con clases internas.
+Fuentes, parche ASM, compilación y fixtures incluidos en fuentes-pruebas.zip.
