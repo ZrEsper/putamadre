@@ -1,0 +1,3 @@
+8e036498d9fd92afe6edfa7c253143c9ff8ac8028cb1f6f970b155088ff13bd5  ragdollified-1.21.1-1.1.5-server-owned-corpses.33.jar
+53c592990947f4a00548238f389152c2ee82a3bf24e81b74dc47492daae28c5d  tacznpcs-2.1.0-1.21.1-tactical.49-decor-corpse-fixes.jar
+65959d4113ceac72534df6f8678d294133c61a2ab1938abff809e4889bd88e0a  zombie-remains-loot-1.6.1-neoforge-1.21.1-safe-corpse-menu.28.jar
