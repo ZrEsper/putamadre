@@ -1,0 +1,26 @@
+{
+  "base_sha256": "08bce585892ba7ac195a6b0b63f82307538293ddc6f154649ce0213a055743d0",
+  "jar_sha256": "68abf1b038180ce79637194236d27b09a243bda5754b47461a5e33621404422f",
+  "asm_classes": 142,
+  "phase1_checks": 277,
+  "phase25_checks": 6089,
+  "authored_option_cases": 567,
+  "config_cases": 6,
+  "minecraft_run": false,
+  "changed": [
+    "META-INF/neoforge.mods.toml",
+    "data/tacznpcs/dialogue/dialogue-phase2.json",
+    "mod/cdv/tnpc/entity/AutoGunOperator.class",
+    "mod/cdv/tnpc/tactical/Authority70.class",
+    "mod/cdv/tnpc/tactical/Chat71$State.class",
+    "mod/cdv/tnpc/tactical/Chat71.class",
+    "mod/cdv/tnpc/tactical/DialogueData71.class",
+    "mod/cdv/tnpc/tactical/Social.class",
+    "mod/cdv/tnpc/tactical/Threat27.class"
+  ],
+  "added": [
+    "data/tacznpcs/dialogue/phase2-original.json",
+    "mod/cdv/tnpc/tactical/DialogueRules72$Plan.class",
+    "mod/cdv/tnpc/tactical/DialogueRules72.class"
+  ]
+}

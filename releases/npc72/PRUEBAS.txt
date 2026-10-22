@@ -1,0 +1,30 @@
+Resultados de validación automática, no prueba en Minecraft:
+142 clases verificadas con ASM BasicVerifier; 10 enganches nuevos exactos sobre .35.
+277 controles de regresión de fase 1, con bytecode shoot real trasplantado y -Xverify:all.
+6089 controles de fase 2.5; 567 casos de opciones escritas en los seis encuentros y
+los seis respaldos, con confianza baja/media/alta y ramas de verdad/mentira.
+6 escenarios adicionales en JVMs independientes para inicialización del JSON:
+- archivo nuevo y segunda carga del archivo generado;
+- variable prohibida: respaldo sin sobrescribir el archivo;
+- archivo original de fase 2: copia exacta antes de migrar;
+- schema 1 personalizado: contenido preservado;
+- pausa personalizada en schema 2;
+- efecto comando prohibido: respaldo sin ejecutar ni sobrescribir nada.
+
+Controles principales:
+- pausa de 30 ticks y plazo de 240 ticks después de la última línea;
+- caducidad, tokens falsos/antiguos, otro jugador y comandos GUI antiguos;
+- desaparición de un requisito entre mostrar y hacer clic;
+- stock finito, metadatos, capacidad de ambas partes y rollback por fallo inducido;
+- límites y condiciones de medidores, voz, estado, revelaciones y mentira;
+- privacidad de familiares/hogar/profesión; confianza alta para objeto/compañero;
+- no repetir líneas, cierre al agotar texto, memoria limitada a 32 eventos;
+- silencio una sola vez e interrupción de mensajes pendientes;
+- los seis resultados y retirada nativa de Social/TeamBrain;
+- Brigadier real: /npcreply, alias, clics, repetición, /npcexample;
+- despacho real parcheado: C71 evita GUI antigua y M20 conserva tratamiento médico;
+- disparo real parcheado respeta tregua y vuelve al ejecutor al romperla;
+- cliente de fase 2: clics, invalidación y hover subrayado conservados.
+
+Las APIs de Minecraft están simuladas en los fixtures. No se ha ejecutado el cliente,
+servidor ni GPU de Minecraft. No es una validación visual ni de rutas dentro del modpack.

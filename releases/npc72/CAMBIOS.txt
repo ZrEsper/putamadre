@@ -1,0 +1,21 @@
+Respecto a TaCZ NPCs .35:
+Modificados:
+- Chat71 y Chat71$State: cola de líneas por tick, plazo tras hablar, ramas, filtrado,
+  efectos, anti-repetición y cierre por resultado. Reutiliza Conversation.SESSIONS.
+- DialogueData71: schema 2 estricto, variables/efectos, ocho voces, importación de schema 1,
+  migración del original de prueba con copia y respaldo de configuración inválida.
+- Authority70: 2 enganches (tick y evaluación previa de caducidad).
+- Social/Threat27: permisos de tregua; ruido/daño pueden romper esa protección.
+- AutoGunOperator: respeta tregua en las dos sobrecargas de shoot, melee y doHurtTarget.
+- data/tacznpcs/dialogue/dialogue-phase2.json: contenido nuevo.
+- META-INF/neoforge.mods.toml: 2.1.0-tactical.36-dialogue-branches.
+
+Añadidos:
+- DialogueRules72 y Plan: medidores, requisitos, variables, memoria, revelaciones e
+  inventarios con simulación previa de capacidad y restauración por fallo de escritura.
+- data/tacznpcs/dialogue/phase2-original.json: referencia para la migración exacta.
+
+Conversation, su Session y TalkNetwork conservan el bytecode de fase 2.
+ClientChat71 conserva EXACTAMENTE el bytecode de .35: mismos colores, hover y protocolo.
+No cambian assets/texturas/modelos/sonidos. No se instala un segundo goal selector.
+Fuentes exactas del parche, generador de textos y pruebas en fuentes-pruebas.zip.

@@ -1,0 +1,98 @@
+FASE 2.5 — TaCZ NPCs .36 / NeoForge 1.21.1
+
+INSTALACIÓN
+Reemplaza NPCs .35 por .36 en cliente y servidor. No instales ambas versiones.
+Incluye las fases 1 y 2; conserva TaCZ y zomboid_gore compatibles que ya utilizabas.
+No añade dependencia de IA externa ni otro controlador de comportamiento.
+
+CONTENIDO
+Seis encuentros completos: seco/cansado, cada uno en encuentro, tensión y necesidad.
+Ramas principales de 3-5 turnos; retirarse o provocar una ruptura puede terminar antes.
+Las voces sarcástico, religioso, educado, aterrado, veterano y joven tienen descripción,
+muletillas, rasgos, ejemplos y un respaldo corto, sin biografías completas nuevas.
+El molde de Tomás se usó para calibrar el tono y las ramas; no se copió literalmente.
+
+Cada turno ofrece 2-4 líneas, de hasta 200 caracteres, separadas por 30 ticks (1,5 s).
+Las opciones aparecen al terminar de hablar. Entonces empiezan los 12 s completos
+para responder. El plazo mantiene la configuración de fase 1 (240 ticks por defecto).
+El NPC no repite una línea en el mismo encuentro; si se agotan, cierra con una despedida
+propia de su voz. Las ramas no terminales se retiran al llegar al límite de turnos.
+
+Se conservan nombre gris claro/texto blanco, tonos, hover, tokens de un uso, caducidad,
+respuesta del jugador, bloqueo de ataques y rupturas por arma/carrera/disparo/daño.
+Las interrupciones cancelan también las líneas que aún no se habían enviado.
+
+DATOS Y MIGRACIÓN
+Archivo: config/tacznpcs/dialogue-phase2.json. Reinicia para recargar cambios.
+- Si no existe, se copia el nuevo JSON.
+- Si es exactamente el contenido de prueba original de fase 2, se guarda en
+  dialogue-phase2.fase2.bak.json y se instala el contenido nuevo.
+- Si editaste el JSON antiguo, se conserva y se interpreta con compatibilidad de schema 1.
+  Para cambiar ese contenido personalizado por el nuevo, renombra tu archivo y reinicia.
+- Si el JSON es inválido, se conserva tal cual, se informa en el registro y se utiliza
+  el respaldo incluido. No se sobreescribe una personalización inválida.
+- Las voces guardadas cauto/agotado pasan a seco/cansado. Los NPCs nuevos pueden recibir
+  cualquiera de las ocho voces. /npcexample solo cambia la prueba actual.
+
+Schema nuevo: 2. Detalles y ejemplo de condiciones/efectos en ESQUEMA.md.
+La pausa es config.pausa_lineas_ticks (10-100; 20 ticks equivalen a 1 s con TPS normal).
+Las categorías de inventario son listas explícitas de objetos, editables en categorias.
+Se incluyeron comida vanilla y suministros de tu versión de FirstAid.
+
+PRUEBA EN JUEGO
+1. Acércate sin arma a un NPC sin amenazas cercanas e inicia la charla por clic derecho.
+   Abre el chat. Debe escribir una línea cada 1,5 s; las opciones llegan después.
+2. Durante la charla, como operador, prueba:
+   /npcexample seco encuentro
+   /npcexample seco tension
+   /npcexample seco necesidad
+   /npcexample cansado encuentro
+   /npcexample cansado tension
+   /npcexample cansado necesidad
+3. Selecciona la pregunta sobre lo que busca, después escucha y pacta una tregua.
+   Prueba también dudar de él y amenazarlo. Deben dar respuestas y resultados distintos.
+4. Lleva pan o vendas de FirstAid EN EL INVENTARIO. La oferta correspondiente debe aparecer.
+   Quita ese objeto antes de responder: el clic debe rechazarse sin alterar medidores ni
+   transferir nada. Una entrega válida mueve una unidad real al inventario del NPC.
+5. Dar medicina permite alcanzar confianza media y escuchar los datos personales.
+   Con confianza baja no deben aparecer nombres familiares, ubicación ni profesión.
+6. Espera 12 s DESPUÉS de las opciones: usa la reacción de silencio de ese encuentro.
+   El bloqueo de ataque dura hasta terminar esa reacción. Luego aplica el resultado.
+7. Usa /npcreply: vuelve a mostrar las opciones vigentes sin extender el plazo.
+   Durante una tanda de mensajes solo informa que el NPC sigue hablando.
+8. Saca un arma o corre mientras escribe: se interrumpe y no deben llegar frases pendientes.
+   Prueba disparos, daño, muerte y comandos viejos. No deben permitir reutilizar opciones.
+9. Para las voces de respaldo: /npcexample veterano cualquiera, por ejemplo.
+10. Para probar la rama de mentira: pon historias.seco.miente=true (puede_mentir ya es
+    true), reinicia y crea un NPC nuevo para que no conserve una historia previa.
+    Acúsalo de mentir: debe revelar la mentira sin perder confianza por esa acusación.
+11. Verifica el tratamiento médico de un NPC derribado: conserva su ruta de interfaz.
+
+RESULTADOS
+Acuerdo/tregua: pausa de hostilidad hacia ese jugador por 1200 ticks (60 s), configurable.
+Separación pacífica: 200 ticks (10 s) para retirarse. No impide defenderse de zombis.
+Disparar o causar daño al NPC rompe esa protección.
+Ruptura/traición: termina la charla y registra enemistad usando la IA existente.
+Huida: utiliza las memorias de miedo/retirada de Social y TeamBrain; no sustituye su navegación.
+Los efectos de ítems nunca crean stock: dar mueve desde el inventario real del NPC;
+quitar mueve desde el jugador al NPC. Si falta stock o espacio, no se realiza la operación.
+
+VALIDACIÓN
+142 clases verificadas con ASM; 277 controles de fase 1 y 6089 de fase 2.5 en JVM.
+Incluyen 567 casos de opciones escritas y 6 escenarios de carga/migración en JVMs separadas.
+También se ejecutó bytecode parcheado real de comandos, despacho de chat y disparo TaCZ
+con APIs del juego simuladas. No hay Minecraft/GPU/modpack ejecutándose en este entorno.
+Fuentes y pruebas incluidas. Las texturas y modelos permanecen idénticos a .35.
+
+LÍMITES
+Se inicia por interacción cercana, igual que las fases anteriores. No añade detección
+específica detrás de vehículos, disparos de aviso al aire ni actores familiares reales.
+Las historias de esta entrega son plantillas persistentes por NPC, todavía sin generador
+combinatorio de fase 5. Las otras seis voces conservan solo el respaldo breve pedido.
+Los medidores de diálogo (miedo/desesperación/hostilidad) empiezan en 0 y cambian con
+sus efectos; confianza reutiliza Social. La evolución general por acciones/entorno y
+la memoria compartida de grupos/facciones corresponden a fase 3.
+La memoria de eventos conserva los últimos 32 por NPC, identificando al jugador.
+Las treguas y rutas de huida requieren comprobación en tu modpack: la navegación nativa
+sigue dependiendo de que encuentre un camino. Trueque real con precios queda pendiente.
+Si desactivas la autoridad de fase 1, se mantiene su respaldo a la IA/ventana originales.

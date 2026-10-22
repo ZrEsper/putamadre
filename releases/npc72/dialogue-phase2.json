@@ -1,0 +1,4504 @@
+{
+  "schema": 2,
+  "config": {
+    "pausa_lineas_ticks": 30,
+    "confianza_media": 30,
+    "confianza_alta": 60,
+    "tregua_ticks": 1200,
+    "salida_segura_ticks": 200
+  },
+  "ui": {
+    "tones": {
+      "1": "Amistosa",
+      "2": "Neutral",
+      "3": "Firme",
+      "4": "Amenaza",
+      "5": "Agresiva",
+      "engaño": "Engaño"
+    },
+    "unknown": "???",
+    "expired": "Estas opciones ya no están disponibles.",
+    "none": "No tienes una conversación activa.",
+    "ended": "La conversación ha terminado.",
+    "unarmed": "Guarda el arma y aléjate del peligro antes de intentar negociar.",
+    "attacked": "¡Se acabó! Nos están atacando.",
+    "shot": "¡Has disparado! Se acabó la negociación.",
+    "example_usage": "Uso: /npcexample <voz> <encuentro|tension|necesidad>. Requiere permiso de operador y charla activa.",
+    "example_denied": "Este comando de prueba requiere permisos de operador.",
+    "player_prefix": "Tú",
+    "intro": "Me llamo {name}.",
+    "error": "No se pudo continuar la conversación.",
+    "leave": "Me retiro. No busco problemas.",
+    "leave_response": "De acuerdo. Sigue tu camino.",
+    "waiting": "El superviviente todavía está hablando.",
+    "no_choice": "No quedan respuestas disponibles para esta conversación.",
+    "limit": "Ya hablamos suficiente por ahora.",
+    "limit_second": "Sigamos cada uno por su lado.",
+    "personal_reservado": "Eso prefiero guardármelo."
+  },
+  "categorias": {
+    "comida": [
+      "minecraft:bread",
+      "minecraft:apple",
+      "minecraft:cooked_beef",
+      "minecraft:cooked_porkchop",
+      "minecraft:baked_potato",
+      "minecraft:carrot",
+      "minecraft:cooked_chicken",
+      "minecraft:cooked_mutton",
+      "minecraft:cooked_rabbit",
+      "minecraft:cooked_cod",
+      "minecraft:cooked_salmon",
+      "minecraft:melon_slice",
+      "minecraft:sweet_berries",
+      "minecraft:glow_berries",
+      "minecraft:dried_kelp",
+      "minecraft:cookie",
+      "minecraft:pumpkin_pie",
+      "minecraft:mushroom_stew",
+      "minecraft:beetroot_soup",
+      "minecraft:rabbit_stew",
+      "minecraft:beetroot",
+      "minecraft:golden_carrot",
+      "minecraft:golden_apple",
+      "minecraft:enchanted_golden_apple",
+      "minecraft:honey_bottle",
+      "minecraft:potato"
+    ],
+    "medicina": [
+      "firstaid:bandage",
+      "firstaid:plaster",
+      "firstaid:splint",
+      "firstaid:morphine",
+      "firstaid:sterile_bandage",
+      "firstaid:medical_alcohol",
+      "firstaid:prophylactic_antibiotic",
+      "firstaid:morphine_injector",
+      "firstaid:painkillers"
+    ],
+    "municion": [
+      "tacz:ammo",
+      "minecraft:arrow"
+    ]
+  },
+  "voces": [
+    {
+      "id": "seco",
+      "nombre": "Seco",
+      "descripcion": "Frases muy cortas; Desconfía y va directo.",
+      "rasgos": [
+        "Frases muy cortas",
+        "Desconfía y va directo"
+      ],
+      "muletillas": [
+        "Mira.",
+        "Ya.",
+        "Corta."
+      ],
+      "evita": [
+        "Humor",
+        "Explicaciones emocionales"
+      ],
+      "ejemplos": [
+        "Mira."
+      ],
+      "groserias_nivel": 0,
+      "respaldo": false,
+      "cierre_repeticion": [
+        "Corta. Estamos dando vueltas.",
+        "Cada uno por su lado."
+      ]
+    },
+    {
+      "id": "cansado",
+      "nombre": "Cansado",
+      "descripcion": "Lento y resignado; Humor apagado.",
+      "rasgos": [
+        "Lento y resignado",
+        "Humor apagado"
+      ],
+      "muletillas": [
+        "…Bueno.",
+        "Da igual.",
+        "Qué más da."
+      ],
+      "evita": [
+        "Entusiasmo",
+        "Gritos prolongados"
+      ],
+      "ejemplos": [
+        "…Bueno."
+      ],
+      "groserias_nivel": 1,
+      "respaldo": false,
+      "cierre_repeticion": [
+        "Ya no tengo fuerzas para repetir esto.",
+        "Mejor dejémoslo aquí."
+      ]
+    },
+    {
+      "id": "sarcastico",
+      "nombre": "Sarcástico",
+      "descripcion": "Ironía para tapar miedo; Burla ligera.",
+      "rasgos": [
+        "Ironía para tapar miedo",
+        "Burla ligera"
+      ],
+      "muletillas": [
+        "Genial.",
+        "Qué sorpresa.",
+        "Claro, claro."
+      ],
+      "evita": [
+        "Solemnidad",
+        "Sinceridad inicial"
+      ],
+      "ejemplos": [
+        "Genial."
+      ],
+      "groserias_nivel": 2,
+      "respaldo": true,
+      "cierre_repeticion": [
+        "Qué bien. Conversación en círculos.",
+        "Me retiro antes de aprenderme el guion."
+      ]
+    },
+    {
+      "id": "religioso",
+      "nombre": "Religioso",
+      "descripcion": "Fe y esperanza; Sereno hasta que se altera.",
+      "rasgos": [
+        "Fe y esperanza",
+        "Sereno hasta que se altera"
+      ],
+      "muletillas": [
+        "Dios nos mira.",
+        "Todo tiene un motivo."
+      ],
+      "evita": [
+        "Sarcasmo",
+        "Vulgaridad habitual"
+      ],
+      "ejemplos": [
+        "Dios nos mira."
+      ],
+      "groserias_nivel": 0,
+      "respaldo": true,
+      "cierre_repeticion": [
+        "Ya escuchamos lo que había que decir.",
+        "Que cada uno encuentre su camino en paz."
+      ]
+    },
+    {
+      "id": "educado",
+      "nombre": "Educado",
+      "descripcion": "Formal incluso bajo amenaza; Mantiene las formas.",
+      "rasgos": [
+        "Formal incluso bajo amenaza",
+        "Mantiene las formas"
+      ],
+      "muletillas": [
+        "Por favor.",
+        "Disculpe.",
+        "Le ruego."
+      ],
+      "evita": [
+        "Jerga",
+        "Groserías habituales"
+      ],
+      "ejemplos": [
+        "Por favor."
+      ],
+      "groserias_nivel": 0,
+      "respaldo": true,
+      "cierre_repeticion": [
+        "Disculpe, creo que estamos repitiéndonos.",
+        "Prefiero que terminemos por ahora."
+      ]
+    },
+    {
+      "id": "aterrado",
+      "nombre": "Aterrado",
+      "descripcion": "Frases cortadas; Ruega y quiere huir.",
+      "rasgos": [
+        "Frases cortadas",
+        "Ruega y quiere huir"
+      ],
+      "muletillas": [
+        "N-no…",
+        "Por favor.",
+        "¡No!"
+      ],
+      "evita": [
+        "Humor",
+        "Amenazas largas"
+      ],
+      "ejemplos": [
+        "N-no…"
+      ],
+      "groserias_nivel": 1,
+      "respaldo": true,
+      "cierre_repeticion": [
+        "N-no quiero seguir hablando.",
+        "Me voy. No te acerques, por favor."
+      ]
+    },
+    {
+      "id": "veterano",
+      "nombre": "Veterano",
+      "descripcion": "Calma y experiencia; Autoridad tranquila.",
+      "rasgos": [
+        "Calma y experiencia",
+        "Autoridad tranquila"
+      ],
+      "muletillas": [
+        "Escucha.",
+        "Créeme.",
+        "Así funciona esto."
+      ],
+      "evita": [
+        "Nerviosismo",
+        "Gritos"
+      ],
+      "ejemplos": [
+        "Escucha."
+      ],
+      "groserias_nivel": 1,
+      "respaldo": true,
+      "cierre_repeticion": [
+        "Escucha. No vamos a avanzar repitiendo lo mismo.",
+        "Dejémoslo antes de cometer un error."
+      ]
+    },
+    {
+      "id": "joven",
+      "nombre": "Joven",
+      "descripcion": "Impulsivo; Bravuconería insegura.",
+      "rasgos": [
+        "Impulsivo",
+        "Bravuconería insegura"
+      ],
+      "muletillas": [
+        "Oye.",
+        "¿En serio?",
+        "Ni de broma."
+      ],
+      "evita": [
+        "Formalidad",
+        "Serenidad constante"
+      ],
+      "ejemplos": [
+        "Oye."
+      ],
+      "groserias_nivel": 2,
+      "respaldo": true,
+      "cierre_repeticion": [
+        "Oye. Esto no está llegando a nada.",
+        "Me largo. Tú sigue por tu lado."
+      ]
+    }
+  ],
+  "historias": {
+    "seco": {
+      "puede_mentir": true,
+      "miente": false,
+      "datos": {
+        "familiar_nombre": "Mateo",
+        "familiar_rol": "mi hermano",
+        "objeto_personal": "una llave con una cinta azul",
+        "lugar_hogar": "un depósito junto al canal",
+        "profesion_pasada": "encargado de almacén",
+        "companero_nombre": "Inés"
+      }
+    },
+    "cansado": {
+      "puede_mentir": false,
+      "miente": false,
+      "datos": {
+        "familiar_nombre": "Elena",
+        "familiar_rol": "mi madre",
+        "objeto_personal": "una pulsera de hilo",
+        "lugar_hogar": "una clínica cerrada cerca del puente",
+        "profesion_pasada": "electricista",
+        "companero_nombre": "Andrés"
+      }
+    },
+    "respaldo": {
+      "puede_mentir": false,
+      "miente": false,
+      "datos": {
+        "familiar_nombre": "Rosa",
+        "familiar_rol": "alguien de mi familia",
+        "objeto_personal": "una fotografía doblada",
+        "lugar_hogar": "un refugio al norte",
+        "profesion_pasada": "trabajador de mantenimiento",
+        "companero_nombre": "Daniel"
+      }
+    }
+  },
+  "encuentros": [
+    {
+      "id": "seco_encuentro",
+      "voz": "seco",
+      "situacion": "encuentro",
+      "peso": 1,
+      "historia": "seco",
+      "inicio": "entrada",
+      "turnos_max": 5,
+      "nodos": [
+        {
+          "id": "entrada",
+          "lineas_npc": [
+            "Alto. Quédate ahí.",
+            "Mira. Podemos hablar sin acercarnos."
+          ],
+          "opciones": [
+            {
+              "id": "preguntar",
+              "texto": "Soy {player}. ¿Cómo te llamas y qué estás buscando?",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "{name}.",
+                    "Busco suministros.",
+                    "Hay alguien esperando. No daré nombres todavía.",
+                    "¿Puedes ayudar o no?"
+                  ],
+                  "efectos": {
+                    "confianza": 5,
+                    "revela": [
+                      "nombre",
+                      "necesidad_actual"
+                    ]
+                  },
+                  "siguiente": "necesidad"
+                }
+              ]
+            },
+            {
+              "id": "pasar",
+              "texto": "Solo estoy pasando. No busco problemas.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Puedes pasar.",
+                    "Sin acercarte a mis cosas."
+                  ],
+                  "efectos": {
+                    "confianza": 10,
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null,
+                  "condicion": {
+                    "medidores": {
+                      "confianza": {
+                        "min": 30
+                      }
+                    }
+                  }
+                },
+                {
+                  "lineas_npc": [
+                    "Ya. Entendido.",
+                    "Quedarte ahí ayuda.",
+                    "Ahora escucha."
+                  ],
+                  "efectos": {
+                    "miedo": 5
+                  },
+                  "siguiente": "entrada"
+                }
+              ]
+            },
+            {
+              "id": "ofrecer_comida",
+              "texto": "Tengo comida. ¿Te sirve?",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Sí. La necesito.",
+                    "Puedes darme una ración. Nada de acercarte de golpe."
+                  ],
+                  "efectos": {},
+                  "siguiente": "comida"
+                }
+              ],
+              "requiere": {
+                "inventario": [
+                  {
+                    "categoria": "comida",
+                    "cantidad": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "amenazar",
+              "texto": "Dame lo que llevas o habrá problemas.",
+              "tono": 4,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Mala decisión.",
+                    "La conversación terminó."
+                  ],
+                  "efectos": {
+                    "confianza": -25,
+                    "hostilidad": 25,
+                    "evento_memoria": "amenazó para quitarle sus cosas",
+                    "resultado": "ruptura_combate"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Terminó la espera.",
+              "No voy a insistir otra vez."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "necesidad",
+          "lineas_npc": [
+            "Busco suministros.",
+            "Hay alguien esperando. No daré nombres todavía.",
+            "¿Puedes ayudar o no?"
+          ],
+          "opciones": [
+            {
+              "id": "dar_medicina",
+              "texto": "Puedo darte una medicina.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Acepto.",
+                    "{familiar_nombre} es {familiar_rol}. Le llevo esto.",
+                    "Antes era {profesion_pasada}. Eso ya no sirve de mucho."
+                  ],
+                  "efectos": {
+                    "confianza": 30,
+                    "desesperacion": -25,
+                    "quita_item": {
+                      "categoria": "medicina",
+                      "cantidad": 1
+                    },
+                    "revela": [
+                      "nombre",
+                      "familia",
+                      "profesion_pasada",
+                      "lugar_hogar"
+                    ],
+                    "evento_memoria": "recibió medicina para su familiar"
+                  },
+                  "siguiente": "cierre"
+                }
+              ],
+              "requiere": {
+                "inventario": [
+                  {
+                    "categoria": "medicina",
+                    "cantidad": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "escuchar",
+              "texto": "No tengo medicina, pero puedo escucharte.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Quieres escuchar. Bien.",
+                    "Todavía no voy a dar nombres.",
+                    "Dime qué puedes ofrecer de verdad."
+                  ],
+                  "efectos": {
+                    "confianza": 5,
+                    "evento_memoria": "lo escuchó sin exigir nada"
+                  },
+                  "siguiente": "cierre"
+                }
+              ]
+            },
+            {
+              "id": "dudar",
+              "texto": "¿Cómo sé que no estás mintiendo?",
+              "tono": 3,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Me descubriste.",
+                    "No había nadie esperando. Quería que bajaras la guardia."
+                  ],
+                  "efectos": {
+                    "revela": [
+                      "mentira"
+                    ],
+                    "evento_memoria": "descubrió una mentira"
+                  },
+                  "siguiente": "duda",
+                  "condicion": {
+                    "miente": true
+                  }
+                },
+                {
+                  "lineas_npc": [
+                    "No lo sabes.",
+                    "Tampoco voy a ganarme tu confianza contando mi vida.",
+                    "Corta con eso."
+                  ],
+                  "efectos": {
+                    "confianza": -15,
+                    "hostilidad": 10
+                  },
+                  "siguiente": "duda"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Ya. Vete despacio.",
+                    "No te seguiré."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Terminó la espera.",
+              "No voy a insistir otra vez."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "comida",
+          "lineas_npc": [
+            "Una ración sirve.",
+            "Decide sin acercarte."
+          ],
+          "opciones": [
+            {
+              "id": "dar_comida",
+              "texto": "Toma una ración. No te pido nada.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Bien.",
+                    "Esto alcanza por hoy.",
+                    "No olvidaré quién la dio."
+                  ],
+                  "efectos": {
+                    "confianza": 15,
+                    "desesperacion": -10,
+                    "quita_item": {
+                      "categoria": "comida",
+                      "cantidad": 1
+                    },
+                    "evento_memoria": "compartió una ración"
+                  },
+                  "siguiente": "cierre"
+                }
+              ],
+              "requiere": {
+                "inventario": [
+                  {
+                    "categoria": "comida",
+                    "cantidad": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "intercambio",
+              "texto": "¿Tienes algo para intercambiar?",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "No voy a negociar a ciegas.",
+                    "Hoy no habrá trato. Podemos terminar sin pelear."
+                  ],
+                  "efectos": {},
+                  "siguiente": "cierre"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Ya. Vete despacio.",
+                    "No te seguiré."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Terminó la espera.",
+              "No voy a insistir otra vez."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "duda",
+          "lineas_npc": [
+            "¿Algo más?",
+            "No voy a explicarme otra vez."
+          ],
+          "opciones": [
+            {
+              "id": "disculparse",
+              "texto": "Me pasé. No tenía que decirlo así.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Ya.",
+                    "Podemos terminar aquí sin más."
+                  ],
+                  "efectos": {
+                    "confianza": 5
+                  },
+                  "siguiente": "cierre"
+                }
+              ]
+            },
+            {
+              "id": "insistir",
+              "texto": "Sigo sin creerte.",
+              "tono": 3,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Entonces termina esto.",
+                    "Sigue tu camino."
+                  ],
+                  "efectos": {
+                    "confianza": -10,
+                    "hostilidad": 10,
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Ya. Vete despacio.",
+                    "No te seguiré."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Terminó la espera.",
+              "No voy a insistir otra vez."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "cierre",
+          "lineas_npc": [
+            "Podemos terminar.",
+            "O preguntar una cosa más."
+          ],
+          "opciones": [
+            {
+              "id": "familia",
+              "texto": "¿Quién sigue contando contigo?",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "{familiar_nombre}. Es {familiar_rol}.",
+                    "Se quedó en {lugar_hogar}.",
+                    "Eso no se lo cuentes a nadie."
+                  ],
+                  "efectos": {
+                    "revela": [
+                      "familia",
+                      "lugar_hogar"
+                    ],
+                    "evento_memoria": "compartió a quién quiere volver a ver",
+                    "resultado": "acuerdo"
+                  },
+                  "siguiente": null
+                }
+              ],
+              "requiere": {
+                "medidores": {
+                  "confianza": {
+                    "min": 30
+                  }
+                }
+              }
+            },
+            {
+              "id": "recuerdo",
+              "texto": "¿Por qué guardas ese objeto?",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Es {objeto_personal}.",
+                    "Me lo dio {companero_nombre}.",
+                    "Ya sabes suficiente."
+                  ],
+                  "efectos": {
+                    "revela": [
+                      "objeto_personal",
+                      "companero"
+                    ],
+                    "resultado": "acuerdo"
+                  },
+                  "siguiente": null
+                }
+              ],
+              "requiere": {
+                "medidores": {
+                  "confianza": {
+                    "min": 60
+                  }
+                }
+              }
+            },
+            {
+              "id": "tregua",
+              "texto": "No nos ataquemos. Cada uno sigue su camino.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "De acuerdo.",
+                    "No rompas tu palabra."
+                  ],
+                  "efectos": {
+                    "confianza": 3,
+                    "evento_memoria": "acordaron no atacarse",
+                    "resultado": "tregua"
+                  },
+                  "siguiente": null
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Ya. Vete despacio.",
+                    "No te seguiré."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Terminó la espera.",
+              "No voy a insistir otra vez."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "seco_tension",
+      "voz": "seco",
+      "situacion": "tension",
+      "peso": 1,
+      "historia": "seco",
+      "inicio": "entrada",
+      "turnos_max": 5,
+      "nodos": [
+        {
+          "id": "entrada",
+          "lineas_npc": [
+            "Te vi salir.",
+            "Las manos quietas. No pruebes suerte.",
+            "Di qué buscas."
+          ],
+          "opciones": [
+            {
+              "id": "preguntar",
+              "texto": "Soy {player}. ¿Cómo te llamas y qué estás buscando?",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "{name}.",
+                    "Me falta medicina.",
+                    "No voy a contarte a quién se la llevo.",
+                    "Primero demuestra que no vienes a quitarme lo poco que queda."
+                  ],
+                  "efectos": {
+                    "confianza": 5,
+                    "revela": [
+                      "nombre",
+                      "necesidad_actual"
+                    ]
+                  },
+                  "siguiente": "necesidad"
+                }
+              ]
+            },
+            {
+              "id": "pasar",
+              "texto": "Solo estoy pasando. No busco problemas.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Puedes pasar.",
+                    "Sin acercarte a mis cosas."
+                  ],
+                  "efectos": {
+                    "confianza": 10,
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null,
+                  "condicion": {
+                    "medidores": {
+                      "confianza": {
+                        "min": 30
+                      }
+                    }
+                  }
+                },
+                {
+                  "lineas_npc": [
+                    "Ya. Entendido.",
+                    "Quedarte ahí ayuda.",
+                    "Ahora escucha."
+                  ],
+                  "efectos": {
+                    "miedo": 5
+                  },
+                  "siguiente": "entrada"
+                }
+              ]
+            },
+            {
+              "id": "ofrecer_comida",
+              "texto": "Tengo comida. ¿Te sirve?",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Sí. La necesito.",
+                    "Puedes darme una ración. Nada de acercarte de golpe."
+                  ],
+                  "efectos": {},
+                  "siguiente": "comida"
+                }
+              ],
+              "requiere": {
+                "inventario": [
+                  {
+                    "categoria": "comida",
+                    "cantidad": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "amenazar",
+              "texto": "Dame lo que llevas o habrá problemas.",
+              "tono": 4,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Mala decisión.",
+                    "La conversación terminó."
+                  ],
+                  "efectos": {
+                    "confianza": -25,
+                    "hostilidad": 25,
+                    "evento_memoria": "amenazó para quitarle sus cosas",
+                    "resultado": "ruptura_combate"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Terminó la espera.",
+              "No voy a insistir otra vez."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "ruptura_combate"
+            }
+          }
+        },
+        {
+          "id": "necesidad",
+          "lineas_npc": [
+            "Me falta medicina.",
+            "No voy a contarte a quién se la llevo.",
+            "Primero demuestra que no vienes a quitarme lo poco que queda."
+          ],
+          "opciones": [
+            {
+              "id": "dar_medicina",
+              "texto": "Puedo darte una medicina.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Acepto.",
+                    "{familiar_nombre} es {familiar_rol}. Le llevo esto.",
+                    "Antes era {profesion_pasada}. Eso ya no sirve de mucho."
+                  ],
+                  "efectos": {
+                    "confianza": 30,
+                    "desesperacion": -25,
+                    "quita_item": {
+                      "categoria": "medicina",
+                      "cantidad": 1
+                    },
+                    "revela": [
+                      "nombre",
+                      "familia",
+                      "profesion_pasada",
+                      "lugar_hogar"
+                    ],
+                    "evento_memoria": "recibió medicina para su familiar"
+                  },
+                  "siguiente": "cierre"
+                }
+              ],
+              "requiere": {
+                "inventario": [
+                  {
+                    "categoria": "medicina",
+                    "cantidad": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "escuchar",
+              "texto": "No tengo medicina, pero puedo escucharte.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Quieres escuchar. Bien.",
+                    "Todavía no voy a dar nombres.",
+                    "Dime qué puedes ofrecer de verdad."
+                  ],
+                  "efectos": {
+                    "confianza": 5,
+                    "evento_memoria": "lo escuchó sin exigir nada"
+                  },
+                  "siguiente": "cierre"
+                }
+              ]
+            },
+            {
+              "id": "dudar",
+              "texto": "¿Cómo sé que no estás mintiendo?",
+              "tono": 3,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Me descubriste.",
+                    "No había nadie esperando. Quería que bajaras la guardia."
+                  ],
+                  "efectos": {
+                    "revela": [
+                      "mentira"
+                    ],
+                    "evento_memoria": "descubrió una mentira"
+                  },
+                  "siguiente": "duda",
+                  "condicion": {
+                    "miente": true
+                  }
+                },
+                {
+                  "lineas_npc": [
+                    "No lo sabes.",
+                    "Tampoco voy a ganarme tu confianza contando mi vida.",
+                    "Corta con eso."
+                  ],
+                  "efectos": {
+                    "confianza": -15,
+                    "hostilidad": 10
+                  },
+                  "siguiente": "duda"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Ya. Vete despacio.",
+                    "No te seguiré."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Terminó la espera.",
+              "No voy a insistir otra vez."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "ruptura_combate"
+            }
+          }
+        },
+        {
+          "id": "comida",
+          "lineas_npc": [
+            "Una ración sirve.",
+            "Decide sin acercarte."
+          ],
+          "opciones": [
+            {
+              "id": "dar_comida",
+              "texto": "Toma una ración. No te pido nada.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Bien.",
+                    "Esto alcanza por hoy.",
+                    "No olvidaré quién la dio."
+                  ],
+                  "efectos": {
+                    "confianza": 15,
+                    "desesperacion": -10,
+                    "quita_item": {
+                      "categoria": "comida",
+                      "cantidad": 1
+                    },
+                    "evento_memoria": "compartió una ración"
+                  },
+                  "siguiente": "cierre"
+                }
+              ],
+              "requiere": {
+                "inventario": [
+                  {
+                    "categoria": "comida",
+                    "cantidad": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "intercambio",
+              "texto": "¿Tienes algo para intercambiar?",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "No voy a negociar a ciegas.",
+                    "Hoy no habrá trato. Podemos terminar sin pelear."
+                  ],
+                  "efectos": {},
+                  "siguiente": "cierre"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Ya. Vete despacio.",
+                    "No te seguiré."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Terminó la espera.",
+              "No voy a insistir otra vez."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "ruptura_combate"
+            }
+          }
+        },
+        {
+          "id": "duda",
+          "lineas_npc": [
+            "¿Algo más?",
+            "No voy a explicarme otra vez."
+          ],
+          "opciones": [
+            {
+              "id": "disculparse",
+              "texto": "Me pasé. No tenía que decirlo así.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Ya.",
+                    "Podemos terminar aquí sin más."
+                  ],
+                  "efectos": {
+                    "confianza": 5
+                  },
+                  "siguiente": "cierre"
+                }
+              ]
+            },
+            {
+              "id": "insistir",
+              "texto": "Sigo sin creerte.",
+              "tono": 3,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Entonces termina esto.",
+                    "Sigue tu camino."
+                  ],
+                  "efectos": {
+                    "confianza": -10,
+                    "hostilidad": 10,
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Ya. Vete despacio.",
+                    "No te seguiré."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Terminó la espera.",
+              "No voy a insistir otra vez."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "ruptura_combate"
+            }
+          }
+        },
+        {
+          "id": "cierre",
+          "lineas_npc": [
+            "Podemos terminar.",
+            "O preguntar una cosa más."
+          ],
+          "opciones": [
+            {
+              "id": "familia",
+              "texto": "¿Quién sigue contando contigo?",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "{familiar_nombre}. Es {familiar_rol}.",
+                    "Se quedó en {lugar_hogar}.",
+                    "Eso no se lo cuentes a nadie."
+                  ],
+                  "efectos": {
+                    "revela": [
+                      "familia",
+                      "lugar_hogar"
+                    ],
+                    "evento_memoria": "compartió a quién quiere volver a ver",
+                    "resultado": "acuerdo"
+                  },
+                  "siguiente": null
+                }
+              ],
+              "requiere": {
+                "medidores": {
+                  "confianza": {
+                    "min": 30
+                  }
+                }
+              }
+            },
+            {
+              "id": "recuerdo",
+              "texto": "¿Por qué guardas ese objeto?",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Es {objeto_personal}.",
+                    "Me lo dio {companero_nombre}.",
+                    "Ya sabes suficiente."
+                  ],
+                  "efectos": {
+                    "revela": [
+                      "objeto_personal",
+                      "companero"
+                    ],
+                    "resultado": "acuerdo"
+                  },
+                  "siguiente": null
+                }
+              ],
+              "requiere": {
+                "medidores": {
+                  "confianza": {
+                    "min": 60
+                  }
+                }
+              }
+            },
+            {
+              "id": "tregua",
+              "texto": "No nos ataquemos. Cada uno sigue su camino.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "De acuerdo.",
+                    "No rompas tu palabra."
+                  ],
+                  "efectos": {
+                    "confianza": 3,
+                    "evento_memoria": "acordaron no atacarse",
+                    "resultado": "tregua"
+                  },
+                  "siguiente": null
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Ya. Vete despacio.",
+                    "No te seguiré."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Terminó la espera.",
+              "No voy a insistir otra vez."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "ruptura_combate"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "seco_necesidad",
+      "voz": "seco",
+      "situacion": "necesidad",
+      "peso": 1,
+      "historia": "seco",
+      "inicio": "entrada",
+      "turnos_max": 5,
+      "nodos": [
+        {
+          "id": "entrada",
+          "lineas_npc": [
+            "No me toques.",
+            "La herida no te da permiso para acercarte.",
+            "Habla desde ahí."
+          ],
+          "opciones": [
+            {
+              "id": "preguntar",
+              "texto": "Soy {player}. ¿Cómo te llamas y qué estás buscando?",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "{name}.",
+                    "Necesito vendar esto.",
+                    "Y comer. En ese orden.",
+                    "No te estoy pidiendo que te acerques."
+                  ],
+                  "efectos": {
+                    "confianza": 5,
+                    "revela": [
+                      "nombre",
+                      "necesidad_actual"
+                    ]
+                  },
+                  "siguiente": "necesidad"
+                }
+              ]
+            },
+            {
+              "id": "pasar",
+              "texto": "Solo estoy pasando. No busco problemas.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Puedes pasar.",
+                    "Sin acercarte a mis cosas."
+                  ],
+                  "efectos": {
+                    "confianza": 10,
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null,
+                  "condicion": {
+                    "medidores": {
+                      "confianza": {
+                        "min": 30
+                      }
+                    }
+                  }
+                },
+                {
+                  "lineas_npc": [
+                    "Ya. Entendido.",
+                    "Quedarte ahí ayuda.",
+                    "Ahora escucha."
+                  ],
+                  "efectos": {
+                    "miedo": 5
+                  },
+                  "siguiente": "entrada"
+                }
+              ]
+            },
+            {
+              "id": "ofrecer_comida",
+              "texto": "Tengo comida. ¿Te sirve?",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Sí. La necesito.",
+                    "Puedes darme una ración. Nada de acercarte de golpe."
+                  ],
+                  "efectos": {},
+                  "siguiente": "comida"
+                }
+              ],
+              "requiere": {
+                "inventario": [
+                  {
+                    "categoria": "comida",
+                    "cantidad": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "amenazar",
+              "texto": "Dame lo que llevas o habrá problemas.",
+              "tono": 4,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Mala decisión.",
+                    "La conversación terminó."
+                  ],
+                  "efectos": {
+                    "confianza": -25,
+                    "hostilidad": 25,
+                    "evento_memoria": "amenazó para quitarle sus cosas",
+                    "resultado": "ruptura_combate"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Terminó la espera.",
+              "No voy a insistir otra vez."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "necesidad",
+          "lineas_npc": [
+            "Necesito vendar esto.",
+            "Y comer. En ese orden.",
+            "No te estoy pidiendo que te acerques."
+          ],
+          "opciones": [
+            {
+              "id": "dar_medicina",
+              "texto": "Puedo darte una medicina.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Acepto.",
+                    "{familiar_nombre} es {familiar_rol}. Le llevo esto.",
+                    "Antes era {profesion_pasada}. Eso ya no sirve de mucho."
+                  ],
+                  "efectos": {
+                    "confianza": 30,
+                    "desesperacion": -25,
+                    "quita_item": {
+                      "categoria": "medicina",
+                      "cantidad": 1
+                    },
+                    "revela": [
+                      "nombre",
+                      "familia",
+                      "profesion_pasada",
+                      "lugar_hogar"
+                    ],
+                    "evento_memoria": "recibió medicina para su familiar"
+                  },
+                  "siguiente": "cierre"
+                }
+              ],
+              "requiere": {
+                "inventario": [
+                  {
+                    "categoria": "medicina",
+                    "cantidad": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "escuchar",
+              "texto": "No tengo medicina, pero puedo escucharte.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Quieres escuchar. Bien.",
+                    "Todavía no voy a dar nombres.",
+                    "Dime qué puedes ofrecer de verdad."
+                  ],
+                  "efectos": {
+                    "confianza": 5,
+                    "evento_memoria": "lo escuchó sin exigir nada"
+                  },
+                  "siguiente": "cierre"
+                }
+              ]
+            },
+            {
+              "id": "dudar",
+              "texto": "¿Cómo sé que no estás mintiendo?",
+              "tono": 3,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Me descubriste.",
+                    "No había nadie esperando. Quería que bajaras la guardia."
+                  ],
+                  "efectos": {
+                    "revela": [
+                      "mentira"
+                    ],
+                    "evento_memoria": "descubrió una mentira"
+                  },
+                  "siguiente": "duda",
+                  "condicion": {
+                    "miente": true
+                  }
+                },
+                {
+                  "lineas_npc": [
+                    "No lo sabes.",
+                    "Tampoco voy a ganarme tu confianza contando mi vida.",
+                    "Corta con eso."
+                  ],
+                  "efectos": {
+                    "confianza": -15,
+                    "hostilidad": 10
+                  },
+                  "siguiente": "duda"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Ya. Vete despacio.",
+                    "No te seguiré."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Terminó la espera.",
+              "No voy a insistir otra vez."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "comida",
+          "lineas_npc": [
+            "Una ración sirve.",
+            "Decide sin acercarte."
+          ],
+          "opciones": [
+            {
+              "id": "dar_comida",
+              "texto": "Toma una ración. No te pido nada.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Bien.",
+                    "Esto alcanza por hoy.",
+                    "No olvidaré quién la dio."
+                  ],
+                  "efectos": {
+                    "confianza": 15,
+                    "desesperacion": -10,
+                    "quita_item": {
+                      "categoria": "comida",
+                      "cantidad": 1
+                    },
+                    "evento_memoria": "compartió una ración"
+                  },
+                  "siguiente": "cierre"
+                }
+              ],
+              "requiere": {
+                "inventario": [
+                  {
+                    "categoria": "comida",
+                    "cantidad": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "intercambio",
+              "texto": "¿Tienes algo para intercambiar?",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "No voy a negociar a ciegas.",
+                    "Hoy no habrá trato. Podemos terminar sin pelear."
+                  ],
+                  "efectos": {},
+                  "siguiente": "cierre"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Ya. Vete despacio.",
+                    "No te seguiré."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Terminó la espera.",
+              "No voy a insistir otra vez."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "duda",
+          "lineas_npc": [
+            "¿Algo más?",
+            "No voy a explicarme otra vez."
+          ],
+          "opciones": [
+            {
+              "id": "disculparse",
+              "texto": "Me pasé. No tenía que decirlo así.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Ya.",
+                    "Podemos terminar aquí sin más."
+                  ],
+                  "efectos": {
+                    "confianza": 5
+                  },
+                  "siguiente": "cierre"
+                }
+              ]
+            },
+            {
+              "id": "insistir",
+              "texto": "Sigo sin creerte.",
+              "tono": 3,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Entonces termina esto.",
+                    "Sigue tu camino."
+                  ],
+                  "efectos": {
+                    "confianza": -10,
+                    "hostilidad": 10,
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Ya. Vete despacio.",
+                    "No te seguiré."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Terminó la espera.",
+              "No voy a insistir otra vez."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "cierre",
+          "lineas_npc": [
+            "Podemos terminar.",
+            "O preguntar una cosa más."
+          ],
+          "opciones": [
+            {
+              "id": "familia",
+              "texto": "¿Quién sigue contando contigo?",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "{familiar_nombre}. Es {familiar_rol}.",
+                    "Se quedó en {lugar_hogar}.",
+                    "Eso no se lo cuentes a nadie."
+                  ],
+                  "efectos": {
+                    "revela": [
+                      "familia",
+                      "lugar_hogar"
+                    ],
+                    "evento_memoria": "compartió a quién quiere volver a ver",
+                    "resultado": "acuerdo"
+                  },
+                  "siguiente": null
+                }
+              ],
+              "requiere": {
+                "medidores": {
+                  "confianza": {
+                    "min": 30
+                  }
+                }
+              }
+            },
+            {
+              "id": "recuerdo",
+              "texto": "¿Por qué guardas ese objeto?",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Es {objeto_personal}.",
+                    "Me lo dio {companero_nombre}.",
+                    "Ya sabes suficiente."
+                  ],
+                  "efectos": {
+                    "revela": [
+                      "objeto_personal",
+                      "companero"
+                    ],
+                    "resultado": "acuerdo"
+                  },
+                  "siguiente": null
+                }
+              ],
+              "requiere": {
+                "medidores": {
+                  "confianza": {
+                    "min": 60
+                  }
+                }
+              }
+            },
+            {
+              "id": "tregua",
+              "texto": "No nos ataquemos. Cada uno sigue su camino.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "De acuerdo.",
+                    "No rompas tu palabra."
+                  ],
+                  "efectos": {
+                    "confianza": 3,
+                    "evento_memoria": "acordaron no atacarse",
+                    "resultado": "tregua"
+                  },
+                  "siguiente": null
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Ya. Vete despacio.",
+                    "No te seguiré."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Terminó la espera.",
+              "No voy a insistir otra vez."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "cansado_encuentro",
+      "voz": "cansado",
+      "situacion": "encuentro",
+      "peso": 1,
+      "historia": "cansado",
+      "inicio": "entrada",
+      "turnos_max": 5,
+      "nodos": [
+        {
+          "id": "entrada",
+          "lineas_npc": [
+            "Espera un segundo.",
+            "No tengo ganas de pelear con otro desconocido.",
+            "Hablemos desde ahí. Ya he tenido un día de mierda."
+          ],
+          "opciones": [
+            {
+              "id": "preguntar",
+              "texto": "Soy {player}. ¿Cómo te llamas y qué estás buscando?",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "{name}.",
+                    "Salí a buscar medicina. No encontré gran cosa.",
+                    "Tengo a alguien esperando y ya no sé qué decirle cuando vuelva.",
+                    "No te pido que cargues con eso. Solo que no lo empeores, joder."
+                  ],
+                  "efectos": {
+                    "confianza": 5,
+                    "revela": [
+                      "nombre",
+                      "necesidad_actual"
+                    ]
+                  },
+                  "siguiente": "necesidad"
+                }
+              ]
+            },
+            {
+              "id": "pasar",
+              "texto": "Solo estoy pasando. No busco problemas.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Está bien. Sigue tu camino.",
+                    "No voy a hacerte perder más tiempo."
+                  ],
+                  "efectos": {
+                    "confianza": 10,
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null,
+                  "condicion": {
+                    "medidores": {
+                      "confianza": {
+                        "min": 30
+                      }
+                    }
+                  }
+                },
+                {
+                  "lineas_npc": [
+                    "…Bueno. Eso está mejor.",
+                    "No hace falta que ninguno se haga el valiente.",
+                    "Pregúntame lo que quieras."
+                  ],
+                  "efectos": {
+                    "miedo": 5
+                  },
+                  "siguiente": "entrada"
+                }
+              ]
+            },
+            {
+              "id": "ofrecer_comida",
+              "texto": "Tengo comida. ¿Te sirve?",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Mierda, sí. Una ración me vendría bien.",
+                    "Pero no quiero prometerte algo que no pueda devolver."
+                  ],
+                  "efectos": {},
+                  "siguiente": "comida"
+                }
+              ],
+              "requiere": {
+                "inventario": [
+                  {
+                    "categoria": "comida",
+                    "cantidad": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "amenazar",
+              "texto": "Dame lo que llevas o habrá problemas.",
+              "tono": 5,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "No me queda paciencia para esto.",
+                    "Si quieres empeorarlo, allá tú."
+                  ],
+                  "efectos": {
+                    "confianza": -25,
+                    "hostilidad": 25,
+                    "evento_memoria": "amenazó para quitarle sus cosas",
+                    "resultado": "ruptura_combate"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "…Bueno. Parece que prefieres quedarte callado.",
+              "Yo no puedo seguir esperando."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "necesidad",
+          "lineas_npc": [
+            "Salí a buscar medicina. No encontré gran cosa.",
+            "Tengo a alguien esperando y ya no sé qué decirle cuando vuelva.",
+            "No te pido que cargues con eso. Solo que no lo empeores, joder."
+          ],
+          "opciones": [
+            {
+              "id": "dar_medicina",
+              "texto": "Puedo darte una medicina.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…No me jodas. No esperaba que de verdad fueras a dármela.",
+                    "{familiar_nombre} es {familiar_rol}. Está esperando en {lugar_hogar}.",
+                    "Yo era {profesion_pasada}. Arreglaba cosas. Ahora no sé ni por dónde empezar."
+                  ],
+                  "efectos": {
+                    "confianza": 30,
+                    "desesperacion": -25,
+                    "quita_item": {
+                      "categoria": "medicina",
+                      "cantidad": 1
+                    },
+                    "revela": [
+                      "nombre",
+                      "familia",
+                      "profesion_pasada",
+                      "lugar_hogar"
+                    ],
+                    "evento_memoria": "recibió medicina para su familiar"
+                  },
+                  "siguiente": "cierre"
+                }
+              ],
+              "requiere": {
+                "inventario": [
+                  {
+                    "categoria": "medicina",
+                    "cantidad": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "escuchar",
+              "texto": "No tengo medicina, pero puedo escucharte.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Es raro que alguien se quede a escuchar.",
+                    "No sé si me siento mejor, pero gracias por intentarlo.",
+                    "No quiero hablar de mi familia todavía."
+                  ],
+                  "efectos": {
+                    "confianza": 5,
+                    "evento_memoria": "lo escuchó sin exigir nada"
+                  },
+                  "siguiente": "cierre"
+                }
+              ]
+            },
+            {
+              "id": "dudar",
+              "texto": "¿Cómo sé que no estás mintiendo?",
+              "tono": 3,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Sí. Mentí con lo de la medicina.",
+                    "Pensé que así me dejarías en paz. Fue una estupidez."
+                  ],
+                  "efectos": {
+                    "revela": [
+                      "mentira"
+                    ],
+                    "evento_memoria": "descubrió una mentira"
+                  },
+                  "siguiente": "duda",
+                  "condicion": {
+                    "miente": true
+                  }
+                },
+                {
+                  "lineas_npc": [
+                    "No tienes cómo saberlo.",
+                    "Pero no pienso enseñarte lo que me queda para convencerte.",
+                    "Maldita sea. Estoy cansado, no actuando."
+                  ],
+                  "efectos": {
+                    "confianza": -15,
+                    "hostilidad": 10
+                  },
+                  "siguiente": "duda"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Bueno. Ve con cuidado.",
+                    "Hoy ya tuvimos bastante."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "…Bueno. Parece que prefieres quedarte callado.",
+              "Yo no puedo seguir esperando."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "comida",
+          "lineas_npc": [
+            "La comida me ayudaría a pensar un poco mejor.",
+            "No voy a arrebatártela. Puedes decir que no."
+          ],
+          "opciones": [
+            {
+              "id": "dar_comida",
+              "texto": "Toma una ración. No te pido nada.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Gracias. De verdad.",
+                    "Ya casi había olvidado lo que era no pedir algo a cambio.",
+                    "Déjame guardarla antes de que se me caiga."
+                  ],
+                  "efectos": {
+                    "confianza": 15,
+                    "desesperacion": -10,
+                    "quita_item": {
+                      "categoria": "comida",
+                      "cantidad": 1
+                    },
+                    "evento_memoria": "compartió una ración"
+                  },
+                  "siguiente": "cierre"
+                }
+              ],
+              "requiere": {
+                "inventario": [
+                  {
+                    "categoria": "comida",
+                    "cantidad": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "intercambio",
+              "texto": "¿Tienes algo para intercambiar?",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Tendría que revisar lo que me queda.",
+                    "Hoy no puedo ofrecerte un intercambio justo. Dejémoslo por ahora."
+                  ],
+                  "efectos": {},
+                  "siguiente": "cierre"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Bueno. Ve con cuidado.",
+                    "Hoy ya tuvimos bastante."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "…Bueno. Parece que prefieres quedarte callado.",
+              "Yo no puedo seguir esperando."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "duda",
+          "lineas_npc": [
+            "Ya escuchaste mi respuesta.",
+            "No quiero convertir esto en otra pelea."
+          ],
+          "opciones": [
+            {
+              "id": "disculparse",
+              "texto": "Me pasé. No tenía que decirlo así.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Bueno. No eres el primero que duda.",
+                    "Tampoco tengo fuerzas para seguir discutiendo."
+                  ],
+                  "efectos": {
+                    "confianza": 5
+                  },
+                  "siguiente": "cierre"
+                }
+              ]
+            },
+            {
+              "id": "insistir",
+              "texto": "Sigo sin creerte.",
+              "tono": 3,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "No voy a convencerte repitiendo lo mismo.",
+                    "Vete. Prefiero quedarme solo."
+                  ],
+                  "efectos": {
+                    "confianza": -10,
+                    "hostilidad": 10,
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Bueno. Ve con cuidado.",
+                    "Hoy ya tuvimos bastante."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "…Bueno. Parece que prefieres quedarte callado.",
+              "Yo no puedo seguir esperando."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "cierre",
+          "lineas_npc": [
+            "Creo que ya podemos bajar un poco la guardia.",
+            "Dime una cosa más y después seguimos."
+          ],
+          "opciones": [
+            {
+              "id": "familia",
+              "texto": "¿Quién sigue contando contigo?",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "{familiar_nombre}, {familiar_rol}.",
+                    "Todavía me guarda un lugar en {lugar_hogar}.",
+                    "Pensar en volver es lo único que me hace caminar algunos días."
+                  ],
+                  "efectos": {
+                    "revela": [
+                      "familia",
+                      "lugar_hogar"
+                    ],
+                    "evento_memoria": "compartió a quién quiere volver a ver",
+                    "resultado": "acuerdo"
+                  },
+                  "siguiente": null
+                }
+              ],
+              "requiere": {
+                "medidores": {
+                  "confianza": {
+                    "min": 30
+                  }
+                }
+              }
+            },
+            {
+              "id": "recuerdo",
+              "texto": "¿Por qué guardas ese objeto?",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Es {objeto_personal}. No vale nada para nadie más.",
+                    "{companero_nombre} me lo dio antes de separarnos.",
+                    "Todavía no sé si voy a volver a verlo."
+                  ],
+                  "efectos": {
+                    "revela": [
+                      "objeto_personal",
+                      "companero"
+                    ],
+                    "resultado": "acuerdo"
+                  },
+                  "siguiente": null
+                }
+              ],
+              "requiere": {
+                "medidores": {
+                  "confianza": {
+                    "min": 60
+                  }
+                }
+              }
+            },
+            {
+              "id": "tregua",
+              "texto": "No nos ataquemos. Cada uno sigue su camino.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Sí. Me sirve que esto termine sin otro muerto.",
+                    "Cuídate. Lo digo en serio."
+                  ],
+                  "efectos": {
+                    "confianza": 3,
+                    "evento_memoria": "acordaron no atacarse",
+                    "resultado": "tregua"
+                  },
+                  "siguiente": null
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Bueno. Ve con cuidado.",
+                    "Hoy ya tuvimos bastante."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "…Bueno. Parece que prefieres quedarte callado.",
+              "Yo no puedo seguir esperando."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "cansado_tension",
+      "voz": "cansado",
+      "situacion": "tension",
+      "peso": 1,
+      "historia": "cansado",
+      "inicio": "entrada",
+      "turnos_max": 5,
+      "nodos": [
+        {
+          "id": "entrada",
+          "lineas_npc": [
+            "Te vi. No sigas avanzando.",
+            "No he descansado bien y cualquier ruido me hace levantar el arma.",
+            "No quiero cometer otra estupidez. Mierda…"
+          ],
+          "opciones": [
+            {
+              "id": "preguntar",
+              "texto": "Soy {player}. ¿Cómo te llamas y qué estás buscando?",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "{name}.",
+                    "Hay alguien contando conmigo. Por eso sigo aquí.",
+                    "No voy a darte su nombre mientras no sepa qué quieres.",
+                    "Joder… qué cansancio tener que explicar hasta eso."
+                  ],
+                  "efectos": {
+                    "confianza": 5,
+                    "revela": [
+                      "nombre",
+                      "necesidad_actual"
+                    ]
+                  },
+                  "siguiente": "necesidad"
+                }
+              ]
+            },
+            {
+              "id": "pasar",
+              "texto": "Solo estoy pasando. No busco problemas.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Está bien. Sigue tu camino.",
+                    "No voy a hacerte perder más tiempo."
+                  ],
+                  "efectos": {
+                    "confianza": 10,
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null,
+                  "condicion": {
+                    "medidores": {
+                      "confianza": {
+                        "min": 30
+                      }
+                    }
+                  }
+                },
+                {
+                  "lineas_npc": [
+                    "…Bueno. Eso está mejor.",
+                    "No hace falta que ninguno se haga el valiente.",
+                    "Pregúntame lo que quieras."
+                  ],
+                  "efectos": {
+                    "miedo": 5
+                  },
+                  "siguiente": "entrada"
+                }
+              ]
+            },
+            {
+              "id": "ofrecer_comida",
+              "texto": "Tengo comida. ¿Te sirve?",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Mierda, sí. Una ración me vendría bien.",
+                    "Pero no quiero prometerte algo que no pueda devolver."
+                  ],
+                  "efectos": {},
+                  "siguiente": "comida"
+                }
+              ],
+              "requiere": {
+                "inventario": [
+                  {
+                    "categoria": "comida",
+                    "cantidad": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "amenazar",
+              "texto": "Dame lo que llevas o habrá problemas.",
+              "tono": 5,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "No me queda paciencia para esto.",
+                    "Si quieres empeorarlo, allá tú."
+                  ],
+                  "efectos": {
+                    "confianza": -25,
+                    "hostilidad": 25,
+                    "evento_memoria": "amenazó para quitarle sus cosas",
+                    "resultado": "ruptura_combate"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "…Bueno. Parece que prefieres quedarte callado.",
+              "Yo no puedo seguir esperando."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "ruptura_combate"
+            }
+          }
+        },
+        {
+          "id": "necesidad",
+          "lineas_npc": [
+            "Hay alguien contando conmigo. Por eso sigo aquí.",
+            "No voy a darte su nombre mientras no sepa qué quieres.",
+            "Joder… qué cansancio tener que explicar hasta eso."
+          ],
+          "opciones": [
+            {
+              "id": "dar_medicina",
+              "texto": "Puedo darte una medicina.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…No me jodas. No esperaba que de verdad fueras a dármela.",
+                    "{familiar_nombre} es {familiar_rol}. Está esperando en {lugar_hogar}.",
+                    "Yo era {profesion_pasada}. Arreglaba cosas. Ahora no sé ni por dónde empezar."
+                  ],
+                  "efectos": {
+                    "confianza": 30,
+                    "desesperacion": -25,
+                    "quita_item": {
+                      "categoria": "medicina",
+                      "cantidad": 1
+                    },
+                    "revela": [
+                      "nombre",
+                      "familia",
+                      "profesion_pasada",
+                      "lugar_hogar"
+                    ],
+                    "evento_memoria": "recibió medicina para su familiar"
+                  },
+                  "siguiente": "cierre"
+                }
+              ],
+              "requiere": {
+                "inventario": [
+                  {
+                    "categoria": "medicina",
+                    "cantidad": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "escuchar",
+              "texto": "No tengo medicina, pero puedo escucharte.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Es raro que alguien se quede a escuchar.",
+                    "No sé si me siento mejor, pero gracias por intentarlo.",
+                    "No quiero hablar de mi familia todavía."
+                  ],
+                  "efectos": {
+                    "confianza": 5,
+                    "evento_memoria": "lo escuchó sin exigir nada"
+                  },
+                  "siguiente": "cierre"
+                }
+              ]
+            },
+            {
+              "id": "dudar",
+              "texto": "¿Cómo sé que no estás mintiendo?",
+              "tono": 3,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Sí. Mentí con lo de la medicina.",
+                    "Pensé que así me dejarías en paz. Fue una estupidez."
+                  ],
+                  "efectos": {
+                    "revela": [
+                      "mentira"
+                    ],
+                    "evento_memoria": "descubrió una mentira"
+                  },
+                  "siguiente": "duda",
+                  "condicion": {
+                    "miente": true
+                  }
+                },
+                {
+                  "lineas_npc": [
+                    "No tienes cómo saberlo.",
+                    "Pero no pienso enseñarte lo que me queda para convencerte.",
+                    "Maldita sea. Estoy cansado, no actuando."
+                  ],
+                  "efectos": {
+                    "confianza": -15,
+                    "hostilidad": 10
+                  },
+                  "siguiente": "duda"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Bueno. Ve con cuidado.",
+                    "Hoy ya tuvimos bastante."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "…Bueno. Parece que prefieres quedarte callado.",
+              "Yo no puedo seguir esperando."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "ruptura_combate"
+            }
+          }
+        },
+        {
+          "id": "comida",
+          "lineas_npc": [
+            "La comida me ayudaría a pensar un poco mejor.",
+            "No voy a arrebatártela. Puedes decir que no."
+          ],
+          "opciones": [
+            {
+              "id": "dar_comida",
+              "texto": "Toma una ración. No te pido nada.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Gracias. De verdad.",
+                    "Ya casi había olvidado lo que era no pedir algo a cambio.",
+                    "Déjame guardarla antes de que se me caiga."
+                  ],
+                  "efectos": {
+                    "confianza": 15,
+                    "desesperacion": -10,
+                    "quita_item": {
+                      "categoria": "comida",
+                      "cantidad": 1
+                    },
+                    "evento_memoria": "compartió una ración"
+                  },
+                  "siguiente": "cierre"
+                }
+              ],
+              "requiere": {
+                "inventario": [
+                  {
+                    "categoria": "comida",
+                    "cantidad": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "intercambio",
+              "texto": "¿Tienes algo para intercambiar?",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Tendría que revisar lo que me queda.",
+                    "Hoy no puedo ofrecerte un intercambio justo. Dejémoslo por ahora."
+                  ],
+                  "efectos": {},
+                  "siguiente": "cierre"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Bueno. Ve con cuidado.",
+                    "Hoy ya tuvimos bastante."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "…Bueno. Parece que prefieres quedarte callado.",
+              "Yo no puedo seguir esperando."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "ruptura_combate"
+            }
+          }
+        },
+        {
+          "id": "duda",
+          "lineas_npc": [
+            "Ya escuchaste mi respuesta.",
+            "No quiero convertir esto en otra pelea."
+          ],
+          "opciones": [
+            {
+              "id": "disculparse",
+              "texto": "Me pasé. No tenía que decirlo así.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Bueno. No eres el primero que duda.",
+                    "Tampoco tengo fuerzas para seguir discutiendo."
+                  ],
+                  "efectos": {
+                    "confianza": 5
+                  },
+                  "siguiente": "cierre"
+                }
+              ]
+            },
+            {
+              "id": "insistir",
+              "texto": "Sigo sin creerte.",
+              "tono": 3,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "No voy a convencerte repitiendo lo mismo.",
+                    "Vete. Prefiero quedarme solo."
+                  ],
+                  "efectos": {
+                    "confianza": -10,
+                    "hostilidad": 10,
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Bueno. Ve con cuidado.",
+                    "Hoy ya tuvimos bastante."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "…Bueno. Parece que prefieres quedarte callado.",
+              "Yo no puedo seguir esperando."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "ruptura_combate"
+            }
+          }
+        },
+        {
+          "id": "cierre",
+          "lineas_npc": [
+            "Creo que ya podemos bajar un poco la guardia.",
+            "Dime una cosa más y después seguimos."
+          ],
+          "opciones": [
+            {
+              "id": "familia",
+              "texto": "¿Quién sigue contando contigo?",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "{familiar_nombre}, {familiar_rol}.",
+                    "Todavía me guarda un lugar en {lugar_hogar}.",
+                    "Pensar en volver es lo único que me hace caminar algunos días."
+                  ],
+                  "efectos": {
+                    "revela": [
+                      "familia",
+                      "lugar_hogar"
+                    ],
+                    "evento_memoria": "compartió a quién quiere volver a ver",
+                    "resultado": "acuerdo"
+                  },
+                  "siguiente": null
+                }
+              ],
+              "requiere": {
+                "medidores": {
+                  "confianza": {
+                    "min": 30
+                  }
+                }
+              }
+            },
+            {
+              "id": "recuerdo",
+              "texto": "¿Por qué guardas ese objeto?",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Es {objeto_personal}. No vale nada para nadie más.",
+                    "{companero_nombre} me lo dio antes de separarnos.",
+                    "Todavía no sé si voy a volver a verlo."
+                  ],
+                  "efectos": {
+                    "revela": [
+                      "objeto_personal",
+                      "companero"
+                    ],
+                    "resultado": "acuerdo"
+                  },
+                  "siguiente": null
+                }
+              ],
+              "requiere": {
+                "medidores": {
+                  "confianza": {
+                    "min": 60
+                  }
+                }
+              }
+            },
+            {
+              "id": "tregua",
+              "texto": "No nos ataquemos. Cada uno sigue su camino.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Sí. Me sirve que esto termine sin otro muerto.",
+                    "Cuídate. Lo digo en serio."
+                  ],
+                  "efectos": {
+                    "confianza": 3,
+                    "evento_memoria": "acordaron no atacarse",
+                    "resultado": "tregua"
+                  },
+                  "siguiente": null
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Bueno. Ve con cuidado.",
+                    "Hoy ya tuvimos bastante."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "…Bueno. Parece que prefieres quedarte callado.",
+              "Yo no puedo seguir esperando."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "ruptura_combate"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "cansado_necesidad",
+      "voz": "cansado",
+      "situacion": "necesidad",
+      "peso": 1,
+      "historia": "cansado",
+      "inicio": "entrada",
+      "turnos_max": 5,
+      "nodos": [
+        {
+          "id": "entrada",
+          "lineas_npc": [
+            "Si vienes por mis cosas, llegas tarde.",
+            "Casi no me queda nada. Y me cuesta mantenerme de pie.",
+            "…Bueno. Qué día de mierda. Dime qué quieres."
+          ],
+          "opciones": [
+            {
+              "id": "preguntar",
+              "texto": "Soy {player}. ¿Cómo te llamas y qué estás buscando?",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "{name}.",
+                    "La venda ya no sirve y no he comido desde ayer.",
+                    "Me senté un minuto y después no pude levantarme.",
+                    "Maldita sea. Si tienes algo útil, puedo escucharte."
+                  ],
+                  "efectos": {
+                    "confianza": 5,
+                    "revela": [
+                      "nombre",
+                      "necesidad_actual"
+                    ]
+                  },
+                  "siguiente": "necesidad"
+                }
+              ]
+            },
+            {
+              "id": "pasar",
+              "texto": "Solo estoy pasando. No busco problemas.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Está bien. Sigue tu camino.",
+                    "No voy a hacerte perder más tiempo."
+                  ],
+                  "efectos": {
+                    "confianza": 10,
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null,
+                  "condicion": {
+                    "medidores": {
+                      "confianza": {
+                        "min": 30
+                      }
+                    }
+                  }
+                },
+                {
+                  "lineas_npc": [
+                    "…Bueno. Eso está mejor.",
+                    "No hace falta que ninguno se haga el valiente.",
+                    "Pregúntame lo que quieras."
+                  ],
+                  "efectos": {
+                    "miedo": 5
+                  },
+                  "siguiente": "entrada"
+                }
+              ]
+            },
+            {
+              "id": "ofrecer_comida",
+              "texto": "Tengo comida. ¿Te sirve?",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Mierda, sí. Una ración me vendría bien.",
+                    "Pero no quiero prometerte algo que no pueda devolver."
+                  ],
+                  "efectos": {},
+                  "siguiente": "comida"
+                }
+              ],
+              "requiere": {
+                "inventario": [
+                  {
+                    "categoria": "comida",
+                    "cantidad": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "amenazar",
+              "texto": "Dame lo que llevas o habrá problemas.",
+              "tono": 5,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "No me queda paciencia para esto.",
+                    "Si quieres empeorarlo, allá tú."
+                  ],
+                  "efectos": {
+                    "confianza": -25,
+                    "hostilidad": 25,
+                    "evento_memoria": "amenazó para quitarle sus cosas",
+                    "resultado": "ruptura_combate"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "…Bueno. Parece que prefieres quedarte callado.",
+              "Yo no puedo seguir esperando."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "necesidad",
+          "lineas_npc": [
+            "La venda ya no sirve y no he comido desde ayer.",
+            "Me senté un minuto y después no pude levantarme.",
+            "Maldita sea. Si tienes algo útil, puedo escucharte."
+          ],
+          "opciones": [
+            {
+              "id": "dar_medicina",
+              "texto": "Puedo darte una medicina.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…No me jodas. No esperaba que de verdad fueras a dármela.",
+                    "{familiar_nombre} es {familiar_rol}. Está esperando en {lugar_hogar}.",
+                    "Yo era {profesion_pasada}. Arreglaba cosas. Ahora no sé ni por dónde empezar."
+                  ],
+                  "efectos": {
+                    "confianza": 30,
+                    "desesperacion": -25,
+                    "quita_item": {
+                      "categoria": "medicina",
+                      "cantidad": 1
+                    },
+                    "revela": [
+                      "nombre",
+                      "familia",
+                      "profesion_pasada",
+                      "lugar_hogar"
+                    ],
+                    "evento_memoria": "recibió medicina para su familiar"
+                  },
+                  "siguiente": "cierre"
+                }
+              ],
+              "requiere": {
+                "inventario": [
+                  {
+                    "categoria": "medicina",
+                    "cantidad": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "escuchar",
+              "texto": "No tengo medicina, pero puedo escucharte.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Es raro que alguien se quede a escuchar.",
+                    "No sé si me siento mejor, pero gracias por intentarlo.",
+                    "No quiero hablar de mi familia todavía."
+                  ],
+                  "efectos": {
+                    "confianza": 5,
+                    "evento_memoria": "lo escuchó sin exigir nada"
+                  },
+                  "siguiente": "cierre"
+                }
+              ]
+            },
+            {
+              "id": "dudar",
+              "texto": "¿Cómo sé que no estás mintiendo?",
+              "tono": 3,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Sí. Mentí con lo de la medicina.",
+                    "Pensé que así me dejarías en paz. Fue una estupidez."
+                  ],
+                  "efectos": {
+                    "revela": [
+                      "mentira"
+                    ],
+                    "evento_memoria": "descubrió una mentira"
+                  },
+                  "siguiente": "duda",
+                  "condicion": {
+                    "miente": true
+                  }
+                },
+                {
+                  "lineas_npc": [
+                    "No tienes cómo saberlo.",
+                    "Pero no pienso enseñarte lo que me queda para convencerte.",
+                    "Maldita sea. Estoy cansado, no actuando."
+                  ],
+                  "efectos": {
+                    "confianza": -15,
+                    "hostilidad": 10
+                  },
+                  "siguiente": "duda"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Bueno. Ve con cuidado.",
+                    "Hoy ya tuvimos bastante."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "…Bueno. Parece que prefieres quedarte callado.",
+              "Yo no puedo seguir esperando."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "comida",
+          "lineas_npc": [
+            "La comida me ayudaría a pensar un poco mejor.",
+            "No voy a arrebatártela. Puedes decir que no."
+          ],
+          "opciones": [
+            {
+              "id": "dar_comida",
+              "texto": "Toma una ración. No te pido nada.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Gracias. De verdad.",
+                    "Ya casi había olvidado lo que era no pedir algo a cambio.",
+                    "Déjame guardarla antes de que se me caiga."
+                  ],
+                  "efectos": {
+                    "confianza": 15,
+                    "desesperacion": -10,
+                    "quita_item": {
+                      "categoria": "comida",
+                      "cantidad": 1
+                    },
+                    "evento_memoria": "compartió una ración"
+                  },
+                  "siguiente": "cierre"
+                }
+              ],
+              "requiere": {
+                "inventario": [
+                  {
+                    "categoria": "comida",
+                    "cantidad": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "intercambio",
+              "texto": "¿Tienes algo para intercambiar?",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Tendría que revisar lo que me queda.",
+                    "Hoy no puedo ofrecerte un intercambio justo. Dejémoslo por ahora."
+                  ],
+                  "efectos": {},
+                  "siguiente": "cierre"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Bueno. Ve con cuidado.",
+                    "Hoy ya tuvimos bastante."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "…Bueno. Parece que prefieres quedarte callado.",
+              "Yo no puedo seguir esperando."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "duda",
+          "lineas_npc": [
+            "Ya escuchaste mi respuesta.",
+            "No quiero convertir esto en otra pelea."
+          ],
+          "opciones": [
+            {
+              "id": "disculparse",
+              "texto": "Me pasé. No tenía que decirlo así.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Bueno. No eres el primero que duda.",
+                    "Tampoco tengo fuerzas para seguir discutiendo."
+                  ],
+                  "efectos": {
+                    "confianza": 5
+                  },
+                  "siguiente": "cierre"
+                }
+              ]
+            },
+            {
+              "id": "insistir",
+              "texto": "Sigo sin creerte.",
+              "tono": 3,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "No voy a convencerte repitiendo lo mismo.",
+                    "Vete. Prefiero quedarme solo."
+                  ],
+                  "efectos": {
+                    "confianza": -10,
+                    "hostilidad": 10,
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Bueno. Ve con cuidado.",
+                    "Hoy ya tuvimos bastante."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "…Bueno. Parece que prefieres quedarte callado.",
+              "Yo no puedo seguir esperando."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "cierre",
+          "lineas_npc": [
+            "Creo que ya podemos bajar un poco la guardia.",
+            "Dime una cosa más y después seguimos."
+          ],
+          "opciones": [
+            {
+              "id": "familia",
+              "texto": "¿Quién sigue contando contigo?",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "{familiar_nombre}, {familiar_rol}.",
+                    "Todavía me guarda un lugar en {lugar_hogar}.",
+                    "Pensar en volver es lo único que me hace caminar algunos días."
+                  ],
+                  "efectos": {
+                    "revela": [
+                      "familia",
+                      "lugar_hogar"
+                    ],
+                    "evento_memoria": "compartió a quién quiere volver a ver",
+                    "resultado": "acuerdo"
+                  },
+                  "siguiente": null
+                }
+              ],
+              "requiere": {
+                "medidores": {
+                  "confianza": {
+                    "min": 30
+                  }
+                }
+              }
+            },
+            {
+              "id": "recuerdo",
+              "texto": "¿Por qué guardas ese objeto?",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Es {objeto_personal}. No vale nada para nadie más.",
+                    "{companero_nombre} me lo dio antes de separarnos.",
+                    "Todavía no sé si voy a volver a verlo."
+                  ],
+                  "efectos": {
+                    "revela": [
+                      "objeto_personal",
+                      "companero"
+                    ],
+                    "resultado": "acuerdo"
+                  },
+                  "siguiente": null
+                }
+              ],
+              "requiere": {
+                "medidores": {
+                  "confianza": {
+                    "min": 60
+                  }
+                }
+              }
+            },
+            {
+              "id": "tregua",
+              "texto": "No nos ataquemos. Cada uno sigue su camino.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Sí. Me sirve que esto termine sin otro muerto.",
+                    "Cuídate. Lo digo en serio."
+                  ],
+                  "efectos": {
+                    "confianza": 3,
+                    "evento_memoria": "acordaron no atacarse",
+                    "resultado": "tregua"
+                  },
+                  "siguiente": null
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "…Bueno. Ve con cuidado.",
+                    "Hoy ya tuvimos bastante."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "…Bueno. Parece que prefieres quedarte callado.",
+              "Yo no puedo seguir esperando."
+            ],
+            "efectos": {
+              "hostilidad": 15,
+              "resultado": "separacion_pacifica"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "respaldo_sarcastico",
+      "voz": "sarcastico",
+      "situacion": "cualquiera",
+      "peso": 1,
+      "historia": "respaldo",
+      "inicio": "p0",
+      "turnos_max": 5,
+      "nodos": [
+        {
+          "id": "p0",
+          "lineas_npc": [
+            "Genial. Alguien más con prisa.",
+            "Podemos hablar sin hacer ninguna tontería, qué concepto."
+          ],
+          "opciones": [
+            {
+              "id": "continuar",
+              "texto": "Podemos hablar tranquilos.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Claro, claro. Los dos estamos de paso.",
+                    "Por una vez me gustaría que eso fuera verdad."
+                  ],
+                  "efectos": {},
+                  "siguiente": "p1"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Hasta fue agradable. Casi.",
+                    "Prometo no arruinarlo siguiéndote."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Hasta fue agradable. Casi.",
+              "Prometo no arruinarlo siguiéndote."
+            ],
+            "efectos": {
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "p1",
+          "lineas_npc": [
+            "Claro, claro. Los dos estamos de paso.",
+            "Por una vez me gustaría que eso fuera verdad."
+          ],
+          "opciones": [
+            {
+              "id": "continuar",
+              "texto": "Mantengamos la distancia.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Qué sorpresa. Una charla sin disparos.",
+                    "Conservemos esa costumbre tan rara."
+                  ],
+                  "efectos": {},
+                  "siguiente": "p2"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Hasta fue agradable. Casi.",
+                    "Prometo no arruinarlo siguiéndote."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Hasta fue agradable. Casi.",
+              "Prometo no arruinarlo siguiéndote."
+            ],
+            "efectos": {
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "p2",
+          "lineas_npc": [
+            "Qué sorpresa. Una charla sin disparos.",
+            "Conservemos esa costumbre tan rara."
+          ],
+          "opciones": [
+            {
+              "id": "continuar",
+              "texto": "De acuerdo. Sin problemas.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Hasta fue agradable. Casi.",
+                    "Prometo no arruinarlo siguiéndote."
+                  ],
+                  "efectos": {
+                    "resultado": "tregua"
+                  },
+                  "siguiente": null
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Hasta fue agradable. Casi.",
+                    "Prometo no arruinarlo siguiéndote."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Hasta fue agradable. Casi.",
+              "Prometo no arruinarlo siguiéndote."
+            ],
+            "efectos": {
+              "resultado": "separacion_pacifica"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "respaldo_religioso",
+      "voz": "religioso",
+      "situacion": "cualquiera",
+      "peso": 1,
+      "historia": "respaldo",
+      "inicio": "p0",
+      "turnos_max": 5,
+      "nodos": [
+        {
+          "id": "p0",
+          "lineas_npc": [
+            "Detente un momento, hermano.",
+            "Podemos entendernos sin derramar sangre."
+          ],
+          "opciones": [
+            {
+              "id": "continuar",
+              "texto": "Podemos hablar tranquilos.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Todo tiene un motivo.",
+                    "Espero que el tuyo no sea hacernos daño."
+                  ],
+                  "efectos": {},
+                  "siguiente": "p1"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Vete en paz.",
+                    "No alzaré mi mano contra ti."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Vete en paz.",
+              "No alzaré mi mano contra ti."
+            ],
+            "efectos": {
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "p1",
+          "lineas_npc": [
+            "Todo tiene un motivo.",
+            "Espero que el tuyo no sea hacernos daño."
+          ],
+          "opciones": [
+            {
+              "id": "continuar",
+              "texto": "Mantengamos la distancia.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Que encuentres un camino seguro.",
+                    "Yo seguiré el mío sin buscarte problemas."
+                  ],
+                  "efectos": {},
+                  "siguiente": "p2"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Vete en paz.",
+                    "No alzaré mi mano contra ti."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Vete en paz.",
+              "No alzaré mi mano contra ti."
+            ],
+            "efectos": {
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "p2",
+          "lineas_npc": [
+            "Que encuentres un camino seguro.",
+            "Yo seguiré el mío sin buscarte problemas."
+          ],
+          "opciones": [
+            {
+              "id": "continuar",
+              "texto": "De acuerdo. Sin problemas.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Vete en paz.",
+                    "No alzaré mi mano contra ti."
+                  ],
+                  "efectos": {
+                    "resultado": "tregua"
+                  },
+                  "siguiente": null
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Vete en paz.",
+                    "No alzaré mi mano contra ti."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Vete en paz.",
+              "No alzaré mi mano contra ti."
+            ],
+            "efectos": {
+              "resultado": "separacion_pacifica"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "respaldo_educado",
+      "voz": "educado",
+      "situacion": "cualquiera",
+      "peso": 1,
+      "historia": "respaldo",
+      "inicio": "p0",
+      "turnos_max": 5,
+      "nodos": [
+        {
+          "id": "p0",
+          "lineas_npc": [
+            "Disculpe, no se acerque más, por favor.",
+            "Podemos hablar desde esa distancia."
+          ],
+          "opciones": [
+            {
+              "id": "continuar",
+              "texto": "Podemos hablar tranquilos.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Le agradezco que mantenga la calma.",
+                    "No deseo que esto termine mal."
+                  ],
+                  "efectos": {},
+                  "siguiente": "p1"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Ha sido razonable de su parte.",
+                    "Puede marcharse con tranquilidad."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Ha sido razonable de su parte.",
+              "Puede marcharse con tranquilidad."
+            ],
+            "efectos": {
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "p1",
+          "lineas_npc": [
+            "Le agradezco que mantenga la calma.",
+            "No deseo que esto termine mal."
+          ],
+          "opciones": [
+            {
+              "id": "continuar",
+              "texto": "Mantengamos la distancia.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Entonces no le quitaré más tiempo.",
+                    "Le ruego que mantengamos lo acordado."
+                  ],
+                  "efectos": {},
+                  "siguiente": "p2"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Ha sido razonable de su parte.",
+                    "Puede marcharse con tranquilidad."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Ha sido razonable de su parte.",
+              "Puede marcharse con tranquilidad."
+            ],
+            "efectos": {
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "p2",
+          "lineas_npc": [
+            "Entonces no le quitaré más tiempo.",
+            "Le ruego que mantengamos lo acordado."
+          ],
+          "opciones": [
+            {
+              "id": "continuar",
+              "texto": "De acuerdo. Sin problemas.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Ha sido razonable de su parte.",
+                    "Puede marcharse con tranquilidad."
+                  ],
+                  "efectos": {
+                    "resultado": "tregua"
+                  },
+                  "siguiente": null
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Ha sido razonable de su parte.",
+                    "Puede marcharse con tranquilidad."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Ha sido razonable de su parte.",
+              "Puede marcharse con tranquilidad."
+            ],
+            "efectos": {
+              "resultado": "separacion_pacifica"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "respaldo_aterrado",
+      "voz": "aterrado",
+      "situacion": "cualquiera",
+      "peso": 1,
+      "historia": "respaldo",
+      "inicio": "p0",
+      "turnos_max": 5,
+      "nodos": [
+        {
+          "id": "p0",
+          "lineas_npc": [
+            "N-no te acerques.",
+            "Solo quiero hablar. Por favor."
+          ],
+          "opciones": [
+            {
+              "id": "continuar",
+              "texto": "Podemos hablar tranquilos.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Está bien… estás ahí.",
+                    "Yo me quedo aquí. N-no hace falta pelear."
+                  ],
+                  "efectos": {},
+                  "siguiente": "p1"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "G-gracias por no hacerme daño.",
+                    "Me voy. Despacio."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "G-gracias por no hacerme daño.",
+              "Me voy. Despacio."
+            ],
+            "efectos": {
+              "resultado": "huida"
+            }
+          }
+        },
+        {
+          "id": "p1",
+          "lineas_npc": [
+            "Está bien… estás ahí.",
+            "Yo me quedo aquí. N-no hace falta pelear."
+          ],
+          "opciones": [
+            {
+              "id": "continuar",
+              "texto": "Mantengamos la distancia.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "¿Ya puedo irme?",
+                    "Por favor… no me sigas."
+                  ],
+                  "efectos": {},
+                  "siguiente": "p2"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "G-gracias por no hacerme daño.",
+                    "Me voy. Despacio."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "G-gracias por no hacerme daño.",
+              "Me voy. Despacio."
+            ],
+            "efectos": {
+              "resultado": "huida"
+            }
+          }
+        },
+        {
+          "id": "p2",
+          "lineas_npc": [
+            "¿Ya puedo irme?",
+            "Por favor… no me sigas."
+          ],
+          "opciones": [
+            {
+              "id": "continuar",
+              "texto": "De acuerdo. Sin problemas.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "G-gracias por no hacerme daño.",
+                    "Me voy. Despacio."
+                  ],
+                  "efectos": {
+                    "resultado": "tregua"
+                  },
+                  "siguiente": null
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "G-gracias por no hacerme daño.",
+                    "Me voy. Despacio."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "G-gracias por no hacerme daño.",
+              "Me voy. Despacio."
+            ],
+            "efectos": {
+              "resultado": "huida"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "respaldo_veterano",
+      "voz": "veterano",
+      "situacion": "cualquiera",
+      "peso": 1,
+      "historia": "respaldo",
+      "inicio": "p0",
+      "turnos_max": 5,
+      "nodos": [
+        {
+          "id": "p0",
+          "lineas_npc": [
+            "Escucha. Quédate donde pueda verte.",
+            "Hablar primero suele ahorrarnos problemas."
+          ],
+          "opciones": [
+            {
+              "id": "continuar",
+              "texto": "Podemos hablar tranquilos.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Así funciona esto: sin movimientos bruscos.",
+                    "Los dos llegamos vivos hasta aquí. Cuidemos eso."
+                  ],
+                  "efectos": {},
+                  "siguiente": "p1"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Buen criterio.",
+                    "Mantendré mi palabra."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Buen criterio.",
+              "Mantendré mi palabra."
+            ],
+            "efectos": {
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "p1",
+          "lineas_npc": [
+            "Así funciona esto: sin movimientos bruscos.",
+            "Los dos llegamos vivos hasta aquí. Cuidemos eso."
+          ],
+          "opciones": [
+            {
+              "id": "continuar",
+              "texto": "Mantengamos la distancia.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Créeme. Saber cuándo retirarse también cuenta.",
+                    "Sigamos sin darnos motivos."
+                  ],
+                  "efectos": {},
+                  "siguiente": "p2"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Buen criterio.",
+                    "Mantendré mi palabra."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Buen criterio.",
+              "Mantendré mi palabra."
+            ],
+            "efectos": {
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "p2",
+          "lineas_npc": [
+            "Créeme. Saber cuándo retirarse también cuenta.",
+            "Sigamos sin darnos motivos."
+          ],
+          "opciones": [
+            {
+              "id": "continuar",
+              "texto": "De acuerdo. Sin problemas.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Buen criterio.",
+                    "Mantendré mi palabra."
+                  ],
+                  "efectos": {
+                    "resultado": "tregua"
+                  },
+                  "siguiente": null
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Buen criterio.",
+                    "Mantendré mi palabra."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Buen criterio.",
+              "Mantendré mi palabra."
+            ],
+            "efectos": {
+              "resultado": "separacion_pacifica"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "respaldo_joven",
+      "voz": "joven",
+      "situacion": "cualquiera",
+      "peso": 1,
+      "historia": "respaldo",
+      "inicio": "p0",
+      "turnos_max": 5,
+      "nodos": [
+        {
+          "id": "p0",
+          "lineas_npc": [
+            "Oye. No te acerques de golpe.",
+            "No estoy buscando pelea, ¿entendiste?"
+          ],
+          "opciones": [
+            {
+              "id": "continuar",
+              "texto": "Podemos hablar tranquilos.",
+              "tono": 1,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "¿En serio solo estás pasando?",
+                    "Bueno. Yo tampoco quiero armar un problema."
+                  ],
+                  "efectos": {},
+                  "siguiente": "p1"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Listo. Ya quedó.",
+                    "No voy a hacer ninguna tontería."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Listo. Ya quedó.",
+              "No voy a hacer ninguna tontería."
+            ],
+            "efectos": {
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "p1",
+          "lineas_npc": [
+            "¿En serio solo estás pasando?",
+            "Bueno. Yo tampoco quiero armar un problema."
+          ],
+          "opciones": [
+            {
+              "id": "continuar",
+              "texto": "Mantengamos la distancia.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Está bien. Que quede así.",
+                    "Ni de broma voy a seguirte. Tú tampoco me sigas."
+                  ],
+                  "efectos": {},
+                  "siguiente": "p2"
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Listo. Ya quedó.",
+                    "No voy a hacer ninguna tontería."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Listo. Ya quedó.",
+              "No voy a hacer ninguna tontería."
+            ],
+            "efectos": {
+              "resultado": "separacion_pacifica"
+            }
+          }
+        },
+        {
+          "id": "p2",
+          "lineas_npc": [
+            "Está bien. Que quede así.",
+            "Ni de broma voy a seguirte. Tú tampoco me sigas."
+          ],
+          "opciones": [
+            {
+              "id": "continuar",
+              "texto": "De acuerdo. Sin problemas.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Listo. Ya quedó.",
+                    "No voy a hacer ninguna tontería."
+                  ],
+                  "efectos": {
+                    "resultado": "tregua"
+                  },
+                  "siguiente": null
+                }
+              ]
+            },
+            {
+              "id": "retirarse",
+              "texto": "Voy a retirarme despacio.",
+              "tono": 2,
+              "respuestas": [
+                {
+                  "lineas_npc": [
+                    "Listo. Ya quedó.",
+                    "No voy a hacer ninguna tontería."
+                  ],
+                  "efectos": {
+                    "resultado": "separacion_pacifica"
+                  },
+                  "siguiente": null
+                }
+              ]
+            }
+          ],
+          "reaccion_silencio": {
+            "lineas": [
+              "Listo. Ya quedó.",
+              "No voy a hacer ninguna tontería."
+            ],
+            "efectos": {
+              "resultado": "separacion_pacifica"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
