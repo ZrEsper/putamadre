@@ -1,0 +1,3 @@
+94968ac7bd8a2783330c22fe772c06afd17b78c56666927eeaf3d459d8e5dfbf  LEEME.md
+346039e87f9b8fcbd319d40a4f8645251490f417e574e1f12824ab0dc8eea376  fuentes-y-pruebas.zip
+e88072ef94a1d96269e5777ea9cfdf03ebbf89bfc39d9435c71c4fde1bb93d06  tacznpcs-2.1.0-1.21.1-tactical.54-shared-work-dispatch.jar
