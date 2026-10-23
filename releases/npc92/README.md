@@ -14,6 +14,8 @@ Hay además problemas del servidor que afectan a todos los NPCs:
 
 ## Correcciones
 
+**Límite de exploración:** máximo 1200 ticks (60 segundos a 20 TPS), por debajo de dos minutos. Al vencer, la rutina conserva un objetivo de asentamiento: atiende necesidades si tiene base; con hogar conocido inicia el ancla provisional; sin hogar busca cobertura existente o crea un plan nativo de refugio validando el sitio. Si no hay sitio, busca terreno transitable con rutas reales; si protección/configuración lo impide, muestra el bloqueo y reintenta el mismo objetivo. No se teletransporta ni concede materiales para fingir progreso. Las órdenes explícitas, combate, sueño y servicio tienen prioridad. Los campos persistentes son `npc92_explorar_limite`, `npc92_objetivo_forzado`, `npc92_objetivo_siguiente`. El tiempo es de juego a la tasa indicada, no una garantía de tiempo de pared durante un congelamiento del servidor.
+
 1. El trabajo comunitario ya no exige cofre, cama, horno y mesa completos para comenzar a cultivar. Mantiene las comprobaciones de supervivencia, combate, conversación y órdenes explícitas.
 2. Una ubicación de hogar ya conocida o un campamento terminado pueden establecer el ancla provisional si tienen una casilla transitable y permitida. No se inventa una base en la posición actual de un NPC sin hogar y no se da por terminado un refugio en obras.
 3. Los constructores pueden intentar amueblar mediante las funciones nativas mientras el agricultor atiende el campo; una cama imposible de colocar no excluye el cultivo.
@@ -31,15 +33,16 @@ Hay además problemas del servidor que afectan a todos los NPCs:
 | NPC sin hogar conocido | No recibe una base inventada |
 | Orden follow y combate | La rutina no los sustituye |
 | Diagnóstico con base incompleta | Se ejecuta antes de exigir mobiliario |
+| Exploración vencida sin hogar | Crea plan nativo de refugio y lo conserva en la siguiente decisión; cede ante orden y combate |
 | Tirada de aparición desde cuatro hilos, 40000 muestras | Sin excepción, rango [0,1) |
 | Ocho suites anteriores | Pasan inventarios, colocación, diálogo, guardas, tareas, replantación, navegación adaptada y rutina agrícola |
 
 Se verifica además la estructura de bytecode de todas las clases. El parche exige encontrar exactamente los enlaces previstos, incluida una única lectura RNG en onFinalizeSpawn.
 
-Las pruebas son simuladas, NO Minecraft. No pude comprobar C2ME con generación real de estructuras, terreno irregular, una partida con miles de ticks por segundo, ni el bloqueo de LootRestock. Cambiar la tirada concreta no certifica toda la compatibilidad de generación multihilo. Sigue pendiente un NPC sin ningún hogar/campamento si falla también la búsqueda nativa de refugio; el diagnóstico ahora puede identificar ese caso. No se implementa aquí la economía completa de facciones.
+Las pruebas son simuladas, NO Minecraft. No pude comprobar C2ME con generación real de estructuras, terreno irregular, una partida con miles de ticks por segundo, ni el bloqueo de LootRestock. Cambiar la tirada concreta no certifica toda la compatibilidad de generación multihilo. La búsqueda forzada de refugio usa validación y materiales nativos; no garantiza que el terreno tenga un sitio viable ni que los recursos alcancen. Un servidor congelado no ejecuta el límite ni el trabajo. No se implementa aquí la economía completa de facciones.
 
 ## Archivos cambiados
 
-Se añade Bootstrap92 y se enlazan Community87.eligible, Needs91.eligible/work, Settlement87.status, Job90.tick y TNPC$StructureSpawnHandler.onFinalizeSpawn. Se actualizan las cadenas de versión, incluidos los mensajes concatenados y META-INF/neoforge.mods.toml. No se recompilan las entidades completas ni se cambian los otros mods.
+Se añaden Bootstrap92 y Deadline92; se enlazan Life79.work, Community87.eligible, Needs91.eligible/work, Settlement87.status, Job90.tick y TNPC$StructureSpawnHandler.onFinalizeSpawn. Se actualizan las cadenas de versión, incluidos los mensajes concatenados y META-INF/neoforge.mods.toml. No se recompilan las entidades completas ni se cambian los otros mods.
 
 Fuentes, constructor ASM, scripts, fixtures y resultados en `fuentes-y-pruebas.zip`. Build exige la .58 exacta (SHA256 96c864ae1fafe05ad9fe93e0b5180dc2051660f1d3e978d1617cff16c5462747), Java 21, ECJ, ASM y Gson. `build.py`: --base, --tools, --gson. `test.py`: --jar, --tools, --gson.
